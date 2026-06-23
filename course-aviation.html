@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 課程 Prompt｜航空警察局</title>
+<link rel="icon" href="./logo2.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/shared.css">
+<link rel="stylesheet" href="css/p2.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <a class="nav-brand" href="index.html?unit=aviation">
+    <div class="nav-logo"><img src="./logo.svg" alt="" class="logo"></div>
+    <div class="nav-text">
+      <span class="nav-title">AI 提問加料法</span>
+      <span class="nav-sub">心怡｜zoego99@gmail.com</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="index.html?unit=aviation">← P1 情境練習</a>
+    <a href="course-aviation.html" class="active">航空警察局 課程 Prompt</a>
+  </div>
+</nav>
+
+<!-- ===== 三欄版面 ===== -->
+<div class="app-layout">
+
+  <!-- ===== 左欄：導覽 ===== -->
+  <div class="sidebar">
+    <div class="sidebar-header">課程單元</div>
+    <div class="sidebar-scroll">
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-s1" onclick="showSection('s1')">
+          <span class="sec-num" style="background:var(--sec-1)">1</span>
+          AI 協作四步驟
+        </button>
+        <button class="sec-sub-btn" id="btn-s1-a" onclick="showSub('s1','s1-a')">【問】釐清思路</button>
+        <button class="sec-sub-btn" id="btn-s1-b" onclick="showSub('s1','s1-b')">【定】報告生成</button>
+        <button class="sec-sub-btn" id="btn-s1-c" onclick="showSub('s1','s1-c')">【定】修改建議</button>
+        <button class="sec-sub-btn" id="btn-s1-d" onclick="showSub('s1','s1-d')">【定】反向檢查</button>
+        <button class="sec-sub-btn" id="btn-s1-e" onclick="showSub('s1','s1-e')">【骨】大綱校準</button>
+        <button class="sec-sub-btn" id="btn-s1-f" onclick="showSub('s1','s1-f')">【生】產出簡報</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-s2" onclick="showSection('s2')">
+          <span class="sec-num" style="background:var(--sec-2)">2</span>
+          NotebookLM 應用
+        </button>
+        <button class="sec-sub-btn" id="btn-s2-a" onclick="showSub('s2','s2-a')">報告整理</button>
+        <button class="sec-sub-btn" id="btn-s2-b" onclick="showSub('s2','s2-b')">會議記錄整理</button>
+        <button class="sec-sub-btn" id="btn-s2-c" onclick="showSub('s2','s2-c')">總專案彙整</button>
+        <button class="sec-sub-btn" id="btn-s2-d" onclick="showSub('s2','s2-d')">逐字稿整理</button>
+        <button class="sec-sub-btn" id="btn-s2-e" onclick="showSub('s2','s2-e')">匯出成品</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-s3" onclick="showSection('s3')">
+          <span class="sec-num" style="background:var(--sec-3)">3</span>
+          圖文生成技巧
+        </button>
+        <button class="sec-sub-btn" id="btn-s3-a" onclick="showSub('s3','s3-a')">資訊圖 Prompt</button>
+        <button class="sec-sub-btn" id="btn-s3-b" onclick="showSub('s3','s3-b')">海報 Prompt</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-s4" onclick="showSection('s4')">
+          <span class="sec-num" style="background:var(--sec-4)">4</span>
+          數據匯整
+        </button>
+        <button class="sec-sub-btn" id="btn-s4-a" onclick="showSub('s4','s4-a')">照片轉 Excel</button>
+        <button class="sec-sub-btn" id="btn-s4-b" onclick="showSub('s4','s4-b')">問卷分析</button>
+      </div>
+
+    </div>
+  </div><!-- /sidebar -->
+
+  <!-- ===== 中欄：主內容 ===== -->
+  <div class="content-area" id="contentArea">
+
+    <!-- ============================================================
+         ★ 說明區塊範本（複製這段到你想放的位置）
+         ============================================================
+         可用元素：
+           .content-h1     大標題（帶靛藍左邊線）
+           .content-h2     中標題（帶圓點）
+           .content-note   內容文字卡片（支援 <p> <ul> <strong>）
+           .content-img    圖片區塊（換 src 即可）
+           .content-img-placeholder  圖片佔位框（尚未放圖時使用）
+         ============================================================ -->
+    <!-- TEMPLATE START — 可複製以下區塊 ↓↓↓
+
+    <div class="content-h1">大標題文字</div>
+
+    <div class="content-h2">中標題文字</div>
+
+    <div class="content-note">
+      <p>內容說明文字，可以直接輸入一般文句。</p>
+      <p>第二段，<strong>重點文字</strong>用粗體標記。</p>
+      <ul>
+        <li>條列項目一</li>
+        <li>條列項目二</li>
+      </ul>
+    </div>
+
+    <div class="content-img">
+      <img src="./img/你的圖片檔名.png" alt="圖片說明">
+      <span class="img-caption">圖：這裡寫圖片說明文字</span>
+    </div>
+
+    <div class="content-img-placeholder">
+      <strong>📷 圖片放置區</strong>
+      將圖片放入 img/ 資料夾後，將上方 .content-img 區塊的 src 換成檔名即可
+    </div>
+
+    TEMPLATE END ↑↑↑ -->
+
+
+    <!-- ======== S1: AI 協作四步驟 ======== -->
+    <div class="content-section" id="s1">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-1)">1</span>
+        AI 協作四步驟
+      </div>
+      <div class="sec-desc">📌 練習主題：春節連假機場安全維護、旅客疏運與防詐勤務整合計畫</div>
+
+      <!-- s1-a -->
+      <div class="sub-block" id="s1-a">
+        <div class="sec-sub-title">【問】釐清思路</div>
+        <div class="tip-card info"><strong>使用時機：</strong>開始寫任何報告前，先請 AI 扮演資深幕僚向你提問，幫助你把思路整理清楚，再開始動筆。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 釐清思路</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">我現在要進行【春節連假機場安全維護、旅客疏運與防詐勤務整合計畫】的撰寫，
+報告對象為【局長及上級督導機關】
+
+在正式產出前，請扮演【資深航警業務幕僚】
+協助針對此任務的『目標受眾、核心重點、預期效益』向我提出 5~8 個關鍵問題，
+幫助我釐清思路
+
+在我們討論未完成前，先不要開始寫報告</div>
+        </div>
+      </div>
+
+      <!-- s1-b -->
+      <div class="sub-block" id="s1-b">
+        <div class="sec-sub-title">【定】報告生成</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 正式報告產出</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">根據我們剛才討論的內容，產出正式文件。輸出時遵守以下規範：
+
+1. 必須包含『版本資訊』區塊：
+   - 版次：V1.0（初始提案）
+   - 最後更新日期：標註今日日期
+   - 資料查證規範：
+     - 法規引用：標註建議查詢的官方來源（如：全國法規資料庫、內政部警政署）
+     - 動態數據：若旅客量、查獲件數等數字可能變動，標註「需進一步查證」
+
+2. 內容架構：
+   根據前面討論內容，協助擬定公務文書架構，建議涵蓋：
+   一、依據　二、目的　三、勤務期間與規模　四、三大工作主軸規劃
+   （安全維護／旅客疏運／防詐勤務）　五、跨單位協調機制　六、預期效益
+
+3. 輸出格式：
+   請將完整內容放入程式碼區塊（Code Block）輸出，方便一鍵複製</div>
+        </div>
+      </div>
+
+      <!-- s1-c -->
+      <div class="sub-block" id="s1-c">
+        <div class="sec-sub-title">【定】提出修改建議</div>
+        <div class="tip-card info"><strong>使用時機：</strong>報告草稿產出後，請 AI 扮演審稿者，主動找出需要加強的地方。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 修改建議</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請針對這份「春節連假機場安全維護、旅客疏運與防詐勤務整合計畫」報告草稿，
+以【資深行政幕僚】角色提出修改建議。
+
+請依以下三個面向逐一檢視，每項給出具體修改方向：
+
+1. 邏輯結構：各章節順序是否清晰？論點之間有無跳躍或矛盾？
+2. 文字表達：是否符合公務文書語氣？有無口語化、語意模糊之處？
+3. 內容完整性：三大主軸（安全維護／旅客疏運／防詐勤務）是否均衡？
+   有無重要資訊遺漏？
+
+請以條列方式輸出，每條建議附上對應的段落位置。</div>
+        </div>
+      </div>
+
+      <!-- s1-d -->
+      <div class="sub-block" id="s1-d">
+        <div class="sec-sub-title">【定】反向檢查</div>
+        <div class="tip-card note"><strong>使用時機：</strong>報告接近定稿前，模擬長官或審查單位的挑剔視角，提前補洞。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 反向檢查</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請扮演【嚴格的上級督導委員】，對這份報告進行反向檢查。
+
+檢查重點：
+1. 哪些數據或說法缺乏來源依據，可能在簡報時被長官質疑？
+2. 三大主軸的跨單位協調機制是否說明清楚？責任分工有無模糊地帶？
+3. 若旅客量超出預測或發生突發事件，報告中是否有應變說明？
+4. 整份報告最薄弱的一個章節是哪裡？建議如何補強？
+
+請以「審查意見」格式輸出，語氣可以嚴格，目的是幫我在正式呈報前先補好洞。</div>
+        </div>
+      </div>
+
+      <!-- s1-e -->
+      <div class="sub-block" id="s1-e">
+        <div class="sec-sub-title">【骨】邏輯骨架校準</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 大綱校準</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">現在進入【邏輯骨架校準階段】。
+請根據我們剛才討論完成的「春節連假機場安全維護、旅客疏運與防詐勤務整合計畫」，
+針對【局長及上級督導機關】擬定報告大綱。規範：
+
+- 規劃約【10～12】張架構
+- 每頁須含主題與核心觀點，禁止跳級產出內文或旁白
+- 對數據頁面（如：旅客量、查獲統計、防詐成效），請標註建議採用「便當盒排版法」
+- 對流程頁面（如：三大主軸協作流程、跨單位通報機制），請標註建議採用「蛇形流程」
+- 產出後立即停止，等待進一步指令
+- 強制使用 Markdown 程式碼區塊輸出</div>
+        </div>
+      </div>
+
+      <!-- s1-f -->
+      <div class="sub-block" id="s1-f">
+        <div class="sec-sub-title">【生】產出簡報</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Google 簡報</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">邏輯大綱已確認。直接建立 Google 簡報。
+- 內容需填充每張投影片之正式文案，聚焦三大主軸：
+  安全維護、旅客疏運、防詐勤務的整合邏輯。
+- 產出後，請務必顯示『匯出成簡報』的連結。
+- 尺寸：16:9</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 HTML 程式碼簡報</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">邏輯大綱已確認。
+使用 HTML 與 Tailwind CSS 程式碼製作數位簡報。
+- 風格要求：現代科技感、藍灰色調、專業安全感。
+- 結構規範：數據頁採「便當盒排版」、流程頁採「蛇形流程」，
+  預留上方 30% 標題空白區。
+- 請將結果以程式碼區塊呈現，並同步啟動『預覽 (Preview)』視窗。
+- 尺寸：16:9</div>
+        </div>
+      </div>
+    </div><!-- /s1 -->
+
+
+    <!-- ======== S2: NotebookLM ======== -->
+    <div class="content-section" id="s2">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-2)">2</span>
+        NotebookLM 文件智慧整合應用
+      </div>
+      <div class="sec-desc">上傳文件到 NotebookLM 後，用以下 Prompt 進行跨文件查詢與分析。</div>
+
+      <div class="sub-block" id="s2-a">
+        <div class="sec-sub-title">報告整理</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 成果報告整理</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請針對上傳的「春節連假機場安全維護、旅客疏運與防詐勤務整合計畫」成果報告，
+以【資深行政幕僚】角色完成以下整理：
+
+1. 用條列方式列出三大工作主軸的核心成果（每項不超過 3 點）
+2. 找出報告中所有出現的數據，整理成一張表格
+3. 列出「問題與改善建議」章節提到的所有待辦事項，
+   並標注責任單位與期限</div>
+        </div>
+      </div>
+
+      <div class="sub-block" id="s2-b">
+        <div class="sec-sub-title">會議記錄整理</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 跨文件會議分析</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">我上傳了四份不同時期的會議記錄（第1次籌備、第2次籌備、春節期間臨時、結案檢討）。
+
+請跨文件完成以下分析：
+1. 整理四次會議的決議事項清單，標注每項的負責單位與完成期限
+2. 找出哪些問題在多次會議中重複出現
+3. 哪些初次會議的決議，在後續會議被追蹤到完成？哪些沒有提到後續？</div>
+        </div>
+      </div>
+
+      <div class="sub-block" id="s2-c">
+        <div class="sec-sub-title">總專案彙整</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 跨文件總整理</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請將上傳的所有來源文件（成果報告＋四份會議記錄）視為一個完整專案，
+進行跨文件總整理：
+
+1. 這個專案從籌備到結案，時間軸上發生了哪些關鍵事件？
+2. 哪個單位在整個專案中被分配到最多任務？
+3. 若我是新任副局長，要在 3 分鐘內掌握這個專案，
+   最重要的 5 件事是什麼？請用條列方式說明。</div>
+        </div>
+      </div>
+
+      <div class="sub-block" id="s2-d">
+        <div class="sec-sub-title">逐字稿整理</div>
+        <div class="tip-card info"><strong>整理完成後的用途：</strong>建議將正式會議紀錄存為筆記加入知識庫，後續即可跨文件查詢——「這個問題上次討論結論是什麼？」</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 逐字稿轉會議紀錄</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">這是一份航空警察局結案檢討會議的錄音逐字稿，語氣口語，內容較雜亂。
+請協助完成以下整理：
+
+1. 整理成正式會議紀錄格式，包含：
+   討論事項、各單位意見摘要、決議事項、後續追蹤事項
+2. 找出所有主管交辦事項，列出負責人與預計完成時間
+3. 整理「問題與改善建議」清單，標注是哪個單位提出的</div>
+        </div>
+      </div>
+
+      <div class="sub-block" id="s2-e">
+        <div class="sec-sub-title">匯出成品 Prompt</div>
+        <div class="tip-card note"><strong>簡報來源建議：</strong>勾選【大綱骨架 .md 檔】，不勾選其他文件</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 結合 Nano Banana 視覺風格</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請根據上傳的「春節連假機場安全維護、旅客疏運與防詐勤務整合計畫大綱」，
+製作一份簡報草稿，並依照以下視覺規格標注每頁建議風格：
+
+# 角色設定
+你是一位資深行政幕僚兼簡報設計顧問。
+
+# 簡報規格
+- 總頁數：10 張，不可多不可少
+- 尺寸：16:9
+
+# 每頁輸出格式
+### 投影片第 X 張：[標題]
+- 視覺風格建議：[從以下擇一]
+  - 數據頁 → 現代數據儀表板風（淺色儀表板＋數字卡片 KPI）
+  - 流程頁 → 等距視角微縮風格（流程路徑圖）
+  - 多重並陳頁 → 便當盒排版（大小格混排）
+  - 封面/結語頁 → 極簡向量插畫風格（企業曼非斯風、三色限定）
+- 版面配置：[便當盒 / 蛇形流程 / 中心對焦，擇一]
+- 核心列點：[3 點，每點不超過 20 字]
+- 講師講稿：[100 字內，語氣沉穩專業]
+
+# 注意事項
+所有內容必須 100% 基於上傳的大綱來源，禁止憑空新增資訊。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 心智圖結構</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請根據上傳的所有來源文件，產出一份心智圖結構（純文字版）。
+
+格式規範：
+- 中心主題：春節連假機場安全維護、旅客疏運與防詐勤務整合計畫
+- 第一層分支（3～5 個）：主要工作主軸或專案階段
+- 第二層分支：每個主軸下的關鍵任務或重點
+- 第三層分支：具體數據、負責單位或執行細節
+
+請以縮排條列方式輸出，方便複製至 XMind 或 Miro 使用。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 語音摘要腳本</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請根據上傳的簡報大綱，製作一份「上台報告語音摘要」。
+
+# 角色設定
+主持人 A：資深航警業務主管（語氣沉穩、有權威感）
+主持人 B：熟悉現場的承辦警員（語氣親切、善用具體案例）
+
+# 風格要求
+- 對話式進行，兩人交替說明各章節重點
+- 主持人 B 在說明時，適時舉出現場具體情境
+- 幽默但不失分寸，總長度約 5 分鐘
+
+# 內容規範
+- 開場：點出這份計畫的核心價值
+- 中段：依三大主軸各用 1 分鐘說明亮點成果
+- 結尾：點出最值得帶走的 1 個改善建議</div>
+        </div>
+      </div>
+    </div><!-- /s2 -->
+
+
+    <!-- ======== S3: 圖文生成 ======== -->
+    <div class="content-section" id="s3">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-3)">3</span>
+        圖文生成技巧
+      </div>
+      <div class="sec-desc">搭配 <a href="https://zoego99.github.io/vizgo/index.html" target="_blank" style="color:var(--indigo)">Nano Banana 資訊圖 Prompt 生成器 ↗</a> 使用效果更佳。</div>
+
+      <!-- s3-a -->
+      <div class="sub-block" id="s3-a">
+        <div class="sec-sub-title">資訊圖（Infographic）</div>
+
+        <div class="content-h1">課前生成範例</div>
+        <div class="content-h2">本次課程示範圖：隨身行李三大地雷</div>
+        <div class="content-note">
+          <p>以下為課程前使用 AI 生成的資訊圖範例，展示將 Prompt 套入 AI 生圖工具（如 Gemini、Midjourney）後可產出的視覺效果。</p>
+          <p><strong>用途說明：</strong>課堂中直接投影，搭配 Prompt 說明講解生成過程。</p>
+        </div>
+
+        <!-- 圖片佔位框：課程前將生成圖放入 img/ 資料夾，替換為 .content-img 區塊 -->
+        <div class="content-img-placeholder">
+          <strong>📷 資訊圖範例圖</strong>
+          將生成的資訊圖存入 img/ 資料夾後，將此區塊替換為：<br>
+          &lt;div class="content-img"&gt;<br>
+          &nbsp;&nbsp;&lt;img src="./img/aviation-infographic.png" alt="隨身行李三大地雷資訊圖"&gt;<br>
+          &nbsp;&nbsp;&lt;span class="img-caption"&gt;圖：AI 生成資訊圖範例 — 隨身行李三大地雷，通關不卡關！&lt;/span&gt;<br>
+          &lt;/div&gt;
+        </div>
+
+        <div class="content-h2">生成此圖使用的 Prompt</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 主題：隨身行李三大地雷，通關不卡關！</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請生成一張【橫向 16:9】資訊圖，已包含完整排版與視覺設計。
+
+主視覺 / 構圖內容描述：
+針對「教育科普與知識傳遞」與「隨身行李安檢宣導」主題。畫面右側整齊並列三個圓角的便當盒格子（Bento Box），格子內分別帶有平面幾何向量感（SVG Icon）的「行動電源」、「打火機」、「隨身液體罐」插圖。畫面左側由角色「學弟 肯警官（Officer Ken）」手持 AI DATA ANALYSIS 全息投影螢幕進行指引，其身形、髮型與藍色高領運動風制服外觀與參考圖一致，視線自然專注地望向右側的便當盒格子，形成流暢的視覺引導。
+
+視覺風格：日系動漫風格＋便當盒排版法
+- 賽璐珞著色（平塗上色，硬邊陰影，動畫感）
+- 圓潤有機造型（膨脹飽滿的圓弧卡片形態）
+- 無陰影無漸層（保持純平面感）
+
+版面配置：便當盒排版（模組化分割）＋左右對比
+簡報母片設定：預留上方 30% 標題空白區
+
+文字設計細節：
+- 主標題：隨身行李三大地雷，通關不卡關！
+- 副標題：智慧航警安全小叮嚀
+- 重點資訊：
+  1. 行動電源：禁止托運，必須隨身攜帶（限 100Wh 內）。
+  2. 噴霧打火機：每人限帶一個普通打火機，藍焰與防風打火機禁止攜帶。
+  3. 容器液體：單瓶不可超過 100ml，須裝於 1 公升透明夾鏈袋內。
+- CTA：提前檢查行李，安檢通關最流暢！
+
+配色方案：冷灰藍（#F4F6F9）＋溫暖燕麥色（#FFF5F0）＋警政藍（#0A2E63）＋科技晴空藍（#4A90E2）</div>
+        </div>
+      </div>
+
+      <!-- s3-b -->
+      <div class="sub-block" id="s3-b">
+        <div class="sec-sub-title">海報（Poster）</div>
+
+        <!-- 海報範例圖佔位框 -->
+        <div class="content-img-placeholder">
+          <strong>📷 海報範例圖</strong>
+          課程前生成海報後，放入 img/ 資料夾並替換此區塊為 .content-img
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 主題：海外高薪夢，小心是噩夢！</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請生成一張【海報 3:4（直式）】宣導海報，已包含完整排版與視覺設計。
+
+主視覺 / 構圖內容描述：
+針對「社群行銷與視覺傳播」與「國境防詐騙宣導」主題。海報右側由角色「學姐 華警官（Officer Hana）」以全身立像之姿站立，其深藍色正式西裝航警制服、長條領帶、左臂飛機圖騰臂章與長捲髮外觀與參考圖完全一致；她面帶溫暖微笑，左手持一台平面的藍色架構流程平板，右手溫和地向左側平舉進行指引。海報左側則整齊排列多語系（中、英、泰、越）對照的圓角文字卡片，字體清晰。
+
+視覺風格：日系動漫風格
+- 賽璐珞著色（平塗上色，硬邊陰影，流暢動畫線條）
+- 可愛角色為主（形象專業且溫暖，具備親切且具信賴感的公務調性）
+
+版面配置：網格矩陣（整齊規整）＋左右對比（分析對照）
+
+文字設計細節：
+- 主標題：海外高薪夢，小心是噩夢！
+- 副標題：航空警察局 關心您
+- 重點資訊：
+  - 核心提醒：出境前請三思！拒絕來路不明的跨國高薪職缺、跨國電競培訓與包辦機票差旅。
+  - 多語警示：Don't Fall for High-Pay Scams! / Cảnh giác với lừa đảo việc làm! / อย่าหลงเชื่อกลโกงงานเงินเดือนสูง!
+- CTA：遇到疑似誘騙？請即刻向管制區前一線巡邏同仁諮詢關懷！
+
+配色方案：純白（#FFFFFF）＋警政藍（#0A2E63）＋科技晴空藍（#4A90E2）＋宣導櫻花粉（#FF85A1）</div>
+        </div>
+      </div>
+    </div><!-- /s3 -->
+
+
+    <!-- ======== S4: 數據匯整 ======== -->
+    <div class="content-section" id="s4">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-4)">4</span>
+        數據匯整
+      </div>
+
+      <div class="sub-block" id="s4-a">
+        <div class="sec-sub-title">照片／紙本資料轉 Excel</div>
+        <div class="tip-card info">操作習慣：整理完成後，利用【Ctrl + C】複製 AI 回覆的表格，再到 Excel 按【Ctrl + V】貼上</div>
+        <table class="data-table">
+          <tr><th>情境</th><th>原始格式</th><th>整理後欄位</th></tr>
+          <tr><td>里民活動報名訊息</td><td>LINE 群組截圖</td><td>姓名／里別／報名項目／時間</td></tr>
+          <tr><td>各里服務件數回報</td><td>手機拍照回傳</td><td>日期／里名／案件類型／件數</td></tr>
+          <tr><td>里長意見彙整</td><td>通訊軟體文字截圖</td><td>里別／提案內容／優先程度</td></tr>
+        </table>
+        <div class="tip-card note"><strong>❌ 常見問法（不佳）：</strong>「請把這張圖片轉成 Excel」<br>這樣問，AI 不知道你要什麼欄位、不知道格式、不知道用途</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 好 Prompt — 手寫表單轉 Excel</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請協助整理圖片中的里民服務紀錄單內容。
+請根據圖片資訊，整理成「可直接貼到 Excel 的表格格式」。
+
+欄位請包含：
+- 服務日期
+- 里別
+- 案件類型（戶政／民政／社福／其他）
+- 申請人姓名
+- 服務內容說明
+- 承辦人員
+- 處理狀態（待處理／處理中／已完成）
+- 備註
+
+請用「表格」方式輸出，不要加入多餘說明文字。
+若圖片中某欄位無資料，請填寫「無」。</div>
+        </div>
+      </div>
+
+      <div class="sub-block" id="s4-b">
+        <div class="sec-sub-title">問卷分析</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 NotebookLM — 基礎統計</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請幫我整理這份春節機場旅客滿意度問卷的基本結果：
+1. 各航廈的填答人數各是多少？
+2. 旅行目的的比例分佈如何？
+3. 哪個年齡層的填答人數最多？
+4. 外籍旅客（非本國旅客）合計占幾成？</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Gemini — 交叉分析</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請針對這份問卷進行以下交叉分析，並以表格呈現結果：
+
+1. 各國籍別 × Q11 整體滿意度（平均分）
+2. 各航廈 × Q5 安檢通關速度（平均分）
+3. 有看到防詐宣導（Q8=有）vs 沒看到 × Q11 整體滿意度差異
+
+分析完成後，請用 2-3 句話說明最值得關注的發現。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Gemini — 主管報告摘要</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請扮演【資深行政幕僚】，根據這份 300 筆問卷資料，
+幫我撰寫一份給局長看的「春節旅客滿意度調查摘要報告」。
+
+格式要求：
+- 總長度不超過一頁 A4
+- 包含：重要數據亮點、三個主要問題、三個改善建議
+- 語氣符合公務文書規範
+- 數據需從問卷資料中取得，不可憑空編造</div>
+        </div>
+      </div>
+    </div><!-- /s4 -->
+
+  </div><!-- /content-area -->
+
+
+  <!-- ===== 右欄：工具列 ===== -->
+  <div class="tool-panel">
+
+    <div class="tool-section">
+      <div class="tool-section-title">頁面導覽</div>
+      <a class="tool-btn p1-btn" href="index.html?unit=aviation">
+        <span class="tool-icon">←</span>
+        <span class="tool-name">P1 情境練習</span>
+      </a>
+    </div>
+
+    <div class="tool-section">
+      <div class="tool-section-title">AI 工具</div>
+      <a class="tool-btn" href="https://gemini.google.com" target="_blank">
+        <span class="tool-icon">✦</span>
+        <span class="tool-name">Gemini</span>
+        <span class="tool-arrow">↗</span>
+      </a>
+      <a class="tool-btn" href="https://chatgpt.com" target="_blank">
+        <span class="tool-icon">◎</span>
+        <span class="tool-name">ChatGPT</span>
+        <span class="tool-arrow">↗</span>
+      </a>
+      <a class="tool-btn" href="https://notebooklm.google.com" target="_blank">
+        <span class="tool-icon">📓</span>
+        <span class="tool-name">NotebookLM</span>
+        <span class="tool-arrow">↗</span>
+      </a>
+    </div>
+
+    <div class="tool-section">
+      <div class="tool-section-title">課程工具</div>
+      <a class="tool-btn" href="https://zoego99.github.io/vizgo/index.html" target="_blank">
+        <span class="tool-icon">🎨</span>
+        <span class="tool-name">資訊圖 Prompt 生成器</span>
+        <span class="tool-arrow">↗</span>
+      </a>
+      <!-- 未來新增工具在此加一個 .tool-btn -->
+    </div>
+
+  </div><!-- /tool-panel -->
+
+</div><!-- /app-layout -->
+
+<script src="js/p2.js"></script>
+</body>
+</html>

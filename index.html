@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 提問加料法｜P1 情境練習</title>
+<link rel="icon" href="./logo2.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/shared.css">
+<link rel="stylesheet" href="css/p1.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <a class="nav-brand" id="nav-brand" href="index.html">
+    <div class="nav-logo"><img src="./logo.svg" alt="" class="logo"></div>
+    <!-- <div class="nav-logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#3D5A99" stroke-width="1.8" stroke-linecap="round">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M12 8v4l3 3"/>
+      </svg>
+    </div> -->
+
+    <div class="nav-text">
+      <span class="nav-title">AI 提問加料法</span>
+      <span class="nav-sub">心怡｜zoego99@gmail.com</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a id="p1-link" href="index.html" class="active">P1 情境練習</a>
+    <a id="p2-link" href="course-general.html">通用版 課程 Prompt</a>
+  </div>
+</nav>
+
+<!-- ===== 主版面 ===== -->
+<div class="app-layout">
+
+  <!-- 左側：情境對比 -->
+  <div class="panel-left">
+    <div class="panel-header">
+      <span>情境對比</span>
+      <span class="panel-header-hint">同樣一個問題，加幾個料，AI 的回答就完全不同</span>
+    </div>
+    <div class="tab-bar" id="tabBar"></div>
+    <div class="insight-bar" id="insightBar"></div>
+    <div class="compare-area" id="compareArea"></div>
+  </div>
+
+  <!-- 右側：問定骨生 -->
+  <div class="panel-right">
+    <div class="fw-top">
+      <div class="panel-header">
+        <span>【問定骨生】— 點選了解每個步驟</span>
+      </div>
+      <div class="fw-row" id="fwRow"></div>
+    </div>
+    <div class="fw-detail-area" id="fwDetailArea">
+      <div class="fw-idle">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+          <rect x="6" y="6" width="32" height="32" rx="7" stroke="#A09D97" stroke-width="1.5"/>
+          <path d="M14 22h16M14 15h10M14 29h12" stroke="#A09D97" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <div>點選上方【問】【定】【骨】【生】<br>了解每個步驟的意義<br><br>左側對應的「料」標籤也會同步亮起</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="js/p1.js"></script>
+</body>
+</html>

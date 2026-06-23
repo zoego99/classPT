@@ -1,0 +1,32 @@
+**換算對照表（方便你之後自己加樣式）：**
+
+| 原本 px | rem 值 | 說明 |
+| --- | --- | --- |
+| 10px | 0.556rem | 極小標籤 |
+| 11px | 0.611rem | 小標籤、header label |
+| 12px | 0.667rem | 次要說明文字 |
+| 13px | 0.722rem | 主要內容文字 |
+| 14px | 0.778rem | 說明區塊文字 |
+| 15px | 0.833rem | 中標題 |
+| 16px | 0.889rem | Nav 標題、卡片大標 |
+| 18px | 1rem | 基準（大標題） |
+| 20px | 1.111rem | 章節標題 |
+| 24px | 1.333rem | 問定骨生大字 |
+| 30px | 1.667rem | 問定骨生展開大字 |
+
+之後你想在 HTML 裡自己加樣式，照這個表換算就好。未來要讓整站縮小，只需要把 `shared.css` 的 `--fontsize: 18px` 改成 `16px`，所有文字同步縮小。
+
+
+
+
+
+
+未來新增 course-case2.html 只需要兩步：
+步驟一： 在 p1.js 的 UNIT_MAP 加一行
+jsconst UNIT_MAP = {
+  aviation: { label: "航空警察局 課程 Prompt", href: "course-aviation.html" },
+  case2:    { label: "XXX單位 課程 Prompt",    href: "course-case2.html"  },
+  general:  { label: "通用版 課程 Prompt",     href: "course-general.html" }
+};
+步驟二： 複製 course-aviation.html → 改名 course-case2.html，修改內容，Nav 的品牌連結改成 index.html?unit=case2
+給學員的連結就是 index.html?unit=case2，P1 永遠只有一個檔案。
