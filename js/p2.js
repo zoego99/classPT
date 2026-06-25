@@ -39,7 +39,7 @@ function showSection(sec) {
   showSub(sec, sub);
 }
 
-/* ===== 複製 Prompt ===== */
+/* ===== 複製 Prompt（支援臨時編輯後複製，innerText 會抓到使用者編輯後的最新內容） ===== */
 function copyPrompt(btn) {
   const code = btn.closest('.prompt-card').querySelector('.prompt-code').innerText;
   navigator.clipboard.writeText(code).then(() => {
@@ -62,4 +62,24 @@ function copyPrompt(btn) {
 /* ===== 啟動：預設顯示 s1-a ===== */
 document.addEventListener('DOMContentLoaded', () => {
   showSub('s1', 's1-a');
+  initEditablePrompts();
 });
+
+/* ===== 讓所有 .prompt-code 可臨時編輯（不儲存，重新整理後還原） ===== */
+function initEditablePrompts() {
+  document.querySelectorAll('.prompt-code').forEach(el => {
+    el.setAttribute('contenteditable', 'true');
+    el.setAttribute('spellcheck', 'false');
+
+    // 編輯中加上視覺提示 class
+    el.addEventListener('focus', () => el.classList.add('editing'));
+    el.addEventListener('blur', () => el.classList.remove('editing'));
+
+    // 貼上時去除格式，避免帶入外部樣式
+    el.addEventListener('paste', (e) => {
+      e.preventDefault();
+      const text = (e.clipboardData || window.clipboardData).getData('text/plain');
+      document.execCommand('insertText', false, text);
+    });
+  });
+}

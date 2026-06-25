@@ -29,6 +29,8 @@
   --border-dark:   #C8C3B8;
   --radius:        8px;
   --font:          'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+  --red:           #9d0303;
+  --red-light:     #f7eeee;
 
   /* 料標籤色 */
   --tag-who-bg:    #E6F1FB; --tag-who-c:    #0C447C;
