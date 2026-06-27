@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新莊全方位AI24（2026/06）｜AI 課程 Prompt</title>
+<link rel="icon" href="./logo2.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/shared.css">
+<link rel="stylesheet" href="css/p2.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <a class="nav-brand" href="index.html?unit=ai202606">
+    <div class="nav-logo"><img src="./logo.svg" alt="" class="logo"></div>
+    <div class="nav-text">
+      <span class="nav-title">新莊全方位AI24｜AI 課程 Prompt</span>
+      <span class="nav-sub">心怡｜zoego99@gmail.com</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="index.html?unit=ai202606">← 情境練習</a>
+    <a href="course-ai202606.html" class="active">新莊全方位AI24 課程 Prompt</a>
+  </div>
+</nav>
+
+<!-- ===== 三欄版面 ===== -->
+<div class="app-layout">
+
+  <!-- ===== 左欄：導覽 ===== -->
+  <div class="sidebar">
+    <div class="sidebar-header">課程單元</div>
+    <div class="sidebar-scroll">
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-s1" onclick="showSection('s1')">
+          <span class="sec-num" style="background:var(--sec-1)">1</span>
+          AI 協作四步驟
+        </button>
+        <button class="sec-sub-btn" id="btn-s1-a" onclick="showSub('s1','s1-a')">【問】釐清思路</button>
+        <button class="sec-sub-btn" id="btn-s1-b" onclick="showSub('s1','s1-b')">【定】產出草稿</button>
+        <button class="sec-sub-btn" id="btn-s1-c" onclick="showSub('s1','s1-c')">【骨】邏輯骨架校準</button>
+        <button class="sec-sub-btn" id="btn-s1-d" onclick="showSub('s1','s1-d')">【生】產出簡報</button>
+        <button class="sec-sub-btn" id="btn-s1-e" onclick="showSub('s1','s1-e')">常見 AI 詢問</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-s2" onclick="showSection('s2')">
+          <span class="sec-num" style="background:var(--sec-2)">2</span>
+          NotebookLM 應用
+        </button>
+        <button class="sec-sub-btn" id="btn-s2-a" onclick="showSub('s2','s2-a')">功能介紹</button>
+        <button class="sec-sub-btn" id="btn-s2-b" onclick="showSub('s2','s2-b')">對話練習</button>
+        <button class="sec-sub-btn" id="btn-s2-c" onclick="showSub('s2','s2-c')">匯出成品</button>
+        <button class="sec-sub-btn" id="btn-s2-d" onclick="showSub('s2','s2-d')">問卷調查練習</button>
+      </div>
+
+    </div>
+  </div><!-- /sidebar -->
+
+  <!-- ===== 中欄：主內容 ===== -->
+  <div class="content-area" id="contentArea">
+
+    <!-- ======== S1: AI 協作四步驟 ======== -->
+    <div class="content-section" id="s1">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-1)">1</span>
+        AI 協作四步驟
+      </div>
+      <div class="sec-desc">📌 練習主題：咖啡館開店行銷企劃</div>
+
+      <div class="content-h2">詢問原則（BOLD）</div>
+      <table class="data-table">
+        <tr><th>字母</th><th>代表</th><th>核心提問</th></tr>
+        <tr><td><strong>B</strong></td><td>Background 背景</td><td>誰在問、為什麼問</td></tr>
+        <tr><td><strong>O</strong></td><td>Objective 目標</td><td>要解決什麼問題</td></tr>
+        <tr><td><strong>L</strong></td><td>Limitations 限制</td><td>格式、字數、禁止事項</td></tr>
+        <tr><td><strong>D</strong></td><td>Deliverable 具體成果</td><td>最後要交給我的格式是什麼</td></tr>
+      </table>
+
+      <div class="content-h2">AI 協作四步驟（問定骨生）</div>
+      <table class="data-table">
+        <tr><th>步驟</th><th>口訣</th><th>白話好記</th><th>核心動作</th></tr>
+        <tr><td>步驟一</td><td><strong>【問】</strong>AI 問 AI</td><td>釐清盲點</td><td>讓 AI 當顧問反問，把專家盲點和受眾看不懂的鴻溝問出來</td></tr>
+        <tr><td>步驟二</td><td><strong>【定】</strong>定標準</td><td>嚴查規矩</td><td>用 MD 結構化＋Code Block，把正確的知識文件定死，不讓 AI 瞎編</td></tr>
+        <tr><td>步驟三</td><td><strong>【骨】</strong>長骨架</td><td>排版卡位</td><td>管住 AI 過度積極，只長邏輯骨架大綱、不寫廢話內文</td></tr>
+        <tr><td>步驟四</td><td><strong>【生】</strong>生結果</td><td>適性生產</td><td>反向查證後，選對工具，生出可用的最終成品</td></tr>
+      </table>
+
+      <!-- s1-a -->
+      <div class="sub-block" id="s1-a">
+        <div class="sec-sub-title">【問】AI 問 AI — 釐清思路</div>
+        <div class="tip-card info">
+          <strong>AI 幻覺</strong>：AI 產生看似合理，但實際上錯誤、不存在或未經查證的內容。先讓 AI 反向提問釐清需求，確保 AI 在「已知的約束條件」下產出，可降低幻覺風險。AI 結果仍需人工確認、數據需核對來源。
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 S1：Prompt — 釐清思路</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">我目前的任務是：「撰寫一間新開咖啡館的行銷企劃」。
+在你開始動手之前，請先以【資深餐飲品牌顧問】的角色，
+對我提出5個問題，協助我釐清這份企劃的目標客群、核心賣點與重點。
+請一次提出所有問題，等我回答後再開始。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 S2：Prompt — 「結構化的定案資料」，討論匯出MD檔</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">我們剛才的討論已經完成，請將討論結果整理成一份 MD 檔，作為後續開新對話時的「背景資料」使用。
+請依以下結構整理，禁止寫成對話紀錄或流水帳：
+
+1. 任務背景（這份內容是做什麼、給誰看）
+2. 角色設定（先前定案的AI角色，沒有則省略此項）
+3. 已確認的核心重點（條列，只列我們討論中確定的內容）
+4. 尚未決定／待補充的部分（如果有的話）
+
+輸出時請放入 Markdown 程式碼區塊，方便我直接複製存檔。</div>
+        </div>
+        <div class="content-note">
+          <p>目的：用於討論結束後整理結論，方便日後開新對話或免費額度用盡時，直接帶入背景接續進度。</p>
+        </div>
+      </div>
+
+      <!-- s1-b -->
+      <div class="sub-block" id="s1-b">
+        <div class="sec-sub-title">【定】定標準 — 產出草稿</div>
+        <div class="tip-card note">
+          <strong>定標準的三個關鍵要素：</strong>
+          <ul>
+            <li>角色設定：告訴 AI 它是誰（決定語氣與專業度）</li>
+            <li>格式鎖定：指定輸出結構（Markdown 標題、表格、條列）</li>
+            <li>邊界聲明：明確禁止（禁止捏造數據、禁止超過字數）</li>
+          </ul>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 情境1：完全交給 AI 決定架構</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">根據我們剛才討論的內容，產出正式文件。輸出時遵守以下規範：
+
+# 角色設定
+你是一位資深餐飲品牌顧問，擅長社區型咖啡館的定位與開店策略。
+
+# 任務
+針對「咖啡館開店行銷企劃」進行規劃。
+
+# 輸出格式
+請你依據討論內容，自行判斷最適合的內容架構與章節安排，
+每個章節標題需具體、不要用「其他」「補充」這類模糊字眼，以下為例如章節：
+## 一、市場定位分析(STP)
+## 二、品牌差異化與核心賣點
+## 三、開店前置檢查清單(5項)
+## 四、首月行銷時程表(表格：階段/任務/負責人/狀態)
+
+# 邊界規範
+- 所有內容必須來自剛才的對話，禁止自行補充未討論的內容
+- 每點不超過30字
+- 禁止捏造具體數據(預算/業績僅寫「待填入」)</div>
+        </div>
+        <div class="content-note"><p>➜ 適合：還沒想好怎麼分章節，想先看看 AI 怎麼安排，再決定要不要調整</p></div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 情境2：先問 AI 建議架構，但不急著生成內容</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">你是一位資深餐飲品牌顧問，擅長社區型咖啡館的定位與開店策略。
+
+- 根據我們剛才討論的內容，請先不要急著寫草稿。
+- 請你先提出2~3種可能的「內容架構」安排方式（列出章節標題即可）
+- 簡短說明每種架構的適用情境，等我選定方向後再開始產出文案。</div>
+        </div>
+        <div class="content-note"><p>➜ 適合：想要參與架構決策，但不想自己從零開始想，讓 AI 先給選項</p></div>
+      </div>
+
+      <!-- s1-c -->
+      <div class="sub-block" id="s1-c">
+        <div class="sec-sub-title">【骨】長骨架 — 邏輯骨架校準</div>
+        <div class="tip-card note">
+          <strong>▶️ 管住 AI 三招</strong>
+          <table class="data-table">
+            <tr><th>招式</th><th>指令關鍵字</th><th>說明</th></tr>
+            <tr><td>① 宣告禁令</td><td>「禁止填充內文」「只出標題與子項目」</td><td>直接說不要什麼</td></tr>
+            <tr><td>② 指定格式</td><td>「以 Markdown 標題層級輸出」</td><td>用格式約束輸出範圍</td></tr>
+            <tr><td>③ 等待確認</td><td>「輸出大綱後停止，等我確認後再繼續」</td><td>讓人控制節奏</td></tr>
+          </table>
+          <strong>▶️ 簡報時間與張數參考</strong>
+          <ul>
+            <li>通常 1 分鐘對應 1~1.5 張投影片（一般節奏）</li>
+            <li>5 分鐘報告 → 建議 8-10 張／10 分鐘報告 → 建議 12-15 張</li>
+          </ul>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 版本一：簡單版（適合一般情形）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">現在進入【邏輯骨架校準階段】。
+
+請根據我們剛才完成的「咖啡館開店行銷企劃」報告，
+針對【咖啡館投資夥伴與創業顧問】擬定簡報大綱。
+
+規範：
+- 規劃約【8】張架構
+- 每頁須含主題與核心觀點，禁止跳級產出內文或旁白
+- 數據頁面請標註建議採用「便當盒排版法」
+- 僅輸出邏輯骨架後停止，等我確認後再繼續
+- 強制使用 Markdown code block 區塊輸出</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 版本二：完整版（對應視覺規格）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code"># 任務進度：【簡報大綱校準階段】
+
+## 銜接背景與角色設定
+- 資料來源：依據我們剛才完成的「咖啡館開店行銷企劃」報告
+- AI 角色：資深餐飲品牌顧問，協助將企劃轉化為具說服力的簡報邏輯
+- 簡報對象：咖啡館投資夥伴與創業顧問，偏好溫度感、重視可執行性
+
+## 簡報規格參數
+- 上台時間：10 分鐘
+- 投影片張數：約 8 張
+- 輸出格式：以「投影片 [編號]：[標題]」呈現
+- 每頁必含：核心論點摘要 + 建議視覺化圖型
+
+## 參、視覺與版面規格
+- 整體風格：溫暖質感風（木質紋理感、手寫字體點綴）
+- 色系：三色限定
+  主色：拿鐵棕 #6F4E37
+  輔色：奶泡白 #F5EFE6
+  底色：焦糖金 #C8924B
+- 視覺質感：無陰影、無漸層、線條手繪感
+- 封面設計：強制預留上方 30% 標題空白區
+- 內頁排版：複雜數據頁標註「便當盒排版法」或「網格矩陣」
+
+## 強制約束
+- 禁止產出具體簡報文案、旁白或生圖指令
+- 僅輸出邏輯骨架後停止，等我確認後再繼續
+
+## 格式鎖定
+- 強制以 Markdown 程式碼區塊輸出大綱
+
+「報告背景已備齊，請開始擬定簡報邏輯大綱。」</div>
+        </div>
+        <div class="content-note">
+          <p>資訊圖 Prompt 生成器網站：<a href="https://zoego99.github.io/vizgo/index.html" target="_blank">https://zoego99.github.io/vizgo/index.html</a></p>
+        </div>
+      </div>
+
+      <!-- s1-d -->
+      <div class="sub-block" id="s1-d">
+        <div class="sec-sub-title">【生】生結果 — 產出簡報</div>
+        <div class="tip-card info">
+          <strong>反向查證（紅隊測試）</strong>：請 AI 扮演「主管／顧客／審查單位」進行檢視，提前找出缺漏並補強。
+          <div class="prompt-code">例1：請扮演嚴格的咖啡館加盟顧問，針對這份開店行銷企劃提出3個可能需要改善的問題
+例2：請以社區居民角度，檢查這份開店行銷簡報是否有不容易理解或沒有共鳴的地方
+例3：請以開店投資夥伴角度，指出這份企劃可能缺少哪些數據或說明</div>
+        </div>
+        <table class="data-table">
+          <tr><th>輸出類型</th><th>建議工具</th><th>指令關鍵字</th></tr>
+          <tr><td>正式 Word 報告</td><td>Gemini Canvas</td><td>「直接建立 Google 文件」</td></tr>
+          <tr><td>簡報投影片</td><td>Gemini Canvas</td><td>「直接建立 Google 簡報，16:9」</td></tr>
+          <tr><td>互動式 HTML 簡報</td><td>Gemini Artifacts</td><td>「使用 HTML 與 Tailwind CSS 製作，啟動 Preview」</td></tr>
+          <tr><td>知識庫跨文件整合</td><td>NotebookLM</td><td>上傳來源 → 對話查詢</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 簡報型 Prompt</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">邏輯大綱已確認。直接建立 Google 簡報。
+- 內容需填充每張投影片之正式文案
+- 聚焦於咖啡館開店初期90天的行銷時程與分工
+- 呈現對象：咖啡館投資夥伴與創業顧問
+- 產出後請顯示「匯出成簡報」的連結
+- 尺寸：16:9</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 程式碼型 Prompt</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">邏輯大綱已確認。
+使用 HTML 與 Tailwind CSS 程式碼製作數位簡報。
+- 視覺風格：溫暖質感品牌風（拿鐵棕 + 奶泡白 + 焦糖金）
+- 結構規範：行銷時程採用【便當盒排版】，KPI/數據採用【數字卡片版型】
+- 請將結果以程式碼區塊呈現，並同步啟動「預覽 (Preview)」視窗
+- 尺寸：16:9</div>
+        </div>
+      </div>
+
+      <!-- s1-e -->
+      <div class="sub-block" id="s1-e">
+        <div class="sec-sub-title">常見 AI 詢問</div>
+        <div class="content-h2">Q1：如何參考過去文件（照貓畫虎）</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 詢問 Prompt</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code"># 角色與任務
+你是一位專業的行政與文書處理專家。請根據我上傳的參考附檔（前三次的公文/會議紀錄），學習其結構、排版格式、用字語氣與規範，並依據本次的新增內容，生成全新的文件。
+
+# 輸出限制（重要）
+- 請直接在對話框中以「文字與 Markdown 格式」完整顯示內容，方便我直接複製貼上。
+- 請勿產生任何下載檔案（如 Word、PDF 或 txt 檔），我只需要文字回覆。
+
+# 本次文件基本資訊
+- 文件類型：【例如：會議紀錄 / 公告 / 公文】
+- 本次會議/事件主題：【請輸入本次的主題】
+- 本次執行/會議日期：【請輸入日期】
+
+# 本次會議重點與核心內容
+【請在此處貼上或寫下本次會議的實際討論文字、決議事項或口述紀錄，字數不限，越詳細越好】</div>
+        </div>
+
+        <div class="content-h2">Q2：如何生成想要的資訊圖</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 詢問 Prompt</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code"># 任務說明
+我上傳了一張參考圖片。我想要製作一張全新主題的「資訊圖表」，請你參考附圖的整體視覺風格、排版邏輯和美感（例如色彩搭配、圖文配比、線條感），來幫我設計這次的新內容。
+
+# 本次製作需求
+- 圖表主題：咖啡館開店倒數
+- 目標讀者：社區居民與潛在顧客
+- 內容與語氣要求：文字要親切、有溫度，多用生活化的小故事或場景描述，避免過度商業化用語
+- 圖片尺寸比例：1:1（適合社群貼文）
+
+# 請你提供我以下兩部分內容：
+1.【圖表內容規劃】：請幫我把這個主題拆解成適合資訊圖表的文案結構。
+2.【視覺畫面建議】：請告訴我這張圖的畫面該怎麼呈現，例如哪裡放插圖、哪裡放重點文字，才能最接近我上傳的參考圖風格。</div>
+        </div>
+      </div>
+
+    </div><!-- /s1 -->
+
+
+    <!-- ======== S2: NotebookLM ======== -->
+    <div class="content-section" id="s2">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-2)">2</span>
+        NotebookLM 文件智慧整合應用
+      </div>
+      <div class="sec-desc">📌 練習主題：咖啡館開店行銷企劃 + 顧客問卷300筆</div>
+
+      <!-- s2-a -->
+      <div class="sub-block" id="s2-a">
+        <div class="sec-sub-title">功能介紹</div>
+        <div class="tip-card note"><strong>文件摘要與智慧查詢</strong>：上傳文件後用自然語言直接提問，NotebookLM 根據上傳內容回答並標示引用來源，不會自行腦補或引用外部資料。</div>
+        <div class="tip-card note"><strong>會議錄音整理</strong>：先用 Gemini 將錄音轉逐字稿並整理成正式會議記錄格式，再上傳至 NotebookLM 與其他文件放在同一個知識庫，未來可跨會議提問。</div>
+        <div class="tip-card note"><strong>Podcast 語音摘要</strong>：Audio Overview 功能可將文件自動轉換為兩人對話式摘要，適合通勤學習、簡報內容預先消化。</div>
+        <div class="tip-card note"><strong>建立內部知識庫</strong>：將常用文件集中上傳，作為輕量型單位知識庫，新進人員可直接提問，不需要一直問老同事。</div>
+      </div>
+
+      <!-- s2-b -->
+      <div class="sub-block" id="s2-b">
+        <div class="sec-sub-title">對話練習</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 成果報告整理</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請針對上傳的「咖啡館開店行銷企劃成果報告」，
+以【資深餐飲品牌顧問】角色完成以下整理：
+
+1. 用條列方式列出三大工作主軸的核心成果（每項不超過3點）
+2. 找出報告中所有出現的數據，整理成一張表格
+3. 列出「問題與改善建議」章節提到的所有待辦事項，
+   並標注責任部門與期限</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 會議記錄整理</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">我上傳了四份不同時期的會議記錄（第1次籌備、第2次籌備、開店期間滾動調整、結案檢討）。
+
+請跨文件完成以下分析：
+1. 整理四次會議的決議事項清單，標注每項的負責部門與完成期限
+2. 找出哪些問題在多次會議中重複出現
+3. 哪些初次會議的決議，在後續會議被追蹤到完成？哪些沒有提到後續？</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 總專案彙整</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請將上傳的所有來源文件（成果報告＋四份會議記錄）視為一個完整專案，
+進行跨文件總整理：
+
+1. 這個專案從籌備到開幕，時間軸上發生了哪些關鍵事件？
+2. 哪個部門在整個專案中被分配到最多任務？
+3. 若我是新進的店長，要在3分鐘內掌握這個專案，
+   最重要的5件事是什麼？請用條列方式說明。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 逐字稿整理</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">這是一份開店結案檢討會議的錄音逐字稿，語氣口語，內容較雜亂。
+請協助完成以下整理：
+
+1. 整理成正式會議紀錄格式，包含：
+   討論事項、各部門意見摘要、決議事項、後續追蹤事項
+2. 找出所有店長交辦事項，列出負責人與預計完成時間
+3. 整理「問題與改善建議」清單，標注是哪個部門提出的</div>
+        </div>
+      </div>
+
+      <!-- s2-c -->
+      <div class="sub-block" id="s2-c">
+        <div class="sec-sub-title">匯出成品</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出簡報｜情境1：結合視覺風格</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據上傳的「咖啡館開店行銷企劃大綱」，
+製作一份簡報草稿，並依照以下視覺規格標注每頁建議風格：
+
+# 角色設定
+你是一位資深餐飲品牌顧問兼簡報設計顧問。
+
+# 簡報規格
+- 總頁數：8張，不可多不可少
+- 尺寸：16:9
+
+# 每頁輸出格式
+### 投影片第X張：[標題]
+- 視覺風格建議：[從以下擇一]
+  - 數據頁 → 溫暖質感數據卡片風（拿鐵棕＋數字卡片）
+  - 流程頁 → 等距視角微縮風格（流程路徑圖）
+  - 多重並陳頁 → 便當盒排版（大小格混排）
+  - 封面/結語頁 → 極簡向量插畫風格（三色限定）
+- 版面配置：[便當盒/蛇形流程/中心對焦，擇一]
+- 核心列點：[3點，每點不超過20字]
+- 講師講稿：[100字內，語氣親切專業]
+
+# 注意事項
+所有內容必須100%基於上傳的大綱來源，禁止憑空新增資訊。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出簡報｜情境2：範例模板</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code"># 角色設定
+你是一位專業的餐飲創業顧問，擁有豐富的提案與簡報設計經驗。
+
+# 任務目標
+請針對已勾選的來源資料，製作主題為「咖啡館開店行銷企劃」
+的簡報大綱與詳細草稿。
+
+# 結構限制
+- 總頁數：嚴格限制8張
+- 邏輯架構：引言→市場定位→開店前置整備→行銷推廣成效→結論
+
+# 每頁輸出格式（統一Markdown）
+### 投影片第X張：[名稱]
+- 視覺配置建議：[圖表類型或佈局]
+- 核心列點：[3點]
+- 講師講稿：[100字內，語氣親切自信]
+
+# 注意事項
+所有論點必須基於來源資料，禁止憑空捏造數據。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出心智圖</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據上傳的所有來源文件，產出一份心智圖結構（純文字版）。
+
+格式規範：
+- 中心主題：咖啡館開店行銷企劃
+- 第一層分支（3～5個）：主要工作主軸或專案階段
+- 第二層分支：每個主軸下的關鍵任務或重點
+- 第三層分支：具體數據、負責部門或執行細節</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出資訊圖</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據上傳的成果報告，整理出適合製作資訊圖的核心內容，
+並依照以下格式輸出，讓我可以直接貼入AI生圖工具：
+
+# 資訊圖內容整理
+- 主標題（10字內）：
+- 副標題（20字內）：
+- 核心數據（3～5個關鍵數字，每個附簡短說明）：
+- 三大重點訊息（每點15字內）：
+
+# 視覺風格建議
+- 應用場景：社群貼文與店內海報
+- 建議風格：溫暖質感風（暖棕/奶茶色系）
+- 版面配置：便當盒排版（大小格混排）
+- 配色方案：三色限定，建議以拿鐵棕、奶泡白、焦糖金為主色
+- 簡報母片設定：預留上方30%標題空白區
+- 尺寸：1:1（適合社群貼文）</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出影片／語音摘要</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據上傳的簡報大綱，製作一份「開店成果語音摘要」。
+
+# 角色設定
+主持人A：店長（語氣親切、重視顧客體驗）
+主持人B：熟悉現場的吧檯夥伴（語氣活潑、善用具體案例）
+
+# 風格要求
+- 對話式進行，兩人交替說明各章節重點
+- 主持人B在說明時，適時舉出現場具體情境（例如：尖峰時段如何應對排隊客人）
+- 輕鬆但不失專業感
+- 總長度：約5分鐘可聽完
+
+# 內容規範
+- 開場：點出這次開店企劃的核心價值
+- 中段：依三大主軸各用1分鐘說明亮點成果
+- 結尾：點出最值得帶走的1個改善建議</div>
+        </div>
+      </div>
+
+      <!-- s2-d -->
+      <div class="sub-block" id="s2-d">
+        <div class="sec-sub-title">問卷調查練習</div>
+        <div class="tip-card info">資料是300筆原始問卷，NotebookLM做這種數據不適合直接要它「算出精確數字」（AI對大量列表做統計容易算錯），所以 Prompt 設計重點是「找趨勢/找族群差異」，精確數字交給 Excel 驗證。</div>
+
+        <div class="content-h2">對話練習</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 整體輪廓掃描</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">我上傳了一份咖啡館顧客問卷，共300筆。
+請以【資深市場研究分析師】角色，幫我整理：
+
+1. 這300位受訪者，年齡區間的分布大致呈現什麼樣的輪廓？
+2.「最重視因素」這一題，哪一個選項看起來佔比明顯偏高或偏低？
+3. 請只描述「趨勢與輪廓」，不要給出精確百分比數字，
+   涉及精確計算的部分請提醒我改用Excel驗證</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 族群交叉觀察</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請幫我交叉觀察：「年齡區間」與「最重視因素」之間，
+是否有某個年齡層特別偏好某個因素（例如年輕族群特別重視價格、年長族群特別重視環境氛圍）？
+請列出你觀察到的3個現象，並說明你是依據哪些列的資料得出這個觀察，
+方便我回頭抽樣核對。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 異常/極端值觀察</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請幫我找出這份問卷裡，「願付一杯精品咖啡價格」明顯偏高或偏低的受訪者，
+這群人在「年齡區間」「最重視因素」上是否有共同特徵？
+請只描述特徵傾向，不要列出精確人數。</div>
+        </div>
+
+        <div class="content-h2">匯出成品</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出報告</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據上傳的問卷資料(300筆)，整理成一份「顧客洞察報告」草稿。
+
+# 角色設定
+你是一位資深市場研究分析師，擅長將問卷數據轉化為行銷決策建議。
+
+# 輸出格式
+## 一、受訪者輪廓概述
+## 二、消費行為觀察（頻率/金額/時段）
+## 三、最重視因素的族群差異
+## 四、對行銷企劃的3點具體建議
+
+# 邊界規範
+- 涉及精確數字（人數、百分比）請標注「概估，請以Excel實際統計為準」
+- 禁止捏造原始資料中不存在的選項或數值</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出資料表</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據上傳的問卷資料，整理出一張適合放入報告的彙整表，
+欄位為：分類維度／主要發現／對行銷的意義。
+
+請針對「年齡區間」「常去時段」「最重視因素」三個維度各整理一行，
+「主要發現」請用「明顯偏高/偏低/無明顯差異」這類描述性字眼，
+不要寫精確百分比。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出簡報</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code"># 角色設定
+你是一位資深市場研究分析師兼簡報設計顧問。
+
+# 任務目標
+請根據上傳的問卷資料(300筆)，製作「顧客洞察」簡報大綱與草稿。
+
+# 簡報規格
+- 總頁數：5張
+- 尺寸：16:9
+
+# 每頁輸出格式
+### 投影片第X張：[標題]
+- 視覺風格建議：[數據頁→溫暖質感數字卡片風／其他頁→便當盒排版]
+- 核心列點：[3點，每點不超過20字，趨勢性描述優先於精確數字]
+- 講師講稿：[100字內]
+
+# 注意事項
+精確統計數字請在講稿中註明「需以Excel實際數據核對」</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出資訊圖表</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據上傳的問卷資料，整理出適合製作資訊圖表的核心內容，
+讓我可以直接貼入AI生圖工具：
+
+# 資訊圖內容整理
+- 主標題（10字內）：
+- 副標題（20字內）：
+- 三大重點觀察（每點15字內，描述趨勢，避免寫精確數字）：
+
+# 視覺風格建議
+- 應用場景：社群貼文／店內公告
+- 建議風格：溫暖質感風（拿鐵棕／奶泡白）
+- 配色：三色限定
+- 尺寸：1:1</div>
+        </div>
+      </div>
+
+    </div><!-- /s2 -->
+
+  </div><!-- /content-area -->
+
+
+  <!-- ===== 右欄：工具列 ===== -->
+  <div class="tool-panel">
+
+    <div class="tool-section">
+      <div class="tool-section-title">頁面導覽</div>
+      <a class="tool-btn p1-btn" href="index.html?unit=ai202606">
+        <span class="tool-icon">←</span>
+        <span class="tool-name">P1 情境練習</span>
+      </a>
+    </div>
+
+    <div class="tool-section">
+      <div class="tool-section-title">AI 工具</div>
+      <a class="tool-btn" href="https://gemini.google.com" target="_blank">
+        <span class="tool-icon">✦</span>
+        <span class="tool-name">Gemini</span>
+        <span class="tool-arrow">↗</span>
+      </a>
+      <a class="tool-btn" href="https://chatgpt.com" target="_blank">
+        <span class="tool-icon">◎</span>
+        <span class="tool-name">ChatGPT</span>
+        <span class="tool-arrow">↗</span>
+      </a>
+      <a class="tool-btn" href="https://notebooklm.google.com" target="_blank">
+        <span class="tool-icon">📓</span>
+        <span class="tool-name">NotebookLM</span>
+        <span class="tool-arrow">↗</span>
+      </a>
+    </div>
+
+    <div class="tool-section">
+      <div class="tool-section-title">課程工具</div>
+      <a class="tool-btn" href="https://zoego99.github.io/vizgo/index.html" target="_blank">
+        <span class="tool-icon">🎨</span>
+        <span class="tool-name">資訊圖 Prompt 生成器</span>
+        <span class="tool-arrow">↗</span>
+      </a>
+      <!-- 未來新增工具在此加一個 .tool-btn -->
+    </div>
+
+  </div><!-- /tool-panel -->
+
+</div><!-- /app-layout -->
+
+<script src="js/p2.js"></script>
+</body>
+</html>

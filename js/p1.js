@@ -122,7 +122,8 @@ let activeFw = null;
 const UNIT_MAP = {
   aviation: { label: "航空警察局 課程 Prompt", href: "course-aviation.html" },
   general:  { label: "通用版 課程 Prompt",     href: "course-general.html"  },
-  st:  { label: "巨興醫學科技 課程 Prompt",     href: "course-st.html"  }
+  st:  { label: "巨興醫學科技 課程 Prompt",     href: "course-st.html"  },
+  ai202606:  { label: "新莊全方位AI24 課程 Prompt",     href: "course-ai202606.html"  }
   /* 新單位在此新增一行 */
 };
 
