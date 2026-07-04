@@ -22,8 +22,9 @@
     </div>
   </a>
   <div class="nav-links">
-    <a href="index.html?unit=ai202606">← 情境練習</a>
-    <a href="course-ai202606.html" class="active">新莊全方位AI24 課程 Prompt</a>
+    <a href="index.html?unit=ai202606">情境練習</a>
+    <a href="course-ai202606.html" class="active">咖啡館 / 寵物</a>
+    <a href="course-ai202606-travel.html">北海道旅遊</a>
   </div>
 </nav>
 
@@ -53,9 +54,30 @@
           NotebookLM 應用
         </button>
         <button class="sec-sub-btn" id="btn-s2-a" onclick="showSub('s2','s2-a')">功能介紹</button>
+        <button class="sec-sub-btn" id="btn-s2-e" onclick="showSub('s2','s2-e')">參考來源上傳</button>
         <button class="sec-sub-btn" id="btn-s2-b" onclick="showSub('s2','s2-b')">對話練習</button>
         <button class="sec-sub-btn" id="btn-s2-c" onclick="showSub('s2','s2-c')">匯出成品</button>
         <button class="sec-sub-btn" id="btn-s2-d" onclick="showSub('s2','s2-d')">問卷調查練習</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-s3" onclick="showSection('s3')">
+          <span class="sec-num" style="background:var(--sec-3)">3</span>
+          Gamma 簡報製作
+        </button>
+        <button class="sec-sub-btn" id="btn-s3-a" onclick="showSub('s3','s3-a')">匯入大綱生成簡報</button>
+        <button class="sec-sub-btn" id="btn-s3-b" onclick="showSub('s3','s3-b')">簡報 Prompt 範本</button>
+        <button class="sec-sub-btn" id="btn-s3-b" onclick="showSub('s3','s3-c')">課程統一 範本</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-s4" onclick="showSection('s4')">
+          <span class="sec-num" style="background:var(--sec-4)">4</span>
+          Canva 海報與社群
+        </button>
+        <button class="sec-sub-btn" id="btn-s4-a" onclick="showSub('s4','s4-a')">快速鍵</button>
+        <button class="sec-sub-btn" id="btn-s4-b" onclick="showSub('s4','s4-b')">元素搜尋關鍵字</button>
+        <button class="sec-sub-btn" id="btn-s4-c" onclick="showSub('s4','s4-c')">AI 文案生成</button>
       </div>
 
     </div>
@@ -363,6 +385,60 @@
         <div class="tip-card note"><strong>建立內部知識庫</strong>：將常用文件集中上傳，作為輕量型單位知識庫，新進人員可直接提問，不需要一直問老同事。</div>
       </div>
 
+      <!-- s2-e -->
+      <div class="sub-block" id="s2-e">
+        <div class="sec-sub-title">參考來源上傳</div>
+        <div class="tip-card note">上傳的來源越豐富，NotebookLM 的回答越有依據。建議同時上傳「練習附檔」＋「參考網站」＋「YouTube影片」，讓 AI 可以交叉比對，不要只上傳課程附檔，避免閉門造車。</div>
+
+        <div class="content-h2">① 練習附檔（課程提供）</div>
+        <table class="data-table">
+          <tr><th>檔案</th><th>說明</th></tr>
+          <tr><td>01_成果報告（Doc / MD / PDF）</td><td>咖啡館開店行銷企劃成果，含三大主軸、數據表、改善建議</td></tr>
+          <tr><td>02-05 四份會議記錄（docx）</td><td>從第1次籌備到結案檢討，決議事項前後呼應，適合跨文件比對練習</td></tr>
+          <tr><td>06 錄音逐字稿（txt）</td><td>口語未整理格式，適合練習逐字稿整理 Prompt</td></tr>
+          <tr><td>問卷調查300筆（csv / xlsx）</td><td>模擬顧客問卷數據，適合問卷洞察 Prompt 練習</td></tr>
+        </table>
+
+        <div class="content-h2">② 參考網站（自行新增）</div>
+        <div class="tip-card info">以下為範例格式，網址欄位請自行填入你找到的文章連結。建議選 2-3 篇討論最熱烈或最具代表性的文章貼入 NotebookLM 作為來源。</div>
+        <table class="data-table">
+          <tr><th>類型</th><th>建議來源媒體</th><th>說明</th></tr>
+          <tr><td>競品分析</td><td>食尚玩家 / ELLE / 商業周刊</td><td>分析同類咖啡館的行銷話術與定價策略，找出市場定位空白</td></tr>
+          <tr><td>消費者評價</td><td>Dcard / PTT / Google評論</td><td>讓 AI 讀論壇真實評論，找出消費者痛點與常見雷點</td></tr>
+          <tr><td>市場趨勢</td><td>數位時代 / 經理人月刊</td><td>提供產業趨勢視角，讓 NotebookLM 具備「市場全局觀」</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 交叉比對 Prompt（上傳網站來源後使用）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">根據 Dcard / PTT 網友的討論，消費者在挑選咖啡館時，最在意的3個缺點是什麼？
+我的咖啡館開店企劃有避開這些雷點嗎？
+請對照我上傳的成果報告，逐一檢查並給出建議。</div>
+        </div>
+
+        <div class="content-h2">③ YouTube 影片列表（自行新增）</div>
+        <div class="tip-card info">NotebookLM 支援 YouTube 影片連結作為來源，AI 會讀取字幕內容進行分析。建議選有中文或英文字幕的影片，貼入連結即可。</div>
+        <table class="data-table">
+          <tr><th>目的</th><th>用途</th></tr>
+          <tr><td>趨勢觀察</td><td>了解咖啡館、飲食產業近期流行的風格、話題與行銷方式</td></tr>
+          <tr><td>競品觀察</td><td>分析 YouTuber 評論咖啡館時最在意的細節（空間感？出餐速度？服務態度？）</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 影片來源分析 Prompt</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">根據上傳的 YouTube 影片內容，這些評論者在觀察一間咖啡館時，最常提到的正面與負面評價各是什麼？
+請整理成兩欄表格，並標注出現頻率（高 / 中 / 低）。</div>
+        </div>
+
+        <div class="content-h2">④ 搜尋關鍵字建議</div>
+        <div class="tip-card note">用以下關鍵字在 Google 找文章後，將網址貼入 NotebookLM 作為來源。找 2-3 篇即可，不需要大量上傳。</div>
+        <table class="data-table">
+          <tr><th>目的</th><th>建議關鍵字</th></tr>
+          <tr><td>找競品現況</td><td>2025 台灣咖啡館 推薦 / 社區型咖啡館 行銷 / 小咖啡館 開店 成功案例</td></tr>
+          <tr><td>找消費者評價</td><td>咖啡館 推薦 Dcard / 咖啡廳 踩雷 PTT / 咖啡館 等太久 評論</td></tr>
+          <tr><td>找行銷靈感</td><td>咖啡館 IG 文案 / 開店倒數 社群 貼文 / 咖啡廳 品牌故事</td></tr>
+          <tr><td>找PDF專業報告</td><td>台灣 餐飲業 消費趨勢 filetype:pdf</td></tr>
+          <tr><td>找特定媒體</td><td>咖啡館 行銷 site:businessweekly.com.tw</td></tr>
+        </table>
+      </div>
+
       <!-- s2-b -->
       <div class="sub-block" id="s2-b">
         <div class="sec-sub-title">對話練習</div>
@@ -614,6 +690,241 @@
       </div>
 
     </div><!-- /s2 -->
+
+    <!-- ======== S3: Gamma ======== -->
+    <div class="content-section" id="s3">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-3)">3</span>
+        Gamma 簡報製作
+      </div>
+      <div class="sec-desc">📌 練習主題：咖啡館開店行銷企劃簡報</div>
+
+      <div class="sub-block" id="s3-a">
+        <div class="sec-sub-title">匯入大綱生成簡報</div>
+        <div class="tip-card info"><strong>工作流程：</strong>用 Gemini / ChatGPT 先產出 Markdown 大綱 → 複製到 Gamma「匯入」功能 → AI 自動配圖排版 → 匯出 PPT 微調。Gamma 免費版每月有額度限制，示範用老師帳號，同學觀看流程即可。</div>
+        <div class="content-h2">步驟一：先用 AI 產出 Markdown 大綱</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 產出 Gamma 專用 Markdown 大綱</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據我們剛才討論的「咖啡館開店行銷企劃」，
+產出一份 Gamma 簡報專用的 Markdown 大綱。
+
+規範：
+- 總頁數：8頁，每頁一個 ## 標題
+- 每頁用 3～5 個 - 條列核心重點，不要寫長篇文章
+- 數據頁請直接寫出具體數字（例如：顧客問卷300筆 / 競品8家 / 首月目標380張會員卡）
+- 禁止捏造未討論過的數據，未確認的數字寫「待填入」
+
+輸出時請放入 Markdown 程式碼區塊，方便我直接複製貼入 Gamma。</div>
+        </div>
+        <div class="content-h2">步驟二：貼入 Gamma 生成簡報</div>
+        <div class="tip-card note">操作路徑：Gamma 首頁 → 「新建」→「匯入」→ 貼上 Markdown 文字 → 選擇主題風格 → 生成。建議選「極簡」或「商務」風格，與行銷提案氛圍最搭。</div>
+        <div class="content-h2">步驟三：Gamma → PPT 匯出後微調</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 告訴 AI 哪幾頁要修改</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">Gamma 幫我生成的簡報已匯出成 PPT，有幾頁需要調整：
+第3頁的圖表建議改成「直條圖」呈現競品比較
+第5頁的文字太多，請幫我精簡成每點不超過15字
+第7頁需要加入一個「行動呼籲」按鈕設計建議
+
+請給我每頁的修改建議，我再自行在 PPT 中操作。</div>
+        </div>
+      </div>
+
+      <div class="sub-block" id="s3-b">
+        <div class="sec-sub-title">簡報 Prompt 範本</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 完整版簡報生成 Prompt（直接交給 AI 填充）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據上傳的「咖啡館開店行銷企劃大綱」，製作一份完整簡報草稿：
+
+# 角色設定
+你是一位資深餐飲品牌顧問兼簡報設計師。
+
+# 簡報規格
+- 總頁數：8張，不可多不可少
+- 尺寸：16:9
+- 視覺色系：暖棕色系（拿鐵棕 #6F4E37、奶泡白 #F5EFE6、焦糖金 #C8924B）
+
+# 每頁輸出格式
+### 投影片第X張：[標題]
+- 版面配置：[便當盒 / 蛇形流程 / 中心對焦，擇一]
+- 核心列點：[3點，每點不超過20字]
+- 口說講稿：[80字內]
+
+# 注意事項
+所有內容必須基於上傳的大綱來源，禁止憑空新增資訊。</div>
+        </div>
+      </div>
+      <div class="sub-block" id="s3-c">
+        <div class="sec-sub-title">課程統一 範本</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 咖啡館開店行銷企劃 範本</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code"># 咖啡館開店行銷企劃
+
+## 第1頁｜封面：咖啡館開店行銷提案
+1. **專案名稱**：豆芽咖啡 2026 年度開店行銷計畫
+2. **提案單位**：品牌行銷部
+3. **提案人**：專案負責人
+4. **主題語句**：「每一杯都有溫度，每個角落都是放鬆的理由。」
+5. **視覺要求**：拿鐵棕與奶泡白交織，營造溫暖、社區感的品牌氛圍。
+
+## 第2頁｜品牌定位與目標客群
+1. **市場定位**：填補社區型「溫度感咖啡館」市場空白，主打輕奢不貴、有故事感的品牌路線。
+2. **目標客群**：25-44 歲，上班族晨間外帶族、週末親子久坐族為主力。
+3. **競品調查**：完成周邊 3 公里 8 家競品分析，選定捷運站步行 3 分鐘社區街角店面。
+4. **品牌核心價值**：溫暖、社區感、手作質感、每日新鮮烘焙。
+5. **差異化優勢**：比連鎖咖啡館更有溫度，比精品咖啡館更親民。
+
+## 第3頁｜開店前置整備
+1. **空間規劃**：座位數 28 席（含戶外 4 席），吧檯動線以「晨間外帶尖峰」為核心設計。
+2. **供應商議價**：咖啡豆、牛奶、烘焙食材共 4 家供應商已完成簽約。
+3. **人力招募**：正職 2 名、兼職 3 名，優先招募具吧檯實作經驗者。
+4. **顧客問卷洞察**：300 筆問卷顯示 25-34 歲客群最重視口味與環境氛圍。
+5. **定價策略**：主力商品定價 120-150 元，平均客單價目標 130 元。
+
+## 第4頁｜首月行銷執行策略
+1. **社群預熱**：開幕前 4 週啟動 IG/FB 帳號，「開幕倒數」系列貼文累積追蹤。
+2. **開幕活動**：首週買一送一，會員卡首刷禮，目標首月發卡 300 張以上。
+3. **口碑行銷**：邀請 3-5 位在地美食部落客進行開幕前試喝，製造社群聲量。
+4. **問卷轉文案**：問卷洞察結果直接轉化為「社群開店倒數貼文」內容主題。
+5. **KPI 設定**：首月進店 1,000 人次、社群追蹤數破千、回購率達 35%。
+
+## 第5頁｜成果預期與未來展望
+1. **首季目標**：會員卡發放 380 張，回購率 42%，高於原訂目標 35%。
+2. **品牌延伸**：建立店內限定周邊商品（手提袋、杯套），提升品牌黏著度。
+3. **展店計畫**：首店成功後，複製 SOP 模板，評估第二點展店可行性。
+4. **季度檢視**：每季檢視菜單結構與社群數據，依回饋調整行銷策略。
+5. **總結陳述**：請主管支持本案，讓豆芽咖啡成為這個社區最有溫度的日常據點。
+</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 寵物商品行銷企劃 範本</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code"># 寵物商品行銷企劃
+
+## 第1頁｜封面：寵物商品行銷提案
+1. **專案名稱**：毛孩好日子 2026 年度新品上市行銷計畫
+2. **提案單位**：品牌行銷部
+3. **提案人**：專案負責人
+4. **主題語句**：「每一口都是愛，每個毛孩都值得最好的。」
+5. **視覺要求**：暖橘與奶茶色調交織，以寵物店長貓 IP 角色為主視覺，溫馨可愛氛圍。
+
+## 第2頁｜品牌定位與目標客群
+1. **市場定位**：主打「成分安心、萌系包裝、飼主放心買」的寵物零食中高價位市場。
+2. **目標客群**：25-40 歲都會飼主，重視寵物健康、具消費能力、活躍於社群平台。
+3. **競品調查**：完成市售主要競品分析 6 款，鎖定「天然成分、無添加防腐劑」作為差異化切入點。
+4. **品牌核心價值**：安心、天然、萌趣、飼主與毛孩的共好生活。
+5. **差異化優勢**：比大型連鎖寵物店更有品牌溫度，比進口品牌更貼近台灣飼主需求。
+
+## 第3頁｜商品上市前置整備
+1. **IP 角色設定**：建立「店長貓」品牌吉祥物，統一貫穿商品包裝、社群貼文、貼圖設計。
+2. **商品規格確認**：寵物零食系列共 3 款口味，成分通過獸醫師審核，適口性測試完成。
+3. **通路議價**：線上（蝦皮、PChome）＋線下（獨立寵物店）雙通路同步上架計畫。
+4. **電商頁設計**：完成商品詳情頁 6 張圖設計（主圖、成分、情境、顧客見證、比較表、CTA）。
+5. **定價策略**：單包建議售價 280-380 元，訂閱方案可享 85 折，培養回購黏著度。
+
+## 第4頁｜首月行銷執行策略
+1. **社群預熱**：上市前 3 週以「店長貓日記」系列短影音開始預熱，累積 IG/FB 追蹤。
+2. **開賣活動**：首週限定開賣優惠，買 2 包送限定店長貓貼圖包，強化購買動機。
+3. **KOL 合作**：邀請 3-5 位寵物 YouTuber 或 IG 飼主進行開箱試吃，製造真實口碑。
+4. **LINE 貼圖上架**：同步上架店長貓 LINE 貼圖，以免費貼圖換取品牌曝光與流量回流。
+5. **KPI 設定**：首月電商訂單達 500 筆、社群追蹤數破 2,000、回購率達 30%。
+
+## 第5頁｜成果預期與未來展望
+1. **首季目標**：電商回購率達 35%，LINE 貼圖下載突破 1,000 次，品牌認知度有效提升。
+2. **品牌延伸**：以店長貓 IP 延伸開發第二季貼圖、聯名周邊（毛巾、飼料碗貼紙）。
+3. **通路拓展**：首款成功後，評估進入量販通路（全聯、家樂福寵物區）可行性。
+4. **季度檢視**：每季檢視口味銷售佔比與顧客評論，依回饋調整配方或推出新口味。
+5. **總結陳述**：請主管支持本案，讓毛孩好日子成為台灣飼主最信賴的寵物零食品牌。
+</div>
+        </div>
+      </div>
+    </div><!-- /s3 -->
+
+    <!-- ======== S4: Canva ======== -->
+    <div class="content-section" id="s4">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-4)">4</span>
+        Canva 海報與社群
+      </div>
+      <div class="sec-desc">📌 練習主題：咖啡館開店倒數 / 寵物商品宣傳海報</div>
+
+      <div class="sub-block" id="s4-a">
+        <div class="sec-sub-title">快速鍵</div>
+        <div class="content-h2">▶️ 物件操作</div>
+        <table class="data-table">
+          <tr><th>功能</th><th>Windows</th><th>Mac</th><th>功能</th><th>Windows</th><th>Mac</th></tr>
+          <tr><td>複製物件</td><td>Ctrl + C</td><td>Cmd + C</td><td>上一層</td><td>Ctrl + ]</td><td>Cmd + ]</td></tr>
+          <tr><td>貼上物件</td><td>Ctrl + V</td><td>Cmd + V</td><td>下一層</td><td>Ctrl + [</td><td>Cmd + [</td></tr>
+          <tr><td>群組</td><td>Ctrl + G</td><td>Cmd + G</td><td>最上層</td><td>Ctrl + Shift + ]</td><td>Cmd + Shift + ]</td></tr>
+          <tr><td>取消群組</td><td>Ctrl + Shift + G</td><td>Cmd + Shift + G</td><td>最底層</td><td>Ctrl + Shift + [</td><td>Cmd + Shift + [</td></tr>
+        </table>
+        <div class="content-h2">▶️ 對齊與移動</div>
+        <table class="data-table">
+          <tr><th>功能</th><th>Windows / Mac</th></tr>
+          <tr><td>精準移動 1px</td><td>方向鍵 ←↑↓→</td></tr>
+          <tr><td>快速移動 10px</td><td>Shift + 方向鍵</td></tr>
+        </table>
+        <div class="content-h2">▶️ 編輯 / 頁面</div>
+        <table class="data-table">
+          <tr><th>功能</th><th>Windows</th><th>Mac</th><th>功能</th><th>Windows</th><th>Mac</th></tr>
+          <tr><td>新增頁面</td><td>Ctrl + Enter</td><td>Cmd + Enter</td><td>回到 100%</td><td>Ctrl + 0</td><td>Cmd + 0</td></tr>
+          <tr><td>放大畫布</td><td>Ctrl + +</td><td>Cmd + +</td><td>復原 Undo</td><td>Ctrl + Z</td><td>Cmd + Z</td></tr>
+          <tr><td>縮小畫布</td><td>Ctrl + -</td><td>Cmd + -</td><td>重做 Redo</td><td>Ctrl + Shift + Z</td><td>Cmd + Shift + Z</td></tr>
+        </table>
+      </div>
+
+      <div class="sub-block" id="s4-b">
+        <div class="sec-sub-title">元素搜尋關鍵字</div>
+        <div class="tip-card note">空格（space）= OR（或）；＋（加號）= AND（而且）</div>
+        <table class="data-table">
+          <tr><th>類型</th><th>關鍵字</th></tr>
+          <tr><td>影片常用字幕條</td><td>lower third / news lower third / name plate / subtitle bar / ticker</td></tr>
+          <tr><td>影片特效</td><td>glitch animation / neon effect / motion graphic / lens flare / transition</td></tr>
+          <tr><td>可愛 / 咖啡館 / 療癒風</td><td>doodle / hand drawn / kawaii / cute elements / coffee icon / coffee doodle / pastel badge</td></tr>
+          <tr><td>寵物風</td><td>paw print / pet icon / cute animal / kawaii cat / dog doodle / pet badge</td></tr>
+          <tr><td>裝飾線條與小物件</td><td>divider line / sparkle / starburst / arrow hand drawn / gradient swoosh / wave line</td></tr>
+          <tr><td>教學影片符號</td><td>highlight circle / marker stroke / step badge / numbered label / pointer arrow / check mark badge</td></tr>
+        </table>
+      </div>
+
+      <div class="sub-block" id="s4-c">
+        <div class="sec-sub-title">AI 文案生成</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 咖啡館開店倒數海報文案</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">你是一位「餐飲品牌」文案顧問，
+擅長為【社區型咖啡館：豆芽咖啡】撰寫溫暖、有記憶點的海報文案。
+
+請依照以下活動資訊，產出「海報文案專用格式」：
+1. 主標題（簡短、吸睛、有溫度感）
+2. 短標語（6～12字，親切、生活感）
+3. 活動簡介（2～3行，強調社區感與開店故事）
+4. 活動資訊（開幕日期／地點）
+
+另外提供 5 組「主標題＋短標語」，風格各異。
+
+【活動資訊】
+- 活動名稱：豆芽咖啡 正式開幕
+- 開幕日期：【請填入日期】
+- 地點：【請填入地址】
+- 氛圍：溫暖、社區感、手作質感、奶茶色系
+
+【輸出限制】
+- 僅輸出海報文案，段落清楚，方便直接貼到 Canva
+- 不要加入說明或延伸內容</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 寵物商品社群貼文文案</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">你是一位寵物商品品牌文案顧問，
+請幫我為「寵物零食新品上市」撰寫 IG/FB 社群貼文文案。
+
+請提供 3 則貼文，分別用以下三個角度切入：
+1. 「店長貓出場」——由寵物IP角色口吻說話，介紹新品
+2. 「飼主證言」——以飼主角度分享使用心得，強調安心感
+3. 「限時優惠」——製造緊迫感，附上行動呼籲（CTA）
+
+每則貼文：100字以內，含 2～3 個適合的 emoji，段落清楚，方便直接貼到 Canva 圖片說明欄</div>
+        </div>
+      </div>
+    </div><!-- /s4 -->
 
   </div><!-- /content-area -->
 
