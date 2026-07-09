@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>北海道旅遊規劃課（電腦版）</title>
+<link rel="icon" href="./logo2.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/shared.css">
+<link rel="stylesheet" href="css/p2.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-logo"><img src="./logo.svg" alt="" class="logo"></div>
+    <div class="nav-text">
+      <span class="nav-title">北海道旅遊規劃課｜2人自助行程</span>
+      <span class="nav-sub">心怡｜zoego99@gmail.com</span>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== 三欄版面 ===== -->
+<div class="app-layout">
+
+  <!-- ===== 左欄：導覽 ===== -->
+  <div class="sidebar">
+    <div class="sidebar-header">課程單元</div>
+    <div class="sidebar-scroll">
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-s1" onclick="showSection('s1')">
+          <span class="sec-num" style="background:var(--sec-1)">1</span>
+          Gemini 開放式規劃
+        </button>
+        <button class="sec-sub-btn" id="btn-s1-a" onclick="showSub('s1','s1-a')">行程構想 Prompt</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-s2" onclick="showSection('s2')">
+          <span class="sec-num" style="background:var(--sec-2)">2</span>
+          NotebookLM 資料來源
+        </button>
+        <button class="sec-sub-btn" id="btn-s2-a" onclick="showSub('s2','s2-a')">旅行社行程網址</button>
+        <button class="sec-sub-btn" id="btn-s2-b" onclick="showSub('s2','s2-b')">YouTube 影片列表</button>
+        <button class="sec-sub-btn" id="btn-s2-c" onclick="showSub('s2','s2-c')">交叉比對 Prompt</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-s3" onclick="showSection('s3')">
+          <span class="sec-num" style="background:var(--sec-3)">3</span>
+          簡報與資訊圖表
+        </button>
+        <button class="sec-sub-btn" id="btn-s3-a" onclick="showSub('s3','s3-a')">一鍵生成操作</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-s4" onclick="showSection('s4')">
+          <span class="sec-num" style="background:var(--sec-4)">4</span>
+          交通與地圖規劃
+        </button>
+        <button class="sec-sub-btn" id="btn-s4-a" onclick="showSub('s4','s4-a')">交通時間建議</button>
+        <button class="sec-sub-btn" id="btn-s4-b" onclick="showSub('s4','s4-b')">Google地圖整合</button>
+      </div>
+
+    </div>
+  </div><!-- /sidebar -->
+
+  <!-- ===== 中欄：主內容 ===== -->
+  <div class="content-area" id="contentArea">
+
+    <!-- ======== S1: Gemini 開放式規劃 ======== -->
+    <div class="content-section" id="s1">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-1)">1</span>
+        Gemini 開放式規劃
+      </div>
+      <div class="sec-desc">📌 練習主題：2人北海道自助行，5天4夜，7月出發</div>
+      <div class="tip-card info">
+        <strong>操作提示：</strong><br>剛開始規劃什麼都不確定時，不用急著給AI一堆條件限制。<br>
+先開放式詢問，看AI會給你什麼答案，通常已經涵蓋七八成常見景點，<br>
+之後再拿真實旅行社行程、YouTube影片來對，抓漏、補正確資訊就好。<br>
+      </div>
+
+      <div class="sub-block" id="s1-a">
+        <div class="sec-sub-title">行程構想 Prompt</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 開放式行程構想</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">幫我規劃一趟北海道自由行，2人同行，5天4夜，7月出發。
+請給我：景點建議、大眾交通銜接方式、每日行程安排。</div>
+        </div>
+        <div class="content-note"><p>➜ 這一步先讓 AI 自由發揮，得到初步構想即可，不用太仔細，下一階段會用真實資料交叉比對。</p></div>
+      </div>
+    </div><!-- /s1 -->
+
+
+    <!-- ======== S2: NotebookLM 資料來源 ======== -->
+    <div class="content-section" id="s2">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-2)">2</span>
+        NotebookLM 資料來源
+      </div>
+      <div class="sec-desc">📌 練習主題：雄獅 × 山富 × YouTube攻略交叉比對</div>
+      <div class="tip-card note"><strong>操作提示：</strong>開啟 notebooklm.google.com，點「新增來源」，把下方連結一個一個貼進去（選「網站」類型），或直接貼 YouTube 網址（選「YouTube」類型）。</div>
+
+      <!-- s2-a -->
+      <div class="sub-block" id="s2-a">
+        <div class="sec-sub-title">旅行社行程網址</div>
+        <table class="data-table">
+          <tr><th>行程</th><th>連結</th></tr>
+          <tr><td>雄獅1：北海道旅遊｜洞爺湖展望台.函館纜車.小樽運河.三大螃蟹五日</td><td><a href="https://travel.liontravel.com/detail?NormGroupID=92acc5da-b309-4ef2-9b0c-5c2973db62bf&GroupID=26JH723BRF-T&Platform=APP&fr=cg311C0401C0201M01" target="_blank">雄獅旅遊 ↗</a></td></tr>
+          <tr><td>雄獅2：雙宿北海道｜溫泉鄉.海洋公園.企鵝遊行.雙螃蟹溫泉五日</td><td><a href="https://travel.liontravel.com/detail?NormGroupID=b4559133-4b1f-4ba8-84ee-bc4432350895&Origin=LION&Platform=APP&GroupID=26JH807BRG-T" target="_blank">雄獅旅遊 ↗</a></td></tr>
+          <tr><td>山富1：紫薰北海道５日｜星空纜車.函館百萬夜景.富良野花田.花田列車</td><td><a href="https://www.travel4u.com.tw/group/product/SPK05260717I/" target="_blank">山富旅遊 ↗</a></td></tr>
+          <tr><td>山富2：紫夢北海道５日｜富田農場.四季彩之丘.企鵝漫步.熊牧場</td><td><a href="https://www.travel4u.com.tw/group/product/SPK05260728K/" target="_blank">山富旅遊 ↗</a></td></tr>
+        </table>
+        <div class="content-note"><p>➜ 滑鼠操作：點連結開啟頁面 → 全選網址列複製 → 回到 NotebookLM「新增來源」貼上，四筆都加完再進下一步。</p></div>
+      </div>
+
+      <!-- s2-b -->
+      <div class="sub-block" id="s2-b">
+        <div class="sec-sub-title">YouTube 影片列表</div>
+        <table class="data-table">
+          <tr><th>目的</th><th>影片</th></tr>
+          <tr><td>景點趨勢觀察（12個精選景點）</td><td><a href="https://www.youtube.com/watch?v=5RLxLbbvCmo" target="_blank">【北海道札幌怎麼玩?怎麼吃?花多少?】札幌10個必玩旅遊景點+美食 ↗</a></td></tr>
+          <tr><td>不踩雷行程攻略（2026懶人包）</td><td><a href="https://www.youtube.com/watch?v=o0yfKnqZFj4" target="_blank">【🇯🇵2026北海道攻略】"不踩雷"行程推薦～旅拍、美食、伴手禮懶人包 ↗</a></td></tr>
+        </table>
+        <div class="content-note"><p>➜ NotebookLM「新增來源」選 YouTube 類型，直接貼網址即可，不用下載影片。</p></div>
+      </div>
+
+      <!-- s2-c -->
+      <div class="sub-block" id="s2-c">
+        <div class="sec-sub-title">交叉比對 Prompt</div>
+        <div class="tip-card info"><strong>使用時機：</strong>4個旅行社行程＋2部YouTube影片都加入來源後，在 NotebookLM 對話框輸入以下 Prompt。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 交叉比對必去景點</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">我上傳了4個北海道行程，還有2部YouTube攻略影片。
+
+請幫我交叉比對：
+1. 這4個行程都有安排的景點是哪些？（代表是必去景點）
+2. YouTuber 推薦但旅行社行程沒有安排的景點有哪些？（可能是自由行亮點）
+3. YouTuber 提到的「建議避開」事項，旅行社行程有沒有相同安排？
+
+請整理成三個清單，每項不超過20字。</div>
+        </div>
+      </div>
+    </div><!-- /s2 -->
+
+
+    <!-- ======== S3: 簡報與資訊圖表 ======== -->
+    <div class="content-section" id="s3">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-3)">3</span>
+        簡報與資訊圖表
+      </div>
+      <div class="sec-desc">📌 練習主題：把整理好的資料變成好讀的簡報／攻略圖</div>
+
+      <div class="sub-block" id="s3-a">
+        <div class="sec-sub-title">一鍵生成操作</div>
+        <div class="tip-card note"><strong>操作提示：</strong>來源都加齊後，看畫面右側「工作室」面板，裡面有「簡報」「資訊圖表」按鈕，滑鼠點一下就會自動生成，不用打字。</div>
+        <div class="content-note"><p>➜ 生成後可直接下載 PDF 或圖片，也可以點進去微調文字內容。</p></div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 資訊圖表</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">根據上傳的資料，幫我生成一份北海道旅遊資訊圖表，內容包含：
+路線地圖、景點特色（簡短說明即可）、購物與美食推薦。
+
+畫風要求：
+- 插畫可愛風格，色彩明亮溫暖
+- 版面留白，不要塞滿文字，重點用圖示表示
+- 每個區塊資訊控制在3行以內</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 簡報</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">根據上傳的資料，幫我生成一份北海道旅遊攻略的簡報，
+重點放在景點介紹、交通方式、行程安排三個部分。
+
+畫風要求：
+- 插畫可愛風格，色彩明亮溫暖
+- 每頁版面留白，不要塞滿文字
+- 重點用圖示或icon表示，文字盡量條列化</div>
+        </div>
+        <div class="content-note"><p>➜ 只有想指定簡報重點方向時才需要打這段，不然直接點按鈕生成即可。</p></div>
+      </div>
+    </div><!-- /s3 -->
+
+
+    <!-- ======== S4: 交通與地圖規劃 ======== -->
+    <div class="content-section" id="s4">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-4)">4</span>
+        交通與地圖規劃
+      </div>
+      <div class="sec-desc">📌 練習主題：把景點串成一條可以直接照走的路線</div>
+
+      <!-- s4-a -->
+      <div class="sub-block" id="s4-a">
+        <div class="sec-sub-title">交通時間建議</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 大眾交通與停留時間</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">幫我整理北海道景點之間的大眾交通方式（JR、巴士），
+每個景點建議停留多久時間，用表格整理給我。</div>
+        </div>
+
+        <div class="tip-card note"><strong>Google地圖的限制：</strong>Google地圖可以查單一段路線（A點到B點，切「大眾運輸」模式），但沒辦法像開車模式一樣「加多個停靠點」串成整趟行程，要一段一段分開查。真的要排JR、巴士的精確班次、月台資訊，建議搭配日本專用轉乘網站查詢。</div>
+
+        <div class="content-h2">▶️ 日本轉乘網站（電腦可直接用，不用裝APP）</div>
+        <table class="data-table">
+          <tr><th>網站</th><th>特色</th></tr>
+          <tr><td><a href="https://www.navitime.co.jp/transfer/" target="_blank">NAVITIME 乗換案内 ↗</a></td><td>可查JR、巴士、地鐵路線與月台資訊，免費版即可查詢</td></tr>
+          <tr><td><a href="https://transit.yahoo.co.jp/" target="_blank">Yahoo!乗換案内 ↗</a></td><td>介面簡單，日本通勤族最常用，不用登入即可查</td></tr>
+          <tr><td><a href="https://www.jorudan.co.jp/norikae/" target="_blank">乘換案內（Jorudan）↗</a></td><td>老牌轉乘工具，會顯示轉乘所需步行時間</td></tr>
+        </table>
+        <div class="content-note"><p>➜ 課堂示範建議：Google地圖找路、查景點位置；轉乘網站查真正的JR/巴士班次時刻，兩邊搭配使用。</p></div>
+      </div>
+
+      <!-- s4-b -->
+      <div class="sub-block" id="s4-b">
+        <div class="sec-sub-title">Google地圖整合</div>
+        <div class="tip-card info"><strong>核心概念：</strong>NotebookLM 的「資料表」可以一鍵匯出成 Google 試算表，「我的地圖」剛好可以直接匯入試算表——整條路線不用手動一個一個打地名，交給AI排好表格，地圖自動生成標記點。</div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 產出景點資料表</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">根據上傳的資料，幫我整理一份景點資料表，欄位包含：
+景點名稱、所在城市、類別（自然景觀/購物/美食/文化）、建議停留時間、備註。
+
+景點名稱請填寫可以在Google地圖搜尋到的完整地名。
+若來源沒有明確提到建議停留時間，請根據景點類型用一般旅遊常識合理估算，
+不要留空，也不用特別標註是推估的。</div>
+        </div>
+
+        <div class="content-h2">▶️ 操作步驟（電腦）</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>動作</th></tr>
+          <tr><td>1</td><td>NotebookLM 工作室面板點「資料表」，貼上面 Prompt</td></tr>
+          <tr><td>2</td><td>生成後點表格右上角「匯出為試算表」，會自動連到 Google Sheets</td></tr>
+          <tr><td>3</td><td>進入<a href="https://www.google.com.tw/intl/zh-TW/maps/about/mymaps/" target="_blank">Google 地圖「我的地圖」</a>→ 建立新地圖</td></tr>
+          <tr><td>4</td><td>點「匯入」，選擇剛剛那份試算表</td></tr>
+          <tr><td>5</td><td>系統詢問「哪一欄要當作定位依據」時，選「景點名稱」欄位</td></tr>
+          <tr><td>6</td><td>匯入完成，每個景點會自動變成地圖上的標記點，可直接看整條路線</td></tr>
+        </table>
+        <div class="tip-card note"><strong>提醒：</strong>
+          <ul>
+            <li>景點名稱一定要是Google地圖搜尋得到的完整地名（例如「函館朝市」而非「早市」），系統才抓得到正確座標。</li>
+            <li>「我的地圖」只支援開車、單車、步行三種路線</li>
+          </ul></div>
+      </div>
+    </div><!-- /s4 -->
+
+  </div><!-- /content-area -->
+
+
+  <!-- ===== 右欄：工具列 ===== -->
+  <div class="tool-panel">
+
+    <div class="tool-section">
+      <div class="tool-section-title">AI 工具</div>
+      <a class="tool-btn" href="https://gemini.google.com" target="_blank">
+        <span class="tool-icon">✦</span>
+        <span class="tool-name">Gemini</span>
+        <span class="tool-arrow">↗</span>
+      </a>
+      <a class="tool-btn" href="https://notebooklm.google.com" target="_blank">
+        <span class="tool-icon">📓</span>
+        <span class="tool-name">NotebookLM</span>
+        <span class="tool-arrow">↗</span>
+      </a>
+      <a class="tool-btn" href="https://www.google.com/maps" target="_blank">
+        <span class="tool-icon">📍</span>
+        <span class="tool-name">Google 地圖</span>
+        <span class="tool-arrow">↗</span>
+      </a>
+    </div>
+
+  </div><!-- /tool-panel -->
+
+</div><!-- /app-layout -->
+
+<script src="js/p2.js"></script>
+</body>
+</html>
