@@ -408,3 +408,5 @@ html, body { overflow: hidden; }
 .tool-btn .tool-arrow { font-size: 0.611rem; /* 11÷18 */ color: var(--text-light); }
 .tool-btn.p1-btn { background: var(--indigo-light); border-color: var(--indigo-mid); color: var(--indigo-dark); }
 .tool-btn.p1-btn:hover { background: var(--indigo); color: #fff; border-color: var(--indigo); }
+
+.no-wrap {  white-space: nowrap;}
