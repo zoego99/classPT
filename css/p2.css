@@ -330,6 +330,43 @@ html, body { overflow: hidden; }
 .copy-btn:hover  { background: var(--indigo-light); color: var(--indigo-dark); border-color: var(--indigo-mid); }
 .copy-btn.copied { background: #E1F5EE; color: #085041; border-color: #9FE1CB; }
 
+
+/* 條列清單美化 — 用於一般說明性的 <ul><li> 內容
+   使用方式：<ul class="tip-list"> <li>...</li> </ul> */
+
+.tip-list {
+  margin: 10px 0 14px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tip-list li {
+  position: relative;
+  padding: 6px 0 6px 28px;
+  color: #333333;
+  line-height: 1.6;
+  font-size: 0.75em;
+}
+
+.tip-list li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 15px;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--indigo, #1E3A5F);
+}
+
+.tip-list li:not(:last-child) {
+  border-bottom: 1px dashed #e0ddd5;
+}
+
+.tip-list li strong {
+  color: var(--indigo, #1E3A5F);
+}
+
 /* ===================================================
    資料表
    =================================================== */
