@@ -259,6 +259,7 @@ html, body { overflow: hidden; }
 }
 .tip-card.info { background: var(--indigo-light); color: var(--indigo-dark); border-left: 3px solid var(--indigo); }
 .tip-card.note { background: #FAEEDA; color: #633806; border-left: 3px solid #EF9F27; }
+.tip-card.note2 { background: #daf2fa; color: #1c034a; border-left: 3px solid #1c034a; }
 .tip-card strong { font-weight: 700; }
 .tip-card ul { padding-left: 20px; }
 

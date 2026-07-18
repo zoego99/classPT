@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新莊全方位AI24（2026/06）｜網站設計課程</title>
+<link rel="icon" href="./logo2.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/shared.css">
+<link rel="stylesheet" href="css/p2.css">
+
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <a class="nav-brand" id="nav-brand" href="index.html?unit=ai202606">
+    <div class="nav-logo"><img src="./logo.svg" alt="" class="logo"></div>
+    <div class="nav-text">
+      <span class="nav-title">新莊全方位AI24｜網站設計課程</span>
+      <span class="nav-sub">心怡｜zoego99@gmail.com</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="index.html?unit=ai202606">情境練習</a>
+    <a href="course-ai202606.html">咖啡館 / 寵物</a>
+    <a href="course-ai202606-travel.html">北海道旅遊</a>
+    <a href="course-ai202606-ai-video.html">AI影音廣告</a>
+    <a href="course-ai202606-web.html" class="active">網站設計</a>
+    <a href="https://zoego99.github.io//line-tools/" target="_blank">Line貼圖</a>
+  </div>
+</nav>
+
+<!-- ===== 三欄版面 ===== -->
+<div class="app-layout">
+
+  <!-- ===== 左欄：導覽 ===== -->
+  <div class="sidebar">
+    <div class="sidebar-header">課程單元（模組一～七）</div>
+    <div class="sidebar-scroll">
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-s1" onclick="showSection('s1')">
+          <span class="sec-num" style="background:var(--sec-1)">1</span>
+          一頁式網頁該有哪些區塊
+        </button>
+        <button class="sec-sub-btn" id="btn-s1-a" onclick="showSub('s1','s1-a')">商品詳情頁</button>
+        <button class="sec-sub-btn" id="btn-s1-b" onclick="showSub('s1','s1-b')">活動行銷頁</button>
+        <button class="sec-sub-btn" id="btn-s1-c" onclick="showSub('s1','s1-c')">形象展示＋導流型</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-s2" onclick="showSection('s2')">
+          <span class="sec-num" style="background:var(--sec-2)">2</span>
+          文案生成 Prompt
+        </button>
+        <button class="sec-sub-btn" id="btn-s2-a" onclick="showSub('s2','s2-a')">寵物商品行銷</button>
+        <button class="sec-sub-btn" id="btn-s2-b" onclick="showSub('s2','s2-b')">咖啡館開幕活動</button>
+        <button class="sec-sub-btn" id="btn-s2-c" onclick="showSub('s2','s2-c')">餐廳行銷</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-s3" onclick="showSection('s3')">
+          <span class="sec-num" style="background:var(--sec-3)">3</span>
+          網頁生成 Prompt
+        </button>
+        <button class="sec-sub-btn" id="btn-s3-a" onclick="showSub('s3','s3-a')">寵物商品行銷</button>
+        <button class="sec-sub-btn" id="btn-s3-b" onclick="showSub('s3','s3-b')">咖啡館開幕活動</button>
+        <button class="sec-sub-btn" id="btn-s3-c" onclick="showSub('s3','s3-c')">餐廳行銷</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-s4" onclick="showSection('s4')">
+          <span class="sec-num" style="background:var(--sec-4)">4</span>
+          VSCode 安裝與外掛
+        </button>
+        <button class="sec-sub-btn" id="btn-s4-a" onclick="showSub('s4','s4-a')">下載與安裝</button>
+        <button class="sec-sub-btn" id="btn-s4-b" onclick="showSub('s4','s4-b')">必裝外掛</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-s5" onclick="showSection('s5')">
+          <span class="sec-num" style="background:var(--sec-5)">5</span>
+          GitHub Pages 部署
+        </button>
+        <button class="sec-sub-btn" id="btn-s5-a" onclick="showSub('s5','s5-a')">建立Repo與上傳</button>
+        <button class="sec-sub-btn" id="btn-s5-b" onclick="showSub('s5','s5-b')">啟用Pages</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-s6" onclick="showSection('s6')">
+          <span class="sec-num" style="background:var(--sec-6)">6</span>
+          Netlify 部署
+        </button>
+        <button class="sec-sub-btn" id="btn-s6-a" onclick="showSub('s6','s6-a')">拖曳部署</button>
+        <button class="sec-sub-btn" id="btn-s6-b" onclick="showSub('s6','s6-b')">更新網頁內容</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-s7" onclick="showSection('s7')">
+          <span class="sec-num" style="background:var(--sec-7)">7</span>
+          HTML基本結構
+        </button>
+        <button class="sec-sub-btn" id="btn-s7-a" onclick="showSub('s7','s7-a')">網頁基本骨架</button>
+        <button class="sec-sub-btn" id="btn-s7-b" onclick="showSub('s7','s7-b')">常用標籤</button>
+        <button class="sec-sub-btn" id="btn-s7-b" onclick="showSub('s7','s7-c')">框架標籤</button>
+      </div>
+
+    </div>
+  </div><!-- /sidebar -->
+
+  <!-- ===== 中欄：主內容 ===== -->
+  <div class="content-area" id="contentArea">
+
+    <!-- ======== S1 ======== -->
+    <div class="content-section" id="s1">
+      <div class="sec-title"><span class="sec-badge" style="background:var(--sec-1)">1</span>一頁式網頁該有哪些區塊</div>
+      <div class="sec-desc">📌 先搞懂類型再動手做，後面的Prompt才知道為什麼要那些區塊</div>
+
+      <div class="tip-card note"><strong>核心觀念：</strong><br>一頁式網頁不是「隨便排幾個區塊」，而是先確定這個頁面的目的——是純粹介紹一件事，還是要讓使用者採取某個行動。<br>目的不同，需要的區塊跟結尾方式也不一樣。</div>
+
+      <!-- s1-a -->
+      <div class="sub-block" id="s1-a">
+        <div class="sec-sub-title">商品詳情頁（ 例如：寵物商品，純展示型 ）</div>
+        <div class="content-note">
+          <div class="tip-card note2">
+          📌 <strong>目的：</strong>
+          <ul>
+            <li>把一項商品的賣點、外觀、規格講清楚，讓使用者「認識並信任」這個商品，不強制要求下一步動作。</li>
+            <li>這是純展示型的用法（ 本課程的寵物商品範例即屬此類 ）。</li>
+          </ul>
+        </div>
+      </div>
+        <table class="data-table">
+          <tr><th>常見區塊</th><th>作用</th></tr>
+          <tr><td>Hero（ Slider輪播 ）</td><td>第一眼視覺，快速傳達商品調性</td></tr>
+          <tr><td>痛點共鳴</td><td>描述使用者常見困擾，引起共感</td></tr>
+          <tr><td>產品特色</td><td>條列賣點，說明「為什麼這個商品值得注意」</td></tr>
+          <tr><td>使用情境</td><td>生活化描述，幫助想像實際使用畫面</td></tr>
+          <tr><td>規格 / 成分表</td><td>提供具體、可查證的資訊</td></tr>
+          <tr><td>顧客見證</td><td>用他人經驗建立信任感</td></tr>
+          <tr><td>FAQ ( 常見問答 )</td><td>預先解答疑慮（詳見下方名詞說明）</td></tr>
+        </table>
+      </div>
+
+      <!-- s1-b -->
+      <div class="sub-block" id="s1-b">
+        <div class="sec-sub-title">活動行銷頁（ 例如：咖啡館開幕 ）</div>
+        <div class="content-note">
+          <div class="tip-card note2">
+          📌 <strong>目的：</strong>
+          <ul>
+            <li>導引使用者採取一個「有時間限制」的具體行動——通常是報名或參加。</li>
+            <li>急迫感（限量、早鳥）是這類頁面的重點，結尾一定要有明確的行動按鈕。</li>
+          </ul>
+          </div>          
+        </div>
+        <table class="data-table">
+          <tr><th>常見區塊</th><th>作用</th></tr>
+          <tr><td>Hero（ Slider輪播 ）</td><td>疊加活動主題、時間地點</td></tr>
+          <tr><td>活動亮點/流程</td><td>說明當天會發生什麼事</td></tr>
+          <tr><td>早鳥優惠/限量名額</td><td>製造急迫感，加速決定</td></tr>
+          <tr><td>報名區塊（ TA 行動呼籲 ）</td><td>「立即報名」按鈕＋LINE QRcode，是整頁的行動終點</td></tr>
+          <tr><td>FAQ ( 常見問答 )</td><td>預先解答疑慮，減少猶豫</td></tr>
+          <tr><td>交通/地圖資訊</td><td>降低到場的實際障礙</td></tr>
+        </table>
+      </div>
+
+      <!-- s1-c -->
+      <div class="sub-block" id="s1-c">
+        <div class="sec-sub-title">形象展示＋導流型 ( 餐廳行銷 )</div>
+        <div class="content-note">
+          <div class="tip-card note2">
+          📌 <strong>餐廳其實是前兩種的「混合型」</strong>
+          <ul>
+            <li>一半像商品詳情頁——需要把餐廳形象、菜色、氛圍講清楚，建立信任感</li>
+            <li>一半像活動行銷頁——結尾一樣需要明確的行動終點</li>
+            <li>只是這裡的行動是「訂位」，而不是「報名」，而且沒有時間限制（常態性經營，不是限時活動）</li>
+          </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 名詞說明 -->
+      <div class="sub-block" id="s1-terms">
+        <div class="sec-sub-title">名詞說明：FAQ 與 CTA</div>
+        <div class="tip-card note">
+          <strong>FAQ（Frequently Asked Questions，常見問答）：</strong><br>把使用者常見的疑慮預先整理成問答形式，放在頁面後段，<br>目的：減少使用者需要另外詢問或猶豫不決的機率（例如：營業時間、是否可攜寵、如何退換貨）。
+          <br><br>
+          <strong>CTA（Call To Action，行動呼籲）：</strong><br>泛指頁面上「引導使用者做出下一步動作」的按鈕或文字，例如「立即報名」「立即訂位」「加入LINE好友」。<br><strong>不是每個頁面都需要CTA</strong>——<br>寵物商品頁是刻意不放CTA的純展示型，因為目的只是形象曝光，不需要導引任何後續動作；<br>活動行銷頁與餐廳頁則一定需要CTA，因為它們的目標就是要使用者採取行動（報名／訂位）。
+        </div>
+      </div>
+    </div><!-- /s1 -->
+
+    <!-- ======== S2 ======== -->
+    <div class="content-section" id="s2">
+      <div class="sec-title"><span class="sec-badge" style="background:var(--sec-2)">2</span>文案生成 Prompt</div>
+      <div class="sec-desc">📌 使用工具：Gemini（Canvas模式）｜三個主題，各自獨立對話串操作</div>
+
+      <div class="tip-card note"><strong>操作重點：</strong><br>每個主題請開一個新的Gemini對話，貼上對應Prompt後，把方括號內容換成你自己的主題資料。<br>文案產出後不要關掉對話，直接留在同一串，下一步（S3）要接著用同一個對話串生成網頁。</div>
+
+      <!-- s2-a -->
+      <div class="sub-block" id="s2-a">
+        <div class="sec-sub-title">寵物商品行銷（ 純展示型商品頁 ）</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 文案生成</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">你是一位寵物用品的行銷文案專家。
+
+【問】我要為一款寵物用品設計一頁式商品展示頁的文案(純展示,無購買連結)。
+
+【定】
+- 商品:[請填入具體商品,例如:自動化毛梳/寵物挑食解決方案零食/防過敏貓砂]
+- 目標受眾:[飼主輪廓,例如:新手貓奴/多貓家庭/注重天然成分的飼主]
+- 語氣:溫暖、生活化,避免過度誇大醫療效果的用詞
+
+【骨】請依照以下區塊順序產出文案,每區塊標明區塊名稱:
+1. Slider輪播標題組(3~4句不同角度的短標語,各20字以內,搭配對應圖片建議說明)
+2. 痛點共鳴(2~3句,描述飼主常見困擾)
+3. 產品特色(3~4點,每點一句話賣點+一句延伸說明)
+4. 使用情境描述(1段,生活化場景敘述)
+5. 規格/成分重點(條列,3~5項)
+6. 顧客見證(2~3則模擬評論,語氣自然不做作)
+7. FAQ(3組問答)
+
+【生】請直接輸出成品文案,不要加上你的分析或建議,不要有開場白或結語,每個區塊之間用區塊標題分隔即可。</div>
+        </div>
+      </div>
+
+      <!-- s2-b -->
+      <div class="sub-block" id="s2-b">
+        <div class="sec-sub-title">咖啡館開幕活動行銷</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 文案生成</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">你是一位餐飲業活動行銷文案專家。
+
+【問】我要為一場咖啡館開幕活動設計一頁式活動行銷頁的文案，最終需要導引民眾報名。
+
+【定】
+- 活動:[請填入,例如:○○咖啡館試營運體驗日/週年慶限定活動]
+- 時間地點:[請填入]
+- 目標受眾:[例如:在地社區居民/文青咖啡愛好者]
+- 語氣:輕鬆、有期待感,帶一點限量急迫感但不過度促銷
+
+【骨】請依照以下區塊順序產出文案,每區塊標明區塊名稱:
+1. Slider輪播標題組(3~4句活動亮點短標語,各20字以內,搭配對應圖片建議說明)
+2. 活動亮點/當天流程(條列,4~6項含時間帶)
+3. 早鳥優惠/限量名額文案(1段,含急迫感但不誇大)
+4. 報名區塊文案(含「立即報名」按鈕文字建議 + LINE QRcode旁的引導文字1句)
+5. FAQ(3組問答,例如停車/攜寵/是否收費)
+6. 交通/地圖資訊引導文字(1句)
+
+【生】請直接輸出成品文案,不要加上你的分析或建議,不要有開場白或結語,每個區塊之間用區塊標題分隔即可。</div>
+        </div>
+      </div>
+
+      <!-- s2-c -->
+      <div class="sub-block" id="s2-c">
+        <div class="sec-sub-title">餐廳行銷</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 文案生成</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">你是一位餐飲業行銷文案專家。
+
+【問】我要為一家餐廳設計一頁式官網的文案。
+
+【定】
+- 餐廳:[請填入,例如:○○歐陸料理/○○無菜單料理]
+- 目標受眾:[例如:重視食材品質的老饕/約會聚餐客群/商務宴客]
+- 語氣:質感、溫暖,展現主廚用心與食材講究,避免過度浮誇
+
+【骨】請依照以下區塊順序產出文案,每區塊標明區塊名稱:
+1. Hero標語組(2~3句不同角度的短標語,各20字以內)
+2. 關於我們(1段,主廚理念或餐廳故事)
+3. 精選菜單(3~4道招牌菜,每道包含菜名、價格、一句話描述)
+4. 環境氛圍(1段,描述用餐空間的氛圍與適合場合)
+5. 聯絡資訊引導文字(1句,含營業時間、訂位方式引導語)
+
+【生】請直接輸出成品文案,不要加上你的分析或建議,不要有開場白或結語,每個區塊之間用區塊標題分隔即可。</div>
+        </div>
+      </div>
+    </div><!-- /s2 -->
+
+    <!-- ======== S3 ======== -->
+    <div class="content-section" id="s3">
+      <div class="sec-title"><span class="sec-badge" style="background:var(--sec-3)">3</span>網頁生成 Prompt</div>
+      <div class="sec-desc">📌 承接S1同一個Gemini Canvas對話串，直接下產出指令，不用重貼文案</div>
+
+      <div class="tip-card note"><strong>三個Prompt都固定加了「輸出格式限制」：</strong>要求Gemini只能用純HTML、CSS、JavaScript完成,不要用React或其他前端框架。這是為了確保生成的網頁可以直接存成單一.html檔案,並且能直接上傳到GitHub Pages或Netlify這類靜態託管平台——如果用了框架語法,學生上傳後網頁會打不開。</div>
+
+      <!-- s3-a -->
+      <div class="sub-block" id="s3-a">
+        <div class="sec-sub-title">寵物商品行銷（純展示型商品頁）</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 網頁生成</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據以上文案,直接生成一個寵物商品的一頁式展示型網頁,純資訊展示,不需要購買或導購連結。
+
+視覺風格:溫暖療癒感,暖色調或淺木質色系,圓角卡片,手機電腦都要正常顯示。
+
+最上方需要Logo及導覽列(錨點連結對應下方各區塊)。
+
+區塊順序:
+1. Hero(Slider輪播,3~4張情境圖)
+2. 痛點共鳴(搭配一張情境圖)
+3. 產品特色(搭配icon或商品圖)
+4. 使用情境描述(搭配一張生活情境圖,圖文左右排版)
+5. 規格/成分表
+6. 顧客見證(卡片式,可搭配簡單頭像圖示)
+7. FAQ(手風琴收合)
+8. Footer
+
+請每個區塊視內容需要搭配合適的圖片,圖片可使用真實圖庫網址(例如Unsplash)呈現,不需要用灰色色塊佔位,請直接生成完整可預覽的網頁,不需要說明設計邏輯。
+
+輸出格式限制:請使用純 HTML、CSS、JavaScript 完成,不要使用 React 或其他前端框架,所有程式碼需能直接存成單一 .html 檔案在瀏覽器開啟,並且要能直接部署到 GitHub Pages 或 Netlify 這類靜態網站託管平台。</div>
+        </div>
+      </div>
+
+      <!-- s3-b -->
+      <div class="sub-block" id="s3-b">
+        <div class="sec-sub-title">咖啡館開幕活動行銷頁</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 網頁生成</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據以上文案,直接生成一個咖啡館開幕活動的一頁式行銷網頁,目的是導引民眾報名。
+
+視覺風格:溫暖咖啡館氛圍,咖啡棕/奶油色系,適度留白,手機電腦都要正常顯示。
+
+最上方需要Logo及導覽列(錨點連結對應下方各區塊)。
+
+區塊順序:
+1. Hero(Slider輪播,3~4張店內環境/活動氛圍圖,疊加活動主題與時間地點)
+2. 活動亮點/當天流程(搭配活動情境圖)
+3. 早鳥優惠/限量名額提示(醒目色塊)
+4. 報名區塊——「立即報名」按鈕先用#佔位、設定新分頁開啟;旁邊放一個灰色方塊佔位標註「LINE QRcode圖片位置」(這個維持佔位,因為QRcode之後要換成真實圖)
+5. FAQ(手風琴收合)
+6. 交通/地圖資訊(文字佔位即可)
+7. Footer
+
+請每個區塊視內容需要搭配合適的圖片,圖片可使用真實圖庫網址(例如Unsplash)呈現,不需要用灰色色塊佔位(僅QRcode保留佔位),請直接生成完整可預覽的網頁,不需要說明設計邏輯。
+
+輸出格式限制:請使用純 HTML、CSS、JavaScript 完成,不要使用 React 或其他前端框架,所有程式碼需能直接存成單一 .html 檔案在瀏覽器開啟,並且要能直接部署到 GitHub Pages 或 Netlify 這類靜態網站託管平台。</div>
+        </div>
+        <div class="content-note"><p>➜ 教學重點:示意用圖片可以讓AI自由發揮,但功能性資料(表單連結、QRcode、真實地址)一定要用佔位標記,提醒學生上線前必須替換成真實資料。</p></div>
+      </div>
+
+      <!-- s3-c -->
+      <div class="sub-block" id="s3-c">
+        <div class="sec-sub-title">餐廳行銷頁</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 網頁生成</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據以上文案,直接生成一個餐廳的一頁式官網,目的是展示餐廳形象並引導訂位。
+
+視覺風格:質感沉穩,可用深色系搭配金色或木質色調,適合中高價位餐廳調性,手機電腦都要正常顯示。
+
+最上方需要Logo及導覽列(錨點連結對應下方各區塊)。
+
+區塊順序:
+1. Hero(滿版大圖或輪播,疊加餐廳名稱與標語)
+2. 關於我們(圖文左右排版)
+3. 精選菜單(每道菜搭配一張圖,卡片式呈現,含菜名、價格、描述)
+4. 環境氛圍(多張環境圖,可用網格或輪播呈現)
+5. 聯絡資訊(營業時間、地址、訂位按鈕先用#佔位,設定新分頁開啟)
+6. Footer
+
+請每個區塊視內容需要搭配合適的圖片,圖片可使用真實圖庫網址(例如Unsplash)呈現,不需要用灰色色塊佔位,請直接生成完整可預覽的網頁,不需要說明設計邏輯。
+
+輸出格式限制:請使用純 HTML、CSS、JavaScript 完成,不要使用 React 或其他前端框架,所有程式碼需能直接存成單一 .html 檔案在瀏覽器開啟,並且要能直接部署到 GitHub Pages 或 Netlify 這類靜態網站託管平台。</div>
+        </div>
+      </div>
+
+      <div class="tip-card note"><strong>為什麼建議單一檔案，不拆HTML/CSS/JS三個檔案：</strong>拆檔案需要確保檔名、路徑、標籤引用完全對應，任何一環出錯，學生很難自己排查（不會有明顯錯誤訊息）。單一檔案複製、貼上、上傳即可，符合「完整Prompt貼上就能用」的教學風格，部署也更快、更不容易出錯。檔案長的問題可以教學生用瀏覽器或編輯器的搜尋功能（Ctrl+F）跳到對應區塊修改，不需要犧牲部署穩定性。</div>
+    </div><!-- /s3 -->
+
+    <!-- ======== S4 ======== -->
+    <div class="content-section" id="s4">
+      <div class="sec-title"><span class="sec-badge" style="background:var(--sec-4)">4</span>VSCode 安裝與外掛</div>
+      <div class="sec-desc">📌 目的：讓安裝本機編輯工具，能開啟Gemini生成的.html檔案、預覽並手動微調</div>
+
+      <!-- s4-a -->
+      <div class="sub-block" id="s4-a">
+        <div class="sec-sub-title">下載與安裝</div>
+        <div class="tip-card note">VS Code 是微軟開發、跨平台的免費程式碼編輯器，預設支援 HTML、CSS、JavaScript，是目前最多人使用的編輯器。</div>
+        <div class="content-note"><p>➜ 軟體下載官網：<a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a>，依作業系統下載對應版本安裝即可，<br>　安裝過程一路「下一步」即可完成，不需要更改任何進階設定。</p></div>
+      </div>
+
+      <!-- s4-b -->
+      <div class="sub-block" id="s4-b">
+        <div class="sec-sub-title">必裝外掛</div>
+        <table class="data-table">
+          <tr><th>擴充功能</th><th>用途</th></tr>
+          <tr><td>Chinese (Traditional) Language<br>Pack for Visual Studio Code</td><td>介面改成中文(繁體)</td></tr>
+          <tr><td>Image preview</td><td>滑鼠移到圖片路徑上可直接預覽圖片</td></tr>
+          <tr><td>Live Server</td><td>右鍵「Open with Live Server」，直接在瀏覽器即時預覽網頁效果，改程式碼後畫面自動刷新</td></tr>
+          <!-- <tr><td>Color Highlight</td><td>色碼(例如 #F5E6D3)旁邊直接顯示對應顏色</td></tr>
+          <tr><td>indent-rainbow</td><td>用顏色標示縮排層級，方便看程式碼區塊層次</td></tr> -->
+        </table>
+        <div class="content-note"><p>➜ 安裝方式：開啟VSCode左側「擴充功能」圖示，搜尋名稱後點擊安裝即可。<br>　外掛安裝好，開啟Gemini生成的.html檔案並用Live Server預覽。</p></div>
+      </div>
+    </div><!-- /s4 -->
+
+    <!-- ======== S5 ======== -->
+    <div class="content-section" id="s5">
+      <div class="sec-title"><span class="sec-badge" style="background:var(--sec-5)">5</span>GitHub Pages 部署</div>
+      <div class="sec-desc">📌 免費、需要GitHub帳號，適合想順便學版本控管概念的學生</div>
+
+      <!-- s5-a -->
+      <div class="sub-block" id="s5-a">
+        <div class="sec-sub-title">建立Repo與上傳</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>操作重點</th></tr>
+          <tr><td>1. 註冊/登入GitHub</td><td>前往 github.com 註冊免費帳號</td></tr>
+          <tr><td>2. 建立新Repository</td><td>點右上角「+」→「New repository」，命名（例如：my-pet-page），設定為Public，勾選「Add a README file」</td></tr>
+          <tr><td>3. 上傳檔案</td><td>進入該Repo頁面，點「Add file」→「Upload files」，把Gemini生成的.html檔案拖曳上傳</td></tr>
+          <tr><td>4. 檔名務必改為 index.html</td><td>GitHub Pages預設只會找 index.html 當首頁，檔名不對網頁打不開</td></tr>
+          <tr><td>5. Commit確認</td><td>捲到底部點「Commit changes」完成上傳</td></tr>
+        </table>
+      </div>
+
+      <!-- s5-b -->
+      <div class="sub-block" id="s5-b">
+        <div class="sec-sub-title">啟用Pages</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>操作重點</th></tr>
+          <tr><td>1. 進入Settings</td><td>Repo頁面上方點「Settings」</td></tr>
+          <tr><td>2. 找到Pages選項</td><td>左側選單點「Pages」</td></tr>
+          <tr><td>3. 設定Branch</td><td>Source選擇「Deploy from a branch」，Branch選「main」，資料夾選「/ (root)」，點Save</td></tr>
+          <tr><td>4. 取得網址</td><td>等待約1~2分鐘，頁面會顯示網址，格式為 https://你的帳號.github.io/repo名稱/</td></tr>
+        </table>
+        <div class="tip-card note"><strong>常見問題：</strong>網頁打開是空白或404，通常是檔名沒改成index.html，或是Branch/資料夾設定錯誤，回頭檢查這兩點即可。</div>
+      </div>
+    </div><!-- /s5 -->
+
+    <!-- ======== S6 ======== -->
+    <div class="content-section" id="s6">
+      <div class="sec-title"><span class="sec-badge" style="background:var(--sec-6)">6</span>Netlify 部署</div>
+      <div class="sec-desc">📌 免費、不需要學版本控管，最快上線方式，適合時間有限的教學場景</div>
+
+      <!-- s6-a -->
+      <div class="sub-block" id="s6-a">
+        <div class="sec-sub-title">拖曳部署</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>操作重點</th></tr>
+          <tr><td>1. 註冊/登入Netlify</td><td>前往 netlify.com 註冊免費帳號（可用Email或Google帳號登入）</td></tr>
+          <tr><td>2. 進入部署頁面</td><td>登入後畫面通常會看到「Drag and drop your site output folder here」的拖曳區塊</td></tr>
+          <tr><td>3. 拖曳資料夾</td><td>把包含.html檔案的資料夾直接拖進網頁畫面（不需要壓縮成zip，也不需要改檔名為index.html——Netlify會自動辨識）</td></tr>
+          <tr><td>4. 取得網址</td><td>幾秒鐘內自動部署完成，畫面會顯示一組隨機網址（例如 random-name-123.netlify.app）</td></tr>
+        </table>
+        <div class="tip-card note"><strong>與GitHub Pages的差異：</strong><br>Netlify不需要建Repo、不需要懂版本控管概念，拖曳資料夾即可上線，是三種部署方式裡最快的一種<br>缺點是隨機網址不好記，需要的話可以在後台改成自訂的子網域名稱。</div>
+      </div>
+
+      <!-- s6-b -->
+      <div class="sub-block" id="s6-b">
+        <div class="sec-sub-title">更新網頁內容</div>
+        <div class="content-note"><p>➜ 之後如果內容有修改（例如：把佔位的Google表單連結、LINE QRcode圖片換成真實資料），只要把修改後的資料夾重新拖曳一次到同一個網站的部署頁面，Netlify會自動覆蓋更新，網址不會改變。</p></div>
+      </div>
+    </div><!-- /s6 -->
+
+    <!-- ======== S7 ======== -->
+    <div class="content-section" id="s7">
+      <div class="sec-title"><span class="sec-badge" style="background:var(--sec-7)">7</span>HTML基本結構</div>
+      <div class="sec-desc">📌 目的：讓學生看得懂Gemini生成的程式碼在寫什麼，才知道怎麼自己微調</div>
+
+      <!-- s7-a -->
+      <div class="sub-block" id="s7-a">
+        <div class="sec-sub-title">網頁基本骨架</div>
+        <div class="tip-card note">一個HTML檔案由標籤（Tag）構成，語法是 &lt;標籤名稱&gt;內容&lt;/標籤名稱&gt;。標籤可以加屬性，例如 &lt;a href="網址"&gt;文字&lt;/a&gt;，href就是屬性。</div>
+        <table class="data-table">
+          <tr><th>區塊</th><th>說明</th></tr>
+          <tr><td>&lt;!DOCTYPE html&gt;</td><td>宣告這是HTML5文件，一定要放在最上面</td></tr>
+          <tr><td>&lt;html lang="zh-Hant-TW"&gt;</td><td>整份文件的根標籤，lang標示語系（繁體中文）</td></tr>
+          <tr><td>&lt;head&gt;...&lt;/head&gt;</td><td>放「看不見」的設定：網頁標題(title)、字元編碼(charset)、手機顯示比例(viewport)</td></tr>
+          <tr><td>&lt;body&gt;...&lt;/body&gt;</td><td>放「看得見」的所有內容：文字、圖片、按鈕、區塊，都在這裡面</td></tr>
+          <tr><td>&lt;style&gt;...&lt;/style&gt;</td><td>網頁元素美化</td></tr>
+          <tr><td>&lt;script&gt;...&lt;/script&gt;</td><td>網頁互動邏輯</td></tr>
+        </table>
+        <div class="content-img" style="background: transparent;">
+          <img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/web2-1.jpg" alt="" style="width: 70%; margin: auto;">
+        </div>
+      </div>
+
+      <!-- s7-b -->
+      <div class="sub-block" id="s7-b">
+        <div class="sec-sub-title">常用標籤</div>
+        <table class="data-table">
+          <tr><th>標籤</th><th>用途</th></tr>
+          <tr><td>&lt;h1&gt;～&lt;h6&gt;</td><td>標題，數字越小字越大越重要，h1建議整頁只用一次</td></tr>
+          <tr><td>&lt;p&gt;</td><td>段落文字</td></tr>
+          <tr><td>&lt;img src="圖片路徑" alt="說明文字"&gt;</td><td>放圖片，src是圖片位置，alt是圖片說明</td></tr>
+          <tr><td>&lt;a href="連結位置" target="_blank"&gt;文字&lt;/a&gt;</td><td>超連結，target="_blank"表示在新分頁開啟</td></tr>
+          <tr><td>&lt;table&gt;&lt;tr&gt;&lt;td&gt;</td><td>表格，tr是一列(row)，td是一格(cell)</td></tr>
+          <tr><td>&lt;ul&gt;&lt;li&gt;　　&lt;ol&gt;&lt;li&gt;</td><td>條列清單，ul是清單容器，li是每一個項目</td></tr>
+        </table>
+        <div class="content-img" style="background: transparent;">
+          <img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/web2-3.jpg" alt="" style="width: 80%; margin: auto;">
+        </div>
+
+      </div>
+      <div class="sub-block" id="s7-c">
+        <div class="sec-sub-title">框架標籤</div>
+        <table class="data-table">
+          <tr><th>標籤</th><th>用途</th></tr>
+          <tr><td>&lt;header&gt;</td><td>網頁頁首的區域：可放logo、標題、主要資訊</td></tr>
+          <tr><td>&lt;nav&gt;</td><td>導覽列navigation</td></tr>
+          <tr><td>&lt;main&gt;</td><td>網頁主要內容區域</td></tr>
+          <tr><td>&lt;footer&gt;</td><td>網頁頁尾的區域</td></tr>
+          <tr><td>&lt;section&gt;</td><td>區段範圍、章節</td></tr>
+          <tr><td>&lt;div&gt;</td><td>單純是一個框</td></tr>
+        </table>
+        <div class="content-img" style="background: transparent;">
+          <img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/web2-2.jpg" alt="" style="width: 50%; margin: auto;">
+        </div>
+      </div>
+    </div><!-- /s7 -->
+
+  </div><!-- /content-area -->
+
+  <!-- ===== 右欄：工具列 ===== -->
+  <div class="tool-panel">
+
+    <div class="tool-section">
+      <div class="tool-section-title">頁面導覽</div>
+      <a class="tool-btn p1-btn" href="index.html?unit=ai202606">
+        <span class="tool-icon">←</span>
+        <span class="tool-name">P1 情境練習</span>
+      </a>
+    </div>
+
+    <div class="tool-section">
+      <div class="tool-section-title">文案與網頁生成</div>
+      <a class="tool-btn" href="https://gemini.google.com" target="_blank"><span class="tool-icon">✦</span><span class="tool-name">Gemini（Canvas）</span><span class="tool-arrow">↗</span></a>
+    </div>
+
+    <div class="tool-section">
+      <div class="tool-section-title">本機編輯</div>
+      <a class="tool-btn" href="https://code.visualstudio.com/" target="_blank"><span class="tool-icon">💻</span><span class="tool-name">VS Code</span><span class="tool-arrow">↗</span></a>
+    </div>
+
+    <div class="tool-section">
+      <div class="tool-section-title">部署上線</div>
+      <a class="tool-btn" href="https://github.com" target="_blank"><span class="tool-icon">🐙</span><span class="tool-name">GitHub</span><span class="tool-arrow">↗</span></a>
+      <a class="tool-btn" href="https://www.netlify.com" target="_blank"><span class="tool-icon">🌐</span><span class="tool-name">Netlify</span><span class="tool-arrow">↗</span></a>
+    </div>
+
+    <div class="tool-section">
+      <div class="tool-section-title">表單與其他</div>
+      <a class="tool-btn" href="https://forms.google.com" target="_blank"><span class="tool-icon">📋</span><span class="tool-name">Google表單</span><span class="tool-arrow">↗</span></a>
+    </div>
+
+  </div><!-- /tool-panel -->
+
+</div><!-- /app-layout -->
+
+<script src="js/p2.js"></script>
+</body>
+</html>
