@@ -124,6 +124,7 @@ const UNIT_MAP = {
   general:  { label: "通用版 課程 Prompt",     href: "course-general.html"  },
   st:  { label: "巨興醫學科技 課程 Prompt",     href: "course-st.html"  },
   ai202606:  { label: "新莊全方位AI24 課程 Prompt",     href: "course-ai202606.html"  },
+  ai202607:  { label: "東區全方位AI24 課程 Prompt",     href: "course-ai202607.html"  },
   nchuAI:  { label: "中部科學園區 AI 課程 Prompt",     href: "course-nchu-AI.html"  },
   zyxelAI:  { label: "合勤科技 Excel × AI 課程 Prompt",     href: "course-zyxel-AI.html"  }
   /* 新單位在此新增一行 */
