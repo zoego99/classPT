@@ -25,9 +25,9 @@
     <a href="index.html?unit=ai202607">情境練習</a>
     <a href="course-ai202607.html">咖啡館 / 寵物</a>
     <a href="course-ai202607-travel.html"  class="active">北海道旅遊</a>
-    <a href="course-ai202607-ai-video.html">AI影音廣告</a>
-    <!-- <a href="course-ai202607-web.html">網站設計</a> -->
-    <a href="https://zoego99.github.io//line-tools/" target="_blank">Line貼圖</a>
+    <!-- <a href="course-ai202607-ai-video.html">AI影音廣告</a>
+    <a href="course-ai202607-web.html">網站設計</a>
+    <a href="https://zoego99.github.io//line-tools/" target="_blank">Line貼圖</a> -->
   </div>
 </nav>
 
@@ -51,39 +51,29 @@
       </div>
 
       <div class="sec-group">
-        <button class="sec-group-btn" id="btn-s5" onclick="showSection('s5')">
-          <span class="sec-num" style="background:var(--sec-2)">2</span>
-          生成圖片
-        </button>
-        <button class="sec-sub-btn" id="btn-s5-a" onclick="showSub('s5','s5-a')">資訊圖 Prompt 範本</button>
-        <button class="sec-sub-btn" id="btn-s5-b" onclick="showSub('s5','s5-b')">海報 Prompt 範本</button>
-        <button class="sec-sub-btn" id="btn-s5-c" onclick="showSub('s5','s5-c')">行程規劃地圖 Prompt</button>
-      </div>
-
-      <div class="sec-group">
         <button class="sec-group-btn" id="btn-s2" onclick="showSection('s2')">
-          <span class="sec-num" style="background:var(--sec-3)">3</span>
+          <span class="sec-num" style="background:var(--sec-2)">2</span>
           NotebookLM 旅遊主題
         </button>
         <button class="sec-sub-btn" id="btn-s2-e" onclick="showSub('s2','s2-e')">參考來源上傳</button>
-        <button class="sec-sub-btn" id="btn-s2-a" onclick="showSub('s2','s2-a')">對話_公司角度</button>
-        <button class="sec-sub-btn" id="btn-s2-b" onclick="showSub('s2','s2-b')">對話_個人角度</button>
-        <button class="sec-sub-btn" id="btn-s2-c" onclick="showSub('s2','s2-c')">成品_公司角度</button>
-        <button class="sec-sub-btn" id="btn-s2-d" onclick="showSub('s2','s2-d')">成品_個人角度</button>
+        <button class="sec-sub-btn" id="btn-s2-a" onclick="showSub('s2','s2-a')">對話練習</button>
+        <button class="sec-sub-btn" id="btn-s2-b" onclick="showSub('s2','s2-b')">匯出成品</button>
+        <button class="sec-sub-btn" id="btn-s2-c" onclick="showSub('s2','s2-c')">問卷調查練習</button>
       </div>
 
       <div class="sec-group">
         <button class="sec-group-btn" id="btn-s3" onclick="showSection('s3')">
-          <span class="sec-num" style="background:var(--sec-4)">4</span>
+          <span class="sec-num" style="background:var(--sec-3)">3</span>
           Gamma 簡報製作
         </button>
-        <button class="sec-sub-btn" id="btn-s3-b" onclick="showSub('s3','s3-a')">S1：快速建立簡報</button>
-        <button class="sec-sub-btn" id="btn-s3-a" onclick="showSub('s3','s3-b')">S2：調整下載後簡報</button>
+        <button class="sec-sub-btn" id="btn-s3-a" onclick="showSub('s3','s3-a')">匯入大綱生成簡報</button>
+        <button class="sec-sub-btn" id="btn-s3-b" onclick="showSub('s3','s3-b')">簡報 Prompt 範本</button>
+        <button class="sec-sub-btn" id="btn-s3-b" onclick="showSub('s3','s3-c')">課程統一 範本</button>
       </div>
 
       <div class="sec-group">
         <button class="sec-group-btn" id="btn-s4" onclick="showSection('s4')">
-          <span class="sec-num" style="background:var(--sec-5)">5</span>
+          <span class="sec-num" style="background:var(--sec-4)">4</span>
           Canva 海報與社群
         </button>
         <button class="sec-sub-btn" id="btn-s4-a" onclick="showSub('s4','s4-a')">快速鍵</button>
@@ -125,7 +115,8 @@
         <div class="tip-card info"><strong>使用時機：</strong>還沒想清楚怎麼安排北海道行程，先讓 AI 問你問題，把旅伴需求、預算、天數釐清後再動手規劃，比自己從零開始好很多。</div>
         <div class="prompt-card">
           <div class="prompt-card-header"><span class="prompt-card-title">📌 S1：Prompt — 釐清思路</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-          <div class="prompt-code">我已提供以下參考資料，請先閱讀並理解內容：
+          <div class="prompt-code">
+我已提供以下參考資料，請先閱讀並理解內容：
 1. [旅行社行程網址／PDF行程表]
 2. [YouTube 攻略影片連結或字幕]
 3. [其他參考文件]
@@ -281,297 +272,10 @@
     </div><!-- /s1 -->
 
 
-    <!-- ======== S5: 生成圖片 ======== -->
-    <div class="content-section" id="s5">
-      <div class="sec-title">
-        <span class="sec-badge" style="background:var(--sec-2)">2</span>
-        生成圖片
-      </div>
-      <div class="sec-desc">📌 練習主題：日本北海道旅遊企劃（資訊圖 / 海報 / 行程規劃地圖）</div>
-
-      <div class="tip-card info">
-        <strong>核心觀念：</strong>不是單純生圖，而是「圖像＋文字＋排版＝完整設計稿」，Prompt 須包含三元素：<strong>文字內容</strong>（講什麼）、<strong>視覺風格</strong>（長什麼樣）、<strong>版面配置</strong>（怎麼排）。
-        本單元的 Prompt 結構對應
-        <a href="https://zoego99.github.io/vizgo/index.html" target="_blank">資訊圖 Prompt 生成器 ↗</a>
-        網站的 7 個設定條件（尺寸／應用場景／視覺風格／版面配置／簡報母片設定／文字內容／補充描述），也可以直接到該網站點選對應選項快速產出。
-      </div>
-
-      <!-- s5-a -->
-      <div class="sub-block" id="s5-a">
-        <div class="sec-sub-title">資訊圖 Prompt 範本</div>
-        <div class="tip-card note">資訊圖（Infographic）強調資訊傳達，結構清楚、圖形／Icon／插圖為主，適合行前提醒、懶人包等說明性內容。<br><a href="https://zoego99.github.io/vizgo/index.html" target="_blank">資訊圖 Prompt 生成器 ↗</a></div>
-
-        <div class="content-h2">主題1：北海道旅遊三大行前準備重點</div>
-        <div class="prompt-card">
-          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 行前準備三重點資訊圖</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-          <div class="prompt-code">請生成一張【橫向 16:9】資訊圖，已包含完整排版與視覺設計。
-
-**主視覺 / 構圖內容描述**：
-畫面右側整齊並列三個圓角的便當盒格子（Bento Box），格子內分別帶有平面幾何向量感（SVG Icon）的「證件與票券」「行李打包」「保暖穿搭」插圖。畫面左側由角色「導遊」手持平板進行說明，視線自然專注地望向右側的便當盒格子，形成流暢的視覺引導。
-
-**視覺風格**：
-採用「極簡向量插畫風格」（精準資訊視覺化）。幾何平整、線條簡潔，適合社群貼文與行前提醒。
-- 企業曼非斯風（配色柔和無輪廓線，具現代旅遊品牌的清爽感）
-- 三色限定（全圖不超過三個主色，視覺乾淨俐落）
-
-**版面配置**：
-採用「便當盒排版（模組化分割）」與「左右對比」排版方式。
-
-**文字設計細節**：
-- 主標題：北海道旅遊三大行前準備重點，安心出發不手忙腳亂！
-- 副標題：提早準備，玩得更安心
-- 重點資訊：
-  1. 證件與票券：護照效期6個月以上、JR Pass提前兌換、旅遊保險確認。
-  2. 行李打包：保暖層次穿搭、行動電源、常備藥品不可少。
-  3. 保暖穿搭：洋蔥式穿法應對室內外溫差，防滑鞋因應雪地路面。
-- CTA：出發前再檢查一次，安心啟程！
-
-**輸出規格要求**：
-- 比例為橫向 16:9（投影片、簡報背景圖）
-- 整體構圖飽滿，角色姿態與右側圖文版面具有強烈互動感，配色和諧，字體清晰易讀。</div>
-        </div>
-
-        <div class="content-h2">主題2：北海道景點適合族群懶人包（長輩／小孩）</div>
-        <div class="prompt-card">
-          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 景點適合族群懶人包</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-          <div class="prompt-code">請生成一張【16:9 資訊圖】，已包含完整排版與文字設計。
-
-- **主視覺 / 主題**
-北海道旅遊景點適合族群懶人包，呈現各景點適合長輩、小孩的分類圖解，畫面溫馨可愛，適合家庭旅遊者閱讀。
-
-- **文字內容**
-・ 主標題：北海道景點適合族群懶人包（置中偏上）
-・ 副標題：全家出遊，這樣安排最安心
-・ 重點資訊：長輩推薦景點 / 小孩推薦景點 / 體力需求提醒 / 溫泉休息點（四大類別標題）
-・ CTA：詳細行程請洽領隊諮詢（底部）
-
-- **版面配置**
-便當盒排版（模組化分割），主副格層次，搭配極簡向量插畫
-
-**視覺風格**：
-採用「日系清新風格」（插畫敘事）。淡雅柔和，留白優雅，適合生活、健康、親子主題。
-- 粉彩淡雅色調（低飽和粉色系，日本插畫氛圍）
-- 親子溫馨感（溫暖家庭感，友善兒童視角）
-
-- **色系 / 氛圍**
-天空藍與奶油白調，感覺溫馨可信賴，適合對外宣導
-
-- **輸出要求**
-・ 比例：16:9
-・ 文字需保留上下左右10%安全邊界，避免裁切
-・ 配色和諧，字體清晰易讀，適合列印與數位使用</div>
-        </div>
-      </div>
-
-      <!-- s5-b -->
-      <div class="sub-block" id="s5-b">
-        <div class="sec-sub-title">海報 Prompt 範本</div>
-        <div class="tip-card note">海報（Poster）強調吸睛（視覺），情境照片／插畫為主，並搭配 CTA（行動呼籲），適合活動宣傳、報名邀請。</div>
-
-        <div class="content-h2">主題1：薰衣草季旅遊團開賣宣傳海報</div>
-        <div class="prompt-card">
-          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 旅遊團開賣宣傳海報</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-          <div class="prompt-code">請生成一張【海報 4:3】宣導海報，已包含完整排版與視覺設計。
-
-**視覺風格**：
-採用「3D黏土質感」風格（3D立體造型）。手工捏製感的3D造型，溫暖可愛，現代插畫趨勢。
-- 粉嫩糖果色（薄荷綠、奶油橙，清甜可口，呼應薰衣草花田意象）
-- 圓潤有機造型（所有卡片與文字背景底襯皆採流暢大圓角設計，避免尖銳稜角）
-- 柔和工作室燈光（室內暖光，陰影柔和均勻）
-
-**簡報母片設定**：
-- AI自動優化排版（不刻意留白，文字內容與角色比例均勻分佈）。
-
-**文字設計細節**：
-- 主標題：薰衣草季北海道旅遊，即刻開賣！
-- 副標題：花期有限，名額有限
-- 重點資訊：
-  - 核心提醒：7月富良野花期正盛，5天4夜精選行程。
-  - 特色摘要：函館百萬夜景／札幌市區購物／薰衣草花田拍照打卡
-- CTA：即刻預約，搶先卡位！
-
-**輸出規格要求**：
-- 比例為海報4:3（橫式海報、宣傳單）
-- 角色人物與左側圖文排版完全分離不重疊。</div>
-        </div>
-
-        <div class="content-h2">主題2：北海道旅遊說明會邀請海報</div>
-        <div class="prompt-card">
-          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 旅遊說明會邀請海報</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-          <div class="prompt-code">請生成一張【海報 4:3 行銷海報】，已包含完整排版與文字設計。
-
-- **主視覺 / 主題**
-北海道旅遊說明會活動宣傳，畫面呈現溫馨展示環境的場景，等距視角微縮風格，展示辦公室/會議空間與設備場景，旅客專注聆聽說明的活動現場氛圍。
-
-- **文字內容**
-・ 主標題：北海道旅遊說明會 誠摯邀請（置中偏上）
-・ 副標題：掌握行程細節，出遊更安心
-・ CTA：歡迎攜家人踴躍報名
-
-- **版面配置**
-蛇形流程（步驟引導路徑），呈現活動三大流程步驟
-
-- **視覺風格**
-採用「等距視角微縮風格」（3D立體造型）可愛微縮場景，適合流程地圖。
-・ 標準等距角度（45度平行透視）
-・ 辦公室 / 工作場景
-・ 溫馨說明會場景
-
-- **輸出要求**
-・ 比例：4:3（橫式海報）
-・ 文字需保留上下左右10%安全邊界，避免裁切
-・ 整體構圖飽滿，視覺元素豐富但不雜亂</div>
-        </div>
-      </div>
-
-      <!-- s5-c -->
-      <div class="sub-block" id="s5-c">
-        <div class="sec-sub-title">行程規劃地圖 Prompt（進階範例）</div>
-        <div class="tip-card info"><strong>這是什麼：</strong>像「DAY 4 首爾最後採買 &amp; 機場前進」這類地圖式行程圖卡，把地圖底圖、路線編號、逐站資訊卡、交通比較、美食推薦、實用提醒全部整合在一張圖裡，資訊密度高，屬於進階生圖任務。這類圖不是單靠一句話就能生成，需要事先準備好足夠的「行程骨架文字」，再依下方架構組成 Prompt。</div>
-
-        <div class="content-h2">需要先準備的資訊</div>
-        <table class="data-table">
-          <tr><th>類別</th><th>需要準備的內容</th></tr>
-          <tr><td>① 當日主題</td><td>Day 編號、當日主標題、副標路線關鍵字（例如：小樽運河→堺町通→天狗山→札幌）</td></tr>
-          <tr><td>② 逐站資訊</td><td>每站的編號、時間區間、地點名稱、一句話描述、交通方式與所需時間／票價</td></tr>
-          <tr><td>③ 交通總覽</td><td>當日會用到的交通方式（地鐵／步行／JR／計程車等），及各方式的顏色或圖示區分</td></tr>
-          <tr><td>④ 交通方案比較</td><td>若同一段有多種交通選擇，列出票價、車程、優缺點（例如本頁範例的「機場鐵路 vs 機場巴士」）</td></tr>
-          <tr><td>⑤ 底部補充資訊</td><td>景點特色標籤、美食推薦（店名＋一句話）、實用小提醒（3～5點）、路線交通小抄</td></tr>
-        </table>
-        <div class="content-note"><p>➜ 建議先讓 AI（Gemini／ChatGPT）用文字把①～⑤整理成條列大綱，確認內容無誤後，再把大綱貼進下方 Prompt 讓 AI 生圖，避免地圖生成後才發現資訊有誤要重來。</p></div>
-
-        <div class="content-h2">行程規劃地圖 Prompt 範本</div>
-                <div class="prompt-card">
-          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt【範例】 — 北海道行程規劃地圖（可套用任一天）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-          <div class="prompt-code"># 行程規劃地圖
-            
-## **主視覺 / 構圖內容描述**：
-畫面主體是一張「手繪風格插畫地圖」，而非表格或清單。地圖需包含：
-- 簡化的道路網絡線條，模擬真實街區紋理（不需精確比例，示意即可）
-- 沿途穿插小型地標插畫（如車站建築、纜車站、山丘剪影、商店街屋頂線條），增加地圖的場景感
-- 右上角放置指北針小圖示
-各站以編號大頭針（1～7）標示，並用不同顏色/線條樣式的路徑線依序連接（對應下方交通方式圖例的顏色）。
-
-## ① 當日主題
-
-- Day 編號：DAY 2
-- 主標題：小樽夢幻時光 & 運河散策
-- 副標題（路線關鍵字）：札幌飯店 → 小樽運河 → 堺町通 → 天狗山 → 札幌市區
-
----
-
-## ② 逐站資訊（共 7 站）
-
-| 編號 | 時間 | 站點名稱 | 簡短描述 | 交通方式與所需時間／票價 |
-|---|---|---|---|---|
-| 1 | 08:00 | 札幌飯店退房 | 大件行李寄放櫃檯，輕裝出發 | — |
-| 2 | 08:20～09:00 | 小樽（おたる） | 搭 JR 前往小樽，車窗欣賞沿海風景 | JR 快速 Airport｜約40分／￥640 |
-| 3 | 09:00～10:30 | 小樽運河 | 北海道最浪漫地標，運河沿岸散步拍照，晴天倒影美 | 站前步行約10分 |
-| 4 | 10:30～12:00 | 堺町通商店街 | 玻璃工藝、音樂盒老店、北一硝子必逛 | 運河步行約5分 |
-| 5 | 12:00～13:00 | 午餐：壽司通 | 小樽新鮮迴轉壽司、海鮮丼名店聚集 | 堺町通步行約8分 |
-| 6 | 13:30～14:30 | 天狗山展望台 | 纜車登頂俯瞰小樽全景，天氣好可遠眺石狩灣 | 站前巴士 約10分＋纜車／￥1,800（含來回纜車） |
-| 7 | 15:00～16:00 | 返回札幌 | 搭 JR 返回市區，晚間自由活動 | JR 快速 Airport｜約40分／￥640 |
-
----
-
-## ③ 交通方式總覽（圖例）
-
-| 顏色／樣式 | 交通方式 |
-|---|---|
-| 綠色實線 | JR 快速 Airport |
-| 紫色虛線 | 步行 |
-| 橘色實線 | 站前巴士 |
-| 藍色實線 | 纜車（天狗山纜索線） |
-
----
-
-## ④ 交通方案比較（札幌 ⇄ 小樽）
-
-| 方案 | 搭乘位置 | 車程 | 票價 | 優點 | 缺點 |
-|---|---|---|---|---|---|
-| JR 快速 Airport（推薦） | 札幌站 5、6號月台 | 約40分（直達） | ￥640 | 班次密集、準點穩定 | 假日尖峰略擠 |
-| 高速巴士 | 札幌站前巴士總站 | 約60～70分 | ￥680 | 直達運河周邊、免轉車 | 易受路況影響、耗時較長 |
-
----
-
-## ⑤ 底部補充資訊
-
-**景點特色一次看**
-- 小樽運河：浪漫地標／夜景必訪／拍照打卡
-- 堺町通：玻璃工藝／音樂盒／北一硝子
-- 天狗山：俯瞰全景／纜車登頂／夕陽景點
-
-**美食推薦**
-| 店名 | 推薦一句話 |
-|---|---|
-| 小樽三角市場 | 現點現做海鮮丼，份量實在 |
-| politano 義式冰淇淋 | 運河旁排隊名店，哈密瓜口味必點 |
-| 六花亭小樽運河店 | 北海道知名甜點，伴手禮首選 |
-
-**實用小提醒**
-- 小樽運河沿岸石板路偏滑，建議穿防滑鞋
-- 天狗山纜車若遇強風可能停駛，建議先查詢當日營運狀態
-- 堺町通商店多在17:00左右打烊，逛街建議安排在下午前段
-- JR Pass 或 Kitaca 交通卡皆可搭乘 JR 快速 Airport
-
-**路線小抄**
-- 札幌 → 小樽：JR快速 約40分／￥640
-- 小樽運河 → 堺町通：步行約5分
-- 堺町通 → 天狗山山麓：巴士約10分／￥210
-- 天狗山山麓 → 山頂：纜車來回／￥1,800
-- 小樽 → 札幌：JR快速 約40分／￥640
-</div>
-        </div>
-
-        <div class="prompt-card">
-          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt【範本】 — 北海道行程規劃地圖（可套用任一天）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-          <div class="prompt-code">請生成一張【直式 A4 / 3:4】旅遊路線地圖資訊圖，已包含地圖底圖、路線編號與完整版面設計。
-
-**主視覺 / 構圖內容描述**：
-畫面上方為當日主題橫幅（Day 編號 + 標題 + 副標路線關鍵字），中央為【城市／區域，例如：札幌市區】地圖底圖，以編號色點（1～9）標示當日行程站點，並用不同顏色路線（地鐵綠線／步行虛線／JR紫線／計程車橘線）串接各站點動線。地圖右側配置「交通方式總覽」圖例框；地圖下方配置逐站資訊卡（編號對應地圖）。
-
-**文字設計細節**：
-- 頂部標題：DAY【請填入編號】｜【當日主題，例如：小樽夢幻時光 & 運河散策】
-- 副標題：【當日路線關鍵字，例如：小樽運河→堺町通→天狗山→札幌】
-- 逐站資訊卡（每站一格，依序）：
-  1. 站點名稱（中文＋當地語）＋抵達時間區間
-  2. 簡短描述（1～2句，吸引力優先）
-  3. 交通方式與所需時間 / 票價（例如：JR 快速 約30分／￥640）
-  【請依實際站數複製此格式，通常5～9站】
-- 右側資訊區塊：
-  - 交通方式總覽圖例（地鐵／步行／JR／計程車 各用不同顏色線條或icon標示）
-  - 交通選擇比較（若當日有多種交通方案，列出票價、車程、優缺點）
-  - 時間建議表（若當日需銜接下段行程或交通，列出建議抵達/離開時間對照）
-- 底部資訊區：
-  - 景點特色一次看（每個景點1～2個關鍵字標籤）
-  - 美食推薦（店名＋一句話推薦）
-  - 實用小提醒（3～5點，例如：交通卡、退稅、Wi-Fi、保暖裝備）
-  - 路線小抄（各站移動方式與票價彙整，方便列印隨身攜帶）
-
-**視覺風格**：
-採用「極簡向量插畫風格」或「現代數據儀表板風」（精準資訊視覺化），資訊優先、結構清楚。
-- 三色限定配色，可依天數分類（例如 Day1藍／Day2橘／Day3綠）
-- SVG 圖示質感，icon 需清楚辨識（地鐵/步行/JR/計程車/景點類型）
-
-**版面配置**：
-採用「便當盒排版（模組化分割）」，地圖置中偏上，逐站資訊卡沿地圖周邊或下方分格排列，右側與底部各自獨立資訊區塊分明。
-
-**輸出規格要求**：
-- 比例：直式 A4 或 3:4（方便列印攜帶）
-- 文字需保留安全邊界，避免路線編號與地標被文字遮擋
-- 整體資訊密度高但層次分明，配色和諧，字體清晰易讀（此類型圖屬於「資訊優先」而非純美觀導向，寧可保守留白也不要壅擠）
-
-【請依實際行程填入上方【】內容，包含：當日站點順序與時間、各站交通方式與所需時間/票價、美食推薦與實用小提醒】</div>
-        </div>
-        <div class="tip-card note">此類地圖式資訊圖通常需要 2～3 輪迭代：第一輪先確認地圖比例與路線是否清楚，第二輪再微調資訊卡文字密度與配色，不建議期待一次到位。</div>
-      </div>
-    </div><!-- /s5 -->
-
-
     <!-- ======== S2: NotebookLM 旅遊主題 ======== -->
     <div class="content-section" id="s2">
       <div class="sec-title">
-        <span class="sec-badge" style="background:var(--sec-3)">3</span>
+        <span class="sec-badge" style="background:var(--sec-2)">2</span>
         NotebookLM 旅遊主題
       </div>
       <div class="sec-desc">📌 練習主題：日本北海道旅遊企劃（雄獅 × 山富 × YouTube攻略）</div>
@@ -640,10 +344,10 @@
 
       <!-- s2-a -->
       <div class="sub-block" id="s2-a">
-        <div class="sec-sub-title">🏢 對話_公司角度</div>
-        <div class="tip-card note">以下 Prompt 適合「公司安排員工旅遊 / 獎勵旅行」的討論階段，包含行程篩選與課程提供文件（會議記錄／成果報告）的整理練習。</div>
+        <div class="sec-sub-title">對話練習</div>
+        <div class="tip-card note">以下 Prompt 分兩個走向：<strong>走向一</strong>適合「公司安排員工旅遊」，<strong>走向二</strong>適合「個人幫家人安排行程」。</div>
 
-        <div class="content-h2">對話練習</div>
+        <div class="content-h2">🏢 走向一：公司角度（員工旅遊 / 獎勵旅行）</div>
         <div class="prompt-card">
           <div class="prompt-card-header"><span class="prompt-card-title">📌 四大行程比較（選擇最適合公司）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
           <div class="prompt-code">我上傳了雄獅（洞爺湖/函館/小樽）、雄獅（溫泉/企鵝/螃蟹）、山富（星空纜車/富良野/美瑛）、山富（富田農場/花田列車/熊牧場）共4個北海道行程。
@@ -666,7 +370,38 @@
 請根據上傳的行程內容具體回答，禁止憑空補充未提及的資訊。</div>
         </div>
 
-        <div class="content-h2">📋 會議記錄／成果報告整理（課程提供文件）</div>
+        <div class="content-h2">👨‍👩‍👧 走向二：個人角度（幫家人安排行程）</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 找出最適合家庭的行程</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">我上傳了4個北海道旅行社行程，我想幫家人安排一趟旅遊。
+家人組成是：【請填入，例如：長輩2位、夫妻2人、小孩1人】
+
+請以【家庭旅遊顧問】角色分析：哪個行程最適合這個家庭組合？請從以下角度說明：
+- 步行距離與體力需求（長輩是否負荷得來）
+- 小孩的興趣吸引力（動物？花田？市區購物？）
+- 溫泉 / 休閒時間是否充足</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 景點適合族群逐一標注</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">根據這4個旅行社行程中出現的所有景點，請幫我逐一標注：
+- ✅ 適合長輩（步行短、輕鬆、景色為主）
+- 🧒 適合小孩（動物、體驗活動、視覺吸引）
+- ⚠️ 體力需求較高
+
+請整理成表格（欄位：景點名稱 / 適合族群 / 說明），只根據上傳的行程內容判斷。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 客製化5天4夜家庭行程</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">根據我上傳的4個行程 + 2部 YouTube 攻略影片，請幫我設計一份「客製化5天4夜北海道家庭行程」：
+
+- 保留：在多個行程或 YouTube 影片中都有提到的高頻景點
+- 調整：移除趕行程、體力需求過高或評價較低的安排
+- 新增：YouTuber 推薦但旅行社沒有安排的輕鬆體驗
+
+請以每天為單位，列出 上午 / 下午 / 晚上 安排，並標注交通方式與建議停留時間。</div>
+        </div>
+
+        <div class="content-h2">📋 練習附檔對話（課程提供文件）</div>
         <div class="prompt-card">
           <div class="prompt-card-header"><span class="prompt-card-title">📌 旅遊成果報告整理</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
           <div class="prompt-code">請針對上傳的「北海道旅遊企劃成果報告」，
@@ -698,47 +433,9 @@
 
       <!-- s2-b -->
       <div class="sub-block" id="s2-b">
-        <div class="sec-sub-title">👨‍👩‍👧 對話_個人角度</div>
-        <div class="tip-card note">以下 Prompt 適合「個人幫家人安排行程」的討論階段。</div>
+        <div class="sec-sub-title">匯出成品</div>
 
-        <div class="content-h2">對話練習</div>
-        <div class="prompt-card">
-          <div class="prompt-card-header"><span class="prompt-card-title">📌 找出最適合家庭的行程</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-          <div class="prompt-code">我上傳了4個北海道旅行社行程，我想幫家人安排一趟旅遊。
-家人組成是：【請填入，例如：長輩2位、夫妻2人、小孩1人】
-
-請以【家庭旅遊顧問】角色分析：哪個行程最適合這個家庭組合？請從以下角度說明：
-- 步行距離與體力需求（長輩是否負荷得來）
-- 小孩的興趣吸引力（動物？花田？市區購物？）
-- 溫泉 / 休閒時間是否充足</div>
-        </div>
-        <div class="prompt-card">
-          <div class="prompt-card-header"><span class="prompt-card-title">📌 景點適合族群逐一標注</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-          <div class="prompt-code">根據這4個旅行社行程中出現的所有景點，請幫我逐一標注：
-- ✅ 適合長輩（步行短、輕鬆、景色為主）
-- 🧒 適合小孩（動物、體驗活動、視覺吸引）
-- ⚠️ 體力需求較高
-
-請整理成表格（欄位：景點名稱 / 適合族群 / 說明），只根據上傳的行程內容判斷。</div>
-        </div>
-        <div class="prompt-card">
-          <div class="prompt-card-header"><span class="prompt-card-title">📌 客製化5天4夜家庭行程</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-          <div class="prompt-code">根據我上傳的4個行程 + 2部 YouTube 攻略影片，請幫我設計一份「客製化5天4夜北海道家庭行程」：
-
-- 保留：在多個行程或 YouTube 影片中都有提到的高頻景點
-- 調整：移除趕行程、體力需求過高或評價較低的安排
-- 新增：YouTuber 推薦但旅行社沒有安排的輕鬆體驗
-
-請以每天為單位，列出 上午 / 下午 / 晚上 安排，並標注交通方式與建議停留時間。</div>
-        </div>
-      </div>
-
-      <!-- s2-c -->
-      <div class="sub-block" id="s2-c">
-        <div class="sec-sub-title">🏢 成品_公司角度</div>
-        <div class="tip-card note">以下 Prompt 適合「公司員工旅遊」情境的最終匯出成品，包含比較表、簡報、心智圖、資訊圖與語音摘要。</div>
-
-        <div class="content-h2">匯出成品</div>
+        <div class="content-h2">🏢 走向一：公司角度匯出</div>
         <div class="prompt-card">
           <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出行程比較表（給主管看）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
           <div class="prompt-code">請根據上傳的雄獅、山富共4個北海道旅行社行程，製作一份「行程比較彙整表」：
@@ -758,18 +455,6 @@
 - 尺寸：16:9
 - 邏輯架構：方案說明→四大行程比較→推薦方案→費用概估→注意事項→結論
 
-# 簡報呈現風格
-- 整體風格：北國清新商務感，線條簡潔、無多餘裝飾
-- 色系：天空藍 + 雪白為主色，維持專業乾淨的視覺調性
-- 版面配置：便當盒排版（大小格子組合呈現比較內容），數據頁搭配數字卡片或長條圖
-
-# 主講者呈現
-每張投影片請置入主講者圖片，並依該頁內容調整主講者的表情與肢體動作，讓畫面更有臨場感：
-- 開場頁：微笑、站姿自信，展現專業可靠感
-- 行程比較頁：手勢指向圖表，表情專注認真
-- 費用概估頁：語氣審慎，表情略為嚴肅、手持文件姿態
-- 結論頁：微笑點頭，開放式手勢，展現邀請與肯定語氣
-
 # 每頁輸出格式
 ### 投影片第X張：[標題]
 - 視覺配置：[便當盒排版 / 蛇形流程 / 數字卡片，擇一]
@@ -779,60 +464,8 @@
 # 注意事項
 費用欄位請標注「待向旅行社確認」，禁止憑空填入數字。</div>
         </div>
-        <div class="prompt-card">
-          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出心智圖</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-          <div class="prompt-code">請根據上傳的所有來源文件（行程 + YouTube + 成果報告），產出一份心智圖結構（純文字版）。
 
-格式規範：
-- 中心主題：北海道旅遊企劃
-- 第一層分支（3～5個）：主要行程區域（札幌 / 函館 / 富良野 / 旭川 / 小樽）
-- 第二層分支：每個區域的關鍵景點或活動
-- 第三層分支：具體體驗細節、交通方式或注意事項
-
-請以縮排條列方式輸出，方便複製至 XMind 或 Miro 使用。</div>
-        </div>
-        <div class="prompt-card">
-          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出資訊圖</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-          <div class="prompt-code">請根據上傳的行程資料，整理出適合製作資訊圖的核心內容：
-
-# 資訊圖內容整理
-- 主標題（10字內）：
-- 副標題（20字內）：
-- 核心數據（3～5個，例如：5天行程 / 6大區域 / 每人概估50,000元）：
-- 三大重點訊息（每點15字內，聚焦決策效益：省時、順暢、體力負擔低）：
-
-# 視覺風格建議
-- 應用場景：公司內部提案與主管簡報
-- 建議風格：北國清新商務風（天空藍 / 雪白，簡潔俐落）
-- 版面配置：便當盒排版
-- 配色方案：三色限定
-- 尺寸：1:1 或 A4 直式（依用途調整）</div>
-        </div>
-        <div class="prompt-card">
-          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出語音摘要</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-          <div class="prompt-code">請根據上傳的行程大綱，製作一份「北海道員工旅遊語音摘要」，供公司內部快速了解方案。
-
-# 角色設定
-主持人A：企業旅遊規劃顧問（語氣專業、點出方案效益與各區亮點）
-主持人B：HR窗口（語氣務實，關心體力分配、時間安排是否適合團體）
-
-# 風格要求
-- 對話式進行，理性中帶親切，像在跟主管簡報方案重點
-- 總長度：約5分鐘可聽完
-
-# 內容規範
-- 開場：點出這個方案對員工旅遊的核心優勢
-- 中段：依函館、富良野、旭川各用1分鐘說明亮點與適合團體活動的理由
-- 結尾：給HR窗口在確認方案前最需要留意的1個提醒</div>
-        </div>
-      </div>
-
-      <!-- s2-d -->
-      <div class="sub-block" id="s2-d">
-        <div class="sec-sub-title">👨‍👩‍👧 成品_個人角度</div>
-        <div class="tip-card note">以下 Prompt 適合「個人幫家人安排行程」情境的最終匯出成品，包含統計表、簡報、資訊圖與語音摘要。</div>
-
-        <div class="content-h2">匯出成品</div>
+        <div class="content-h2">👨‍👩‍👧 走向二：個人角度匯出</div>
         <div class="prompt-card">
           <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出景點頻率統計表</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
           <div class="prompt-code">請根據上傳的4個旅行社行程 + 2部 YouTube 影片（札幌全攻略、2026不踩雷懶人包），
@@ -852,35 +485,19 @@
 格式：Markdown 表格，方便複製後貼入 Word 或簡報。
 原則：優先安排高頻景點，體力負擔重的行程放早上，下午盡量輕鬆。</div>
         </div>
+
+        <div class="content-h2">📄 通用匯出</div>
         <div class="prompt-card">
-          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出家庭行程分享簡報</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-          <div class="prompt-code"># 角色設定
-你是一位旅遊達人，幫家人整理一份清楚易懂、有溫度的行程說明簡報。
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出心智圖</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據上傳的所有來源文件（行程 + YouTube + 成果報告），產出一份心智圖結構（純文字版）。
 
-# 簡報規格
-- 總頁數：6張，不可多不可少
-- 尺寸：16:9
-- 邏輯架構：行程概覽→Day by Day行程→景點亮點→注意事項→費用概估→Q&A
+格式規範：
+- 中心主題：北海道旅遊企劃
+- 第一層分支（3～5個）：主要行程區域（札幌 / 函館 / 富良野 / 旭川 / 小樽）
+- 第二層分支：每個區域的關鍵景點或活動
+- 第三層分支：具體體驗細節、交通方式或注意事項
 
-# 簡報呈現風格
-- 整體風格：北海道清新自然風，親切溫馨、無陰影無漸層，帶一點手繪線條感
-- 色系：天空藍 + 薰衣草紫 + 雪白
-- 版面配置：便當盒排版，長輩適合景點標注✅、小孩適合景點標注🧒
-
-# 主講者呈現
-每張投影片請置入主講者圖片，並依該頁內容調整主講者的表情與肢體動作，讓畫面更有溫度：
-- 開場頁：燦爛笑容，張開雙手歡迎的姿態
-- 行程介紹頁：手指向景點圖片，語氣期待、眼神發亮
-- 注意事項頁：表情溫和提醒，手勢輕輕比出叮嚀動作
-- 結尾頁：溫馨微笑，雙手交疊胸前，傳達期待共度旅程的心情
-
-# 每頁輸出格式
-### 投影片第X張：[標題]
-- 視覺配置：[擇一]
-- 核心列點：[3點，每點不超過20字，語氣輕鬆親切]
-
-# 注意事項
-長輩注意事項與小孩適合景點請特別標注，費用未確認的寫「待確認」。</div>
+請以縮排條列方式輸出，方便複製至 XMind 或 Miro 使用。</div>
         </div>
         <div class="prompt-card">
           <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出資訊圖</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
@@ -890,10 +507,10 @@
 - 主標題（10字內）：
 - 副標題（20字內）：
 - 核心數據（3～5個，每個附簡短說明，例如：5天行程 / 6大區域 / 必吃螃蟹懷石）：
-- 三大重點訊息（每點15字內，聚焦家人共遊亮點）：
+- 三大重點訊息（每點15字內）：
 
 # 視覺風格建議
-- 應用場景：社群貼文與親友分享
+- 應用場景：社群貼文與行程分享
 - 建議風格：北海道清新自然風（天空藍 / 薰衣草紫 / 雪白）
 - 版面配置：便當盒排版
 - 配色方案：三色限定
@@ -917,20 +534,157 @@
 - 結尾：給第一次去北海道的旅遊者最值得帶走的1個建議</div>
         </div>
       </div>
+
+      <!-- s2-c -->
+      <div class="sub-block" id="s2-c">
+        <div class="sec-sub-title">問卷調查練習</div>
+        <div class="tip-card info">資料是300筆旅遊滿意度問卷，AI 做統計容易算錯，Prompt 設計重點是「找趨勢/找偏好差異」，精確數字交給 Excel 驗證。</div>
+
+        <div class="content-h2">對話練習</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 整體輪廓掃描</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">我上傳了一份北海道旅遊滿意度問卷，共300筆。
+請以【資深旅遊市場分析師】角色，幫我整理：
+
+1. 這300位受訪者，年齡區間的分布大致呈現什麼樣的輪廓？
+2.「最滿意的行程段落」這一題，哪一個選項看起來佔比明顯偏高或偏低？
+3. 請只描述「趨勢與輪廓」，不要給出精確百分比數字，涉及精確計算的部分請提醒我改用Excel驗證</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 族群偏好交叉觀察</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請幫我交叉觀察：「年齡區間」與「最想再訪的景點」之間，
+是否有某個年齡層特別偏好某個景點（例如年輕族群特別偏好滑雪、年長族群特別偏好溫泉）？
+請列出你觀察到的3個現象，並說明依據。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 異常/極端值觀察</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請幫我找出這份問卷裡，「整體滿意度評分」明顯偏高或偏低的受訪者，
+這群人在「年齡區間」「最不滿意的行程環節」上是否有共同特徵？
+請只描述特徵傾向，不要列出精確人數。</div>
+        </div>
+
+        <div class="content-h2">匯出成品</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出旅遊滿意度洞察報告</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據上傳的問卷資料(300筆)，整理成一份「旅遊滿意度洞察報告」草稿。
+
+# 角色設定
+你是一位資深旅遊市場分析師，擅長將問卷數據轉化為行程改善建議。
+
+# 輸出格式
+## 一、受訪者輪廓概述
+## 二、行程滿意度觀察（景點/交通/住宿/餐飲）
+## 三、各年齡層偏好差異
+## 四、對下次行程規劃的3點具體建議
+
+# 邊界規範
+- 涉及精確數字請標注「概估，請以Excel實際統計為準」
+- 禁止捏造原始資料中不存在的選項或數值</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出景點偏好彙整表</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據上傳的問卷資料，整理出一張適合放入報告的彙整表，
+欄位為：分類維度／主要發現／對行程規劃的意義。
+
+請針對「年齡區間」「最滿意行程段落」「最想再訪景點」三個維度各整理一行，
+「主要發現」請用「明顯偏高/偏低/無明顯差異」這類描述性字眼，不要寫精確百分比。</div>
+        </div>
+      </div>
     </div><!-- /s2 -->
 
 
     <!-- ======== S3: Gamma ======== -->
     <div class="content-section" id="s3">
       <div class="sec-title">
-        <span class="sec-badge" style="background:var(--sec-4)">4</span>
+        <span class="sec-badge" style="background:var(--sec-3)">3</span>
         Gamma 簡報製作
       </div>
       <div class="sec-desc">📌 練習主題：北海道旅遊企劃簡報</div>
+
       <div class="sub-block" id="s3-a">
-        <div class="sec-sub-title">S1：快速建立簡報</div>
+        <div class="sec-sub-title">匯入大綱生成簡報</div>
+        <div class="tip-card info"><strong>工作流程：</strong>
+          <ul>
+            <li>用 Gemini / ChatGPT 先產出行程 Markdown 大綱 → 複製到 Gamma「匯入」功能 → AI 自動配圖排版 → 匯出 PPT 微調。</li>
+            <li>Gamma 免費版有額度限制</li>
+          </div>
+        <div class="content-h2">步驟一：先用 AI 產出 Markdown 大綱</div>
         <div class="prompt-card">
-          <div class="prompt-card-header"><span class="prompt-card-title">📌 S1-1：提供現有內容建立</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 產出 Gamma 專用行程 Markdown 大綱</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據我們剛才確認的「北海道旅遊企劃」，
+產出一份 Gamma 簡報專用的 Markdown 大綱。
+
+規範：
+- 總頁數：8頁，每頁一個 ## 標題
+- 每頁用 3～5 個 - 條列核心重點，不要寫長篇文章
+- 數據頁請直接寫出具體數字（例如：5天4夜 / 6大景點區域 / 每人概估50,000元）
+- 禁止捏造未討論過的數據，未確認的數字寫「待確認」
+- 封面頁請標注北海道代表意象（薰衣草 / 螃蟹 / 雪景）
+
+輸出時請放入 Markdown 程式碼區塊，方便直接複製貼入 Gamma。</div>
+        </div>
+        <div class="content-h2">步驟二：貼入 Gamma 生成簡報</div>
+        <div class="tip-card note">操作路徑：Gamma 首頁 → 「新建」→「匯入」→ 貼上 Markdown 文字 → 選擇主題風格 → 生成。建議選「清新自然」或「旅遊」風格主題。</div>
+        <div class="content-h2">步驟三：Gamma → PPT 匯出後微調</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 告訴 AI 哪幾頁要修改</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">Gamma 幫我生成的北海道旅遊簡報已匯出成 PPT，有幾頁需要調整：
+第3頁的景點比較建議改成「並排卡片版型」讓每個景點更清楚
+第5頁的行程表文字太密，請幫我精簡成每個時段只留2行重點
+第7頁的預算頁需要加入「費用注意事項」的提醒文字設計建議
+
+請給我每頁的修改建議，我再自行在 PPT 中操作。</div>
+        </div>
+      </div>
+
+      <div class="sub-block" id="s3-b">
+        <div class="sec-sub-title">簡報 Prompt 範本</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 公司員工旅遊提案簡報 Prompt</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據上傳的4個北海道旅行社行程大綱，製作一份「員工旅遊方案提案簡報」草稿：
+
+# 角色設定
+你是一位企業旅遊規劃顧問，協助公司選擇最適合員工的北海道行程。
+
+# 簡報規格
+- 總頁數：6張，不可多不可少
+- 尺寸：16:9
+- 視覺色系：北海道清新風（天空藍 #87CEEB、薰衣草紫 #9B59B6、雪白 #F8F9FA）
+
+# 每頁輸出格式
+### 投影片第X張：[標題]
+- 版面配置：[便當盒 / 蛇形流程 / 數字卡片，擇一]
+- 核心列點：[3點，每點不超過20字]
+- 口說講稿：[80字內，語氣專業]
+
+# 注意事項
+費用欄位請標注「待向旅行社確認」，禁止憑空填入數字。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 家庭行程分享簡報 Prompt</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據我們確認的「5天4夜北海道家庭行程」，製作一份分享用的旅遊企劃簡報草稿：
+
+# 角色設定
+你是一位旅遊達人，幫家人整理一份清楚易懂的行程說明。
+
+# 簡報規格
+- 總頁數：6張，不可多不可少
+- 尺寸：16:9
+- 邏輯架構：行程概覽→Day by Day行程→景點亮點→注意事項→費用概估→Q&A
+
+# 每頁輸出格式
+### 投影片第X張：[標題]
+- 版面配置：[擇一]
+- 核心列點：[3點，每點不超過20字，語氣輕鬆親切]
+
+# 注意事項
+長輩注意事項與小孩適合景點請特別標注，費用未確認的寫「待確認」。</div>
+        </div>
+      </div>
+      <div class="sub-block" id="s3-c">
+        <div class="sec-sub-title">課程統一範本</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 北海道旅遊企劃 簡報 Prompt</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
           <div class="prompt-code"># 北海道旅遊企劃
 
 ## 第1頁｜封面：北海道旅遊行程提案
@@ -969,96 +723,6 @@
 5. **總結陳述**：行程規劃已完成，期待與家人一同留下難忘的北海道回憶！
 </div>
         </div>
-        <div class="prompt-card">
-          <div class="prompt-card-header"><span class="prompt-card-title">📌 S1-2：【Agent】快速建立簡報</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-          <div class="prompt-code">主題：關於「北海道旅遊企劃」的簡報
-
-我已經有的素材／想法：
-【貼上你手邊已有的行程資料、想法、檔案內容，不用整理過，想到什麼寫什麼，
-例如：已收集的雄獅/山富行程比較、NotebookLM整理出的景點頻率統計、
-公司員工旅遊或家庭出遊的初步想法、預算範圍、天數限制等】
-
-請你：
-1. 研究並補充【需要補充的部分，例如：北海道近期天氣與最佳旅遊季節、
-   當地交通與匯率資訊、同類旅行社行程比較、近期旅遊安全或防疫規定】，
-   並標註資料來源
-2. 依照【敘事走向，例如：目的說明→行程亮點→費用與注意事項→行動呼籲】
-   的脈絡，將我的素材與你研究的內容整合成一份有邏輯的簡報大綱
-3. 對象是【對象，例如：公司主管與HR窗口／家人與同行旅伴／旅行社窗口】，
-   語氣需【語氣，例如：專業有說服力／溫馨親切／簡潔務實】
-4. 規劃約【張數，例如：8】頁，每頁包含標題與重點條列
-
-</div>
-        </div>
-      </div>
-
-      <div class="sub-block" id="s3-b">
-        <div class="sec-sub-title">S2：調整下載後簡報</div>
-        <div class="tip-card info"><strong>工作流程：</strong>將Gamma已完成簡報下載後，需要進行調整，分為以下三情境。
-          <ul>
-            <li>情境 1：生成「新的一頁」— 截圖既有頁面當風格參考，生成「新的一頁」</li>
-            <li>情境 2：既有「修改內容」—　針對既有圖片本身「修改內容」</li>
-            <li>情境 3：同主題同邏輯，AI重新設計 — 同主題同邏輯，讓 AI 重新設計成更豐富的資訊圖</li>
-          </div>
-        <div class="content-h2">S2-1：情境 1：生成「新的一頁」— 截圖既有頁面當風格參考，生成「新的一頁」</div>
-        <div class="tip-card note"><span class="red">關鍵重點：</span> 要 AI「模仿風格」而不是「複製內容」，同時要求避開標題區域（因為那塊等一下要放你自己下的新標題文字，<br>若 AI 把文字也一起畫進圖裡，就沒辦法在 Gamma/PowerPoint 裡另外編輯標題了）</div>
-        <div class="prompt-card">
-          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 截圖既有頁面當風格參考，生成「新的一頁」</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-          <div class="prompt-code">請參考這張附圖的視覺風格（不要複製圖片中的文字或標題內容），
-生成一張新的資訊圖／插畫，主題是：
-新主題：【小樽運河與堺町通商店街漫步】
-
-風格要求：
-- 沿用附圖的色調、畫風、構圖比例
-- 上方約 15-20% 區域請保留乾淨、無主要元素
-  （這塊要另外放標題文字，畫面元素請避開這個區域）
-- 圖片下方 70-80% 主要放置與新主題相關的視覺元素，
-  例如：運河沿岸建築倒影、堺町通商店街屋頂線條、玻璃工藝與音樂盒小物插畫、
-  遊客散步剪影
-
-比例：16:9
-</div>
-        </div>
-        <div class="content-h2">S2-2：情境 2：既有「修改內容」—　針對既有圖片本身「修改內容」</div>
-        <div class="tip-card note"><span class="red">關鍵重點：</span> 這是「圖生圖」（image-to-edit），不是憑空生成新圖，要明確講清楚「哪裡改、哪裡不動」，AI 才不會整張重畫</div>
-        <div class="prompt-card">
-          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 針對既有圖片本身「修改內容」</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-          <div class="prompt-code">請根據這張附圖進行修改，不要重新生成整張圖：
-
-需要修改的部分：
-- 【具體描述要改的地方，例如：把左邊的圖示換成___】
-- 【把背景色從___改成___】
-
-需要保留不變的部分：
-- 【具體描述不要動的地方，例如：整體構圖、右側文字排版、人物姿勢...】
-</div>
-        </div>
-        <div class="content-h2">S2-3：情境 3：同主題同邏輯，AI重新設計 — 同主題同邏輯，讓 AI 重新設計成更豐富的資訊圖</div>
-        <div class="prompt-card">
-          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 針對既有圖片本身「修改內容」</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-          <div class="prompt-code">請參考這張附圖的主題與核心邏輯架構
-（【說明原本的架構，例如：三大優勢並列呈現】），
-內容不需要照抄附圖現有的文字，
-
-請你依照同樣的主題與邏輯，重新設計並生成一張
-資訊更豐富、版面更完整的資訊圖，用來替換原本這張圖：
-
-要求：
-1. 保留原本的核心架構（【例如：三個並列重點的骨架】）
-2. 針對每個重點，請你補充更具體的說明文字、數據或情境例子
-   （原圖只有關鍵詞，這次希望每個重點都有具體內容支撐）
-3. 版面可以更豐富：可加入圖示、簡單的數據視覺化、
-   主副資訊的層次分級（大標題／小標題／說明文字）
-
-風格要求：
-- 沿用附圖的色調、畫風、構圖比例
-- 上方約 15-20% 區域請保留乾淨、無主要元素
-  （這塊要放回原本簡報的標題文字，畫面元素請避開這個區域）
-- 圖片下方 70-80% 主要放置與新主題相關、更豐富的視覺元素
-
-尺寸／比例：16:9
-</div>
-        </div>
       </div>
     </div><!-- /s3 -->
 
@@ -1066,7 +730,7 @@
     <!-- ======== S4: Canva ======== -->
     <div class="content-section" id="s4">
       <div class="sec-title">
-        <span class="sec-badge" style="background:var(--sec-5)">5</span>
+        <span class="sec-badge" style="background:var(--sec-4)">4</span>
         Canva 海報與社群
       </div>
       <div class="sec-desc">📌 練習主題：北海道旅遊行前攻略 / 返台後旅遊回顧海報</div>
@@ -1158,7 +822,7 @@
 
     <div class="tool-section">
       <div class="tool-section-title">頁面導覽</div>
-      <a class="tool-btn p1-btn" href="index.html?unit=ai202607">
+      <a class="tool-btn p1-btn" href="index.html?unit=ai202606">
         <span class="tool-icon">←</span>
         <span class="tool-name">P1 情境練習</span>
       </a>

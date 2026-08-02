@@ -48,6 +48,8 @@
   --sec-7:#556b2f;
 }
 
+.red{color: var(--red); font-weight: bold;}
+
 /* ===== BASE ===== */
 html, body {
   height: 100%;
