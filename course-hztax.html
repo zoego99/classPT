@@ -36,8 +36,17 @@
     <div class="sidebar-scroll">
 
       <div class="sec-group">
+        <button class="sec-group-btn" id="btn-s1" onclick="showSection('s5')">
+          <span class="sec-num" style="background:var(--sec-5)">1</span>
+          個人化與連結應用
+        </button>
+        <button class="sec-sub-btn" id="btn-s5-a" onclick="showSub('s5','s5-a')">連結應用程式比較</button>
+        <button class="sec-sub-btn" id="btn-s5-b" onclick="showSub('s5','s5-b')">情境＋Prompt 練習</button>
+      </div>
+
+      <div class="sec-group">
         <button class="sec-group-btn" id="btn-s1" onclick="showSection('s1')">
-          <span class="sec-num" style="background:var(--sec-1)">1</span>
+          <span class="sec-num" style="background:var(--sec-1)">2</span>
           AI 協作四步驟
         </button>
         <button class="sec-sub-btn" id="btn-s1-a" onclick="showSub('s1','s1-a')">【問】釐清思路</button>
@@ -50,7 +59,7 @@
 
       <div class="sec-group">
         <button class="sec-group-btn" id="btn-s2" onclick="showSection('s2')">
-          <span class="sec-num" style="background:var(--sec-2)">2</span>
+          <span class="sec-num" style="background:var(--sec-2)">3</span>
           Notebook 應用
         </button>
         <button class="sec-sub-btn" id="btn-s2-src" onclick="showSub('s2','s2-src')">參考來源上傳</button>
@@ -63,7 +72,7 @@
 
       <div class="sec-group">
         <button class="sec-group-btn" id="btn-s3" onclick="showSection('s3')">
-          <span class="sec-num" style="background:var(--sec-3)">3</span>
+          <span class="sec-num" style="background:var(--sec-3)">4</span>
           圖文生成技巧
         </button>
         <button class="sec-sub-btn" id="btn-s3-a" onclick="showSub('s3','s3-a')">資訊圖 Prompt</button>
@@ -122,11 +131,127 @@
 
     TEMPLATE END ↑↑↑ -->
 
+    <!-- ======== S5: 個人化與連結應用 ======== -->
+    <div class="content-section" id="s5">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-5)">1</span>
+        個人化與連結應用
+      </div>
+      <div class="sec-desc">📌 Gemini／ChatGPT 都推出了「連結應用程式」功能，讓 AI 參考 Gmail、日曆、相簿等個人資料，提供更貼近情境的回覆。開始學 Prompt 之前，先了解這個功能怎麼用、風險在哪。</div>
+
+      <!-- s1-a -->
+      <div class="sub-block" id="s5-a">
+        <div class="sec-sub-title">連結應用程式比較：Gemini vs ChatGPT</div>
+        <table class="data-table">
+          <tr><th>項目</th><th>Gemini（個人化智慧服務）</th><th>ChatGPT（Connectors）</th></tr>
+          <tr><td>設定位置</td><td>點選個人頭像 →「個人化智慧服務」</td><td>設定 →「Connectors」</td></tr>
+          <tr><td>可連結應用</td><td>Gmail、YouTube、Google 相簿、日曆、Workspace 文件</td><td>Gmail、Google Calendar、Google Contacts、Google Drive 等</td></tr>
+          <tr><td>預設狀態</td><td>關閉，需自行開啟並指定要連結的應用</td><td>關閉，需自行開啟並指定要連結的應用</td></tr>
+          <tr><td>帳號限制</td><td>僅限「個人 Google 帳戶」，企業 Workspace 帳號無法使用</td><td>需要付費方案（Plus／Pro／Team／Enterprise）</td></tr>
+          <tr><td>訓練用途</td><td>僅用「提示與生成回覆」做模型訓練，不直接用信件內容</td><td>執行寄信／改行程等動作前，都需要使用者人工確認</td></tr>
+        </table>
+        <div class="tip-card note"><strong>兩家邏輯一致：</strong>讀取資料前都要你手動開啟連結；要「做動作」（寄信、加行程）之前，都會停下來讓你確認，不會自己動手。</div>
+      </div>
+
+      <!-- s1-b -->
+      <div class="sub-block" id="s5-b">
+        <div class="sec-sub-title">Prompt 情境練習</div>
+        <!-- <div class="tip-card info"><strong>使用時機：</strong>業務出差拜訪客戶前，開啟 Gemini 的個人化連結，讓 AI 像雷達一樣自動掃描 Gmail、日曆、相簿，抓出你真正需要準備的資料，不用自己一個分頁一個分頁找。</div> -->
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt1 — Gmail信件分類與草擬回覆（連結 Gmail）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">我要請你幫我整理今天收件匣裡的信件。請依照以下規則分類：
+🚨 需立即處理（含帳務、系統警告、客戶詢問）
+💡 需要我回覆但不急（學員/合作提問）
+ℹ️ 僅供參考（活動邀請、電子報、產品更新）
+針對「🚨需立即處理」的信件，請幫我各草擬一封簡短、有禮貌的中文回覆草稿，
+語氣[方案1：正式專業／方案2：親切但保持專業／方案3：簡短俐落不囉唆]，
+我會再微調後寄出。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt2-1 — 登記 Google日曆的行程（連結 Google日曆）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">登記 Google日曆的行程：
+- 主題：職場 AI 工具分享
+- 日期： 2026/8/28
+- 時間： 9點到10點
+- 通知： 會議前3天 及 會議前1天
+- 內容：記得帶 【AI 工具的演進與職場應用的高度關注 】文件檔案</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt2-2 — 整理日曆上已排定的行程（連結 Google日曆）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">根據我今天日曆上已排定的行程（如下），請幫我：
+1. 抓出行程之間的空檔時段（30分鐘以上）
+2. 建議這些空檔最適合安排的工作類型   （例如：需要專注的任務 vs. 零碎的信件回覆）
+3. 如果今天行程有時間衝突，請提醒我並建議調整方案
+請用時間軸的方式整理成一份「今日工作節奏建議表」。
+今天的行程：
+[請貼上今天日曆截圖文字，或直接列出，例如：
+09:30-10:30 內部會議
+14:00-15:00 客戶拜訪
+16:00-17:00 教材備課]</div>
+        </div>
+
+    <div class="tip-card warning"><strong>⚠️常見詢問(❌)</strong>這是上次的會議記錄， 幫我寫這次的。（附上舊文件）</div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt3 — 會議記錄的整理</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code"># 角色與任務
+根據我上傳的參考附檔（前次的公文/會議紀錄），學習其結構、排版格式、用字語氣與規範，並依據本次的新增內容，生成全新的文件。
+
+# 輸出限制（重要）
+- 請直接在對話框中以「文字與 Markdown 格式」完整顯示內容，方便我直接複製貼上。（視情況提供給AI）
+- 請勿產生任何下載檔案（如 Word、PDF 或 txt 檔），我只需要文字回覆。
+
+# 本次文件基本資訊
+- 文件類型：會議紀錄
+- 本次會議/事件主題：2026年度個人綜合所得稅結算申報作業排程會議
+- 本次執行/會議日期：2026年3月18日
+
+# 本次會議重點與核心內容
+今天主要討論5月份綜所稅申報季的人力跟時程安排。陳協理先開場說去年申報期間最後一週大家都在加班到很晚，客戶資料一直拖到最後才補齊，今年希望提前規劃。
+
+林經理報告說目前手上客戶大概分三類，一般受薪客戶、執行業務所得的客戶（醫師、律師這種），還有有房地合一稅或股利所得比較複雜要判斷合併課稅還是分離課稅的客戶，這類複雜案件大概占客戶總數的三成左右，但花的時間會比一般案件多兩三倍。
+
+決議大家先確認一下，資料蒐集的截止日要不要訂在4月15日，超過這個日期才補件的客戶要另外收取加急處理費，避免大家又拖到最後一週。王會計師覺得可以，但建議要提前發mail或簡訊通知客戶，不要到時候客戶說沒收到通知。
+
+關於人力分配，稅務部目前有5位同仁，林經理提議一般受薪客戶跟複雜案件要分開指派，複雜案件由資深的兩位同仁負責，其他三位負責一般案件，另外行政部要協助資料收件跟建檔，不要讓稅務部同仁自己收資料收到手忙腳亂。
+
+另外有客戶是年紀比較大不太會用電腦或線上申報系統的，這類客戶大概有二三十位，討論要不要安排固定時段讓他們可以親自來所裡，由同仁協助操作網路申報，避免臨時跑來所裡卻沒有人可以馬上處理。時段初步討論是4月20日到4月30日之間，每週二、四下午安排現場服務。
+
+系統的部分，資訊部要先確認財政部的電子申報繳稅服務系統今年有沒有介面異動，往年常常五月初系統剛開放的時候會很塞，建議申報作業不要卡在最後幾天才批次上傳，能提早申報的客戶盡量提早處理完畢。
+
+品質這邊李副理提出，複雜案件（房地合一、股利所得選擇）一定要有交叉覆核，不能一個人做完就直接送出，避免申報錯誤客戶事後被國稅局補稅或裁罰，這點大家都同意要列為強制流程，不能因為時間趕就省略覆核步驟。
+
+最後行政面，張小姐提到今年要不要比照去年做法，在申報期間安排加班餐費跟彈性上下班，讓同仁申報季壓力不要太大，這個部分請林經理跟陳協理討論後再公告細節。</div>
+        </div>
+
+      </div>
+    </div><!-- /s5 -->
+
+
+
+
+
+
+
+
 
     <!-- ======== S1: AI 協作四步驟 ======== -->
     <div class="content-section" id="s1">
       <div class="sec-title">
-        <span class="sec-badge" style="background:var(--sec-1)">1</span>
+        <span class="sec-badge" style="background:var(--sec-1)">2</span>
         AI 協作四步驟
       </div>
       <div class="sec-desc">📌 練習主題：個人綜所稅結算申報服務整合計畫</div>
@@ -327,7 +452,7 @@
     <!-- ======== S2: Notebook ======== -->
     <div class="content-section" id="s2">
       <div class="sec-title">
-        <span class="sec-badge" style="background:var(--sec-2)">2</span>
+        <span class="sec-badge" style="background:var(--sec-2)">3</span>
         Notebook 文件智慧整合應用
       </div>
       <div class="sec-desc">上傳文件到 Notebook 後，用以下 Prompt 進行跨文件查詢與分析。</div>
@@ -551,7 +676,7 @@
     <!-- ======== S3: 圖文生成 ======== -->
     <div class="content-section" id="s3">
       <div class="sec-title">
-        <span class="sec-badge" style="background:var(--sec-3)">3</span>
+        <span class="sec-badge" style="background:var(--sec-3)">4</span>
         圖文生成技巧
       </div>
       <!-- s3-a -->
