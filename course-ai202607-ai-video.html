@@ -49,7 +49,6 @@
         <button class="sec-sub-btn" id="btn-s1-b" onclick="showSub('s1','s1-b')">追問調整技巧</button>
         <button class="sec-sub-btn" id="btn-s1-c" onclick="showSub('s1','s1-c')">角色設計圖</button>
       </div>
-
       <div class="sec-group">
         <button class="sec-group-btn" id="btn-s2" onclick="showSection('s2')">
           <span class="sec-num" style="background:var(--sec-2)">2</span>
@@ -68,7 +67,7 @@
         <button class="sec-sub-btn" id="btn-s3-b" onclick="showSub('s3','s3-b')">角色一致性理論</button>
       </div>
 
-      <div class="sec-group">
+      <!-- <div class="sec-group">
         <button class="sec-group-btn" id="btn-s4" onclick="showSection('s4')">
           <span class="sec-num" style="background:var(--sec-4)">4</span>
           旁白配音
@@ -76,29 +75,29 @@
         <button class="sec-sub-btn" id="btn-s4-a" onclick="showSub('s4','s4-a')">4款工具比較</button>
         <button class="sec-sub-btn" id="btn-s4-b" onclick="showSub('s4','s4-b')">Google AI Studio</button>
         <button class="sec-sub-btn" id="btn-s4-c" onclick="showSub('s4','s4-c')">MyEdit 精簡版</button>
-      </div>
+      </div>-->
 
       <div class="sec-group">
         <button class="sec-group-btn" id="btn-s5" onclick="showSection('s5')">
-          <span class="sec-num" style="background:var(--sec-5)">5</span>
+          <span class="sec-num" style="background:var(--sec-5)">4</span>
           背景音樂產出
         </button>
         <button class="sec-sub-btn" id="btn-s5-a" onclick="showSub('s5','s5-a')">Suno</button>
         <button class="sec-sub-btn" id="btn-s5-b" onclick="showSub('s5','s5-b')">Gemini之下音樂</button>
       </div>
 
-      <div class="sec-group">
+      <!-- <div class="sec-group">
         <button class="sec-group-btn" id="btn-s6" onclick="showSection('s6')">
           <span class="sec-num" style="background:var(--sec-6)">6</span>
           數字人
         </button>
         <button class="sec-sub-btn" id="btn-s6-a" onclick="showSub('s6','s6-a')">HeyGen</button>
         <button class="sec-sub-btn" id="btn-s6-b" onclick="showSub('s6','s6-b')">使用注意事項</button>
-      </div>
+      </div>  -->
 
       <div class="sec-group">
         <button class="sec-group-btn" id="btn-s7" onclick="showSection('s7')">
-          <span class="sec-num" style="background:var(--sec-7)">7</span>
+          <span class="sec-num" style="background:var(--sec-7)">5</span>
           集大成與最終剪輯
         </button>
         <button class="sec-sub-btn" id="btn-s7-a" onclick="showSub('s7','s7-a')">CapCut（剪映）剪輯清單</button>
@@ -113,9 +112,9 @@
     <!-- ======== S1 ======== -->
     <div class="content-section" id="s1">
       <div class="sec-title"><span class="sec-badge" style="background:var(--sec-1)">1</span>分鏡腳本的生成</div>
-      <div class="sec-desc">📌 使用工具：ChatGPT / Gemini　｜　主題：活潑寵物廣告，故事內容由AI自由發揮</div>
+      <div class="sec-desc">📌 使用工具：ChatGPT / Gemini　｜　主題：廣告故事內容由AI自由發揮</div>
 
-      <div class="tip-card note"><strong>這一步不用先想好故事：</strong><br>只需要給AI一個明確的方向（主角是寵物、調性要活潑），故事的品牌、產品、情節都交給ChatGPT/Gemini自己發想。
+      <div class="tip-card note"><strong>這一步不用先想好故事：</strong><br>只需要給AI一個明確的方向（故事主軸、主角、影片調性：活潑、文藝...），故事的品牌、產品、情節都交給ChatGPT/Gemini自己發想。
         <br>後面每個模組的Prompt都會直接沿用這一步產出的腳本，記得全程在同一個對話串裡操作，不要每個模組都開新對話。</div>
 
       <!-- s1-a -->
@@ -124,25 +123,43 @@
         <div class="prompt-card">
           <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 生成30秒6分鏡腳本</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
           <div class="prompt-code">你是一位20年資歷、擅長輕鬆詼諧廣告風格的導演。
-請幫我構思一支30秒、6個分鏡的【寵物用品品牌】廣告腳本。
+請幫我構思一支30秒、6個分鏡的【商品主題】廣告腳本。
 
-品牌名稱、產品內容、故事情節請你自由發揮，只需要遵守以下方向：
-- 主角是一隻寵物（貓或狗皆可，由你決定）
+【情形1：我提供設定，請你補完故事情節】
+- 品牌名稱：[請填入]
+- 產品內容：[請填入，請你自由發揮]
+- 故事情節主軸：[請填入，情節細節仍請你自由發揮]
+- 主角：[請填入，或留空由你決定——主角可以是人物、擬人化物件、或寵物]
+
+【情形2：品牌名稱、產品內容、故事情節、主角皆由你自由發揮】
+（若採用情形1，請忽略此段）
+
+不論採用哪種情形，皆須遵守以下方向：
 - 整體調性要活潑、有記憶點、帶點幽默感，避免走溫馨療癒路線
 - 風格：色彩鮮明、節奏明快、電影感
 - 比例：16:9
 
-請先獨立輸出一段「共同設定」，內容包含：
+請先獨立輸出一段「共用設定（草案）」，內容包含：
 - 整體視覺風格與色調（用一句話描述，之後每一格畫面都要維持一致）
-- 主角寵物的固定外觀設定（品種、毛色、特徵、配件——這段文字之後會重複用在每一張分鏡圖與動態影片Prompt中）
+- 主角的外觀描述草案（外型、特徵、配件——這只是文字初稿，實際外觀將在生成角色設計圖後才正式定稿）
+- 商品的外觀描述草案（如果腳本中有具體商品：形狀、顏色、包裝/標籤樣式、品牌LOGO位置——若無商品可省略此項）
+- 場景的設定草案（如果多個分鏡發生在同一場景：地點、時間、光線氛圍——若每格分鏡場景都不同可省略此項）
 
-請把「共同設定」這段獨立放在一個 Markdown 程式碼區塊內輸出，方便我直接整段複製；
-後面的6格分鏡表格維持一般表格格式即可，不需要放進程式碼區塊。
+請把「共用設定（草案）」這段獨立放在一個 Markdown 程式碼區塊內輸出，方便我直接整段複製。
 
-接著用表格輸出6個分鏡，欄位包含：分鏡編號、秒數、鏡頭運動、畫面描述、情緒氛圍、旁白(VO)、AI生圖Prompt(中文)。
-注意：AI生圖Prompt只需要描述「這一格的動作與場景」，不用重複寫共同設定的內容，共同設定會另外整段加在最前面使用。</div>
+用表格輸出6個分鏡，了解整個故事內容，欄位包含：分鏡編號、秒數、鏡頭運動、畫面描述、情緒氛圍、旁白(VO)、主角的口白、AI生圖Prompt(中文)
+
+接著再，請將6個分鏡分別各自放在一個獨立的 Markdown 程式碼區塊內輸出（總共6個區塊，不要合併、不要用表格），每個區塊依序包含：
+分鏡編號、秒數、畫面描述、AI生圖Prompt(中文)、AI生影Prompt(中文)、旁白(VO)、主角的口白
+
+注意：
+- AI生圖Prompt跟AI生影Prompt都只需要描述「這一格的動作與場景」，不用重複寫共用設定的內容，共用設定會另外整段加在最前面使用。
+- 全程請使用中文，不要出現英文。</div>
         </div>
-        <div class="content-note"><p>➜ 「共同設定」獨立輸出後，模組二、三、六都能直接引用，不用每次重新整理風格與外觀描述。如果想換成別的主題（例如換成飲料、旅遊、3C），把「寵物用品品牌」這幾個字換掉就好，其他規範不用動。</p></div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 共同設定：</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請依照上方已定案的「共用設定」（視覺風格、主角外觀[、商品外觀][、場景設定]維持不變，不需要重新輸出這段文字），生成分鏡的畫面。</div>
+        </div>
       </div>
 
       <!-- s1-b -->
@@ -172,20 +189,41 @@
             <li>先把這段文字轉成一張實際畫出來的角色設計圖（多角度＋多表情），之後每一格分鏡圖與Google Flow的動態影片，都可以直接把這張圖當參考圖上傳，AI是「照著圖畫」而不是「照著文字腦補」，一致性差很多。</li>
           </ul></div>
         <div class="prompt-card">
-          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 產出角色設計圖生圖Prompt</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-          <div class="prompt-code">請把剛才「共同設定」段落中主角寵物的外觀描述，轉換成一段「角色設計圖」的生圖Prompt：
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 【角色設計圖】 (人物/擬人化物件/寵物皆適用)</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請把剛才「共用設定」段落中主角的外觀描述,轉換成一段「角色設計圖」的生圖Prompt:
 
-一張角色設計資料圖（character design sheet），純白色背景，【依共同設定填入畫風描述】。
+一張角色設計資料圖(character design sheet),,純白色背景,【依共用設定填入畫風描述】。
 
-畫面上方並排呈現同一隻寵物的4個全身角度：正面、四十五度側面、正側面、背面，
-每個角度姿勢自然、比例一致、外觀完全相同（依共同設定的外觀描述），各角度下方標註中文小標籤。
+畫面上方並排呈現同一個主角的4個角度:正面、四十五度側面、正側面、背面,每個角度姿勢自然、比例一致、外觀完全相同(依共用設定的外觀描述),各角度下方標註中文小標籤。
 
-畫面下方並排呈現同一角色的6種表情特寫（依寵物性格挑選最適合的情緒，例如：開心、好奇、驚訝、委屈、興奮、放鬆），
-每個特寫下方標註中文情緒標籤，五官與毛色維持與全身視圖相同設定。
+畫面下方並排呈現同一主角的6種表情或狀態特寫(依主角性格挑選最適合的情緒,例如:開心、好奇、驚訝、委屈、興奮、放鬆;若主角是無生命的擬人化物件,可改用「狀態」呈現,例如:發光、震動、冒煙、閃爍),每個特寫下方標註中文標籤,五官或表面特徵維持與全身視圖相同設定。
 
-整體排版工整，如同專業角色設定資料，線條乾淨、無多餘陰影或背景雜訊，方便直接作為後續AI繪圖與動態影片的一致性參考圖使用。</div>
+整體排版工整,如同專業角色設定資料,線條乾淨、無多餘陰影或背景雜訊,方便直接作為後續AI繪圖與動態影片的一致性參考圖使用。</div>
         </div>
-        <div class="content-note"><p>➜ 生成完這張圖後：模組二生成每一格分鏡圖時，把這張圖跟該格的構圖描述一起上傳；模組三Google Flow的「素材轉影片」，這張圖就是要固定上傳的角色參考圖。</p></div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 【商品參考圖】 (如果腳本中有具體商品)</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請把「共用設定」中商品的外觀描述,轉換成一段「商品參考圖」的生圖Prompt:
+
+一張商品規格參考圖(product reference sheet),純白色背景,【依共用設定填入商品外觀描述,包含形狀、顏色、包裝/標籤樣式、品牌LOGO位置與材質質感】。
+
+畫面並排呈現同一件商品的3個角度:正面、四十五度側面、背面(如果商品形狀特殊,可改成最能呈現特徵的角度,例如俯視),每個角度比例一致、包裝上的文字與圖案完全相同,各角度下方標註中文小標籤。
+
+如果商品有開闔或使用狀態的差異(例如瓶蓋打開/合起、內容物展示),請在下方加一組特寫呈現,並標註中文說明。
+
+整體排版工整,如同專業產品型錄用的規格圖,光線均勻、無多餘陰影或背景雜訊,方便直接作為後續AI繪圖與動態影片中商品外觀的一致性參考。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 【場景設定圖】 (如果多個分鏡共用同一場景)</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請把「共用設定」中提到的場景描述,轉換成一段「場景設定圖」的生圖Prompt:
+
+一張場景參考圖(environment reference sheet),【依共用設定填入場景氛圍描述,包含地點、時間、光線與色調】。
+
+畫面呈現這個場景的2~3個取景角度(例如:整體空間全景、其中一個重點角落特寫、另一個視角),每個角度的空間陳設、色調、光線維持一致,各角度下方標註中文小標籤說明取景位置。
+
+整體排版工整,線條乾淨、無多餘雜訊,方便直接作為後續AI生成分鏡圖與動態影片時,背景與空間感的一致性參考。</div>
+        </div>
+        <div class="content-note"><p>同一個對話串內部，靠「文字引用」維持一致；跨對話、跨工具，靠「重新附上參考圖檔」維持一致，但在用Google Flow的「Ingredients to Video」功能做動態影片
+這個功能本身的設計邏輯就是每一次生成，都要手動選擇/附上要用的參考圖（角色圖、商品圖）——這不是缺陷，而是Flow刻意讓您控制「這一格到底需不需要商品參考圖」</p></div>
       </div>
     </div><!-- /s1 -->
 
@@ -282,14 +320,14 @@ Cam1：
     </div><!-- /s3 -->
 
     <!-- ======== S4 ======== -->
-    <div class="content-section" id="s4">
+    <!-- <div class="content-section" id="s4">
       <div class="sec-title"><span class="sec-badge" style="background:var(--sec-4)">4</span>旁白配音</div>
       <div class="sec-desc">📌 課程主軸工具：Google AI Studio、MyEdit（雅婷文字轉語音、VoAI 為備案）</div>
 
-      <div class="tip-card note"><strong>理論重點｜口音（Accent）≠ 語言：</strong>Google AI Studio的Gemini TTS語言是自動從輸入文字判斷的，中文文案會自動用中文念，這一步跟「口音」下拉選單無關。口音選單目前只列英語地區腔調，中文腔調（如台灣腔）還沒有對應選項——口音維持「中性的」即可，真正影響腔調自然度的是你選的那顆聲音（Voice）本身。</div>
+      <div class="tip-card note"><strong>理論重點｜口音（Accent）≠ 語言：</strong>Google AI Studio的Gemini TTS語言是自動從輸入文字判斷的，中文文案會自動用中文念，這一步跟「口音」下拉選單無關。口音選單目前只列英語地區腔調，中文腔調（如台灣腔）還沒有對應選項——口音維持「中性的」即可，真正影響腔調自然度的是你選的那顆聲音（Voice）本身。</div> -->
 
       <!-- s4-a -->
-      <div class="sub-block" id="s4-a">
+      <!-- <div class="sub-block" id="s4-a">
         <div class="sec-sub-title">4款工具比較</div>
         <table class="data-table">
           <tr><th>工具</th><th>優點</th><th>缺點</th><th>免費條件</th><th>使用重點</th></tr>
@@ -323,10 +361,10 @@ Cam1：
           </tr>
         </table>
         <div class="tip-card note">連結提醒：「雅婷逐字稿」是語音轉文字的逐字稿工具，跟這裡要用的文字轉語音是不同產品，正確網址是 tts.yating.tw。</div>
-      </div>
+      </div> -->
 
       <!-- s4-b -->
-      <div class="sub-block" id="s4-b">
+      <!-- <div class="sub-block" id="s4-b">
         <div class="sec-sub-title">Google AI Studio 轉換 Prompt</div>
         <div class="prompt-card">
           <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 產出Google AI Studio專用旁白</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
@@ -344,10 +382,10 @@ Cam1：
 
 請依照6個分鏡的順序產出。</div>
         </div>
-      </div>
+      </div> -->
 
       <!-- s4-c -->
-      <div class="sub-block" id="s4-c">
+      <!-- <div class="sub-block" id="s4-c">
         <div class="sec-sub-title">MyEdit 精簡版轉換 Prompt</div>
         <div class="prompt-card">
           <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 產出MyEdit一次性文字稿</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
@@ -359,11 +397,11 @@ Cam1：
         </div>
         <div class="tip-card note">聲音風格選擇：因為只能選一種聲音貫穿全段，建議挑「活潑」「說故事」風格的配音員；下載音檔後進CapCut調整前後段落的語速與間隔，做出節奏對比。</div>
       </div>
-    </div><!-- /s4 -->
+    </div>/s4 -->
 
     <!-- ======== S5 ======== -->
     <div class="content-section" id="s5">
-      <div class="sec-title"><span class="sec-badge" style="background:var(--sec-5)">5</span>背景音樂產出</div>
+      <div class="sec-title"><span class="sec-badge" style="background:var(--sec-5)">4</span>背景音樂產出</div>
       <div class="sec-desc">📌 課程主軸工具：Suno（人聲歌曲）／Gemini音樂外掛（Lyria，付費）</div>
 
       <div class="tip-card note">免費版重要限制：Suno免費帳號每天可生成10首歌（50點），但免費版產出的音樂不可商用，即使之後升級付費也不會追溯授權。練習階段用免費版沒問題，正式要交給客戶或用於行銷案，這一步務必升級付費方案或改用有商用授權的音樂庫。Gemini音樂外掛（Lyria）目前是付費功能。</div>
@@ -429,18 +467,15 @@ The entire song must execute a smooth fade-out and end in complete silence at ex
         </ul>
       </div>
 
-      <ul>
-        <li>AAAAA</li>
-      </ul>
     </div><!-- /s5 -->
 
     <!-- ======== S6 ======== -->
-    <div class="content-section" id="s6">
+    <!-- <div class="content-section" id="s6">
       <div class="sec-title"><span class="sec-badge" style="background:var(--sec-6)">6</span>數字人</div>
-      <div class="sec-desc">📌 HeyGen 去背數字人，9:16直式，用於社群短影音開場／結尾口白</div>
+      <div class="sec-desc">📌 HeyGen 去背數字人，9:16直式，用於社群短影音開場／結尾口白</div> -->
 
       <!-- s6-a -->
-      <div class="sub-block" id="s6-a">
+      <!-- <div class="sub-block" id="s6-a">
         <div class="sec-sub-title">HeyGen 轉換 Prompt</div>
         <div class="prompt-card">
           <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 產出HeyGen人物設定與口白</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
@@ -452,19 +487,19 @@ The entire song must execute a smooth fade-out and end in complete silence at ex
 2. 口白文案（10-15秒，作為影片開場或結尾口播，語氣需與廣告旁白的品牌調性一致）
 3. 用途說明（建議放在影片的哪個位置：開場／結尾／全片旁白）</div>
         </div>
-      </div>
+      </div> -->
 
       <!-- s6-b -->
-      <div class="sub-block" id="s6-b">
+      <!-- <div class="sub-block" id="s6-b">
         <div class="sec-sub-title">使用注意事項</div>
         <div class="tip-card note">理論重點｜行銷人物年齡設定要注意平台限制：不少數字人平台（含HeyGen）對「生成兒童樣貌的擬真數字人」用於商業廣告有使用限制，能否生成小學生年齡的擬真人像，需要在平台上實測確認，不能預設一定可行。比較穩妥的替代方向：①改用風格化、卡通感的角色，而非擬真照片級人像；②直接讓廣告腳本裡的主角寵物本身當代言主角，數字人退居旁白員視角，一樣能傳達活潑調性，且不用擔心平台審核問題。</div>
         <div class="content-note"><p>➜ 正式製作前，先小量測試一次，確認生成結果符合平台規範與你要的形象，再投入完整口白製作。</p></div>
       </div>
-    </div><!-- /s6 -->
+    </div>/s6 -->
 
     <!-- ======== S7 ======== -->
     <div class="content-section" id="s7">
-      <div class="sec-title"><span class="sec-badge" style="background:var(--sec-7)">7</span>集大成與最終剪輯</div>
+      <div class="sec-title"><span class="sec-badge" style="background:var(--sec-7)">5</span>集大成與最終剪輯</div>
       <div class="sec-desc">📌 唯一使用軟體：CapCut（剪映）——不需要其他剪輯軟體</div>
 
       <div class="tip-card note">為什麼只用CapCut：前六個模組已經產出動態影片片段、旁白音檔、背景音樂、數字人素材，這一步只需要「排序、對齊、混音、輸出」，CapCut的時間軸、字幕、調色功能已經足夠完成，不需要再學新的剪輯軟體。</div>
@@ -510,18 +545,18 @@ The entire song must execute a smooth fade-out and end in complete silence at ex
       <a class="tool-btn" href="https://klingai.com" target="_blank"><span class="tool-icon">🎥</span><span class="tool-name">Kling</span><span class="tool-arrow">↗</span></a>
     </div>
 
-    <div class="tool-section">
+    <!-- <div class="tool-section">
       <div class="tool-section-title">配音工具</div>
       <a class="tool-btn" href="https://aistudio.google.com" target="_blank"><span class="tool-icon">🎙️</span><span class="tool-name">Google AI Studio</span><span class="tool-arrow">↗</span></a>
       <a class="tool-btn" href="https://myedit.online" target="_blank"><span class="tool-icon">🗣️</span><span class="tool-name">MyEdit</span><span class="tool-arrow">↗</span></a>
       <a class="tool-btn" href="https://tts.yating.tw/" target="_blank"><span class="tool-icon">💬</span><span class="tool-name">雅婷文字轉語音</span><span class="tool-arrow">↗</span></a>
       <a class="tool-btn" href="https://voai.co" target="_blank"><span class="tool-icon">🎧</span><span class="tool-name">VoAI 絕好聲創</span><span class="tool-arrow">↗</span></a>
-    </div>
+    </div> -->
 
     <div class="tool-section">
-      <div class="tool-section-title">音樂與數字人</div>
+      <div class="tool-section-title">音樂</div>
       <a class="tool-btn" href="https://suno.com" target="_blank"><span class="tool-icon">🎵</span><span class="tool-name">Suno</span><span class="tool-arrow">↗</span></a>
-      <a class="tool-btn" href="https://www.heygen.com" target="_blank"><span class="tool-icon">🧑</span><span class="tool-name">HeyGen</span><span class="tool-arrow">↗</span></a>
+      <!-- <a class="tool-btn" href="https://www.heygen.com" target="_blank"><span class="tool-icon">🧑</span><span class="tool-name">HeyGen</span><span class="tool-arrow">↗</span></a> -->
     </div>
 
     <div class="tool-section">
