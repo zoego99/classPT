@@ -79,6 +79,7 @@
         <button class="sec-sub-btn" id="btn-s3-b" onclick="showSub('s3','s3-b')">海報 Prompt</button>
       </div>
 
+
       <!-- <div class="sec-group">
         <button class="sec-group-btn" id="btn-s4" onclick="showSection('s4')">
           <span class="sec-num" style="background:var(--sec-4)">4</span>
@@ -87,6 +88,15 @@
         <button class="sec-sub-btn" id="btn-s4-a" onclick="showSub('s4','s4-a')">照片轉 Excel</button>
         <button class="sec-sub-btn" id="btn-s4-b" onclick="showSub('s4','s4-b')">問卷分析</button>
       </div> -->
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-s6" onclick="showSection('s6')">
+          <span class="sec-num" style="background:var(--sec-4)">4</span>
+          Gamma 簡報製作
+        </button>
+        <button class="sec-sub-btn" id="btn-s6-a" onclick="showSub('s6','s6-a')">S1：快速建立簡報</button>
+        <button class="sec-sub-btn" id="btn-s6-b" onclick="showSub('s6','s6-b')">S2：調整下載後簡報</button>
+      </div>
 
     </div>
   </div><!-- /sidebar -->
@@ -322,7 +332,8 @@
 - 所有內容必須來自剛才的對話，禁止自行補充未討論的內容
 - 每個章節以條列呈現，每點不超過 30 字
 - 禁止捏造具體數據（KPI 僅寫「待填入」或「依實際設定」）
-- 部門分工表欄位：部門、任務、負責人、期限</div>
+- 部門分工表欄位：部門、任務、負責人、期限
+- 撰寫/修改這篇內容時，請勿使用 LaTeX 或數學公式語法（如 $ 或 %），所有百分比請直接輸出一般的純文字 55% 即可。</div>
         </div>
       </div>
 
@@ -841,6 +852,105 @@
         </div>
       </div>
     </div>/s4 -->
+
+    <!-- ======== S6: Gamma ======== -->
+    <div class="content-section" id="s6">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-6)">5</span>
+        Gamma 簡報製作
+      </div>
+      <div class="sec-desc">📌 練習主主題：關於「個人綜所稅結算申報服務整合計畫」的簡報</div>
+      <div class="sub-block" id="s6-a">
+        <div class="sec-sub-title">S1：快速建立簡報</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 【Agent】快速建立簡報</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">主題：關於「個人綜所稅結算申報服務整合計畫」的簡報
+
+我已經有的素材／想法：
+【貼上你手邊已有的會議紀錄、想法、檔案內容，不用整理過，想到什麼寫什麼，
+例如：已收集的4次籌備／結案會議紀錄重點、NotebookLM整理出的客戶問卷統計、
+複雜案件人力分配的初步想法、資料蒐集截止日制度、高齡客戶現場服務時段等】
+
+請你：
+1. 研究並補充【需要補充的部分，例如：今年度綜所稅申報新制（房屋租金支出改列特別扣除額、
+   長照特別扣除額調整）、電子申報繳稅系統近期公告、同業事務所常見服務優化做法、
+   國稅局最新申報期限與罰則規定】，並標註資料來源
+2. 依照【敘事走向，例如：計畫背景與挑戰→三大服務優化方向→任務分工與時程→
+   關鍵成效與改善建議】的脈絡，將我的素材與你研究的內容整合成一份有邏輯的簡報大綱
+3. 對象是【對象，例如：所長與各部門主管／稅務部同仁／全所教育訓練】，
+   語氣需【語氣，例如：專業穩重／簡潔務實／可執行導向】
+4. 規劃約【張數，例如：8】頁，每頁包含標題與重點條列</div>
+        </div>
+      </div>
+
+      <div class="sub-block" id="s6-b">
+        <div class="sec-sub-title">S2：調整下載後簡報</div>
+        <div class="tip-card info"><strong>工作流程：</strong>將Gamma已完成簡報下載後，需要進行調整，分為以下三情境。
+          <ul>
+            <li>情境 1：生成「新的一頁」— 截圖既有頁面當風格參考，生成「新的一頁」</li>
+            <li>情境 2：既有「修改內容」—　針對既有圖片本身「修改內容」</li>
+            <li>情境 3：同主題同邏輯，AI重新設計 — 同主題同邏輯，讓 AI 重新設計成更豐富的資訊圖</li>
+          </div>
+        <div class="content-h2">S2-1：情境 1：生成「新的一頁」— 截圖既有頁面當風格參考，生成「新的一頁」</div>
+        <div class="tip-card note"><span class="red">關鍵重點：</span> 要 AI「模仿風格」而不是「複製內容」，同時要求避開標題區域（因為那塊等一下要放你自己下的新標題文字，<br>若 AI 把文字也一起畫進圖裡，就沒辦法在 Gamma/PowerPoint 裡另外編輯標題了）</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 截圖既有頁面當風格參考，生成「新的一頁」</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請參考這張附圖的視覺風格（不要複製圖片中的文字或標題內容），
+生成一張新的資訊圖／插畫，主題是：
+新主題：【新主題】
+
+風格要求：
+- 沿用附圖的色調、畫風、構圖比例
+- 上方約 15-20% 區域請保留乾淨、無主要元素
+  （這塊要另外放標題文字，畫面元素請避開這個區域）
+- 圖片下方 70-80% 主要放置與新主題相關的視覺元
+
+比例：16:9
+</div>
+        </div>
+        <div class="content-h2">S2-2：情境 2：既有「修改內容」—　針對既有圖片本身「修改內容」</div>
+        <div class="tip-card note"><span class="red">關鍵重點：</span> 這是「圖生圖」（image-to-edit），不是憑空生成新圖，要明確講清楚「哪裡改、哪裡不動」，AI 才不會整張重畫</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 針對既有圖片本身「修改內容」</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據這張附圖進行修改，不要重新生成整張圖：
+
+需要修改的部分：
+- 【具體描述要改的地方，例如：把左邊的圖示換成___】
+- 【把背景色從___改成___】
+
+需要保留不變的部分：
+- 【具體描述不要動的地方，例如：整體構圖、右側文字排版、人物姿勢...】
+</div>
+        </div>
+        <div class="content-h2">S2-3：情境 3：同主題同邏輯，AI重新設計 — 同主題同邏輯，讓 AI 重新設計成更豐富的資訊圖</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 針對既有圖片本身「修改內容」</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請參考這張附圖的主題與核心邏輯架構
+（【說明原本的架構，例如：三大優勢並列呈現】），
+內容不需要照抄附圖現有的文字，
+
+請你依照同樣的主題與邏輯，重新設計並生成一張
+資訊更豐富、版面更完整的資訊圖，用來替換原本這張圖：
+
+要求：
+1. 保留原本的核心架構（【例如：三個並列重點的骨架】）
+2. 針對每個重點，請你補充更具體的說明文字、數據或情境例子
+   （原圖只有關鍵詞，這次希望每個重點都有具體內容支撐）
+3. 版面可以更豐富：可加入圖示、簡單的數據視覺化、
+   主副資訊的層次分級（大標題／小標題／說明文字）
+
+風格要求：
+- 沿用附圖的色調、畫風、構圖比例
+- 上方約 15-20% 區域請保留乾淨、無主要元素
+  （這塊要放回原本簡報的標題文字，畫面元素請避開這個區域）
+- 圖片下方 70-80% 主要放置與新主題相關、更豐富的視覺元素
+
+尺寸／比例：16:9
+</div>
+        </div>
+      </div>
+    </div><!-- /s6 -->
+
 
   </div><!-- /content-area -->
 
