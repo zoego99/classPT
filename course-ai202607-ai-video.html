@@ -55,7 +55,7 @@
           靜態影像的製作
         </button>
         <button class="sec-sub-btn" id="btn-s2-a" onclick="showSub('s2','s2-a')">逐張生成</button>
-        <button class="sec-sub-btn" id="btn-s2-b" onclick="showSub('s2','s2-b')">批次生成（智能體）</button>
+        <button class="sec-sub-btn" id="btn-s2-b" onclick="showSub('s2','s2-b')">修正合併AI提示詞</button>
       </div>
 
       <div class="sec-group">
@@ -67,7 +67,7 @@
         <button class="sec-sub-btn" id="btn-s3-b" onclick="showSub('s3','s3-b')">角色一致性理論</button>
       </div>
 
-      <!-- <div class="sec-group">
+      <div class="sec-group">
         <button class="sec-group-btn" id="btn-s4" onclick="showSection('s4')">
           <span class="sec-num" style="background:var(--sec-4)">4</span>
           旁白配音
@@ -75,7 +75,7 @@
         <button class="sec-sub-btn" id="btn-s4-a" onclick="showSub('s4','s4-a')">4款工具比較</button>
         <button class="sec-sub-btn" id="btn-s4-b" onclick="showSub('s4','s4-b')">Google AI Studio</button>
         <button class="sec-sub-btn" id="btn-s4-c" onclick="showSub('s4','s4-c')">MyEdit 精簡版</button>
-      </div>-->
+      </div>
 
       <div class="sec-group">
         <button class="sec-group-btn" id="btn-s5" onclick="showSection('s5')">
@@ -251,28 +251,31 @@
           <div class="prompt-card-header"><span class="prompt-card-title">📌 Cam2之後 AI提供的生圖提示詞  + 共同設定要求：</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
           <div class="prompt-code">請依照上方已定案的「共用設定」（視覺風格、主角外觀、商品外觀、場景設定維持不變，不需要重新輸出這段文字），生成分鏡的畫面。</div>
         </div>
-      </div>
         <div class="content-note"><p>➜ 生成完第1張後，依序把分鏡2～6的AI生圖Prompt貼上去，在同一個對話串裡連續生成，角色才不會走鐘。</p></div>
       </div>
 
       <!-- s2-b -->
       <div class="sub-block" id="s2-b">
-        <div class="sec-sub-title">批次生成 Prompt（智能體）</div>
-        <div class="tip-card note"><strong>使用時機：</strong>想省去一張一張貼Prompt的時間，讓Gemini智能體一次規劃生成6張，適合已經確定腳本、只想快速拿到成品時使用。</div>
+        <div class="sec-sub-title">重新提供各鏡頭提示詞</div>
+        <div class="tip-card note"><strong>使用時機：</strong>因前面各鏡頭輸出時，要求分各鏡頭 MD block code 導致工作複雜化，只好求要AI重新組合在一起。</div>
         <div class="prompt-card">
-          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 整理成批次生圖格式</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-          <div class="prompt-code">請把剛才的6格分鏡腳本，重新整理成一份「一次性批次生圖」用的Prompt，
-準備貼到Gemini的智能體模式使用：
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 要AI重新組合在一起各鏡頭提示詞</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">**不是要生成圖片**
 
-生成6張16:9的圖片，作為這支廣告的分鏡畫面，整體風格統一為【請依腳本填入風格描述】。
-如果畫面中出現主角寵物，外觀需維持一致：【請依腳本填入外觀設定】。
+請不要重新構思故事，直接沿用你剛才已經生成的「共用設定（草案）」與6個分鏡內容，只需要重新調整輸出格式，規則如下：
 
-第1張：【依序列出6張畫面描述】
-第2張：
-第3張：
-第4張：
-第5張：
-第6張：</div>
+將全部內容整合放在「同一個」Markdown 程式碼區塊內輸出（只要一個區塊，不要分成6個區塊、也不要用表格），依序排列：
+
+1. 分鏡1：秒數、畫面描述、AI生圖Prompt(中文)、AI生影Prompt(中文)、旁白(VO)、主角的口白，接著在這一格最後面，附上完整的「共用設定（草案）」內容（視覺風格、主角外觀草案、商品外觀草案、場景設定草案）
+
+2. 分鏡2～分鏡6：每一格同樣依序輸出秒數、畫面描述、AI生圖Prompt(中文)、AI生影Prompt(中文)、旁白(VO)、主角的口白，接著在每一格最後面，都加上這一句（不要重複輸出共用設定的完整內容）：
+   「請依照上方已定案的「共用設定」（視覺風格、主角外觀、商品外觀、場景設定維持不變，不需要重新輸出這段文字），生成分鏡的畫面。」
+
+注意：
+
+- 每一個分鏡（分鏡1～分鏡6）都要各自加上對應的共用設定文字（分鏡1是完整版，分鏡2～6是引用版），不能只加在最後一格。
+- 全部6個分鏡加共用設定文字，通通放在同一個Markdown程式碼區塊裡，中間不要分段、不要另外開新區塊。
+- 全程使用中文，不要出現英文。</div>
         </div>
         <div class="content-note"><p>➜ 開啟智能體模式後，把GPT/Gemini整理好的這段內容整段貼入輸入框即可，不需要逐張分開送出。</p></div>
       </div>
@@ -318,14 +321,14 @@
     </div><!-- /s3 -->
 
     <!-- ======== S4 ======== -->
-    <!-- <div class="content-section" id="s4">
+    <div class="content-section" id="s4">
       <div class="sec-title"><span class="sec-badge" style="background:var(--sec-4)">4</span>旁白配音</div>
       <div class="sec-desc">📌 課程主軸工具：Google AI Studio、MyEdit（雅婷文字轉語音、VoAI 為備案）</div>
 
-      <div class="tip-card note"><strong>理論重點｜口音（Accent）≠ 語言：</strong>Google AI Studio的Gemini TTS語言是自動從輸入文字判斷的，中文文案會自動用中文念，這一步跟「口音」下拉選單無關。口音選單目前只列英語地區腔調，中文腔調（如台灣腔）還沒有對應選項——口音維持「中性的」即可，真正影響腔調自然度的是你選的那顆聲音（Voice）本身。</div> -->
+      <div class="tip-card note"><strong>理論重點｜口音（Accent）≠ 語言：</strong>Google AI Studio的Gemini TTS語言是自動從輸入文字判斷的，中文文案會自動用中文念，這一步跟「口音」下拉選單無關。口音選單目前只列英語地區腔調，中文腔調（如台灣腔）還沒有對應選項——口音維持「中性的」即可，真正影響腔調自然度的是你選的那顆聲音（Voice）本身。</div>
 
       <!-- s4-a -->
-      <!-- <div class="sub-block" id="s4-a">
+      <div class="sub-block" id="s4-a">
         <div class="sec-sub-title">4款工具比較</div>
         <table class="data-table">
           <tr><th>工具</th><th>優點</th><th>缺點</th><th>免費條件</th><th>使用重點</th></tr>
@@ -359,10 +362,10 @@
           </tr>
         </table>
         <div class="tip-card note">連結提醒：「雅婷逐字稿」是語音轉文字的逐字稿工具，跟這裡要用的文字轉語音是不同產品，正確網址是 tts.yating.tw。</div>
-      </div> -->
+      </div>
 
       <!-- s4-b -->
-      <!-- <div class="sub-block" id="s4-b">
+      <div class="sub-block" id="s4-b">
         <div class="sec-sub-title">Google AI Studio 轉換 Prompt</div>
         <div class="prompt-card">
           <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 產出Google AI Studio專用旁白</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
@@ -380,10 +383,10 @@
 
 請依照6個分鏡的順序產出。</div>
         </div>
-      </div> -->
+      </div> 
 
       <!-- s4-c -->
-      <!-- <div class="sub-block" id="s4-c">
+       <div class="sub-block" id="s4-c">
         <div class="sec-sub-title">MyEdit 精簡版轉換 Prompt</div>
         <div class="prompt-card">
           <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 產出MyEdit一次性文字稿</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
@@ -395,7 +398,7 @@
         </div>
         <div class="tip-card note">聲音風格選擇：因為只能選一種聲音貫穿全段，建議挑「活潑」「說故事」風格的配音員；下載音檔後進CapCut調整前後段落的語速與間隔，做出節奏對比。</div>
       </div>
-    </div>/s4 -->
+    </div><!-- /s4 -->
 
     <!-- ======== S5 ======== -->
     <div class="content-section" id="s5">
@@ -543,13 +546,13 @@ The entire song must execute a smooth fade-out and end in complete silence at ex
       <a class="tool-btn" href="https://klingai.com" target="_blank"><span class="tool-icon">🎥</span><span class="tool-name">Kling</span><span class="tool-arrow">↗</span></a>
     </div>
 
-    <!-- <div class="tool-section">
+    <div class="tool-section">
       <div class="tool-section-title">配音工具</div>
       <a class="tool-btn" href="https://aistudio.google.com" target="_blank"><span class="tool-icon">🎙️</span><span class="tool-name">Google AI Studio</span><span class="tool-arrow">↗</span></a>
       <a class="tool-btn" href="https://myedit.online" target="_blank"><span class="tool-icon">🗣️</span><span class="tool-name">MyEdit</span><span class="tool-arrow">↗</span></a>
       <a class="tool-btn" href="https://tts.yating.tw/" target="_blank"><span class="tool-icon">💬</span><span class="tool-name">雅婷文字轉語音</span><span class="tool-arrow">↗</span></a>
       <a class="tool-btn" href="https://voai.co" target="_blank"><span class="tool-icon">🎧</span><span class="tool-name">VoAI 絕好聲創</span><span class="tool-arrow">↗</span></a>
-    </div> -->
+    </div>
 
     <div class="tool-section">
       <div class="tool-section-title">音樂</div>
