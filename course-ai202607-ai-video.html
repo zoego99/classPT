@@ -160,6 +160,12 @@
           <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 共同設定：</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
           <div class="prompt-code">請依照上方已定案的「共用設定」（視覺風格、主角外觀[、商品外觀][、場景設定]維持不變，不需要重新輸出這段文字），生成分鏡的畫面。</div>
         </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 要求為：真人電影實拍風格</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">- 全片採真人電影實拍風格（live-action cinematic realism），人物為真實人類外觀（自然皮膚紋理、真實比例），場景與道具為真實世界材質與尺寸，自然光＋電影級打光，真實景深與陰影，動作與鏡頭運動符合真實物理規律。
+- 非動畫、非3D、非CG、非AI生成感。</div>
+        </div>
+        
       </div>
 
       <!-- s1-b -->
@@ -239,21 +245,13 @@
           <ul>
             <li>想要一張一張確認畫面、隨時用口語微調，或角色設定比較複雜時，適合用這個方式。</li>
             <li>如果模組1已經生成角色設計圖，這一步改成「上傳那張圖＋貼分鏡描述」，比純文字描述更能鎖定外觀一致。</li>
+            <li class="red">Cam1生圖： AI提供的生圖提示詞 + 共同設定</li>
           </ul></div>
-        <div class="prompt-card">
-          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 開場定調＋第一張</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-          <div class="prompt-code">接下來我要請你依序生成一支剛才腳本的6張分鏡圖，畫風統一為：
-色彩鮮明、節奏明快、電影感的商業廣告攝影風格。
-
-如果畫面中出現主角寵物，請先用一句話固定牠的外觀設定（品種、毛色、特徵、配件），
-之後每一張都維持同樣的畫風與外觀設定，只有動作、鏡頭、場景隨畫面描述變化。
-
-Cam1：
-共同設定：
-畫面描述：
-生圖Prompt：
-</div>
+          <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Cam2之後 AI提供的生圖提示詞  + 共同設定要求：</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請依照上方已定案的「共用設定」（視覺風格、主角外觀[、商品外觀][、場景設定]維持不變，不需要重新輸出這段文字），生成分鏡的畫面。</div>
         </div>
+      </div>
         <div class="content-note"><p>➜ 生成完第1張後，依序把分鏡2～6的AI生圖Prompt貼上去，在同一個對話串裡連續生成，角色才不會走鐘。</p></div>
       </div>
 
