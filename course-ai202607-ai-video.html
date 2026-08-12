@@ -369,11 +369,12 @@
         <div class="sec-sub-title">Google AI Studio 轉換 Prompt</div>
         <div class="prompt-card">
           <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 產出Google AI Studio專用旁白</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-          <div class="prompt-code">基於我們前面已經完成的6格分鏡腳本，接下來我要將旁白貼進Google AI Studio的Gemini TTS語音生成模型，
+          <div class="prompt-code">TXT檔是各分鏡的劇情、旁白、及主角的口白對話
+基於我們前面已經完成的6格分鏡腳本，接下來我要將旁白貼進Google AI Studio的Gemini TTS語音生成模型，
 格式需要在每句前面加上情緒標籤，並且整合成同一個「發言人」語音塊使用。
 
 要求：
-1. 每個分鏡只寫「一句話」旁白，長度控制在中文8-14字之間
+1. 抓取TXT檔中，每個分鏡的對話
 2. 6句合起來要能連成一個完整的故事線，語氣要有明顯的情緒轉折，不要每句語氣都一樣平
 3. 每句前面用英文方括號標一個最貼切的情緒標籤，標籤自己依畫面情緒挑選，不要每句都用同一個
 4. 額外輸出：
@@ -381,7 +382,7 @@
    - 範例上下文（Context）：一段英文描述整體語氣風格
    - 發言人1文字內容：把6句旁白整合成一整段，直接可以複製貼入同一個語音塊
 
-請依照6個分鏡的順序產出。</div>
+請依照6個分鏡的順序產出，，先輸出【旁白/主角口白】的內容。</div>
         </div>
       </div> 
 
@@ -394,7 +395,8 @@
 且我的點數有限（例如只剩3點，1000字扣2點），必須一次生成完畢。
 
 請把剛才6句旁白，去除所有情緒標籤，合併成一段可以直接貼入MyEdit的純文字稿，
-在句子之間適度加入刪節號「……」引導自然停頓，並統計總字數。</div>
+在句子之間適度加入刪節號「……」引導自然停頓，並統計總字數。
+先輸出【旁白】的內容</div>
         </div>
         <div class="tip-card note">聲音風格選擇：因為只能選一種聲音貫穿全段，建議挑「活潑」「說故事」風格的配音員；下載音檔後進CapCut調整前後段落的語速與間隔，做出節奏對比。</div>
       </div>
@@ -414,16 +416,23 @@
           <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 產出Suno專用Style／Lyrics</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
           <div class="prompt-code">基於我們前面已經完成的6格分鏡廣告腳本，以及旁白的情緒轉折，
 請幫我把這支廣告的背景音樂需求，轉換成可以直接使用的Suno Prompt。
+這首歌需要有人聲演唱，不要純音樂。
 
 先輸出一段「音樂結構規劃」，把6格分鏡的時間點對應到音樂的情緒與能量變化，
-簡述每個時段該用什麼配器、節奏、強弱。
+簡述每個時段該用什麼配器、節奏、強弱、以及這一段人聲該用什麼唱法（例如：輕柔哼唱、有力主歌、大合唱副歌）。
 
-接著輸出【Suno Custom模式Prompt】，包含以下欄位，用於直接複製貼入：
-- Style of Music：一段風格關鍵字描述（樂器、情緒、節奏）
-- Exclude Styles：需要排除的元素
-- Lyrics欄位內容：用[Intro][Build][Climax][Outro]這類結構標籤標出對應時間段。
-  如果需要純音樂不要人聲，請加上[Instrumental]；
-  如果要人聲歌唱，請依6格情緒寫出對應的簡短歌詞。
+接著分別輸出以下兩種版本，供不同模式使用：
+
+【Simple模式用｜Song Description】
+請把整首歌的風格、情緒起伏、樂器、節奏、人聲特質（例如：溫暖女聲、清亮男聲），
+濃縮成一段2-3句的自然語言描述，直接貼進Suno「Song Description」欄位即可使用
+（此模式沒有獨立欄位可控制結構，AI會自行判斷段落安排；記得畫面上的「Instrumental」按鈕保持關閉，才會生成人聲）。
+
+【Advanced模式用｜完整結構版】
+- Style欄位內容：一段風格關鍵字描述（樂器、情緒、節奏、人聲特質）
+- Lyrics欄位內容：用[Intro][Build][Climax][Outro]這類結構標籤標出對應時間段，
+  請依6格情緒寫出對應的中文歌詞（不要加[Instrumental]標籤，此欄位務必填入實際歌詞內容才會生成人聲）。
+- Exclude Styles建議內容：需要排除的元素（提醒：此欄位在Advanced模式下方「Advanced Options」展開後才看得到）
 
 總長度需與廣告秒數一致，結尾需要漸弱或留白，方便對齊品牌Logo定格畫面。</div>
         </div>
