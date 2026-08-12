@@ -444,11 +444,30 @@
         <div class="tip-card note">理論重點｜兩家平台的「輸出結構」邏輯不同：Suno靠明確的結構標籤搭配Style／Exclude兩個獨立欄位控制；Gemini音樂外掛沒有標籤系統，必須用「時間軸分段描述法」，把每個時間段要發生的樂器、情緒、歌詞用英文自然語言完整描述出來。同一份規劃，要拆成兩種不同語法分別給兩個平台，不能直接複製貼上。</div>
         <div class="prompt-card">
           <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 改寫成Gemini／Lyria專用格式</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-          <div class="prompt-code">請把剛才的音樂結構規劃，改寫成Gemini音樂外掛（Lyria）專用的Prompt：
-用英文自然語言、時間軸分段描述法撰寫，每個時間段都要包含樂器、情緒、動作變化的完整描述，
-不要使用[Verse][Chorus]這類結構標籤（Gemini無法辨識），時間軸請精確到秒數（例如0:00 to 0:04）。
+          <div class="prompt-code">你現在是一位專業的 AI 廣告配樂師與 Gemini 音樂外掛（Lyria）專家。
 
-如果需要人聲演唱，請在開頭註明WITH vocal，並在各時段用雙引號標出要唱的中文歌詞，後方加註英文翻譯。</div>
+請根據下方提供的【分鏡腳本】與【指定語言/曲風】，執行以下作業：
+
+【作業流程】
+1. 分析各分鏡的秒數、畫面動作、情緒起伏與歌詞內容。
+2. 將音樂結構規劃自動轉化為符合 Gemini 音樂外掛（Lyria）語法的英文 Prompt。
+3. 撰寫完成後，請直接呼叫音樂生成工具（generate_music）為使用者生成 30 秒的配樂。
+
+【Lyria Prompt 撰寫規範】
+- 使用英文自然語言、時間軸分段描述法撰寫，精確到秒數（例如：0:00 to 0:05）。
+- 每個時間段必須包含：樂器、情緒、畫面動作轉折的完整描述。
+- 嚴禁使用 [Verse]、[Chorus] 等結構標籤（AI 無法解析）。
+- 開頭必須註明「WITH vocal ([指定的語言與唱法/聲線 description])」。
+- 歌詞處理原則：
+  * 若指定台語，歌詞請直接輸出「台語漢字」（如：路卡到爆），勿使用國語詞彙。
+  * 若指定國語，歌詞請輸出「國語漢字」。
+  * 在各時間段中用雙引號標出目標語言歌詞，後方加註英文翻譯，例如："路卡到爆" ("The street is super jammed")。
+- 音樂結尾必須包含「punchy rhythmic hit followed by immediate sharp stop」等留白描述，以便對齊品牌 Logo。
+
+---
+【請輸入您的資料】
+1. 語言與曲風設定：（例如：台語/國語/日語、喜劇電音/國樂融合/流行搖滾）
+2. 分鏡腳本內容：（請貼上您的分鏡腳本與歌詞）</div>
         </div>
       </div>
       <div class="sub-block" id="s5-b">
