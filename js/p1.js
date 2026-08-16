@@ -127,7 +127,9 @@ const UNIT_MAP = {
   ai202607:  { label: "東區全方位AI24 課程 Prompt",     href: "course-ai202607.html"  },
   nchuAI:  { label: "中部科學園區 AI 課程 Prompt",     href: "course-nchu-AI.html"  },
   zyxelAI:  { label: "合勤科技 Excel × AI 課程 Prompt",     href: "course-zyxel-AI.html"  },
-  hztax:  { label: "和眾會計師事務所 Prompt",     href: "course-hztax.html"  }
+  hztax:  { label: "和眾會計師事務所 Prompt",     href: "course-hztax.html"  },
+  ohher:  { label: "長諄國際(服飾) Prompt",     href: "course-ohher.html"  },
+  kltb:  { label: "基隆市稅務局｜AI Prompt",     href: "course-kltb.html"  },
   /* 新單位在此新增一行 */
 };
 

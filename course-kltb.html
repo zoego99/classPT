@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>基隆市稅務局｜AI 協作實務課程 Prompt</title>
+<link rel="icon" href="./logo2.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/shared.css">
+<link rel="stylesheet" href="css/p2.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <a class="nav-brand" href="index.html?unit=kltb">
+    <div class="nav-logo"><img src="./logo.svg" alt="" class="logo"></div>
+    <div class="nav-text">
+      <span class="nav-title">基隆市稅務局｜AI 協作實務課程 Prompt</span>
+      <span class="nav-sub">心怡｜zoego99@gmail.com</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="index.html?unit=kltb">← 情境練習</a>
+    <a href="course-kltb.html" class="active">基隆市稅務局 課程 Prompt</a>
+  </div>
+</nav>
+
+<!-- ===== 三欄版面 ===== -->
+<div class="app-layout">
+
+  <!-- ===== 左欄：導覽 ===== -->
+  <div class="sidebar">
+    <div class="sidebar-header">課程單元</div>
+    <div class="sidebar-scroll">
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u1" onclick="showSection('u1')">
+          <span class="sec-num" style="background:var(--sec-1)">1</span>
+          個人化與連結應用
+        </button>
+        <button class="sec-sub-btn" id="btn-u1-a" onclick="showSub('u1','u1-a')">連結應用程式比較</button>
+        <button class="sec-sub-btn" id="btn-u1-b" onclick="showSub('u1','u1-b')">情境＋Prompt 練習</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u2" onclick="showSection('u2')">
+          <span class="sec-num" style="background:var(--sec-2)">2</span>
+          AI 協作四步驟
+        </button>
+        <button class="sec-sub-btn" id="btn-u2-a" onclick="showSub('u2','u2-a')">【問】釐清思路</button>
+        <button class="sec-sub-btn" id="btn-u2-b" onclick="showSub('u2','u2-b')">【定】報告生成</button>
+        <button class="sec-sub-btn" id="btn-u2-c" onclick="showSub('u2','u2-c')">【定】定標準三要素</button>
+        <button class="sec-sub-btn" id="btn-u2-d" onclick="showSub('u2','u2-d')">【生】反向查證</button>
+        <button class="sec-sub-btn" id="btn-u2-e" onclick="showSub('u2','u2-e')">【骨】大綱校準</button>
+        <button class="sec-sub-btn" id="btn-u2-f" onclick="showSub('u2','u2-f')">【生】產出簡報</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u3" onclick="showSection('u3')">
+          <span class="sec-num" style="background:var(--sec-3)">3</span>
+          Notebook 旅遊主題
+        </button>
+        <button class="sec-sub-btn" id="btn-u3-a" onclick="showSub('u3','u3-a')">參考來源上傳</button>
+        <button class="sec-sub-btn" id="btn-u3-b" onclick="showSub('u3','u3-b')">對話_公司角度</button>
+        <button class="sec-sub-btn" id="btn-u3-c" onclick="showSub('u3','u3-c')">對話_個人角度</button>
+        <button class="sec-sub-btn" id="btn-u3-d" onclick="showSub('u3','u3-d')">成品_公司角度</button>
+        <button class="sec-sub-btn" id="btn-u3-e" onclick="showSub('u3','u3-e')">成品_個人角度</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u4" onclick="showSection('u4')">
+          <span class="sec-num" style="background:var(--sec-4)">4</span>
+          AI＋試算表
+        </button>
+        <button class="sec-sub-btn" id="btn-u4-a" onclick="showSub('u4','u4-a')">照片／紙本轉 Excel</button>
+        <button class="sec-sub-btn" id="btn-u4-b" onclick="showSub('u4','u4-b')">AI 輔助公式建立</button>
+        <button class="sec-sub-btn" id="btn-u4-c" onclick="showSub('u4','u4-c')">數據趨勢解讀與建議</button>
+        <button class="sec-sub-btn" id="btn-u4-d" onclick="showSub('u4','u4-d')">問卷分析</button>
+        <button class="sec-sub-btn" id="btn-u4-e" onclick="showSub('u4','u4-e')">數據分析與報告結論生成</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u5" onclick="showSection('u5')">
+          <span class="sec-num" style="background:var(--sec-5)">5</span>
+          AI＋簡報
+        </button>
+        <button class="sec-sub-btn" id="btn-u5-a" onclick="showSub('u5','u5-a')">調整下載後簡報</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u6" onclick="showSection('u6')">
+          <span class="sec-num" style="background:var(--sec-6)">6</span>
+          圖文生成技巧
+        </button>
+        <button class="sec-sub-btn" id="btn-u6-a" onclick="showSub('u6','u6-a')">資訊圖 Prompt</button>
+        <button class="sec-sub-btn" id="btn-u6-b" onclick="showSub('u6','u6-b')">海報 Prompt</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u7" onclick="showSection('u7')">
+          <span class="sec-num" style="background:var(--sec-1)">7</span>
+          輕影片製作
+        </button>
+        <button class="sec-sub-btn" id="btn-u7-a" onclick="showSub('u7','u7-a')">操作流程</button>
+        <button class="sec-sub-btn" id="btn-u7-b" onclick="showSub('u7','u7-b')">分鏡腳本</button>
+        <button class="sec-sub-btn" id="btn-u7-c" onclick="showSub('u7','u7-c')">角色設計圖</button>
+      </div>
+
+    </div>
+  </div><!-- /sidebar -->
+
+  <!-- ===== 中欄：主內容 ===== -->
+  <div class="content-area" id="contentArea">
+
+    <!-- ======== U1: 個人化與連結應用 ======== -->
+    <div class="content-section" id="u1">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-1)">1</span>
+        個人化與連結應用
+      </div>
+      <div class="sec-desc">📌 Gemini／ChatGPT 都推出了「連結應用程式」功能，讓 AI 參考 Gmail、日曆、相簿等個人資料，提供更貼近情境的回覆。開始學 Prompt 之前，先了解這個功能怎麼用、風險在哪。</div>
+
+      <!-- u1-a -->
+      <div class="sub-block" id="u1-a">
+        <div class="sec-sub-title">連結應用程式比較：Gemini vs ChatGPT</div>
+        <table class="data-table">
+          <tr><th>項目</th><th>Gemini（個人化智慧服務）</th><th>ChatGPT（Connectors）</th></tr>
+          <tr><td>設定位置</td><td>點選個人頭像 →「個人化智慧服務」</td><td>設定 →「Connectors」</td></tr>
+          <tr><td>可連結應用</td><td>Gmail、YouTube、Google 相簿、日曆、Workspace 文件</td><td>Gmail、Google Calendar、Google Contacts、Google Drive 等</td></tr>
+          <tr><td>預設狀態</td><td>關閉，需自行開啟並指定要連結的應用</td><td>關閉，需自行開啟並指定要連結的應用</td></tr>
+          <tr><td>帳號限制</td><td>僅限「個人 Google 帳戶」，企業 Workspace 帳號無法使用</td><td>需要付費方案（Plus／Pro／Team／Enterprise）</td></tr>
+          <tr><td>訓練用途</td><td>僅用「提示與生成回覆」做模型訓練，不直接用信件內容</td><td>執行寄信／改行程等動作前，都需要使用者人工確認</td></tr>
+        </table>
+        <div class="tip-card note"><strong>兩家邏輯一致：</strong>讀取資料前都要你手動開啟連結；要「做動作」（寄信、加行程）之前，都會停下來讓你確認，不會自己動手。</div>
+      </div>
+
+      <!-- u1-b -->
+      <div class="sub-block" id="u1-b">
+        <div class="sec-sub-title">Prompt 情境練習</div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt1 — Gmail信件分類與草擬回覆（連結 Gmail）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">我要請你幫我整理今天收件匣裡的信件。請依照以下規則分類：
+🚨 需立即處理（含帳務、系統警告、民眾陳情）
+💡 需要我回覆但不急（同仁/單位提問）
+ℹ️ 僅供參考（活動邀請、電子報、公文通知）
+針對「🚨需立即處理」的信件，請幫我各草擬一封簡短、有禮貌的中文回覆草稿，
+語氣[方案1：正式專業／方案2：親切但保持專業／方案3：簡短俐落不囉唆]，
+我會再微調後寄出。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt2-1 — 登記 Google日曆的行程（連結 Google日曆）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">登記 Google日曆的行程：
+- 主題：職場 AI 工具分享
+- 日期： 2026/8/28
+- 時間： 9點到10點
+- 通知： 會議前3天 及 會議前1天
+- 內容：記得帶 【AI 工具的演進與職場應用的高度關注 】文件檔案</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt2-2 — 整理日曆上已排定的行程（連結 Google日曆）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">根據我今天日曆上已排定的行程（如下），請幫我：
+1. 抓出行程之間的空檔時段（30分鐘以上）
+2. 建議這些空檔最適合安排的工作類型   （例如：需要專注的任務 vs. 零碎的信件回覆）
+3. 如果今天行程有時間衝突，請提醒我並建議調整方案
+請用時間軸的方式整理成一份「今日工作節奏建議表」。
+今天的行程：
+[請貼上今天日曆截圖文字，或直接列出，例如：
+09:30-10:30 內部會議
+14:00-15:00 民眾服務窗口
+16:00-17:00 教材備課]</div>
+        </div>
+
+        <div class="tip-card warning"><strong>⚠️常見詢問(❌)</strong>這是上次的會議記錄， 幫我寫這次的。（附上舊文件）</div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt3 — 會議記錄的整理</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code"># 角色與任務
+根據我上傳的參考附檔（前次的公文/會議紀錄），學習其結構、排版格式、用字語氣與規範，並依據本次的新增內容，生成全新的文件。
+
+# 輸出限制（重要）
+- 請直接在對話框中以「文字與 Markdown 格式」完整顯示內容，方便我直接複製貼上。（視情況提供給AI）
+- 請勿產生任何下載檔案（如 Word、PDF 或 txt 檔），我只需要文字回覆。
+
+# 本次文件基本資訊
+- 文件類型：會議紀錄
+- 本次會議/事件主題：房屋稅結算開徵作業排程會議
+- 本次執行/會議日期：2026年3月18日
+
+# 本次會議重點與核心內容
+今天主要討論5月份房屋稅開徵季的人力跟時程安排。科長先開場說去年開徵期間最後一週大家都在加班到很晚，民眾陳情跟複查案件一直拖到最後才處理完，今年希望提前規劃。
+
+股長報告說目前手上案件大概分三類，一般自住房屋案件、營業用非自住案件（店面、辦公室這種），還有稅籍異動或使用情形變更要判斷稅率如何認定的案件，這類複雜案件大概占案件總數的三成左右，但花的時間會比一般案件多兩三倍。
+
+決議大家先確認一下，資料清查的截止日要不要訂在4月15日，超過這個日期才補件的民眾要另外安排複查排程，避免大家又拖到最後一週。同仁覺得可以，但建議要提前發公告或簡訊通知民眾，不要到時候民眾說沒收到通知。
+
+關於人力分配，稅務課目前有5位同仁，股長提議一般案件跟複雜案件要分開指派，複雜案件由資深的兩位同仁負責，其他三位負責一般案件，另外服務台要協助收件跟建檔，不要讓稅務課同仁自己收資料收到手忙腳亂。
+
+另外有民眾是年紀比較大不太會用電腦或線上繳稅系統的，這類民眾大概有二三十位，討論要不要安排固定時段讓他們可以親自來局裡，由同仁協助操作線上繳稅，避免臨時跑來局裡卻沒有人可以馬上處理。時段初步討論是4月20日到4月30日之間，每週二、四下午安排現場服務。
+
+系統的部分，資訊室要先確認財政部的電子申報繳稅服務系統今年有沒有介面異動，往年常常開徵初期系統剛開放的時候會很塞，建議開徵作業不要卡在最後幾天才批次上傳，能提早繳納的民眾盡量提早處理完畢。
+
+品質這邊副局長提出，複雜案件（稅籍異動、使用情形認定）一定要有交叉覆核，不能一個人做完就直接送出，避免核定錯誤民眾事後提出行政救濟，這點大家都同意要列為強制流程，不能因為時間趕就省略覆核步驟。
+
+最後行政面，同仁提到今年要不要比照去年做法，在開徵期間安排加班餐費跟彈性上下班，讓同仁開徵季壓力不要太大，這個部分請股長跟科長討論後再公告細節。</div>
+        </div>
+
+      </div>
+    </div><!-- /u1 -->
+
+
+    <!-- ======== U2: AI 協作四步驟 ======== -->
+    <div class="content-section" id="u2">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-2)">2</span>
+        AI 協作四步驟
+      </div>
+      <div class="sec-desc">📌 練習主題：房屋稅結算開徵服務整合計畫</div>
+      <div class="tip-card info"><strong>AI 協作心法口訣：</strong>用 AI【問】出溝通盲點、【定】出正確標準、接著拉出邏輯【骨】架、最後才【生】出完美成品！<br>用 AI 問與答得不到想要的答案，問題往往在指令沒說清楚、或急著叫 AI 產出、沒先說清楚邏輯。學會這四個步驟，直接套入簡報／報告／會議記錄的實際場景。</div>
+
+      <!-- u2-a -->
+      <div class="sub-block" id="u2-a">
+        <div class="sec-sub-title">【問】釐清思路</div>
+        <div class="tip-card info"><strong>使用時機：</strong>開始寫任何報告前，先請 AI 扮演資深幕僚向你提問，幫助你把思路整理清楚，再開始動筆。</div>
+        <div class="content-note">
+          <p><strong>核心：</strong>要求 AI 扮演諮詢顧問，<strong>反向</strong>詢問使用者關鍵需求，而不是直接開始寫。</p>
+          <p><strong>目的：</strong>補足資訊落差，確保 AI 完全理解任務背景，才不會寫歪；先討論邏輯，能確保 AI 在「已知的約束條件」下產出，避免 AI 幻覺。</p>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 S1：Prompt — 釐清思路</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">協助規劃「房屋稅結算開徵服務整合計畫」，
+但我還不清楚應該聚焦哪些面向。
+
+請先以【資深行政顧問】角色，對我提出 5 個問題，幫助我確認：
+1. 這份規劃的主要受眾（局長？稅務課？民眾端？）
+2. 最需要解決的服務瓶頸是什麼
+3. 這次規劃要有哪些必要產出（報告、SOP、簡報？）
+
+請一次提出所有問題，等我回答後再開始。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 S2：Prompt — 「結構化的定案資料」，討論匯出MD檔</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">我們剛才的討論已經完成，請將討論結果整理成一份 MD 檔，作為後續開新對話時的「背景資料」使用。
+請依以下結構整理，禁止寫成對話紀錄或流水帳：
+
+1. 任務背景（這份內容是做什麼、給誰看）
+2. 角色設定（先前定案的AI角色，沒有則省略此項）
+3. 已確認的核心重點（條列，只列我們討論中確定的內容）
+4. 尚未決定／待補充的部分（如果有的話）
+
+輸出時請放入 Markdown 程式碼區塊，方便我直接複製存檔。</div>
+        </div>
+        <div class="content-note">
+          <p>目的：用於討論結束後整理結論，方便日後開新對話或免費額度用盡時，直接帶入背景接續進度。</p>
+        </div>
+      </div>
+
+      <!-- u2-b -->
+      <div class="sub-block" id="u2-b">
+        <div class="sec-sub-title">【定】報告生成</div>
+        <div class="content-h2">Markdown（MD）結構化</div>
+        <table class="data-table">
+          <tr><th>目的</th><th>基本語法</th></tr>
+          <tr><td><ul style="margin-left:20px;"><li>運用 MD 與 AI 工具對話，層級分明可清楚表達格式需求</li><li>讓 AI 生成內容更具結構化、省時且易讀</li></ul></td><td>【#】標題層級（#、##、###）<br>【- 或者 *】項目符號<br>【**粗體**】強調重點</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 正式報告產出</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">根據我們剛才討論的內容，產出正式文件。輸出時遵守以下規範：
+
+# 角色設定
+你是一位資深稅務行政顧問，擅長地方稅務機關服務流程設計與開徵作業規劃。
+
+# 任務
+針對「房屋稅結算開徵服務整合計畫」進行規劃。
+
+# 輸出格式
+結構如下：
+## 一、計畫背景與挑戰
+## 二、三大服務優化方向（依據我們確認的三個方向）
+## 三、各單位任務分工
+## 四、關鍵 KPI 設定（僅列指標名稱與目標方向，不捏造數字）
+
+# 邊界規範
+- 所有內容必須來自剛才的對話，禁止自行補充未討論的內容
+- 每個章節以條列呈現，每點不超過 30 字
+- 禁止捏造具體數據（KPI 僅寫「待填入」或「依實際設定」）
+- 單位分工表欄位：單位、任務、負責人、期限
+- 撰寫/修改這篇內容時，請勿使用 LaTeX 或數學公式語法（如 $ 或 %），所有百分比請直接輸出一般的純文字 55% 即可。</div>
+        </div>
+      </div>
+
+      <!-- u2-c -->
+      <div class="sub-block" id="u2-c">
+        <div class="sec-sub-title">【定】定標準三要素</div>
+        <div class="tip-card info"><strong>定標準的三個關鍵要素：</strong>角色設定（決定語氣與專業度）、格式鎖定（指定輸出結構）、邊界聲明（明確禁止捏造數據）。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 反向查證</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">在你開始填充內容之前，請先做反向查證：
+
+1. 逐一確認每個章節，是否有資料來源支撐（來自上傳文件）
+2. 列出「無法從來源文件找到依據」的項目，標注 ⚠️
+3. 以上確認完成後再問我：「是否繼續生成？」</div>
+        </div>
+      </div>
+
+      <!-- u2-d -->
+      <div class="sub-block" id="u2-d">
+        <div class="sec-sub-title">【生】反向查證角色變化版</div>
+        <div class="tip-card note"><strong>使用時機：</strong>報告接近定稿前，模擬不同角色的挑剔視角，提前補洞。這就是「紅隊測試（Red Teaming）」：請 AI 扮演「主管／民眾／審查單位」進行檢視，在真正審查者看到之前，先補好洞，大幅提升專業度。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 角色變化反向查證</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">例1：請扮演嚴格的局長，針對這份服務整合計畫提出 3 個可能需要改善的問題
+例2：請以民眾角度，檢查這份服務流程說明簡報是否有不容易理解的地方
+例3：請以審查委員角度，指出這份成果報告可能缺少哪些數據或說明</div>
+        </div>
+      </div>
+
+      <!-- u2-e -->
+      <div class="sub-block" id="u2-e">
+        <div class="sec-sub-title">【骨】邏輯骨架校準</div>
+        <div class="tip-card warning"><strong>避免「AI 過度積極」：</strong><br>要求「簡報大綱」時，AI 常會直接跳過大綱討論，自動產出完整的投影片內文、視覺描述甚至分鏡，這稱為「AI 的自動化跳級行為」。<br>主因有二：<br>①序列預測特性——「大綱」後面理所當然是「內文」，AI 會習慣性一次完成；<br>②關鍵字觸發——指令中出現「簡報」二字，容易觸發 AI 內部的「簡報生成模板」。因此必須在指令中加入明確的「物理斷點」與「語意約束」，管住 AI 只出結構，不要跳級寫完整投影片。</div>
+        <div class="tip-card warning"><strong>時間推估張數：</strong>依據「上台時間」推算張數。通常 1 分鐘對應 1～1.5 張投影片，是簡報報告的常見節奏<br>（例如：5 分鐘報告建議 8-10 張／10 分鐘報告建議 12-15 張）</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt1 — 大綱校準</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">現在進入【邏輯骨架校準階段】。
+
+請根據我們剛才完成的「房屋稅結算開徵服務整合計畫」報告，
+針對【局長與各課室主管】擬定簡報大綱。
+
+規範：
+- 規劃約【10】張架構
+- 每頁須含主題與核心觀點，禁止跳級產出內文或旁白
+- 數據頁面請標註建議採用「便當盒排版法」
+- 產出後立即停止，等待進一步指令
+- 強制使用 Markdown code block 區塊輸出</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt2 — 大綱校準（對應視覺規格）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code"># 任務進度：【簡報大綱校準階段】
+
+## 銜接背景與角色設定
+- **資料來源**：依據我們剛才完成的「房屋稅結算開徵服務整合計畫」報告
+- **AI 角色**：資深行政幕僚，協助將報告轉化為具說服力的簡報邏輯
+- **簡報對象**：局長與各課室主管，偏好數據導向、重視執行可行性
+
+## 簡報規格參數
+- **上台時間**：15 分鐘
+- **投影片張數**：約 10 張
+- **輸出格式**：以「投影片 [編號]：[標題]」呈現
+- **每頁必含**：核心論點摘要 + 建議視覺化圖型
+
+## 參、視覺與版面規格
+- **整體風格**：現代數據儀表板風（淺色介面、專業 KPI 數字卡片）
+- **色系**：三色限定
+  主色：深海藍 #1E3A5F
+  輔色：香檳金 #C9A84C
+  底色：暖米白 #F5F0E8
+- **視覺質感**：無陰影、無漸層、幾何平整
+- **封面設計**：強制預留上方 30% 標題空白區
+- **內頁排版**：複雜數據頁標註「便當盒排版法」或「網格矩陣」
+
+## 強制約束
+- 禁止產出具體簡報文案、旁白或生圖指令
+- 僅輸出邏輯骨架，產出後立即停止，等待指令
+
+## 格式鎖定
+- 強制以 Markdown 程式碼區塊輸出大綱
+
+「報告背景已備齊，請開始擬定簡報邏輯大綱。」
+</div>
+        </div>
+      </div>
+
+      <!-- u2-f -->
+      <div class="sub-block" id="u2-f">
+        <div class="sec-sub-title">【生】產出簡報</div>
+        <div class="content-h2">生成簡報大綱時的輸出建議</div>
+        <div class="content-note">
+          <ul  style="margin-left:20px;">
+            <li><strong>時間推估張數：</strong>依據「上台時間」推算張數。通常 1 分鐘對應 1～1.5 張投影片，是簡報報告的常見節奏（例如：5 分鐘報告建議 8-10 張／10 分鐘報告建議 12-15 張）</li>
+            <li><strong>三位一體結構：</strong>每一頁大綱必須包含「頁次、章節主題、核心觀點摘要」</li>
+            <li><strong>視覺化預設：</strong>在大綱階段即標註建議使用的圖型（如：便當盒排版、蛇形流程），有助於後續數據資料的自動歸類</li>
+          </ul>
+        </div>
+        <table class="data-table">
+          <tr><th>簡報頁面類型</th><th>建議對應風格</th><th>視覺效果</th></tr>
+          <tr><td>封面與大標題頁</td><td>日系清新風格 或 3D 黏土質感</td><td>建立第一眼的好感度與溫暖感</td></tr>
+          <tr><td>數據與績效頁</td><td>現代數據儀表板風</td><td>強調 KPI、折線圖與圓餅圖專業度</td></tr>
+          <tr><td>政策流程／步驟頁</td><td>等距視角微縮風格 或 蛇形流程排版</td><td>讓複雜的行政程序變得立體且易懂</td></tr>
+          <tr><td>多項重點並陳頁</td><td>便當盒排版法</td><td>模組化切分畫面，資訊豐富但不雜亂</td></tr>
+        </table>
+        <table class="data-table">
+          <tr><th>簡報類型</th><th>工具</th><th>特色</th><th>使用情形</th></tr>
+          <tr><td>圖形簡報</td><td>Gemini／Notebook</td><td>圖文並陳、快速吸睛</td><td>文字修改不易</td></tr>
+          <tr><td>傳統簡報</td><td>PowerPoint 簡報／Google 簡報</td><td>正式會議報告、需手動排版、套用母片</td><td>可直接編輯文字、匯出至 PPT 檔案</td></tr>
+          <tr><td>網頁簡報</td><td>Gemini → HTML 程式碼</td><td>可線上分享、互動式導覽</td><td>數位發送、遠端說明</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Google 簡報</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">邏輯大綱已確認。直接建立 Google 簡報。
+- 內容需填充每張投影片之正式文案
+- 聚焦於稅務課與各協作單位的任務分工與 KPI 設定
+- 呈現對象：局長與各課室主管
+- 產出後請顯示「匯出成簡報」的連結
+- 尺寸：16:9</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 HTML 程式碼簡報</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">邏輯大綱已確認。
+使用 HTML 與 Tailwind CSS 程式碼製作數位簡報。
+- 視覺風格：政府文宣專業風（深海藍 + 香檳金 + 暖米白）
+- 結構規範：任務分工採用【便當盒排版】，KPI 採用【數字卡片版型】
+- 請將結果以程式碼區塊呈現，並同步啟動「預覽 (Preview)」視窗
+- 尺寸：16:9</div>
+        </div>
+      </div>
+    </div><!-- /u2 -->
+
+
+    <!-- ======== U3: Notebook 旅遊主題 ======== -->
+    <div class="content-section" id="u3">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-3)">3</span>
+        Notebook 旅遊主題
+      </div>
+      <div class="sec-desc">📌 練習主題：日本北海道旅遊企劃（雄獅 × 山富 × YouTube攻略）</div>
+
+      <!-- u3-a -->
+      <div class="sub-block" id="u3-a">
+        <div class="sec-sub-title">參考來源上傳</div>
+        <div class="tip-card note">上傳的來源越豐富，Notebook 的回答越有依據。<br>建議同時上傳「練習附檔」＋「旅行社行程網址」＋「YouTube影片」，讓 AI 可以交叉比對，避免閉門造車。</div>
+
+        <div class="content-h2">① 練習附檔（課程提供）</div>
+        <table class="data-table">
+          <tr><th>檔案</th><th>說明</th></tr>
+          <tr><td>01_成果報告（Doc / MD / PDF）</td><td>北海道旅遊企劃成果，含三大主軸（行程規劃/預算訂房/現場執行）、數據表、改善建議</td></tr>
+          <tr><td>02-05 四份會議記錄（docx）</td><td>從行前規劃到結案檢討，決議事項前後呼應，適合跨文件比對練習</td></tr>
+          <tr><td>06 錄音逐字稿（txt）</td><td>返台後結案檢討口語錄音，適合練習逐字稿整理 Prompt</td></tr>
+          <tr><td>問卷調查300筆（csv / xlsx）</td><td>旅遊滿意度模擬問卷，含景點偏好、整體評分等欄位</td></tr>
+        </table>
+
+        <div class="content-h2">② 旅行社行程網址</div>
+        <table class="data-table">
+          <tr><th>行程</th><th>連結</th></tr>
+          <tr><td>雄獅1：北海道旅遊｜洞爺湖展望台.函館纜車.小樽運河.三大螃蟹五日</td><td><a href="https://travel.liontravel.com/detail?NormGroupID=92acc5da-b309-4ef2-9b0c-5c2973db62bf&GroupID=26JH723BRF-T&Platform=APP&fr=cg311C0401C0201M01" target="_blank">雄獅旅遊 ↗</a></td></tr>
+          <tr><td>雄獅2：雙宿北海道｜溫泉鄉.海洋公園.企鵝遊行.雙螃蟹溫泉五日</td><td><a href="https://travel.liontravel.com/detail?NormGroupID=b4559133-4b1f-4ba8-84ee-bc4432350895&Origin=LION&Platform=APP&GroupID=26JH807BRG-T" target="_blank">雄獅旅遊 ↗</a></td></tr>
+          <tr><td>山富1：紫薰北海道５日｜星空纜車.函館百萬夜景.富良野花田.花田列車</td><td><a href="https://www.travel4u.com.tw/group/product/SPK05260717I/" target="_blank">山富旅遊 ↗</a></td></tr>
+          <tr><td>山富2：紫夢北海道５日｜企鵝漫步、米其林星空夜景、夢幻星型五稜廓、洞爺花火、螃蟹懷石料理、螃蟹吃到飽</td><td><a href="https://www.travel4u.com.tw/group/product/SPK05260826C/" target="_blank">山富旅遊 ↗</a></td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 四大行程初步比較 Prompt</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">我上傳北海道旅遊行程作為來源，請以【資深旅遊顧問】角色，跨文件比較行程：
+
+1. 這行程的天數、主要景點各是什麼？整理成比較表（欄位：行程名稱 / 天數 / 主打景點 / 特色亮點）
+2. 哪些景點在多個行程中重複出現？代表這些是「必去」景點
+3. 哪個行程的自然景觀比重最高？哪個城市體驗比重最高？
+
+請只根據上傳的4個行程內容回答，禁止自行補充未提及的景點。</div>
+        </div>
+
+        <div class="content-h2">③ YouTube 影片列表</div>
+        <table class="data-table">
+          <tr><th>目的</th><th>影片</th></tr>
+          <tr><td>景點趨勢觀察（12個精選景點）</td><td><a href="https://www.youtube.com/watch?v=6ummGrWo5pU" target="_blank">🇯🇵【精選合集】北海道札幌旅遊全攻略 美食 景點 購物一網打盡 ↗</a></td></tr>
+          <tr><td>不踩雷行程攻略（2026懶人包）</td><td><a href="https://www.youtube.com/watch?v=f14Mo9F4Jg0" target="_blank">【北海道攻略：札幌篇】不踩雷行程推薦↗</a></td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 YouTube vs 旅行社行程交叉比對 Prompt</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">我同時上傳了YouTube 北海道攻略影片以及網頁旅行社行程。
+
+請幫我交叉比對：
+1. YouTuber 強力推薦但旅行社行程沒有安排的景點有哪些？（可能是自由行亮點）
+2. 旅行社行程都有但 YouTuber 沒有特別提到的景點有哪些？
+3. YouTuber 提到的「踩雷警告」或「建議避開」的事項，旅行社行程有沒有相同安排？
+
+請整理成三個清單，每項不超過20字。</div>
+        </div>
+
+        <div class="content-h2">④ 搜尋關鍵字建議</div>
+        <table class="data-table">
+          <tr><th>目的</th><th>建議關鍵字</th></tr>
+          <tr><td>找景點現況</td><td>2025 北海道 必去景點 推薦 / 富良野 薰衣草 花期 2025 / 旭川動物園 開放時間</td></tr>
+          <tr><td>找消費者評價</td><td>北海道 旅遊 推薦 Dcard / 北海道 踩雷 PTT / 函館 夜景 排隊 評論</td></tr>
+          <tr><td>找行程靈感</td><td>北海道 美食 IG 打卡 / 北海道 旅遊 行程 懶人包 / 北海道 跟團 vs 自由行</td></tr>
+          <tr><td>找PDF專業報告</td><td>日本 旅遊 消費趨勢 filetype:pdf / 北海道 觀光 統計 filetype:pdf</td></tr>
+          <tr><td>找特定媒體</td><td>北海道 旅遊攻略 site:kkday.com</td></tr>
+        </table>
+      </div>
+
+      <!-- u3-b -->
+      <div class="sub-block" id="u3-b">
+        <div class="sec-sub-title">🏢 對話_公司角度</div>
+        <div class="tip-card note">以下 Prompt 適合「公司安排員工旅遊 / 獎勵旅行」的討論階段，包含行程篩選與課程提供文件（會議記錄／成果報告）的整理練習。</div>
+
+        <div class="content-h2">對話練習</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 四大行程比較（選擇最適合公司）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">我上傳了網頁關於北海道行程。
+
+請以【企業旅遊規劃顧問】角色，幫我分析：
+1. 哪個行程最適合「公司員工旅遊」？評估重點：集體活動多、交通銜接順暢、無過多體力負擔
+2. 哪個行程的自由時間最多？（員工自由購物 / 個人探索的彈性空間）
+3. 如果公司有20人要一起去，這4個行程中哪個最方便統一安排？
+
+請用條列方式說明每個建議的理由。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 行前注意事項與公司確認清單</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">根據這網頁關於北海道行程內容，如果公司要安排20人員工旅遊，
+請列出我需要提前與旅行社確認的5個關鍵問題，例如：
+- 包車 vs JR 哪個適合大團體？
+- 住宿是否同棟、同樓層？
+- 餐食有無素食 / 過敏選項？
+
+請根據上傳的行程內容具體回答，禁止憑空補充未提及的資訊。</div>
+        </div>
+
+        <div class="content-h2">📋 會議記錄／成果報告整理（課程提供文件）</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 旅遊成果報告整理</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請針對上傳的「北海道旅遊企劃成果報告」，
+以【資深旅遊顧問】角色完成以下整理：
+
+1. 用條列方式列出三大行程主軸的核心亮點（每項不超過3點）
+2. 找出報告中所有出現的數據（天數、預算、景點數量），整理成一張表格
+3. 列出「問題與改善建議」章節提到的所有待辦事項，並標注負責人與期限</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 四份會議記錄跨文件整理</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">我上傳了四份不同時期的會議記錄（第1次行前規劃、第2次預算確認、行程中滾動調整、返台後結案檢討）。
+
+請跨文件完成以下分析：
+1. 整理四次會議的決議事項清單，標注每項的負責人與完成期限
+2. 找出哪些問題在多次會議中重複出現（如天氣因素、餐廳訂位等）
+3. 哪些決議在後續會議被追蹤完成？哪些沒有提到後續？</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 逐字稿整理</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">這是一份北海道行程返台後結案檢討會議的錄音逐字稿，語氣口語，內容較雜亂。
+請協助完成以下整理：
+
+1. 整理成正式會議紀錄格式（討論事項、意見摘要、決議事項、後續追蹤）
+2. 找出所有帶團窗口交辦事項，列出負責人與預計完成時間
+3. 整理「問題與改善建議」清單，標注是哪位成員提出的</div>
+        </div>
+      </div>
+
+      <!-- u3-c -->
+      <div class="sub-block" id="u3-c">
+        <div class="sec-sub-title">👨‍👩‍👧 對話_個人角度</div>
+        <div class="tip-card note">以下 Prompt 適合「個人幫家人安排行程」的討論階段。</div>
+
+        <div class="content-h2">對話練習</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 找出最適合家庭的行程</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">我上傳了4個北海道旅行社行程，我想幫家人安排一趟旅遊。
+家人組成是：【請填入，例如：長輩2位、夫妻2人、小孩1人】
+
+請以【家庭旅遊顧問】角色分析：哪個行程最適合這個家庭組合？請從以下角度說明：
+- 步行距離與體力需求（長輩是否負荷得來）
+- 小孩的興趣吸引力（動物？花田？市區購物？）
+- 溫泉 / 休閒時間是否充足</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 景點適合族群逐一標注</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">根據這4個旅行社行程中出現的所有景點，請幫我逐一標注：
+- ✅ 適合長輩（步行短、輕鬆、景色為主）
+- 🧒 適合小孩（動物、體驗活動、視覺吸引）
+- ⚠️ 體力需求較高
+
+請整理成表格（欄位：景點名稱 / 適合族群 / 說明），只根據上傳的行程內容判斷。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 客製化5天4夜家庭行程</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">根據我上傳的4個行程 + 2部 YouTube 攻略影片，請幫我設計一份「客製化5天4夜北海道家庭行程」：
+
+- 保留：在多個行程或 YouTube 影片中都有提到的高頻景點
+- 調整：移除趕行程、體力需求過高或評價較低的安排
+- 新增：YouTuber 推薦但旅行社沒有安排的輕鬆體驗
+
+請以每天為單位，列出 上午 / 下午 / 晚上 安排，並標注交通方式與建議停留時間。</div>
+        </div>
+      </div>
+
+      <!-- u3-d -->
+      <div class="sub-block" id="u3-d">
+        <div class="sec-sub-title">🏢 成品_公司角度</div>
+        <div class="tip-card note">以下 Prompt 適合「公司員工旅遊」情境的最終匯出成品，包含比較表、簡報、心智圖、資訊圖與語音摘要。</div>
+
+        <div class="content-h2">匯出成品</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出行程比較表（給主管看）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據上傳的雄獅、山富共4個北海道旅行社行程，製作一份「行程比較彙整表」：
+
+欄位：行程名稱 / 天數 / 主要景點 / 含餐標準 / 自由時間多寡 / 特色亮點
+
+每個行程一列，格式整齊，方便直接複製到簡報或 Word。
+只根據上傳的行程內容填寫，禁止捏造費用。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出員工旅遊建議簡報</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code"># 角色設定
+你是一位企業旅遊規劃顧問，協助公司選擇最適合員工的北海道行程方案。
+
+# 簡報規格
+- 總頁數：6張，不可多不可少
+- 尺寸：16:9
+- 邏輯架構：方案說明→四大行程比較→推薦方案→費用概估→注意事項→結論
+
+# 簡報呈現風格
+- 整體風格：北國清新商務感，線條簡潔、無多餘裝飾
+- 色系：天空藍 + 雪白為主色，維持專業乾淨的視覺調性
+- 版面配置：便當盒排版（大小格子組合呈現比較內容），數據頁搭配數字卡片或長條圖
+
+# 主講者呈現
+每張投影片請置入主講者圖片，並依該頁內容調整主講者的表情與肢體動作，讓畫面更有臨場感：
+- 開場頁：微笑、站姿自信，展現專業可靠感
+- 行程比較頁：手勢指向圖表，表情專注認真
+- 費用概估頁：語氣審慎，表情略為嚴肅、手持文件姿態
+- 結論頁：微笑點頭，開放式手勢，展現邀請與肯定語氣
+
+# 每頁輸出格式
+### 投影片第X張：[標題]
+- 視覺配置：[便當盒排版 / 蛇形流程 / 數字卡片，擇一]
+- 核心列點：[3點，每點不超過20字]
+- 講師講稿：[80字內，語氣專業]
+
+# 注意事項
+費用欄位請標注「待向旅行社確認」，禁止憑空填入數字。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出心智圖</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據上傳的所有來源文件（行程 + YouTube + 成果報告），產出一份心智圖結構（純文字版）。
+
+格式規範：
+- 中心主題：北海道旅遊企劃
+- 第一層分支（3～5個）：主要行程區域（札幌 / 函館 / 富良野 / 旭川 / 小樽）
+- 第二層分支：每個區域的關鍵景點或活動
+- 第三層分支：具體體驗細節、交通方式或注意事項
+
+請以縮排條列方式輸出，方便複製至 XMind 或 Miro 使用。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出資訊圖</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據上傳的行程資料，整理出適合製作資訊圖的核心內容：
+
+# 資訊圖內容整理
+- 主標題（10字內）：
+- 副標題（20字內）：
+- 核心數據（3～5個，例如：5天行程 / 6大區域 / 每人概估50,000元）：
+- 三大重點訊息（每點15字內，聚焦決策效益：省時、順暢、體力負擔低）：
+
+# 視覺風格建議
+- 應用場景：公司內部提案與主管簡報
+- 建議風格：北國清新商務風（天空藍 / 雪白，簡潔俐落）
+- 版面配置：便當盒排版
+- 配色方案：三色限定
+- 尺寸：1:1 或 A4 直式（依用途調整）</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出語音摘要</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據上傳的行程大綱，製作一份「北海道員工旅遊語音摘要」，供公司內部快速了解方案。
+
+# 角色設定
+主持人A：企業旅遊規劃顧問（語氣專業、點出方案效益與各區亮點）
+主持人B：HR窗口（語氣務實，關心體力分配、時間安排是否適合團體）
+
+# 風格要求
+- 對話式進行，理性中帶親切，像在跟主管簡報方案重點
+- 總長度：約5分鐘可聽完
+
+# 內容規範
+- 開場：點出這個方案對員工旅遊的核心優勢
+- 中段：依函館、富良野、旭川各用1分鐘說明亮點與適合團體活動的理由
+- 結尾：給HR窗口在確認方案前最需要留意的1個提醒</div>
+        </div>
+      </div>
+
+      <!-- u3-e -->
+      <div class="sub-block" id="u3-e">
+        <div class="sec-sub-title">👨‍👩‍👧 成品_個人角度</div>
+        <div class="tip-card note">以下 Prompt 適合「個人幫家人安排行程」情境的最終匯出成品，包含統計表、簡報、資訊圖與語音摘要。</div>
+
+        <div class="content-h2">匯出成品</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出景點頻率統計表</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據上傳的4個旅行社行程 + 2部 YouTube 影片（札幌全攻略、2026不踩雷懶人包），
+製作一份「景點出現頻率統計表」：
+
+欄位：景點名稱 / 出現在幾份資料中（共6份）/ 適合族群（長輩✅ / 小孩🧒 / 體力需求⚠️）/ 建議停留時間
+
+依出現頻率高到低排序，只根據上傳資料統計，禁止自行補充未提及的景點。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出每日行程規劃表</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">根據以上討論結果與4個旅行社行程 + 2部 YouTube 攻略影片，
+請幫我產出一份完整的「5天4夜北海道家庭行程規劃表」：
+
+欄位：日期 / 上午 / 下午 / 晚上 / 住宿地點 / 餐食安排 / 交通方式 / 備注（長輩/小孩適合度）
+
+格式：Markdown 表格，方便複製後貼入 Word 或簡報。
+原則：優先安排高頻景點，體力負擔重的行程放早上，下午盡量輕鬆。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出家庭行程分享簡報</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code"># 角色設定
+你是一位旅遊達人，幫家人整理一份清楚易懂、有溫度的行程說明簡報。
+
+# 簡報規格
+- 總頁數：6張，不可多不可少
+- 尺寸：16:9
+- 邏輯架構：行程概覽→Day by Day行程→景點亮點→注意事項→費用概估→Q&A
+
+# 簡報呈現風格
+- 整體風格：北海道清新自然風，親切溫馨、無陰影無漸層，帶一點手繪線條感
+- 色系：天空藍 + 薰衣草紫 + 雪白
+- 版面配置：便當盒排版，長輩適合景點標注✅、小孩適合景點標注🧒
+
+# 主講者呈現
+每張投影片請置入主講者圖片，並依該頁內容調整主講者的表情與肢體動作，讓畫面更有溫度：
+- 開場頁：燦爛笑容，張開雙手歡迎的姿態
+- 行程介紹頁：手指向景點圖片，語氣期待、眼神發亮
+- 注意事項頁：表情溫和提醒，手勢輕輕比出叮嚀動作
+- 結尾頁：溫馨微笑，雙手交疊胸前，傳達期待共度旅程的心情
+
+# 每頁輸出格式
+### 投影片第X張：[標題]
+- 視覺配置：[擇一]
+- 核心列點：[3點，每點不超過20字，語氣輕鬆親切]
+
+# 注意事項
+長輩注意事項與小孩適合景點請特別標注，費用未確認的寫「待確認」。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出資訊圖</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據上傳的行程資料，整理出適合製作資訊圖的核心內容：
+
+# 資訊圖內容整理
+- 主標題（10字內）：
+- 副標題（20字內）：
+- 核心數據（3～5個，每個附簡短說明，例如：5天行程 / 6大區域 / 必吃螃蟹懷石）：
+- 三大重點訊息（每點15字內，聚焦家人共遊亮點）：
+
+# 視覺風格建議
+- 應用場景：社群貼文與親友分享
+- 建議風格：北海道清新自然風（天空藍 / 薰衣草紫 / 雪白）
+- 版面配置：便當盒排版
+- 配色方案：三色限定
+- 尺寸：1:1</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出語音摘要</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據上傳的行程大綱，製作一份「北海道旅遊語音摘要」。
+
+# 角色設定
+主持人A：領隊（語氣專業、點出函館/富良野/旭川各段亮點）
+主持人B：第一次去北海道的旅伴（語氣好奇、分享真實感受：薰衣草花田的氣味、螃蟹料理的份量感）
+
+# 風格要求
+- 對話式進行，輕鬆活潑，像在和朋友分享旅遊回憶
+- 總長度：約5分鐘可聽完
+
+# 內容規範
+- 開場：點出這趟北海道行程的核心魅力
+- 中段：依函館、富良野、旭川各用1分鐘說明亮點
+- 結尾：給第一次去北海道的旅遊者最值得帶走的1個建議</div>
+        </div>
+      </div>
+    </div><!-- /u3 -->
+
+
+    <!-- ======== U4: AI＋試算表 ======== -->
+    <div class="content-section" id="u4">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-4)">4</span>
+        AI＋試算表
+      </div>
+      <div class="sec-desc">📌 工作情境：工作中每天面對大量表格、統計數字與稅籍報表，卻常常不知道從何分析起。AI 的加入，不是要取代 Excel，而是讓你「用說的，就能得到你要的結果」，不需要記公式、不需要懂統計，只要說清楚你想做什麼，AI 幫你完成。</div>
+      <div class="tip-card note">以下對話詢問以主題詢問，如果出現【主題】字樣，表示為新主題與前後對話無關。</div>
+
+      <!-- u4-a -->
+      <div class="sub-block" id="u4-a">
+        <div class="sec-sub-title">照片／紙本資料轉 Excel</div>
+        <div class="tip-card info">操作習慣：整理完成後，利用【Ctrl + C】複製 AI 回覆的表格，再到 Excel 按【Ctrl + V】貼上</div>
+        <table class="data-table">
+          <tr><th>情境</th><th>原始格式</th><th>整理後欄位</th></tr>
+          <tr><td>房屋稅籍現場勘查</td><td>手機拍照回傳</td><td>日期／地址／稅籍編號／使用情形／備註</td></tr>
+          <tr><td>民眾申報文件收件</td><td>紙本申請書拍照</td><td>日期／申請人姓名／申請類型／收件狀態</td></tr>
+          <tr><td>民眾陳情彙整</td><td>通訊軟體文字截圖</td><td>民眾姓名／陳情內容／優先程度</td></tr>
+        </table>
+        <div class="tip-card note"><strong>❌ 常見問法（不佳）：</strong>「請把這張圖片轉成 Excel」<br>這樣問，AI 不知道你要什麼欄位、不知道格式、不知道用途<br><strong>✅ 好 Prompt ＝ 角色 ＋ 任務 ＋ 輸出格式</strong></div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 好 Prompt — 照片轉 Excel（稅籍現場勘查）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">你是一位行政助理，請協助我整理圖片中的工程／維修回報單內容。
+請根據圖片資訊，整理成「可直接貼到 Excel 的表格格式」。
+- 欄位請包含：
+日期、工地地點、設備名稱、設備編號、故障情況、損壞程度、處理方式、預估費用、負責人、處理狀態、備註
+- 預估費用：例如顯示為 6000
+- 請用「表格」方式輸出，不要加入多餘說明文字。
+- 若圖片中某欄位無資料，請填寫「無」。</div>
+        </div>
+      </div>
+
+      <!-- u4-b -->
+      <div class="sub-block" id="u4-b">
+        <div class="sec-sub-title">AI 輔助公式建立</div>
+        <div class="tip-card info">Excel 公式會用的就那幾個，遇到跨表查詢、條件判斷、時間計算，常常卡關，要嘛上網查半天，要嘛就放棄改用人工處理。不需要記函數語法，只要用白話文描述你想要的結果，AI 能直接給出對應的公式，並說明每個部分的邏輯。</div>
+        <table class="data-table">
+          <tr><th>情境</th><th>說明</th></tr>
+          <tr><td>我知道要算什麼，但不知道怎麼寫</td><td>描述需求，AI 直接給公式</td></tr>
+          <tr><td>公式有錯，但不知道錯在哪</td><td>把錯誤公式丟給 AI，請它找問題</td></tr>
+          <tr><td>想確認公式邏輯是否正確</td><td>上傳 Excel 檔，請 AI 驗證（注意個資安全）</td></tr>
+        </table>
+        <div class="tip-card note"><strong>關鍵觀念：</strong>說清楚「哪一張表是來源、哪一張是目的、用哪個欄位比對」，AI 給的公式才會準確。
+          <ul>
+            <li>詢問 AI 時描述表格的內容，包含表格的資料範圍，與我們目標要填寫的位置。</li>
+            <li>提供三筆記錄給 AI 參考，進行提問參考。</li>
+            <li>需要生成 Excel 檔，在詢問時直接寫指令。</li>
+            <li>利用畫面截圖進行 AI 詢問。</li>
+          </ul>
+        </div>
+
+        <div class="content-h2">(1) 善用截圖</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 AI 詢問 — 判斷資料是否填寫完整</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">如附圖，整筆資料中A~D欄若為空白時，在E欄顯示【有資料未填寫】，公式寫法，並簡單說明公式</div>
+        </div>
+
+        <div class="content-h2">(2) 善用表格設定</div>
+        <div class="content-h2">(3) 提供 Excel 檔案</div>
+        <div class="tip-card info">📌 AI 最大的問題通常不是公式不會寫，而是：<strong>不知道資料關係</strong>。當附件包含多個工作表或多個檔案時，提供 Excel 檔案比提供截圖更重要。</div>
+        <div class="tip-card warning">⚠️ <strong>上傳整份檔案前，先想一下：這份資料如果外洩，會不會造成民眾困擾？</strong>必要時先拿掉姓名、電話、地址等直接識別欄位，改用代號即可，再上傳給 AI 工具。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 AI 詢問 — 兩工作表帶入公式（不佳問法）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">附檔，Excel檔案，包含兩個工作表，將工作表【基本資料】，
+透過【客戶編號】欄位代入至工作表【訂單明細】的產業別/地區欄位，公式寫法?
+</div>
+        </div>
+        <div class="tip-card note">📌 最佳問法：當附件包含多個工作表或多個檔案時，Prompt 不應直接要求公式或答案，而應先要求 AI 分析資料結構、欄位關係與關聯鍵，再提供解決方案。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 AI 詢問 — 兩工作表帶入公式（建議問法）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">附檔為Excel檔案，包含兩個工作表：1. 基本資料、2. 訂單明細
+需求：
+希望透過【客戶編號】欄位，將【基本資料】中的產業別與所在地區，
+帶入【訂單明細】工作表的對應欄位。
+請先分析：
+
+- 兩個工作表的資料結構
+- 稅籍編號是否適合作為關聯欄位
+- 建議使用何種方式實現
+
+再提供公式及說明。</div>
+        </div>
+      </div>
+
+      <!-- u4-c -->
+      <div class="sub-block" id="u4-c">
+        <div class="sec-sub-title">數據趨勢解讀與建議</div>
+        <div class="tip-card info">報表做好了，圖表也有了，但要向主管說明「為什麼這個月案件數下降」「哪個單位需要優先支援」，卻不知道怎麼開口——數字看得懂，但背後的意義說不清楚。把數據或圖表說明提供給 AI，描述你觀察到的現象，AI 能協助分析可能原因、提出改善建議、用不同角色角度解讀（局長視角、承辦視角、對外說明版本）。</div>
+        <div class="tip-card warning"><strong>關鍵觀念：</strong>❌ 不要問 AI「這樣合理嗎？」——這是在問感覺，AI 只能附和。<br>✅ 要問 AI「可能的原因是什麼？有什麼風險？」——這才是在問判斷。</div>
+
+        <div class="content-h2">練習1：開徵件數趨勢建議</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 簡易版 — 趨勢異常詢問</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">這是轄區房屋稅 1~6 月申報／複查件數趨勢圖，
+Q2 明顯上升，可能原因為何？如何因應？</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 進階版 — 多角度趨勢分析</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">這是轄區房屋稅 1–6 月的申報／複查件數資料。
+我觀察到 4 月達到高峰後，5–6 月件數明顯下滑。
+請協助我分析可能原因（開徵公告時程、民眾認知、季節性因素），
+並提供 3 個可行的改善方向，讓我向主管簡報使用。
+請用「稅務課主管」角度解讀
+請用「服務台主管」角度解讀
+請用「局長」角度，只給一句話重點</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 趨勢線推估的前提假設檢查</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">這是本局房屋稅 1–6 月的申報／複查件數資料，
+目前呈現前期成長、後期略為下滑的趨勢。
+若以 Excel 趨勢線推估未來件數，
+請你協助我判斷這樣的預估有哪些「前提假設」，
+以及最可能被忽略的 3 個風險因素。</div>
+        </div>
+
+        <div class="content-h2">練習2：找出問題指標</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 簡易版 — 條件格式＋KPI 詢問</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">1. 如何設定條件格式突顯 <90%
+2. 四個課室的服務績效表，協助找出最需改善的項目，並提出建議策略</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 找出最需關注的單位</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">這是一份各課室績效比較表，
+包含目標值、實際值與達成率。
+
+請協助我找出目前最需要關注的單位，
+並用簡單文字說明判斷理由。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 提出具體改善方向</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">這是一份四個課室的績效表，
+包含目標值、實際值與達成率。
+
+請你協助我：
+1. 找出最需要優先改善的指標與單位
+2. 說明判斷依據（不只看達成率）
+3. 提出 2–3 個具體改善方向，讓我能向主管說明</div>
+        </div>
+      </div>
+
+      <!-- u4-d -->
+      <div class="sub-block" id="u4-d">
+        <div class="sec-sub-title">問卷分析</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Notebook — 基礎統計</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">我已上傳一份 Excel 檔案，請先不要分析結果。
+
+請協助我進行「數據分析」，流程如下：
+1. 先說明這份資料可以進行哪些分析（條列即可）
+2. 告訴我每一種分析可以回答什麼行政問題
+3. 等我確認後，再進行實際分析
+
+請暫時不要產出任何結論或圖表。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Gemini — 民眾服務滿意度分析</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">你是一位數據分析師。
+我已提供一份本局民眾服務滿意度問卷調查資料。
+請依這份問卷資料分析：
+- 性別、年齡、洽公事由佔比
+- 民眾對服務方式的主要肯定原因
+- 民眾最希望改善的服務項目</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Gemini — 主管報告摘要</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請依據資料進行分析，並以條列方式輸出結果，分析內容包含：
+1. 受訪者性別、年齡、洽公事由的分布與佔比
+2. 民眾肯定本局服務的主要原因（請整理關鍵因素）
+3. 民眾希望改善的服務項目與集中趨勢
+
+請以「可用於簡報與決策」的角度撰寫，不需過度技術說明。</div>
+        </div>
+      </div>
+
+      <!-- u4-e -->
+      <div class="sub-block" id="u4-e">
+        <div class="sec-sub-title">數據分析與報告結論生成</div>
+        <div class="tip-card info">一份完整的業務分析，不只是數字整理，還要說明「意義是什麼」「建議怎麼做」——這往往是最花時間、也最難下筆的部分。AI 不只是「看表格、唸數字」的工具，給它明確的角色、對象與目的，它能把數字轉成主管看得懂、可以做決策的語言。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Step1：先問 AI 能分析什麼</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">我已上傳一份房屋稅開徵案件資料，請先不要分析結果。
+
+請協助我進行「數據分析」，流程如下：
+1. 先說明這份資料可以進行哪些分析（條列即可）
+2. 告訴我每一種分析可以回答什麼行政問題
+3. 等我確認後，再進行實際分析
+
+請暫時不要產出任何結論或圖表。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Step2：執行分析，產出結論</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請依據上述確認的分析方向，以條列方式輸出結果：
+1. 各課室／各類案件的分布與佔比
+2. 開徵作業中最需要關注的環節與原因
+3. 可行的改善方向（2-3項）
+
+請以「可用於簡報與決策」的角度撰寫，不要使用統計學術語。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Step3：將結論轉為摘要報告</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">根據以上分析結果，請幫我撰寫一份「房屋稅開徵作業月報摘要」：
+- 對象：局長與各課室主管
+- 語氣：專業務實、可直接引用於報告開場
+- 字數：200字以內
+- 需包含：本期重點數據、需關注的問題、下一步建議
+
+請直接產出可使用的文字，不需要額外說明。</div>
+        </div>
+      </div>
+    </div><!-- /u4 -->
+
+
+    <!-- ======== U5: AI＋簡報 ======== -->
+    <div class="content-section" id="u5">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-5)">5</span>
+        AI＋簡報
+      </div>
+      <div class="sec-desc">📌 AI 簡報製作 — 調整下載後簡報</div>
+
+      <!-- u5-a -->
+      <div class="sub-block" id="u5-a">
+        <div class="sec-sub-title">調整下載後簡報</div>
+        <div class="tip-card info"><strong>工作流程：</strong>將 AI 已完成簡報下載後，需要進行調整，分為以下三情境。
+          <ul>
+            <li>情境 1：生成「新的一頁」— 截圖既有頁面當風格參考，生成「新的一頁」</li>
+            <li>情境 2：既有「修改內容」—　針對既有圖片本身「修改內容」</li>
+            <li>情境 3：同主題同邏輯，AI重新設計 — 同主題同邏輯，讓 AI 重新設計成更豐富的資訊圖</li>
+          </ul>
+        </div>
+
+        <div class="content-h2">情境 1：生成「新的一頁」— 截圖既有頁面當風格參考，生成「新的一頁」</div>
+        <div class="tip-card note"><span class="red">關鍵重點：</span> 要 AI「模仿風格」而不是「複製內容」，同時要求避開標題區域（因為那塊等一下要放你自己下的新標題文字，<br>若 AI 把文字也一起畫進圖裡，就沒辦法在 Gamma/PowerPoint 裡另外編輯標題了）</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 截圖既有頁面當風格參考，生成「新的一頁」</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請參考這張附圖的視覺風格（不要複製圖片中的文字或標題內容），
+生成一張新的資訊圖／插畫，主題是：
+新主題：【新主題，例如：房屋稅開徵時程說明】
+
+風格要求：
+- 沿用附圖的色調、畫風、構圖比例
+- 上方約 15-20% 區域請保留乾淨、無主要元素
+  （這塊要另外放標題文字，畫面元素請避開這個區域）
+- 圖片下方 70-80% 主要放置與新主題相關的視覺元素
+
+比例：16:9
+</div>
+        </div>
+
+        <div class="content-h2">情境 2：既有「修改內容」—　針對既有圖片本身「修改內容」</div>
+        <div class="tip-card note"><span class="red">關鍵重點：</span> 這是「圖生圖」（image-to-edit），不是憑空生成新圖，要明確講清楚「哪裡改、哪裡不動」，AI 才不會整張重畫</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 針對既有圖片本身「修改內容」</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據這張附圖進行修改，不要重新生成整張圖：
+
+需要修改的部分：
+- 【具體描述要改的地方，例如：把左邊的圖示換成___】
+- 【把背景色從___改成___】
+
+需要保留不變的部分：
+- 【具體描述不要動的地方，例如：整體構圖、右側文字排版、人物姿勢...】
+</div>
+        </div>
+
+        <div class="content-h2">情境 3：同主題同邏輯，AI重新設計 — 同主題同邏輯，讓 AI 重新設計成更豐富的資訊圖</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 同主題同邏輯，重新設計</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請參考這張附圖的主題與核心邏輯架構
+（【說明原本的架構，例如：三大重點並列呈現】），
+內容不需要照抄附圖現有的文字，
+
+請你依照同樣的主題與邏輯，重新設計並生成一張
+資訊更豐富、版面更完整的資訊圖，用來替換原本這張圖：
+
+要求：
+1. 保留原本的核心架構（【例如：三個並列重點的骨架】）
+2. 針對每個重點，請你補充更具體的說明文字、數據或情境例子
+   （原圖只有關鍵詞，這次希望每個重點都有具體內容支撐）
+3. 版面可以更豐富：可加入圖示、簡單的數據視覺化、
+   主副資訊的層次分級（大標題／小標題／說明文字）
+
+風格要求：
+- 沿用附圖的色調、畫風、構圖比例
+- 上方約 15-20% 區域請保留乾淨、無主要元素
+  （這塊要放回原本簡報的標題文字，畫面元素請避開這個區域）
+- 圖片下方 70-80% 主要放置與新主題相關、更豐富的視覺元素
+
+尺寸／比例：16:9
+</div>
+        </div>
+      </div>
+
+    </div><!-- /u5 -->
+
+
+    <!-- ======== U6: 圖文生成技巧 ======== -->
+    <div class="content-section" id="u6">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-6)">6</span>
+        圖文生成技巧
+      </div>
+      <div class="sec-desc">📌 圖像生成是指利用生成式 AI 工具（如 ChatGPT 圖像生成、Gemini Nano Banana），透過文字描述快速產生插畫、海報、資訊圖、簡報視覺與各類創意圖片。核心概念：AI不只是生圖，而是「自動排版設計」。</div>
+      <div class="content-note">
+        <p><strong>工具特色：</strong></p>
+        <ul>
+          <li>ChatGPT 圖像生成：偏向特色插畫、資訊圖、版面感、創意視覺</li>
+          <li>Gemini Nano Banana：圖文整合、情境生成、快速概念草圖</li>
+        </ul>
+      </div>
+      <table class="data-table">
+        <tr><th>類型</th><th>特點</th><th>適用例如</th></tr>
+        <tr><td>資訊圖像（Infographic）</td><td>強調資訊傳達／圖形、Icon、插圖／結構清楚</td><td>福利申請流程說明／業務成果報告配圖／防災宣導懶人包</td></tr>
+        <tr><td>行銷海報（Poster）</td><td>強調吸睛（視覺）／情境照片、插畫／CTA（行動呼籲）</td><td>民眾活動宣傳／政策推廣公告／節慶敬老活動海報</td></tr>
+      </table>
+      <div class="content-h2">Prompt 撰寫原則</div>
+      <div class="tip-card info">Nano Banana 不是單純生圖，是「圖像＋文字＋排版＝完整設計稿」，<br>關鍵三元素：<strong>文字內容</strong>（講什麼）、<strong>視覺風格</strong>（長什麼樣）、<strong>版面配置</strong>（怎麼排）。<br><strong>CTA = Call To Action（行動呼籲 / 引導行動）：</strong>看完之後，要你做什麼？，即：CTA 就是讓對方下一步要做的事</div>
+      <table class="data-table">
+        <tr><th>元素</th><th>撰寫重點</th></tr>
+        <tr><td>文字內容</td><td>明確指定「文字內容」：主標題、副標題、重點資訊、CTA，避免 AI 亂生成或文字錯誤</td></tr>
+        <tr><td>視覺風格</td><td>明確指定色系／氛圍／品牌感，例如：專業穩重風、莫蘭迪色調</td></tr>
+        <tr><td>版面配置</td><td>明確指定「文字位置」與圖文比例，例如：便當盒排版、左右對比</td></tr>
+      </table>
+
+      <!-- u6-a -->
+      <div class="sub-block" id="u6-a">
+        <div class="sec-sub-title">資訊圖（Infographic）</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 主題：申報前三大準備重點，少跑一趟稅務局！</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請生成一張【橫向 16:9】資訊圖，已包含完整排版與視覺設計。
+
+**主視覺 / 構圖內容描述**：
+畫面右側整齊並列三個圓角的便當盒格子（Bento Box），格子內分別帶有平面幾何向量感（SVG Icon）的「稅籍證明」「繳款書」「委任書用印」插圖。畫面左側由角色「稅務局服務人員」手持平板進行說明，視線自然專注地望向右側的便當盒格子，形成流暢的視覺引導。
+
+**視覺風格**：
+採用「極簡向量插畫風格」風格（精準資訊視覺化）。幾何平整、線條簡潔，適合政府單位報告與數據說明。
+- 專業穩重風（線條俐落，色調沉穩，適合公部門/稅務單位）
+- 莫蘭迪色調（低飽和、灰調柔和，優雅沉穩）
+
+**版面配置**：
+採用「便當盒排版（模組化分割）」與「左右對比」排版方式。
+
+**文字設計細節**：
+- 主標題：申報前三大準備重點，少跑一趟稅務局！
+- 副標題：資料備齊，申報更順暢
+- 重點資訊：
+  1. 稅籍證明：先至財政部電子申報系統下載稅籍資料，核對是否有異動漏報。
+  2. 繳款書：忘記繳款書可線上查詢列印，或至服務台申請補發。
+  3. 委任書用印：委任書用印及身分證明文件請提前準備，避免臨櫃久候。
+- CTA：提早準備，申報零煩惱！
+
+**輸出規格要求**：
+- 比例為橫向 16:9（投影片、簡報背景圖）
+- 整體構圖飽滿，角色姿態與右側圖文版面具有強烈互動感，配色和諧，字體清晰易讀。</div>
+        </div>
+      </div>
+
+      <!-- u6-b -->
+      <div class="sub-block" id="u6-b">
+        <div class="sec-sub-title">海報（Poster）</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 主題：開徵季開跑，及早準備更安心</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請生成一張【海報 4:3】宣導海報，已包含完整排版與視覺設計。
+
+**視覺風格**：
+採用「極簡向量插畫風格」風格（精準資訊視覺化）。幾何平整、線條簡潔，適合政府與稅務單位。
+- 平面插畫上色（柔和漸層，乾淨線條）
+- 專業形象為主（形象專業且穩重，具備親切且具信賴感的調性）
+- 圓潤有機造型（所有卡片與文字背景底襯皆採流暢大圓角設計，避免尖銳稜角）
+
+**簡報母片設定**：
+- AI 自動優化排版（不刻意留白，文字內容與角色比例均勻分佈）。
+
+**文字設計細節**：
+- 主標題：開徵季開跑，及早準備更安心
+- 副標題：專業團隊，全程協助
+- 重點資訊：
+  - 核心提醒：專業團隊全程協助，申報零疏漏。
+  - 特色摘要：更快速的資料查詢／更安心的繳納流程／更完整的權益說明
+- CTA：立即洽詢服務台，搶先掌握開徵先機！
+
+**輸出規格要求**：
+- 比例為海報  4:3（橫式海報、宣傳單）
+- 角色人物與左側圖文排版完全分離不重疊。</div>
+        </div>
+      </div>
+    </div><!-- /u6 -->
+
+
+    <!-- ======== U7: 輕影片製作 ======== -->
+    <div class="content-section" id="u7">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-1)">7</span>
+        輕影片製作
+      </div>
+      <div class="sec-desc">📌 工作情境：教育訓練影片、宣導短片，過去需要拍攝、剪輯、找廠商，時間與預算門檻都高。透過 Veo，將文字描述或簡報內容轉為短影音素材。</div>
+      <div class="tip-card note"><strong>關鍵觀念：</strong>Veo 生成的是「素材與片段」，不是一鍵完成的成品——每個鏡頭都需要人工檢視、決定要不要重新生成。把它當作起點，搭配簡單剪輯，就能快速產出可用的影片。</div>
+
+      <!-- u7-a -->
+      <div class="sub-block" id="u7-a">
+        <div class="sec-sub-title">操作流程</div>
+        <table class="data-table">
+          <tr><th>工具</th><th>用途</th></tr>
+          <tr><td>Veo（Google Flow）</td><td><a href="https://labs.google/fx/zh/tools/flow" target="_blank">https://labs.google/fx/zh/tools/flow ↗</a></td></tr>
+          <tr><td>線上剪輯工具</td><td>Canva</td></tr>
+        </table>
+        <table class="data-table">
+          <tr><th>步驟</th><th>做什麼</th><th>用什麼工具</th></tr>
+          <tr><td>S1 分鏡</td><td>AI 一次產出 2 格分鏡腳本（含共同設定、生圖Prompt、生影Prompt、旁白文案）</td><td>ChatGPT / Gemini</td></tr>
+          <tr><td>S2 生圖</td><td>把生圖 Prompt 貼上，產出每一格的「首張畫面」</td><td>Gemini（Nano Banana）</td></tr>
+          <tr><td>S3 生影</td><td>把 S2 產出的圖＋生影 Prompt 一起貼到 Veo，圖生影片</td><td>Google Flow</td></tr>
+          <tr><td>S4 合成</td><td>旁白轉語音＋兩段影片＋字幕，全部拉進 Canva 時間軸排序輸出</td><td>Canva</td></tr>
+        </table>
+      </div>
+
+      <!-- u7-b -->
+      <div class="sub-block" id="u7-b">
+        <div class="sec-sub-title">分鏡腳本 Prompt</div>
+
+        <div class="content-h2">S1：分鏡 — AI提供影片腳本</div>
+        <div class="tip-card info">📌 主題示範：房屋稅開徵宣導（吉祥物「稅寶」）</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 詢問AI — 產出分鏡腳本</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">你是一位擁有20年資歷、擅長【輕鬆詼諧廣告 / 親切溫馨、政府文宣質感】風格的導演。
+
+請幫我構思一支 20 秒、2 個分鏡的短影片腳本。
+
+【主題】：用吉祥物親切提醒，讓民眾記得準時繳稅
+【主角】：[請填入，或留空由你自由發揮——主角可以是人物、擬人化物件、或寵物]
+
+若主題或主角留空，其餘故事情節、品牌名稱、產品內容請你自由發揮。
+
+整體方向（不論主題主角是否留空，皆須遵守）：
+- 調性活潑、有記憶點、帶點幽默感，避免走溫馨療癒路線
+- 風格：色彩鮮明、節奏明快、電影感
+- 比例：16:9
+
+請將以下三個部分，整合放在「同一個」Markdown 程式碼區塊內輸出（只要一個區塊，不要分開輸出、也不要用表格）：
+
+【第一部分：共用設定（草案）】
+- 整體視覺風格與色調（一句話描述，之後每一格畫面都要維持一致）
+- 主角外觀描述草案（外型、特徵、配件——這只是文字初稿，正式外觀將在生成角色設計圖後定稿）
+- 商品外觀描述草案（若腳本中有具體商品：形狀、顏色、包裝/標籤樣式、品牌LOGO位置；若無商品可省略此項）
+- 場景設定草案（若多個分鏡發生在同一場景：地點、時間、光線氛圍；若每格場景都不同可省略此項）
+
+【第二部分：分鏡1】
+依序列出：秒數、畫面描述、AI生圖Prompt(中文)、AI生影Prompt(中文)、旁白(VO)、主角的口白
+- AI生圖／生影Prompt只需描述「這一格的動作與場景」，不用重複共用設定內容
+
+【第三部分：分鏡2】
+依序列出同樣六個欄位，最後加上這句提示：
+「請依照上方已定案的共用設定（視覺風格、主角外觀、商品外觀、場景設定維持不變，不需要重新輸出這段文字），生成分鏡的畫面。」
+
+注意：
+- 全程使用中文，不要出現英文
+- 共用設定只在第一部分完整輸出一次，第二、三部分不重複輸出</div>
+        </div>
+      </div>
+      <!-- u7-c -->
+      <div class="sub-block" id="u7-c">
+        <div class="sec-sub-title">角色設計圖 Prompt</div>
+
+        <div class="content-h2">S1：角色設計圖 - 主角</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 【角色設計圖】 (人物/擬人化物件/寵物皆適用)</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請把剛才「共用設定」段落中主角的外觀描述,轉換成一段「角色設計圖」的生圖Prompt:
+
+一張角色設計資料圖(character design sheet),,純白色背景,【依共用設定填入畫風描述】。
+
+畫面上方並排呈現同一個主角的4個角度:正面、四十五度側面、正側面、背面,每個角度姿勢自然、比例一致、外觀完全相同(依共用設定的外觀描述),各角度下方標註中文小標籤。
+
+畫面下方並排呈現同一主角的6種表情或狀態特寫(依主角性格挑選最適合的情緒,例如:開心、好奇、驚訝、委屈、興奮、放鬆;若主角是無生命的擬人化物件,可改用「狀態」呈現,例如:發光、震動、冒煙、閃爍),每個特寫下方標註中文標籤,五官或表面特徵維持與全身視圖相同設定。
+
+整體排版工整,如同專業角色設定資料,線條乾淨、無多餘陰影或背景雜訊,方便直接作為後續AI繪圖與動態影片的一致性參考圖使用。</div>
+        </div>
+        <div class="content-h2">S2：角色設計圖 - 商品</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 【商品參考圖】 (如果腳本中有具體商品)</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請把「共用設定」中商品的外觀描述,轉換成一段「商品參考圖」的生圖Prompt:
+
+一張商品規格參考圖(product reference sheet),純白色背景,【依共用設定填入商品外觀描述,包含形狀、顏色、包裝/標籤樣式、品牌LOGO位置與材質質感】。
+
+畫面並排呈現同一件商品的3個角度:正面、四十五度側面、背面(如果商品形狀特殊,可改成最能呈現特徵的角度,例如俯視),每個角度比例一致、包裝上的文字與圖案完全相同,各角度下方標註中文小標籤。
+
+如果商品有開闔或使用狀態的差異(例如瓶蓋打開/合起、內容物展示),請在下方加一組特寫呈現,並標註中文說明。
+
+整體排版工整,如同專業產品型錄用的規格圖,光線均勻、無多餘陰影或背景雜訊,方便直接作為後續AI繪圖與動態影片中商品外觀的一致性參考。</div>
+        </div>
+        <div class="content-h2">S2：角色設計圖 - 場景</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌  Prompt — 【場景設定圖】 (如果多個分鏡共用同一場景)</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請把「共用設定」中提到的場景描述,轉換成一段「場景設定圖」的生圖Prompt:
+
+一張場景參考圖(environment reference sheet),【依共用設定填入場景氛圍描述,包含地點、時間、光線與色調】。
+
+畫面呈現這個場景的2~3個取景角度(例如:整體空間全景、其中一個重點角落特寫、另一個視角),每個角度的空間陳設、色調、光線維持一致,各角度下方標註中文小標籤說明取景位置。
+
+整體排版工整,線條乾淨、無多餘雜訊,方便直接作為後續AI生成分鏡圖與動態影片時,背景與空間感的一致性參考。</div>
+        </div>
+      </div>
+
+    </div><!-- /u7 -->
+
+
+  </div><!-- /content-area -->
+
+
+  <!-- ===== 右欄：工具列 ===== -->
+  <div class="tool-panel">
+
+    <div class="tool-section">
+      <div class="tool-section-title">課程範例下載</div>
+      <a class="tool-btn p1-btn" href="https://drive.google.com/drive/folders/1FZSkwqM_AaZmYx4rYiqjWhdpaGdTsFrN" target="_blank">
+        <span class="tool-name">課程範例下載</span>
+      </a>
+    </div>
+    <div class="tool-section">
+      <div class="tool-section-title">頁面導覽</div>
+      <a class="tool-btn p1-btn" href="index.html?unit=kltb">
+        <span class="tool-icon">←</span>
+        <span class="tool-name">P1 情境練習</span>
+      </a>
+    </div>
+
+    <div class="tool-section">
+      <div class="tool-section-title">AI 工具</div>
+      <a class="tool-btn" href="https://gemini.google.com" target="_blank">
+        <span class="tool-icon">✦</span>
+        <span class="tool-name">Gemini</span>
+        <span class="tool-arrow">↗</span>
+      </a>
+      <a class="tool-btn" href="https://chatgpt.com" target="_blank">
+        <span class="tool-icon">◎</span>
+        <span class="tool-name">ChatGPT</span>
+        <span class="tool-arrow">↗</span>
+      </a>
+      <a class="tool-btn" href="https://notebooklm.google.com" target="_blank">
+        <span class="tool-icon">📓</span>
+        <span class="tool-name">Notebook</span>
+        <span class="tool-arrow">↗</span>
+      </a>
+      <a class="tool-btn" href="https://gamma.app" target="_blank">
+        <span class="tool-icon">⚡</span>
+        <span class="tool-name">Gamma</span>
+        <span class="tool-arrow">↗</span>
+      </a>
+      <a class="tool-btn" href="https://labs.google/fx/zh/tools/flow" target="_blank">
+        <span class="tool-icon">🎬</span>
+        <span class="tool-name">Google Flow（Veo）</span>
+        <span class="tool-arrow">↗</span>
+      </a>
+      <a class="tool-btn" href="https://www.canva.com" target="_blank">
+        <span class="tool-icon">🎨</span>
+        <span class="tool-name">Canva</span>
+        <span class="tool-arrow">↗</span>
+      </a>
+    </div>
+
+    <div class="tool-section">
+      <div class="tool-section-title">課程工具</div>
+      <a class="tool-btn" href="https://zoego99.github.io/vizgo/index.html" target="_blank">
+        <span class="tool-icon">🖼️</span>
+        <span class="tool-name">資訊圖 Prompt 生成器</span>
+        <span class="tool-arrow">↗</span>
+      </a>
+    </div>
+
+  </div><!-- /tool-panel -->
+
+</div><!-- /app-layout -->
+
+<script src="js/p2.js"></script>
+<script>
+  // 進頁面預設顯示第一個單元（避免因未觸發點擊事件導致中間內容區空白）
+  document.addEventListener('DOMContentLoaded', function () {
+    try {
+      if (typeof showSection === 'function') { showSection('u1'); }
+      if (typeof showSub === 'function') { showSub('u1', 'u1-a'); }
+    } catch (e) { /* 若頁面 JS 尚未載入完成則忽略 */ }
+  });
+</script>
+</body>
+</html>
