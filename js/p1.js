@@ -130,6 +130,8 @@ const UNIT_MAP = {
   hztax:  { label: "和眾會計師事務所 Prompt",     href: "course-hztax.html"  },
   ohher:  { label: "長諄國際(服飾) Prompt",     href: "course-ohher.html"  },
   kltb:  { label: "基隆市稅務局｜AI Prompt",     href: "course-kltb.html"  },
+  brave:  { label: "英象公司｜Office + AI Prompt",     href: "course-brave.html"  },
+  brave:  { label: "英象公司｜Office + AI Prompt",     href: "brave.html"  },
   /* 新單位在此新增一行 */
 };
 
