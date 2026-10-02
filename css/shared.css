@@ -30,6 +30,7 @@
   --radius:        8px;
   --font:          'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
   --red:           #9d0303;
+  --blue:           #181167;
   --red-light:     #f7eeee;
 
   /* 料標籤色 */
@@ -48,7 +49,8 @@
   --sec-7:#556b2f;
 }
 
-.red{color: var(--red); font-weight: bold;}
+.red{color: var(--red) !important; font-weight: bold;}
+.blue{color: var(--blue) !important; font-weight: bold;}
 
 /* ===== BASE ===== */
 html, body {

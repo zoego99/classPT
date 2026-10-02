@@ -120,7 +120,7 @@ let activeFw = null;
 
 /* ===== Nav：依 ?unit= 參數切換 P2 連結 ===== */
 const UNIT_MAP = {
-  aviation: { label: "航空警察局 課程 Prompt", href: "course-aviation.html" },
+  aviation: { label: "航空警察局 課程 Prompt", href: "course-aviation.html" ,note:""},
   general:  { label: "通用版 課程 Prompt",     href: "course-general.html"  },
   st:  { label: "巨興醫學科技 課程 Prompt",     href: "course-st.html"  },
   ai202606:  { label: "新莊全方位AI24 課程 Prompt",     href: "course-ai202606.html"  },
@@ -132,8 +132,8 @@ const UNIT_MAP = {
   kltb:  { label: "基隆市稅務局｜AI Prompt",     href: "course-kltb.html"  },
   brave:  { label: "英象公司｜Office + AI Prompt",     href: "course-brave.html"  },
   brave:  { label: "英象公司｜Office + AI Prompt",     href: "brave.html"  },
+  CYC:  { label: "振業化工廠｜Google + AI Prompt",     href: "CYC.html" ,   note:"26/10/1,AI+google,廠辦租賃" },
   tglobal:  { label: "高柏科技｜Office + AI Prompt",     href: "tglobal.html"  },
-  CYC:  { label: "振業化工廠｜Google + AI Prompt",     href: "CYC.html"  },
   /* 新單位在此新增一行 */
 };
 
