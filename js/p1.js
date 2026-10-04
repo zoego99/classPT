@@ -134,6 +134,7 @@ const UNIT_MAP = {
   brave:  { label: "英象公司｜Office + AI Prompt",     href: "brave.html"  },
   CYC:  { label: "振業化工廠｜Google + AI Prompt",     href: "CYC.html" ,   note:"26/10/1,AI+google,廠辦租賃" },
   tglobal:  { label: "高柏科技｜Office + AI Prompt",     href: "tglobal.html"  },
+  LG:  { label: "LG｜Office + AI Prompt",     href: "LG.html"  },
   /* 新單位在此新增一行 */
 };
 
