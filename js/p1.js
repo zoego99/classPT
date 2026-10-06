@@ -135,6 +135,7 @@ const UNIT_MAP = {
   CYC:  { label: "振業化工廠｜Google + AI Prompt",     href: "CYC.html" ,   note:"26/10/1,AI+google,廠辦租賃" },
   tglobal:  { label: "高柏科技｜Office + AI Prompt",     href: "tglobal.html"  },
   LG:  { label: "LG｜Office + AI Prompt",     href: "LG.html"  },
+  moa1:  { label: "農業部｜ODF(Writer) + AI Prompt",     href: "moa1.html"  ,   note:"26/10/6,ODF(Writer)+AI,公部門" },
   /* 新單位在此新增一行 */
 };
 
