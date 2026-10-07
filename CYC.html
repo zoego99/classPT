@@ -72,13 +72,16 @@
       <div class="sec-group">
         <button class="sec-group-btn" id="btn-u4" onclick="showSection('u4')">
           <span class="sec-num" style="background:var(--sec-4)">4</span>
-          AI＋試算表
+          Google 試算表與表單
         </button>
-        <button class="sec-sub-btn" id="btn-u4-a" onclick="showSub('u4','u4-a')">照片／紙本轉 Excel</button>
-        <button class="sec-sub-btn" id="btn-u4-b" onclick="showSub('u4','u4-b')">AI 輔助公式建立</button>
-        <button class="sec-sub-btn" id="btn-u4-c" onclick="showSub('u4','u4-c')">數據趨勢解讀與建議</button>
-        <button class="sec-sub-btn" id="btn-u4-d" onclick="showSub('u4','u4-d')">問卷分析</button>
-        <button class="sec-sub-btn" id="btn-u4-e" onclick="showSub('u4','u4-e')">數據分析與報告結論生成</button>
+        <button class="sec-sub-btn" id="btn-u4-r" onclick="showSub('u4','u4-r')">Google 公式範圍寫法</button>
+        <button class="sec-sub-btn" id="btn-u4-a" onclick="showSub('u4','u4-a')">民國日期公式</button>
+        <button class="sec-sub-btn" id="btn-u4-b" onclick="showSub('u4','u4-b')">多工作表合併</button>
+        <button class="sec-sub-btn" id="btn-u4-c" onclick="showSub('u4','u4-c')">跨檔案 IMPORTRANGE</button>
+        <button class="sec-sub-btn" id="btn-u4-d" onclick="showSub('u4','u4-d')">依條件分流到各工作表</button>
+        <button class="sec-sub-btn" id="btn-u4-e" onclick="showSub('u4','u4-e')">表單建立與發佈</button>
+        <button class="sec-sub-btn" id="btn-u4-f" onclick="showSub('u4','u4-f')">依租賃單位發送問卷</button>
+        <button class="sec-sub-btn" id="btn-u4-g" onclick="showSub('u4','u4-g')">表單回應統計</button>
       </div>
 
       <div class="sec-group">
@@ -108,6 +111,34 @@
         <button class="sec-sub-btn" id="btn-u7-b" onclick="showSub('u7','u7-b')">分鏡腳本</button>
         <button class="sec-sub-btn" id="btn-u7-c" onclick="showSub('u7','u7-c')">角色設計圖</button>
       </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u8" onclick="showSection('u8')">
+          <span class="sec-num" style="background:var(--sec-2)">8</span>
+          公司網站製作
+        </button>
+        <button class="sec-sub-btn" id="btn-u8-a" onclick="showSub('u8','u8-a')">製作流程總覽</button>
+        <button class="sec-sub-btn" id="btn-u8-b" onclick="showSub('u8','u8-b')">S1 生成網站＋輪播</button>
+        <button class="sec-sub-btn" id="btn-u8-c" onclick="showSub('u8','u8-c')">S3 匯出試算表清單</button>
+        <button class="sec-sub-btn" id="btn-u8-d" onclick="showSub('u8','u8-d')">S4 雲端圖庫取得網址</button>
+        <button class="sec-sub-btn" id="btn-u8-e" onclick="showSub('u8','u8-e')">S5 文字與圖片替換</button>
+        <button class="sec-sub-btn" id="btn-u8-f" onclick="showSub('u8','u8-f')">進階：試算表當後台</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u9" onclick="showSection('u9')">
+          <span class="sec-num" style="background:var(--sec-3)">9</span>
+          把工作流程訂成 Skill
+        </button>
+        <button class="sec-sub-btn" id="btn-u9-a" onclick="showSub('u9','u9-a')">學習流程總覽</button>
+        <button class="sec-sub-btn" id="btn-u9-b" onclick="showSub('u9','u9-b')">步驟0 開工準備</button>
+        <button class="sec-sub-btn" id="btn-u9-c" onclick="showSub('u9','u9-c')">步驟1 先完成真實工作</button>
+        <button class="sec-sub-btn" id="btn-u9-d" onclick="showSub('u9','u9-d')">步驟2 回顧對話轉成 Skill</button>
+        <button class="sec-sub-btn" id="btn-u9-e" onclick="showSub('u9','u9-e')">步驟3 建立到 Gemini</button>
+        <button class="sec-sub-btn" id="btn-u9-f" onclick="showSub('u9','u9-f')">步驟4 測試與匯出 Google 文件</button>
+        <button class="sec-sub-btn" id="btn-u9-g" onclick="showSub('u9','u9-g')">重點整理與參考範例</button>
+      </div>
+
 
     </div>
   </div><!-- /sidebar -->
@@ -864,262 +895,555 @@
     </div><!-- /u3 -->
 
 
-    <!-- ======== U4: AI＋試算表 ======== -->
+    <!-- ======== U4: Google 試算表與表單 ======== -->
     <div class="content-section" id="u4">
       <div class="sec-title">
         <span class="sec-badge" style="background:var(--sec-4)">4</span>
-        AI＋試算表
+        Google 試算表與表單
       </div>
-      <div class="sec-desc">📌 工作情境：工作中每天面對大量訂單、庫存、機具維修紀錄與業績報表，卻常常不知道從何分析起。AI 的加入，不是要取代 Excel，而是讓你「用說的，就能得到你要的結果」，不需要記公式、不需要懂統計，只要說清楚你想做什麼，AI 幫你完成。</div>
-      <div class="tip-card note">以下對話詢問以主題詢問，如果出現【主題】字樣，表示為新主題與前後對話無關。</div>
+      <div class="sec-desc">📌 工作情境：公司全面改用 Google 工具，重點不在報表美化，而在「多人共用、即時查閱」。租約資料分散在各廠區的工作表或檔案、公文需要民國日期、承租戶問卷依租賃類型不同而有不同題目，本單元用最基礎的函數，把這些日常作業變成自動更新的流程。</div>
+      <div class="tip-card note"><strong>本單元練習資料「租約明細」欄位：</strong>A 租約編號／B 承租單位／C 廠區／D 類別（廠房、辦公室、倉儲）／E 起租日／F 月租金／G 狀態（已簽約、洽談中、已退租）。第 1 列為標題，資料從第 2 列開始。</div>
+      <div class="content-h2">📁 練習檔案（課程範例下載資料夾）</div>
+      <table class="data-table">
+        <tr><th>檔名</th><th>對應單元</th><th>用途</th></tr>
+        <tr><td>00_民國日期公式練習</td><td>民國日期公式</td><td>西元與民國互轉、租約到期提醒（含解答工作表）</td></tr>
+        <tr><td>01_租約管理_多工作表</td><td>多工作表合併</td><td>A棟、B棟、C棟三張工作表合併成總表</td></tr>
+        <tr><td>02_A檔_租約總明細</td><td>依條件分流</td><td>來源檔：所有廠區的租約</td></tr>
+        <tr><td>03_A棟_租約／04_B棟_租約／05_C棟_租約</td><td>跨檔案 IMPORTRANGE</td><td>來源檔：各廠區自己維護的租約</td></tr>
+        <tr><td>06_租約彙整</td><td>跨檔案 IMPORTRANGE、依條件分流</td><td>彙整檔：在這裡輸入公式</td></tr>
+        <tr><td>07_承租戶滿意度問卷</td><td>依租賃單位發送問卷、表單回應統計</td><td>模擬表單回應 200 份＋承租戶名單 220 家（含解答工作表）</td></tr>
+      </table>
+      <div class="tip-card warning"><strong>⚠️ 開始前：</strong>練習檔上傳到雲端硬碟後，請逐一開啟並點【檔案】→【儲存為 Google 試算表】，之後都使用轉換後的 Google 試算表版本。IMPORTRANGE、表格等功能只能在 Google 試算表格式中使用。</div>
+
+      <!-- u4-r -->
+      <div class="sub-block" id="u4-r">
+        <div class="sec-sub-title">Google 公式範圍寫法</div>
+        <div class="tip-card info"><strong>為什麼要先學範圍寫法？</strong>Google 試算表是多人同時編輯、資料持續增加的「活檔案」。範圍寫對了，新增的租約、新的表單回應會自動被公式納入，不必每次手動修改公式。</div>
+        <div class="content-h2">(1) 範圍的寫法</div>
+        <table class="data-table">
+          <tr><th>寫法</th><th>意思</th><th>使用時機</th></tr>
+          <tr><td>A2:G10</td><td>固定範圍：只抓 A2 到 G10</td><td>資料筆數固定、不會再增加</td></tr>
+          <tr><td>A2:A</td><td>開放式範圍：從 A2 一路到最後一列</td><td>資料會持續增加（表單回應、租約登記）；Google 專屬寫法</td></tr>
+          <tr><td>A1:G</td><td>多欄開放式範圍：A～G 欄，從第 1 列到最後一列</td><td>FILTER、QUERY、IMPORTRANGE 抓整份資料</td></tr>
+          <tr><td>A:A</td><td>整欄</td><td>COUNTIF、AVERAGE 等統計函數；Excel 也能使用</td></tr>
+          <tr><td>總表!A2:G</td><td>其他工作表的範圍：工作表名稱＋驚嘆號</td><td>公式和資料在不同工作表時，每一個範圍都要加</td></tr>
+          <tr><td>'表單回應 1'!B:B</td><td>工作表名稱有空格或特殊符號時，前後加單引號</td><td>表單回應工作表的預設名稱有空格</td></tr>
+          <tr><td>租約_A棟</td><td>表格名稱：只抓表格內的資料（不含標題）</td><td>資料已「轉換為表格」</td></tr>
+          <tr><td>租約_A棟[#ALL]</td><td>表格的全部內容（含標題列）</td><td>合併多個表格時，第一個表格帶入標題</td></tr>
+          <tr><td>租約_A棟[月租金]</td><td>表格中的指定欄位</td><td>=SUM(租約_A棟[月租金])，比 F2:F 更好閱讀</td></tr>
+          <tr><td>"租約明細!A1:G"</td><td>範圍放在雙引號內，變成「文字」</td><td>IMPORTRANGE 的範圍參數要用雙引號</td></tr>
+          <tr><td>$A$2／A$2／$A2</td><td>絕對參照／固定列／固定欄</td><td>公式要複製時，按 F4 切換</td></tr>
+        </table>
+        <div class="content-h2">(2) 公式中的符號</div>
+        <table class="data-table">
+          <tr><th>符號</th><th>意思</th><th>範例</th></tr>
+          <tr><td>=  &lt;&gt;</td><td>等於／不等於</td><td>G2:G="已簽約"、G2:G&lt;&gt;"已退租"</td></tr>
+          <tr><td>&gt;  &gt;=  &lt;  &lt;=</td><td>大於／大於等於／小於／小於等於</td><td>D:D, "&gt;=4"（放在 COUNTIF 條件中要加雙引號）</td></tr>
+          <tr><td>"文字"</td><td>文字一定要用雙引號包起來</td><td>"A棟"、"已簽約"</td></tr>
+          <tr><td>&amp;</td><td>把兩段內容接在一起</td><td>"民國"&amp;(YEAR(A2)-1911)</td></tr>
+          <tr><td>*</td><td>萬用字元：代表任意文字</td><td>"*空調*"＝內容中有出現「空調」</td></tr>
+          <tr><td>{ ; }</td><td>大括號＋分號：由上往下疊加（欄數要相同）</td><td>={ 標題列 ; FILTER(…) }</td></tr>
+          <tr><td>{ , }</td><td>大括號＋逗號：由左往右並排（列數要相同）</td><td>={ 序號欄 , 明細 }</td></tr>
+          <tr><td>,</td><td>函數中分隔每一個參數</td><td>COUNTIF(範圍, 條件)</td></tr>
+        </table>
+        <div class="content-h2">(3) 資料筆數與範圍寫法建議</div>
+        <table class="data-table">
+          <tr><th>資料筆數</th><th>建議範圍寫法</th><th>說明</th></tr>
+          <tr><td>1～5,000</td><td>A2:A</td><td>效能影響極小，新增資料會自動納入</td></tr>
+          <tr><td>5,000～20,000</td><td>A2:A20000</td><td>給一個合理的上限，或刪除工作表下方多餘的空白列</td></tr>
+          <tr><td>20,000 以上</td><td>表格名稱／精確範圍</td><td>強烈建議將資料轉換為「表格」</td></tr>
+        </table>
+        <div class="tip-card warning"><strong>⚠️ 開放式範圍的兩個注意事項：</strong>
+          <ul>
+            <li>A2:A 會掃描到工作表最下方的空白列，空白列太多時，FILTER、QUERY 會變慢</li>
+            <li>A2:A 是 Google 試算表專屬寫法，Excel 不支援。檔案要下載成 Excel 給其他單位使用時，請改成 A:A 或 A2:A1000 這類固定範圍</li>
+          </ul>
+        </div>
+        <div class="tip-card note"><strong>不想手打範圍？</strong>輸入公式時，直接用滑鼠到資料所在的工作表框選，試算表會自動帶入「工作表名稱!」，可以避免漏寫工作表名稱造成的錯誤。</div>
+      </div>
 
       <!-- u4-a -->
       <div class="sub-block" id="u4-a">
-        <div class="sec-sub-title">照片／紙本資料轉 Excel</div>
-        <div class="tip-card info">操作習慣：整理完成後，利用【Ctrl + C】複製 AI 回覆的表格，再到 Excel 按【Ctrl + V】貼上</div>
+        <div class="sec-sub-title">民國日期公式</div>
+        <div class="tip-card note"><strong>📁 開啟檔案：</strong>00_民國日期公式練習<br>依序完成「練習1_西元轉民國」→「練習2_民國轉西元」→「練習3_租約到期」，黃色儲存格輸入公式；綠色分頁「解答_」可對照答案。</div>
+        <div class="tip-card info"><strong>核心觀念：日期要「一欄計算、一欄顯示」。</strong><br>試算表裡的日期其實是一個數字，所以能加減、能算天數。民國日期是用公式「組出來的文字」，看起來正確，但不能拿來計算。因此建議保留一欄西元日期負責計算，另一欄用公式顯示民國日期給公文與報表使用。</div>
+
+        <div class="content-h2">(1) 會用到的基礎函數</div>
         <table class="data-table">
-          <tr><th>情境</th><th>原始格式</th><th>整理後欄位</th></tr>
-          <tr><td>機具現場維修回報</td><td>技師手寫維修單拍照</td><td>日期／客戶名稱／機台型號／故障情況／處理方式</td></tr>
-          <tr><td>客戶紙本訂單</td><td>傳真或紙本訂購單拍照</td><td>日期／客戶名稱／品項／數量／交貨日期</td></tr>
-          <tr><td>經銷商詢價彙整</td><td>通訊軟體文字截圖</td><td>經銷商名稱／詢價品項／數量／優先程度</td></tr>
+          <tr><th>函數</th><th>作用</th><th>範例（A2 為 2026/10/08）</th></tr>
+          <tr><td>YEAR / MONTH / DAY</td><td>取出日期的年、月、日</td><td>YEAR(A2) → 2026</td></tr>
+          <tr><td>TEXT</td><td>把數字或日期轉成指定格式的文字</td><td>TEXT(A2,"mm/dd") → 10/08</td></tr>
+          <tr><td>&amp;</td><td>把兩段內容接在一起</td><td>"民國"&amp;115 → 民國115</td></tr>
+          <tr><td>LEFT / MID / RIGHT</td><td>從文字的左邊、中間、右邊取出指定字數</td><td>RIGHT("115/10/08",2) → 08</td></tr>
+          <tr><td>FIND</td><td>找出某個字元在第幾個位置</td><td>FIND("/","115/10/08") → 4</td></tr>
+          <tr><td>DATE</td><td>用年、月、日三個數字組成真正的日期</td><td>DATE(2026,10,8) → 2026/10/08</td></tr>
+          <tr><td>EDATE</td><td>日期往後（或往前）推算幾個月</td><td>EDATE(A2,36) → 2029/10/08</td></tr>
+          <tr><td>TODAY</td><td>今天的日期，每天開啟檔案自動更新</td><td>=TODAY()-A2 → 距今天數</td></tr>
+          <tr><td>IF</td><td>依條件判斷，顯示不同結果：IF(條件, 成立時, 不成立時)</td><td>IF(K2&lt;=90,"請洽續約","")</td></tr>
         </table>
-        <div class="tip-card note"><strong>❌ 常見問法（不佳）：</strong>「請把這張圖片轉成 Excel」<br>這樣問，AI 不知道你要什麼欄位、不知道格式、不知道用途<br><strong>✅ 好 Prompt ＝ 角色 ＋ 任務 ＋ 輸出格式</strong></div>
+        <table class="data-table">
+          <tr><th>TEXT 格式代碼</th><th>顯示</th><th>TEXT 格式代碼</th><th>顯示</th></tr>
+          <tr><td>yyyy</td><td>2026</td><td>m／mm</td><td>1～12／01～12</td></tr>
+          <tr><td>yy</td><td>26</td><td>d／dd</td><td>1～31／01～31</td></tr>
+        </table>
+
+        <div class="content-h2">(2) 西元 → 民國（A2 是西元日期）</div>
+        <div class="tip-card note"><strong>公式邏輯：</strong>民國年 ＝ 西元年 − 1911，再用 &amp; 把「年」和「月日」接起來。<br>⚠️ 減法要用括號包起來，例如 (YEAR(A2)-1911)，公式比較好讀也不容易出錯。</div>
         <div class="prompt-card">
-          <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 好 Prompt — 照片轉 Excel（機具維修回報單）</span>
-            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
-          </div>
-          <div class="prompt-code">你是一位行政助理，請協助我整理圖片中的工程／維修回報單內容。
-請根據圖片資訊，整理成「可直接貼到 Excel 的表格格式」。
-- 欄位請包含：
-日期、工地地點、設備名稱、設備編號、故障情況、損壞程度、處理方式、預估費用、負責人、處理狀態、備註
-- 預估費用：例如顯示為 6000
-- 請用「表格」方式輸出，不要加入多餘說明文字。
-- 若圖片中某欄位無資料，請填寫「無」。</div>
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — 只要民國年（115）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=YEAR(A2)-1911</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — 115/10/08</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=(YEAR(A2)-1911)&amp;"/"&amp;TEXT(A2,"mm/dd")</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — 民國115年10月8日</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">="民國"&amp;(YEAR(A2)-1911)&amp;"年"&amp;MONTH(A2)&amp;"月"&amp;DAY(A2)&amp;"日"</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — 1151008（七碼，公文、系統匯入常用）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=(YEAR(A2)-1911)&amp;TEXT(A2,"mmdd")</div>
+        </div>
+
+        <div class="content-h2">(3) 民國 → 西元（承租戶填的民國日期，轉回來才能計算）</div>
+        <div class="tip-card warning"><strong>⚠️ 輸入前先設定「純文字」：</strong>直接輸入 115/10/08，試算表可能把它當成「西元 115 年」的日期，公式就會出錯。請先選取該欄 →【格式】→【數字】→【純文字】，再輸入或貼上資料。</div>
+        <div class="tip-card note"><strong>以 115/10/08 為例，拆解步驟：</strong>
+          <ul>
+            <li>S1：FIND("/",A2) 找到第一個斜線在第 4 個字 → 年份是左邊 4−1＝3 個字</li>
+            <li>S2：LEFT(A2, 3) 取出 115，加 1911 得到 2026</li>
+            <li>S3：MID(A2, 5, 2) 從第 5 個字取 2 個字 → 10（月）</li>
+            <li>S4：RIGHT(A2, 2) 取最右邊 2 個字 → 08（日）</li>
+            <li>S5：DATE(年, 月, 日) 組成真正的日期</li>
+          </ul>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — 115/10/08 轉成西元日期（月、日須為兩位數）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=DATE(LEFT(A2,FIND("/",A2)-1)+1911, MID(A2,FIND("/",A2)+1,2), RIGHT(A2,2))</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — 1151008（七碼）轉成西元日期</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=DATE(LEFT(A2,3)+1911, MID(A2,4,2), RIGHT(A2,2))</div>
+        </div>
+        <div class="tip-card note">七碼公式假設民國年是 3 位數。民國 99 年以前的資料只有 6 碼（例如 991231），需另外處理；建議請填寫者統一寫成 0991231。</div>
+
+        <div class="content-h2">(4) 租賃實務：到期日與續約提醒</div>
+        <table class="data-table">
+          <tr><th>欄位</th><th>公式（以第 2 列為例）</th><th>說明</th></tr>
+          <tr><td>H 租期（月）</td><td>手動輸入，例如 36</td><td>3 年租約</td></tr>
+          <tr><td>I 到期日</td><td>=EDATE(E2,H2)-1</td><td>EDATE：日期往後推幾個月；減 1 天才是到期日</td></tr>
+          <tr><td>J 到期日（民國）</td><td>=(YEAR(I2)-1911)&amp;"/"&amp;TEXT(I2,"mm/dd")</td><td>給公文、通知函使用</td></tr>
+          <tr><td>K 剩餘天數</td><td>=I2-TODAY()</td><td>日期相減就是天數，每天自動更新</td></tr>
+          <tr><td>L 提醒</td><td>=IF(K2&lt;=90,"請洽續約","")</td><td>到期前 90 天內顯示提醒</td></tr>
+        </table>
+        <div class="tip-card info"><strong>搭配條件式格式：</strong>選取 A2:L →【格式】→【條件式格式設定】→ 格式規則選「自訂公式」，輸入 <code>=$K2&lt;=90</code>，填色設為淺紅色，即將到期的租約整列就會自動標紅。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 看不懂公式時，請 AI 逐步解說</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">我是試算表函數初學者，請用「一步一步拆解」的方式，說明下面這個 Google 試算表公式在做什麼：
+=DATE(LEFT(A2,FIND("/",A2)-1)+1911, MID(A2,FIND("/",A2)+1,2), RIGHT(A2,2))
+
+假設 A2 是「115/10/08」，請：
+1. 由內而外說明每一個函數算出的結果
+2. 只使用基礎函數說明，不要改用 LET 等新函數
+3. 最後說明哪些情況這個公式會出錯</div>
         </div>
       </div>
 
       <!-- u4-b -->
       <div class="sub-block" id="u4-b">
-        <div class="sec-sub-title">AI 輔助公式建立</div>
-        <div class="tip-card info">Excel 公式會用的就那幾個，遇到跨表查詢、條件判斷、時間計算，常常卡關，要嘛上網查半天，要嘛就放棄改用人工處理。不需要記函數語法，只要用白話文描述你想要的結果，AI 能直接給出對應的公式，並說明每個部分的邏輯。</div>
+        <div class="sec-sub-title">同一檔案：多工作表合併</div>
+        <div class="tip-card note"><strong>📁 開啟檔案：</strong>01_租約管理_多工作表<br>資料在「A棟」「B棟」「C棟」工作表；公式輸入在「總表」與「已簽約」工作表的 A1。</div>
+        <div class="tip-card info"><strong>工作情境：</strong>同一個「租約管理」檔案中，A棟、B棟、C棟各一張工作表，由各棟管理員維護。主管要看全部租約時，不必再複製貼上，用一個公式就能自動合併成「總表」，任何一棟新增資料，總表都會即時更新。</div>
+        <div class="content-h2">會用到的函數</div>
         <table class="data-table">
-          <tr><th>情境</th><th>說明</th></tr>
-          <tr><td>我知道要算什麼，但不知道怎麼寫</td><td>描述需求，AI 直接給公式</td></tr>
-          <tr><td>公式有錯，但不知道錯在哪</td><td>把錯誤公式丟給 AI，請它找問題</td></tr>
-          <tr><td>想確認公式邏輯是否正確</td><td>上傳 Excel 檔，請 AI 驗證（注意客戶與報價資料安全）</td></tr>
+          <tr><th>函數</th><th>語法</th><th>說明</th><th>本節範例</th></tr>
+          <tr><td>{ ; }</td><td>={ 範圍1 ; 範圍2 ; … }</td><td>分號由上往下疊加，各範圍欄數要相同</td><td>={ 租約_A棟[#ALL] ; 租約_B棟 ; 租約_C棟 }</td></tr>
+          <tr><td>VSTACK</td><td>=VSTACK( 範圍1 , 範圍2 , … )</td><td>由上往下合併，效果同 { ; }，可讀性較高</td><td>=VSTACK( 租約_A棟[#ALL] , 租約_B棟 , 租約_C棟 )</td></tr>
+          <tr><td>FILTER</td><td>=FILTER( 範圍 , 條件1 , [條件2] , … )</td><td>只顯示符合條件的資料列；結果會自動往下展開</td><td>=FILTER( 總表!A2:G , 總表!G2:G="已簽約" )</td></tr>
+          <tr><td>IFNA</td><td>=IFNA( 公式 , 錯誤時顯示的值 )</td><td>公式結果為 #N/A 時改顯示指定內容</td><td>=IFNA( FILTER(…) , "查無資料" )</td></tr>
+          <tr><td>QUERY</td><td>=QUERY( 資料範圍 , "查詢指令" , 標題列數 )</td><td>用類似資料庫的指令篩選、排序、彙整；標題列數通常填 1</td><td>=QUERY( 總表!A1:G , "select * where G='已簽約'" , 1 )</td></tr>
         </table>
-        <div class="tip-card note"><strong>關鍵觀念：</strong>說清楚「哪一張表是來源、哪一張是目的、用哪個欄位比對」，AI 給的公式才會準確。
-          <ul>
-            <li>詢問 AI 時描述表格的內容，包含表格的資料範圍，與我們目標要填寫的位置。</li>
-            <li>提供三筆記錄給 AI 參考，進行提問參考。</li>
-            <li>需要生成 Excel 檔，在詢問時直接寫指令。</li>
-            <li>利用畫面截圖進行 AI 詢問。</li>
+        <div class="content-h2">FILTER：Google 與 Excel 的差異</div>
+        <table class="data-table">
+          <tr><th>特性</th><th>Google 試算表</th><th>Excel</th></tr>
+          <tr><td>第三個參數</td><td>放「第二個條件」</td><td>放「查無資料時顯示的文字」</td></tr>
+          <tr><td>多條件「且」</td><td>條件之間用逗號：FILTER(A:C, A:A="北區", B:B="已完工")</td><td>條件之間用 *：FILTER(A:C, (A:A="北區")*(B:B="已完工"))</td></tr>
+          <tr><td>多條件「或」</td><td colspan="2">兩者相同，條件之間用 ＋：FILTER(A:C, (A:A="北區")+(A:A="中區"))</td></tr>
+          <tr><td>查無資料時</td><td>出現 #N/A，需外包 IFNA</td><td>直接顯示第三個參數的文字</td></tr>
+        </table>
+        <div class="tip-card note"><strong>QUERY 指令順序不能對調：</strong>select（選欄位）→ where（條件）→ group by（群組）→ pivot（樞紐）→ order by（排序）→ limit（筆數）→ label（改標題）→ format（格式）。<br>select * 代表全部欄位；欄位字母必須大寫；文字條件用單引號，例如 where G='已簽約'。</div>
+        <div class="content-h2">(1) 先把各棟資料建立成「表格」</div>
+        <div class="content-note">
+          <p>選取資料範圍 →【格式】→【轉換為表格】，並為表格命名，例如：<strong>租約_A棟、租約_B棟、租約_C棟</strong>。</p>
+          <ul style="margin-left:20px;">
+            <li>表格只會抓「有資料的範圍」，不會把下方空白列一起合併進來</li>
+            <li>命名建議：不要空格（用底線 _ 代替）、不要數字開頭、名稱簡短</li>
+            <li>三個表格的「欄位順序」必須完全一致，否則合併後欄位會錯位</li>
           </ul>
         </div>
-
-        <div class="content-h2">(1) 善用截圖</div>
+        <div class="content-h2">(2) 合併公式</div>
+        <div class="tip-card note"><strong>大括號 { } 的方向符號：</strong>分號 <strong>;</strong> ＝ 由上往下疊加（欄數要一致）；逗號 <strong>,</strong> ＝ 由左往右並排（列數要一致）。<br><strong>[#ALL]</strong> 表示「含標題列」，只需要放在第一個表格，後面的表格只取資料，總表才不會重複出現標題。</div>
         <div class="prompt-card">
-          <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 AI 詢問 — 判斷資料是否填寫完整</span>
-            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
-          </div>
-          <div class="prompt-code">如附圖，整筆資料中A~D欄若為空白時，在E欄顯示【有資料未填寫】，公式寫法，並簡單說明公式</div>
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 方法1 — 大括號 { ; } 由上往下合併</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">={ 租約_A棟[#ALL] ; 租約_B棟 ; 租約_C棟 }</div>
         </div>
-
-        <div class="content-h2">(2) 善用表格設定</div>
-        <div class="content-h2">(3) 提供 Excel 檔案</div>
-        <div class="tip-card info">📌 AI 最大的問題通常不是公式不會寫，而是：<strong>不知道資料關係</strong>。當附件包含多個工作表或多個檔案時，提供 Excel 檔案比提供截圖更重要。</div>
-        <div class="tip-card warning">⚠️ <strong>上傳整份檔案前，先想一下：這份資料如果外洩，會不會造成客戶或公司的困擾？</strong>必要時先拿掉客戶名稱、聯絡人、電話、報價金額、配方等敏感欄位，改用代號即可，再上傳給 AI 工具。</div>
         <div class="prompt-card">
-          <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 AI 詢問 — 兩工作表帶入公式（不佳問法）</span>
-            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
-          </div>
-          <div class="prompt-code">附檔，Excel檔案，包含兩個工作表，將工作表【基本資料】，
-透過【客戶編號】欄位代入至工作表【訂單明細】的產業別/地區欄位，公式寫法?
-</div>
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 方法2 — VSTACK 函數（效果相同，可讀性較高）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=VSTACK( 租約_A棟[#ALL] , 租約_B棟 , 租約_C棟 )</div>
         </div>
-        <div class="tip-card note">📌 最佳問法：當附件包含多個工作表或多個檔案時，Prompt 不應直接要求公式或答案，而應先要求 AI 分析資料結構、欄位關係與關聯鍵，再提供解決方案。</div>
+        <div class="content-h2">(3) 合併後，依條件整理明細</div>
+        <div class="tip-card warning"><strong>⚠️ 公式寫在「已簽約」工作表，資料在「總表」：</strong>每一個範圍前面都要加上「總表!」。只有標題列加、FILTER 裡的範圍沒加，公式會變成篩選自己，出現循環參照錯誤。</div>
         <div class="prompt-card">
-          <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 AI 詢問 — 兩工作表帶入公式（建議問法）</span>
-            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
-          </div>
-          <div class="prompt-code">附檔為Excel檔案，包含兩個工作表：1. 基本資料、2. 訂單明細
-需求：
-希望透過【客戶編號】欄位，將【基本資料】中的產業別與所在地區，
-帶入【訂單明細】工作表的對應欄位。
-請先分析：
-
-- 兩個工作表的資料結構
-- 稅籍編號是否適合作為關聯欄位
-- 建議使用何種方式實現
-
-再提供公式及說明。</div>
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 方法1 — 標題＋FILTER：只看「已簽約」</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">={ 總表!A1:G1 ; FILTER( 總表!A2:G , 總表!G2:G="已簽約" ) }</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 方法2 — QUERY：只看「已簽約」</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=QUERY( 總表!A1:G , "select * where G='已簽約'" , 1 )</div>
+        </div>
+        <table class="data-table">
+          <tr><th>需求</th><th>FILTER 寫法</th></tr>
+          <tr><td>同時符合（A棟 且 已簽約）</td><td>=FILTER(總表!A2:G, 總表!C2:C="A棟", 總表!G2:G="已簽約")　條件用逗號隔開</td></tr>
+          <tr><td>符合其一（A棟 或 B棟）</td><td>=FILTER(總表!A2:G, (總表!C2:C="A棟")+(總表!C2:C="B棟"))　條件用 ＋ 相加</td></tr>
+          <tr><td>查無資料時顯示文字</td><td>=IFNA(FILTER(總表!A2:G, 總表!C2:C="D棟"), "查無資料")</td></tr>
+        </table>
+        <div class="tip-card warning"><strong>⚠️ 常見錯誤：</strong>
+          <ul>
+            <li><strong>#REF!</strong>：公式結果要往下展開，但下方或右方已經有人手動輸入資料擋住了 → 刪除擋住的內容</li>
+            <li><strong>#VALUE!</strong>：用 { ; } 上下合併，但各表欄數不一致 → 檢查欄位是否相同</li>
+            <li>QUERY 中的欄位字母必須大寫（where G=，不能寫 where g=）</li>
+          </ul>
         </div>
       </div>
 
       <!-- u4-c -->
       <div class="sub-block" id="u4-c">
-        <div class="sec-sub-title">數據趨勢解讀與建議</div>
-        <div class="tip-card info">報表做好了，圖表也有了，但要向主管說明「為什麼這個月訂單下降」「哪個業務區域需要優先支援」，卻不知道怎麼開口——數字看得懂，但背後的意義說不清楚。把數據或圖表說明提供給 AI，描述你觀察到的現象，AI 能協助分析可能原因、提出改善建議、用不同角色角度解讀（總經理視角、業務視角、對客戶說明版本）。</div>
-        <div class="tip-card warning"><strong>關鍵觀念：</strong>❌ 不要問 AI「這樣合理嗎？」——這是在問感覺，AI 只能附和。<br>✅ 要問 AI「可能的原因是什麼？有什麼風險？」——這才是在問判斷。</div>
-
-        <div class="content-h2">練習1：產品線銷售趨勢建議</div>
+        <div class="sec-sub-title">跨檔案：IMPORTRANGE 匯入</div>
+        <div class="tip-card note"><strong>📁 開啟檔案：</strong><br>來源檔（只複製網址，不需修改）：03_A棟_租約、04_B棟_租約、05_C棟_租約<br>彙整檔（在這裡輸入公式）：06_租約彙整 →「來源清單」貼上三個來源檔網址，「跨檔合併」A1 輸入公式</div>
+        <div class="tip-card info"><strong>工作情境：</strong>各廠區的管理員各自維護自己的租約檔案，總公司另有一個「租約彙整」檔案。過去每月請各廠區寄檔案再人工合併，常發生版本不一致。改用 IMPORTRANGE 後，彙整檔會直接讀取各廠區檔案的最新內容。</div>
+        <div class="content-note">
+          <p><strong>函數說明：</strong>=IMPORTRANGE( 試算表網址 , "工作表名稱!範圍" )</p>
+          <ul style="margin-left:20px;">
+            <li>試算表網址：開啟來源檔，複製瀏覽器上方的完整網址</li>
+            <li>範圍：要加上雙引號，例如 "租約明細!A1:G"</li>
+            <li>第一次使用時，儲存格會顯示 #REF!，滑鼠移上去點【允許存取】即可</li>
+          </ul>
+        </div>
+        <div class="content-h2">會用到的函數</div>
+        <table class="data-table">
+          <tr><th>函數</th><th>語法</th><th>說明</th><th>本節範例</th></tr>
+          <tr><td>IMPORTRANGE</td><td>=IMPORTRANGE( 試算表網址 , "工作表!範圍" )</td><td>從另一個 Google 試算表匯入資料；範圍要加雙引號；第一次需【允許存取】</td><td>=IMPORTRANGE( 來源清單!B2 , 來源清單!C2 )</td></tr>
+          <tr><td>VSTACK</td><td>=VSTACK( 範圍1 , 範圍2 , … )</td><td>把多個檔案匯入的資料由上往下合併</td><td>=VSTACK( IMPORTRANGE(…) , IMPORTRANGE(…) )</td></tr>
+          <tr><td>QUERY</td><td>=QUERY( 資料範圍 , "查詢指令" , 標題列數 )</td><td>來源是 VSTACK、IMPORTRANGE、{ } 時，欄位要寫 Col1、Col2…</td><td>"select * where Col1 is not null"</td></tr>
+          <tr><td>is not null</td><td>QUERY 的條件寫法</td><td>「不是空白」的資料才顯示，用來去除合併後的空白列</td><td>where Col1 is not null</td></tr>
+        </table>
+        <div class="content-h2">(1) 匯入一個檔案</div>
         <div class="prompt-card">
-          <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 簡易版 — 趨勢異常詢問</span>
-            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
-          </div>
-          <div class="prompt-code">這是公司 1~6 月各產品線（地板保養劑、工業用蠟、清潔機具）訂單件數趨勢圖，
-Q2 明顯上升，可能原因為何？如何因應？</div>
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — 匯入 A 廠區檔案的租約明細</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=IMPORTRANGE("https://docs.google.com/spreadsheets/d/A廠區檔案ID/edit", "租約明細!A1:G")</div>
+        </div>
+        <div class="content-h2">(2) 匯入多個檔案並合併（建議做法：建立「來源清單」）</div>
+        <div class="tip-card note"><strong>為什麼要建立來源清單？</strong>網址很長，直接寫在公式裡難以閱讀，也不好維護。把網址和範圍放在儲存格中，公式只要參照儲存格；日後某個廠區換檔案，只要改清單即可。</div>
+        <table class="data-table">
+          <tr><th></th><th>A 廠區</th><th>B 試算表網址</th><th>C 匯入範圍</th></tr>
+          <tr><td>2</td><td>A棟</td><td>https://docs.google.com/spreadsheets/d/…</td><td>租約明細!A1:G</td></tr>
+          <tr><td>3</td><td>B棟</td><td>https://docs.google.com/spreadsheets/d/…</td><td>租約明細!A2:G</td></tr>
+          <tr><td>4</td><td>C棟</td><td>https://docs.google.com/spreadsheets/d/…</td><td>租約明細!A2:G</td></tr>
+        </table>
+        <div class="tip-card note">第一個檔案從 A1 開始（含標題），其餘從 A2 開始（不含標題），合併後標題只會出現一次。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — VSTACK 合併多個檔案</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=VSTACK(
+  IMPORTRANGE(來源清單!B2, 來源清單!C2),
+  IMPORTRANGE(來源清單!B3, 來源清單!C3),
+  IMPORTRANGE(來源清單!B4, 來源清單!C4)
+)</div>
         </div>
         <div class="prompt-card">
-          <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 進階版 — 多角度趨勢分析</span>
-            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
-          </div>
-          <div class="prompt-code">這是公司 1–6 月各產品線的訂單件數資料。
-我觀察到 4 月達到高峰後，5–6 月件數明顯下滑。
-請協助我分析可能原因（客戶採購週期、經銷商備貨節奏、季節性因素），
-並提供 3 個可行的改善方向，讓我向主管簡報使用。
-請用「業務主管」角度解讀
-請用「維修服務主管」角度解讀
-請用「總經理」角度，只給一句話重點</div>
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — 合併後去除中間的空白列</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=QUERY( VSTACK(
+  IMPORTRANGE(來源清單!B2, 來源清單!C2),
+  IMPORTRANGE(來源清單!B3, 來源清單!C3),
+  IMPORTRANGE(來源清單!B4, 來源清單!C4)
+), "select * where Col1 is not null", 1 )</div>
         </div>
-        <div class="prompt-card">
-          <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 趨勢線推估的前提假設檢查</span>
-            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
-          </div>
-          <div class="prompt-code">這是公司 1–6 月各產品線的訂單件數資料，
-目前呈現前期成長、後期略為下滑的趨勢。
-若以 Excel 趨勢線推估下半年訂單量，
-請你協助我判斷這樣的預估有哪些「前提假設」，
-以及最可能被忽略的 3 個風險因素（例如：原料價格、匯率、海外經銷商備貨）。</div>
-        </div>
-
-        <div class="content-h2">練習2：找出問題指標</div>
-        <div class="prompt-card">
-          <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 簡易版 — 條件格式＋KPI 詢問</span>
-            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
-          </div>
-          <div class="prompt-code">1. 如何設定條件格式突顯 <90%
-2. 四個業務區域（北區、中區、南區、海外）的業績達成表，協助找出最需改善的項目，並提出建議策略</div>
-        </div>
-        <div class="prompt-card">
-          <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 找出最需關注的區域</span>
-            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
-          </div>
-          <div class="prompt-code">這是一份各業務區域的績效比較表，
-包含目標值、實際值與達成率。
-
-請協助我找出目前最需要關注的區域，
-並用簡單文字說明判斷理由。</div>
-        </div>
-        <div class="prompt-card">
-          <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 提出具體改善方向</span>
-            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
-          </div>
-          <div class="prompt-code">這是一份四個業務區域的績效表，
-包含營業額、新客戶數、回購率、報修結案率的目標值、實際值與達成率。
-
-請你協助我：
-1. 找出最需要優先改善的指標與區域
-2. 說明判斷依據（不只看達成率）
-3. 提出 2–3 個具體改善方向，讓我能向主管說明</div>
+        <div class="tip-card note"><strong>為什麼這裡寫 Col1，不寫 A？</strong>QUERY 的資料來源如果是「實體範圍」（例如 A1:G），欄位用英文字母 A、B、C；如果來源是 VSTACK、{ }、IMPORTRANGE 組出來的「虛擬資料」，就必須改用 Col1、Col2、Col3（第幾欄）。<br>「範圍寫到 G 欄結尾」會把下方空白列一起匯入，所以需要用 Col1 is not null 排除；若來源檔已建立表格，也可以把範圍改成表格名稱。</div>
+        <div class="tip-card warning"><strong>⚠️ 使用 IMPORTRANGE 前要知道：</strong>
+          <ul>
+            <li>建立公式的人必須對來源檔「至少有檢視權限」</li>
+            <li>匯入的資料是「唯讀」的，要修改請回到來源檔改</li>
+            <li>來源檔更新後，彙整檔可能需要幾秒到幾分鐘才同步</li>
+            <li>同一個檔案中 IMPORTRANGE 寫太多個，檔案會變慢 → 建議只匯入一次，再用 FILTER 分流（見下一節）</li>
+          </ul>
         </div>
       </div>
 
       <!-- u4-d -->
       <div class="sub-block" id="u4-d">
-        <div class="sec-sub-title">問卷分析</div>
+        <div class="sec-sub-title">跨檔案：依條件分流到各工作表</div>
+        <div class="tip-card note"><strong>📁 開啟檔案：</strong><br>來源檔（只複製網址，不需修改）：02_A檔_租約總明細<br>彙整檔（在這裡輸入公式）：06_租約彙整 →「匯入」工作表 A1 匯入資料，「A棟」「B棟」「C棟」工作表 A1 輸入 FILTER 公式</div>
+        <div class="tip-card info"><strong>工作情境：</strong>A 檔是公司的「租約總明細」，所有租約都登記在這裡。各廠區主管只想看自己廠區的資料，希望總明細一更新，各廠區的工作表就自動出現新資料，不必再人工逐筆複製。</div>
+        <div class="content-h2">會用到的函數</div>
+        <table class="data-table">
+          <tr><th>函數</th><th>語法</th><th>說明</th><th>本節範例</th></tr>
+          <tr><td>IMPORTRANGE</td><td>=IMPORTRANGE( 試算表網址 , "工作表!範圍" )</td><td>把 A 檔的總明細整份匯入「匯入」工作表</td><td>=IMPORTRANGE( "A檔網址" , "租約明細!A1:G" )</td></tr>
+          <tr><td>FILTER</td><td>=FILTER( 範圍 , 條件1 , [條件2] , … )</td><td>從「匯入」工作表依廠區篩選</td><td>=FILTER( 匯入!A2:G , 匯入!C2:C="A棟" )</td></tr>
+          <tr><td>&lt;&gt;</td><td>條件中的「不等於」</td><td>排除某一種狀態</td><td>匯入!G2:G&lt;&gt;"已退租"</td></tr>
+          <tr><td>QUERY</td><td>=QUERY( 資料範圍 , "查詢指令" , 標題列數 )</td><td>直接對 IMPORTRANGE 的結果下條件；欄位用 Col 編號</td><td>"select * where Col3='A棟'"（Col3＝第 3 欄 廠區）</td></tr>
+        </table>
+        <div class="content-h2">操作步驟</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>說明</th></tr>
+          <tr><td>S1 建立「匯入」工作表</td><td>在彙整檔新增工作表「匯入」，A1 輸入 IMPORTRANGE，把總明細整份帶進來</td></tr>
+          <tr><td>S2 建立各廠區工作表</td><td>新增工作表「A棟」、「B棟」、「C棟」</td></tr>
+          <tr><td>S3 各工作表寫 FILTER</td><td>從「匯入」工作表依廠區條件篩選，標題列一起帶入</td></tr>
+          <tr><td>S4 複製工作表</td><td>A棟完成後，複製工作表並把公式中的「A棟」改成「B棟」即可</td></tr>
+        </table>
         <div class="prompt-card">
-          <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 Notebook — 基礎統計</span>
-            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
-          </div>
-          <div class="prompt-code">我已上傳一份 Excel 檔案，請先不要分析結果。
-
-請協助我進行「數據分析」，流程如下：
-1. 先說明這份資料可以進行哪些分析（條列即可）
-2. 告訴我每一種分析可以回答什麼業務問題
-3. 等我確認後，再進行實際分析
-
-請暫時不要產出任何結論或圖表。</div>
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 S1 — 「匯入」工作表 A1</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=IMPORTRANGE("A檔（租約總明細）的網址", "租約明細!A1:G")</div>
         </div>
         <div class="prompt-card">
-          <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 Gemini — 客戶服務滿意度分析</span>
-            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
-          </div>
-          <div class="prompt-code">你是一位數據分析師。
-我已提供一份客戶服務滿意度問卷調查資料。
-請依這份問卷資料分析：
-- 客戶類型（清潔公司、大樓物業、工廠、經銷商）、所在地區、洽詢事由佔比
-- 客戶對產品與服務的主要肯定原因
-- 客戶最希望改善的服務項目（例如：報修回應速度、交貨時間、技術說明）</div>
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 S3 — 「A棟」工作表 A1：標題＋A棟明細</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">={ 匯入!A1:G1 ; FILTER( 匯入!A2:G , 匯入!C2:C="A棟" ) }</div>
         </div>
         <div class="prompt-card">
-          <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 Gemini — 主管報告摘要</span>
-            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
-          </div>
-          <div class="prompt-code">請依據資料進行分析，並以條列方式輸出結果，分析內容包含：
-1. 受訪客戶類型、所在地區、洽詢事由的分布與佔比
-2. 客戶肯定產品與服務的主要原因（請整理關鍵因素）
-3. 客戶希望改善的服務項目與集中趨勢
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 變化 — A棟中「仍在租」的租約（排除已退租）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">={ 匯入!A1:G1 ; FILTER( 匯入!A2:G , 匯入!C2:C="A棟" , 匯入!G2:G&lt;&gt;"已退租" ) }</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 進階 — 不用「匯入」工作表，一行 QUERY 完成</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=QUERY( IMPORTRANGE("A檔的網址", "租約明細!A1:G") , "select * where Col3='A棟'" , 1 )</div>
+        </div>
+        <div class="tip-card note"><strong>分流到「不同檔案」也可以：</strong>如果每個廠區有自己的檔案，就在各廠區檔案中寫上面的 QUERY 公式，條件改成各自的廠區。總明細一更新，各廠區檔案都會同步。<br>⚠️ 注意：能編輯廠區檔案的人，也能修改公式改看其他廠區資料。若有資料保密需求，應由總公司控管總明細的共用權限。</div>
+        <div class="tip-card warning"><strong>⚠️ 公式連動 vs. 逐筆附加：</strong>上面的公式是「即時連動」，總明細刪除一筆，廠區工作表也會跟著消失，而且不能在結果中手動加註。若需求是「把資料逐筆複製附加過去，之後各自修改、不再連動」，就要改用 Apps Script，可以請 AI 撰寫。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 請 AI 寫 Apps Script「逐筆附加」</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">我是 Apps Script 初學者，請幫我寫一支 Google Apps Script，並附上安裝步驟。
 
-請以「可用於簡報與決策」的角度撰寫，不需過度技術說明。</div>
+需求：
+- 來源：目前檔案的工作表「租約明細」，A～G 欄，第 1 列是標題
+- C 欄是廠區（A棟、B棟、C棟）
+- 依 C 欄的廠區，把資料「附加」到同名工作表的最後一列下方
+- 已經附加過的資料不要重複附加（請在 H 欄標記「已轉出」）
+- 若同名工作表不存在，自動建立並複製標題列
+
+請說明：
+1. 程式碼貼在哪裡、如何執行
+2. 第一次執行時出現的授權畫面該怎麼處理
+3. 如何設定每天自動執行一次</div>
         </div>
       </div>
 
       <!-- u4-e -->
       <div class="sub-block" id="u4-e">
-        <div class="sec-sub-title">數據分析與報告結論生成</div>
-        <div class="tip-card info">一份完整的業務分析，不只是數字整理，還要說明「意義是什麼」「建議怎麼做」——這往往是最花時間、也最難下筆的部分。AI 不只是「看表格、唸數字」的工具，給它明確的角色、對象與目的，它能把數字轉成主管看得懂、可以做決策的語言。</div>
+        <div class="sec-sub-title">Google 表單：建立與發佈</div>
+        <div class="tip-card info"><strong>工作情境：</strong>承租戶年度滿意度調查、停車位申請、報修登記、進場說明會報名，都可以用 Google 表單收集，回覆自動匯入試算表，不必再整理紙本或 Email。</div>
+        <div class="content-h2">(1) 建立表單</div>
+        <div class="content-note">
+          <p>先在【雲端硬碟】建立存放表單的資料夾（例如「承租戶問卷」），在資料夾中按右鍵 →【Google 表單】。表單與回應試算表都會放在同一個資料夾，方便管理與共用。</p>
+        </div>
+        <div class="content-h2">(2) 題目類型與試算表呈現方式</div>
+        <div class="tip-card note"><strong>設計題目時，先想「統計時要怎麼算」。</strong>不同題型匯入試算表後的樣子不同，會直接影響後續統計的難易度。</div>
+        <table class="data-table">
+          <tr><th>題型</th><th>承租戶問卷範例</th><th>試算表呈現</th><th>統計方式</th></tr>
+          <tr><td>單選題</td><td>租賃類型：廠房／辦公室／倉儲</td><td>一欄，一個答案</td><td>COUNTIF 直接計算</td></tr>
+          <tr><td>下拉式選單</td><td>所在廠區：A棟／B棟／C棟</td><td>一欄，一個答案</td><td>同單選題（選項多時使用）</td></tr>
+          <tr><td>核取方塊（複選）</td><td>希望加強的服務：停車、門禁、空調、網路、貨梯</td><td>一欄，多個答案以「, 」隔開</td><td>需用萬用字元計算（見「回應統計」）</td></tr>
+          <tr><td>線性刻度</td><td>整體滿意度 1～5 分</td><td>一欄，數字</td><td>AVERAGE 計算平均分數</td></tr>
+          <tr><td>單選方格</td><td>保全、清潔、報修回應、停車管理各評 1～5 分</td><td>每一列題目各一欄</td><td>每欄各自計算平均</td></tr>
+          <tr><td>核取方塊格</td><td>各時段（平日／假日）需要的服務</td><td>每一列題目各一欄，多個答案以「, 」隔開</td><td>同核取方塊</td></tr>
+          <tr><td>簡答／段落</td><td>承租單位名稱、其他建議</td><td>一欄，文字</td><td>開放式意見可交給 AI 分類</td></tr>
+        </table>
+        <div class="content-h2">(3) 發佈前的設定</div>
+        <table class="data-table">
+          <tr><th>設定</th><th>位置</th><th>建議</th></tr>
+          <tr><td>收集電子郵件地址</td><td>【設定】→【回覆】</td><td>需要追蹤誰已填寫時開啟</td></tr>
+          <tr><td>限制回覆次數為 1 次</td><td>【設定】→【回覆】</td><td>填答者必須登入 Google 帳號，外部承租戶可能沒有帳號，請斟酌使用</td></tr>
+          <tr><td>允許編輯回覆</td><td>【設定】→【回覆】</td><td>申請類表單建議開啟，方便填錯修改</td></tr>
+          <tr><td>必填題目</td><td>每一題右下角【必填】</td><td>單位名稱、租賃類型等統計關鍵欄位務必設為必填</td></tr>
+        </table>
+        <div class="content-h2">(4) 發佈、短網址與 QR Code</div>
+        <div class="content-note">
+          <ul style="margin-left:20px;">
+            <li>按右上角【發布】，並確認回應者的設定（任何知道連結的人／僅限組織內）</li>
+            <li>按【傳送】→ 連結圖示 → 勾選【縮短網址】，複製後可貼到 Email、LINE 或公告</li>
+            <li>QR Code：用 Chrome 開啟表單填寫頁 → 網址列右側【分享】→【建立 QR 圖碼】，可下載後印在大樓公告或電梯口</li>
+          </ul>
+        </div>
+        <div class="tip-card warning"><strong>⚠️ 發佈前一定要測試：</strong>用【無痕視窗】開啟表單網址，模擬「沒有登入的承租戶」實際填寫一次，確認每個分支區段都能正常跳轉、必填題設定正確，再到回應試算表確認資料欄位，最後刪除測試資料。</div>
         <div class="prompt-card">
-          <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 Step1：先問 AI 能分析什麼</span>
-            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
-          </div>
-          <div class="prompt-code">我已上傳一份清潔機具維修案件資料，請先不要分析結果。
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 請 AI 設計問卷題目</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">你是一位商辦與廠辦物業管理顧問，請幫我設計一份「承租戶年度滿意度問卷」，要放到 Google 表單使用。
 
-請協助我進行「數據分析」，流程如下：
-1. 先說明這份資料可以進行哪些分析（條列即可）
-2. 告訴我每一種分析可以回答什麼業務問題
-3. 等我確認後，再進行實際分析
+需求：
+- 第一區段：共同題（承租單位名稱、所在廠區、租賃類型：廠房／辦公室／倉儲）
+- 依租賃類型分成三個區段，各 3～4 題專屬題目
+  （廠房：貨梯、卸貨區、電力；辦公室：空調時段、會議室、網路；倉儲：溫濕度、進出貨時段）
+- 最後區段：共同的整體滿意度與開放式建議
 
-請暫時不要產出任何結論或圖表。</div>
+輸出格式：
+- 用表格列出：區段／題目／題型（單選、核取方塊、線性刻度、單選方格、簡答）／選項／是否必填
+- 題型請考慮後續在試算表統計的方便性</div>
+        </div>
+      </div>
+
+      <!-- u4-f -->
+      <div class="sub-block" id="u4-f">
+        <div class="sec-sub-title">Google 表單：依租賃單位發送不同問卷</div>
+        <div class="tip-card warning"><strong>先釐清限制：</strong>Google 表單「沒有」依權限讓不同人看到不同題目的功能；「僅限組織內使用者」的設定也只適用公司內部同仁，外部承租戶無法使用。實務上用以下三種做法達成「不同單位、不同問卷」。</div>
+        <table class="data-table">
+          <tr><th>做法</th><th>說明</th><th>適合情境</th></tr>
+          <tr><td>A. 一份表單＋依答案跳區段</td><td>第一題選租賃類型，自動跳到對應的題組</td><td>題目大部分相同，只有部分不同</td></tr>
+          <tr><td>B. 名單＋預先填入連結</td><td>依名單為每個單位產生專屬連結，單位名稱與類型已自動填好</td><td>要依名單發送、追蹤誰還沒填</td></tr>
+          <tr><td>C. 拆成多份表單</td><td>各類型各一份表單，但回應都連結到「同一個」試算表</td><td>各類型題目差異很大</td></tr>
+        </table>
+
+        <div class="content-h2">做法 A：依答案前往區段</div>
+        <div class="content-note">
+          <ul style="margin-left:20px;">
+            <li>S1：在第一區段建立「租賃類型」單選題（廠房／辦公室／倉儲）</li>
+            <li>S2：新增三個區段，分別放廠房、辦公室、倉儲的專屬題目，再新增最後一個「共同題」區段</li>
+            <li>S3：點選「租賃類型」題目右下角【⋮】→【根據答案前往相關區段】，每個選項指定對應的區段</li>
+            <li>S4：三個專屬區段的底部，「完成這個區段後」都設定為【前往共同題區段】</li>
+          </ul>
+        </div>
+
+        <div class="content-h2">做法 B：名單＋預先填入連結（依名單分類發送）</div>
+        <div class="tip-card note"><strong>📁 練習檔案：</strong>07_承租戶滿意度問卷 →「名單」工作表（A 承租單位／B 租賃類型／C Email／D 專屬連結），D 欄可練習批次產生連結；網址與 entry 代號請換成自己建立的表單。</div>
+        <div class="content-note">
+          <ul style="margin-left:20px;">
+            <li>S1：表單右上角【⋮】→【取得預先填入的連結】，在「承租單位」填入「測試」、「租賃類型」選「廠房」→【取得連結】→ 複製</li>
+            <li>S2：觀察網址，會看到類似 <code>entry.123456=測試&amp;entry.789012=廠房</code>，entry 後面的數字就是題目代號</li>
+            <li>S3：在試算表建立名單：A 承租單位／B 租賃類型／C Email／D 專屬連結</li>
+            <li>S4：D 欄用公式組出每個單位的專屬連結，往下填滿</li>
+          </ul>
+        </div>
+        <div class="content-h2">做法 B 會用到的函數</div>
+        <table class="data-table">
+          <tr><th>函數</th><th>語法</th><th>說明</th><th>本節範例</th></tr>
+          <tr><td>&amp;</td><td>="文字"&amp;儲存格&amp;"文字"</td><td>把固定的網址和儲存格內容接成一個完整連結</td><td>"…entry.123456="&amp;A2</td></tr>
+          <tr><td>ENCODEURL</td><td>=ENCODEURL( 文字 )</td><td>把中文、空格轉成網址可用的格式，避免連結失效</td><td>ENCODEURL(A2)：承租單位名稱</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — 批次產生專屬連結（D2）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">="https://docs.google.com/forms/d/e/表單ID/viewform?usp=pp_url&amp;entry.123456="&amp;ENCODEURL(A2)&amp;"&amp;entry.789012="&amp;ENCODEURL(B2)</div>
+        </div>
+        <div class="tip-card note"><strong>公式說明：</strong>前半段網址照抄 S1 複製的連結，把「測試」、「廠房」的位置換成儲存格。ENCODEURL 會把中文轉成網址可用的格式，避免連結失效。<br>承租戶點開連結時，單位名稱與租賃類型已經填好；搭配做法 A 的區段設定，按【下一頁】就會直接進入該類型的題組。</div>
+        <div class="tip-card warning">⚠️ 預先填入的答案，填答者仍然可以修改。可以在題目說明加註「請勿修改」，統計時再用名單比對。</div>
+        <div class="content-note">
+          <p><strong>發送方式：</strong></p>
+          <ul style="margin-left:20px;">
+            <li>Gmail「合併郵件」（需特定 Workspace 方案）：從名單試算表帶入單位名稱與專屬連結，一次寄給所有承租戶</li>
+            <li>沒有合併郵件功能時，可以請 AI 撰寫 Apps Script，依名單逐封寄送</li>
+          </ul>
         </div>
         <div class="prompt-card">
-          <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 Step2：執行分析，產出結論</span>
-            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
-          </div>
-          <div class="prompt-code">請依據上述確認的分析方向，以條列方式輸出結果：
-1. 各機型／各類故障原因的分布與佔比
-2. 維修服務中最需要關注的環節與原因（例如：重複報修、等待零件時間）
-3. 可行的改善方向（2-3項）
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 請 AI 寫 Apps Script 依名單寄送問卷</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">我是 Apps Script 初學者，請幫我寫一支 Google Apps Script，並附上安裝與執行步驟。
 
-請以「可用於簡報與決策」的角度撰寫，不要使用統計學術語。</div>
+需求：
+- 工作表「名單」：A 承租單位／B 租賃類型／C Email／D 專屬連結／E 寄送狀態，第 1 列是標題
+- 依名單逐列寄信給 C 欄的 Email
+- 信件主旨：【○○公司】承租戶年度滿意度問卷
+- 信件內文開頭稱呼 A 欄的單位名稱，並附上 D 欄的專屬連結
+- 寄出後在 E 欄填入「已寄送」與日期；E 欄已有內容的列不要重複寄送
+- 先提供「只寄給我自己」的測試版本，確認無誤後再寄給全部名單</div>
+        </div>
+
+        <div class="content-h2">做法 C：多份表單，回應集中在同一個試算表</div>
+        <div class="content-note">
+          <p>在每份表單的【回覆】→【連結至試算表】→ 選【選取現有的試算表】，都選同一個檔案。每份表單會在該檔案中各自產生一個「表單回應」工作表，統計時集中在同一個檔案處理。</p>
+        </div>
+      </div>
+
+      <!-- u4-g -->
+      <div class="sub-block" id="u4-g">
+        <div class="sec-sub-title">Google 表單：回應統計</div>
+        <div class="tip-card note"><strong>📁 開啟檔案：</strong>07_承租戶滿意度問卷<br>「表單回應 1」模擬表單自動寫入的 200 份回覆；公式輸入在「統計_單選刻度」「統計_複選」「複選拆欄」「名單」工作表的黃色儲存格，綠色分頁「解答_」可對照答案。</div>
+        <div class="content-h2">會用到的函數</div>
+        <table class="data-table">
+          <tr><th>函數</th><th>語法</th><th>說明</th><th>本節範例</th></tr>
+          <tr><td>COUNTIF</td><td>=COUNTIF( 範圍 , 條件 )</td><td>計算符合「一個條件」的筆數</td><td>=COUNTIF('表單回應 1'!C:C, A2)</td></tr>
+          <tr><td>COUNTIFS</td><td>=COUNTIFS( 範圍1 , 條件1 , 範圍2 , 條件2 , … )</td><td>計算同時符合「多個條件」的筆數；比較條件要加雙引號</td><td>=COUNTIFS(…C:C, "廠房", …D:D, "&gt;=4")</td></tr>
+          <tr><td>AVERAGE</td><td>=AVERAGE( 範圍 )</td><td>計算平均（空白儲存格不列入）</td><td>=AVERAGE('表單回應 1'!D:D)</td></tr>
+          <tr><td>AVERAGEIF</td><td>=AVERAGEIF( 條件範圍 , 條件 , 平均範圍 )</td><td>只計算符合條件的資料的平均</td><td>各租賃類型的滿意度平均</td></tr>
+          <tr><td>SUM</td><td>=SUM( 範圍 )</td><td>加總</td><td>=SUM(B2:B4)</td></tr>
+          <tr><td>COUNTA</td><td>=COUNTA( 範圍 )</td><td>計算「非空白」儲存格的數量</td><td>=COUNTA('表單回應 1'!B:B)-1 → 回覆份數（扣標題）</td></tr>
+          <tr><td>SEARCH</td><td>=SEARCH( 要找的文字 , 被搜尋的文字 )</td><td>找到回傳位置數字，找不到出現 #VALUE! 錯誤</td><td>SEARCH("空調", "停車, 空調")→5</td></tr>
+          <tr><td>ISERROR</td><td>=ISERROR( 值 )</td><td>判斷是否為錯誤，是錯誤回傳 TRUE</td><td>ISERROR(SEARCH(…)) → 沒勾選時為 TRUE</td></tr>
+          <tr><td>IF</td><td>=IF( 條件 , 成立時 , 不成立時 )</td><td>依條件顯示不同結果</td><td>IF(COUNTIF(…)&gt;0, "已填", "未填")</td></tr>
+        </table>
+        <div class="content-h2">(1) 建立回應試算表</div>
+        <div class="content-note">
+          <p>表單【回覆】→【連結至試算表】，回應會即時寫入「表單回應 1」工作表。需要提供給不使用 Google 的單位時，可以從試算表【檔案】→【下載】→【Microsoft Excel】。</p>
+        </div>
+        <div class="tip-card warning"><strong>⚠️ 不要直接在「表單回應 1」工作表裡計算或加欄位：</strong>新的回應會一直寫入，容易覆蓋或錯位。請另外新增「統計」工作表，用公式參照回應資料。</div>
+
+        <div class="content-h2">(2) 單選、刻度題統計</div>
+        <div class="tip-card note">「表單回應 1」欄位：B 承租單位名稱／C 租賃類型／D 整體滿意度（1～5）／E 希望加強的服務（複選）／F 所在廠區／G～J 各項服務滿意度（單選方格）／K～M 各租賃類型的專屬題（未作答的類型為空白）／N 其他建議。工作表名稱有空格時，前後要加單引號，例如 '表單回應 1'!C:C。</div>
+        <table class="data-table">
+          <tr><th>統計需求</th><th>公式</th></tr>
+          <tr><td>各租賃類型的回覆份數（A2 輸入「廠房」）</td><td>=COUNTIF('表單回應 1'!C:C, A2)</td></tr>
+          <tr><td>整體滿意度平均</td><td>=AVERAGE('表單回應 1'!D:D)</td></tr>
+          <tr><td>各租賃類型的滿意度平均</td><td>=AVERAGEIF('表單回應 1'!C:C, A2, '表單回應 1'!D:D)</td></tr>
+          <tr><td>廠房中給 4 分以上的份數</td><td>=COUNTIFS('表單回應 1'!C:C, "廠房", '表單回應 1'!D:D, "&gt;=4")</td></tr>
+        </table>
+        <div class="tip-card info"><strong>公式往下、往右複製時：</strong>按【F4】切換絕對參照（$）。公式「往下」複製，考慮「列」要不要固定；公式「往右」複製，考慮「欄」要不要固定。</div>
+
+        <div class="content-h2">(3) 複選題（核取方塊）統計</div>
+        <div class="tip-card note">複選題的答案會擠在同一格，例如「停車, 空調, 網路」，直接用 COUNTIF(E:E,"空調") 會算不到。以下兩種方法擇一使用。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 方法1 — COUNTIF＋萬用字元 *（最快，A2 輸入「空調」）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=COUNTIF('表單回應 1'!E:E, "*"&amp;A2&amp;"*")</div>
+        </div>
+        <div class="tip-card note"><strong>* 代表「任意文字」：</strong>"*空調*" 表示「內容中有出現空調」就計算。選項名稱不要有包含關係（例如「停車」與「機車停車」），否則會重複計算。</div>
+        <div class="content-note">
+          <p><strong>方法2 — 拆欄後再計算（可看到每一份回覆勾了哪些項目）：</strong>在統計工作表中，第 1 列輸入各選項（停車、門禁、空調…），用下列步驟判斷每一份回覆是否有勾選。</p>
+          <ul style="margin-left:20px;">
+            <li>S1：SEARCH(找的文字, 目標文字) → 找到會回傳位置數字，找不到會出現錯誤</li>
+            <li>S2：ISERROR(…) → 判斷是否為錯誤（TRUE＝沒勾選）</li>
+            <li>S3：IF(…) → 沒勾選顯示空白，有勾選顯示 V</li>
+            <li>S4：最後用 COUNTIF(欄位, "V") 計算每個選項被勾選的次數</li>
+          </ul>
         </div>
         <div class="prompt-card">
-          <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 Step3：將結論轉為摘要報告</span>
-            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
-          </div>
-          <div class="prompt-code">根據以上分析結果，請幫我撰寫一份「機具維修服務月報摘要」：
-- 對象：總經理與各部門主管
-- 語氣：專業務實、可直接引用於報告開場
-- 字數：200字以內
-- 需包含：本期重點數據、需關注的問題、下一步建議
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 方法2 — 拆欄判斷（B1 是選項名稱、A2 是該份回覆的複選答案）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=IF(ISERROR(SEARCH(B$1, $A2)), "", "V")</div>
+        </div>
 
-請直接產出可使用的文字，不需要額外說明。</div>
+        <div class="content-h2">(4) 追蹤未回覆名單</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — 名單 F 欄判斷是否已填（A2 是承租單位、回應的 B 欄是單位名稱）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=IF(COUNTIF('表單回應 1'!B:B, A2)&gt;0, "已填", "未填")</div>
+        </div>
+        <div class="tip-card info">用【篩選】把「未填」的單位篩出來，就是要再發提醒信的名單。若前面使用了「預先填入連結」，單位名稱的寫法會完全一致，比對不會出錯。</div>
+
+        <div class="content-h2">(5) 結合 AI 分析</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 開放式意見分類</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">以下是承租戶滿意度問卷中「其他建議」的開放式回覆（每列一筆，含租賃類型）。
+
+請你以【物業管理主管】角色：
+1. 將意見分類為：公設、停車、保全門禁、修繕報修、空調、其他
+2. 用表格列出：分類／件數／代表性意見（摘要，每則 20 字內）
+3. 依租賃類型（廠房／辦公室／倉儲）各列出最常被提出的 2 項問題
+4. 提出 3 項可優先改善的建議
+
+只根據提供的資料分析，不要自行補充未提到的問題。
+
+[貼上回覆內容]</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 用白話描述，請 AI 寫統計公式</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">Google 試算表中，工作表「表單回應 1」的欄位如下：
+B 承租單位／C 租賃類型（廠房、辦公室、倉儲）／D 整體滿意度（1～5）／E 希望加強的服務（複選，以「, 」隔開）
+
+請幫我在「統計」工作表寫公式：
+- 計算每種租賃類型的回覆份數與滿意度平均
+- 計算 E 欄每個服務項目被勾選的次數
+
+我是函數初學者，請只使用 COUNTIF、COUNTIFS、AVERAGEIF 等基礎函數，並說明每個公式要放在哪個儲存格。</div>
         </div>
       </div>
     </div><!-- /u4 -->
@@ -1341,7 +1665,7 @@ Q2 明顯上升，可能原因為何？如何因應？</div>
         <div class="sec-sub-title">操作流程</div>
         <table class="data-table">
           <tr><th>工具</th><th>用途</th></tr>
-          <tr><td>Veo（Google Flow）</td><td><a href="https://labs.google/fx/zh/tools/flow" target="_blank">https://labs.google/fx/zh/tools/flow ↗</a></td></tr>
+          <tr><td>Veo（Google Flow）</td><td><a href="https://flow.google.com/" target="_blank">https://flow.google.com/</a></td></tr>
           <tr><td>線上剪輯工具</td><td>Canva</td></tr>
         </table>
         <table class="data-table">
@@ -1442,6 +1766,617 @@ Q2 明顯上升，可能原因為何？如何因應？</div>
     </div><!-- /u7 -->
 
 
+    <!-- ======== U8: 公司網站製作 ======== -->
+    <div class="content-section" id="u8">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-2)">8</span>
+        公司網站製作
+      </div>
+      <div class="sec-desc">📌 工作情境：公司想改版形象網站，但同仁不懂 HTML。過去請 AI 做好的網站，要換一張首頁輪播圖卻找不到位置，只好整份重做。本單元的流程是：先讓 AI 做出網站並建議每個位置該放什麼圖 → 確認版面 → AI 匯出內容清單貼到 Google 試算表 → 同仁在試算表填入新文字與圖片 → 交給 AI 依編號替換。</div>
+      <div class="tip-card info"><strong>核心觀念：先定「維護規則」，再叫 AI 做網站。</strong><br>AI 做網站很快，難的是「之後怎麼改」。只要在第一次的 Prompt 就要求 AI：所有會更換的文字與圖片，集中寫在檔案最上方的「網站設定區」並加上編號，日後換圖換字就只要對照編號，不必看懂程式。</div>
+
+      <!-- u8-a -->
+      <div class="sub-block" id="u8-a">
+        <div class="sec-sub-title">製作流程總覽</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>做什麼</th><th>用什麼工具</th></tr>
+          <tr><td>S1 生成網站</td><td>用 GPS 三步驟 Prompt 請 AI 產出網站（含首頁輪播），圖片先用佔位圖，並附上每個位置的「建議圖片」說明</td><td>Gemini（Canvas）／ChatGPT／Claude</td></tr>
+          <tr><td>S2 預覽確認</td><td>檢查手機與電腦版的版面、區塊、文案方向，確認後定稿</td><td>同上</td></tr>
+          <tr><td>S3 匯出內容清單</td><td>請 AI 依網站設定區匯出「內容對照表」，貼到 Google 試算表</td><td>AI＋Google 試算表</td></tr>
+          <tr><td>S4 準備圖片</td><td>依「建議圖片」拍攝或挑選照片，上傳雲端圖庫取得直連網址，連同新文案填入試算表</td><td>Google 雲端硬碟＋圖片直連工具</td></tr>
+          <tr><td>S5 替換</td><td>把試算表中有填「新內容」的列交給 AI，依編號替換</td><td>AI</td></tr>
+          <tr><td>進階</td><td>設定成網站自動讀取試算表，之後改試算表就會更新網站</td><td>Google 試算表</td></tr>
+        </table>
+        <div class="content-h2">建議網站區塊（廠辦租賃）</div>
+        <table class="data-table">
+          <tr><th>區塊</th><th>內容</th><th>可替換項目</th></tr>
+          <tr><td>首頁輪播（Slider）</td><td>3～5 張大圖，各附主標、副標、按鈕</td><td>圖片、主標、副標、按鈕文字</td></tr>
+          <tr><td>物件介紹</td><td>廠房／辦公室／倉儲三張卡片</td><td>圖片、名稱、坪數、特色</td></tr>
+          <tr><td>公設與服務</td><td>停車、保全、貨梯、門禁等</td><td>項目文字</td></tr>
+          <tr><td>交通位置</td><td>Google 地圖嵌入</td><td>地址</td></tr>
+          <tr><td>聯絡我們</td><td>電話、Email、預約看屋（Google 表單）</td><td>聯絡資訊、表單連結</td></tr>
+        </table>
+      </div>
+
+      <!-- u8-b -->
+      <div class="sub-block" id="u8-b">
+        <div class="sec-sub-title">S1～S2：生成網站＋首頁輪播 Prompt</div>
+        <div class="tip-card warning"><strong>⚠️ 為什麼之前的輪播圖找不到地方換？</strong>沒有給維護規則時，AI 會把圖片網址分散寫在 HTML 標籤、CSS 背景圖、JavaScript 裡，同一張圖甚至出現好幾次。下面的 Prompt 用「網站設定區」把所有可替換內容集中到檔案最上方，並加上中文註解與編號，從源頭解決這個問題。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 生成網站（GPS 三步驟＋輪播＋建議圖片＋維護規則）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">【Goal 目標】
+請幫我製作一個廠辦租賃公司的形象網站（單一 HTML 檔），目的是讓企業客戶快速找到合適的廠房或辦公室，並預約看屋。
+
+【Position 定位】
+- 公司：振業化工廠股份有限公司公司，位於臺北市士林區前港里承德路四段172號，提供廠房、辦公室、倉儲租賃
+- 目標客群：中小製造業、物流業、新創團隊的負責人或行政主管
+- 風格：專業、可信賴、簡潔，主色深藍搭配白色，手機瀏覽要好看
+
+【Shape 形式】
+網站區塊依序為：
+1. 首頁輪播（Slider）
+2. 物件介紹（廠房／辦公室／倉儲 三張卡片）
+3. 公設與服務
+4. 交通位置（嵌入 Google 地圖）
+5. 聯絡我們（含 Google 表單連結按鈕）
+文案請你依廠辦租賃情境先撰寫一版。
+
+# 首頁輪播規格
+- 共 3 張，張數可增減：設定區多一筆就多一張、刪一筆就少一張，不需要修改其他程式
+- 每 5 秒自動切換，滑鼠移入時暫停
+- 左右箭頭＋下方圓點指示，手機可左右滑動切換
+- 圖片比例 16:9，以「填滿並裁切」方式顯示，不可變形
+- 每張圖上疊主標、副標、按鈕，加半透明深色遮罩讓文字清楚
+- 圖片載入失敗時，顯示灰色底與「圖片待補」字樣
+
+# 圖片規則
+- 目前沒有實際照片，所有圖片先用 placehold.co 佔位圖，佔位圖上直接顯示編號與尺寸
+  （例如：https://placehold.co/1920x1080?text=S1+1920x1080）
+- 輪播大圖 16:9（1920×1080），物件卡片 4:3（800×600）
+- 每個圖片位置都要附「建議圖片」說明：該拍什麼／挑什麼照片、構圖重點（例如主體偏左、留出放文字的空間）
+
+# 維護規則（最重要）
+- 所有會更換的文字與圖片，一律集中寫在檔案最上方的「網站設定區（SITE_CONFIG）」
+- 頁面內容由程式讀取設定區自動產生，HTML 內文不得再寫死任何圖片網址或文案
+- 設定區每一項都要加中文註解與編號：輪播 S1、S2…，物件卡片 C1、C2…，服務項目 F1、F2…，例如：
+  // 👉【S1】首頁輪播第1張
+
+# 輸出要求
+1. 輸出完整的單一 HTML 檔，並開啟預覽
+2. 回覆最後列出「建議圖片清單」：編號／位置／建議尺寸／建議圖片說明</div>
+        </div>
+        <div class="tip-card info"><strong>S2 預覽確認，常用的修改說法：</strong>「輪播文字改到左下角」、「手機版卡片改成一欄」、「按鈕顏色改成橘色」、「服務項目加一項『24 小時保全』」。一次只改一兩件事，AI 比較不會改壞其他地方。版面與區塊都確認後，再進入下一步。</div>
+      </div>
+
+      <!-- u8-c -->
+      <div class="sub-block" id="u8-c">
+        <div class="sec-sub-title">S3：匯出試算表內容清單</div>
+        <div class="tip-card info"><strong>為什麼用試算表？</strong>多人可以同時編修、看得到修改紀錄，「編號」欄就是網站與試算表之間的對照鑰匙。業務改文案、行政換照片，都在同一張表完成，不用碰網站檔案。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 網站確認後，匯出內容對照表</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">網站版面已確認。
+請依照「網站設定區（SITE_CONFIG）」中的所有項目，匯出一份「內容對照表」，方便我貼到 Google 試算表給同仁填寫。
+
+欄位：編號／區塊／類型（文字或圖片）／目前內容／新內容／建議尺寸或字數／建議圖片說明
+- 每個設定區項目一列，編號與設定區完全一致（例如 S1-圖、S1-主標、C1-說明）
+- 圖片列的「目前內容」填佔位圖網址，「建議圖片說明」沿用剛才的建議
+- 文字列的「建議尺寸或字數」請依版面給建議字數上限
+- 「新內容」欄全部留空，由同仁填寫
+- 用表格輸出，不要加其他說明</div>
+        </div>
+        <div class="content-h2">貼到試算表後的樣子（工作表名稱：網站內容）</div>
+        <table class="data-table">
+          <tr><th>編號</th><th>區塊</th><th>類型</th><th>目前內容</th><th>新內容</th><th>建議尺寸／字數</th><th>建議圖片說明</th></tr>
+          <tr><td>S1-圖</td><td>首頁輪播第1張</td><td>圖片</td><td>（佔位圖網址）</td><td>（同仁貼上圖片直連網址）</td><td>1920×1080，500KB 以內</td><td>大樓外觀全景，晴天，主體偏右</td></tr>
+          <tr><td>S1-主標</td><td>首頁輪播第1張</td><td>文字</td><td>交通便利的綠建築廠辦</td><td></td><td>15 字內</td><td></td></tr>
+          <tr><td>S1-副標</td><td>首頁輪播第1張</td><td>文字</td><td>近國道、捷運，貨梯直達各樓層</td><td></td><td>25 字內</td><td></td></tr>
+          <tr><td>C1-圖</td><td>物件卡片：廠房</td><td>圖片</td><td>（佔位圖網址）</td><td></td><td>800×600</td><td>挑高廠房內部，可見貨梯或卸貨區</td></tr>
+          <tr><td>C1-說明</td><td>物件卡片：廠房</td><td>文字</td><td>100～300 坪，樓板載重高</td><td></td><td>30 字內</td><td></td></tr>
+        </table>
+        <div class="tip-card note"><strong>填寫規則：</strong>
+          <ul>
+            <li>要改的才填「新內容」，不改的留空，網站就維持原樣</li>
+            <li>輪播大圖：橫式 16:9，建議 1920×1080，檔案 500KB 以內（太大會讓網站開很慢，可先用線上壓縮工具處理）</li>
+            <li>卡片圖：4:3，建議 800×600</li>
+            <li>輪播圖上會疊文字，選畫面「不要太雜」、主體偏一側的照片效果最好</li>
+            <li>檔名用英數字，例如 slide-01.jpg、card-factory.jpg，不要用中文或空格</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- u8-d -->
+      <div class="sub-block" id="u8-d">
+        <div class="sec-sub-title">S4：雲端圖庫取得圖片網址</div>
+        <div class="tip-card warning"><strong>⚠️ 為什麼不能直接貼雲端硬碟分享連結？</strong>雲端硬碟的「共用連結」打開的是 Google 的預覽頁面，不是圖片本身，放進網站常常顯示不出來。必須先轉成「直連網址」，網站才讀得到圖片。</div>
+        <table class="data-table">
+          <tr><th>工具</th><th>連結</th></tr>
+          <tr><td>Google Drive 圖片直連轉換工具</td><td><a href="https://script.google.com/macros/s/AKfycbw7nbIBNrFClroUj4-JwSGoSRy8DoQtY-7VVatMTi0B5VUXrl6ol3_4IkdzanVbP7Wp/exec" target="_blank">開啟工具 ↗</a></td></tr>
+        </table>
+        <div class="content-h2">操作步驟</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>說明</th></tr>
+          <tr><td>1. 準備圖片</td><td>依試算表的「建議圖片說明」拍攝或挑選照片，調整尺寸、壓縮，並統一檔名</td></tr>
+          <tr><td>2. 上傳雲端硬碟</td><td>建立「網站圖庫」資料夾，把圖片放進去</td></tr>
+          <tr><td>3. 設定共用</td><td>資料夾或圖片設為「知道連結的任何人：檢視者」（沒有這一步，網站訪客看不到圖）</td></tr>
+          <tr><td>4. 取得直連網址</td><td>依工具畫面操作，取得圖片的直連網址</td></tr>
+          <tr><td>5. 填入試算表</td><td>把網址貼到對應編號的「新內容」欄</td></tr>
+          <tr><td>6. 測試</td><td>把網址貼到瀏覽器的無痕視窗，能直接看到圖片就代表成功</td></tr>
+        </table>
+        <div class="tip-card note"><strong>使用前請注意：</strong>
+          <ul>
+            <li>公司 Workspace 帳號若被管理員禁止「對外共用」，圖片會顯示不出來，請先找資訊人員確認</li>
+            <li>這類工具是由他人以 Apps Script 建立，請確認圖片「存放在誰的雲端硬碟」。公司正式使用時，建議請資訊人員用公司帳號另建一份</li>
+            <li>直連網址屬於非官方用法，Google 調整後可能失效。正式官網長期營運時，建議圖片仍放在網站主機上</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- u8-e -->
+      <div class="sub-block" id="u8-e">
+        <div class="sec-sub-title">S5：文字與圖片替換（不懂 HTML 也能改）</div>
+        <table class="data-table">
+          <tr><th>方法</th><th>做法</th><th>適合</th></tr>
+          <tr><td>A. 交給 AI 替換</td><td>附上 HTML＋試算表中有填「新內容」的列，請 AI 依編號修改</td><td>一次改很多項、完全不想看程式</td></tr>
+          <tr><td>B. 自己改設定區</td><td>用記事本開啟 HTML，按 Ctrl＋F 搜尋編號（例如 S1），只改引號內的文字或網址後存檔</td><td>只換一兩張圖或幾個字</td></tr>
+        </table>
+        <div class="tip-card info"><strong>小技巧：</strong>在試算表用「篩選」把「新內容」不是空白的列篩出來，只複製編號、類型、新內容三欄，貼給 AI 即可。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 依試算表清單替換文字與圖片</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">附上目前網站的完整 HTML 檔，以及以下替換清單（從 Google 試算表複製）。
+
+請只修改「網站設定區（SITE_CONFIG）」中對應編號的內容，其他程式碼與版面一律不要更動。
+
+替換清單：
+[貼上試算表：編號／類型／新內容，例如：
+S1-圖｜圖片｜https://新圖片直連網址
+S1-主標｜文字｜交通便利的綠建築廠辦
+C2-說明｜文字｜50～120 坪，彈性隔間]
+
+完成後請：
+1. 輸出修改後的完整 HTML
+2. 列出「編號／修改前／修改後」對照表，讓我逐項核對
+3. 清單中若有找不到的編號，請列出來問我，不要自行猜測位置</div>
+        </div>
+        <div class="tip-card warning"><strong>⚠️ 舊網站也能救：</strong>之前做好、但圖片散落各處的網站，先用下面的 Prompt 請 AI「整理設定區」並匯出內容對照表，之後就能用 S3～S5 的方式維護。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 舊網站整理成「網站設定區」</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">附上一份已完成的網站 HTML，裡面的輪播圖與其他圖片，我找不到替換的位置。
+
+請幫我重新整理程式碼，但「畫面外觀與功能要完全不變」：
+1. 把所有圖片網址（包含輪播圖、CSS 背景圖）與主要文案，集中到檔案最上方的「網站設定區（SITE_CONFIG）」
+2. 每一項加上中文註解與編號（輪播 S1、S2…，卡片 C1、C2…，其他依區塊命名）
+3. 輪播改為讀取設定區產生，設定區增減一筆即可增減一張
+
+完成後請輸出完整 HTML，並附上「內容對照表」：編號／區塊／類型／目前內容／新內容（留空）／建議尺寸或字數。</div>
+        </div>
+      </div>
+
+      <!-- u8-f -->
+      <div class="sub-block" id="u8-f">
+        <div class="sec-sub-title">進階：試算表當網站後台</div>
+        <div class="tip-card info"><strong>概念：</strong>網站每次開啟時，自動讀取 Google 試算表的內容。之後換圖、改字，只要改試算表的「新內容」欄，網站就會跟著更新，不需要再找 AI，也不用重新上傳網站檔案。</div>
+        <div class="content-h2">試算表設定步驟</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>說明</th></tr>
+          <tr><td>1. 準備工作表</td><td>沿用 S3 的「網站內容」工作表，欄名不要再更動</td></tr>
+          <tr><td>2. 發布到網路</td><td>檔案 → 共用 → 發布到網路 → 選「網站內容」工作表、格式選「逗號分隔值 (.csv)」→ 發布</td></tr>
+          <tr><td>3. 複製網址</td><td>複製產生的 CSV 網址，貼進下方 Prompt</td></tr>
+        </table>
+        <div class="tip-card warning"><strong>⚠️ 注意：</strong>
+          <ul>
+            <li>「發布到網路」後，任何人都看得到這張工作表，裡面只放網站要公開的內容，不要放租金底價、客戶名單</li>
+            <li>修改試算表後，網站可能要等幾分鐘才會更新</li>
+            <li>建議另外設定編輯權限，只開放給負責網站的同仁，避免誤改</li>
+          </ul>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 網站改為讀取 Google 試算表</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">附上目前網站的完整 HTML（已有網站設定區 SITE_CONFIG）。
+請改為「網站開啟時，從 Google 試算表讀取內容」：
+
+- 資料來源（試算表發布到網路的 CSV 網址）：[貼上網址]
+- 試算表欄位：編號、區塊、類型、目前內容、新內容、建議尺寸或字數、建議圖片說明
+- 依「編號」對應設定區的項目：「新內容」有填就使用新內容，空白就沿用設定區原本的內容
+- 讀取失敗時，整頁改用設定區原本的內容，網站不可以空白
+- 畫面外觀與其他功能維持不變
+
+完成後請輸出完整 HTML，並用 3～5 句話說明：日後同仁要如何只改試算表就更新網站。</div>
+        </div>
+      </div>
+    </div><!-- /u8 -->
+
+
+    <!-- ======== U9: 把工作流程訂成 Skill ======== -->
+    <div class="content-section" id="u9">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-3)">9</span>
+        把工作流程訂成 Skill
+      </div>
+      <div class="sec-desc">📌 建議步驟：
+        <ol>
+          <li>用 Gemini 實際整理一次物業管理週會的會議紀錄</li>
+          <li>請 AI 回顧對話，把「修正過程」變成可重複使用的 Skill</li>
+          <li>之後只要輸入 <strong>/</strong> 叫出 Skill，一句話就能得到同樣品質的會議紀錄，並存成 Google 文件與同事共用</li>
+        </ol>
+      </div>
+
+      <!-- u9-a -->
+      <div class="sub-block" id="u9-a">
+        <div class="sec-sub-title">學習流程總覽</div>
+        <div class="tip-card info"><strong>核心觀念：</strong>Skill 不是憑空寫出來的。先把工作真的做一次，過程中你對 AI 的每一次糾正，就是 Skill 最有價值的內容。</div>
+        <div class="content-img80">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai242.jpg" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai242.jpg" alt=""></a>
+        </div>
+
+        <div class="content-h2">Prompt、Skill、/ 的關係</div>
+        <table class="data-table">
+          <tr><th>名稱</th><th>是什麼</th><th>比喻</th></tr>
+          <tr><td>Prompt</td><td>當次對話中給 AI 的指令，用完就結束</td><td>口頭交辦</td></tr>
+          <tr><td>Skill</td><td>存起來、可重複使用的工作規範（名稱＋適用情境＋指示）</td><td>作業 SOP</td></tr>
+          <tr><td>/</td><td>在 Gemini 輸入框叫出 Skill 的方式</td><td>翻開 SOP 照著做</td></tr>
+        </table>
+
+        <div class="content-h2">本單元流程</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>做什麼</th><th>產出</th></tr>
+          <tr><td>步驟0</td><td>確認 Gemini 設定</td><td>—</td></tr>
+          <tr><td>步驟1</td><td>貼上會議逐字稿，修正 3 輪</td><td>一份合格的會議紀錄</td></tr>
+          <tr><td>步驟2</td><td>請 Gemini 回顧對話，寫成 Skill</td><td>Skill 內容</td></tr>
+          <tr><td>步驟3</td><td>建立到 Gemini</td><td>可用 / 呼叫的 Skill</td></tr>
+          <tr><td>步驟4</td><td>用新素材測試，匯出 Google 文件</td><td>可共用的會議紀錄 Google 文件</td></tr>
+        </table>
+
+        <div class="tip-card note"><strong>情境設定：</strong>你是廠辦租賃公司物業管理部的行政人員，每週要整理物業管理週會的會議紀錄，並放到雲端硬碟讓主管與同仁即時查閱。<br>（公司、人名、數字皆為虛構練習資料）</div>
+        <div class="tip-card warning"><strong>本單元不需要上傳檔案：</strong>練習素材都已放在 Prompt 中，直接複製貼到對話框即可。素材篇幅已控制在短篇，免費帳號也能完成。</div>
+      </div>
+
+      <!-- u9-b -->
+      <div class="sub-block" id="u9-b">
+        <div class="sec-sub-title">步驟0：開工準備</div>
+        <div class="content-note">
+          <ol style="margin-left:20px;">
+            <li>前往 <strong>gemini.google.com</strong>，用公司的 Google 帳號登入</li>
+            <li>點 <strong>設定與說明 → 設定</strong>，確認找得到 <strong>Skills（技能）</strong></li>
+            <li>點 <strong>設定 → 活動</strong>，確認「Gemini 應用程式活動」為<strong>開啟</strong>（關閉時 Gemini 會記不得你建立的 Skill）</li>
+          </ol>
+        </div>
+        <div class="tip-card warning">⚠️ Skills 依帳號陸續開放；公司 Workspace 帳號也可能被管理員關閉部分功能。若設定中找不到 Skills，可先完成步驟1～2，體驗「從工作流程產生 Skill」的過程。</div>
+        <div class="tip-card note"><strong>模型選擇：</strong>有「思考」模型可選時優先使用；免費帳號的思考模型次數有限，用完後改用預設模型也可以完成本單元。</div>
+      </div>
+
+      <!-- u9-c -->
+      <div class="sub-block" id="u9-c">
+        <div class="sec-sub-title">步驟1：先完成真實工作</div>
+        <div class="tip-card info"><strong>為什麼從最簡單的一句話開始？</strong>刻意讓 AI 先做得不夠好，你才會修正。這些修正，就是等一下 Skill 的內容。<br>操作方式：Gemini 點「發起新對話」→ 依序貼上以下 3 輪 Prompt。<strong>全部在同一個對話中完成。</strong></div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 第一輪：最簡單的要求（已含會議逐字稿）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請幫我整理以下這份會議紀錄。
+
+【會議錄音逐字稿】物業管理部週會
+日期：2026年10月6日（星期二）上午9點
+地點：管理中心會議室
+
+王經理：好，我們開始。今天三件事，A棟新租戶進場、B棟貨梯保養、C棟屋頂漏水。先講進場，佩珊。
+佩珊：A棟3樓新租戶明遠精密，裝修施工申請已經送來了，希望10月20號進場施工，進場前要先收施工保證金、設定門禁卡。
+王經理：好，同意10月20號進場，佩珊負責，門禁卡10月17號前設定好。
+建宏：那個，B棟貨梯年度保養，廠商報價比去年高，嗯，大概多兩成，我再跟廠商談一下。我聽說隔壁園區今年都換保養廠商了，不過我不確定啦。
+王經理：貨梯先等報價談完，下週再報告。
+雅琪：最後是C棟屋頂漏水，上週颱風後有兩家倉儲租戶反映，防水廠商說應該下週會來看吧，我再追一下。
+王經理：好，雅琪繼續追。今天就到這邊，散會。（上午9點40分）</div>
+        </div>
+        <div class="content-note"><p><strong>觀察：</strong>有沒有把「我聽說隔壁園區換廠商」寫成事實？有沒有把「貨梯保養」寫成已決定？有沒有自己編防水廠商到場的日期？</p></div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 第二輪：固定格式與用語</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請改用以下固定格式重新整理：
+一、會議基本資訊（會議名稱、日期時間、地點、主持人、出席者）
+二、討論重點（依議題分段條列，標註棟別與樓層）
+三、決議事項（只列主管明確同意的事項）
+四、待辦事項（表格：編號／待辦內容／負責人／期限）
+
+用語要求：
+1. 刪除口語贅字（那個、嗯、啦）
+2. 日期寫成「2026年10月6日（星期二）」，時間寫成「上午9:00」
+3. 人名寫成「姓名＋職稱」，不知道職稱就只寫姓名
+4. 租戶名稱照原文寫，不可簡稱或改名</div>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 第三輪：內容正確與匯出 Google 文件</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">再修正：
+1. 沒有明確日期的，期限標【期限未定】；說法模糊的保留原意並標註，例如「約下週（待確認）」，不可自己推算
+2. 「我再跟廠商談一下」「我再追一下」「下週再報告」是待辦事項，不是決議
+3. 「我聽說」「好像」「不確定」的內容不可寫進會議紀錄
+4. 最後加一段「五、待確認事項」，列出需要會後確認的項目
+5. 這份會議紀錄要存成 Google 文件，放到雲端硬碟給主管與同仁共用：
+   - 標題、段落層級與待辦表格要整理成匯出後不會跑版的格式
+   - 回答最後請提醒我：點「分享與匯出 → 匯出至文件」存成 Google 文件</div>
+        </div>
+
+        <div class="content-h2">✅ 完成後請檢查</div>
+        <table class="data-table">
+          <tr><th>檢查項目</th><th>正確結果</th></tr>
+          <tr><td>決議事項</td><td>只有「A棟3樓明遠精密10月20日進場施工，佩珊負責」與「門禁卡10月17日前設定完成」</td></tr>
+          <tr><td>貨梯保養</td><td>列在待辦（建宏與廠商議價、下週報告），不是決議</td></tr>
+          <tr><td>隔壁園區換廠商</td><td>沒有寫進會議紀錄</td></tr>
+          <tr><td>防水廠商到場</td><td>「約下週（待確認）」，不是 AI 自己編的日期</td></tr>
+          <tr><td>Google 文件</td><td>回答最後有「分享與匯出 → 匯出至文件」的提醒</td></tr>
+        </table>
+        <div class="tip-card note">還有不滿意的地方，<strong>繼續在同一個對話中告訴 AI</strong>。修正得越多，Skill 就越貼近你的工作。</div>
+      </div>
+
+      <!-- u9-d -->
+      <div class="sub-block" id="u9-d">
+        <div class="sec-sub-title">步驟2：回顧對話轉成 Skill</div>
+        <div class="tip-card warning"><strong>一定要在步驟1 的同一個對話中進行！</strong>AI 才看得到你每一輪的修正。</div>
+        <div class="tip-card info"><strong>不用自己設計 Skill 結構：</strong>先請 AI 提問，你用工作經驗回答，再請 AI 產生 Skill。</div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 第一段：請 AI 先提問</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">這次的會議紀錄我很滿意，我想把這個工作做成 Gemini 的 Skill，以後可以重複使用。
+請先回顧我們這整段對話，問我幾個問題，確認：
+1. 這個 Skill 什麼時候該用、什麼時候不該用
+2. 除了這次的逐字稿，還有哪些情況要一併處理
+等我回答後，再產生 Skill。</div>
+        </div>
+        <div class="content-note"><p><strong>回答參考：</strong>會議內容可能是 Google Meet 的逐字稿，也可能是同事的條列筆記；這個 Skill 只整理會議紀錄，不寫租戶通知信；整理完成後要匯出成 Google 文件，放到雲端硬碟共用。</p></div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 回答 AI 的提問（AI 提問後貼入）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">以下是我的回答，如果你問的問題這裡沒有完全對應，也請一併參考：
+
+【什麼時候用】
+- 我貼上會議逐字稿、會議筆記，或說「整理會議紀錄」時使用
+- 物業管理週會、招商租賃會議、跨部門會議、租戶協調會、維護廠商會議都適用
+
+【什麼時候不用】
+- 寫租戶通知信、續約通知函、招租文案、公告時不要使用
+- 只是問問題或閒聊時不要使用
+
+【其他要一併處理的情況】
+- 來源可能是 Google Meet 逐字稿、同事的條列筆記，或幾位同事的筆記合在一起
+- 幾份筆記內容互相矛盾時，兩種說法都列出，標註待確認，不要自己選一個
+- 會議沒有做出任何決定時，決議事項寫「本次會議無決議事項」
+- 主管沒有指定負責人時，標註負責人待定，不要自己指派
+- 發言中有口誤又更正時，採用更正後的內容
+- 提到租戶、棟別、樓層、金額時照原文記錄，不可簡化或改寫
+
+【格式與輸出】
+- 沿用這次確定的五段格式：會議基本資訊、討論重點、決議事項、待辦事項表格、待確認事項
+- 整理成適合匯出 Google 文件的格式，回答最後提醒我點「分享與匯出 → 匯出至文件」
+
+【最重要的原則】
+- 寧可標註待確認，也不要自己推測或補寫
+- 沒有明確日期就不要自己推算，傳聞和不確定的內容不要寫進會議紀錄</div>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 第二段：產生 Skill</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請依 SKILL.md 格式產生這個 Skill，放在一個程式碼區塊中，name 用 meeting-minutes。
+只保留最後確定的做法，不要出現這次會議的人名、日期、租戶和議題。</div>
+        </div>
+
+        <div class="content-h2">記住三件事就好</div>
+        <table class="data-table">
+          <tr><th>要記住的</th><th>原因</th></tr>
+          <tr><td>name 用英文小寫加連字號</td><td>好打、好搬到其他 AI 平台</td></tr>
+          <tr><td>說清楚何時用、何時不用</td><td>AI 靠這段判斷要不要套用</td></tr>
+          <tr><td>不要出現這次的資料</td><td>避免下次整理別的會議被誤導</td></tr>
+        </table>
+      </div>
+
+      <!-- u9-e -->
+      <div class="sub-block" id="u9-e">
+        <div class="sec-sub-title">步驟3：建立到 Gemini</div>
+        <div class="tip-card info"><strong>不用上傳檔案：</strong>直接把 Gemini 產生的內容，複製貼到 Skill 的欄位即可。</div>
+
+        <div class="content-h2">Gemini 產生的內容長這樣</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📄 SKILL.md 的三個部分</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">---
+name: meeting-minutes              ← ① 名稱
+description: 【會議紀錄整理】……    ← ② 說明（何時用、何時不用）
+---
+# 會議紀錄整理                     ← ③ 指示（--- 下方全部內容）
+## 目標
+……</div>
+        </div>
+
+        <div class="content-h2">手動建立 Skill</div>
+        <div class="content-note">
+          <ol style="margin-left:20px;">
+            <li>點 <strong>設定 → Skills → 建立</strong>（選手動建立）</li>
+            <li><strong>名稱欄</strong>：貼上 ① meeting-minutes</li>
+            <li><strong>說明欄</strong>：貼上 ② description 後面的文字</li>
+            <li><strong>指示欄</strong>：貼上 ③ 第二個 --- 下方的全部內容</li>
+            <li>儲存，並確認開關為<strong>開啟</strong></li>
+          </ol>
+        </div>
+        <div class="tip-card note"><strong>建議另存一份：</strong>在雲端硬碟建立「部門 Skill」資料夾，把整段內容存成一份 Google 文件。日後要修改，或共用給部門同事建立同一個 Skill，都可以直接從這份文件複製。</div>
+      </div>
+
+      <!-- u9-f -->
+      <div class="sub-block" id="u9-f">
+        <div class="sec-sub-title">步驟4：新素材測試與匯出 Google 文件</div>
+        <div class="tip-card info"><strong>為什麼要換新素材？</strong>用原本的素材測試，只能證明 Skill「記住了這場會議」。換成<strong>不同部門、不同議題</strong>的會議，才能證明 Skill 真的「學會了規則」。</div>
+
+        <div class="content-h2">① 用 / 叫出 Skill</div>
+        <div class="content-note">
+          <ol style="margin-left:20px;">
+            <li><strong>開新對話</strong></li>
+            <li>輸入 <strong>/</strong>，從清單中<strong>點選</strong> meeting-minutes，確認對話框出現 <strong>Skill 標籤</strong></li>
+            <li>貼上下方 Prompt，送出</li>
+          </ol>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 測試 Prompt（已含新會議逐字稿）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請整理以下會議紀錄。
+
+【會議錄音逐字稿】招商租賃部月會
+日期：2026年10月8日（星期四）下午2點
+地點：線上會議（Google Meet）
+
+林經理：今天討論B棟5樓空置辦公室招租，怡君先報告。
+怡君：招租廣告預計11月3號上架，租屋網站跟公司官網同步。目前有三組客戶詢問，報價每坪大概800……喔不對，是850。
+林經理：好，廣告照這個時間上架，怡君負責。對外報價先以每坪850元為準。
+志豪：帶看用的樣品屋，清潔跟燈具還要再整理，應該月底前可以吧。
+林經理：嗯，樣品屋那個，看誰去跟工務確認一下時程。
+志豪：對了，我聽說附近新蓋的廠辦明年要開幕，租金可能會殺價，還沒看到正式消息。
+林經理：好，今天先這樣。（下午2點45分）</div>
+        </div>
+
+        <div class="content-h2">② 檢查結果</div>
+        <table class="data-table">
+          <tr><th>檢查項目</th><th>正確結果</th></tr>
+          <tr><td>沒有殘留上一場會議</td><td>不出現貨梯、漏水、明遠精密、王經理等內容</td></tr>
+          <tr><td>格式</td><td>和步驟1 一樣：基本資訊、討論重點、決議、待辦表、待確認事項</td></tr>
+          <tr><td>口誤更正</td><td>報價寫每坪 850 元，不出現 800</td></tr>
+          <tr><td>決議事項</td><td>招租廣告 11月3日上架（怡君負責）；對外報價每坪 850 元</td></tr>
+          <tr><td>模糊期限</td><td>樣品屋整理為「約月底前（待確認）」，沒有自己編日期</td></tr>
+          <tr><td>負責人不明</td><td>與工務確認時程的人沒有被亂指派，標註負責人待定</td></tr>
+          <tr><td>傳聞排除</td><td>「附近新廠辦開幕、租金殺價」沒有寫進會議紀錄</td></tr>
+          <tr><td>Google 文件</td><td>回答最後有「分享與匯出 → 匯出至文件」的提醒</td></tr>
+        </table>
+        <div class="tip-card note"><strong>判斷標準：</strong>只貼上逐字稿和一句話，就得到和步驟1 修正 3 輪後差不多的結果，Skill 就建立成功了！</div>
+        <div class="tip-card warning"><strong>連固定格式都不見？</strong>多半是 Skill 沒被叫用：確認設定中的開關已開啟，且輸入 / 後有從清單<strong>點選</strong>（只有純文字 /meeting-minutes 代表沒選到）。</div>
+
+        <div class="content-h2">③ 匯出 Google 文件並共用</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>操作</th></tr>
+          <tr><td>1. 匯出</td><td>在回答下方點 <strong>分享與匯出 → 匯出至文件</strong>，會議紀錄會存成 Google 文件到你的雲端硬碟</td></tr>
+          <tr><td>2. 歸檔</td><td>開啟文件，點標題旁的資料夾圖示，移到部門共用的「會議紀錄」資料夾</td></tr>
+          <tr><td>3. 指派待辦</td><td>在待辦事項中輸入 <strong>@人名</strong>，或對該列加註解並勾選「指派給」，對方會收到通知</td></tr>
+          <tr><td>4. 共用</td><td>右上角 <strong>共用</strong>，加入出席者；主管只需查閱時，權限設為「檢視者」或「加註者」</td></tr>
+        </table>
+        <div class="tip-card info"><strong>為什麼不下載成檔案？</strong>Google 文件放在雲端硬碟，主管和同仁打開連結就是最新版本，修改、留言、指派待辦都在同一份文件中完成，不會再出現「哪一版才是最新的」問題。<br>需要提供給外部廠商或租戶時，再從 <strong>檔案 → 下載 → PDF</strong> 另存即可。</div>
+      </div>
+
+      <!-- u9-g -->
+      <div class="sub-block" id="u9-g">
+        <div class="sec-sub-title">重點整理與參考範例</div>
+
+        <div class="content-h2">帶得走的三個心得</div>
+        <table class="data-table">
+          <tr><th>心得</th><th>說明</th></tr>
+          <tr><td>先做再訂</td><td>Skill 來自真實工作的修正過程，不是憑空寫出來</td></tr>
+          <tr><td>用新素材測試</td><td>換素材才能證明 Skill 學會的是規則，不是記住內容</td></tr>
+          <tr><td>用 / 叫出</td><td>同性質的工作，一句話就能得到同樣品質的成果</td></tr>
+        </table>
+
+        <div class="tip-card info"><strong>Skill 會越用越好：</strong>遇到 Skill 沒處理好的情況，回到對話告訴 AI 哪裡要改，請它更新 Skill，再貼回 Gemini 的 Skill 設定，並同步更新雲端硬碟中的 Skill 文件。反覆溝通、反覆調整，Skill 就會越來越貼近你的工作。</div>
+
+        <div class="content-h2">其他適合做成 Skill 的工作</div>
+        <table class="data-table">
+          <tr><th>工作</th><th>為什麼適合</th><th>搭配的 Google 工具</th></tr>
+          <tr><td>租戶報修回覆信</td><td>語氣、格式固定，每天重複</td><td>Gmail</td></tr>
+          <tr><td>租約到期續約通知函</td><td>欄位固定（租戶、棟別、到期日、續約條件），只換資料</td><td>Google 文件</td></tr>
+          <tr><td>租金收款與空置率週報摘要</td><td>每週同樣的欄位與重點</td><td>Google 試算表</td></tr>
+          <tr><td>招租物件介紹文案</td><td>物件介紹結構與禁用詞固定</td><td>Google 文件／官網</td></tr>
+        </table>
+
+        <div class="content-h2">參考範例：SKILL.md（核對用）</div>
+        <div class="tip-card warning">請先完成自己的版本，再拿這份比對。直接套用會失去「從工作流程建立 Skill」的練習意義。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📄 meeting-minutes / SKILL.md</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">---
+name: meeting-minutes
+description: 【會議紀錄整理】將會議逐字稿或會議筆記，整理成格式固定的會議紀錄，並以 Google 文件共用。當使用者貼上會議內容並要求整理會議紀錄時使用；撰寫租戶通知信、續約通知函、招租文案或公告時請勿使用。
+---
+
+# 會議紀錄整理
+
+## 目標
+把會議逐字稿或筆記，整理成格式統一、內容正確、可直接匯出 Google 文件共用的會議紀錄。
+正確性優先於完整性：寧可標註待確認，也不可自行推測或補寫。
+
+## 執行步驟
+1. 擷取會議基本資訊；資料中沒有的欄位標【未提供】
+2. 刪除口語贅字，保留原意
+3. 依議題整理討論重點，標註棟別與樓層
+4. 只把主管明確同意的事項列為決議
+5. 整理待辦事項，逐項確認負責人與期限
+6. 列出待確認事項
+7. 使用適合匯出 Google 文件的標題層級與表格格式，並在回答最後提醒使用者：點「分享與匯出 → 匯出至文件」
+
+## 情境判斷規則
+- 如果來源是逐字稿，就可從發言判斷主持人與出席者，但須在待確認事項提醒核對
+- 如果來源是多人的條列筆記，就依議題合併；內容互相矛盾時兩種說法都列出，標【內容不一致，待確認】
+- 如果會議沒有任何決議，就寫「本次會議無決議事項」
+- 租戶名稱、棟別、樓層、金額照原文記錄，不可簡化或改寫
+
+## 輸出格式範本
+一、會議基本資訊（會議名稱、日期時間、地點、主持人、出席者）
+二、討論重點
+三、決議事項
+四、待辦事項
+| 編號 | 待辦內容 | 負責人 | 期限 |
+|---|---|---|---|
+五、待確認事項
+
+## 常見錯誤（務必避免）
+1. 自行推算期限
+   ❌ 「應該下週吧」寫成具體日期
+   ⭕ 寫「約下週（待確認）」；完全沒有日期標【期限未定】
+2. 把待辦當成決議
+   ❌ 「我再跟廠商談一下」「下週再報告」列在決議事項
+   ⭕ 列在待辦事項
+3. 寫入傳聞
+   ❌ 「我聽說」「不確定」的內容寫進會議紀錄
+   ⭕ 不寫入
+4. 自行指派負責人
+   ❌ 主管只說「看誰去處理」，卻寫成某人負責
+   ⭕ 標【負責人待定】
+5. 口誤照抄
+   ❌ 「每坪800……喔不對，是850」寫成800
+   ⭕ 採用更正後的數字</div>
+        </div>
+      </div>
+
+    </div><!-- /u9 -->
+
+
   </div><!-- /content-area -->
 
 
@@ -1449,66 +2384,61 @@ Q2 明顯上升，可能原因為何？如何因應？</div>
   <div class="tool-panel">
 
     <div class="tool-section">
-      <div class="tool-section-title">線上講義連結</div>
+      <div class="tool-section-title">課程相關連結</div>
       <a class="tool-btn p1-btn" href="https://hackmd.io/@zoego/CYC" target="_blank">
         <span class="tool-name">線上講義連結</span>
       </a>
-      <div class="tool-section-title">課程範例下載</div>
       <a class="tool-btn p1-btn" href="https://drive.google.com/drive/folders/1EINwZDxg5Dd-gQEnUvpdj1s_gclpk1m4?usp=drive_link" target="_blank">
         <span class="tool-name">課程範例下載</span>
       </a>
+      <a class="tool-btn p1-btn" href="https://www.youtube.com/playlist?list=PLZLZ8KE_C5N0" target="_blank">
+        <span class="tool-name">影片連結</span>
+      </a>
     </div>
-
 
 
     <div class="tool-section">
       <div class="tool-section-title">課程工具</div>
       <a class="tool-btn" href="https://zoego99.github.io/vizgo/index.html" target="_blank">
-        <span class="tool-icon">🖼️</span>
         <span class="tool-name">資訊圖 Prompt 生成器</span>
-        <span class="tool-arrow">↗</span>
+      </a>
+      <a class="tool-btn" href="https://script.google.com/macros/s/AKfycbw7nbIBNrFClroUj4-JwSGoSRy8DoQtY-7VVatMTi0B5VUXrl6ol3_4IkdzanVbP7Wp/exec" target="_blank">
+        <span class="tool-name">雲端圖片直連工具</span>
+      </a>
+    </div>
+    <div class="tool-section">
+      <div class="tool-section-title">SVG 參考網站</div>
+      <a class="tool-btn p1-btn" href="https://plotdb.com/chart/2200/#/" target="_blank">
+        <span class="tool-name">台灣地圖</span>
+      </a>
+      <a class="tool-btn p1-btn" href="https://www.svgrepo.com/" target="_blank">
+        <span class="tool-name">【Icon】SVGrepo</span>
+      </a>
+      <a class="tool-btn p1-btn" href="https://www.magnific.com/zh/%E5%9C%96%E6%A8%99%E9%9B%86/iconfinder" target="_blank">
+        <span class="tool-name">【Icon】免費IconFinder</span>
       </a>
     </div>
 
-    <div class="tool-section">
-      <div class="tool-section-title">頁面導覽</div>
-      <a class="tool-btn p1-btn" href="index.html?unit=CYC">
-        <span class="tool-icon">←</span>
-        <span class="tool-name">P1 情境練習</span>
-      </a>
-    </div>
 
     <div class="tool-section">
       <div class="tool-section-title">AI 工具</div>
       <a class="tool-btn" href="https://gemini.google.com" target="_blank">
-        <span class="tool-icon">✦</span>
         <span class="tool-name">Gemini</span>
-        <span class="tool-arrow">↗</span>
       </a>
       <a class="tool-btn" href="https://chatgpt.com" target="_blank">
-        <span class="tool-icon">◎</span>
         <span class="tool-name">ChatGPT</span>
-        <span class="tool-arrow">↗</span>
       </a>
       <a class="tool-btn" href="https://notebooklm.google.com" target="_blank">
-        <span class="tool-icon">📓</span>
         <span class="tool-name">Notebook</span>
-        <span class="tool-arrow">↗</span>
       </a>
       <a class="tool-btn" href="https://gamma.app" target="_blank">
-        <span class="tool-icon">⚡</span>
         <span class="tool-name">Gamma</span>
-        <span class="tool-arrow">↗</span>
       </a>
-      <a class="tool-btn" href="https://labs.google/fx/zh/tools/flow" target="_blank">
-        <span class="tool-icon">🎬</span>
+      <a class="tool-btn" href="https://flow.google.com/" target="_blank">
         <span class="tool-name">Google Flow（Veo）</span>
-        <span class="tool-arrow">↗</span>
       </a>
       <a class="tool-btn" href="https://www.canva.com" target="_blank">
-        <span class="tool-icon">🎨</span>
         <span class="tool-name">Canva</span>
-        <span class="tool-arrow">↗</span>
       </a>
     </div>
 
