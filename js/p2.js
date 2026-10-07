@@ -25,6 +25,9 @@ function showSub(sec, sub) {
   const subBtn = document.getElementById('btn-' + sub);
   if (subBtn) subBtn.classList.add('active');
 
+  // 3-1. 展開目前章節的子選單（只展開，不收合其他章節）
+  openGroup(sec);
+
   // 4. 記錄狀態
   currentSec = sec;
   currentSub[sec] = sub;
@@ -48,9 +51,42 @@ function showSection(sec) {
   showSub(sec, sub);
 }
 
+/* ===== 左欄摺疊 ===== */
+function openGroup(sec) {
+  const btn = document.getElementById('btn-' + sec);
+  const group = btn && btn.closest('.sec-group');
+  if (group) group.classList.add('open');
+}
+
+function initCollapsibleSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  if (!sidebar) return;
+
+  sidebar.querySelectorAll('.sec-group').forEach(group => {
+    const head = group.querySelector('.sec-group-btn');
+    if (!head || !group.querySelector('.sec-sub-btn')) return;   // 沒有子項目就不摺疊
+    group.classList.add('has-sub');
+
+    const sec = head.id.replace(/^btn-/, '');
+    let collapseAfter = false;
+
+    // 捕獲階段：在原本 onclick 執行前，記錄「是否點的是目前所在且已展開的章節」
+    head.addEventListener('click', () => {
+      collapseAfter = group.classList.contains('open') && currentSec === sec;
+    }, true);
+
+    // 冒泡階段：原本 onclick 執行後，再決定展開或收合
+    head.addEventListener('click', () => {
+      group.classList.toggle('open', !collapseAfter);
+    });
+  });
+
+  sidebar.classList.add('js-collapse');   // 有這個 class，CSS 才會開始摺疊
+}
+
 /* ===== 複製 Prompt（innerText 會抓到使用者編輯後的最新內容） ===== */
 function copyPrompt(btn) {
-  const code = btn.closest('.prompt-card').querySelector('.prompt-code').innerText.replace(/ /g, ' ');
+  const code = btn.closest('.prompt-card').querySelector('.prompt-code').innerText.replace(/\u00a0/g, ' ');
   const done = () => {
     btn.textContent = '✓ 已複製';
     btn.classList.add('copied');
@@ -121,9 +157,10 @@ function initEditablePrompts() {
   });
 }
 
-/* ===== 啟動：先啟用編輯，再顯示第一個章節 ===== */
+/* ===== 啟動：先啟用編輯與摺疊，再顯示第一個章節 ===== */
 document.addEventListener('DOMContentLoaded', () => {
   initEditablePrompts();
+  initCollapsibleSidebar();
   if (!currentSec) {
     const first = document.querySelector('.content-section[id]');
     if (first) showSection(first.id);
