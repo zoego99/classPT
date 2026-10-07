@@ -55,6 +55,7 @@
         <button class="sec-sub-btn" id="btn-u2-d" onclick="showSub('u2','u2-d')">【修】反向查證</button>
         <button class="sec-sub-btn" id="btn-u2-e" onclick="showSub('u2','u2-e')">【骨】大綱校準</button>
         <button class="sec-sub-btn" id="btn-u2-f" onclick="showSub('u2','u2-f')">【生】產出簡報</button>
+        <button class="sec-sub-btn" id="btn-u2-g" onclick="showSub('u2','u2-g')">【生】製作網頁</button>
       </div>
 
       <div class="sec-group">
@@ -81,7 +82,7 @@
         <button class="sec-sub-btn" id="btn-u4-d" >VBA巨集生成</button>
         <button class="sec-sub-btn" id="btn-u4-e" onclick="showSub('u4','u4-e')">數據分析與報告生成</button>
         <button class="sec-sub-btn" id="btn-u4-f" onclick="showSub('u4','u4-f')">動態儀表板(網頁結合)</button>
-        <button class="sec-sub-btn" id="btn-u4-f" onclick="showSub('u4','u4-g')">建立排班表(結合日曆)</button>
+        <button class="sec-sub-btn" id="btn-u4-g" onclick="showSub('u4','u4-g')">建立排班表(結合日曆)</button>
       </div>
 
       <div class="sec-group">
@@ -93,7 +94,7 @@
         <button class="sec-sub-btn" id="btn-u5-b" onclick="showSub('u5','u5-b')">調整下載後簡報</button>
       </div>
 
-      <!-- <div class="sec-group">
+      <div class="sec-group">
         <button class="sec-group-btn" id="btn-u6" onclick="showSection('u6')">
           <span class="sec-num" style="background:var(--sec-6)">6</span>
           圖文生成技巧
@@ -110,7 +111,21 @@
         <button class="sec-sub-btn" id="btn-u7-a" onclick="showSub('u7','u7-a')">操作流程</button>
         <button class="sec-sub-btn" id="btn-u7-b" onclick="showSub('u7','u7-b')">分鏡腳本</button>
         <button class="sec-sub-btn" id="btn-u7-c" onclick="showSub('u7','u7-c')">角色設計圖</button>
-      </div> -->
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u8" onclick="showSection('u8')">
+          <span class="sec-num" style="background:var(--sec-2)">8</span>
+          把工作流程訂成 Skill
+        </button>
+        <button class="sec-sub-btn" id="btn-u8-a" onclick="showSub('u8','u8-a')">學習流程總覽</button>
+        <button class="sec-sub-btn" id="btn-u8-b" onclick="showSub('u8','u8-b')">步驟0 開工準備</button>
+        <button class="sec-sub-btn" id="btn-u8-c" onclick="showSub('u8','u8-c')">步驟1 先完成真實工作</button>
+        <button class="sec-sub-btn" id="btn-u8-d" onclick="showSub('u8','u8-d')">步驟2 回顧對話轉成 Skill</button>
+        <button class="sec-sub-btn" id="btn-u8-e" onclick="showSub('u8','u8-e')">步驟3 建立到 Gemini</button>
+        <button class="sec-sub-btn" id="btn-u8-f" onclick="showSub('u8','u8-f')">步驟4 新素材測試與下載 Word</button>
+        <button class="sec-sub-btn" id="btn-u8-g" onclick="showSub('u8','u8-g')">重點整理與參考範例</button>
+      </div>
 
     </div>
   </div><!-- /sidebar -->
@@ -132,7 +147,7 @@
         <table class="data-table">
           <tr><th>項目</th><th>Gemini（個人化智慧服務）</th><th>ChatGPT（外掛程式）</th></tr>
           <tr><td>設定位置</td><td>點選個人頭像 →「個人化智慧服務」</td><td>設定 →「外掛程式」</td></tr>
-          <tr><td>可連結應用</td><td>Gootgle系列：<br>Gmail、YouTube、Google 相簿、日曆、Workspace 文件</td><td>1. Gootgle系列：Gmail、Google Calendar、Google Drive等<br>2. 其他協作APP：canva、Gamma </td></tr>
+          <tr><td>可連結應用</td><td>Google 系列：<br>Gmail、YouTube、Google 相簿、日曆、Workspace 文件</td><td>1. Google 系列：Gmail、Google Calendar、Google Drive 等<br>2. 其他協作 APP：Canva、Gamma</td></tr>
           <tr><td>預設狀態</td><td>關閉，需自行開啟並指定要連結的應用</td><td>關閉，需自行開啟並指定要連結的應用</td></tr>
           <tr><td>訓練用途</td><td>執行寄信／改行程等動作前，都需要使用者人工確認</td><td>執行寄信／改行程等動作前，都需要使用者人工確認</td></tr>
         </table>
@@ -148,7 +163,7 @@
             <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
           </div>
           <div class="prompt-code">幫我找上星期王老師寄給我的信，看看有沒有提到上課日期，再檢查那一天我的行事曆有沒有空。</div><hr>
-          <div class="prompt-code">找 Google Drive 裡面的 Power Query 課程資料，把最新課綱整理給我。</div><hr>
+          <div class="prompt-code">找 Google Drive 裡面的年節禮盒企劃資料，把最新的禮盒品項組合與報價整理給我。</div><hr>
           <div class="prompt-code">請幫我整理 9 月份的收件匣，並將信件分類，
 針對重要信件草擬簡短中文回覆，提供【正式專業、親切專業、簡短俐落】的語氣。</div><hr>
           <div class="prompt-code"> AI × YouTube 外掛的常見 Prompt 應用情境：
@@ -181,12 +196,12 @@
             <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
           </div>
           <div class="prompt-code">登記 Google日曆的行程：
-- 主題：海外客戶新品導入視訊會議
+- 主題：通路客戶年節檔期提案會議
 - 日期： 2026/10/28
 - 時間： 9點到10點
-- 顏色標記：紅色
+- 顏色標記：綠色
 - 通知： 會議前3天 及 會議前1天
-- 內容：記得帶 【新款導熱凝膠規格書、熱模擬報告與報價單】文件檔案</div>
+- 內容：記得帶 【年節禮盒提案簡報、商品規格表與報價單】文件檔案</div>
         </div>
         <div class="prompt-card">
           <div class="prompt-card-header">
@@ -222,24 +237,24 @@
 
 # 本次會議資訊
 - 文件類型：會議紀錄
-- 會議主題：年底客戶備貨旺季訂單與樣品交期排程會議
+- 會議主題：年節旺季企業禮盒訂單與通路樣品交期排程會議
 - 會議日期：2026 年 10 月 15 日
 
 # 本次會議重點與核心內容
 【請貼上本次會議內容】
-今天主要討論11月到明年1月客戶備貨旺季的訂單、樣品跟出貨時程安排。經理先開場說去年年底伺服器跟電動車客戶的訂單一起湧進來，客製化裁切的單排不進產線，樣品也一直延期，最後兩週大家都在加班，客戶也抱怨交期比我們承諾的14天還久，今年希望提前規劃。
+今天主要討論11月到明年1月年節旺季的禮盒訂單、樣品跟出貨時程安排。經理先開場說去年雙11檔期跟年節企業禮盒的訂單一起湧進來，客製化包裝的單排不進包裝線，通路要的試用樣品也一直延期，最後兩週大家都在加班，客戶也抱怨交期比我們承諾的14天還久，今年希望提前規劃。
 
-業務主任報告說旺季案件大概分三類，一般標準品訂單（導熱矽膠片、導熱膠帶、石墨片這些）、客製化尺寸裁切跟模切的訂單，還有需要研發先做熱模擬分析、再選材打樣的新專案，新專案大概占總數的三成左右，但花的時間會比一般訂單多兩三倍。
+業務主任報告說旺季案件大概分三類，一般通路補貨訂單（洗髮精、潤髮乳、沐浴乳、牙膏這些）、企業客製化禮盒訂單（指定品項組合、印製企業LOGO、附上賀卡），還有通路新品上架需要先提供試用樣品、陳列物跟檔期提案的專案，新品專案大概占總數的三成左右，但花的時間會比一般訂單多兩三倍。
 
-決議大家先確認一下，年底前要出貨的訂單，下單截止日要不要訂在11月20日，超過這個日期才下的訂單要另外安排生產排程，避免大家又拖到最後一週。同仁覺得可以，但建議要提前發 Email 通知客戶跟海外代理商，不要到時候客戶說沒收到通知。
+決議大家先確認一下，年節前要出貨的訂單，下單截止日要不要訂在11月20日，超過這個日期才下的訂單要另外安排包裝跟出貨排程，避免大家又拖到最後一週。同仁覺得可以，但建議要提前發 Email 通知企業客戶跟各通路窗口（量販店、藥妝連鎖、電商平台），不要到時候客戶說沒收到通知。
 
-關於人力分配，研發部目前有5位工程師可以做熱模擬，主任提議新專案跟一般技術詢問要分開指派，新專案的熱模擬由資深的兩位工程師負責，其他三位負責規格書說明、樣品選材跟客戶的技術問題，另外業務助理要協助整理樣品申請跟建檔，不要讓工程師自己一直回信回到手忙腳亂。
+關於人力分配，行銷企劃部目前有5位同仁，主任提議新品檔期提案跟一般通路詢問要分開指派，新品提案由資深的兩位同仁負責，其他三位負責樣品寄送、陳列物準備跟通路的商品問題，另外業務助理要協助整理樣品申請跟建檔，不要讓企劃同仁自己一直回信回到手忙腳亂。
 
-另外有一些海外客戶（美國、日本、韓國、越南），因為時差的關係，常常信件來回好幾天才確認一個規格，這類客戶大概有二三十家，討論要不要安排固定時段的線上技術諮詢，由業務協助登記問題，避免臨時要確認卻找不到工程師。時段初步討論是11月25日到12月10日之間，每週二、四下午安排專人視訊。
+另外有一些合作的電商平台跟連鎖通路窗口，常常要來回好幾封信才確認一個檔期的品項跟價格，這類窗口大概有二三十家，討論要不要安排固定時段的線上檔期說明會，由業務協助登記問題，避免臨時要確認卻找不到負責同仁。時段初步討論是11月25日到12月10日之間，每週二、四下午安排專人視訊。
 
 系統的部分，負責資訊的同仁要先確認ERP訂單系統今年有沒有改版，往年旺季一開始系統常常很慢，建議訂單不要卡在最後幾天才批次輸入，能提早確認的訂單盡量提早處理完畢。
 
-品質這邊品保主管提出，客製化產品出貨前一定要有交叉覆核，導熱係數、厚度跟硬度的檢驗報告完成後，要由另一位同仁確認，不能一個人做完就直接出貨，避免客戶進料檢驗不合格要求退換，這點大家都同意要列為強制流程，不能因為時間趕就省略覆核步驟。
+品質這邊品保主管提出，客製化禮盒出貨前一定要有交叉覆核，品項組合、商品效期、外箱標示跟賀卡內容檢查完成後，要由另一位同仁確認，不能一個人做完就直接出貨，避免客戶收貨發現錯漏或效期太短要求退換，這點大家都同意要列為強制流程，不能因為時間趕就省略覆核步驟。
 
 最後行政面，同仁提到今年要不要比照去年做法，在旺季期間安排加班餐費跟彈性上下班，讓同仁旺季壓力不要太大，這個部分請主任跟經理討論後再公告細節。</div>
         </div>
@@ -255,6 +270,9 @@
         AI 協作四步驟
       </div>
       <div class="tip-card info"><strong>AI 協作心法口訣：</strong>用 AI【問】出溝通盲點、【定】出正確標準、接著拉出邏輯【骨】架、最後才【生】出完美成品！<br>用 AI 問與答得不到想要的答案，問題往往在指令沒說清楚、或急著叫 AI 產出、沒先說清楚邏輯。學會這四個步驟，直接套入簡報／報告／會議記錄的實際場景。</div>
+      <div class="content-img60">
+        <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai243.jpg" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai243.jpg" alt=""></a>
+      </div>
 
       <!-- u2-a -->
       <div class="sub-block" id="u2-a">
@@ -377,7 +395,7 @@
       <!-- u2-d -->
       <div class="sub-block" id="u2-d">
         <div class="sec-sub-title">【修】反向查證</div>
-        <div class="tip-card note"><strong>使用時機：</strong>報告接近定稿前，模擬不同角色的挑剔視角，提前補洞。這就是「紅隊測試（Red Teaming）」：請 AI 扮演「主管／租戶／潛在承租企業」進行檢視，在真正審查者看到之前，先補好洞，大幅提升專業度。</div>
+        <div class="tip-card note"><strong>使用時機：</strong>報告接近定稿前，模擬不同角色的挑剔視角，提前補洞。這就是「紅隊測試（Red Teaming）」：請 AI 扮演「主管／通路客戶／企業採購」進行檢視，在真正審查者看到之前，先補好洞，大幅提升專業度。</div>
         <div class="prompt-card">
           <div class="prompt-card-header">
             <span class="prompt-card-title">📌 Prompt — 反向查證</span>
@@ -442,9 +460,9 @@
 
 # 視覺風格
 - 整體風格：【現代數據儀表板風】
-- 主色：【科技深藍 #12355B】
-- 輔色：【熱能橘 #F07F2F】
-- 底色：【冷霧白 #F4F7FA】
+- 主色：【典雅莓紅 #B03060】
+- 輔色：【暖金 #C9A227】
+- 底色：【柔霧白 #F7F4F2】
 - 複雜數據頁可標註：【便當盒排版法／網格矩陣】
 
 # 輸出限制
@@ -471,7 +489,7 @@
           <tr><th>簡報頁面類型</th><th>建議對應風格</th><th>視覺效果</th></tr>
           <tr><td>封面與大標題頁</td><td>日系清新風格 或 3D 黏土質感</td><td>建立第一眼的好感度與溫暖感</td></tr>
           <tr><td>數據與績效頁</td><td>現代數據儀表板風</td><td>強調 KPI、折線圖與圓餅圖專業度</td></tr>
-          <tr><td>作業流程／步驟頁</td><td>等距視角微縮風格 或 蛇形流程排版</td><td>讓複雜的樣品申請、打樣與出貨流程變得立體且易懂</td></tr>
+          <tr><td>作業流程／步驟頁</td><td>等距視角微縮風格 或 蛇形流程排版</td><td>讓複雜的樣品申請、禮盒包裝與出貨流程變得立體且易懂</td></tr>
           <tr><td>多項重點並陳頁</td><td>便當盒排版法</td><td>模組化切分畫面，資訊豐富但不雜亂</td></tr>
         </table>
         <table class="data-table">
@@ -504,13 +522,116 @@
 
 # 製作需求
 - 視覺風格：【企業專業風】
-- 配色：【科技深藍 #12355B／熱能橘 #F07F2F／冷霧白 #F4F7FA】
+- 配色：【典雅莓紅 #B03060／暖金 #C9A227／柔霧白 #F7F4F2】
 - 任務分工頁使用：【便當盒排版】
 - KPI 頁使用：【數字卡片版型】
 - 左側加入投影片導覽按鈕，可切換各頁
 - 畫面比例：【16:9】
 
 請以程式碼區塊呈現完整程式碼，並提供可預覽的效果。</div>
+        </div>
+      </div>
+
+      <!-- u2-g -->
+      <div class="sub-block" id="u2-g">
+        <div class="sec-sub-title">【生】製作網頁</div>
+        <div class="tip-card info"><strong>AI 也能直接做網站：</strong>不需要會寫程式，只要把「網頁內容、區塊安排、視覺風格」說清楚，AI 就能產出一頁式網頁，例如活動宣傳頁、新品上市頁、互動小測驗。存成 index.html 就能用瀏覽器開啟，也能上傳到網路分享。</div>
+        <table class="data-table">
+          <tr><th>網頁類型</th><th>適用情境</th><th>重點區塊</th></tr>
+          <tr><td>活動宣傳頁</td><td>年節禮盒預購、門市促銷、展覽活動</td><td>主視覺＋倒數計時、方案卡片、報名／洽詢表單</td></tr>
+          <tr><td>新品上市頁</td><td>新品介紹、通路教育訓練</td><td>產品特色、使用步驟、常見問題</td></tr>
+          <tr><td>互動小測驗</td><td>門市 QR Code、社群活動</td><td>題目、計分、個人化結果</td></tr>
+        </table>
+        <table class="data-table">
+          <tr><th>步驟</th><th>做什麼</th><th>工具</th></tr>
+          <tr><td>S1 生成</td><td>貼上 Prompt，產出完整 HTML 程式碼並預覽</td><td>Gemini Canvas／ChatGPT Canvas</td></tr>
+          <tr><td>S2 微調</td><td>指定要改的區塊，不要整頁重寫</td><td>同上</td></tr>
+          <tr><td>S3 發布</td><td>存成 index.html，上傳後取得網址分享</td><td>GitHub Pages／Netlify Drop</td></tr>
+        </table>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt1 — 活動宣傳網頁（年節禮盒企業採購）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請使用 HTML + Tailwind CSS 製作一頁式【年節禮盒企業採購】活動宣傳網頁，可直接用瀏覽器開啟與分享。
+
+# 活動資訊
+- 活動名稱：【年節好禮・企業採購搶先預約】
+- 活動期間：【2026/11/1 – 2027/1/15】
+- 下單截止：【2026/11/20 前下單，享客製化包裝】
+- 禮盒方案：【洗護髮禮盒、沐浴保養禮盒、口腔保健禮盒】
+  每款列出 3 項內容物，價格一律顯示「歡迎洽詢」
+- 加值服務：【滿 50 盒免費印製企業 LOGO 賀卡／可指定日期配送】
+
+# 網頁區塊
+1. 主視覺：主標題、副標題、距離下單截止的倒數計時、「立即洽詢」按鈕
+2. 禮盒方案：3 張方案卡片
+3. 客製化流程：4 步驟（選擇禮盒 → 確認數量與賀卡 → 樣品確認 → 指定日期出貨）
+4. 常見問題：5 題，可點擊展開／收合
+5. 洽詢表單：公司名稱、聯絡人、電話、預估數量、需求說明
+   （按下送出後顯示感謝訊息即可，不需要後端）
+6. 頁尾：聯絡資訊【請填入】
+
+# 視覺風格
+- 風格：溫暖年節質感、簡潔現代
+- 主色：【典雅莓紅 #B03060】
+- 輔色：【暖金 #C9A227】
+- 底色：【柔霧白 #F7F4F2】
+- 圖片先用 Emoji 或 SVG 圖示代替，不要連結外部圖片
+- 響應式設計，手機瀏覽也要清楚好按
+
+# 輸出
+- 單一 index.html 檔案，Tailwind CSS 使用 CDN
+- 以程式碼區塊輸出完整程式碼，並提供預覽</div>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt2 — 互動小測驗網頁（洗護髮類型）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請使用 HTML + Tailwind CSS + JavaScript 製作【找出你的洗護髮類型】互動小測驗網頁，適合放在門市 QR Code 或社群活動使用。
+
+# 測驗內容
+- 共 5 題單選題，主題包含：頭皮出油程度、髮尾乾燥程度、染燙頻率、洗髮頻率、在意的香氣類型
+- 依作答計分，結果分為 4 種類型：
+  清爽控油型／滋潤修護型／染燙護色型／香氛舒壓型
+- 每種結果顯示：類型名稱、特徵說明、3 點保養建議、適合的產品類型（不寫品牌名稱）
+
+# 功能
+- 一次顯示一題，上方有進度條
+- 可回上一題、可重新測驗
+- 結果頁加入「複製結果」按鈕，方便貼到社群分享
+
+# 視覺風格
+- 風格：清新活潑、圓角卡片、帶一點泡泡元素
+- 主色：【薄荷綠 #3BB8A0】
+- 輔色：【蜜桃粉 #F4A7A0】
+- 底色：【奶油白 #FFFBF5】
+- 響應式設計，以手機瀏覽為優先
+
+# 輸出
+- 單一 index.html 檔案，不需後端即可運作
+- 以程式碼區塊輸出完整程式碼，並提供預覽</div>
+        </div>
+
+        <div class="tip-card warning"><strong>微調技巧：</strong>網頁產出後要修改，請說清楚「改哪裡、哪裡不動」，避免 AI 整頁重寫，把原本滿意的部分也改掉。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt3 — 局部修改網頁</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請在目前的網頁基礎上修改，不要重新設計整頁：
+
+需要修改：
+- 【例如：禮盒方案改成 4 款，新增「身體保養禮盒」】
+- 【例如：主視覺的按鈕改成暖金色】
+
+保持不變：
+- 其他區塊的內容、配色與排版
+
+修改後請輸出完整程式碼，方便我直接覆蓋原檔。</div>
         </div>
       </div>
     </div><!-- /u2 -->
@@ -1450,14 +1571,14 @@
 
         <div class="prompt-card">
           <div class="prompt-card-header"><span class="prompt-card-title">📌 利用Gamma製作簡報</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-          <div class="prompt-code">使用 Agent 製作「2026 散熱產業與熱管理趨勢」簡報。
+          <div class="prompt-code">使用 Agent 製作「年底客製化訂單與樣品交期整合計畫」簡報。
 
 請自行上網搜尋最新年度資料，整理以下內容，並標示資料來源：
-- AI 伺服器與高效能運算的散熱挑戰（氣冷 vs 液冷、高功率晶片熱密度）
-- 熱門應用領域（電動車與儲能、5G 網通、無人機、航太衛星）
-- 導熱介面材料趨勢（導熱凝膠、相變化材料、石墨烯、低揮發材料）
-- 綠色永續趨勢（ESG 要求、再生能源、低碳製程）
-- 散熱小知識：導熱係數（W/m·K）是什麼？為什麼選對材料很重要
+- 年底旺季時程（雙11、耶誕、跨年至農曆春節前的備貨與出貨高峰）
+- 旺季常見瓶頸（客製化訂單排程、樣品打樣延遲、通路備貨壓力、物流塞車）
+- 客製化需求趨勢（企業禮盒、聯名包裝、小量多樣、指定日期配送）
+- 數位工具應用（ERP 訂單管理、AI 需求預測、線上樣品申請與進度追蹤）
+- 交期管理小知識：下單截止日、交叉覆核、提前通知客戶與通路的重要性
 
 約 8～10 頁，風格輕鬆、活潑、圖像化。
 </div>
@@ -1554,8 +1675,8 @@
       </div>
       <table class="data-table">
         <tr><th>類型</th><th>特點</th><th>適用例如</th></tr>
-        <tr><td>資訊圖像（Infographic）</td><td>強調資訊傳達／圖形、Icon、插圖／結構清楚</td><td>導熱材料選型步驟說明／業務成果報告配圖／散熱方案懶人包</td></tr>
-        <tr><td>行銷海報（Poster）</td><td>強調吸睛（視覺）／情境照片、插畫／CTA（行動呼籲）</td><td>新品上市宣傳／展覽與研討會邀請／熱模擬諮詢活動海報</td></tr>
+        <tr><td>資訊圖像（Infographic）</td><td>強調資訊傳達／圖形、Icon、插圖／結構清楚</td><td>產品使用步驟說明／新品成果報告配圖／門市與通路教育訓練懶人包</td></tr>
+        <tr><td>行銷海報（Poster）</td><td>強調吸睛（視覺）／情境照片、插畫／CTA（行動呼籲）</td><td>新品上市宣傳／通路促銷活動／年節禮盒企業採購海報</td></tr>
       </table>
       <div class="content-h2">Prompt 撰寫原則</div>
       <div class="tip-card info">Nano Banana 不是單純生圖，是「圖像＋文字＋排版＝完整設計稿」，<br>關鍵三元素：<strong>文字內容</strong>（講什麼）、<strong>視覺風格</strong>（長什麼樣）、<strong>版面配置</strong>（怎麼排）。<br><strong>CTA = Call To Action（行動呼籲 / 引導行動）：</strong>看完之後，要你做什麼？，即：CTA 就是讓對方下一步要做的事</div>
@@ -1571,30 +1692,30 @@
         <div class="sec-sub-title">資訊圖（Infographic）</div>
         <div class="prompt-card">
           <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 主題：導熱片挑選三步驟，散熱穩定不當機！</span>
+            <span class="prompt-card-title">📌 主題：洗護髮正確三步驟，秀髮柔順有光澤！</span>
             <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
           </div>
           <div class="prompt-code">請生成一張【橫向 16:9】資訊圖，已包含完整排版與視覺設計。
 
 **主視覺 / 構圖內容描述**：
-畫面右側整齊並列三個圓角的便當盒格子（Bento Box），格子內分別帶有平面幾何向量感（SVG Icon）的「熱源與間隙量測」「導熱係數選型」「使用環境驗證」插圖。畫面左側由角色「專業散熱技術顧問」手持平板進行說明，視線自然專注地望向右側的便當盒格子，形成流暢的視覺引導。
+畫面右側整齊並列三個圓角的便當盒格子（Bento Box），格子內分別帶有平面幾何向量感（SVG Icon）的「溫水預洗」「起泡按摩頭皮」「潤髮護理沖淨」插圖。畫面左側由角色「專業美髮保養顧問」手持平板進行說明，視線自然專注地望向右側的便當盒格子，形成流暢的視覺引導。
 
 **視覺風格**：
-採用「極簡向量插畫風格」風格（精準資訊視覺化）。幾何平整、線條簡潔，適合企業產品說明與教育訓練。
-- 專業穩重風（線條俐落，色調沉穩，適合B2B產業與技術說明）
+採用「極簡向量插畫風格」風格（精準資訊視覺化）。幾何平整、線條簡潔，適合產品說明與門市教育訓練。
+- 清新質感風（線條俐落，色調柔和，適合美妝保養與日用品說明）
 - 莫蘭迪色調（低飽和、灰調柔和，優雅沉穩）
 
 **版面配置**：
 採用「便當盒排版（模組化分割）」與「左右對比」排版方式。
 
 **文字設計細節**：
-- 主標題：導熱片挑選三步驟，散熱穩定不當機！
-- 副標題：選對材料，產品效能更持久
+- 主標題：洗護髮正確三步驟，秀髮柔順有光澤！
+- 副標題：洗對方法，頭皮清爽更健康
 - 重點資訊：
-  1. 量測間隙：確認發熱元件與散熱器之間的間隙厚度，選擇可完整填補的導熱片厚度。
-  2. 選對係數：依元件功率選擇合適的導熱係數（W/m·K），高功率元件選用高導熱規格。
-  3. 驗證環境：確認使用溫度、絕緣需求與低揮發要求，並先索取樣品實測驗證。
-- CTA：選對導熱材料，散熱問題一次解決！
+  1. 溫水預洗：先以溫水充分沖濕頭髮約 1 分鐘，帶走表面髒污與油脂。
+  2. 起泡按摩：洗髮精先在掌心搓揉起泡，再用指腹輕柔按摩頭皮，避免指甲抓傷。
+  3. 潤髮沖淨：潤髮乳塗抹於髮中至髮尾，避開頭皮，停留片刻後徹底沖淨。
+- CTA：正確洗護，每天都是好髮日！
 
 **輸出規格要求**：
 - 比例為橫向 16:9（投影片、簡報背景圖）
@@ -1607,27 +1728,27 @@
         <div class="sec-sub-title">海報（Poster）</div>
         <div class="prompt-card">
           <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 主題：高功率散熱挑戰，熱模擬諮詢搶先預約</span>
+            <span class="prompt-card-title">📌 主題：年節禮盒企業採購，搶先預約</span>
             <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
           </div>
           <div class="prompt-code">請生成一張【海報 4:3】宣導海報，已包含完整排版與視覺設計。
 
 **視覺風格**：
-採用「極簡向量插畫風格」風格（精準資訊視覺化）。幾何平整、線條簡潔，適合企業與B2B產業。
+採用「極簡向量插畫風格」風格（精準資訊視覺化）。幾何平整、線條簡潔，適合企業採購與通路推廣。
 - 平面插畫上色（柔和漸層，乾淨線條）
-- 專業形象為主（形象專業且穩重，具備親切且具信賴感的調性）
+- 溫暖質感為主（形象專業且親切，帶有年節送禮的溫度與信賴感）
 - 圓潤有機造型（所有卡片與文字背景底襯皆採流暢大圓角設計，避免尖銳稜角）
 
 **簡報母片設定**：
 - AI 自動優化排版（不刻意留白，文字內容與角色比例均勻分佈）。
 
 **文字設計細節**：
-- 主標題：高功率散熱挑戰，熱模擬諮詢搶先預約
-- 副標題：專人顧問，客製化散熱方案
+- 主標題：年節禮盒企業採購，搶先預約
+- 副標題：客製化包裝，送禮更有心意
 - 重點資訊：
-  - 核心提醒：設計初期導入熱模擬，避免後期改版重工。
-  - 特色摘要：最快 14 天交期／無最小訂購量／客製化生產
-- CTA：立即預約熱模擬諮詢，新品開發不卡關！
+  - 核心提醒：提早下單，確保交期與客製包裝不延誤。
+  - 特色摘要：多款組合任選／企業專屬賀卡客製／指定日期配送
+- CTA：立即洽詢企業團購方案，年節送禮不卡關！
 
 **輸出規格要求**：
 - 比例為海報  4:3（橫式海報、宣傳單）
@@ -1643,7 +1764,7 @@
         <span class="sec-badge" style="background:var(--sec-1)">7</span>
         輕影片製作
       </div>
-      <div class="sec-desc">📌 工作情境：產品介紹影片、散熱方案說明、展會宣傳短片，過去需要拍攝、剪輯、找廠商，時間與預算門檻都高。透過 Veo，將文字描述或簡報內容轉為短影音素材。</div>
+      <div class="sec-desc">📌 工作情境：產品介紹影片、新品使用教學、通路促銷短片，過去需要拍攝、剪輯、找廠商，時間與預算門檻都高。透過 Veo，將文字描述或簡報內容轉為短影音素材。</div>
       <div class="tip-card note"><strong>關鍵觀念：</strong>Veo 生成的是「素材與片段」，不是一鍵完成的成品——每個鏡頭都需要人工檢視、決定要不要重新生成。把它當作起點，搭配簡單剪輯，就能快速產出可用的影片。</div>
 
       <!-- u7-a -->
@@ -1651,7 +1772,7 @@
         <div class="sec-sub-title">操作流程</div>
         <table class="data-table">
           <tr><th>工具</th><th>用途</th></tr>
-          <tr><td>Veo（Google Flow）</td><td><a href="https://labs.google/fx/zh/tools/flow" target="_blank">https://labs.google/fx/zh/tools/flow ↗</a></td></tr>
+          <tr><td>Veo（Google Flow）</td><td><a href="https://flow.google.com/" target="_blank">https://flow.google.com/</a></td></tr>
           <tr><td>線上剪輯工具</td><td>Canva</td></tr>
         </table>
         <table class="data-table">
@@ -1668,42 +1789,52 @@
         <div class="sec-sub-title">分鏡腳本 Prompt</div>
 
         <div class="content-h2">S1：分鏡 — AI提供影片腳本</div>
-        <div class="tip-card info">📌 主題示範：電子產品散熱宣導（吉祥物「冰冰」）</div>
+        <div class="tip-card info">📌 主題示範：洗護髮正確保養宣導（吉祥物「泡泡」）</div>
         <div class="prompt-card">
           <div class="prompt-card-header"><span class="prompt-card-title">📌 詢問AI — 產出分鏡腳本</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-          <div class="prompt-code">你是一位擁有20年資歷、擅長【輕鬆詼諧廣告 / 親切溫馨、企業品牌形象質感】風格的導演。
+          <div class="prompt-code">你是一位擅長生活風格廣告與科技產品短片的導演。
 
-請幫我構思一支 20 秒、2 個分鏡的短影片腳本。
+請幫我構思一支 30 秒、3 個分鏡（各 10 秒）的智慧家電宣傳廣告腳本，主題為：
 
-【主題】：用吉祥物親切提醒，電子產品散熱做得好，效能穩定不當機
-【主角】：[請填入，或留空由你自由發揮——主角可以是人物、擬人化物件、或寵物]
+「下班回家後，智慧家電讓忙碌的一天重新變美好。」
 
-若主題或主角留空，其餘故事情節、品牌名稱、產品內容請你自由發揮。
+【情形1：我提供設定，請你補完故事情節】
+- 產品內容：[例如：智慧電視、冰箱、洗衣機、乾衣機、空氣清淨機、智慧螢幕、掃地機器人等，其餘由你自由發揮]
+- 故事情節主軸：[例如：主角結束忙碌的一天回到家，原本疲憊又手忙腳亂，但透過智慧家電的協助，生活節奏逐漸變輕鬆，最後享受舒適自在的居家時光；其餘情節細節仍請你自由發揮]
+- 主角：[例如：剛下班的上班族、雙薪夫妻、小家庭、與寵物同住的年輕人，請填入；或留空由你決定——主角可以是人物、寵物，或擬人化家電角色]
 
-整體方向（不論主題主角是否留空，皆須遵守）：
-- 調性活潑、有記憶點、帶點幽默感，避免走溫馨療癒路線
-- 風格：色彩鮮明、節奏明快、電影感
-- 比例：16:9
+【情形2：產品內容、故事情節、主角皆由你自由發揮】
+（若採用情形1，請忽略此段）
 
-請將以下三個部分，整合放在「同一個」Markdown 程式碼區塊內輸出（只要一個區塊，不要分開輸出、也不要用表格）：
+不論採用哪種情形，皆須遵守以下方向：
+- 整體調性要活潑、輕鬆、明快，帶有「生活變得更順手、更舒服」的節奏感，避免走過度溫馨療癒或過度煽情路線
+- 風格：色彩鮮明、畫面乾淨、節奏明快、有記憶點，可使用暖白、柔橘、清新藍灰、明亮木質色等居家科技感配色
+- 比例：16:9（本次課程統一採橫式，上課投影／螢幕放大時畫面較完整）
 
-【第一部分：共用設定（草案）】
-- 整體視覺風格與色調（一句話描述，之後每一格畫面都要維持一致）
-- 主角外觀描述草案（外型、特徵、配件——這只是文字初稿，正式外觀將在生成角色設計圖後定稿）
-- 商品外觀描述草案（若腳本中有具體商品：形狀、顏色、包裝/標籤樣式、品牌LOGO位置；若無商品可省略此項）
-- 場景設定草案（若多個分鏡發生在同一場景：地點、時間、光線氛圍；若每格場景都不同可省略此項）
+請先獨立輸出一段「共用設定（草案）」，內容包含：
+- 整體視覺風格與色調（用一句話描述，之後每一格畫面都要維持一致）
+- 主角的外觀描述草案（外型、特徵、配件——這只是文字初稿，實際外觀將在生成角色設計圖後才正式定稿）
+- 商品的外觀描述草案（如果腳本中有具體家電產品：外型、顏色、介面樣式、品牌標示位置——若無明確單一商品可省略此項）
+- 場景的設定草案（如果多個分鏡發生在同一場景：地點、時間、光線氛圍——若每格分鏡場景都不同可省略此項）
 
-【第二部分：分鏡1】
-依序列出：秒數、畫面描述、AI生圖Prompt(中文)、AI生影Prompt(中文)、旁白(VO)、主角的口白
-- AI生圖／生影Prompt只需描述「這一格的動作與場景」，不用重複共用設定內容
+請把「共用設定（草案）」這段獨立放在一個 Markdown 程式碼區塊內輸出，方便我直接整段複製。
 
-【第三部分：分鏡2】
-依序列出同樣六個欄位，最後加上這句提示：
-「請依照上方已定案的共用設定（視覺風格、主角外觀、商品外觀、場景設定維持不變，不需要重新輸出這段文字），生成分鏡的畫面。」
+接著，用表格輸出 3 個分鏡，讓我了解整個故事內容，欄位包含：分鏡編號、秒數、畫面描述、AI生圖Prompt(中文)、AI生影Prompt(中文)、旁白(VO)、主角的口白
+
+接著，再請把 3 個分鏡依序合併放在「同一個」Markdown 程式碼區塊內輸出（不要用表格），每個分鏡依序包含：分鏡編號、秒數、畫面描述、AI生圖Prompt(中文)、AI生影Prompt(中文)、旁白(VO)、主角的口白
+
+每一個分鏡之間，請用一行「---」分隔開來。
 
 注意：
-- 全程使用中文，不要出現英文
-- 共用設定只在第一部分完整輸出一次，第二、三部分不重複輸出</div>
+- AI 生圖 Prompt 跟 AI 生影 Prompt 都只需要描述「這一格的動作與場景」，不用重複寫共用設定的內容，共用設定會另外整段加在最前面使用
+- 全程請使用中文，不要出現英文
+- 全片採溫暖明亮的高品質 3D 動畫短片美學，避免過暗陰影與低調光線，畫面需保持清晰明亮
+
+
+- 人物為半寫實卡通造型，五官圓潤自然、表情生動，比例接近正常人比例，不使用誇張大頭 Q 版造型，具備精緻 3D 建模與動畫電影渲染質感
+- 整體光線明亮清晰、色調溫暖柔和；即使是夜晚或室內場景，也要用柔和均勻的補光讓主體與背景都清楚可見
+- 構圖自然、有故事性，如同從一部高品質 3D 動畫電影中擷取的畫面，鏡頭運動與動作維持連續運鏡，符合慣性與物理規律
+- 故事情節請盡量形成清楚的三段式節奏：「生活困擾 → 智慧家電協助 → 輕鬆享受成果」</div>
         </div>
       </div>
       <!-- u7-c -->
@@ -1715,11 +1846,11 @@
           <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 【角色設計圖】 (人物/擬人化物件/寵物皆適用)</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
           <div class="prompt-code">請把剛才「共用設定」段落中主角的外觀描述,轉換成一段「角色設計圖」的生圖Prompt:
 
-一張角色設計資料圖(character design sheet),,純白色背景,【依共用設定填入畫風描述】。
+一張角色設計資料圖(character design sheet),純白色背景,【依共用設定填入畫風描述】。
 
 畫面上方並排呈現同一個主角的4個角度:正面、四十五度側面、正側面、背面,每個角度姿勢自然、比例一致、外觀完全相同(依共用設定的外觀描述),各角度下方標註中文小標籤。
 
-畫面下方並排呈現同一主角的6種表情或狀態特寫(依主角性格挑選最適合的情緒,例如:開心、好奇、驚訝、委屈、興奮、放鬆;若主角是無生命的擬人化物件,可改用「狀態」呈現,例如:發光、震動、冒煙、閃爍),每個特寫下方標註中文標籤,五官或表面特徵維持與全身視圖相同設定。
+畫面下方並排呈現同一主角的6種表情或狀態特寫(依主角性格挑選最適合的情緒,例如:開心、好奇、驚訝、委屈、興奮、放鬆;若主角是無生命的擬人化物件,可改用「狀態」呈現,例如:發光、冒泡、彈跳、閃爍),每個特寫下方標註中文標籤,五官或表面特徵維持與全身視圖相同設定。
 
 整體排版工整,如同專業角色設定資料,線條乾淨、無多餘陰影或背景雜訊,方便直接作為後續AI繪圖與動態影片的一致性參考圖使用。</div>
         </div>
@@ -1732,11 +1863,11 @@
 
 畫面並排呈現同一件商品的3個角度:正面、四十五度側面、背面(如果商品形狀特殊,可改成最能呈現特徵的角度,例如俯視),每個角度比例一致、包裝上的文字與圖案完全相同,各角度下方標註中文小標籤。
 
-如果商品有開闔或使用狀態的差異(例如瓶蓋打開/合起、內容物展示),請在下方加一組特寫呈現,並標註中文說明。
+如果商品有開闔或使用狀態的差異(例如壓頭按壓/鎖住、瓶蓋打開/合起、內容物質地展示),請在下方加一組特寫呈現,並標註中文說明。
 
 整體排版工整,如同專業產品型錄用的規格圖,光線均勻、無多餘陰影或背景雜訊,方便直接作為後續AI繪圖與動態影片中商品外觀的一致性參考。</div>
         </div>
-        <div class="content-h2">S2：角色設計圖 - 場景</div>
+        <div class="content-h2">S3：角色設計圖 - 場景</div>
         <div class="prompt-card">
           <div class="prompt-card-header"><span class="prompt-card-title">📌  Prompt — 【場景設定圖】 (如果多個分鏡共用同一場景)</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
           <div class="prompt-code">請把「共用設定」中提到的場景描述,轉換成一段「場景設定圖」的生圖Prompt:
@@ -1751,6 +1882,378 @@
 
     </div><!-- /u7 -->
 
+    <!-- ======== U8: 把工作流程訂成 Skill ======== -->
+    <div class="content-section" id="u8">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-2)">8</span>
+        把工作流程訂成 Skill
+      </div>
+      <div class="sec-desc">📌 建議步驟：
+        <ol>
+          <li>用 Gemini 實際整理一次會議紀錄</li>
+          <li>請 AI 回顧對話，把「修正過程」變成可重複使用的 Skill。</li>
+          <li>之後只要輸入 <strong>/</strong> 叫出 Skill，一句話就能得到同樣品質的成果。</li>
+        </ol>
+      </div>
+
+      <!-- u8-a -->
+      <div class="sub-block" id="u8-a">
+        <div class="sec-sub-title">學習流程總覽</div>
+        <div class="tip-card info"><strong>核心觀念：</strong>Skill 不是憑空寫出來的。先把工作真的做一次，過程中你對 AI 的每一次糾正，就是 Skill 最有價值的內容。</div>
+        <div class="content-img80">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai242.jpg" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai242.jpg" alt=""></a>
+        </div>
+
+        <div class="content-h2">Prompt、Skill、/ 的關係</div>
+        <table class="data-table">
+          <tr><th>名稱</th><th>是什麼</th><th>比喻</th></tr>
+          <tr><td>Prompt</td><td>當次對話中給 AI 的指令，用完就結束</td><td>口頭交辦</td></tr>
+          <tr><td>Skill</td><td>存起來、可重複使用的工作規範（名稱＋適用情境＋指示）</td><td>作業 SOP</td></tr>
+          <tr><td>/</td><td>在 Gemini 輸入框叫出 Skill 的方式</td><td>翻開 SOP 照著做</td></tr>
+        </table>
+
+        <div class="content-h2">本單元流程</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>做什麼</th><th>產出</th></tr>
+          <tr><td>步驟0</td><td>確認 Gemini 設定</td><td>—</td></tr>
+          <tr><td>步驟1</td><td>貼上會議逐字稿，修正 3 輪</td><td>一份合格的會議紀錄</td></tr>
+          <tr><td>步驟2</td><td>請 Gemini 回顧對話，寫成 Skill</td><td>Skill 內容</td></tr>
+          <tr><td>步驟3</td><td>建立到 Gemini</td><td>可用 / 呼叫的 Skill</td></tr>
+          <tr><td>步驟4</td><td>用新素材測試，下載 Word</td><td>會議紀錄 Word 檔</td></tr>
+        </table>
+
+        <div class="tip-card note"><strong>情境設定：</strong>你是日用品公司業務部的行政人員，每週要整理業務週會的會議紀錄。<br>（公司、人名、數字皆為虛構練習資料）</div>
+        <div class="tip-card warning"><strong>本單元不需要上傳檔案：</strong>練習素材都已放在 Prompt 中，直接複製貼到對話框即可。素材篇幅已控制在短篇，免費帳號也能完成。</div>
+      </div>
+
+      <!-- u8-b -->
+      <div class="sub-block" id="u8-b">
+        <div class="sec-sub-title">步驟0：開工準備</div>
+        <div class="content-note">
+          <ol style="margin-left:20px;">
+            <li>前往 <strong>gemini.google.com</strong> 並登入</li>
+            <li>點 <strong>設定與說明 → 設定</strong>，確認找得到 <strong>Skills（技能）</strong></li>
+            <li>點 <strong>設定 → 活動</strong>，確認「Gemini 應用程式活動」為<strong>開啟</strong>（關閉時 Gemini 會記不得你建立的 Skill）</li>
+          </ol>
+        </div>
+        <div class="tip-card warning">⚠️ Skills 依帳號陸續開放，若設定中找不到 Skills，可先完成步驟1～2，體驗「從工作流程產生 Skill」的過程。</div>
+        <div class="tip-card note"><strong>模型選擇：</strong>有「思考」模型可選時優先使用；免費帳號的思考模型次數有限，用完後改用預設模型也可以完成本單元。</div>
+      </div>
+
+      <!-- u8-c -->
+      <div class="sub-block" id="u8-c">
+        <div class="sec-sub-title">步驟1：先完成真實工作</div>
+        <div class="tip-card info"><strong>為什麼從最簡單的一句話開始？</strong>刻意讓 AI 先做得不夠好，你才會修正。這些修正，就是等一下 Skill 的內容。<br>操作方式：Gemini 點「發起新對話」→ 依序貼上以下 3 輪 Prompt。<strong>全部在同一個對話中完成。</strong></div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 第一輪：最簡單的要求（已含會議逐字稿）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請幫我整理以下這份會議紀錄。
+
+【會議錄音逐字稿】業務部週會
+日期：2026年10月6日（星期二）上午10點
+地點：3樓會議室
+
+陳經理：好，我們開始。今天三件事，年節禮盒提案、新品試用包、量販店缺貨。先講禮盒，怡婷。
+怡婷：量販店說年節禮盒提案要10月20號前交，今年想推保養禮盒跟口腔保健禮盒兩款。
+陳經理：好，兩款都提，怡婷負責，10月20號前交。
+志明：那個，新品洗髮精試用包，藥妝通路想要5,000包，行銷那邊說預算還沒確定，我再問一下。嗯，我聽說對手今年發了一萬包，不過我不確定啦。
+陳經理：試用包先等預算確認，下週再報告。
+雅婷：最後是量販店缺貨，上週有3家門市潤髮乳缺貨，物流說應該下週會補吧，我再追一下。
+陳經理：好，雅婷繼續追。今天就到這邊，散會。（上午10點40分）</div>
+        </div>
+        <div class="content-note"><p><strong>觀察：</strong>有沒有把「我聽說對手發了一萬包」寫成事實？有沒有把「試用包」寫成已決定？有沒有自己編補貨日期？</p></div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 第二輪：固定格式與用語</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請改用以下固定格式重新整理：
+一、會議基本資訊（會議名稱、日期時間、地點、主持人、出席者）
+二、討論重點（依議題分段條列）
+三、決議事項（只列主管明確同意的事項）
+四、待辦事項（表格：編號／待辦內容／負責人／期限）
+
+用語要求：
+1. 刪除口語贅字（那個、嗯、啦）
+2. 日期寫成「2026年10月6日（星期二）」，時間寫成「上午10:00」
+3. 人名寫成「姓名＋職稱」，不知道職稱就只寫姓名</div>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 第三輪：內容正確與產生 Word</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">再修正：
+1. 沒有明確日期的，期限標【期限未定】；說法模糊的保留原意並標註，例如「約下週（待確認）」，不可自己推算
+2. 「我再問一下」「我再追一下」「下週再報告」是待辦事項，不是決議
+3. 「我聽說」「好像」「不確定」的內容不可寫進會議紀錄
+4. 最後加一段「五、待確認事項」，列出需要會後確認的項目
+5. 整理完成後，產生 Word 檔（.docx）讓我下載
+6. 如果無法產生 Word 檔，請在回答最後提醒我：點「分享與匯出 → 匯出至文件」轉成 Google 文件，再從「檔案 → 下載 → Microsoft Word」下載</div>
+        </div>
+
+        <div class="content-h2">✅ 完成後請檢查</div>
+        <table class="data-table">
+          <tr><th>檢查項目</th><th>正確結果</th></tr>
+          <tr><td>決議事項</td><td>只有「兩款禮盒都提案，怡婷負責，10月20日前交」</td></tr>
+          <tr><td>試用包</td><td>列在待辦（志明確認預算），不是決議</td></tr>
+          <tr><td>對手一萬包</td><td>沒有寫進會議紀錄</td></tr>
+          <tr><td>補貨期限</td><td>「約下週（待確認）」，不是 AI 自己編的日期</td></tr>
+          <tr><td>Word 檔</td><td>出現可下載的 .docx；或回答最後有轉成 Google 文件的提醒</td></tr>
+        </table>
+        <div class="tip-card note">還有不滿意的地方，<strong>繼續在同一個對話中告訴 AI</strong>。修正得越多，Skill 就越貼近你的工作。</div>
+      </div>
+
+      <!-- u8-d -->
+      <div class="sub-block" id="u8-d">
+        <div class="sec-sub-title">步驟2：回顧對話轉成 Skill</div>
+        <div class="tip-card warning"><strong>一定要在步驟1 的同一個對話中進行！</strong>AI 才看得到你每一輪的修正。</div>
+        <div class="tip-card info"><strong>不用自己設計 Skill 結構：</strong>先請 AI 提問，你用工作經驗回答，再請 AI 產生 Skill。</div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 第一段：請 AI 先提問</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">這次的會議紀錄我很滿意，我想把這個工作做成 Gemini 的 Skill，以後可以重複使用。
+請先回顧我們這整段對話，問我幾個問題，確認：
+1. 這個 Skill 什麼時候該用、什麼時候不該用
+2. 除了這次的逐字稿，還有哪些情況要一併處理
+等我回答後，再產生 Skill。</div>
+        </div>
+        <div class="content-note"><p><strong>回答參考：</strong>會議內容可能是逐字稿，也可能是同事的條列筆記；這個 Skill 只整理會議紀錄，不寫 Email；整理完成後要產生 Word 檔，產生不了時提醒我改用 Google 文件下載。</p></div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌  回答 AI 的提問（AI 提問後貼入）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">以下是我的回答，如果你問的問題這裡沒有完全對應，也請一併參考：
+
+【什麼時候用】
+- 我貼上會議逐字稿、會議筆記，或說「整理會議紀錄」時使用
+- 部門週會、跨部門會議、專案會議、廠商或通路洽談會議都適用
+
+【什麼時候不用】
+- 寫 Email、企劃書、新聞稿、文章摘要時不要使用
+- 只是問問題或閒聊時不要使用
+
+【其他要一併處理的情況】
+- 來源可能是逐字稿，也可能是同事的條列筆記，或幾位同事的筆記合在一起
+- 幾份筆記內容互相矛盾時，兩種說法都列出，標註待確認，不要自己選一個
+- 會議沒有做出任何決定時，決議事項寫「本次會議無決議事項」
+- 主管沒有指定負責人時，標註負責人待定，不要自己指派
+- 發言中有口誤又更正時，採用更正後的內容
+
+【格式與輸出】
+- 沿用這次確定的五段格式：會議基本資訊、討論重點、決議事項、待辦事項表格、待確認事項
+- 整理完成後產生 Word 檔讓我下載；無法產生時，提醒我改用「分享與匯出 → 匯出至文件」轉成 Google 文件再下載
+
+【最重要的原則】
+- 寧可標註待確認，也不要自己推測或補寫
+- 沒有明確日期就不要自己推算，傳聞和不確定的內容不要寫進會議紀錄</div>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 第二段：產生 Skill</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請依 SKILL.md 格式產生這個 Skill，放在一個程式碼區塊中，name 用 meeting-minutes。
+只保留最後確定的做法，不要出現這次會議的人名、日期和議題。</div>
+        </div>
+
+        <div class="content-h2">記住三件事就好</div>
+        <table class="data-table">
+          <tr><th>要記住的</th><th>原因</th></tr>
+          <tr><td>name 用英文小寫加連字號</td><td>好打、好搬到其他 AI 平台</td></tr>
+          <tr><td>說清楚何時用、何時不用</td><td>AI 靠這段判斷要不要套用</td></tr>
+          <tr><td>不要出現這次的資料</td><td>避免下次整理別的會議被誤導</td></tr>
+        </table>
+      </div>
+
+      <!-- u8-e -->
+      <div class="sub-block" id="u8-e">
+        <div class="sec-sub-title">步驟3：建立到 Gemini</div>
+        <div class="tip-card info"><strong>不用上傳檔案：</strong>直接把 Gemini 產生的內容，複製貼到 Skill 的欄位即可。</div>
+
+        <div class="content-h2">Gemini 產生的內容長這樣</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📄 SKILL.md 的三個部分</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">---
+name: meeting-minutes              ← ① 名稱
+description: 【會議紀錄整理】……    ← ② 說明（何時用、何時不用）
+---
+# 會議紀錄整理                     ← ③ 指示（--- 下方全部內容）
+## 目標
+……</div>
+        </div>
+
+        <div class="content-h2">手動建立 Skill</div>
+        <div class="content-note">
+          <ol style="margin-left:20px;">
+            <li>點 <strong>設定 → Skills → 建立</strong>（選手動建立）</li>
+            <li><strong>名稱欄</strong>：貼上 ① meeting-minutes</li>
+            <li><strong>說明欄</strong>：貼上 ② description 後面的文字</li>
+            <li><strong>指示欄</strong>：貼上 ③ 第二個 --- 下方的全部內容</li>
+            <li>儲存，並確認開關為<strong>開啟</strong></li>
+          </ol>
+        </div>
+        <div class="tip-card note"><strong>建議另存一份：</strong>可以的話，把整段內容貼到記事本或雲端文件保存。日後要修改或分享給同事時，就不用重新產生。</div>
+      </div>
+
+      <!-- u8-f -->
+      <div class="sub-block" id="u8-f">
+        <div class="sec-sub-title">步驟4：新素材測試與下載 Word</div>
+        <div class="tip-card info"><strong>為什麼要換新素材？</strong>用原本的素材測試，只能證明 Skill「記住了這場會議」。換成<strong>不同部門、不同議題</strong>的會議，才能證明 Skill 真的「學會了規則」。</div>
+
+        <div class="content-h2">① 用 / 叫出 Skill</div>
+        <div class="content-note">
+          <ol style="margin-left:20px;">
+            <li><strong>開新對話</strong></li>
+            <li>輸入 <strong>/</strong>，從清單中<strong>點選</strong> meeting-minutes，確認對話框出現 <strong>Skill 標籤</strong></li>
+            <li>貼上下方 Prompt，送出</li>
+          </ol>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 測試 Prompt（已含新會議逐字稿）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請整理以下會議紀錄。
+
+【會議錄音逐字稿】行銷部新品上市會議
+日期：2026年10月8日（星期四）下午2點
+地點：線上會議
+
+林經理：今天討論新款護手霜上市，佳穎先報告。
+佳穎：社群貼文預計11月3號開始發，一週三則。網紅合作有三位在談，費用每位大概3萬……喔不對，是5萬。
+林經理：好，社群照這個排程，佳穎負責。網紅先談兩位就好。
+宏達：門市陳列海報，設計還要改一版，應該月底前可以吧。
+林經理：嗯，海報那個，看誰去跟設計公司確認一下時程。
+宏達：對了，我聽說百貨公司明年可能要漲櫃位費，還沒看到正式通知。
+林經理：好，今天先這樣。（下午2點45分）</div>
+        </div>
+
+        <div class="content-h2">② 檢查結果</div>
+        <table class="data-table">
+          <tr><th>檢查項目</th><th>正確結果</th></tr>
+          <tr><td>沒有殘留上一場會議</td><td>不出現禮盒、試用包、陳經理等內容</td></tr>
+          <tr><td>格式</td><td>和步驟1 一樣：基本資訊、討論重點、決議、待辦表、待確認事項</td></tr>
+          <tr><td>口誤更正</td><td>網紅費用寫每位約 5 萬，不出現 3 萬</td></tr>
+          <tr><td>決議事項</td><td>社群依排程發文（佳穎負責）；網紅先洽談兩位</td></tr>
+          <tr><td>模糊期限</td><td>海報為「約月底前（待確認）」，沒有自己編日期</td></tr>
+          <tr><td>負責人不明</td><td>確認海報時程的人沒有被亂指派，標註待確認</td></tr>
+          <tr><td>傳聞排除</td><td>「百貨漲櫃位費」沒有寫進會議紀錄</td></tr>
+        </table>
+        <div class="tip-card note"><strong>判斷標準：</strong>只貼上逐字稿和一句話，就得到和步驟1 修正 3 輪後差不多的結果，Skill 就建立成功了！</div>
+        <div class="tip-card warning"><strong>連固定格式都不見？</strong>多半是 Skill 沒被叫用：確認設定中的開關已開啟，且輸入 / 後有從清單<strong>點選</strong>（只有純文字 /meeting-minutes 代表沒選到）。</div>
+
+        <div class="content-h2">③ 下載 Word 檔（兩種方式）</div>
+        <div class="tip-card info"><strong>為什麼有兩種方式？</strong>Gemini 有時會直接產生 Word 檔，有時不會。Skill 裡已寫好「產生不了就提醒你改用 Google 文件」，所以不論哪一種情況，都拿得到 Word 檔。</div>
+        <table class="data-table">
+          <tr><th>情況</th><th>操作</th></tr>
+          <tr><td>方式一：回答中出現 Word 檔案卡片</td><td>點檔案卡片直接下載 .docx</td></tr>
+          <tr><td>方式二：沒有出現檔案</td><td>
+            1. 在回答下方點 <strong>分享與匯出 → 匯出至文件</strong><br>
+            2. 開啟 Google 文件（已存到你的雲端硬碟）<br>
+            3. 點 <strong>檔案 → 下載 → Microsoft Word（.docx）</strong></td></tr>
+        </table>
+        <div class="tip-card note"><strong>電腦不能下載檔案時：</strong>方式二的 Google 文件可以直接線上編輯、分享給同事，一樣能完成工作。</div>
+      </div>
+
+      <!-- u8-g -->
+      <div class="sub-block" id="u8-g">
+        <div class="sec-sub-title">重點整理與參考範例</div>
+
+        <div class="content-h2">帶得走的三個心得</div>
+        <table class="data-table">
+          <tr><th>心得</th><th>說明</th></tr>
+          <tr><td>先做再訂</td><td>Skill 來自真實工作的修正過程，不是憑空寫出來</td></tr>
+          <tr><td>用新素材測試</td><td>換素材才能證明 Skill 學會的是規則，不是記住內容</td></tr>
+          <tr><td>用 / 叫出</td><td>同性質的工作，一句話就能得到同樣品質的成果</td></tr>
+        </table>
+
+        <div class="tip-card info"><strong>Skill 會越用越好：</strong>遇到 Skill 沒處理好的情況，回到對話告訴 AI 哪裡要改，請它更新 Skill，再貼回 Gemini 的 Skill 設定。反覆溝通、反覆調整，Skill 就會越來越貼近你的工作。</div>
+
+        <div class="content-h2">其他適合做成 Skill 的工作</div>
+        <table class="data-table">
+          <tr><th>工作</th><th>為什麼適合</th></tr>
+          <tr><td>客戶詢問信回覆</td><td>語氣、格式固定，每天重複</td></tr>
+          <tr><td>通路銷售週報摘要</td><td>每週同樣的欄位與重點</td></tr>
+          <tr><td>新品介紹文案</td><td>品牌用語與禁用詞固定</td></tr>
+        </table>
+
+        <div class="content-h2">參考範例：SKILL.md（核對用）</div>
+        <div class="tip-card warning">請先完成自己的版本，再拿這份比對。直接套用會失去「從工作流程建立 Skill」的練習意義。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📄 meeting-minutes / SKILL.md</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">---
+name: meeting-minutes
+description: 【會議紀錄整理】將會議逐字稿或會議筆記，整理成格式固定的會議紀錄，並產生 Word 檔。當使用者貼上會議內容並要求整理會議紀錄時使用；撰寫 Email、企劃書或一般文章摘要時請勿使用。
+---
+
+# 會議紀錄整理
+
+## 目標
+把會議逐字稿或筆記，整理成格式統一、內容正確、可直接分享的會議紀錄。
+正確性優先於完整性：寧可標註待確認，也不可自行推測或補寫。
+
+## 執行步驟
+1. 擷取會議基本資訊；資料中沒有的欄位標【未提供】
+2. 刪除口語贅字，保留原意
+3. 依議題整理討論重點
+4. 只把主管明確同意的事項列為決議
+5. 整理待辦事項，逐項確認負責人與期限
+6. 列出待確認事項
+7. 產生 Word 檔（.docx）供下載；無法產生時，在回答最後提醒使用者：點「分享與匯出 → 匯出至文件」轉成 Google 文件，再從「檔案 → 下載 → Microsoft Word」下載
+
+## 情境判斷規則
+- 如果來源是逐字稿，就可從發言判斷主持人與出席者，但須在待確認事項提醒核對
+- 如果來源是多人的條列筆記，就依議題合併；內容互相矛盾時兩種說法都列出，標【內容不一致，待確認】
+- 如果會議沒有任何決議，就寫「本次會議無決議事項」
+
+## 輸出格式範本
+一、會議基本資訊（會議名稱、日期時間、地點、主持人、出席者）
+二、討論重點
+三、決議事項
+四、待辦事項
+| 編號 | 待辦內容 | 負責人 | 期限 |
+|---|---|---|---|
+五、待確認事項
+
+## 常見錯誤（務必避免）
+1. 自行推算期限
+   ❌ 「應該下週吧」寫成具體日期
+   ⭕ 寫「約下週（待確認）」；完全沒有日期標【期限未定】
+2. 把待辦當成決議
+   ❌ 「我再問一下」「下週再報告」列在決議事項
+   ⭕ 列在待辦事項
+3. 寫入傳聞
+   ❌ 「我聽說」「不確定」的內容寫進會議紀錄
+   ⭕ 不寫入
+4. 自行指派負責人
+   ❌ 主管只說「看誰去處理」，卻寫成某人負責
+   ⭕ 標【負責人待定】
+5. 口誤照抄
+   ❌ 「3萬……喔不對，是5萬」寫成3萬
+   ⭕ 採用更正後的數字</div>
+        </div>
+      </div>
+
+    </div><!-- /u8 -->
+
+
 
   </div><!-- /content-area -->
 
@@ -1760,23 +2263,30 @@
 
     <div class="tool-section">
       <div class="tool-section-title">課程範例下載</div>
-      <a class="tool-btn p1-btn" href="https://drive.google.com/drive/folders/1dWmjeLj7E4Frr2qhXCb-aTtNAvRulefP?usp=sharing" target="_blank">
+      <a class="tool-btn p1-btn" href="https://drive.google.com/drive/folders/1q2cT8G4i-nm4CVZ40TVBJBWarxZC3MBb?usp=drive_link" target="_blank">
         <span class="tool-name">課程範例下載</span>
-      </a>
-    </div>
-    <div class="tool-section">
-      <div class="tool-section-title">頁面導覽</div>
-      <a class="tool-btn p1-btn" href="index.html?unit=tglobal">
-        <span class="tool-icon">←</span>
-        <span class="tool-name">P1 情境練習</span>
       </a>
     </div>
     <div class="tool-section">
       <div class="tool-section-title">課程工具</div>
       <a class="tool-btn" href="https://zoego99.github.io/vizgo/index.html" target="_blank">
-        <span class="tool-icon">🖼️</span>
         <span class="tool-name">資訊圖 Prompt 生成器</span>
-        <span class="tool-arrow">↗</span>
+      </a>
+      <a class="tool-btn p1-btn" href="https://zoego99.github.io/ex/WordPaste.html" target="_blank">
+        <span class="tool-name">AI 回覆模擬</span>
+      </a>
+    </div>
+
+    <div class="tool-section">
+      <div class="tool-section-title">SVG 參考網站</div>
+      <a class="tool-btn p1-btn" href="https://plotdb.com/chart/2200/#/" target="_blank">
+        <span class="tool-name">台灣地圖</span>
+      </a>
+      <a class="tool-btn p1-btn" href="https://www.svgrepo.com/" target="_blank">
+        <span class="tool-name">【Icon】SVGrepo</span>
+      </a>
+      <a class="tool-btn p1-btn" href="https://www.magnific.com/zh/%E5%9C%96%E6%A8%99%E9%9B%86/iconfinder" target="_blank">
+        <span class="tool-name">【Icon】免費IconFinder</span>
       </a>
     </div>
     <div class="tool-section">
@@ -1801,7 +2311,7 @@
         <span class="tool-name">Gamma</span>
         <span class="tool-arrow">↗</span>
       </a>
-      <!-- <a class="tool-btn" href="https://labs.google/fx/zh/tools/flow" target="_blank">
+      <a class="tool-btn" href="https://labs.google/fx/zh/tools/flow" target="_blank">
         <span class="tool-icon">🎬</span>
         <span class="tool-name">Google Flow（Veo）</span>
         <span class="tool-arrow">↗</span>
@@ -1810,7 +2320,7 @@
         <span class="tool-icon">🎨</span>
         <span class="tool-name">Canva</span>
         <span class="tool-arrow">↗</span>
-      </a> -->
+      </a>
     </div>
 
 
