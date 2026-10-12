@@ -120,22 +120,24 @@ let activeFw = null;
 
 /* ===== Nav：依 ?unit= 參數切換 P2 連結 ===== */
 const UNIT_MAP = {
-  aviation: { label: "航空警察局 課程 Prompt", href: "course-aviation.html" ,note:""},
+  AAAAAA:  { label: "0_共版 課程 Prompt",     href: "0共版.html"  },
   general:  { label: "通用版 課程 Prompt",     href: "course-general.html"  },
+  aviation: { label: "航空警察局 課程 Prompt", href: "course-aviation.html" ,note:""},
   st:  { label: "巨興醫學科技 課程 Prompt",     href: "course-st.html"  },
   ai202606:  { label: "新莊全方位AI24 課程 Prompt",     href: "course-ai202606.html"  },
   ai202607:  { label: "東區全方位AI24 課程 Prompt",     href: "course-ai202607.html"  },
   nchuAI:  { label: "中部科學園區 AI 課程 Prompt",     href: "course-nchu-AI.html"  },
-  zyxelAI:  { label: "合勤科技 Excel × AI 課程 Prompt",     href: "course-zyxel-AI.html"  },
+  zyxelAI:  { label: "合勤科技 Excel × AI 課程 Prompt",     href: "course-zyxel-AI.html" , note:"!!AI+Excel (完整版) + 外掛軟體結合" },
   hztax:  { label: "和眾會計師事務所 Prompt",     href: "course-hztax.html"  },
   ohher:  { label: "長諄國際(服飾) Prompt",     href: "course-ohher.html"  },
-  kltb:  { label: "基隆市稅務局｜AI Prompt",     href: "course-kltb.html"  },
+  kltb:  { label: "基隆市稅務局｜AI Prompt",     href: "course-kltb.html" ,note:"AI+試算表" },
   brave:  { label: "英象公司｜Office + AI Prompt",     href: "course-brave.html" ,   note:"26/9/30,AI+google,Excel、Gamma、生圖、生影" },
-  brave:  { label: "英象公司｜Office + AI Prompt",     href: "brave.html"  },
+  brave:  { label: "英象公司｜Office + AI Prompt",     href: "brave.html" ,note:"AI+Excel(簡單版)" },
   CYC:  { label: "振業化工廠｜Google + AI Prompt",     href: "CYC.html" ,   note:"26/10/1,AI+google,廠辦租賃" },
   tglobal:  { label: "高柏科技｜Office + AI Prompt",     href: "tglobal.html" ,   note:"26/10/2,AI+google,Excel、Gamma" },
-  LG:  { label: "LG｜Office + AI Prompt",     href: "LG.html"  },
+  LG:  { label: "LG｜Office + AI Prompt",     href: "LG.html" ,   note:"26/10/2,AI+google,Excel、Gamma" },
   moa1:  { label: "農業部｜ODF(Writer) + AI Prompt",     href: "moa1.html"  ,   note:"26/10/6,ODF(Writer)+AI,公部門" },
+  dunlop:  { label: "登路普｜Excel + AI Prompt",     href: "dunlop.html"  ,   note:"26/10/6,Excel+Google表單,公部門" },
   /* 新單位在此新增一行 */
 };
 

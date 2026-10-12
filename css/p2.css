@@ -6,6 +6,7 @@
 
 html, body { overflow: hidden; }
 
+
 /* ===== 三欄版面 ===== */
 .app-layout {
   position: fixed;
@@ -234,6 +235,8 @@ html, body { overflow: hidden; }
   background: var(--white);
 }
 .content-img img { width: 100%; display: block; object-fit: cover; }
+.content-img100 img { width: 100%; display: block; object-fit: cover; margin:0 auto 20px; }
+.content-img90 img { width: 90%; display: block; object-fit: cover; margin:0 auto 20px; }
 .content-img80 img { width: 80%; display: block; object-fit: cover; margin:0 auto 20px; }
 .content-img70 img { width: 70%; display: block; object-fit: cover; margin:0 auto 20px; }
 .content-img60 img { width: 60%; display: block; object-fit: cover; margin:0 auto 20px; }
@@ -484,3 +487,4 @@ html, body { overflow: hidden; }
 .tool-btn.p1-btn:hover { background: var(--indigo); color: #fff; border-color: var(--indigo); }
 
 .no-wrap {  white-space: nowrap;}
+

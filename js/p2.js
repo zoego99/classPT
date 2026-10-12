@@ -4,12 +4,14 @@
 
 /* ===== 狀態 ===== */
 let currentSec = null;
+let spyLock = false;     // 程式自動捲動時，暫停「捲動偵測」
 const currentSub = {};   // 記錄每個章節目前的子項，章節 id 不限（s1…、u1… 皆可）
 
 /* ===== 核心：切換章節 + 子項目 ===== */
 function showSub(sec, sub) {
   const secEl = document.getElementById(sec);
   if (!secEl) return;   // 找不到章節就不動作，避免整支程式中斷
+  spyLock = true;       // 切換期間暫停捲動偵測，避免切章節時按鈕亮錯
 
   // 1. 所有章節隱藏，只顯示目標章節
   document.querySelectorAll('.content-section').forEach(el => el.classList.remove('active'));
@@ -33,11 +35,59 @@ function showSub(sec, sub) {
   currentSub[sec] = sub;
 
   // 5. 捲動到子區塊（用 setTimeout 確保 DOM 已顯示再捲）
-  setTimeout(() => {
-    const el = document.getElementById(sub);
-    const area = document.getElementById('contentArea');
-    if (el && area) area.scrollTop = el.offsetTop - 12;
-  }, 0);
+  setTimeout(() => scrollToSub(secEl, sub), 0);
+}
+
+/* ===== 捲動到子區塊 =====
+   修正 1：原本用 offsetTop，算的是相對「最近的定位元素」的距離，
+           不一定是中欄，所以會捲到錯的位置（看起來像顯示上一個或下一個子項）。
+           改用畫面實際位置計算，和 CSS 怎麼寫無關。
+   修正 2：章節最後一個子區塊內容較短時，捲不到頂端，畫面停在前一個子項。
+           依需要在章節底部補空白，讓每個子項都能捲到最上方。 */
+function scrollToSub(secEl, sub) {
+  const el = document.getElementById(sub);
+  const area = document.getElementById('contentArea');
+  if (!el || !area) return;
+
+  // 補足章節底部空白（只補「剛好需要」的高度）
+  secEl.style.paddingBottom = '';
+  const blocks = secEl.querySelectorAll('.sub-block[id]');
+  const last = blocks[blocks.length - 1];
+  if (last) {
+    const lastTop = last.getBoundingClientRect().top;
+    const secBottom = secEl.getBoundingClientRect().bottom;
+    const need = area.clientHeight - (secBottom - lastTop) - 12;
+    if (need > 0) secEl.style.paddingBottom = need + 'px';
+  }
+
+  spyLock = true;
+  area.scrollTop += el.getBoundingClientRect().top - area.getBoundingClientRect().top - 12;
+  setTimeout(() => { spyLock = false; }, 100);
+}
+
+/* ===== 修正 3：手動捲動時，左側按鈕跟著目前看到的子項亮起 ===== */
+function initScrollSpy() {
+  const area = document.getElementById('contentArea');
+  if (!area) return;
+  area.addEventListener('scroll', () => {
+    if (spyLock || !currentSec) return;
+    const secEl = document.getElementById(currentSec);
+    if (!secEl) return;
+    const areaTop = area.getBoundingClientRect().top;
+    let current = null;
+    secEl.querySelectorAll('.sub-block[id]').forEach(b => {
+      if (b.getBoundingClientRect().top - areaTop <= 60) current = b.id;
+    });
+    if (!current) {
+      const first = secEl.querySelector('.sub-block[id]');
+      current = first ? first.id : null;
+    }
+    if (!current || current === currentSub[currentSec]) return;
+    currentSub[currentSec] = current;
+    document.querySelectorAll('.sec-sub-btn').forEach(b => b.classList.remove('active'));
+    const btn = document.getElementById('btn-' + current);
+    if (btn) btn.classList.add('active');
+  }, { passive: true });
 }
 
 /* ===== 點第一層章節鈕：跳到該章節目前（或第一個）子項 ===== */
@@ -161,6 +211,7 @@ function initEditablePrompts() {
 document.addEventListener('DOMContentLoaded', () => {
   initEditablePrompts();
   initCollapsibleSidebar();
+  initScrollSpy();
   if (!currentSec) {
     const first = document.querySelector('.content-section[id]');
     if (first) showSection(first.id);
