@@ -138,6 +138,7 @@ const UNIT_MAP = {
   LG:  { label: "LG｜Office + AI Prompt",     href: "LG.html" ,   note:"26/10/2,AI+google,Excel、Gamma" },
   moa1:  { label: "農業部｜ODF(Writer) + AI Prompt",     href: "moa1.html"  ,   note:"26/10/6,ODF(Writer)+AI,公部門" },
   dunlop:  { label: "登路普｜Excel + AI Prompt",     href: "dunlop.html"  ,   note:"26/10/6,Excel+Google表單,公部門" },
+  gjunBD202610:  { label: "北認｜ AI Prompt",     href: "course-ai202610.html"  ,   note:"26/10/17,gjunBD202610 北認" },
   /* 新單位在此新增一行 */
 };
 

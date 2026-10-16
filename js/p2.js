@@ -7,11 +7,11 @@ let currentSec = null;
 let spyLock = false;     // 程式自動捲動時，暫停「捲動偵測」
 const currentSub = {};   // 記錄每個章節目前的子項，章節 id 不限（s1…、u1… 皆可）
 
-/* ===== 核心：切換章節 + 子項目 ===== */
-function showSub(sec, sub) {
+/* ===== 核心：切換章節（sub 為 null 時只顯示章節，不選子項） ===== */
+function activate(sec, sub) {
   const secEl = document.getElementById(sec);
-  if (!secEl) return;   // 找不到章節就不動作，避免整支程式中斷
-  spyLock = true;       // 切換期間暫停捲動偵測，避免切章節時按鈕亮錯
+  if (!secEl) return null;   // 找不到章節就不動作，避免整支程式中斷
+  spyLock = true;            // 切換期間暫停捲動偵測，避免切章節時按鈕亮錯
 
   // 1. 所有章節隱藏，只顯示目標章節
   document.querySelectorAll('.content-section').forEach(el => el.classList.remove('active'));
@@ -22,10 +22,12 @@ function showSub(sec, sub) {
   const secBtn = document.getElementById('btn-' + sec);
   if (secBtn) secBtn.classList.add('active');
 
-  // 3. 第二層按鈕
+  // 3. 第二層按鈕（只顯示章節時，不亮任何子項）
   document.querySelectorAll('.sec-sub-btn').forEach(b => b.classList.remove('active'));
-  const subBtn = document.getElementById('btn-' + sub);
-  if (subBtn) subBtn.classList.add('active');
+  if (sub) {
+    const subBtn = document.getElementById('btn-' + sub);
+    if (subBtn) subBtn.classList.add('active');
+  }
 
   // 3-1. 展開目前章節的子選單（只展開，不收合其他章節）
   openGroup(sec);
@@ -33,9 +35,31 @@ function showSub(sec, sub) {
   // 4. 記錄狀態
   currentSec = sec;
   currentSub[sec] = sub;
+  return secEl;
+}
 
-  // 5. 捲動到子區塊（用 setTimeout 確保 DOM 已顯示再捲）
+/* ===== 點第二層子項：顯示章節並捲到子區塊 ===== */
+function showSub(sec, sub) {
+  const secEl = activate(sec, sub);
+  if (!secEl) return;
+  // 用 setTimeout 確保 DOM 已顯示再捲
   setTimeout(() => scrollToSub(secEl, sub), 0);
+}
+
+/* ===== 點第一層章節鈕：顯示章節，捲到「單元標題」 =====
+   修正：原本會直接跳到該章節的子項（看起來像跳到下一個細項），
+         改為停在單元標題，讓單元說明與圖片先被看到。 */
+function showSection(sec) {
+  const secEl = activate(sec, null);
+  if (!secEl) return;
+  setTimeout(() => {
+    const area = document.getElementById('contentArea');
+    if (!area) return;
+    secEl.style.paddingBottom = '';
+    spyLock = true;
+    area.scrollTop += secEl.getBoundingClientRect().top - area.getBoundingClientRect().top - 12;
+    setTimeout(() => { spyLock = false; }, 100);
+  }, 0);
 }
 
 /* ===== 捲動到子區塊 =====
@@ -78,27 +102,13 @@ function initScrollSpy() {
     secEl.querySelectorAll('.sub-block[id]').forEach(b => {
       if (b.getBoundingClientRect().top - areaTop <= 60) current = b.id;
     });
-    if (!current) {
-      const first = secEl.querySelector('.sub-block[id]');
-      current = first ? first.id : null;
-    }
-    if (!current || current === currentSub[currentSec]) return;
+    // 還在單元標題區（尚未捲到第一個子項）時，不亮任何子項
+    if (current === currentSub[currentSec]) return;
     currentSub[currentSec] = current;
     document.querySelectorAll('.sec-sub-btn').forEach(b => b.classList.remove('active'));
-    const btn = document.getElementById('btn-' + current);
+    const btn = current && document.getElementById('btn-' + current);
     if (btn) btn.classList.add('active');
   }, { passive: true });
-}
-
-/* ===== 點第一層章節鈕：跳到該章節目前（或第一個）子項 ===== */
-function showSection(sec) {
-  let sub = currentSub[sec];
-  if (!sub) {
-    const secEl = document.getElementById(sec);
-    const first = secEl && secEl.querySelector('.sub-block[id]');
-    sub = first ? first.id : sec + '-a';
-  }
-  showSub(sec, sub);
 }
 
 /* ===== 左欄摺疊 ===== */

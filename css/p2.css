@@ -418,7 +418,8 @@ html, body { overflow: hidden; }
   background: var(--white);
   border-radius: var(--radius);
   overflow: hidden;
-  border: 1px solid var(--border);
+  border: 1px solid var(--blue);
+  /* border: 1px solid var(--border); */
 }
 .data-table th {
   background: var(--indigo-light);
@@ -426,11 +427,14 @@ html, body { overflow: hidden; }
   font-weight: 700;
   padding: 9px 12px;
   text-align: left;
-  border-bottom: 1px solid var(--border);
+  /* border-bottom: 1px solid var(--border); */
+  border: 1px solid var(--blue);
 }
 .data-table td {
   padding: 8px 12px;
-  border-bottom: 1px solid var(--border);
+  border: 1px solid var(--blue);
+  /* border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border); */
   color: var(--text-muted);
   vertical-align: top;
   line-height: 1.6;

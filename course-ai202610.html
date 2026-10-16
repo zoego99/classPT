@@ -1,0 +1,4225 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 北認｜ AI 課程 Prompt</title>
+<link rel="icon" href="./logo2.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/shared.css">
+<link rel="stylesheet" href="css/p2.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <a class="nav-brand" href="index.html?unit=gjunBD202610">
+    <div class="nav-logo"><img src="./logo.svg" alt="" class="logo"></div>
+    <div class="nav-text">
+      <span class="nav-title"> 北認｜ AI 課程 Prompt</span>
+      <span class="nav-sub">心怡｜zoego99@gmail.com</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="index.html?unit=gjunBD202610">← 情境練習</a>
+    <a href="course-ai202610.html" class="active">【北認】課程 Prompt</a>
+  </div>
+</nav>
+
+<!-- ===== 三欄版面 ===== -->
+<div class="app-layout">
+
+  <!-- ===== 左欄：導覽 ===== -->
+  <div class="sidebar">
+    <div class="sidebar-header">課程單元</div>
+    <div class="sidebar-scroll">
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u1" onclick="showSection('u1')">
+          <span class="sec-num" style="background:var(--sec-1)">1</span>
+          AI 助理
+        </button>
+        <button class="sec-sub-btn" id="btn-u1-a" onclick="showSub('u1','u1-a')">常見 AI 工具比較</button>
+        <button class="sec-sub-btn" id="btn-u1-b" onclick="showSub('u1','u1-b')">GPT 個人化設定</button>
+        <button class="sec-sub-btn" id="btn-u1-c" onclick="showSub('u1','u1-c')">Gemini 資料控管</button>
+        <button class="sec-sub-btn" id="btn-u1-d" onclick="showSub('u1','u1-d')">給 Gemini 的指令</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u2" onclick="showSection('u2')">
+          <span class="sec-num" style="background:var(--sec-2)">2</span>
+          個人化與連結應用
+        </button>
+        <button class="sec-sub-btn" id="btn-u2-a" onclick="showSub('u2','u2-a')">連結應用程式比較</button>
+        <button class="sec-sub-btn" id="btn-u2-b" onclick="showSub('u2','u2-b')">情境＋Prompt 練習</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u3" onclick="showSection('u3')">
+          <span class="sec-num" style="background:var(--sec-3)">3</span>
+          AI 協作四步驟
+        </button>
+        <button class="sec-sub-btn" id="btn-u3-a" onclick="showSub('u3','u3-a')">【問】釐清思路</button>
+        <button class="sec-sub-btn" id="btn-u3-b" onclick="showSub('u3','u3-b')">【定】報告生成</button>
+        <button class="sec-sub-btn" id="btn-u3-c" onclick="showSub('u3','u3-c')">【修】藍隊測試</button>
+        <button class="sec-sub-btn" id="btn-u3-d" onclick="showSub('u3','u3-d')">【修】反向查證</button>
+        <button class="sec-sub-btn" id="btn-u3-e" onclick="showSub('u3','u3-e')">【骨】大綱校準</button>
+        <button class="sec-sub-btn" id="btn-u3-f" onclick="showSub('u3','u3-f')">【生】產出簡報</button>
+        <button class="sec-sub-btn" id="btn-u3-g" onclick="showSub('u3','u3-g')">【生】製作網頁</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u4" onclick="showSection('u4')">
+          <span class="sec-num" style="background:var(--sec-4)">4</span>
+          Notebook 旅遊主題
+        </button>
+        <button class="sec-sub-btn" id="btn-u4-a" onclick="showSub('u4','u4-a')">參考來源上傳</button>
+        <button class="sec-sub-btn" id="btn-u4-b" onclick="showSub('u4','u4-b')">對話_公司角度</button>
+        <button class="sec-sub-btn" id="btn-u4-c" onclick="showSub('u4','u4-c')">對話_個人角度</button>
+        <button class="sec-sub-btn" id="btn-u4-d" onclick="showSub('u4','u4-d')">成品_公司角度</button>
+        <button class="sec-sub-btn" id="btn-u4-e" onclick="showSub('u4','u4-e')">成品_個人角度</button>
+        <button class="sec-sub-btn" id="btn-u4-f" onclick="showSub('u4','u4-f')">簡報Q1 張數上限</button>
+        <button class="sec-sub-btn" id="btn-u4-g" onclick="showSub('u4','u4-g')">簡報Q2 AI不聽話</button>
+        <button class="sec-sub-btn" id="btn-u4-h" onclick="showSub('u4','u4-h')">簡報Q3 舊簡報重整</button>
+        <button class="sec-sub-btn" id="btn-u4-i" onclick="showSub('u4','u4-i')">簡報Q4 Prompt五要素</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u5" onclick="showSection('u5')">
+          <span class="sec-num" style="background:var(--sec-5)">5</span>
+          AI＋Word 文件
+        </button>
+        <button class="sec-sub-btn" id="btn-u5-a" onclick="showSub('u5','u5-a')">選取方式</button>
+        <button class="sec-sub-btn" id="btn-u5-b" onclick="showSub('u5','u5-b')">困擾① 換行與空段落</button>
+        <button class="sec-sub-btn" id="btn-u5-c" onclick="showSub('u5','u5-c')">困擾② 項目符號縮排</button>
+        <button class="sec-sub-btn" id="btn-u5-d" onclick="showSub('u5','u5-d')">困擾③ 表格雙框線</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u6" onclick="showSection('u6')">
+          <span class="sec-num" style="background:var(--sec-6)">6</span>
+          AI＋PPT 簡報
+        </button>
+        <button class="sec-sub-btn" id="btn-u6-a" onclick="showSub('u6','u6-a')">Gamma簡報製作</button>
+        <button class="sec-sub-btn" id="btn-u6-b" onclick="showSub('u6','u6-b')">調整下載後簡報</button>
+        <button class="sec-sub-btn" id="btn-u6-c" onclick="showSub('u6','u6-c')">PPT 設計技巧</button>
+        <button class="sec-sub-btn" id="btn-u6-d" onclick="showSub('u6','u6-d')">PPT 簡報者檢視與美化</button>
+        <button class="sec-sub-btn" id="btn-u6-e" onclick="showSub('u6','u6-e')">PPT 母片與文字調整</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u7" onclick="showSection('u7')">
+          <span class="sec-num" style="background:var(--sec-1)">7</span>
+          AI＋試算表
+        </button>
+        <button class="sec-sub-btn" id="btn-u7-a" onclick="showSub('u7','u7-a')">照片／紙本轉 Excel</button>
+        <button class="sec-sub-btn" id="btn-u7-b" onclick="showSub('u7','u7-b')">AI 輔助公式建立</button>
+        <button class="sec-sub-btn" id="btn-u7-c" onclick="showSub('u7','u7-c')">數據趨勢解讀與建議</button>
+        <!-- <button class="sec-sub-btn" id="btn-u7-d" onclick="showSub('u7','u7-d')">問卷分析</button> -->
+        <button class="sec-sub-btn" id="btn-u7-d" >VBA巨集生成</button>
+        <button class="sec-sub-btn" id="btn-u7-e" onclick="showSub('u7','u7-e')">數據分析與報告生成</button>
+        <button class="sec-sub-btn" id="btn-u7-f" onclick="showSub('u7','u7-f')">動態儀表板(網頁結合)</button>
+        <button class="sec-sub-btn" id="btn-u7-g" onclick="showSub('u7','u7-g')">建立排班表(結合日曆)</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u8" onclick="showSection('u8')">
+          <span class="sec-num" style="background:var(--sec-2)">8</span>
+          圖文生成技巧
+        </button>
+        <button class="sec-sub-btn" id="btn-u8-a" onclick="showSub('u8','u8-a')">資訊圖 Prompt</button>
+        <button class="sec-sub-btn" id="btn-u8-b" onclick="showSub('u8','u8-b')">海報 Prompt</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u9" onclick="showSection('u9')">
+          <span class="sec-num" style="background:var(--sec-3)">9</span>
+          輕影片製作
+        </button>
+        <button class="sec-sub-btn" id="btn-u9-a" onclick="showSub('u9','u9-a')">操作流程</button>
+        <button class="sec-sub-btn" id="btn-u9-b" onclick="showSub('u9','u9-b')">分鏡腳本</button>
+        <button class="sec-sub-btn" id="btn-u9-c" onclick="showSub('u9','u9-c')">角色設計圖</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u10" onclick="showSection('u10')">
+          <span class="sec-num" style="background:var(--sec-4)">10</span>
+          把工作流程訂成 Skill
+        </button>
+        <button class="sec-sub-btn" id="btn-u10-a" onclick="showSub('u10','u10-a')">學習流程總覽</button>
+        <button class="sec-sub-btn" id="btn-u10-b" onclick="showSub('u10','u10-b')">步驟0 開工準備</button>
+        <button class="sec-sub-btn" id="btn-u10-c" onclick="showSub('u10','u10-c')">步驟1 先完成真實工作</button>
+        <button class="sec-sub-btn" id="btn-u10-d" onclick="showSub('u10','u10-d')">步驟2 回顧對話轉成 Skill</button>
+        <button class="sec-sub-btn" id="btn-u10-e" onclick="showSub('u10','u10-e')">步驟3 建立到 Gemini</button>
+        <button class="sec-sub-btn" id="btn-u10-f" onclick="showSub('u10','u10-f')">步驟4 新素材測試與下載 Word</button>
+        <button class="sec-sub-btn" id="btn-u10-g" onclick="showSub('u10','u10-g')">重點整理與參考範例</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u11" onclick="showSection('u11')">
+          <span class="sec-num" style="background:var(--sec-5)">11</span>
+          公司網站製作
+        </button>
+        <button class="sec-sub-btn" id="btn-u11-a" onclick="showSub('u11','u11-a')">製作流程總覽</button>
+        <button class="sec-sub-btn" id="btn-u11-b" onclick="showSub('u11','u11-b')">S1 生成網站＋輪播</button>
+        <button class="sec-sub-btn" id="btn-u11-c" onclick="showSub('u11','u11-c')">S3 匯出試算表清單</button>
+        <button class="sec-sub-btn" id="btn-u11-d" onclick="showSub('u11','u11-d')">S4 雲端圖庫取得網址</button>
+        <button class="sec-sub-btn" id="btn-u11-e" onclick="showSub('u11','u11-e')">S5 文字與圖片替換</button>
+        <button class="sec-sub-btn" id="btn-u11-f" onclick="showSub('u11','u11-f')">進階：試算表當後台</button>
+      </div>
+
+      <!-- <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u12" onclick="showSection('u12')">
+          <span class="sec-num" style="background:var(--sec-6)">12</span>
+          Google 試算表
+        </button>
+        <button class="sec-sub-btn" id="btn-u12-a" onclick="showSub('u12','u12-a')">Google 公式範圍寫法</button>
+        <button class="sec-sub-btn" id="btn-u12-b" onclick="showSub('u12','u12-b')">民國日期公式</button>
+        <button class="sec-sub-btn" id="btn-u12-c" onclick="showSub('u12','u12-c')">多工作表合併</button>
+        <button class="sec-sub-btn" id="btn-u12-d" onclick="showSub('u12','u12-d')">跨檔案 IMPORTRANGE</button>
+        <button class="sec-sub-btn" id="btn-u12-e" onclick="showSub('u12','u12-e')">依條件分流到各工作表</button>
+      </div> -->
+
+      <!-- <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u13" onclick="showSection('u13')">
+          <span class="sec-num" style="background:var(--sec-1)">13</span>
+          Google 表單
+        </button>
+        <button class="sec-sub-btn" id="btn-u13-a" onclick="showSub('u13','u13-a')">表單建立與發佈</button>
+        <button class="sec-sub-btn" id="btn-u13-b" onclick="showSub('u13','u13-b')">表單建立AS(課程統一)</button>
+        <button class="sec-sub-btn" id="btn-u13-c" onclick="showSub('u13','u13-c')">依部門發送不同問卷</button>
+        <button class="sec-sub-btn" id="btn-u13-d" onclick="showSub('u13','u13-d')">回應彙整與追蹤</button>
+        <button class="sec-sub-btn" id="btn-u13-e" onclick="showSub('u13','u13-e')">回應統計與分析</button>
+      </div> -->
+
+    </div>
+  </div><!-- /sidebar -->
+
+  <!-- ===== 中欄：主內容 ===== -->
+  <div class="content-area" id="contentArea">
+
+    <!-- ======== U1: AI 助理 ======== -->
+    <div class="content-section" id="u1">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-1)">1</span>
+        AI 助理
+      </div>
+      <div class="sec-desc">📌 認識常見 AI 助理的強項與適用情境，並完成 ChatGPT、Gemini 的個人化與資料控管設定，讓 AI 回答更貼近你的工作習慣。</div>
+        <div class="content-img80">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai251.jpg" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai251.jpg" alt=""></a>
+        </div>
+
+      <!-- u1-a -->
+      <div class="sub-block" id="u1-a">
+        <div class="sec-sub-title">常見 AI 工具簡介與用途比較</div>
+        <div class="content-img90">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai252.jpg" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai252.jpg" alt=""></a>
+        </div>
+        <table class="data-table">
+          <tr><th>工具</th><th>強項</th><th>較適合情境</th></tr>
+          <tr><td>ChatGPT</td><td>通用對話、文案發想、程式協助</td><td>一般行政文書、腦力激盪</td></tr>
+          <tr><td>Gemini</td><td>與 Google 生態整合（雲端硬碟、Workspace）、多模態理解</td><td>已使用 Google 全家桶的單位、圖文整合</td></tr>
+          <tr><td>Claude</td><td>長文件閱讀理解、結構化輸出、程式碼品質</td><td>大量文件整理、正式文件生成</td></tr>
+          <tr><td>Microsoft Copilot</td><td>深度整合 Word／Excel／PowerPoint</td><td>已導入 Microsoft 365 的機關與企業</td></tr>
+          <tr><td>Perplexity</td><td>即時網路搜尋、附來源引用</td><td>需要查證最新資訊、產業趨勢</td></tr>
+        </table>
+        <div class="tip-card info"><strong>建議搭配使用：</strong>
+          <ol style="margin-left:20px;">
+            <li>ChatGPT：生成正式草稿</li>
+            <li>Gemini／Perplexity：核對法規、補充時事資料</li>
+          </ol>
+        </div>
+
+        <div class="content-h2">如何判斷哪個工具適合工作情境</div>
+        <table class="data-table">
+          <tr><th>我的任務是…</th><th>建議優先嘗試</th></tr>
+          <tr><td>快速生成一段文案、發想點子</td><td>ChatGPT／Gemini</td></tr>
+          <tr><td>整理大量 PDF、法規、會議紀錄</td><td>Claude、Notebook</td></tr>
+          <tr><td>直接在 Word／Excel／PPT 裡編修</td><td>Copilot</td></tr>
+          <tr><td>需要查最新的產業資訊、市場動態</td><td>Perplexity</td></tr>
+          <tr><td>圖像、資訊圖、海報生成</td><td>Gemini（Nano Banana）、ChatGPT 圖像生成</td></tr>
+        </table>
+      </div><!-- u1-a END -->
+
+      <!-- u1-b -->
+      <div class="sub-block" id="u1-b">
+        <div class="sec-sub-title">GPT 個人化設定</div>
+        <div class="tip-card info">📌 個人化設定讓 ChatGPT 根據你的習慣與角色，提供更貼近需求的回答。</div>
+        <table class="data-table">
+          <tr><th>功能項目</th><th>建議使用者行為</th></tr>
+          <tr><td>記憶功能</td><td>開啟，讓 ChatGPT 更懂你（除非輸入敏感資料）</td></tr>
+          <tr><td>自訂指令</td><td>設定語氣與身份，提高回覆一致性</td></tr>
+          <tr><td>聊天訓練資料</td><td>若含個資、公司資訊 → 關閉</td></tr>
+          <tr><td>匯出資料</td><td>每隔數月備份一次</td></tr>
+          <tr><td>刪除帳號</td><td>僅在確定停用服務時使用</td></tr>
+        </table>
+        <div class="content-h2">確認個人設定項目</div>
+        <div class="content-img90">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai6.jpg" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai6.jpg" alt=""></a>
+        </div>
+      </div><!-- u1-b END -->
+
+      <!-- u1-c -->
+      <div class="sub-block" id="u1-c">
+        <div class="sec-sub-title">Gemini 設定：資料控管與個人化</div>
+        <div class="content-img90">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai254.jpg" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai254.jpg" alt=""></a>
+        </div>
+
+        <div class="content-h2">▶️ 資料保留與訓練控管（Gemini 應用程式活動）</div>
+        <div class="content-note">
+          <p><strong>指令：</strong>【設定】＞【活動記錄】</p>
+          <ul style="margin-left:20px;">
+            <li>預設保留 18 個月，可以自行改成 3 個月、36 個月或「無限期」</li>
+            <li>可隨時手動刪除單筆或全部對話紀錄</li>
+            <li>若停用「Gemini 應用程式活動」，對話仍會暫存一段時間以維持服務運作，但不會用於改善模型</li>
+          </ul>
+        </div>
+
+        <div class="content-h2">▶️ 個人化智慧服務（Personal Intelligence）</div>
+        <div class="content-note">
+          <p><strong>指令：</strong>【設定】＞【個人化智慧服務】</p>
+        </div>
+        <div class="tip-card info"><strong>📌 企業帳號的關鍵差異：</strong>
+          <ul>
+            <li>個人化智慧服務僅限「個人 Google 帳戶」登入才能使用。</li>
+            <li>若使用公司、學校或受管理的帳戶（例如企業 Google Workspace 帳號）登入，這項個人化功能會直接無法使用——對企業而言，這等於企業帳號天生就少一層個資外流風險，邏輯與 ChatGPT 企業版一致。</li>
+          </ul>
+        </div>
+      </div><!-- u1-c END -->
+
+      <!-- u1-d -->
+      <div class="sub-block" id="u1-d">
+        <div class="sec-sub-title">給 Gemini 的指令（常見設定）</div>
+        <div class="tip-card info">「給 Gemini 的指令」（Instructions for Gemini）可以設定 AI 的回答語言、表達方式、內容長度、專業角色、資料呈現格式及回答原則，之後不需要每次提問都重新交代。</div>
+
+        <div class="content-h2">🔸 常見設定與範例</div>
+        <table class="data-table">
+          <tr><th>設定項目</th><th>簡單說明</th><th>指令範例</th></tr>
+          <tr><td>1. 繁體中文</td><td>固定回答語言</td><td>一律使用繁體中文及台灣用語。</td></tr>
+          <tr><td>2. 簡潔回答</td><td>避免回答過長</td><td>先說重點，必要時再詳細說明。</td></tr>
+          <tr><td>3. 條列格式</td><td>方便閱讀與複製</td><td>優先使用條列或表格整理。</td></tr>
+          <tr><td>4. 實際範例</td><td>幫助理解及應用</td><td>說明時請提供工作上的實際範例。</td></tr>
+          <tr><td>5. 標示不確定資訊</td><td>避免 AI 自行猜測</td><td>不確定的內容請標示「待確認」。</td></tr>
+          <tr><td>6. 主動指出問題</td><td>不要只會附和</td><td>發現問題請主動指出並提出建議。</td></tr>
+          <tr><td>7. 自訂簡稱與詞彙</td><td>減少重複打字</td><td>依照我設定的簡稱理解完整意思。</td></tr>
+        </table>
+
+        <div class="content-h2">🔸 其他設定範例</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 避免一味認同</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">不要只是認同我的看法。如果發現問題、不合理之處或更好的做法，請主動指出並提供改善建議。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 自動補充需要確認的資訊</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">當資料不足時，請標示「待確認」。如果使用模擬數據，必須明確註明為範例，不可當成真實資料。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 自動調整回覆深度</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">簡單問題直接回答；複雜問題請先說明重點，再依主題分段詳細解釋，必要時提供範例。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 專門用於 Office 軟體教學</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">當我詢問 Excel、Word 或 PowerPoint 時，請優先提供 Office 2016 適用的方法，避免使用 Microsoft 365 專屬功能。</div>
+        </div>
+
+        <div class="content-h2">🔸 自訂簡稱與 AI 的默契</div>
+        <div class="tip-card note">工作時經常使用固定詞彙，可以先建立一份簡稱對照表，之後一個詞就能讓 AI 照規則處理。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 建立簡稱對照表</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請記住以下自訂簡稱，當我在對話中使用這些詞彙時，請依照對應規則執行：
+
+- 正式稿：整理為正式、專業且可直接使用的文件。
+- 表格化：將內容整理成易讀的表格。
+- 白話版：用簡單、容易理解的文字說明。
+- 挑問題：主動檢查錯誤、缺漏及不合理之處，並提供建議。
+- 三重點：整理出最重要的三項結論。
+- 講義版：整理為適合初學者學習的教學內容，包含操作步驟及範例。
+
+如果我使用上述簡稱，請直接執行，不需要再詢問其意思。</div>
+        </div>
+        <table class="data-table">
+          <tr><th>設定前</th><th>設定後</th></tr>
+          <tr><td>請將上面的內容整理成正式文件，文字要專業，條理清楚，並且可以直接使用。</td><td>將上面內容改成「正式稿」。</td></tr>
+        </table>
+      </div><!-- u1-d END -->
+    </div><!-- u1 END -->
+
+
+    <!-- ======== U2: 個人化與連結應用 ======== -->
+    <div class="content-section" id="u2">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-2)">2</span>
+        個人化與連結應用
+      </div>
+      <div class="sec-desc">📌 Gemini／ChatGPT 都推出了「連結應用程式」功能，讓 AI 參考 Gmail、日曆、相簿等個人資料，提供更貼近情境的回覆。</div>
+
+      <!-- u2-a -->
+      <div class="sub-block" id="u2-a">
+        <div class="sec-sub-title">連結應用程式比較：Gemini vs ChatGPT</div>
+        <table class="data-table">
+          <tr><th>項目</th><th>Gemini（個人化智慧服務）</th><th>ChatGPT（外掛程式）</th></tr>
+          <tr><td>設定位置</td><td>點選個人頭像 →「個人化智慧服務」</td><td>設定 →「外掛程式」</td></tr>
+          <tr><td>可連結應用</td><td>Google 系列：<br>Gmail、YouTube、Google 相簿、日曆、Workspace 文件</td><td>1. Google 系列：Gmail、Google Calendar、Google Drive 等<br>2. 其他協作 APP：Canva、Gamma</td></tr>
+          <tr><td>預設狀態</td><td>關閉，需自行開啟並指定要連結的應用</td><td>關閉，需自行開啟並指定要連結的應用</td></tr>
+          <tr><td>訓練用途</td><td>執行寄信／改行程等動作前，都需要使用者人工確認</td><td>執行寄信／改行程等動作前，都需要使用者人工確認</td></tr>
+        </table>
+        <div class="tip-card note"><strong>兩家邏輯一致：</strong>讀取資料前都要你手動開啟連結；要「做動作」（寄信、加行程）之前，都會停下來讓你確認，不會自己動手。</div>
+      </div><!-- u2-a END -->
+
+      <!-- u2-b -->
+      <div class="sub-block" id="u2-b">
+        <div class="sec-sub-title">Prompt 情境練習</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 例如：</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">幫我找上星期王老師寄給我的信，看看有沒有提到上課日期，再檢查那一天我的行事曆有沒有空。</div><hr>
+          <div class="prompt-code">找 Google Drive 裡面的年節禮盒企劃資料，把最新的禮盒品項組合與報價整理給我。</div><hr>
+          <div class="prompt-code">請幫我整理 9 月份的收件匣，並將信件分類，
+針對重要信件草擬簡短中文回覆，提供【正式專業、親切專業、簡短俐落】的語氣。</div><hr>
+          <div class="prompt-code"> AI × YouTube 外掛的常見 Prompt 應用情境：
+【影片摘要】幫我整理這支影片的重點，並列出關鍵觀念。
+【教學整理】請把這支教學影片整理成步驟式筆記，適合初學者閱讀。
+【時間軸重點】請列出這支影片的重要段落與時間點。
+【比較影片】比較這 3 支影片對【主題】的說法，有哪些相同與不同。
+【找適合學習的影片】幫我找適合初學者學習【主題】的 YouTube 影片，並說明推薦原因。
+【轉成教材】把這支影片內容整理成講義／課程大綱／簡報架構。
+【內容再利用】把長影片整理成短影音腳本、社群貼文或重點摘要。</div>
+      </div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt1 — Gmail信件分類與草擬回覆（連結 Gmail）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">協助整理這週收件匣的信件，分成：
+- 需要優先處理  
+- 需要回覆但不急  
+- 僅供參考  
+請整理每封信的重點。
+
+「需要優先處理」的信件，請幫我草擬簡短中文回覆，提供【正式專業、親切專業、簡短俐落】的語氣。
+</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt2-1 — 登記 Google日曆的行程（連結 Google日曆）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">登記 Google日曆的行程：
+- 主題：通路客戶年節檔期提案會議
+- 日期： 2026/10/28
+- 時間： 9點到10點
+- 顏色標記：綠色
+- 通知： 會議前3天 及 會議前1天
+- 內容：記得帶 【年節禮盒提案簡報、商品規格表與報價單】文件檔案</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt2-2 — 整理日曆上已排定的行程（連結 Google日曆）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請幫我看今天的日曆行程，找出空檔並建議適合安排的工作。
+如果有行程衝突，也請提醒我。
+請用時間軸的方式整理成一份「今天的行程表」</div>
+        </div>
+
+        <div class="tip-card warning"><strong>⚠️常見詢問(❌)</strong>這是上次的會議記錄， 幫我寫這次的。（附上舊文件）</div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt3 — 會議記錄的整理</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code"># 任務
+請參考我上傳的「前次會議紀錄」，學習其文件結構、排版格式、欄位設計、用字語氣與撰寫方式。
+
+再根據我提供的本次會議內容，重新製作一份全新的會議紀錄。
+
+# 製作原則
+- 依照參考文件的格式與語氣撰寫
+- 內容以本次提供資料為準
+- 未提供的資訊不要自行補充
+
+# 輸出方式
+請依本次需求採用以下其中一種方式：
+- 若我要求「文字版」：直接以 Markdown 完整呈現，方便複製貼上
+- 若我要求「檔案版」：依照參考附檔的排版格式製作文件，並提供下載檔
+
+# 本次會議資訊
+- 文件類型：會議紀錄
+- 會議主題：年節旺季企業禮盒訂單與通路樣品交期排程會議
+- 會議日期：2026 年 10 月 15 日
+
+# 本次會議重點與核心內容
+【請貼上本次會議內容】
+今天主要討論11月到明年1月年節旺季的禮盒訂單、樣品跟出貨時程安排。經理先開場說去年雙11檔期跟年節企業禮盒的訂單一起湧進來，客製化包裝的單排不進包裝線，通路要的試用樣品也一直延期，最後兩週大家都在加班，客戶也抱怨交期比我們承諾的14天還久，今年希望提前規劃。
+
+業務主任報告說旺季案件大概分三類，一般通路補貨訂單（洗髮精、潤髮乳、沐浴乳、牙膏這些）、企業客製化禮盒訂單（指定品項組合、印製企業LOGO、附上賀卡），還有通路新品上架需要先提供試用樣品、陳列物跟檔期提案的專案，新品專案大概占總數的三成左右，但花的時間會比一般訂單多兩三倍。
+
+決議大家先確認一下，年節前要出貨的訂單，下單截止日要不要訂在11月20日，超過這個日期才下的訂單要另外安排包裝跟出貨排程，避免大家又拖到最後一週。同仁覺得可以，但建議要提前發 Email 通知企業客戶跟各通路窗口（量販店、藥妝連鎖、電商平台），不要到時候客戶說沒收到通知。
+
+關於人力分配，行銷企劃部目前有5位同仁，主任提議新品檔期提案跟一般通路詢問要分開指派，新品提案由資深的兩位同仁負責，其他三位負責樣品寄送、陳列物準備跟通路的商品問題，另外業務助理要協助整理樣品申請跟建檔，不要讓企劃同仁自己一直回信回到手忙腳亂。
+
+另外有一些合作的電商平台跟連鎖通路窗口，常常要來回好幾封信才確認一個檔期的品項跟價格，這類窗口大概有二三十家，討論要不要安排固定時段的線上檔期說明會，由業務協助登記問題，避免臨時要確認卻找不到負責同仁。時段初步討論是11月25日到12月10日之間，每週二、四下午安排專人視訊。
+
+系統的部分，負責資訊的同仁要先確認ERP訂單系統今年有沒有改版，往年旺季一開始系統常常很慢，建議訂單不要卡在最後幾天才批次輸入，能提早確認的訂單盡量提早處理完畢。
+
+品質這邊品保主管提出，客製化禮盒出貨前一定要有交叉覆核，品項組合、商品效期、外箱標示跟賀卡內容檢查完成後，要由另一位同仁確認，不能一個人做完就直接出貨，避免客戶收貨發現錯漏或效期太短要求退換，這點大家都同意要列為強制流程，不能因為時間趕就省略覆核步驟。
+
+最後行政面，同仁提到今年要不要比照去年做法，在旺季期間安排加班餐費跟彈性上下班，讓同仁旺季壓力不要太大，這個部分請主任跟經理討論後再公告細節。</div>
+        </div>
+
+      </div><!-- u2-b END -->
+    </div><!-- u2 END -->
+
+
+    <!-- ======== U3: AI 協作四步驟 ======== -->
+    <div class="content-section" id="u3">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-3)">3</span>
+        AI 協作四步驟
+      </div>
+      <div class="content-img60">
+        <img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai249.jpg" alt="">
+      </div>
+      <div class="tip-card info"><strong>AI 協作心法口訣：</strong>用 AI【問】出溝通盲點、【定】出正確標準、接著拉出邏輯【骨】架、最後才【生】出完美成品！<br>用 AI 問與答得不到想要的答案，問題往往在指令沒說清楚、或急著叫 AI 產出、沒先說清楚邏輯。學會這四個步驟，直接套入簡報／報告／會議記錄的實際場景。</div>
+      <div class="content-img60">
+        <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai243.jpg" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai243.jpg" alt=""></a>
+      </div>
+
+      <!-- u3-a -->
+      <div class="sub-block" id="u3-a">
+        <div class="sec-sub-title">【問】釐清思路</div>
+        <div class="tip-card info"><strong>使用時機：</strong>開始寫任何報告前，先請 AI 扮演資深幕僚向你提問，幫助你把思路整理清楚，再開始動筆。</div>
+        <div class="content-note">
+          <p><strong>核心：</strong>要求 AI 扮演諮詢顧問，<strong>反向</strong>詢問使用者關鍵需求，而不是直接開始寫。</p>
+          <p><strong>目的：</strong>補足資訊落差，確保 AI 完全理解任務背景，才不會寫歪。</p>
+          <p><strong>防止「AI 幻覺」：</strong>先討論邏輯，能確保 AI 在「已知的約束條件」下產出。</p>
+        </div>
+        <div class="content-img40">
+          <img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai250.jpg" alt="">
+        </div>
+        <div class="content-h2 red">輸入時快速鍵</div>
+        <table class="data-table">
+          <tr><th>強制換行：Shift + Enter</th><th>純文字貼入：Ctrl + Shift + V</th><th>項目條例：降階：Tab<br>升階：Shift + Tab</th></tr>
+        </table>
+        <div class="content-h2 red">Markdown（MD）結構化</div>
+        <table class="data-table">
+          <tr><th>目的</th><th>基本語法</th></tr>
+          <tr><td><ul style="margin-left:20px;"><li>運用 MD 與 AI 工具對話，層級分明可清楚表達格式需求</li><li>讓 AI 生成內容更具結構化、省時且易讀</li></ul></td><td>【#】標題層級（#、##、###）<br>【- 或者 *】項目符號<br>【**粗體**】強調重點<br>【---】分割線</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 S1：Prompt — 釐清思路</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請以適合本主題的專業角度，協助我規劃【年底客製化訂單與樣品交期整合計畫】。
+
+我目前還不確定規劃重點，請先一次提出幾個問題，幫我釐清：
+- 主要受眾
+- 核心問題或瓶頸
+- 必要產出
+
+等我回答後，再開始規劃。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 S2：Prompt — 「結構化的定案資料」，討論匯出MD檔</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請將目前討論整理成可供新對話接續使用的背景資料，並製作成可下載的 .md 檔。
+
+內容包含：
+- 任務背景
+- 角色設定（如有）
+- 已確認重點
+- 待確認事項（如有）
+
+只保留重要資訊，不要整理成對話紀錄。
+
+請直接提供 .md 檔下載。</div>
+        </div>
+        <div class="content-note">
+          <p>目的：用於討論結束後整理結論，方便日後開新對話或免費額度用盡時，直接帶入背景接續進度。</p>
+        </div>
+      </div><!-- u3-a END -->
+
+      <!-- u3-b -->
+      <div class="sub-block" id="u3-b">
+        <div class="sec-sub-title">【定】報告生成</div>
+        <div class="sec-desc blue">說明：角色設定可以有，但不要當必填欄位。<br>
+如果前面的討論已經確定「以營運管理顧問角度」、「以人資角度」、「以專案管理角度」，AI直接沿用即可；<br>如果沒有，就讓 AI 依主題選適合角度，不需要硬塞一個角色。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 正式報告產出</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請根據我們前面已確認的討論內容，整理並撰寫一份正式文件。
+
+# 專業角度（選填）
+如本主題需要特定專業觀點，請依適合的專業角度進行整理；若前文已有明確角色設定，則直接沿用。
+
+
+# 任務
+主題：【年底客製化訂單與樣品交期整合計畫】
+
+請將已確認的內容重新整理、歸納與潤飾，形成完整且可直接使用的正式文件。
+
+# 文件結構
+請依主題安排適合的章節，必要時包含：
+- 背景與目的
+- 現況與問題
+- 規劃方向與執行內容
+- 任務分工與時程
+- 預期成果與成效指標
+
+# 撰寫原則
+- 以已確認的討論內容為準
+- 不新增未討論的核心事項
+- 資訊不足處標示「待確認」
+- 內容以條列與簡短段落呈現
+- 未確認的數據不要自行補充</div>
+        </div>
+      </div><!-- u3-b END -->
+
+      <!-- u3-c -->
+      <div class="sub-block" id="u3-c">
+        <div class="sec-sub-title">【修】藍隊測試</div>
+        <div class="tip-card info"><strong>把「藍隊測試」定位成：</strong>站在內部審核者／執行者／主管角度，檢查這份計畫書是否完整、可執行、前後一致、有無遺漏與風險。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 藍隊測試 (詳細版)</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請針對目前這份文件進行「藍隊測試」，從內部審核與實際執行的角度檢查完整度。
+
+請檢查：
+- 目標與架構
+- 執行內容
+- 分工與時程
+- 成效指標
+- 前後矛盾、缺漏與執行風險
+
+請先整理問題與修正建議，不要直接重寫全文。
+
+資訊不足處請標示「待確認」。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 藍隊測試 (簡單版)</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請幫我對這份計畫書做藍隊測試，從內部審核與實際執行的角度檢查完整度，檢查完整度、一致性、可執行性與風險，並列出問題與修正建議。</div>
+        </div>
+      </div><!-- u3-c END -->
+
+      <!-- u3-d -->
+      <div class="sub-block" id="u3-d">
+        <div class="sec-sub-title">【修】反向查證</div>
+        <div class="tip-card note"><strong>使用時機：</strong>報告接近定稿前，模擬不同角色的挑剔視角，提前補洞。這就是「紅隊測試（Red Teaming）」：請 AI 扮演「主管／通路客戶／企業採購」進行檢視，在真正審查者看到之前，先補好洞，大幅提升專業度。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 反向查證</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請針對目前這份文件進行「紅隊測試」，從不同利害關係人的角度反向檢查內容中的漏洞、疑點與不足。
+
+請從【主管、使用者、客戶、外部評估者】的利害關係人角度進行檢查。
+
+重點檢查：
+- 可能被質疑的地方
+- 容易造成誤解或執行困難的地方
+- 缺少的資料、依據或說明
+- 潛在風險與補強方向
+
+請先整理檢查結果，不要直接重寫全文。</div>
+        </div>
+      </div><!-- u3-d END -->
+
+      <!-- u3-e -->
+      <div class="sub-block" id="u3-e">
+        <div class="sec-sub-title">【骨】邏輯骨架校準</div>
+        <div class="tip-card warning"><strong>避免「AI 過度積極」：</strong><br>要求「簡報大綱」時，AI 常會直接跳過大綱討論，自動產出完整的投影片內文、視覺描述甚至分鏡，這稱為「AI 的自動化跳級行為」。<br>主因有二：<br>①序列預測特性——「大綱」後面理所當然是「內文」，AI 會習慣性一次完成；<br>②關鍵字觸發——指令中出現「簡報」二字，容易觸發 AI 內部的「簡報生成模板」。<br>因此必須在指令中加入明確的「物理斷點」與「語意約束」，管住 AI 只出結構，不要跳級寫完整投影片。</div>
+        <div class="tip-card warning"><strong>時間推估張數：</strong>依據「上台時間」推算張數。<strong>通常 1 分鐘對應 1～1.5 張投影片</strong>，是簡報報告的常見節奏<br>（例如：5 分鐘報告建議 8-10 張／10 分鐘報告建議 12-15 張）</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt1 — 大綱校準</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">現在進入【簡報邏輯骨架規劃階段】，先不要製作完整內容。
+
+請根據我們剛才完成的【年底客製化訂單與樣品交期整合計畫】，規劃一份給【總經理與各部門主管】使用的簡報大綱。
+
+# 簡報規格
+- 簡報長度：【約 10 張／約 10 分鐘】
+- 每頁只需列出「頁面主題」與「核心觀點」
+- 先規劃整體邏輯與頁面順序，不要撰寫完整內文或旁白
+- 適合呈現數據的頁面，請標註「建議使用便當盒排版法」
+- 完成大綱後停止，等待下一步指令
+
+請使用 Markdown code block 輸出。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt2 — 大綱校準（對應視覺規格）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">現在進入【簡報大綱校準階段】。
+
+請根據我們剛才完成的【報告／計畫書主題】，規劃一份給【簡報對象】使用的簡報大綱。
+
+# 簡報需求
+- 簡報時間：【15 分鐘】
+- 投影片張數：【約 10 張】
+- 每頁請包含：
+  - 投影片標題
+  - 核心論點
+  - 建議視覺化方式
+
+# 簡報方向
+請以【數據導向／決策導向／執行導向】的方式安排內容，讓整體邏輯適合【總經理與各部門主管】閱讀與決策。
+
+# 視覺風格
+- 整體風格：【現代數據儀表板風】
+- 主色：【典雅莓紅 #B03060】
+- 輔色：【暖金 #C9A227】
+- 底色：【柔霧白 #F7F4F2】
+- 複雜數據頁可標註：【便當盒排版法／網格矩陣】
+
+# 輸出限制
+- 目前只規劃簡報邏輯與頁面順序
+- 不要撰寫完整文案、旁白或生圖指令
+- 使用 Markdown code block 輸出
+- 完成大綱後停止，等待下一步指令
+</div>
+        </div>
+      </div><!-- u3-e END -->
+
+      <!-- u3-f -->
+      <div class="sub-block" id="u3-f">
+        <div class="sec-sub-title">【生】產出簡報</div>
+        <div class="content-h2">生成簡報大綱時的輸出建議</div>
+        <div class="content-note">
+          <ul  style="margin-left:20px;">
+            <li><strong>時間推估張數：</strong>依據「上台時間」推算張數。<br><strong>通常 1 分鐘對應 1～1.5 張投影片</strong>，是簡報報告的常見節奏（例如：5 分鐘報告建議 8-10 張／10 分鐘報告建議 12-15 張）</li>
+            <li><strong>三位一體結構：</strong>每一頁大綱必須包含「頁次、章節主題、核心觀點摘要」</li>
+            <li><strong>視覺化預設：</strong>在大綱階段即標註建議使用的圖型（如：便當盒排版、蛇形流程），有助於後續數據資料的自動歸類</li>
+          </ul>
+        </div>
+        <table class="data-table">
+          <tr><th>簡報頁面類型</th><th>建議對應風格</th><th>視覺效果</th></tr>
+          <tr><td>封面與大標題頁</td><td>日系清新風格 或 3D 黏土質感</td><td>建立第一眼的好感度與溫暖感</td></tr>
+          <tr><td>數據與績效頁</td><td>現代數據儀表板風</td><td>強調 KPI、折線圖與圓餅圖專業度</td></tr>
+          <tr><td>作業流程／步驟頁</td><td>等距視角微縮風格 或 蛇形流程排版</td><td>讓複雜的樣品申請、禮盒包裝與出貨流程變得立體且易懂</td></tr>
+          <tr><td>多項重點並陳頁</td><td>便當盒排版法</td><td>模組化切分畫面，資訊豐富但不雜亂</td></tr>
+        </table>
+        <table class="data-table">
+          <tr><th>簡報類型</th><th>工具</th><th>特色</th><th>使用情形</th></tr>
+          <tr><td>圖形簡報</td><td>Gemini／Notebook</td><td>圖文並陳、快速吸睛</td><td>文字修改不易</td></tr>
+          <tr><td>傳統簡報</td><td>PowerPoint 簡報／Google 簡報</td><td>正式會議報告、需手動排版、套用母片</td><td>可直接編輯文字、匯出至 PPT 檔案</td></tr>
+          <tr><td>網頁簡報</td><td>Gemini → HTML 程式碼</td><td>可線上分享、互動式導覽</td><td>數位發送、遠端說明</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Google 簡報</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">邏輯大綱已確認，請直接建立【Google 簡報／簡報檔】。
+
+# 製作要求
+- 依確認後的大綱完成每張投影片正式內容
+- 簡報對象：【總經理與各部門主管】
+- 畫面比例：【16:9】
+- 延續前面已確認的簡報風格與版面設定
+
+完成後，請提供可開啟或匯出簡報的連結。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 HTML 程式碼簡報</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">邏輯大綱已確認，請使用 HTML 與 Tailwind CSS 製作數位簡報。
+
+# 製作需求
+- 視覺風格：【企業專業風】
+- 配色：【典雅莓紅 #B03060／暖金 #C9A227／柔霧白 #F7F4F2】
+- 任務分工頁使用：【便當盒排版】
+- KPI 頁使用：【數字卡片版型】
+- 左側加入投影片導覽按鈕，可切換各頁
+- 畫面比例：【16:9】
+
+請以程式碼區塊呈現完整程式碼，並提供可預覽的效果。</div>
+        </div>
+      </div><!-- u3-f END -->
+
+      <!-- u3-g -->
+      <div class="sub-block" id="u3-g">
+        <div class="sec-sub-title">【生】製作網頁</div>
+        <div class="tip-card info"><strong>AI 也能直接做網站：</strong>不需要會寫程式，只要把「網頁內容、區塊安排、視覺風格」說清楚，AI 就能產出一頁式網頁，例如活動宣傳頁、新品上市頁、互動小測驗。存成 index.html 就能用瀏覽器開啟，也能上傳到網路分享。</div>
+        <table class="data-table">
+          <tr><th>網頁類型</th><th>適用情境</th><th>重點區塊</th></tr>
+          <tr><td>活動宣傳頁</td><td>年節禮盒預購、門市促銷、展覽活動</td><td>主視覺＋倒數計時、方案卡片、報名／洽詢表單</td></tr>
+          <tr><td>新品上市頁</td><td>新品介紹、通路教育訓練</td><td>產品特色、使用步驟、常見問題</td></tr>
+          <tr><td>互動小測驗</td><td>門市 QR Code、社群活動</td><td>題目、計分、個人化結果</td></tr>
+        </table>
+        <table class="data-table">
+          <tr><th>步驟</th><th>做什麼</th><th>工具</th></tr>
+          <tr><td>S1 生成</td><td>貼上 Prompt，產出完整 HTML 程式碼並預覽</td><td>Gemini Canvas／ChatGPT Canvas</td></tr>
+          <tr><td>S2 微調</td><td>指定要改的區塊，不要整頁重寫</td><td>同上</td></tr>
+          <tr><td>S3 發布</td><td>存成 index.html，上傳後取得網址分享</td><td>GitHub Pages／Netlify Drop</td></tr>
+        </table>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt1 — 活動宣傳網頁（年節禮盒企業採購）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請使用 HTML + Tailwind CSS 製作一頁式【年節禮盒企業採購】活動宣傳網頁，可直接用瀏覽器開啟與分享。
+
+# 活動資訊
+- 活動名稱：【年節好禮・企業採購搶先預約】
+- 活動期間：【2026/11/1 – 2027/1/15】
+- 下單截止：【2026/11/20 前下單，享客製化包裝】
+- 禮盒方案：【洗護髮禮盒、沐浴保養禮盒、口腔保健禮盒】
+  每款列出 3 項內容物，價格一律顯示「歡迎洽詢」
+- 加值服務：【滿 50 盒免費印製企業 LOGO 賀卡／可指定日期配送】
+
+# 網頁區塊
+1. 主視覺：主標題、副標題、距離下單截止的倒數計時、「立即洽詢」按鈕
+2. 禮盒方案：3 張方案卡片
+3. 客製化流程：4 步驟（選擇禮盒 → 確認數量與賀卡 → 樣品確認 → 指定日期出貨）
+4. 常見問題：5 題，可點擊展開／收合
+5. 洽詢表單：公司名稱、聯絡人、電話、預估數量、需求說明
+   （按下送出後顯示感謝訊息即可，不需要後端）
+6. 頁尾：聯絡資訊【請填入】
+
+# 視覺風格
+- 風格：溫暖年節質感、簡潔現代
+- 主色：【典雅莓紅 #B03060】
+- 輔色：【暖金 #C9A227】
+- 底色：【柔霧白 #F7F4F2】
+- 圖片先用 Emoji 或 SVG 圖示代替，不要連結外部圖片
+- 響應式設計，手機瀏覽也要清楚好按
+
+# 輸出
+- 單一 index.html 檔案，Tailwind CSS 使用 CDN
+- 以程式碼區塊輸出完整程式碼，並提供預覽</div>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt2 — 互動小測驗網頁（洗護髮類型）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請使用 HTML + Tailwind CSS + JavaScript 製作【找出你的洗護髮類型】互動小測驗網頁，適合放在門市 QR Code 或社群活動使用。
+
+# 測驗內容
+- 共 5 題單選題，主題包含：頭皮出油程度、髮尾乾燥程度、染燙頻率、洗髮頻率、在意的香氣類型
+- 依作答計分，結果分為 4 種類型：
+  清爽控油型／滋潤修護型／染燙護色型／香氛舒壓型
+- 每種結果顯示：類型名稱、特徵說明、3 點保養建議、適合的產品類型（不寫品牌名稱）
+
+# 功能
+- 一次顯示一題，上方有進度條
+- 可回上一題、可重新測驗
+- 結果頁加入「複製結果」按鈕，方便貼到社群分享
+
+# 視覺風格
+- 風格：清新活潑、圓角卡片、帶一點泡泡元素
+- 主色：【薄荷綠 #3BB8A0】
+- 輔色：【蜜桃粉 #F4A7A0】
+- 底色：【奶油白 #FFFBF5】
+- 響應式設計，以手機瀏覽為優先
+
+# 輸出
+- 單一 index.html 檔案，不需後端即可運作
+- 以程式碼區塊輸出完整程式碼，並提供預覽</div>
+        </div>
+
+        <div class="tip-card warning"><strong>微調技巧：</strong>網頁產出後要修改，請說清楚「改哪裡、哪裡不動」，避免 AI 整頁重寫，把原本滿意的部分也改掉。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt3 — 局部修改網頁</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請在目前的網頁基礎上修改，不要重新設計整頁：
+
+需要修改：
+- 【例如：禮盒方案改成 4 款，新增「身體保養禮盒」】
+- 【例如：主視覺的按鈕改成暖金色】
+
+保持不變：
+- 其他區塊的內容、配色與排版
+
+修改後請輸出完整程式碼，方便我直接覆蓋原檔。</div>
+        </div>
+      </div><!-- u3-g END -->
+    </div><!-- u3 END -->
+
+
+    <!-- ======== U4: Notebook 旅遊主題 ======== -->
+    <div class="content-section" id="u4">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-4)">4</span>
+        Notebook 旅遊主題
+      </div>
+      <div class="sec-desc">📌 練習主題：日本北海道旅遊企劃（雄獅 × 山富 × YouTube攻略）</div>
+
+      <!-- u4-a -->
+      <div class="sub-block" id="u4-a">
+        <div class="sec-sub-title">參考來源上傳</div>
+        <div class="tip-card note">上傳的來源越豐富，Notebook 的回答越有依據。<br>建議同時上傳「練習附檔」＋「旅行社行程網址」＋「YouTube影片」，讓 AI 可以交叉比對，避免閉門造車。</div>
+
+        <div class="content-h2">① 練習附檔（課程提供）</div>
+        <table class="data-table">
+          <tr><th>檔案</th><th>說明</th></tr>
+          <tr><td>01_成果報告（Doc / MD / PDF）</td><td>北海道旅遊企劃成果，含三大主軸（行程規劃/預算訂房/現場執行）、數據表、改善建議</td></tr>
+          <tr><td>02-05 四份會議記錄（docx）</td><td>從行前規劃到結案檢討，決議事項前後呼應，適合跨文件比對練習</td></tr>
+          <tr><td>06 錄音逐字稿（txt）</td><td>返台後結案檢討口語錄音，適合練習逐字稿整理 Prompt</td></tr>
+          <tr><td>問卷調查300筆（csv / xlsx）</td><td>旅遊滿意度模擬問卷，含景點偏好、整體評分等欄位</td></tr>
+        </table>
+
+        <div class="content-h2">② 旅行社行程網址</div>
+        <table class="data-table">
+          <tr><th>行程</th><th>連結</th></tr>
+          <tr><td>雄獅1：北海道旅遊｜洞爺湖展望台.函館纜車.小樽運河.三大螃蟹五日</td><td><a href="https://travel.liontravel.com/detail?NormGroupID=92acc5da-b309-4ef2-9b0c-5c2973db62bf&GroupID=26JH723BRF-T&Platform=APP&fr=cg311C0401C0201M01" target="_blank">雄獅旅遊 ↗</a></td></tr>
+          <tr><td>雄獅2：雙宿北海道｜溫泉鄉.海洋公園.企鵝遊行.雙螃蟹溫泉五日</td><td><a href="https://travel.liontravel.com/detail?NormGroupID=b4559133-4b1f-4ba8-84ee-bc4432350895&Origin=LION&Platform=APP&GroupID=26JH807BRG-T" target="_blank">雄獅旅遊 ↗</a></td></tr>
+          <tr><td>山富1：紫薰北海道５日｜星空纜車.函館百萬夜景.富良野花田.花田列車</td><td><a href="https://www.travel4u.com.tw/group/product/SPK05260717I/" target="_blank">山富旅遊 ↗</a></td></tr>
+          <tr><td>山富2：紫夢北海道５日｜企鵝漫步、米其林星空夜景、夢幻星型五稜廓、洞爺花火、螃蟹懷石料理、螃蟹吃到飽</td><td><a href="https://www.travel4u.com.tw/group/product/SPK05260826C/" target="_blank">山富旅遊 ↗</a></td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 四大行程初步比較 Prompt</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">我上傳北海道旅遊行程作為來源，請以【資深旅遊顧問】角色，跨文件比較行程：
+
+1. 這行程的天數、主要景點各是什麼？整理成比較表（欄位：行程名稱 / 天數 / 主打景點 / 特色亮點）
+2. 哪些景點在多個行程中重複出現？代表這些是「必去」景點
+3. 哪個行程的自然景觀比重最高？哪個城市體驗比重最高？
+
+請只根據上傳的4個行程內容回答，禁止自行補充未提及的景點。</div>
+        </div>
+
+        <div class="content-h2">③ YouTube 影片列表</div>
+        <table class="data-table">
+          <tr><th>目的</th><th>影片</th></tr>
+          <tr><td>景點趨勢觀察（12個精選景點）</td><td><a href="https://www.youtube.com/watch?v=6ummGrWo5pU" target="_blank">🇯🇵【精選合集】北海道札幌旅遊全攻略 美食 景點 購物一網打盡 ↗</a></td></tr>
+          <tr><td>不踩雷行程攻略（2026懶人包）</td><td><a href="https://www.youtube.com/watch?v=f14Mo9F4Jg0" target="_blank">【北海道攻略：札幌篇】不踩雷行程推薦↗</a></td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 YouTube vs 旅行社行程交叉比對 Prompt</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">我同時上傳了YouTube 北海道攻略影片以及網頁旅行社行程。
+
+請幫我交叉比對：
+1. YouTuber 強力推薦但旅行社行程沒有安排的景點有哪些？（可能是自由行亮點）
+2. 旅行社行程都有但 YouTuber 沒有特別提到的景點有哪些？
+3. YouTuber 提到的「踩雷警告」或「建議避開」的事項，旅行社行程有沒有相同安排？
+
+請整理成三個清單，每項不超過20字。</div>
+        </div>
+
+        <div class="content-h2">④ 搜尋關鍵字建議</div>
+        <table class="data-table">
+          <tr><th>目的</th><th>建議關鍵字</th></tr>
+          <tr><td>找景點現況</td><td>2025 北海道 必去景點 推薦 / 富良野 薰衣草 花期 2025 / 旭川動物園 開放時間</td></tr>
+          <tr><td>找消費者評價</td><td>北海道 旅遊 推薦 Dcard / 北海道 踩雷 PTT / 函館 夜景 排隊 評論</td></tr>
+          <tr><td>找行程靈感</td><td>北海道 美食 IG 打卡 / 北海道 旅遊 行程 懶人包 / 北海道 跟團 vs 自由行</td></tr>
+          <tr><td>找PDF專業報告</td><td>日本 旅遊 消費趨勢 filetype:pdf / 北海道 觀光 統計 filetype:pdf</td></tr>
+          <tr><td>找特定媒體</td><td>北海道 旅遊攻略 site:kkday.com</td></tr>
+        </table>
+
+        <div class="content-h2">常用搜尋指令說明</div>
+        <div class="tip-card info">在關鍵字後面加上「搜尋指令」，可以讓 Google 搜尋結果更精準，找到的資料再上傳到 Notebook 當作來源。<br>注意：指令的冒號用半形「:」，冒號後面不要空格。</div>
+        <table class="data-table">
+          <tr><th>指令</th><th>用途</th><th>範例</th></tr>
+          <tr><td>" "（雙引號）</td><td>完整比對，詞組不會被拆開</td><td>"北海道 自由行"</td></tr>
+          <tr><td>-（減號）</td><td>排除不想要的字</td><td>北海道 旅遊 -廣告</td></tr>
+          <tr><td>OR</td><td>符合任一關鍵字即可（OR 需大寫）</td><td>函館 OR 小樽 美食</td></tr>
+          <tr><td>site:</td><td>只搜尋指定網站或網域</td><td>北海道 攻略 site:kkday.com<br>觀光統計 site:gov.tw</td></tr>
+          <tr><td>filetype:</td><td>只找指定檔案類型（pdf、xlsx、pptx、docx）</td><td>旅遊 消費趨勢 filetype:pdf</td></tr>
+          <tr><td>intitle:</td><td>關鍵字必須出現在網頁標題</td><td>intitle:北海道 懶人包</td></tr>
+          <tr><td>*（星號）</td><td>代表不確定的字詞</td><td>北海道 * 必吃</td></tr>
+        </table>
+        <div class="tip-card note"><strong>組合使用：</strong>指令可以混搭，例如：<br>「北海道 旅遊 統計 site:gov.tw filetype:pdf」→ 只找政府網站上的 PDF 報告。<br>另外也可以用 Google 搜尋的「工具」→「時間」，限定只看最近一年的資料。</div>
+      </div><!-- u4-a END -->
+
+      <!-- u4-b -->
+      <div class="sub-block" id="u4-b">
+        <div class="sec-sub-title">🏢 對話_公司角度</div>
+        <div class="tip-card note">以下 Prompt 適合「公司安排員工旅遊 / 獎勵旅行」的討論階段，包含行程篩選與課程提供文件（會議記錄／成果報告）的整理練習。</div>
+
+        <div class="content-h2">對話練習</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 四大行程比較（選擇最適合公司）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">我上傳了網頁關於北海道行程。
+
+請以【企業旅遊規劃顧問】角色，幫我分析：
+1. 哪個行程最適合「公司員工旅遊」？評估重點：集體活動多、交通銜接順暢、無過多體力負擔
+2. 哪個行程的自由時間最多？（員工自由購物 / 個人探索的彈性空間）
+3. 如果公司有20人要一起去，這4個行程中哪個最方便統一安排？
+
+請用條列方式說明每個建議的理由。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 行前注意事項與公司確認清單</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">根據這網頁關於北海道行程內容，如果公司要安排20人員工旅遊，
+請列出我需要提前與旅行社確認的5個關鍵問題，例如：
+- 包車 vs JR 哪個適合大團體？
+- 住宿是否同棟、同樓層？
+- 餐食有無素食 / 過敏選項？
+
+請根據上傳的行程內容具體回答，禁止憑空補充未提及的資訊。</div>
+        </div>
+
+        <div class="content-h2">📋 會議記錄／成果報告整理（課程提供文件）</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 旅遊成果報告整理</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請針對上傳的「北海道旅遊企劃成果報告」，
+以【資深旅遊顧問】角色完成以下整理：
+
+1. 用條列方式列出三大行程主軸的核心亮點（每項不超過3點）
+2. 找出報告中所有出現的數據（天數、預算、景點數量），整理成一張表格
+3. 列出「問題與改善建議」章節提到的所有待辦事項，並標注負責人與期限</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 四份會議記錄跨文件整理</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">我上傳了四份不同時期的會議記錄（第1次行前規劃、第2次預算確認、行程中滾動調整、返台後結案檢討）。
+
+請跨文件完成以下分析：
+1. 整理四次會議的決議事項清單，標注每項的負責人與完成期限
+2. 找出哪些問題在多次會議中重複出現（如天氣因素、餐廳訂位等）
+3. 哪些決議在後續會議被追蹤完成？哪些沒有提到後續？</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 逐字稿整理</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">這是一份北海道行程返台後結案檢討會議的錄音逐字稿，語氣口語，內容較雜亂。
+請協助完成以下整理：
+
+1. 整理成正式會議紀錄格式（討論事項、意見摘要、決議事項、後續追蹤）
+2. 找出所有帶團窗口交辦事項，列出負責人與預計完成時間
+3. 整理「問題與改善建議」清單，標注是哪位成員提出的</div>
+        </div>
+      </div><!-- u4-b END -->
+
+      <!-- u4-c -->
+      <div class="sub-block" id="u4-c">
+        <div class="sec-sub-title">👨‍👩‍👧 對話_個人角度</div>
+        <div class="tip-card note">以下 Prompt 適合「個人幫家人安排行程」的討論階段。</div>
+
+        <div class="content-h2">對話練習</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 找出最適合家庭的行程</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">我上傳了4個北海道旅行社行程，我想幫家人安排一趟旅遊。
+家人組成是：【請填入，例如：長輩2位、夫妻2人、小孩1人】
+
+請以【家庭旅遊顧問】角色分析：哪個行程最適合這個家庭組合？請從以下角度說明：
+- 步行距離與體力需求（長輩是否負荷得來）
+- 小孩的興趣吸引力（動物？花田？市區購物？）
+- 溫泉 / 休閒時間是否充足</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 景點適合族群逐一標注</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">根據這4個旅行社行程中出現的所有景點，請幫我逐一標注：
+- ✅ 適合長輩（步行短、輕鬆、景色為主）
+- 🧒 適合小孩（動物、體驗活動、視覺吸引）
+- ⚠️ 體力需求較高
+
+請整理成表格（欄位：景點名稱 / 適合族群 / 說明），只根據上傳的行程內容判斷。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 客製化5天4夜家庭行程</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">根據我上傳的4個行程 + 2部 YouTube 攻略影片，請幫我設計一份「客製化5天4夜北海道家庭行程」：
+
+- 保留：在多個行程或 YouTube 影片中都有提到的高頻景點
+- 調整：移除趕行程、體力需求過高或評價較低的安排
+- 新增：YouTuber 推薦但旅行社沒有安排的輕鬆體驗
+
+請以每天為單位，列出 上午 / 下午 / 晚上 安排，並標注交通方式與建議停留時間。</div>
+        </div>
+      </div><!-- u4-c END -->
+
+      <!-- u4-d -->
+      <div class="sub-block" id="u4-d">
+        <div class="sec-sub-title">🏢 成品_公司角度</div>
+        <div class="tip-card note">以下 Prompt 適合「公司員工旅遊」情境的最終匯出成品，包含比較表、簡報、心智圖、資訊圖與語音摘要。</div>
+
+        <div class="content-h2">匯出成品</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出行程比較表（給主管看）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據上傳的雄獅、山富共4個北海道旅行社行程，製作一份「行程比較彙整表」：
+
+欄位：行程名稱 / 天數 / 主要景點 / 含餐標準 / 自由時間多寡 / 特色亮點
+
+每個行程一列，格式整齊，方便直接複製到簡報或 Word。
+只根據上傳的行程內容填寫，禁止捏造費用。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出員工旅遊建議簡報</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請製作一份【北海道員工旅遊方案比較】簡報，協助【公司主管／員工】比較並選擇適合的行程方案。
+
+# 簡報規格
+- 總頁數：【6 張】
+- 尺寸：【16:9】
+- 架構：方案說明 → 四大方案比較 → 推薦方案 → 費用概估 → 注意事項 → 結論
+- 四大方案集中於同一頁比較，不另外拆頁
+
+# 視覺風格
+- 風格：【北國清新商務感】
+- 色系：【天空藍＋雪白】
+- 比較頁可使用：【便當盒排版】
+- 數據頁可使用：【數字卡片／長條圖】
+
+# 主講者呈現
+請於【每頁／指定頁面】加入主講者圖片，並依投影片內容調整表情與動作，例如：
+- 開場：微笑、自信站姿
+- 比較：指向圖表、專注表情
+- 費用：較審慎、手持文件
+- 結論：微笑、開放式手勢
+
+# 每頁內容
+### 投影片第 X 張：【標題】
+- 視覺配置：【便當盒／流程圖／數字卡片／其他適合版型】
+- 核心重點：【3 點，每點 20 字內】
+- 講稿：【80 字內】
+
+# 注意事項
+費用尚未確認時，請標示「待向旅行社確認」，不要自行填入數字。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出心智圖</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據上傳的所有來源文件（行程 + YouTube + 成果報告），產出一份心智圖結構（純文字版）。
+
+格式規範：
+- 中心主題：北海道旅遊企劃
+- 第一層分支（3～5個）：主要行程區域（札幌 / 函館 / 富良野 / 旭川 / 小樽）
+- 第二層分支：每個區域的關鍵景點或活動
+- 第三層分支：具體體驗細節、交通方式或注意事項
+
+請以縮排條列方式輸出，方便複製至 XMind 或 Miro 使用。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出資訊圖</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據上傳的行程資料，整理出適合製作資訊圖的核心內容：
+
+# 資訊圖內容整理
+- 主標題（10字內）：
+- 副標題（20字內）：
+- 核心數據（3～5個，例如：5天行程 / 6大區域 / 每人概估50,000元）：
+- 三大重點訊息（每點15字內，聚焦決策效益：省時、順暢、體力負擔低）：
+
+# 視覺風格建議
+- 應用場景：公司內部提案與主管簡報
+- 建議風格：北國清新商務風（天空藍 / 雪白，簡潔俐落）
+- 版面配置：便當盒排版
+- 配色方案：三色限定
+- 尺寸：1:1 或 A4 直式（依用途調整）</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出語音摘要</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據上傳的行程大綱，製作一份「北海道員工旅遊語音摘要」，供公司內部快速了解方案。
+
+# 角色設定
+主持人A：企業旅遊規劃顧問（語氣專業、點出方案效益與各區亮點）
+主持人B：HR窗口（語氣務實，關心體力分配、時間安排是否適合團體）
+
+# 風格要求
+- 對話式進行，理性中帶親切，像在跟主管簡報方案重點
+- 總長度：約5分鐘可聽完
+
+# 內容規範
+- 開場：點出這個方案對員工旅遊的核心優勢
+- 中段：依函館、富良野、旭川各用1分鐘說明亮點與適合團體活動的理由
+- 結尾：給HR窗口在確認方案前最需要留意的1個提醒</div>
+        </div>
+      </div><!-- u4-d END -->
+
+      <!-- u4-e -->
+      <div class="sub-block" id="u4-e">
+        <div class="sec-sub-title">👨‍👩‍👧 成品_個人角度</div>
+        <div class="tip-card note">以下 Prompt 適合「個人幫家人安排行程」情境的最終匯出成品，包含統計表、簡報、資訊圖與語音摘要。</div>
+
+        <div class="content-h2">匯出成品</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出景點頻率統計表</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據上傳的4個旅行社行程 + 2部 YouTube 影片（札幌全攻略、2026不踩雷懶人包），
+製作一份「景點出現頻率統計表」：
+
+欄位：景點名稱 / 出現在幾份資料中（共6份）/ 適合族群（長輩✅ / 小孩🧒 / 體力需求⚠️）/ 建議停留時間
+
+依出現頻率高到低排序，只根據上傳資料統計，禁止自行補充未提及的景點。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出每日行程規劃表</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">根據以上討論結果與4個旅行社行程 + 2部 YouTube 攻略影片，
+請幫我產出一份完整的「5天4夜北海道家庭行程規劃表」：
+
+欄位：日期 / 上午 / 下午 / 晚上 / 住宿地點 / 餐食安排 / 交通方式 / 備注（長輩/小孩適合度）
+
+格式：Markdown 表格，方便複製後貼入 Word 或簡報。
+原則：優先安排高頻景點，體力負擔重的行程放早上，下午盡量輕鬆。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出家庭行程分享簡報</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code"># 角色設定
+你是一位旅遊達人，幫家人整理一份清楚易懂、有溫度的行程說明簡報。
+
+# 簡報規格
+- 總頁數：6張，不可多不可少
+- 尺寸：16:9
+- 邏輯架構：行程概覽→Day by Day行程→景點亮點→注意事項→費用概估→Q&A
+
+# 簡報呈現風格
+- 整體風格：北海道清新自然風，親切溫馨、無陰影無漸層，帶一點手繪線條感
+- 色系：天空藍 + 薰衣草紫 + 雪白
+- 版面配置：便當盒排版，長輩適合景點標注✅、小孩適合景點標注🧒
+
+# 主講者呈現
+每張投影片請置入主講者圖片，並依該頁內容調整主講者的表情與肢體動作，讓畫面更有溫度：
+- 開場頁：燦爛笑容，張開雙手歡迎的姿態
+- 行程介紹頁：手指向景點圖片，語氣期待、眼神發亮
+- 注意事項頁：表情溫和提醒，手勢輕輕比出叮嚀動作
+- 結尾頁：溫馨微笑，雙手交疊胸前，傳達期待共度旅程的心情
+
+# 每頁輸出格式
+### 投影片第X張：[標題]
+- 視覺配置：[擇一]
+- 核心列點：[3點，每點不超過20字，語氣輕鬆親切]
+
+# 注意事項
+長輩注意事項與小孩適合景點請特別標注，費用未確認的寫「待確認」。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出資訊圖</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據上傳的行程資料，整理出適合製作資訊圖的核心內容：
+
+# 資訊圖內容整理
+- 主標題（10字內）：
+- 副標題（20字內）：
+- 核心數據（3～5個，每個附簡短說明，例如：5天行程 / 6大區域 / 必吃螃蟹懷石）：
+- 三大重點訊息（每點15字內，聚焦家人共遊亮點）：
+
+# 視覺風格建議
+- 應用場景：社群貼文與親友分享
+- 建議風格：北海道清新自然風（天空藍 / 薰衣草紫 / 雪白）
+- 版面配置：便當盒排版
+- 配色方案：三色限定
+- 尺寸：1:1</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 匯出語音摘要</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據上傳的行程大綱，製作一份「北海道旅遊語音摘要」。
+
+# 角色設定
+主持人A：領隊（語氣專業、點出函館/富良野/旭川各段亮點）
+主持人B：第一次去北海道的旅伴（語氣好奇、分享真實感受：薰衣草花田的氣味、螃蟹料理的份量感）
+
+# 風格要求
+- 對話式進行，輕鬆活潑，像在和朋友分享旅遊回憶
+- 總長度：約5分鐘可聽完
+
+# 內容規範
+- 開場：點出這趟北海道行程的核心魅力
+- 中段：依函館、富良野、旭川各用1分鐘說明亮點
+- 結尾：給第一次去北海道的旅遊者最值得帶走的1個建議</div>
+        </div>
+      </div><!-- u4-e END -->
+
+      <!-- u4-f -->
+      <div class="sub-block" id="u4-f">
+        <div class="sec-sub-title">簡報 Q1：張數有限制嗎？（50 張大簡報）</div>
+        <div class="tip-card info"><strong>📌 先認識 Notebook 的定位：Notebook 是「文字產出工具」，不是排版工具。</strong><br>在 Notebook 要求製作簡報時，它產出的是<strong>純文字的簡報草稿與大綱結構</strong>，本身無法直接輸出 .pptx 或帶有排版的簡報檔案。<br>✅ 正確用法：用 Notebook 產出紮實的文字骨架，再搭配 <strong>Gamma</strong> 或 <strong>Gemini Canvas</strong> 轉成有設計感的簡報。</div>
+        <div class="tip-card warning"><strong>❓ 我要做 50 張，做得到嗎？</strong><br>Notebook 單次輸出有 Token 上限，超過 <strong>10～15 張</strong>後，內容會開始縮水、變得敷衍，甚至直接中斷。</div>
+
+        <div class="content-h2">解決方式：分兩步走</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>動作</th><th>說明</th></tr>
+          <tr><td>Step 1：先定總大綱</td><td>讓 AI 產出 5 大單元、每單元 10 個子題的總架構</td><td>一次產出 50 個標題清單，不擴寫</td></tr>
+          <tr><td>Step 2：分批擴寫</td><td>每次只處理 1 個單元（10 張）</td><td>分 5 次完成，風格才能保持一致</td></tr>
+        </table>
+        <div class="tip-card note"><strong>Step 1 完成後：</strong>請將總大綱儲存為 Notebook 筆記，命名為【簡報全域規範與總大綱】，後續每次擴寫都要同時勾選此筆記，才能確保風格一致。</div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Step 1：風格規範＋總大綱 Prompt（以儀器技術宣導為例）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code"># 角色設定
+你是一位擅長技術轉譯、文風專業嚴謹的首席簡報架構師。
+
+# 任務目標
+請根據我上傳的「儀器技術原理宣導」來源資料，
+規劃一份共計 50 張的簡報總大綱。
+這次對話只需產出「全域風格規範」與「50 張的標題清單」，
+不需要擴寫內容。
+
+# 第一部分：全域風格規範（全體投影片必須遵循）
+1. 文風語氣：專業精煉、多用數據與商務動詞，切勿口語化
+2. 每頁結構：固定包含 [投影片標題]、[視覺排版建議]、[核心列點 3-4 點]、[講師講稿 100 字內]
+
+# 第二部分：50 張簡報總大綱規劃
+請拆解為 5 大模組（每模組 10 張），
+條列出第 1 張到第 50 張的每一張投影片標題，不得省略。
+
+（格式範例）
+- 模組一：技術原理總覽
+  - 第 1 張：[標題]
+  - 第 2 張：[標題]
+  ...依此類推，一次列出 50 個標題</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Step 2：分批擴寫 Prompt（每次處理 1 個模組）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code"># 任務執行
+請依據已勾選的筆記【簡報全域規範與總大綱】，
+嚴格遵循裡面的文風語氣與每頁結構。
+
+現在請詳細擴寫【模組一：第 1 張至第 10 張】的完整內容。
+
+# 輸出格式（每張投影片嚴格依此格式）：
+### 投影片第 X 張
+- **投影片標題**：[帶入大綱標題]
+- **視覺與排版建議**：[圖表類型、佈局方式]
+- **核心重點（Bullet Points）**：
+  * [重點一]
+  * [重點二]
+  * [重點三]
+- **講師講稿**：[100 字內，語氣沉穩專業]</div>
+        </div>
+        <div class="content-note"><p>後續模組二至模組五，只需修改模組名稱與張數範圍即可，風格完全一致。</p></div>
+      </div><!-- u4-f END -->
+
+      <!-- u4-g -->
+      <div class="sub-block" id="u4-g">
+        <div class="sec-sub-title">簡報 Q2：我要 5 張，AI 卻不聽話？</div>
+        <div class="tip-card info"><strong>原因說明：</strong>AI 是逐字預測的，它無法精準計算「現在寫到第幾張了」，只要沒有給出明確的每張定位，它就會自行決定張數。</div>
+        <table class="data-table">
+          <tr><th>常見狀況</th><th>原因</th></tr>
+          <tr><td>只寫了 3 張就沒了</td><td>來源資料太少，AI 認為沒東西好寫</td></tr>
+          <tr><td>前 2 張寫很詳細，後面壓縮成 1 張</td><td>來源資料太多，前幾張把內容用完了</td></tr>
+        </table>
+        <div class="tip-card note"><strong>解法核心：不只給數字，還要給「骨架定位」。</strong>直接在 Prompt 裡把每一張的主題訂死，AI 才有框架遵循。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 精準限制 5 張 Prompt（以年度業務成果報告為例）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code"># 任務目標
+請根據我上傳的「年度業務成果報告」，
+製作一份「嚴格限制只有 5 張投影片」的簡報內容。
+
+# 頁數與主題（不可多也不可少，就是 5 張）
+- 第 1 張：現況與核心挑戰（引言）
+- 第 2 張：今年度業務數據與成效分析
+- 第 3 張：核心改善措施（策略層面）
+- 第 4 張：具體執行成果與時程對照
+- 第 5 張：預期效益與後續建議
+
+# 每張輸出格式
+請依序輸出這 5 張，每張必須包含：
+1. 投影片標題（15 字以內）
+2. 視覺排版構想（如：左右二分法、三欄表格、時間軸）
+3. 核心精煉列點（3 點，每點不超過 20 字）
+4. 講師演講稿（120 字，語氣流暢自然）
+
+# 注意事項
+若內容太多請進行濃縮；若內容不足請圍繞主題深入闡述。
+絕對必須剛好產出 5 張，不多不少。</div>
+        </div>
+      </div><!-- u4-g END -->
+
+      <!-- u4-h -->
+      <div class="sub-block" id="u4-h">
+        <div class="sec-sub-title">簡報 Q3：現成簡報，可以重新調整嗎？</div>
+        <div class="tip-card info">可以，這正是 Notebook 的強項之一。</div>
+        <div class="content-note">
+          <p><strong>操作步驟：</strong></p>
+          <ol style="margin-left:20px;">
+            <li>將原本的舊簡報另存為 <strong>PDF 格式</strong></li>
+            <li>上傳至 Notebook 的來源</li>
+            <li>左側來源面板中，<strong>只勾選這份 PDF</strong></li>
+            <li>複製下方 Prompt 進行對話</li>
+          </ol>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 依現有簡報重新調整 Prompt（以儀器技術宣導簡報為例）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code"># 角色設定
+你是一位頂尖的簡報優化專家，擅長將結構零散或口語化的舊簡報，
+重塑為具備說服力的現代化商務簡報。
+
+# 任務目標
+我上傳了一份「儀器技術宣導舊簡報」PDF。
+請逐頁讀取原始內容，依照以下優化要求重新調整每一頁。
+
+# 優化要求
+1. 保持頁數結構：原本幾頁，就優化成幾頁，保留邏輯順序
+2. 文風重塑：口語化字句改為具邏輯性、數據導向的商務文句
+3. 結構標準化：每頁統一輸出以下格式
+
+# 輸出格式（逐頁處理）
+### 第 X 頁優化後
+- **全新投影片標題**：[精簡或精準化原標題]
+- **內容精煉列點**：[3 個強而有力的 Bullet Points]
+- **視覺排版建議**：[建議適合此頁的圖表類型或佈局]
+- **補強講師講稿**：[100 字，具說服力，語氣流暢]</div>
+        </div>
+      </div><!-- u4-h END -->
+
+      <!-- u4-i -->
+      <div class="sub-block" id="u4-i">
+        <div class="sec-sub-title">簡報 Q4：怎麼寫 Prompt 才會得到想要的？</div>
+        <div class="content-h2">簡報 Prompt 的五大要素</div>
+        <table class="data-table">
+          <tr><th>要素</th><th>說明</th><th>範例</th></tr>
+          <tr><td>角色</td><td>指定 AI 扮演什麼專業角色</td><td>資深行政幕僚、簡報架構師</td></tr>
+          <tr><td>目標</td><td>明確說明任務是什麼</td><td>製作 7 張簡報大綱與詳細內容</td></tr>
+          <tr><td>來源限制</td><td>指定依哪份文件</td><td>請根據上傳的「業務成果報告」</td></tr>
+          <tr><td>結構限制</td><td>明訂每張主題與頁數</td><td>第 1 張前言、第 2 張痛點…（不可省略）</td></tr>
+          <tr><td>輸出格式</td><td>規定每頁要包含哪些欄位</td><td>標題、視覺建議、列點、講稿</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 通用高成功率 Prompt 模板</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code"># 1. 角色設定
+你是一位專業的 [請填入：如 業務管理 / 產品技術] 培訓講師，
+擁有豐富的提案與簡報設計經驗。
+
+# 2. 任務目標
+請針對已勾選的來源資料，製作主題為「[請填入簡報主題]」的簡報大綱與詳細草稿。
+
+# 3. 結構限制
+- 總頁數：嚴格限制剛好 [請填入頁數，如：7] 張
+- 邏輯架構：必須涵蓋完整起承轉合
+  （引言 → 痛點 → 核心論點 → 數據支持 → 結論與行動建議）
+
+# 4. 每頁輸出格式
+請統一以 Markdown 輸出，每張投影片必須包含以下三個欄位，不得遺漏：
+
+### 投影片第 X 張：[投影片名稱]
+- **視覺配置建議**：[圖表類型、對比佈局或視覺焦點]
+- **核心列點重點**：[3 個精煉項目，多用數據與結論先行]
+- **講師逐字講稿**：[150 字以內，語氣專業、自信且具情境感]
+
+# 5. 注意事項
+- 所有數據與論點必須 100% 基於上傳的來源資料，禁止憑空捏造
+- 若來源內容有口語化之處，請自動優化為商務文風</div>
+        </div>
+      </div><!-- u4-i END -->
+    </div><!-- u4 END -->
+
+
+    <!-- ======== U5: AI＋Word 文件 ======== -->
+    <div class="content-section" id="u5">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-5)">5</span>
+        AI＋Word 文件
+      </div>
+      <div class="sec-desc">📌 工作情境：Word 看似人人會用，但實際編輯文件時，常因段落、圖片或格式設定不當，導致版面反覆調整卻無法到位。尤其把 AI 回覆貼進 Word 後，常出現斷行、縮排、表格框線錯亂。本單元建立正確的編輯觀念，達到「省時效率」原則。</div>
+
+      <!-- u5-a -->
+      <div class="sub-block" id="u5-a">
+        <div class="sec-sub-title">選取方式</div>
+        <div class="content-img70">
+          <img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/word1.jpg" alt="">
+        </div>
+      </div><!-- u5-a END -->
+
+      <!-- u5-b -->
+      <div class="sub-block" id="u5-b">
+        <div class="sec-sub-title">困擾①：強制換行與多餘空段落</div>
+        <div class="tip-card info"><strong>📌 練習說明：</strong>請開啟練習網站，選取想要的段落複製後貼入 Word，觀察每個區塊分別會遇到哪些排版問題，再跟著老師一起修正。<br>🔗 練習網站：<a href="https://zoego99.github.io/ex/WordPaste.html" target="_blank">貼入 Word 時困擾情境 ↗</a></div>
+
+        <div class="content-h2">問題說明</div>
+        <div class="content-note">
+          <p>貼入後開啟「顯示／隱藏編輯標記」（【常用】→ <img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/icon29.png" alt="顯示/隱藏編輯標記" style="height:1.4em;vertical-align:middle;display:inline;">），會看見：</p>
+          <ul style="margin-left:20px;">
+            <li><code>↓</code>（強制換行）：文字在段落中間被強制斷行</li>
+            <li><code>↵</code>（多餘空段落）：段落之間出現 1～2 行空白</li>
+          </ul>
+        </div>
+
+        <div class="content-h2">解法｜尋找／取代</div>
+        <div class="content-note"><p><strong>指令：</strong>【常用】→【取代】，或快速鍵 <code>Ctrl + H</code></p></div>
+        <div class="content-img100">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/word2.jpg" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/word2.jpg" alt=""></a>
+        </div>
+        <table class="data-table">
+          <tr><th>要清除的問題</th><th>尋找欄輸入</th><th>取代為</th><th>說明</th></tr>
+          <tr><td>強制換行 ↓</td><td>^l</td><td>（空白）</td><td>小寫 L</td></tr>
+          <tr><td>多餘空段落</td><td>^p^p</td><td>^p</td><td>兩個段落符號換一個</td></tr>
+          <tr><td>連續多行空白</td><td>^p^p</td><td>^p</td><td><strong>重複執行</strong>，直到取代 0 個為止</td></tr>
+        </table>
+        <div class="tip-card note"><strong>💡 最快的預防方法：貼入前先選擇性貼上</strong><br><code>Ctrl + Shift + V</code>（或貼上選項 →「只保留文字」），貼入後只有文字，沒有任何格式符號，再依需要套用樣式。</div>
+      </div><!-- u5-b END -->
+
+      <!-- u5-c -->
+      <div class="sub-block" id="u5-c">
+        <div class="sec-sub-title">困擾②：多層項目符號縮排不整齊</div>
+        <div class="content-h2">問題說明</div>
+        <div class="content-note">
+          <p>AI 輸出的多層項目（主項目＋子項目）貼入 Word 後：</p>
+          <ul style="margin-left:20px;">
+            <li>序號與文字距離不一致</li>
+            <li>子項目縮排跑掉，無法對齊</li>
+            <li>手動按空白鍵調整，印出來還是會跑位</li>
+          </ul>
+        </div>
+
+        <div class="content-h2">尺規與段落關係</div>
+        <div class="tip-card info"><strong>尺規啟動：</strong>【檢視】＞ 勾選【尺規】</div>
+        <div class="content-note"><p><strong>A. 段落基本型式</strong></p></div>
+        <div class="content-img70">
+          <a href="https://hackmd.io/_uploads/Bk9BKL_fzg.png" target="_blank"><img src="https://hackmd.io/_uploads/Bk9BKL_fzg.png" alt=""></a>
+        </div>
+        <div class="content-note"><p><strong>B. 利用【尺規】設定段落</strong></p></div>
+        <div class="content-img80">
+          <a href="https://hackmd.io/_uploads/rkgy5Idzze.png" target="_blank"><img src="https://hackmd.io/_uploads/rkgy5Idzze.png" alt=""></a>
+        </div>
+        <div class="content-note"><p><strong>C. 段落指令設定</strong></p></div>
+        <div class="content-img80">
+          <a href="https://hackmd.io/_uploads/SJKN9Uuzzl.png" target="_blank"><img src="https://hackmd.io/_uploads/SJKN9Uuzzl.png" alt=""></a>
+        </div>
+
+        <div class="content-h2">解法｜使用尺規調整縮排</div>
+        <div class="content-img80">
+          <a href="https://hackmd.io/_uploads/rJ1dnI_Mfg.png" target="_blank"><img src="https://hackmd.io/_uploads/rJ1dnI_Mfg.png" alt=""></a>
+        </div>
+      </div><!-- u5-c END -->
+
+      <!-- u5-d -->
+      <div class="sub-block" id="u5-d">
+        <div class="sec-sub-title">困擾③：表格貼入後出現雙框線</div>
+        <div class="content-h2">問題說明</div>
+        <div class="content-note"><p>從 AI 或網頁複製 HTML 表格，貼入 Word 後儲存格出現雙框線，且框線粗細不一致。</p></div>
+        <div class="content-img80">
+          <a href="https://hackmd.io/_uploads/rkG23LOGfe.png" target="_blank"><img src="https://hackmd.io/_uploads/rkG23LOGfe.png" alt=""></a>
+        </div>
+
+        <div class="content-h2">解法｜取消儲存格間距，再統一框線</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>操作</th></tr>
+          <tr><td>S1 取消儲存格間距</td><td>點表格任一處 →【版面配置】（表格工具）→【儲存格邊界】→ 取消勾選【允許儲存格間距】→ 確定</td></tr>
+          <tr><td>S2 統一框線</td><td>選取整個表格 →【表格設計】→【框線】→ 先選【無框線】，再選【所有框線】</td></tr>
+          <tr><td>S3 調整欄寬</td><td>【版面配置】→【自動調整】→【自動調整成視窗大小】</td></tr>
+        </table>
+        <div class="tip-card note"><strong>雙框線的原因：</strong>網頁表格的儲存格之間預設有「間距」，貼進 Word 後每一格各自畫框線，看起來就變成兩條線。取消間距後，框線才會合成一條。</div>
+      </div><!-- u5-d END -->
+    </div><!-- u5 END -->
+
+
+    <!-- ======== U6: AI＋PPT 簡報 ======== -->
+    <div class="content-section" id="u6">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-6)">6</span>
+        AI＋PPT 簡報
+      </div>
+      <div class="sec-desc">📌 AI 簡報製作：先用 Gamma 產出簡報，再調整下載後的簡報，最後用 PowerPoint 技巧統一風格、優化整體呈現。</div>
+
+      <!-- u6-a -->
+      <div class="sub-block" id="u6-a">
+        <div class="sec-sub-title">Gamma簡報製作</div>
+        <div class="tip-card info"><strong>工作流程：</strong>利用Gamma製作簡報</div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 利用Gamma製作簡報</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">使用 Agent 製作「年底客製化訂單與樣品交期整合計畫」簡報。
+
+請自行上網搜尋最新年度資料，整理以下內容，並標示資料來源：
+- 年底旺季時程（雙11、耶誕、跨年至農曆春節前的備貨與出貨高峰）
+- 旺季常見瓶頸（客製化訂單排程、樣品打樣延遲、通路備貨壓力、物流塞車）
+- 客製化需求趨勢（企業禮盒、聯名包裝、小量多樣、指定日期配送）
+- 數位工具應用（ERP 訂單管理、AI 需求預測、線上樣品申請與進度追蹤）
+- 交期管理小知識：下單截止日、交叉覆核、提前通知客戶與通路的重要性
+
+約 8～10 頁，風格輕鬆、活潑、圖像化。
+</div>
+        </div>
+
+      </div><!-- u6-a END -->
+      <div class="sub-block" id="u6-b">
+        <div class="sec-sub-title">調整下載後簡報</div>
+        <div class="tip-card info"><strong>工作流程：</strong>將 AI 已完成簡報下載後，需要進行調整，分為以下二情境。
+          <ul>
+            <li>情境 1：生成「新的一頁」— 截圖既有頁面當風格參考，生成「新的一頁」</li>
+            <!-- <li>情境 2：既有「修改內容」—　針對既有圖片本身「修改內容」</li> -->
+            <li>情境 2：同主題同邏輯，AI重新設計 — 同主題同邏輯，讓 AI 重新設計成更豐富的資訊圖</li>
+          </ul>
+        </div>
+
+        <div class="content-h2">情境 1：生成「新的一頁」— 截圖既有頁面當風格參考，生成「新的一頁」</div>
+        <div class="tip-card note"><span class="red">關鍵重點：</span> 要 AI「模仿風格」而不是「複製內容」，同時要求避開標題區域（因為那塊等一下要放你自己下的新標題文字，<br>若 AI 把文字也一起畫進圖裡，就沒辦法在 Gamma/PowerPoint 裡另外編輯標題了）</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 截圖既有頁面當風格參考，生成「新的一頁」</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請參考這張附圖的視覺風格（不要複製圖片中的文字或標題內容），
+生成一張新的資訊圖／插畫，主題是：
+新主題：【新主題，例如：樣品申請與打樣流程說明】
+
+風格要求：
+- 沿用附圖的色調、畫風、構圖比例
+- 上方約 15-20% 區域請保留乾淨、無主要元素
+  （這塊要另外放標題文字，畫面元素請避開這個區域）
+- 圖片下方 70-80% 主要放置與新主題相關的視覺元素
+
+比例：16:9
+</div>
+        </div>
+
+<!--    <div class="content-h2">情境 2：既有「修改內容」—　針對既有圖片本身「修改內容」</div> 
+        <div class="tip-card note"><span class="red">關鍵重點：</span> 這是「圖生圖」（image-to-edit），不是憑空生成新圖，要明確講清楚「哪裡改、哪裡不動」，AI 才不會整張重畫</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 針對既有圖片本身「修改內容」</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請根據這張附圖進行修改，不要重新生成整張圖：
+
+需要修改的部分：
+- 【具體描述要改的地方，例如：把左邊的圖示換成___】
+- 【把背景色從___改成___】
+
+需要保留不變的部分：
+- 【具體描述不要動的地方，例如：整體構圖、右側文字排版、人物姿勢...】
+</div>
+        </div>
+-->
+        <div class="content-h2">情境 2：同主題同邏輯，AI重新設計成更豐富的資訊圖</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 同主題同邏輯，重新設計</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請參考這張附圖的主題與核心邏輯架構
+（【說明原本的架構，例如：三大重點並列呈現】），
+內容不需要照抄附圖現有的文字，
+
+請你依照同樣的主題與邏輯，重新設計並生成一張
+資訊更豐富、版面更完整的資訊圖，用來替換原本這張圖：
+
+要求：
+1. 保留原本的核心架構（【例如：三個並列重點的骨架】）
+2. 針對每個重點，請你補充更具體的說明文字、數據或情境例子
+   （原圖只有關鍵詞，這次希望每個重點都有具體內容支撐）
+3. 版面可以更豐富：可加入圖示、簡單的數據視覺化、
+   主副資訊的層次分級（大標題／小標題／說明文字）
+
+風格要求：
+- 沿用附圖的色調、畫風、構圖比例
+- 上方約 15-20% 區域請保留乾淨、無主要元素
+  （這塊要放回原本簡報的標題文字，畫面元素請避開這個區域）
+- 圖片下方 70-80% 主要放置與新主題相關、更豐富的視覺元素
+
+尺寸／比例：16:9
+</div>
+        </div>
+      </div><!-- u6-b END -->
+
+
+      <!-- u6-c -->
+      <div class="sub-block" id="u6-c">
+        <div class="sec-sub-title">PPT：提昇簡報設計技巧</div>
+        <div class="tip-card info"><strong>目標：</strong>AI 產出的簡報下載後，掌握 PowerPoint 的進階設定，優化簡報結構與整體呈現。</div>
+
+        <div class="content-h2">(1) 善用【快速鍵】提升效率</div>
+        <div class="content-note"><p>在簡報製作中，使用快速鍵讓調整物件事半功倍，以下是常被忽略的好用快速鍵。</p></div>
+        <div class="content-img70">
+          <a href="https://hackmd.io/_uploads/HJLtxb7Zze.jpg" target="_blank"><img src="https://hackmd.io/_uploads/HJLtxb7Zze.jpg" alt=""></a>
+        </div>
+
+        <div class="content-h2">(2) 編輯端點 &amp; 合併圖案</div>
+        <div class="content-img80">
+          <a href="https://hackmd.io/_uploads/Byu5eZ7Zzx.jpg" target="_blank"><img src="https://hackmd.io/_uploads/Byu5eZ7Zzx.jpg" alt=""></a>
+        </div>
+      </div><!-- u6-c END -->
+
+      <!-- u6-d -->
+      <div class="sub-block" id="u6-d">
+        <div class="sec-sub-title">PPT：簡報者檢視與整體美化</div>
+
+        <div class="content-h2">(1) 啟動簡報者檢視畫面</div>
+        <div class="content-img80">
+          <a href="https://hackmd.io/_uploads/BJFjxbmWfg.jpg" target="_blank"><img src="https://hackmd.io/_uploads/BJFjxbmWfg.jpg" alt=""></a>
+        </div>
+
+        <div class="content-h2">(2)【設計】投影片整體美化</div>
+        <div class="content-img80">
+          <a href="https://hackmd.io/_uploads/rku3x-QZMe.jpg" target="_blank"><img src="https://hackmd.io/_uploads/rku3x-QZMe.jpg" alt=""></a>
+        </div>
+
+        <div class="content-h2">(3) 改變投影片開始編號</div>
+        <div class="content-note">
+          <ul style="margin-left:20px;">
+            <li>S1.【插入】＞【頁首／頁尾】，勾選投影片編號</li>
+            <li>S2. 變更投影片開始編號：【設計】＞【投影片大小】＞【自訂投影片大小】</li>
+          </ul>
+        </div>
+        <div class="content-img70">
+          <a href="https://hackmd.io/_uploads/H1I6lb7-Ge.jpg" target="_blank"><img src="https://hackmd.io/_uploads/H1I6lb7-Ge.jpg" alt=""></a>
+        </div>
+      </div><!-- u6-d END -->
+
+      <!-- u6-e -->
+      <div class="sub-block" id="u6-e">
+        <div class="sec-sub-title">PPT：母片與文字整體調整</div>
+
+        <div class="content-h2">(1) 善用母片，統一風格</div>
+        <div class="content-img80">
+          <a href="https://hackmd.io/_uploads/HkNCxZX-Mg.jpg" target="_blank"><img src="https://hackmd.io/_uploads/HkNCxZX-Mg.jpg" alt=""></a>
+        </div>
+
+        <div class="content-h2">(2)【字】的整體調整</div>
+        <div class="content-note"><p><strong>📌 字型批次取代</strong></p></div>
+        <div class="content-img40">
+          <a href="https://hackmd.io/_uploads/B1BJWZXZMl.jpg" target="_blank"><img src="https://hackmd.io/_uploads/B1BJWZXZMl.jpg" alt=""></a>
+        </div>
+        <div class="content-note"><p><strong>📌 整體文字大小調整技巧</strong></p></div>
+        <div class="content-img30">
+          <a href="https://hackmd.io/_uploads/ByGZ--QWMe.jpg" target="_blank"><img src="https://hackmd.io/_uploads/ByGZ--QWMe.jpg" alt=""></a>
+        </div>
+      </div><!-- u6-e END -->
+    </div><!-- u6 END -->
+
+
+    <!-- ======== U7: AI＋試算表 ======== -->
+    <div class="content-section" id="u7">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-1)">7</span>
+        AI＋試算表
+      </div>
+        <div class="tip-card info"><strong>關鍵觀念：</strong>在同一個 AI 對話中，前後內容會互相參考。<br>如果連續詢問多個 Excel 公式，但這些公式其實屬於不同工作表、不同欄位或不同案例，AI 可能會把前一題的條件帶到下一題，造成公式判斷錯誤。<br>
+因此可以事先加上一段規則，告訴 AI：
+          <ul>
+            <li>避免不同公式互相干擾</li>
+            <li>減少 AI 誤用前一題條件</li>
+            <li>不用每次都另外開新對話</li>
+            <li>適合在同一個對話中連續詢問多個 Excel 問題</li>
+          </ul>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Excel開始詢問公式時，建議開始的Prompt</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">以下會詢問多個 Excel 問題，彼此可能沒有關聯。 若出現【主題】，表示開始新的獨立問題，請只依該主題內容回答，不要沿用前一題的公式、欄位或條件。</div>
+        </div>
+
+      <!-- u7-a -->
+      <div class="sub-block" id="u7-a">
+        <div class="sec-sub-title">照片／紙本資料轉 Excel</div>
+        <div class="tip-card info">操作習慣：整理完成後，利用【Ctrl + C】複製 AI 回覆的表格，再到 Excel 按【Ctrl + V】貼上</div>
+        <table class="data-table">
+          <tr><th>情境</th><th>原始格式</th><th>整理後欄位</th></tr>
+          <tr><td>機具現場維修回報</td><td>技師手寫維修單拍照</td><td>日期／客戶名稱／機台型號／故障情況／處理方式</td></tr>
+          <tr><td>客戶紙本訂單</td><td>傳真或紙本訂購單拍照</td><td>日期／客戶名稱／品項／數量／交貨日期</td></tr>
+          <tr><td>經銷商詢價彙整</td><td>通訊軟體文字截圖</td><td>經銷商名稱／詢價品項／數量／優先程度</td></tr>
+        </table>
+        <div class="tip-card note"><strong>❌ 常見問法（不佳）：</strong>「請把這張圖片轉成 Excel」<br>這樣問，AI 不知道你要什麼欄位、不知道格式、不知道用途<br><strong>✅ 好 Prompt ＝ 角色 ＋ 任務 ＋ 輸出格式</strong></div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 好 Prompt — 照片轉 Excel（機具維修回報單）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">你是一位行政助理，請協助我整理圖片中的工程／維修回報單內容。
+請根據圖片資訊，整理成「可直接貼到 Excel 的表格格式」。
+- 欄位請包含：
+日期、工地地點、設備名稱、設備編號、故障情況、損壞程度、處理方式、預估費用、負責人、處理狀態、備註
+- 預估費用：例如顯示為 6000
+- 請用「表格」方式輸出，不要加入多餘說明文字。
+- 若圖片中某欄位無資料，請填寫「無」。</div>
+        </div>
+      </div><!-- u7-a END -->
+
+      <!-- u7-b -->
+      <div class="sub-block" id="u7-b">
+        <div class="sec-sub-title">AI 輔助公式建立</div>
+        <div class="tip-card info">▶️ 工作情境：Excel 公式會用的就那幾個，遇到跨表查詢、條件判斷、時間計算，常常卡關，要嘛上網查半天，要嘛就放棄，改用人工處理。</div>
+        <table class="data-table">
+          <tr><th>情境</th><th>說明</th></tr>
+          <tr><td>我知道要算什麼，但不知道怎麼寫</td><td>描述需求，AI 直接給公式</td></tr>
+          <tr><td>公式有錯，但不知道錯在哪</td><td>把錯誤公式丟給 AI，請它找問題</td></tr>
+          <tr><td>想確認公式邏輯是否正確</td><td>上傳 Excel 檔，請 AI 驗證（注意客戶與報價資料安全）</td></tr>
+        </table>
+        <div class="tip-card note"><strong>關鍵觀念：</strong>說清楚「哪一張表是來源、哪一張是目的、用哪個欄位比對」，AI 給的公式才會準確。
+          <ul>
+            <li>詢問 AI 時描述表格的內容，包含表格的資料範圍，與我們目標要填寫的位置。</li>
+            <li>提供三筆記錄給 AI 參考，進行提問參考。</li>
+            <li>需要生成 Excel 檔，在詢問時直接寫指令。</li>
+            <li>利用畫面截圖進行 AI 詢問。</li>
+          </ul>
+        </div>
+
+        <div class="content-h2">(1) 善用截圖</div>
+        <div class="content-img60">
+          <img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/excel-2.jpg" alt="">
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 AI 詢問 — 判斷資料是否填寫完整</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">如附圖，整筆資料中A~D欄若為空白時，在E欄顯示【有資料未填寫】，公式寫法，並簡單說明公式</div>
+        </div>
+
+        <div class="content-h2">(2) 善用表格設定進行AI詢問</div>
+        <div class="content-img70">
+          <img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai224.jpg" alt="">
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 AI 詢問 — 利用[欄位名稱]快速理解公式寫法</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">如附圖，資料已建立為 Excel Table。
+請先分析各欄位用途，再協助撰寫 H 欄「工時(小時)」公式，需考量休息時間扣除、跨日班別、彈性工時等情境，並說明計算邏輯。
+</div>
+        </div>
+
+        <div class="content-h2">(3) 提供 Excel 檔案</div>
+
+        <div class="tip-card info">📌 AI 協助寫公式不是問題，真正關鍵問題是<strong>AI可能還沒看懂資料怎麼連，就開始回答公式</strong>。多工作表或多檔案時，直接提供 Excel 檔，先讓 AI 確認資料關係，再回答會更準確，這樣比截圖更容易公式解答。</div>
+        <div class="tip-card warning">⚠️ <strong>上傳檔案前先檢查敏感資料。</strong>客戶名稱、電話、報價、配方等資訊，必要時先刪除或改用代號。</div>
+        <div class="content-img60">
+          <img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/excel-1.jpg" alt="">
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 AI 詢問 — 兩工作表帶入公式（不佳問法）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">附檔，Excel檔案，包含兩個工作表，將工作表【基本資料】，
+透過【客戶編號】欄位代入至工作表【訂單明細】的產業別/地區欄位，公式寫法?
+</div>
+        </div>
+        <div class="tip-card note">📌 最佳問法：當附件包含多個工作表或多個檔案時，Prompt 不應直接要求公式或答案，而應先要求 AI 分析資料結構、欄位關係與關聯鍵，再提供解決方案。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 AI 詢問 — 兩工作表帶入公式（建議問法）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">附檔為 Excel，包含【基本資料】與【訂單明細】兩個工作表。
+
+需求：
+請透過【客戶編號】，將【基本資料】中的【產業別、所在地區】帶入【訂單明細】。
+
+請先檢查工作表結構與【客戶編號】是否適合作為關聯欄位。
+若沒有問題，直接提供公式與說明；若有異常，再先提醒我。</div>
+        </div>
+      </div><!-- u7-b END -->
+
+      <!-- u7-c -->
+<div class="sub-block" id="u7-c">
+
+  <div class="sec-sub-title">3. 數據趨勢解讀與建議</div>
+
+  <div class="tip-card info">
+    報表與圖表完成後，AI 可以協助我們進一步回答：
+    <strong>「發生了什麼？可能為什麼？接下來要注意什麼？」</strong>
+    <br><br>
+    常見應用包括：
+    <ul>
+      <li>找出明顯異常或趨勢變化</li>
+      <li>分析可能原因與影響</li>
+      <li>比較績效並找出優先改善項目</li>
+      <li>提出後續行動與改善方向</li>
+    </ul>
+  </div>
+
+  <div class="tip-card warning">
+    <strong>關鍵觀念：</strong>
+    <ul>
+      <li>❌ 不要只問 AI「這樣合理嗎？」</li>
+      <li>✅ 改問「可能原因是什麼？判斷依據是什麼？有哪些風險？」</li>
+      <li>AI 提出的原因屬於分析假設，仍需搭配實際資料確認。</li>
+    </ul>
+  </div>
+
+
+  <!-- 情境 1 -->
+  <div class="content-h2">情境 1｜發現明顯異常下降</div>
+
+  <div class="tip-card info">
+    當圖表出現明顯高峰、急升或急降時，
+    可以請 AI 協助找出可能原因、影響與改善方向。
+  </div>
+  <div class="content-img40">
+    <img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/excel-3.jpg" alt="">
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-header">
+      <span class="prompt-card-title">📌 簡易版 — 找出異常原因</span>
+      <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+    </div>
+    <div class="prompt-code">這是【1–6 月】的銷售趨勢圖。
+我發現【4 月達到高峰後，5–6 月明顯下降】。
+請分析可能原因，並提出改善建議。</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-header">
+      <span class="prompt-card-title">📌 進階版 — 原因、風險與改善</span>
+      <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+    </div>
+    <div class="prompt-code">這是【1–6 月】的銷售資料。
+我觀察到【4 月達到高峰後，5–6 月明顯下滑】。
+
+請協助分析：
+1. 可能原因
+2. 判斷時還需要確認哪些資料
+3. 可能造成的風險
+4. 【3 個】可行的改善方向
+
+請不要把可能原因直接當成已確認事實。</div>
+  </div>
+
+
+  <!-- 情境 2 -->
+  <div class="content-h2">情境 2｜判讀趨勢變化與後續風險</div>
+
+  <div class="tip-card info">
+    有些數據不是突然大幅下降，而是從成長轉為緩慢下滑。
+    這時可請 AI 協助判斷<strong>趨勢是否值得注意，以及後續可能的風險</strong>。
+  </div>
+  <div class="content-img40">
+    <img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/excel-4.jpg" alt="">
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-header">
+      <span class="prompt-card-title">📌 簡易版 — 趨勢判讀</span>
+      <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+    </div>
+    <div class="prompt-code">這是【1–6 月】的銷售趨勢資料。
+目前呈現【1–4 月持續成長，5–6 月開始下降】。
+
+請協助說明這個趨勢代表什麼，
+以及接下來最需要注意的地方。</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-header">
+      <span class="prompt-card-title">📌 進階版 — 趨勢推估與風險</span>
+      <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+    </div>
+    <div class="prompt-code">這是【1–6 月】的銷售資料，目前呈現【前期成長、後期逐漸下滑】的趨勢。
+
+如果要用目前趨勢推估後續表現，請協助我判斷：
+1. 這項推估成立的前提
+2. 最可能被忽略的【3 個】風險
+3. 哪些外部因素可能讓預估失準
+4. 還需要補哪些資料，才能提高判斷可信度</div>
+  </div>
+
+
+  <!-- 情境 3 -->
+  <div class="content-h2">情境 3｜找出需要優先改善的 KPI</div>
+
+  <div class="tip-card info">
+    當資料包含多個部門、目標值、實際值與達成率時，
+    不要只看最低百分比，也可以請 AI 綜合判斷
+    <strong>哪個部門或指標最需要優先處理</strong>。
+  </div>
+    <div class="content-img30">
+    <img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/excel-5.jpg" alt="">
+  </div>
+
+
+  <div class="prompt-card">
+    <div class="prompt-card-header">
+      <span class="prompt-card-title">📌 簡易版 — 找出需要關注的部門</span>
+      <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+    </div>
+    <div class="prompt-code">這是一份【各部門】的 KPI 表，包含【目標值、實際值、達成率】。
+
+請找出目前最需要優先關注的部門，
+並用簡單文字說明判斷理由。</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-header">
+      <span class="prompt-card-title">📌 進階版 — KPI 判斷與改善方向</span>
+      <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+    </div>
+    <div class="prompt-code">這是一份【各部門】的 KPI 比較表，包含【目標值、實際值、達成率】。
+
+請協助我：
+1. 找出最需要優先改善的【部門／指標】
+2. 說明判斷依據，不要只看達成率
+3. 說明可能造成的影響
+4. 提出【2～3 個】可行的改善方向
+
+若現有資料不足以判斷原因，請直接指出還需要哪些資料。</div>
+  </div>
+
+</div><!-- u7-c END -->
+      <!-- u7-d -->
+<!--      <div class="sub-block" id="u7-d">
+        <div class="sec-sub-title">問卷分析</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Notebook — 基礎統計</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">我已上傳一份 Excel 檔案，請先不要分析結果。
+
+請協助我進行「數據分析」，流程如下：
+1. 先說明這份資料可以進行哪些分析（條列即可）
+2. 告訴我每一種分析可以回答什麼業務問題
+3. 等我確認後，再進行實際分析
+
+請暫時不要產出任何結論或圖表。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Gemini — 客戶服務滿意度分析</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">你是一位數據分析師。
+我已提供一份客戶服務滿意度問卷調查資料。
+請依這份問卷資料分析：
+- 客戶類型（清潔公司、大樓物業、工廠、經銷商）、所在地區、洽詢事由佔比
+- 客戶對產品與服務的主要肯定原因
+- 客戶最希望改善的服務項目（例如：報修回應速度、交貨時間、技術說明）</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Gemini — 主管報告摘要</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請依據資料進行分析，並以條列方式輸出結果，分析內容包含：
+1. 受訪客戶類型、所在地區、洽詢事由的分布與佔比
+2. 客戶肯定產品與服務的主要原因（請整理關鍵因素）
+3. 客戶希望改善的服務項目與集中趨勢
+
+請以「可用於簡報與決策」的角度撰寫，不需過度技術說明。</div>
+        </div>
+      </div>
+-->
+      <!-- u7-e -->
+      <div class="sub-block" id="u7-e">
+        <div class="sec-sub-title">數據分析與報告結論生成</div>
+        <div class="tip-card info">一份完整的業務分析，不只是數字整理，還要說明「意義是什麼」「建議怎麼做」——這往往是最花時間、也最難下筆的部分。AI 不只是「看表格、唸數字」的工具，給它明確的角色、對象與目的，它能把數字轉成主管看得懂、可以做決策的語言。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Step1：確認資料，再問 AI 能分析什麼</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">我已上傳一份【網通產品週別銷售資料】Excel，請先不要分析結果。
+
+請先確認資料內容：
+1. 有哪些欄位、資料期間與筆數
+2. 產品類別有哪些，每個類別是否都有完整的週資料
+3. 「銷售金額」是否等於「銷售數量 × 平均單價」，若有落差請說明
+
+接著說明這份資料可以進行哪些分析（條列即可），
+並告訴我每一種分析可以回答什麼業務問題。
+
+等我確認後，再進行實際分析；請暫時不要產出任何結論或圖表。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Step2：執行分析，產出結論</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請依據上述確認的分析方向，以表格＋條列方式輸出結果：
+1. 各產品類別的【年度】銷售金額、占比，以及 2025 年相較 2024 年的成長率
+2. 各產品類別的【季度】銷售金額變化，指出是否有固定的淡旺季
+3. 成長或衰退的原因是「賣得多／少」還是「單價變高／變低」？請把銷售數量與平均單價分開比較
+4. 最需要關注的 2 個產品類別與判斷理由
+5. 可行的改善方向（2～3 項）
+
+每個結論都要附上計算出的數字，方便我用 Excel 核對。
+可能原因請標示為「推測」，不要當成已確認事實。
+請以「可用於簡報與決策」的角度撰寫，不要使用統計學術語。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Step3：將結論轉為摘要報告</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">根據以上分析結果，請幫我撰寫一份「網通產品年度銷售摘要（2024–2025）」：
+- 對象：總經理與各部門主管
+- 語氣：專業務實、可直接引用於報告開場
+- 字數：200字以內
+- 需包含：年度重點數據、需關注的產品類別、下一步建議
+
+請直接產出可使用的文字，不需要額外說明。</div>
+        </div>
+      </div><!-- u7-e END -->
+
+      <!-- u7-f -->
+      <div class="sub-block" id="u7-f">
+        <div class="sec-sub-title">動態Excel儀表板</div>
+        <div class="tip-card info">把 Excel 銷售資料交給 AI，讓 AI 協助規劃 KPI、圖表與版面，將原本的表格資料轉成一頁式動態儀表板，方便快速掌握趨勢重點與決策分析。</div>
+        <div class="content-img70">
+          <img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/excel-6.jpg" alt="">
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 動態Excel儀表板 提示詞</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">我已上傳一份Excel資料檔案。
+
+步驟一：請先用資料分析工具檢視這份資料，並回報：
+- 有哪些欄位，各欄位的資料型態（時間/類別/數值）
+- 資料的時間範圍或期間顆粒度（例如年、季、月、週）
+- 有哪些「分類維度」欄位（例如產品類別、地區、部門等，用來做分組比較）
+- 有哪些「數值指標」欄位（例如銷售金額、數量、單價等）
+- 針對你判斷最適合的時間軸與分類維度，先做一次驗算：列出每個時間區間、每個分類下的指標加總金額，讓我核對是否正確
+
+步驟二：確認資料無誤後，請設計並產出一份互動式數據儀表板，輸出成單一自包含HTML檔案：
+- 加一個「時間拖拉滑桿」，區間依實際資料的時間顆粒度自動設定（例如季度、月份），拖到哪個區間，所有卡片與圖表都要跟著變動
+- 4張KPI卡片（依實際分類維度與指標調整用詞）：
+  ① 當期指標數值最高的分類
+  ② 自資料起始期以來成長幅度最大的分類
+  ③ 自資料起始期以來降幅最大的分類
+  ④ 當期排行榜（各分類依指標數值由高到低排名）
+- 圖表：各分類指標趨勢圖、當期排行橫條圖
+- 下方自動產生資料表，欄位依實際資料內容決定，需包含輔助欄位（例如平均單價，若原始資料有數量與金額則可計算）
+- 請用HTML+CSS+JavaScript，資料直接寫死在程式碼中，不需要連外部資料庫
+
+若資料的分類維度不只一種（例如同時有產品類別與地區），請先詢問我要以哪個維度為主，或提出你建議的優先順序。
+</div>
+        </div>
+      </div><!-- u7-f END -->
+    
+      <!-- u7-g -->
+      <div class="sub-block" id="u7-g">
+        <div class="sec-sub-title">建立排班表</div>
+        <div class="tip-card info">把人員與班別條件交給 AI，先建立排班表，再同步到 Google 日曆，最後做成網頁版班表，讓排班更容易查詢與分享。<br>複雜任務不是直接叫 AI「幫我做」，而是先叫 AI「確認條件能不能做」。</div>
+        <!-- <div class="content-img70">
+          <img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/excel-6.jpg" alt="">
+        </div> -->
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 步驟1：建立排班表</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請根據以下人員與班別條件，協助建立【10 月 1 日至 10 月 31 日】排班表。
+
+# 人員資料
+- 王小明（資深）：主要早班，可支援中班；10/3–10/4 請假
+- 陳雅婷（資深）：主要中班，可支援早班
+- 林志豪（一般）：固定大夜班
+- 張美玲（一般）：主要早班，不可上大夜班；10/15–10/16 請假
+- 李佳蓉（一般）：主要中班，可支援早班；10/20 請假
+- 黃冠廷（一般）：主要大夜班
+
+# 班別需求
+- 早班 07:00–15:00：每日 2 人，至少 1 位資深
+- 中班 15:00–23:00：每日 2 人，至少 1 位資深
+- 大夜班 23:00–07:00：每日 1 人
+
+# 排班原則
+- 每人每月最多上【24 天】
+- 不安排「大夜班 → 隔天早班」
+- 尊重請假日期與可上班時段
+- 盡量平均分配班次並避免人力缺口
+- 排班時請參考【當年度國定假日】，並標示假日日期
+- 若國定假日需增加人力或調整班次，請另外提醒
+
+請先檢查以上條件是否能完成排班。
+若有人力不足、條件衝突或無法滿足需求，請先指出問題並提出調整建議，不要直接硬排。
+
+確認可行後，建立 Excel 排班表：
+
+# 表 1：員工班表
+- 日期為列、6 位員工為欄
+- 每格顯示：早班／中班／大夜班／休／請假
+- 員工欄位上方標示可上班時段與支援班別
+- 統計每人本月上班天數
+
+# 表 2：主管班表
+- 日期 × 早班／中班／大夜班
+- 顯示每班所有上班人員
+- 增加「備註／人力狀態」欄位
+- 標示：人力正常／人力吃緊／需調整
+
+最後請製作成 Excel 檔，儲存到 Google Drive 的【資料夾名稱】中，並提供檔案連結。</div>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 步驟2：排班建立檔案</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請根據以上資料產生【10 月】班表，並分別建立 2 個 Google 試算表：
+請將員工班表與主管班表分開建立，不要放在同一個試算表中。
+1. 【10月員工班表】
+2. 【10月主管班表】
+
+完成後，請提供兩個試算表的存取連結，方便我後續移動到 Google Drive 的【排班】資料夾。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 步驟3：排班匯入日曆中</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">根據上述排班結果，請製作 Google 日曆匯入用的 CSV。
+
+# 基本規則
+- 每日每班別一筆記錄
+- All Day Event 設為 True
+- 日期格式：MM/DD/YYYY
+- Subject：
+  - 早班：1早_人名1、人名2
+  - 中班：2中_人名1、人名2
+  - 大夜班：3夜_人名1、人名2
+- CSV 欄位：
+  Subject,Start Date,All Day Event,Description
+
+# 請選擇一種方式
+
+【方案 A｜單一 CSV】
+- 所有班別放在同一份 CSV
+- Description 加入顏色提示：
+  - 早班：[黃色]
+  - 中班：[藍色]
+  - 大夜班：[紫色]
+- 此方式匯入後不會自動套用不同活動顏色，僅作為辨識提示
+
+【方案 B｜分成 3 份 CSV】
+- 早班.csv → 匯入【早班】日曆，建議設定黃色
+- 中班.csv → 匯入【中班】日曆，建議設定藍色
+- 大夜班.csv → 匯入【大夜班】日曆，建議設定紫色
+- Description 可填入【早班／中班／大夜班】
+
+請依保留的方案產出完整 CSV 內容，確保可直接匯入 Google 日曆。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 步驟4：製作網站</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請根據上述排班結果，使用 HTML + Tailwind CSS 製作【飯店排班網站】，可直接部署到 GitHub Pages。
+
+# 網站內容
+
+## 1. 員工班表
+- 日期為欄、員工為列
+- 每格顯示【早班／中班／大夜班／公休】
+- 統計每位員工當月上班天數
+- 班別顏色：
+  - 早班：【黃色】
+  - 中班：【藍色】
+  - 大夜班：【紫色】
+  - 公休：【灰色】
+
+## 2. 主管班表
+- 日期為列、班別為欄
+- 每格顯示該班所有人員名單
+
+## 3. 月曆檢視
+- 以【10 月】月曆方式呈現，週一至週日排列
+- 每天顯示所有班別與人員
+- 依班別使用不同背景顏色
+- 公休日以淺灰色顯示
+
+# 功能
+- 上方加入【員工班表／主管班表／月曆檢視】切換按鈕
+- 響應式設計，適合手機、平板與電腦
+- 支援列印
+
+# 視覺風格
+- 主色：【深藍 #1E3A5F】
+- 輔色：【金色 #C9A84C】
+- 背景：【米白 #F5F0E8】
+- 早班：【#FFEB3B】
+- 中班：【#2196F3】
+- 大夜班：【#9C27B0】
+- 公休：【#E0E0E0】
+
+# GitHub Pages
+- 檔名：index.html
+- Tailwind CSS 使用 CDN
+- 使用完整 HTML5 結構
+- 不需後端即可獨立運作
+
+請直接輸出完整 HTML 程式碼，讓我可存成 index.html 後上傳至 GitHub Pages。</div>
+        </div>
+
+
+
+
+
+      </div><!-- u7-g END -->
+
+    
+    
+    </div><!-- u7 END -->
+
+
+    <!-- ======== U8: 圖文生成技巧 ======== -->
+    <div class="content-section" id="u8">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-2)">8</span>
+        圖文生成技巧
+      </div>
+      <div class="sec-desc">📌 圖像生成是指利用生成式 AI 工具（如 ChatGPT 圖像生成、Gemini Nano Banana），透過文字描述快速產生插畫、海報、資訊圖、簡報視覺與各類創意圖片。核心概念：AI不只是生圖，而是「自動排版設計」。</div>
+      <div class="content-note">
+        <p><strong>工具特色：</strong></p>
+        <ul>
+          <li>ChatGPT 圖像生成：偏向特色插畫、資訊圖、版面感、創意視覺</li>
+          <li>Gemini Nano Banana：圖文整合、情境生成、快速概念草圖</li>
+        </ul>
+      </div>
+      <table class="data-table">
+        <tr><th>類型</th><th>特點</th><th>適用例如</th></tr>
+        <tr><td>資訊圖像（Infographic）</td><td>強調資訊傳達／圖形、Icon、插圖／結構清楚</td><td>產品使用步驟說明／新品成果報告配圖／門市與通路教育訓練懶人包</td></tr>
+        <tr><td>行銷海報（Poster）</td><td>強調吸睛（視覺）／情境照片、插畫／CTA（行動呼籲）</td><td>新品上市宣傳／通路促銷活動／年節禮盒企業採購海報</td></tr>
+      </table>
+      <div class="content-h2">Prompt 撰寫原則</div>
+      <div class="tip-card info">Nano Banana 不是單純生圖，是「圖像＋文字＋排版＝完整設計稿」，<br>關鍵三元素：<strong>文字內容</strong>（講什麼）、<strong>視覺風格</strong>（長什麼樣）、<strong>版面配置</strong>（怎麼排）。<br><strong>CTA = Call To Action（行動呼籲 / 引導行動）：</strong>看完之後，要你做什麼？，即：CTA 就是讓對方下一步要做的事</div>
+      <table class="data-table">
+        <tr><th>元素</th><th>撰寫重點</th></tr>
+        <tr><td>文字內容</td><td>明確指定「文字內容」：主標題、副標題、重點資訊、CTA，避免 AI 亂生成或文字錯誤</td></tr>
+        <tr><td>視覺風格</td><td>明確指定色系／氛圍／品牌感，例如：專業穩重風、莫蘭迪色調</td></tr>
+        <tr><td>版面配置</td><td>明確指定「文字位置」與圖文比例，例如：便當盒排版、左右對比</td></tr>
+      </table>
+
+      <!-- u8-a -->
+      <div class="sub-block" id="u8-a">
+        <div class="sec-sub-title">資訊圖（Infographic）</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 主題：洗護髮正確三步驟，秀髮柔順有光澤！</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請生成一張【橫向 16:9】資訊圖，已包含完整排版與視覺設計。
+
+**主視覺 / 構圖內容描述**：
+畫面右側整齊並列三個圓角的便當盒格子（Bento Box），格子內分別帶有平面幾何向量感（SVG Icon）的「溫水預洗」「起泡按摩頭皮」「潤髮護理沖淨」插圖。畫面左側由角色「專業美髮保養顧問」手持平板進行說明，視線自然專注地望向右側的便當盒格子，形成流暢的視覺引導。
+
+**視覺風格**：
+採用「極簡向量插畫風格」風格（精準資訊視覺化）。幾何平整、線條簡潔，適合產品說明與門市教育訓練。
+- 清新質感風（線條俐落，色調柔和，適合美妝保養與日用品說明）
+- 莫蘭迪色調（低飽和、灰調柔和，優雅沉穩）
+
+**版面配置**：
+採用「便當盒排版（模組化分割）」與「左右對比」排版方式。
+
+**文字設計細節**：
+- 主標題：洗護髮正確三步驟，秀髮柔順有光澤！
+- 副標題：洗對方法，頭皮清爽更健康
+- 重點資訊：
+  1. 溫水預洗：先以溫水充分沖濕頭髮約 1 分鐘，帶走表面髒污與油脂。
+  2. 起泡按摩：洗髮精先在掌心搓揉起泡，再用指腹輕柔按摩頭皮，避免指甲抓傷。
+  3. 潤髮沖淨：潤髮乳塗抹於髮中至髮尾，避開頭皮，停留片刻後徹底沖淨。
+- CTA：正確洗護，每天都是好髮日！
+
+**輸出規格要求**：
+- 比例為橫向 16:9（投影片、簡報背景圖）
+- 整體構圖飽滿，角色姿態與右側圖文版面具有強烈互動感，配色和諧，字體清晰易讀。</div>
+        </div>
+      </div><!-- u8-a END -->
+
+      <!-- u8-b -->
+      <div class="sub-block" id="u8-b">
+        <div class="sec-sub-title">海報（Poster）</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 主題：年節禮盒企業採購，搶先預約</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請生成一張【海報 4:3】宣導海報，已包含完整排版與視覺設計。
+
+**視覺風格**：
+採用「極簡向量插畫風格」風格（精準資訊視覺化）。幾何平整、線條簡潔，適合企業採購與通路推廣。
+- 平面插畫上色（柔和漸層，乾淨線條）
+- 溫暖質感為主（形象專業且親切，帶有年節送禮的溫度與信賴感）
+- 圓潤有機造型（所有卡片與文字背景底襯皆採流暢大圓角設計，避免尖銳稜角）
+
+**簡報母片設定**：
+- AI 自動優化排版（不刻意留白，文字內容與角色比例均勻分佈）。
+
+**文字設計細節**：
+- 主標題：年節禮盒企業採購，搶先預約
+- 副標題：客製化包裝，送禮更有心意
+- 重點資訊：
+  - 核心提醒：提早下單，確保交期與客製包裝不延誤。
+  - 特色摘要：多款組合任選／企業專屬賀卡客製／指定日期配送
+- CTA：立即洽詢企業團購方案，年節送禮不卡關！
+
+**輸出規格要求**：
+- 比例為海報  4:3（橫式海報、宣傳單）
+- 角色人物與左側圖文排版完全分離不重疊。</div>
+        </div>
+      </div><!-- u8-b END -->
+    </div><!-- u8 END -->
+
+
+    <!-- ======== U9: 輕影片製作 ======== -->
+    <div class="content-section" id="u9">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-3)">9</span>
+        輕影片製作
+      </div>
+      <div class="sec-desc">📌 工作情境：產品介紹影片、新品使用教學、通路促銷短片，過去需要拍攝、剪輯、找廠商，時間與預算門檻都高。透過 Veo，將文字描述或簡報內容轉為短影音素材。</div>
+      <div class="tip-card note"><strong>關鍵觀念：</strong>Veo 生成的是「素材與片段」，不是一鍵完成的成品——每個鏡頭都需要人工檢視、決定要不要重新生成。把它當作起點，搭配簡單剪輯，就能快速產出可用的影片。</div>
+
+      <!-- u9-a -->
+      <div class="sub-block" id="u9-a">
+        <div class="sec-sub-title">操作流程</div>
+        <table class="data-table">
+          <tr><th>工具</th><th>用途</th></tr>
+          <tr><td>Veo（Google Flow）</td><td><a href="https://flow.google.com/" target="_blank">https://flow.google.com/</a></td></tr>
+          <tr><td>線上剪輯工具</td><td>Canva</td></tr>
+        </table>
+        <table class="data-table">
+          <tr><th>步驟</th><th>做什麼</th><th>用什麼工具</th></tr>
+          <tr><td>S1 分鏡</td><td>AI 一次產出 2 格分鏡腳本（含共同設定、生圖Prompt、生影Prompt、旁白文案）</td><td>ChatGPT / Gemini</td></tr>
+          <tr><td>S2 生圖</td><td>把生圖 Prompt 貼上，產出每一格的「首張畫面」</td><td>Gemini（Nano Banana）</td></tr>
+          <tr><td>S3 生影</td><td>把 S2 產出的圖＋生影 Prompt 一起貼到 Veo，圖生影片</td><td>Google Flow</td></tr>
+          <tr><td>S4 合成</td><td>旁白轉語音＋兩段影片＋字幕，全部拉進 Canva 時間軸排序輸出</td><td>Canva</td></tr>
+        </table>
+      </div><!-- u9-a END -->
+
+      <!-- u9-b -->
+      <div class="sub-block" id="u9-b">
+        <div class="sec-sub-title">分鏡腳本 Prompt</div>
+
+        <div class="content-h2">S1：分鏡 — AI提供影片腳本</div>
+        <div class="tip-card info">📌 主題示範：洗護髮正確保養宣導（吉祥物「泡泡」）</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 詢問AI — 產出分鏡腳本</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">你是一位擅長生活風格廣告與科技產品短片的導演。
+
+請幫我構思一支 30 秒、3 個分鏡（各 10 秒）的智慧家電宣傳廣告腳本，主題為：
+
+「下班回家後，智慧家電讓忙碌的一天重新變美好。」
+
+【情形1：我提供設定，請你補完故事情節】
+- 產品內容：[例如：智慧電視、冰箱、洗衣機、乾衣機、空氣清淨機、智慧螢幕、掃地機器人等，其餘由你自由發揮]
+- 故事情節主軸：[例如：主角結束忙碌的一天回到家，原本疲憊又手忙腳亂，但透過智慧家電的協助，生活節奏逐漸變輕鬆，最後享受舒適自在的居家時光；其餘情節細節仍請你自由發揮]
+- 主角：[例如：剛下班的上班族、雙薪夫妻、小家庭、與寵物同住的年輕人，請填入；或留空由你決定——主角可以是人物、寵物，或擬人化家電角色]
+
+【情形2：產品內容、故事情節、主角皆由你自由發揮】
+（若採用情形1，請忽略此段）
+
+不論採用哪種情形，皆須遵守以下方向：
+- 整體調性要活潑、輕鬆、明快，帶有「生活變得更順手、更舒服」的節奏感，避免走過度溫馨療癒或過度煽情路線
+- 風格：色彩鮮明、畫面乾淨、節奏明快、有記憶點，可使用暖白、柔橘、清新藍灰、明亮木質色等居家科技感配色
+- 比例：16:9（本次課程統一採橫式，上課投影／螢幕放大時畫面較完整）
+
+請先獨立輸出一段「共用設定（草案）」，內容包含：
+- 整體視覺風格與色調（用一句話描述，之後每一格畫面都要維持一致）
+- 主角的外觀描述草案（外型、特徵、配件——這只是文字初稿，實際外觀將在生成角色設計圖後才正式定稿）
+- 商品的外觀描述草案（如果腳本中有具體家電產品：外型、顏色、介面樣式、品牌標示位置——若無明確單一商品可省略此項）
+- 場景的設定草案（如果多個分鏡發生在同一場景：地點、時間、光線氛圍——若每格分鏡場景都不同可省略此項）
+
+請把「共用設定（草案）」這段獨立放在一個 Markdown 程式碼區塊內輸出，方便我直接整段複製。
+
+接著，用表格輸出 3 個分鏡，讓我了解整個故事內容，欄位包含：分鏡編號、秒數、畫面描述、AI生圖Prompt(中文)、AI生影Prompt(中文)、旁白(VO)、主角的口白
+
+接著，再請把 3 個分鏡依序合併放在「同一個」Markdown 程式碼區塊內輸出（不要用表格），每個分鏡依序包含：分鏡編號、秒數、畫面描述、AI生圖Prompt(中文)、AI生影Prompt(中文)、旁白(VO)、主角的口白
+
+每一個分鏡之間，請用一行「---」分隔開來。
+
+注意：
+- AI 生圖 Prompt 跟 AI 生影 Prompt 都只需要描述「這一格的動作與場景」，不用重複寫共用設定的內容，共用設定會另外整段加在最前面使用
+- 全程請使用中文，不要出現英文
+- 全片採溫暖明亮的高品質 3D 動畫短片美學，避免過暗陰影與低調光線，畫面需保持清晰明亮
+
+
+- 人物為半寫實卡通造型，五官圓潤自然、表情生動，比例接近正常人比例，不使用誇張大頭 Q 版造型，具備精緻 3D 建模與動畫電影渲染質感
+- 整體光線明亮清晰、色調溫暖柔和；即使是夜晚或室內場景，也要用柔和均勻的補光讓主體與背景都清楚可見
+- 構圖自然、有故事性，如同從一部高品質 3D 動畫電影中擷取的畫面，鏡頭運動與動作維持連續運鏡，符合慣性與物理規律
+- 故事情節請盡量形成清楚的三段式節奏：「生活困擾 → 智慧家電協助 → 輕鬆享受成果」</div>
+        </div>
+      </div><!-- u9-b END -->
+      <!-- u9-c -->
+      <div class="sub-block" id="u9-c">
+        <div class="sec-sub-title">角色設計圖 Prompt</div>
+
+        <div class="content-h2">S1：角色設計圖 - 主角</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 【角色設計圖】 (人物/擬人化物件/寵物皆適用)</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請把剛才「共用設定」段落中主角的外觀描述,轉換成一段「角色設計圖」的生圖Prompt:
+
+一張角色設計資料圖(character design sheet),純白色背景,【依共用設定填入畫風描述】。
+
+畫面上方並排呈現同一個主角的4個角度:正面、四十五度側面、正側面、背面,每個角度姿勢自然、比例一致、外觀完全相同(依共用設定的外觀描述),各角度下方標註中文小標籤。
+
+畫面下方並排呈現同一主角的6種表情或狀態特寫(依主角性格挑選最適合的情緒,例如:開心、好奇、驚訝、委屈、興奮、放鬆;若主角是無生命的擬人化物件,可改用「狀態」呈現,例如:發光、冒泡、彈跳、閃爍),每個特寫下方標註中文標籤,五官或表面特徵維持與全身視圖相同設定。
+
+整體排版工整,如同專業角色設定資料,線條乾淨、無多餘陰影或背景雜訊,方便直接作為後續AI繪圖與動態影片的一致性參考圖使用。</div>
+        </div>
+        <div class="content-h2">S2：角色設計圖 - 商品</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 【商品參考圖】 (如果腳本中有具體商品)</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請把「共用設定」中商品的外觀描述,轉換成一段「商品參考圖」的生圖Prompt:
+
+一張商品規格參考圖(product reference sheet),純白色背景,【依共用設定填入商品外觀描述,包含形狀、顏色、包裝/標籤樣式、品牌LOGO位置與材質質感】。
+
+畫面並排呈現同一件商品的3個角度:正面、四十五度側面、背面(如果商品形狀特殊,可改成最能呈現特徵的角度,例如俯視),每個角度比例一致、包裝上的文字與圖案完全相同,各角度下方標註中文小標籤。
+
+如果商品有開闔或使用狀態的差異(例如壓頭按壓/鎖住、瓶蓋打開/合起、內容物質地展示),請在下方加一組特寫呈現,並標註中文說明。
+
+整體排版工整,如同專業產品型錄用的規格圖,光線均勻、無多餘陰影或背景雜訊,方便直接作為後續AI繪圖與動態影片中商品外觀的一致性參考。</div>
+        </div>
+        <div class="content-h2">S3：角色設計圖 - 場景</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌  Prompt — 【場景設定圖】 (如果多個分鏡共用同一場景)</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請把「共用設定」中提到的場景描述,轉換成一段「場景設定圖」的生圖Prompt:
+
+一張場景參考圖(environment reference sheet),【依共用設定填入場景氛圍描述,包含地點、時間、光線與色調】。
+
+畫面呈現這個場景的2~3個取景角度(例如:整體空間全景、其中一個重點角落特寫、另一個視角),每個角度的空間陳設、色調、光線維持一致,各角度下方標註中文小標籤說明取景位置。
+
+整體排版工整,線條乾淨、無多餘雜訊,方便直接作為後續AI生成分鏡圖與動態影片時,背景與空間感的一致性參考。</div>
+        </div>
+      </div><!-- u9-c END -->
+
+    </div><!-- u9 END -->
+
+
+    <!-- ======== U10: 把工作流程訂成 Skill ======== -->
+    <div class="content-section" id="u10">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-4)">10</span>
+        把工作流程訂成 Skill
+      </div>
+      <div class="sec-desc">📌 建議步驟：
+        <ol>
+          <li>用 Gemini 實際整理一次會議紀錄</li>
+          <li>請 AI 回顧對話，把「修正過程」變成可重複使用的 Skill。</li>
+          <li>之後只要輸入 <strong>/</strong> 叫出 Skill，一句話就能得到同樣品質的成果。</li>
+        </ol>
+      </div>
+
+      <!-- u10-a -->
+      <div class="sub-block" id="u10-a">
+        <div class="sec-sub-title">學習流程總覽</div>
+        <div class="tip-card info"><strong>核心觀念：</strong>Skill 不是憑空寫出來的。先把工作真的做一次，過程中你對 AI 的每一次糾正，就是 Skill 最有價值的內容。</div>
+        <div class="content-img80">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai242.jpg" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai242.jpg" alt=""></a>
+        </div>
+
+        <div class="content-h2">Prompt、Skill、/ 的關係</div>
+        <table class="data-table">
+          <tr><th>名稱</th><th>是什麼</th><th>比喻</th></tr>
+          <tr><td>Prompt</td><td>當次對話中給 AI 的指令，用完就結束</td><td>口頭交辦</td></tr>
+          <tr><td>Skill</td><td>存起來、可重複使用的工作規範（名稱＋適用情境＋指示）</td><td>作業 SOP</td></tr>
+          <tr><td>/</td><td>在 Gemini 輸入框叫出 Skill 的方式</td><td>翻開 SOP 照著做</td></tr>
+        </table>
+
+        <div class="content-h2">本單元流程</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>做什麼</th><th>產出</th></tr>
+          <tr><td>步驟0</td><td>確認 Gemini 設定</td><td>—</td></tr>
+          <tr><td>步驟1</td><td>貼上會議逐字稿，修正 3 輪</td><td>一份合格的會議紀錄</td></tr>
+          <tr><td>步驟2</td><td>請 Gemini 回顧對話，寫成 Skill</td><td>Skill 內容</td></tr>
+          <tr><td>步驟3</td><td>建立到 Gemini</td><td>可用 / 呼叫的 Skill</td></tr>
+          <tr><td>步驟4</td><td>用新素材測試，下載 Word</td><td>會議紀錄 Word 檔</td></tr>
+        </table>
+
+        <div class="tip-card note"><strong>情境設定：</strong>你是日用品公司業務部的行政人員，每週要整理業務週會的會議紀錄。<br>（公司、人名、數字皆為虛構練習資料）</div>
+        <div class="tip-card warning"><strong>本單元不需要上傳檔案：</strong>練習素材都已放在 Prompt 中，直接複製貼到對話框即可。素材篇幅已控制在短篇，免費帳號也能完成。</div>
+      </div><!-- u10-a END -->
+
+      <!-- u10-b -->
+      <div class="sub-block" id="u10-b">
+        <div class="sec-sub-title">步驟0：開工準備</div>
+        <div class="content-note">
+          <ol style="margin-left:20px;">
+            <li>前往 <strong>gemini.google.com</strong> 並登入</li>
+            <li>點 <strong>設定與說明 → 設定</strong>，確認找得到 <strong>Skills（技能）</strong></li>
+            <li>點 <strong>設定 → 活動</strong>，確認「Gemini 應用程式活動」為<strong>開啟</strong>（關閉時 Gemini 會記不得你建立的 Skill）</li>
+          </ol>
+        </div>
+        <div class="tip-card warning">⚠️ Skills 依帳號陸續開放，若設定中找不到 Skills，可先完成步驟1～2，體驗「從工作流程產生 Skill」的過程。</div>
+        <div class="tip-card note"><strong>模型選擇：</strong>有「思考」模型可選時優先使用；免費帳號的思考模型次數有限，用完後改用預設模型也可以完成本單元。</div>
+      </div><!-- u10-b END -->
+
+      <!-- u10-c -->
+      <div class="sub-block" id="u10-c">
+        <div class="sec-sub-title">步驟1：先完成真實工作</div>
+        <div class="tip-card info"><strong>為什麼從最簡單的一句話開始？</strong>刻意讓 AI 先做得不夠好，你才會修正。這些修正，就是等一下 Skill 的內容。<br>操作方式：Gemini 點「發起新對話」→ 依序貼上以下 3 輪 Prompt。<strong>全部在同一個對話中完成。</strong></div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 第一輪：最簡單的要求（已含會議逐字稿）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請幫我整理以下這份會議紀錄。
+
+【會議錄音逐字稿】業務部週會
+日期：2026年10月6日（星期二）上午10點
+地點：3樓會議室
+
+陳經理：好，我們開始。今天三件事，年節禮盒提案、新品試用包、量販店缺貨。先講禮盒，怡婷。
+怡婷：量販店說年節禮盒提案要10月20號前交，今年想推保養禮盒跟口腔保健禮盒兩款。
+陳經理：好，兩款都提，怡婷負責，10月20號前交。
+志明：那個，新品洗髮精試用包，藥妝通路想要5,000包，行銷那邊說預算還沒確定，我再問一下。嗯，我聽說對手今年發了一萬包，不過我不確定啦。
+陳經理：試用包先等預算確認，下週再報告。
+雅婷：最後是量販店缺貨，上週有3家門市潤髮乳缺貨，物流說應該下週會補吧，我再追一下。
+陳經理：好，雅婷繼續追。今天就到這邊，散會。（上午10點40分）</div>
+        </div>
+        <div class="content-note"><p><strong>觀察：</strong>有沒有把「我聽說對手發了一萬包」寫成事實？有沒有把「試用包」寫成已決定？有沒有自己編補貨日期？</p></div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 第二輪：固定格式與用語</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請改用以下固定格式重新整理：
+一、會議基本資訊（會議名稱、日期時間、地點、主持人、出席者）
+二、討論重點（依議題分段條列）
+三、決議事項（只列主管明確同意的事項）
+四、待辦事項（表格：編號／待辦內容／負責人／期限）
+
+用語要求：
+1. 刪除口語贅字（那個、嗯、啦）
+2. 日期寫成「2026年10月6日（星期二）」，時間寫成「上午10:00」
+3. 人名寫成「姓名＋職稱」，不知道職稱就只寫姓名</div>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 第三輪：內容正確與產生 Word</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">再修正：
+1. 沒有明確日期的，期限標【期限未定】；說法模糊的保留原意並標註，例如「約下週（待確認）」，不可自己推算
+2. 「我再問一下」「我再追一下」「下週再報告」是待辦事項，不是決議
+3. 「我聽說」「好像」「不確定」的內容不可寫進會議紀錄
+4. 最後加一段「五、待確認事項」，列出需要會後確認的項目
+5. 整理完成後，產生 Word 檔（.docx）讓我下載
+6. 如果無法產生 Word 檔，請在回答最後提醒我：點「分享與匯出 → 匯出至文件」轉成 Google 文件，再從「檔案 → 下載 → Microsoft Word」下載</div>
+        </div>
+
+        <div class="content-h2">✅ 完成後請檢查</div>
+        <table class="data-table">
+          <tr><th>檢查項目</th><th>正確結果</th></tr>
+          <tr><td>決議事項</td><td>只有「兩款禮盒都提案，怡婷負責，10月20日前交」</td></tr>
+          <tr><td>試用包</td><td>列在待辦（志明確認預算），不是決議</td></tr>
+          <tr><td>對手一萬包</td><td>沒有寫進會議紀錄</td></tr>
+          <tr><td>補貨期限</td><td>「約下週（待確認）」，不是 AI 自己編的日期</td></tr>
+          <tr><td>Word 檔</td><td>出現可下載的 .docx；或回答最後有轉成 Google 文件的提醒</td></tr>
+        </table>
+        <div class="tip-card note">還有不滿意的地方，<strong>繼續在同一個對話中告訴 AI</strong>。修正得越多，Skill 就越貼近你的工作。</div>
+      </div><!-- u10-c END -->
+
+      <!-- u10-d -->
+      <div class="sub-block" id="u10-d">
+        <div class="sec-sub-title">步驟2：回顧對話轉成 Skill</div>
+        <div class="tip-card warning"><strong>一定要在步驟1 的同一個對話中進行！</strong>AI 才看得到你每一輪的修正。</div>
+        <div class="tip-card info"><strong>不用自己設計 Skill 結構：</strong>先請 AI 提問，你用工作經驗回答，再請 AI 產生 Skill。</div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 第一段：請 AI 先提問</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">這次的會議紀錄我很滿意，我想把這個工作做成 Gemini 的 Skill，以後可以重複使用。
+請先回顧我們這整段對話，問我幾個問題，確認：
+1. 這個 Skill 什麼時候該用、什麼時候不該用
+2. 除了這次的逐字稿，還有哪些情況要一併處理
+等我回答後，再產生 Skill。</div>
+        </div>
+        <div class="content-note"><p><strong>回答參考：</strong>會議內容可能是逐字稿，也可能是同事的條列筆記；這個 Skill 只整理會議紀錄，不寫 Email；整理完成後要產生 Word 檔，產生不了時提醒我改用 Google 文件下載。</p></div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌  回答 AI 的提問（AI 提問後貼入）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">以下是我的回答，如果你問的問題這裡沒有完全對應，也請一併參考：
+
+【什麼時候用】
+- 我貼上會議逐字稿、會議筆記，或說「整理會議紀錄」時使用
+- 部門週會、跨部門會議、專案會議、廠商或通路洽談會議都適用
+
+【什麼時候不用】
+- 寫 Email、企劃書、新聞稿、文章摘要時不要使用
+- 只是問問題或閒聊時不要使用
+
+【其他要一併處理的情況】
+- 來源可能是逐字稿，也可能是同事的條列筆記，或幾位同事的筆記合在一起
+- 幾份筆記內容互相矛盾時，兩種說法都列出，標註待確認，不要自己選一個
+- 會議沒有做出任何決定時，決議事項寫「本次會議無決議事項」
+- 主管沒有指定負責人時，標註負責人待定，不要自己指派
+- 發言中有口誤又更正時，採用更正後的內容
+
+【格式與輸出】
+- 沿用這次確定的五段格式：會議基本資訊、討論重點、決議事項、待辦事項表格、待確認事項
+- 整理完成後產生 Word 檔讓我下載；無法產生時，提醒我改用「分享與匯出 → 匯出至文件」轉成 Google 文件再下載
+
+【最重要的原則】
+- 寧可標註待確認，也不要自己推測或補寫
+- 沒有明確日期就不要自己推算，傳聞和不確定的內容不要寫進會議紀錄</div>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 第二段：產生 Skill</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請依 SKILL.md 格式產生這個 Skill，放在一個程式碼區塊中，name 用 meeting-minutes。
+只保留最後確定的做法，不要出現這次會議的人名、日期和議題。</div>
+        </div>
+
+        <div class="content-h2">記住三件事就好</div>
+        <table class="data-table">
+          <tr><th>要記住的</th><th>原因</th></tr>
+          <tr><td>name 用英文小寫加連字號</td><td>好打、好搬到其他 AI 平台</td></tr>
+          <tr><td>說清楚何時用、何時不用</td><td>AI 靠這段判斷要不要套用</td></tr>
+          <tr><td>不要出現這次的資料</td><td>避免下次整理別的會議被誤導</td></tr>
+        </table>
+      </div><!-- u10-d END -->
+
+      <!-- u10-e -->
+      <div class="sub-block" id="u10-e">
+        <div class="sec-sub-title">步驟3：建立到 Gemini</div>
+        <div class="tip-card info"><strong>不用上傳檔案：</strong>直接把 Gemini 產生的內容，複製貼到 Skill 的欄位即可。</div>
+
+        <div class="content-h2">Gemini 產生的內容長這樣</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📄 SKILL.md 的三個部分</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">---
+name: meeting-minutes              ← ① 名稱
+description: 【會議紀錄整理】……    ← ② 說明（何時用、何時不用）
+---
+# 會議紀錄整理                     ← ③ 指示（--- 下方全部內容）
+## 目標
+……</div>
+        </div>
+
+        <div class="content-h2">手動建立 Skill</div>
+        <div class="content-note">
+          <ol style="margin-left:20px;">
+            <li>點 <strong>設定 → Skills → 建立</strong>（選手動建立）</li>
+            <li><strong>名稱欄</strong>：貼上 ① meeting-minutes</li>
+            <li><strong>說明欄</strong>：貼上 ② description 後面的文字</li>
+            <li><strong>指示欄</strong>：貼上 ③ 第二個 --- 下方的全部內容</li>
+            <li>儲存，並確認開關為<strong>開啟</strong></li>
+          </ol>
+        </div>
+        <div class="tip-card note"><strong>建議另存一份：</strong>可以的話，把整段內容貼到記事本或雲端文件保存。日後要修改或分享給同事時，就不用重新產生。</div>
+      </div><!-- u10-e END -->
+
+      <!-- u10-f -->
+      <div class="sub-block" id="u10-f">
+        <div class="sec-sub-title">步驟4：新素材測試與下載 Word</div>
+        <div class="tip-card info"><strong>為什麼要換新素材？</strong>用原本的素材測試，只能證明 Skill「記住了這場會議」。換成<strong>不同部門、不同議題</strong>的會議，才能證明 Skill 真的「學會了規則」。</div>
+
+        <div class="content-h2">① 用 / 叫出 Skill</div>
+        <div class="content-note">
+          <ol style="margin-left:20px;">
+            <li><strong>開新對話</strong></li>
+            <li>輸入 <strong>/</strong>，從清單中<strong>點選</strong> meeting-minutes，確認對話框出現 <strong>Skill 標籤</strong></li>
+            <li>貼上下方 Prompt，送出</li>
+          </ol>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 測試 Prompt（已含新會議逐字稿）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請整理以下會議紀錄。
+
+【會議錄音逐字稿】行銷部新品上市會議
+日期：2026年10月8日（星期四）下午2點
+地點：線上會議
+
+林經理：今天討論新款護手霜上市，佳穎先報告。
+佳穎：社群貼文預計11月3號開始發，一週三則。網紅合作有三位在談，費用每位大概3萬……喔不對，是5萬。
+林經理：好，社群照這個排程，佳穎負責。網紅先談兩位就好。
+宏達：門市陳列海報，設計還要改一版，應該月底前可以吧。
+林經理：嗯，海報那個，看誰去跟設計公司確認一下時程。
+宏達：對了，我聽說百貨公司明年可能要漲櫃位費，還沒看到正式通知。
+林經理：好，今天先這樣。（下午2點45分）</div>
+        </div>
+
+        <div class="content-h2">② 檢查結果</div>
+        <table class="data-table">
+          <tr><th>檢查項目</th><th>正確結果</th></tr>
+          <tr><td>沒有殘留上一場會議</td><td>不出現禮盒、試用包、陳經理等內容</td></tr>
+          <tr><td>格式</td><td>和步驟1 一樣：基本資訊、討論重點、決議、待辦表、待確認事項</td></tr>
+          <tr><td>口誤更正</td><td>網紅費用寫每位約 5 萬，不出現 3 萬</td></tr>
+          <tr><td>決議事項</td><td>社群依排程發文（佳穎負責）；網紅先洽談兩位</td></tr>
+          <tr><td>模糊期限</td><td>海報為「約月底前（待確認）」，沒有自己編日期</td></tr>
+          <tr><td>負責人不明</td><td>確認海報時程的人沒有被亂指派，標註待確認</td></tr>
+          <tr><td>傳聞排除</td><td>「百貨漲櫃位費」沒有寫進會議紀錄</td></tr>
+        </table>
+        <div class="tip-card note"><strong>判斷標準：</strong>只貼上逐字稿和一句話，就得到和步驟1 修正 3 輪後差不多的結果，Skill 就建立成功了！</div>
+        <div class="tip-card warning"><strong>連固定格式都不見？</strong>多半是 Skill 沒被叫用：確認設定中的開關已開啟，且輸入 / 後有從清單<strong>點選</strong>（只有純文字 /meeting-minutes 代表沒選到）。</div>
+
+        <div class="content-h2">③ 下載 Word 檔（兩種方式）</div>
+        <div class="tip-card info"><strong>為什麼有兩種方式？</strong>Gemini 有時會直接產生 Word 檔，有時不會。Skill 裡已寫好「產生不了就提醒你改用 Google 文件」，所以不論哪一種情況，都拿得到 Word 檔。</div>
+        <table class="data-table">
+          <tr><th>情況</th><th>操作</th></tr>
+          <tr><td>方式一：回答中出現 Word 檔案卡片</td><td>點檔案卡片直接下載 .docx</td></tr>
+          <tr><td>方式二：沒有出現檔案</td><td>
+            1. 在回答下方點 <strong>分享與匯出 → 匯出至文件</strong><br>
+            2. 開啟 Google 文件（已存到你的雲端硬碟）<br>
+            3. 點 <strong>檔案 → 下載 → Microsoft Word（.docx）</strong></td></tr>
+        </table>
+        <div class="tip-card note"><strong>電腦不能下載檔案時：</strong>方式二的 Google 文件可以直接線上編輯、分享給同事，一樣能完成工作。</div>
+      </div><!-- u10-f END -->
+
+      <!-- u10-g -->
+      <div class="sub-block" id="u10-g">
+        <div class="sec-sub-title">重點整理與參考範例</div>
+
+        <div class="content-h2">帶得走的三個心得</div>
+        <table class="data-table">
+          <tr><th>心得</th><th>說明</th></tr>
+          <tr><td>先做再訂</td><td>Skill 來自真實工作的修正過程，不是憑空寫出來</td></tr>
+          <tr><td>用新素材測試</td><td>換素材才能證明 Skill 學會的是規則，不是記住內容</td></tr>
+          <tr><td>用 / 叫出</td><td>同性質的工作，一句話就能得到同樣品質的成果</td></tr>
+        </table>
+
+        <div class="tip-card info"><strong>Skill 會越用越好：</strong>遇到 Skill 沒處理好的情況，回到對話告訴 AI 哪裡要改，請它更新 Skill，再貼回 Gemini 的 Skill 設定。反覆溝通、反覆調整，Skill 就會越來越貼近你的工作。</div>
+
+        <div class="content-h2">其他適合做成 Skill 的工作</div>
+        <table class="data-table">
+          <tr><th>工作</th><th>為什麼適合</th></tr>
+          <tr><td>客戶詢問信回覆</td><td>語氣、格式固定，每天重複</td></tr>
+          <tr><td>通路銷售週報摘要</td><td>每週同樣的欄位與重點</td></tr>
+          <tr><td>新品介紹文案</td><td>品牌用語與禁用詞固定</td></tr>
+        </table>
+
+        <div class="content-h2">參考範例：SKILL.md（核對用）</div>
+        <div class="tip-card warning">請先完成自己的版本，再拿這份比對。直接套用會失去「從工作流程建立 Skill」的練習意義。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📄 meeting-minutes / SKILL.md</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">---
+name: meeting-minutes
+description: 【會議紀錄整理】將會議逐字稿或會議筆記，整理成格式固定的會議紀錄，並產生 Word 檔。當使用者貼上會議內容並要求整理會議紀錄時使用；撰寫 Email、企劃書或一般文章摘要時請勿使用。
+---
+
+# 會議紀錄整理
+
+## 目標
+把會議逐字稿或筆記，整理成格式統一、內容正確、可直接分享的會議紀錄。
+正確性優先於完整性：寧可標註待確認，也不可自行推測或補寫。
+
+## 執行步驟
+1. 擷取會議基本資訊；資料中沒有的欄位標【未提供】
+2. 刪除口語贅字，保留原意
+3. 依議題整理討論重點
+4. 只把主管明確同意的事項列為決議
+5. 整理待辦事項，逐項確認負責人與期限
+6. 列出待確認事項
+7. 產生 Word 檔（.docx）供下載；無法產生時，在回答最後提醒使用者：點「分享與匯出 → 匯出至文件」轉成 Google 文件，再從「檔案 → 下載 → Microsoft Word」下載
+
+## 情境判斷規則
+- 如果來源是逐字稿，就可從發言判斷主持人與出席者，但須在待確認事項提醒核對
+- 如果來源是多人的條列筆記，就依議題合併；內容互相矛盾時兩種說法都列出，標【內容不一致，待確認】
+- 如果會議沒有任何決議，就寫「本次會議無決議事項」
+
+## 輸出格式範本
+一、會議基本資訊（會議名稱、日期時間、地點、主持人、出席者）
+二、討論重點
+三、決議事項
+四、待辦事項
+| 編號 | 待辦內容 | 負責人 | 期限 |
+|---|---|---|---|
+五、待確認事項
+
+## 常見錯誤（務必避免）
+1. 自行推算期限
+   ❌ 「應該下週吧」寫成具體日期
+   ⭕ 寫「約下週（待確認）」；完全沒有日期標【期限未定】
+2. 把待辦當成決議
+   ❌ 「我再問一下」「下週再報告」列在決議事項
+   ⭕ 列在待辦事項
+3. 寫入傳聞
+   ❌ 「我聽說」「不確定」的內容寫進會議紀錄
+   ⭕ 不寫入
+4. 自行指派負責人
+   ❌ 主管只說「看誰去處理」，卻寫成某人負責
+   ⭕ 標【負責人待定】
+5. 口誤照抄
+   ❌ 「3萬……喔不對，是5萬」寫成3萬
+   ⭕ 採用更正後的數字</div>
+        </div>
+      </div><!-- u10-g END -->
+
+    </div><!-- u10 END -->
+
+
+    <!-- ======== U11: 公司網站製作 ======== -->
+    <div class="content-section" id="u11">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-5)">11</span>
+        公司網站製作
+      </div>
+      <div class="sec-desc">📌 工作情境：公司想改版形象網站，但同仁不懂 HTML。過去請 AI 做好的網站，要換一張首頁輪播圖卻找不到位置，只好整份重做。本單元的流程是：先讓 AI 做出網站並建議每個位置該放什麼圖 → 確認版面 → AI 匯出內容清單貼到 Google 試算表 → 同仁在試算表填入新文字與圖片 → 交給 AI 依編號替換。</div>
+      <div class="tip-card info"><strong>核心觀念：先定「維護規則」，再叫 AI 做網站。</strong><br>AI 做網站很快，難的是「之後怎麼改」。只要在第一次的 Prompt 就要求 AI：所有會更換的文字與圖片，集中寫在檔案最上方的「網站設定區」並加上編號，日後換圖換字就只要對照編號，不必看懂程式。</div>
+
+      <!-- u11-a -->
+      <div class="sub-block" id="u11-a">
+        <div class="sec-sub-title">製作流程總覽</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>做什麼</th><th>用什麼工具</th></tr>
+          <tr><td>S1 生成網站</td><td>用 GPS 三步驟 Prompt 請 AI 產出網站（含首頁輪播），圖片先用佔位圖，並附上每個位置的「建議圖片」說明</td><td>Gemini（Canvas）／ChatGPT／Claude</td></tr>
+          <tr><td>S2 預覽確認</td><td>檢查手機與電腦版的版面、區塊、文案方向，確認後定稿</td><td>同上</td></tr>
+          <tr><td>S3 匯出內容清單</td><td>請 AI 依網站設定區匯出「內容對照表」，貼到 Google 試算表</td><td>AI＋Google 試算表</td></tr>
+          <tr><td>S4 準備圖片</td><td>依「建議圖片」拍攝或挑選照片，上傳雲端圖庫取得直連網址，連同新文案填入試算表</td><td>Google 雲端硬碟＋圖片直連工具</td></tr>
+          <tr><td>S5 替換</td><td>把試算表中有填「新內容」的列交給 AI，依編號替換</td><td>AI</td></tr>
+          <tr><td>進階</td><td>設定成網站自動讀取試算表，之後改試算表就會更新網站</td><td>Google 試算表</td></tr>
+        </table>
+        <div class="content-h2">建議網站區塊（廠辦租賃）</div>
+        <table class="data-table">
+          <tr><th>區塊</th><th>內容</th><th>可替換項目</th></tr>
+          <tr><td>首頁輪播（Slider）</td><td>3～5 張大圖，各附主標、副標、按鈕</td><td>圖片、主標、副標、按鈕文字</td></tr>
+          <tr><td>物件介紹</td><td>廠房／辦公室／倉儲三張卡片</td><td>圖片、名稱、坪數、特色</td></tr>
+          <tr><td>公設與服務</td><td>停車、保全、貨梯、門禁等</td><td>項目文字</td></tr>
+          <tr><td>交通位置</td><td>Google 地圖嵌入</td><td>地址</td></tr>
+          <tr><td>聯絡我們</td><td>電話、Email、預約看屋（Google 表單）</td><td>聯絡資訊、表單連結</td></tr>
+        </table>
+      </div><!-- u11-a END -->
+
+      <!-- u11-b -->
+      <div class="sub-block" id="u11-b">
+        <div class="sec-sub-title">S1～S2：生成網站＋首頁輪播 Prompt</div>
+        <div class="tip-card warning"><strong>⚠️ 為什麼之前的輪播圖找不到地方換？</strong>沒有給維護規則時，AI 會把圖片網址分散寫在 HTML 標籤、CSS 背景圖、JavaScript 裡，同一張圖甚至出現好幾次。下面的 Prompt 用「網站設定區」把所有可替換內容集中到檔案最上方，並加上中文註解與編號，從源頭解決這個問題。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 生成網站（GPS 三步驟＋輪播＋建議圖片＋維護規則）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">【Goal 目標】
+請幫我製作一個廠辦租賃公司的形象網站（單一 HTML 檔），目的是讓企業客戶快速找到合適的廠房或辦公室，並預約看屋。
+
+【Position 定位】
+- 公司：【廠商名稱】股份有限公司，位於【公司地址】，提供廠房、辦公室、倉儲租賃
+- 目標客群：中小製造業、物流業、新創團隊的負責人或行政主管
+- 風格：專業、可信賴、簡潔，主色深藍搭配白色，手機瀏覽要好看
+
+【Shape 形式】
+網站區塊依序為：
+1. 首頁輪播（Slider）
+2. 物件介紹（廠房／辦公室／倉儲 三張卡片）
+3. 公設與服務
+4. 交通位置（嵌入 Google 地圖）
+5. 聯絡我們（含 Google 表單連結按鈕）
+文案請你依廠辦租賃情境先撰寫一版。
+
+# 首頁輪播規格
+- 共 3 張，張數可增減：設定區多一筆就多一張、刪一筆就少一張，不需要修改其他程式
+- 每 5 秒自動切換，滑鼠移入時暫停
+- 左右箭頭＋下方圓點指示，手機可左右滑動切換
+- 圖片比例 16:9，以「填滿並裁切」方式顯示，不可變形
+- 每張圖上疊主標、副標、按鈕，加半透明深色遮罩讓文字清楚
+- 圖片載入失敗時，顯示灰色底與「圖片待補」字樣
+
+# 圖片規則
+- 目前沒有實際照片，所有圖片先用 placehold.co 佔位圖，佔位圖上直接顯示編號與尺寸
+  （例如：https://placehold.co/1920x1080?text=S1+1920x1080）
+- 輪播大圖 16:9（1920×1080），物件卡片 4:3（800×600）
+- 每個圖片位置都要附「建議圖片」說明：該拍什麼／挑什麼照片、構圖重點（例如主體偏左、留出放文字的空間）
+
+# 維護規則（最重要）
+- 所有會更換的文字與圖片，一律集中寫在檔案最上方的「網站設定區（SITE_CONFIG）」
+- 頁面內容由程式讀取設定區自動產生，HTML 內文不得再寫死任何圖片網址或文案
+- 設定區每一項都要加中文註解與編號：輪播 S1、S2…，物件卡片 C1、C2…，服務項目 F1、F2…，例如：
+  // 👉【S1】首頁輪播第1張
+
+# 輸出要求
+1. 輸出完整的單一 HTML 檔，並開啟預覽
+2. 回覆最後列出「建議圖片清單」：編號／位置／建議尺寸／建議圖片說明</div>
+        </div>
+        <div class="tip-card info"><strong>S2 預覽確認，常用的修改說法：</strong>「輪播文字改到左下角」、「手機版卡片改成一欄」、「按鈕顏色改成橘色」、「服務項目加一項『24 小時保全』」。一次只改一兩件事，AI 比較不會改壞其他地方。版面與區塊都確認後，再進入下一步。</div>
+      </div><!-- u11-b END -->
+
+      <!-- u11-c -->
+      <div class="sub-block" id="u11-c">
+        <div class="sec-sub-title">S3：匯出試算表內容清單</div>
+        <div class="tip-card info"><strong>為什麼用試算表？</strong>多人可以同時編修、看得到修改紀錄，「編號」欄就是網站與試算表之間的對照鑰匙。業務改文案、行政換照片，都在同一張表完成，不用碰網站檔案。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 網站確認後，匯出內容對照表</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">網站版面已確認。
+請依照「網站設定區（SITE_CONFIG）」中的所有項目，匯出一份「內容對照表」，方便我貼到 Google 試算表給同仁填寫。
+
+欄位：編號／區塊／類型（文字或圖片）／目前內容／新內容／建議尺寸或字數／建議圖片說明
+- 每個設定區項目一列，編號與設定區完全一致（例如 S1-圖、S1-主標、C1-說明）
+- 圖片列的「目前內容」填佔位圖網址，「建議圖片說明」沿用剛才的建議
+- 文字列的「建議尺寸或字數」請依版面給建議字數上限
+- 「新內容」欄全部留空，由同仁填寫
+- 用表格輸出，不要加其他說明</div>
+        </div>
+        <div class="content-h2">貼到試算表後的樣子（工作表名稱：網站內容）</div>
+        <table class="data-table">
+          <tr><th>編號</th><th>區塊</th><th>類型</th><th>目前內容</th><th>新內容</th><th>建議尺寸／字數</th><th>建議圖片說明</th></tr>
+          <tr><td>S1-圖</td><td>首頁輪播第1張</td><td>圖片</td><td>（佔位圖網址）</td><td>（同仁貼上圖片直連網址）</td><td>1920×1080，500KB 以內</td><td>大樓外觀全景，晴天，主體偏右</td></tr>
+          <tr><td>S1-主標</td><td>首頁輪播第1張</td><td>文字</td><td>交通便利的綠建築廠辦</td><td></td><td>15 字內</td><td></td></tr>
+          <tr><td>S1-副標</td><td>首頁輪播第1張</td><td>文字</td><td>近國道、捷運，貨梯直達各樓層</td><td></td><td>25 字內</td><td></td></tr>
+          <tr><td>C1-圖</td><td>物件卡片：廠房</td><td>圖片</td><td>（佔位圖網址）</td><td></td><td>800×600</td><td>挑高廠房內部，可見貨梯或卸貨區</td></tr>
+          <tr><td>C1-說明</td><td>物件卡片：廠房</td><td>文字</td><td>100～300 坪，樓板載重高</td><td></td><td>30 字內</td><td></td></tr>
+        </table>
+        <div class="tip-card note"><strong>填寫規則：</strong>
+          <ul>
+            <li>要改的才填「新內容」，不改的留空，網站就維持原樣</li>
+            <li>輪播大圖：橫式 16:9，建議 1920×1080，檔案 500KB 以內（太大會讓網站開很慢，可先用線上壓縮工具處理）</li>
+            <li>卡片圖：4:3，建議 800×600</li>
+            <li>輪播圖上會疊文字，選畫面「不要太雜」、主體偏一側的照片效果最好</li>
+            <li>檔名用英數字，例如 slide-01.jpg、card-factory.jpg，不要用中文或空格</li>
+          </ul>
+        </div>
+      </div><!-- u11-c END -->
+
+      <!-- u11-d -->
+      <div class="sub-block" id="u11-d">
+        <div class="sec-sub-title">S4：雲端圖庫取得圖片網址</div>
+        <div class="tip-card warning"><strong>⚠️ 為什麼不能直接貼雲端硬碟分享連結？</strong>雲端硬碟的「共用連結」打開的是 Google 的預覽頁面，不是圖片本身，放進網站常常顯示不出來。必須先轉成「直連網址」，網站才讀得到圖片。</div>
+        <table class="data-table">
+          <tr><th>工具</th><th>連結</th></tr>
+          <tr><td>Google Drive 圖片直連轉換工具</td><td><a href="https://script.google.com/macros/s/AKfycbw7nbIBNrFClroUj4-JwSGoSRy8DoQtY-7VVatMTi0B5VUXrl6ol3_4IkdzanVbP7Wp/exec" target="_blank">開啟工具 ↗</a></td></tr>
+        </table>
+        <div class="content-h2">操作步驟</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>說明</th></tr>
+          <tr><td>1. 準備圖片</td><td>依試算表的「建議圖片說明」拍攝或挑選照片，調整尺寸、壓縮，並統一檔名</td></tr>
+          <tr><td>2. 上傳雲端硬碟</td><td>建立「網站圖庫」資料夾，把圖片放進去</td></tr>
+          <tr><td>3. 設定共用</td><td>資料夾或圖片設為「知道連結的任何人：檢視者」（沒有這一步，網站訪客看不到圖）</td></tr>
+          <tr><td>4. 取得直連網址</td><td>依工具畫面操作，取得圖片的直連網址</td></tr>
+          <tr><td>5. 填入試算表</td><td>把網址貼到對應編號的「新內容」欄</td></tr>
+          <tr><td>6. 測試</td><td>把網址貼到瀏覽器的無痕視窗，能直接看到圖片就代表成功</td></tr>
+        </table>
+        <div class="tip-card note"><strong>使用前請注意：</strong>
+          <ul>
+            <li>公司 Workspace 帳號若被管理員禁止「對外共用」，圖片會顯示不出來，請先找資訊人員確認</li>
+            <li>這類工具是由他人以 Apps Script 建立，請確認圖片「存放在誰的雲端硬碟」。公司正式使用時，建議請資訊人員用公司帳號另建一份</li>
+            <li>直連網址屬於非官方用法，Google 調整後可能失效。正式官網長期營運時，建議圖片仍放在網站主機上</li>
+          </ul>
+        </div>
+      </div><!-- u11-d END -->
+
+      <!-- u11-e -->
+      <div class="sub-block" id="u11-e">
+        <div class="sec-sub-title">S5：文字與圖片替換（不懂 HTML 也能改）</div>
+        <table class="data-table">
+          <tr><th>方法</th><th>做法</th><th>適合</th></tr>
+          <tr><td>A. 交給 AI 替換</td><td>附上 HTML＋試算表中有填「新內容」的列，請 AI 依編號修改</td><td>一次改很多項、完全不想看程式</td></tr>
+          <tr><td>B. 自己改設定區</td><td>用記事本開啟 HTML，按 Ctrl＋F 搜尋編號（例如 S1），只改引號內的文字或網址後存檔</td><td>只換一兩張圖或幾個字</td></tr>
+        </table>
+        <div class="tip-card info"><strong>小技巧：</strong>在試算表用「篩選」把「新內容」不是空白的列篩出來，只複製編號、類型、新內容三欄，貼給 AI 即可。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 依試算表清單替換文字與圖片</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">附上目前網站的完整 HTML 檔，以及以下替換清單（從 Google 試算表複製）。
+
+請只修改「網站設定區（SITE_CONFIG）」中對應編號的內容，其他程式碼與版面一律不要更動。
+
+替換清單：
+[貼上試算表：編號／類型／新內容，例如：
+S1-圖｜圖片｜https://新圖片直連網址
+S1-主標｜文字｜交通便利的綠建築廠辦
+C2-說明｜文字｜50～120 坪，彈性隔間]
+
+完成後請：
+1. 輸出修改後的完整 HTML
+2. 列出「編號／修改前／修改後」對照表，讓我逐項核對
+3. 清單中若有找不到的編號，請列出來問我，不要自行猜測位置</div>
+        </div>
+        <div class="tip-card warning"><strong>⚠️ 舊網站也能救：</strong>之前做好、但圖片散落各處的網站，先用下面的 Prompt 請 AI「整理設定區」並匯出內容對照表，之後就能用 S3～S5 的方式維護。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 舊網站整理成「網站設定區」</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">附上一份已完成的網站 HTML，裡面的輪播圖與其他圖片，我找不到替換的位置。
+
+請幫我重新整理程式碼，但「畫面外觀與功能要完全不變」：
+1. 把所有圖片網址（包含輪播圖、CSS 背景圖）與主要文案，集中到檔案最上方的「網站設定區（SITE_CONFIG）」
+2. 每一項加上中文註解與編號（輪播 S1、S2…，卡片 C1、C2…，其他依區塊命名）
+3. 輪播改為讀取設定區產生，設定區增減一筆即可增減一張
+
+完成後請輸出完整 HTML，並附上「內容對照表」：編號／區塊／類型／目前內容／新內容（留空）／建議尺寸或字數。</div>
+        </div>
+      </div><!-- u11-e END -->
+
+      <!-- u11-f -->
+      <div class="sub-block" id="u11-f">
+        <div class="sec-sub-title">進階：試算表當網站後台</div>
+        <div class="tip-card info"><strong>概念：</strong>網站每次開啟時，自動讀取 Google 試算表的內容。之後換圖、改字，只要改試算表的「新內容」欄，網站就會跟著更新，不需要再找 AI，也不用重新上傳網站檔案。</div>
+        <div class="content-h2">試算表設定步驟</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>說明</th></tr>
+          <tr><td>1. 準備工作表</td><td>沿用 S3 的「網站內容」工作表，欄名不要再更動</td></tr>
+          <tr><td>2. 發布到網路</td><td>檔案 → 共用 → 發布到網路 → 選「網站內容」工作表、格式選「逗號分隔值 (.csv)」→ 發布</td></tr>
+          <tr><td>3. 複製網址</td><td>複製產生的 CSV 網址，貼進下方 Prompt</td></tr>
+        </table>
+        <div class="tip-card warning"><strong>⚠️ 注意：</strong>
+          <ul>
+            <li>「發布到網路」後，任何人都看得到這張工作表，裡面只放網站要公開的內容，不要放租金底價、客戶名單</li>
+            <li>修改試算表後，網站可能要等幾分鐘才會更新</li>
+            <li>建議另外設定編輯權限，只開放給負責網站的同仁，避免誤改</li>
+          </ul>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 網站改為讀取 Google 試算表</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">附上目前網站的完整 HTML（已有網站設定區 SITE_CONFIG）。
+請改為「網站開啟時，從 Google 試算表讀取內容」：
+
+- 資料來源（試算表發布到網路的 CSV 網址）：[貼上網址]
+- 試算表欄位：編號、區塊、類型、目前內容、新內容、建議尺寸或字數、建議圖片說明
+- 依「編號」對應設定區的項目：「新內容」有填就使用新內容，空白就沿用設定區原本的內容
+- 讀取失敗時，整頁改用設定區原本的內容，網站不可以空白
+- 畫面外觀與其他功能維持不變
+
+完成後請輸出完整 HTML，並用 3～5 句話說明：日後同仁要如何只改試算表就更新網站。</div>
+        </div>
+      </div><!-- u11-f END -->
+    </div><!-- u11 END -->
+
+
+    <!-- ======== U12: Google 試算表 ======== -->
+    <div class="content-section" id="u12">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-6)">12</span>
+        Google 試算表
+      </div>
+      <div class="sec-desc">📌 工作情境：公司全面改用 Google 工具，重點不在報表美化，而在「多人共用、即時查閱」。租約資料分散在各廠區的工作表或檔案、公文需要民國日期，本單元用最基礎的函數，把這些日常作業變成自動更新的流程。</div>
+      <div class="tip-card note"><strong>本單元練習資料「租約明細」欄位：</strong>A 租約編號／B 承租單位／C 廠區／D 類別（廠房、辦公室、倉儲）／E 起租日／F 月租金／G 狀態（已簽約、洽談中、已退租）。第 1 列為標題，資料從第 2 列開始。</div>
+      <div class="content-h2">📁 練習檔案（課程範例下載資料夾）</div>
+      <table class="data-table">
+        <tr><th>檔名</th><th>對應單元</th><th>用途</th></tr>
+        <tr><td>00_民國日期公式練習</td><td>民國日期公式</td><td>西元與民國互轉、租約到期提醒（含解答工作表）</td></tr>
+        <tr><td>01_租約管理_多工作表</td><td>多工作表合併</td><td>A棟、B棟、C棟三張工作表合併成總表</td></tr>
+        <tr><td>02_A檔_租約總明細</td><td>依條件分流</td><td>來源檔：所有廠區的租約</td></tr>
+        <tr><td>03_A棟_租約／04_B棟_租約／05_C棟_租約</td><td>跨檔案 IMPORTRANGE</td><td>來源檔：各廠區自己維護的租約</td></tr>
+        <tr><td>06_租約彙整</td><td>跨檔案 IMPORTRANGE、依條件分流</td><td>彙整檔：在這裡輸入公式</td></tr>
+      </table>
+      <div class="tip-card warning"><strong>⚠️ 開始前：</strong>練習檔上傳到雲端硬碟後，請逐一開啟並點【檔案】→【儲存為 Google 試算表】，之後都使用轉換後的 Google 試算表版本。IMPORTRANGE、表格等功能只能在 Google 試算表格式中使用。</div>
+
+      <!-- u12-a -->
+      <div class="sub-block" id="u12-a">
+        <div class="sec-sub-title">Google 公式範圍寫法</div>
+        <div class="tip-card info"><strong>為什麼要先學範圍寫法？</strong>Google 試算表是多人同時編輯、資料持續增加的「活檔案」。範圍寫對了，新增的租約、新的表單回應會自動被公式納入，不必每次手動修改公式。</div>
+        <div class="content-h2">(1) 範圍的寫法</div>
+        <table class="data-table">
+          <tr><th>寫法</th><th>意思</th><th>使用時機</th></tr>
+          <tr><td>A2:G10</td><td>固定範圍：只抓 A2 到 G10</td><td>資料筆數固定、不會再增加</td></tr>
+          <tr><td>A2:A</td><td>開放式範圍：從 A2 一路到最後一列</td><td>資料會持續增加（表單回應、租約登記）；Google 專屬寫法</td></tr>
+          <tr><td>A1:G</td><td>多欄開放式範圍：A～G 欄，從第 1 列到最後一列</td><td>FILTER、QUERY、IMPORTRANGE 抓整份資料</td></tr>
+          <tr><td>A:A</td><td>整欄</td><td>COUNTIF、AVERAGE 等統計函數；Excel 也能使用</td></tr>
+          <tr><td>總表!A2:G</td><td>其他工作表的範圍：工作表名稱＋驚嘆號</td><td>公式和資料在不同工作表時，每一個範圍都要加</td></tr>
+          <tr><td>'表單回應 1'!B:B</td><td>工作表名稱有空格或特殊符號時，前後加單引號</td><td>表單回應工作表的預設名稱有空格</td></tr>
+          <tr><td>租約_A棟</td><td>表格名稱：只抓表格內的資料（不含標題）</td><td>資料已「轉換為表格」</td></tr>
+          <tr><td>租約_A棟[#ALL]</td><td>表格的全部內容（含標題列）</td><td>合併多個表格時，第一個表格帶入標題</td></tr>
+          <tr><td>租約_A棟[月租金]</td><td>表格中的指定欄位</td><td>=SUM(租約_A棟[月租金])，比 F2:F 更好閱讀</td></tr>
+          <tr><td>"租約明細!A1:G"</td><td>範圍放在雙引號內，變成「文字」</td><td>IMPORTRANGE 的範圍參數要用雙引號</td></tr>
+          <tr><td>$A$2／A$2／$A2</td><td>絕對參照／固定列／固定欄</td><td>公式要複製時，按 F4 切換</td></tr>
+        </table>
+        <div class="content-h2">(2) 公式中的符號</div>
+        <table class="data-table">
+          <tr><th>符號</th><th>意思</th><th>範例</th></tr>
+          <tr><td>=  &lt;&gt;</td><td>等於／不等於</td><td>G2:G="已簽約"、G2:G&lt;&gt;"已退租"</td></tr>
+          <tr><td>&gt;  &gt;=  &lt;  &lt;=</td><td>大於／大於等於／小於／小於等於</td><td>D:D, "&gt;=4"（放在 COUNTIF 條件中要加雙引號）</td></tr>
+          <tr><td>"文字"</td><td>文字一定要用雙引號包起來</td><td>"A棟"、"已簽約"</td></tr>
+          <tr><td>&amp;</td><td>把兩段內容接在一起</td><td>"民國"&amp;(YEAR(A2)-1911)</td></tr>
+          <tr><td>*</td><td>萬用字元：代表任意文字</td><td>"*空調*"＝內容中有出現「空調」</td></tr>
+          <tr><td>{ ; }</td><td>大括號＋分號：由上往下疊加（欄數要相同）</td><td>={ 標題列 ; FILTER(…) }</td></tr>
+          <tr><td>{ , }</td><td>大括號＋逗號：由左往右並排（列數要相同）</td><td>={ 序號欄 , 明細 }</td></tr>
+          <tr><td>,</td><td>函數中分隔每一個參數</td><td>COUNTIF(範圍, 條件)</td></tr>
+        </table>
+        <div class="content-h2">(3) 資料筆數與範圍寫法建議</div>
+        <table class="data-table">
+          <tr><th>資料筆數</th><th>建議範圍寫法</th><th>說明</th></tr>
+          <tr><td>1～5,000</td><td>A2:A</td><td>效能影響極小，新增資料會自動納入</td></tr>
+          <tr><td>5,000～20,000</td><td>A2:A20000</td><td>給一個合理的上限，或刪除工作表下方多餘的空白列</td></tr>
+          <tr><td>20,000 以上</td><td>表格名稱／精確範圍</td><td>強烈建議將資料轉換為「表格」</td></tr>
+        </table>
+        <div class="tip-card warning"><strong>⚠️ 開放式範圍的兩個注意事項：</strong>
+          <ul>
+            <li>A2:A 會掃描到工作表最下方的空白列，空白列太多時，FILTER、QUERY 會變慢</li>
+            <li>A2:A 是 Google 試算表專屬寫法，Excel 不支援。檔案要下載成 Excel 給其他單位使用時，請改成 A:A 或 A2:A1000 這類固定範圍</li>
+          </ul>
+        </div>
+        <div class="tip-card note"><strong>不想手打範圍？</strong>輸入公式時，直接用滑鼠到資料所在的工作表框選，試算表會自動帶入「工作表名稱!」，可以避免漏寫工作表名稱造成的錯誤。</div>
+      </div><!-- u12-a END -->
+
+      <!-- u12-b -->
+      <div class="sub-block" id="u12-b">
+        <div class="sec-sub-title">民國日期公式</div>
+        <div class="tip-card note"><strong>📁 開啟檔案：</strong>00_民國日期公式練習<br>依序完成「練習1_西元轉民國」→「練習2_民國轉西元」→「練習3_租約到期」，黃色儲存格輸入公式；綠色分頁「解答_」可對照答案。</div>
+        <div class="tip-card info"><strong>核心觀念：日期要「一欄計算、一欄顯示」。</strong><br>試算表裡的日期其實是一個數字，所以能加減、能算天數。民國日期是用公式「組出來的文字」，看起來正確，但不能拿來計算。因此建議保留一欄西元日期負責計算，另一欄用公式顯示民國日期給公文與報表使用。</div>
+
+        <div class="content-h2">(1) 會用到的基礎函數</div>
+        <table class="data-table">
+          <tr><th>函數</th><th>作用</th><th>範例（A2 為 2026/10/08）</th></tr>
+          <tr><td>YEAR / MONTH / DAY</td><td>取出日期的年、月、日</td><td>YEAR(A2) → 2026</td></tr>
+          <tr><td>TEXT</td><td>把數字或日期轉成指定格式的文字</td><td>TEXT(A2,"mm/dd") → 10/08</td></tr>
+          <tr><td>&amp;</td><td>把兩段內容接在一起</td><td>"民國"&amp;115 → 民國115</td></tr>
+          <tr><td>LEFT / MID / RIGHT</td><td>從文字的左邊、中間、右邊取出指定字數</td><td>RIGHT("115/10/08",2) → 08</td></tr>
+          <tr><td>FIND</td><td>找出某個字元在第幾個位置</td><td>FIND("/","115/10/08") → 4</td></tr>
+          <tr><td>DATE</td><td>用年、月、日三個數字組成真正的日期</td><td>DATE(2026,10,8) → 2026/10/08</td></tr>
+          <tr><td>EDATE</td><td>日期往後（或往前）推算幾個月</td><td>EDATE(A2,36) → 2029/10/08</td></tr>
+          <tr><td>TODAY</td><td>今天的日期，每天開啟檔案自動更新</td><td>=TODAY()-A2 → 距今天數</td></tr>
+          <tr><td>IF</td><td>依條件判斷，顯示不同結果：IF(條件, 成立時, 不成立時)</td><td>IF(K2&lt;=90,"請洽續約","")</td></tr>
+        </table>
+        <table class="data-table">
+          <tr><th>TEXT 格式代碼</th><th>顯示</th><th>TEXT 格式代碼</th><th>顯示</th></tr>
+          <tr><td>yyyy</td><td>2026</td><td>m／mm</td><td>1～12／01～12</td></tr>
+          <tr><td>yy</td><td>26</td><td>d／dd</td><td>1～31／01～31</td></tr>
+        </table>
+
+        <div class="content-h2">(2) 西元 → 民國（A2 是西元日期）</div>
+        <div class="tip-card note"><strong>公式邏輯：</strong>民國年 ＝ 西元年 − 1911，再用 &amp; 把「年」和「月日」接起來。<br>⚠️ 減法要用括號包起來，例如 (YEAR(A2)-1911)，公式比較好讀也不容易出錯。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — 只要民國年（115）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=YEAR(A2)-1911</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — 115/10/08</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=(YEAR(A2)-1911)&amp;"/"&amp;TEXT(A2,"mm/dd")</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — 民國115年10月8日</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">="民國"&amp;(YEAR(A2)-1911)&amp;"年"&amp;MONTH(A2)&amp;"月"&amp;DAY(A2)&amp;"日"</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — 1151008（七碼，公文、系統匯入常用）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=(YEAR(A2)-1911)&amp;TEXT(A2,"mmdd")</div>
+        </div>
+
+        <div class="content-h2">(3) 民國 → 西元（承租戶填的民國日期，轉回來才能計算）</div>
+        <div class="tip-card warning"><strong>⚠️ 輸入前先設定「純文字」：</strong>直接輸入 115/10/08，試算表可能把它當成「西元 115 年」的日期，公式就會出錯。請先選取該欄 →【格式】→【數字】→【純文字】，再輸入或貼上資料。</div>
+        <div class="tip-card note"><strong>以 115/10/08 為例，拆解步驟：</strong>
+          <ul>
+            <li>S1：FIND("/",A2) 找到第一個斜線在第 4 個字 → 年份是左邊 4−1＝3 個字</li>
+            <li>S2：LEFT(A2, 3) 取出 115，加 1911 得到 2026</li>
+            <li>S3：MID(A2, 5, 2) 從第 5 個字取 2 個字 → 10（月）</li>
+            <li>S4：RIGHT(A2, 2) 取最右邊 2 個字 → 08（日）</li>
+            <li>S5：DATE(年, 月, 日) 組成真正的日期</li>
+          </ul>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — 115/10/08 轉成西元日期（月、日須為兩位數）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=DATE(LEFT(A2,FIND("/",A2)-1)+1911, MID(A2,FIND("/",A2)+1,2), RIGHT(A2,2))</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — 1151008（七碼）轉成西元日期</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=DATE(LEFT(A2,3)+1911, MID(A2,4,2), RIGHT(A2,2))</div>
+        </div>
+        <div class="tip-card note">七碼公式假設民國年是 3 位數。民國 99 年以前的資料只有 6 碼（例如 991231），需另外處理；建議請填寫者統一寫成 0991231。</div>
+
+        <div class="content-h2">(4) 租賃實務：到期日與續約提醒</div>
+        <table class="data-table">
+          <tr><th>欄位</th><th>公式（以第 2 列為例）</th><th>說明</th></tr>
+          <tr><td>H 租期（月）</td><td>手動輸入，例如 36</td><td>3 年租約</td></tr>
+          <tr><td>I 到期日</td><td>=EDATE(E2,H2)-1</td><td>EDATE：日期往後推幾個月；減 1 天才是到期日</td></tr>
+          <tr><td>J 到期日（民國）</td><td>=(YEAR(I2)-1911)&amp;"/"&amp;TEXT(I2,"mm/dd")</td><td>給公文、通知函使用</td></tr>
+          <tr><td>K 剩餘天數</td><td>=I2-TODAY()</td><td>日期相減就是天數，每天自動更新</td></tr>
+          <tr><td>L 提醒</td><td>=IF(K2&lt;=90,"請洽續約","")</td><td>到期前 90 天內顯示提醒</td></tr>
+        </table>
+        <div class="tip-card info"><strong>搭配條件式格式：</strong>選取 A2:L →【格式】→【條件式格式設定】→ 格式規則選「自訂公式」，輸入 <code>=$K2&lt;=90</code>，填色設為淺紅色，即將到期的租約整列就會自動標紅。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 看不懂公式時，請 AI 逐步解說</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">我是試算表函數初學者，請用「一步一步拆解」的方式，說明下面這個 Google 試算表公式在做什麼：
+=DATE(LEFT(A2,FIND("/",A2)-1)+1911, MID(A2,FIND("/",A2)+1,2), RIGHT(A2,2))
+
+假設 A2 是「115/10/08」，請：
+1. 由內而外說明每一個函數算出的結果
+2. 只使用基礎函數說明，不要改用 LET 等新函數
+3. 最後說明哪些情況這個公式會出錯</div>
+        </div>
+      </div><!-- u12-b END -->
+
+      <!-- u12-c -->
+      <div class="sub-block" id="u12-c">
+        <div class="sec-sub-title">同一檔案：多工作表合併</div>
+        <div class="tip-card note"><strong>📁 開啟檔案：</strong>01_租約管理_多工作表<br>資料在「A棟」「B棟」「C棟」工作表；公式輸入在「總表」與「已簽約」工作表的 A1。</div>
+        <div class="tip-card info"><strong>工作情境：</strong>同一個「租約管理」檔案中，A棟、B棟、C棟各一張工作表，由各棟管理員維護。主管要看全部租約時，不必再複製貼上，用一個公式就能自動合併成「總表」，任何一棟新增資料，總表都會即時更新。</div>
+        <div class="content-h2">會用到的函數</div>
+        <table class="data-table">
+          <tr><th>函數</th><th>語法</th><th>說明</th><th>本節範例</th></tr>
+          <tr><td>{ ; }</td><td>={ 範圍1 ; 範圍2 ; … }</td><td>分號由上往下疊加，各範圍欄數要相同</td><td>={ 租約_A棟[#ALL] ; 租約_B棟 ; 租約_C棟 }</td></tr>
+          <tr><td>VSTACK</td><td>=VSTACK( 範圍1 , 範圍2 , … )</td><td>由上往下合併，效果同 { ; }，可讀性較高</td><td>=VSTACK( 租約_A棟[#ALL] , 租約_B棟 , 租約_C棟 )</td></tr>
+          <tr><td>FILTER</td><td>=FILTER( 範圍 , 條件1 , [條件2] , … )</td><td>只顯示符合條件的資料列；結果會自動往下展開</td><td>=FILTER( 總表!A2:G , 總表!G2:G="已簽約" )</td></tr>
+          <tr><td>IFNA</td><td>=IFNA( 公式 , 錯誤時顯示的值 )</td><td>公式結果為 #N/A 時改顯示指定內容</td><td>=IFNA( FILTER(…) , "查無資料" )</td></tr>
+          <tr><td>QUERY</td><td>=QUERY( 資料範圍 , "查詢指令" , 標題列數 )</td><td>用類似資料庫的指令篩選、排序、彙整；標題列數通常填 1</td><td>=QUERY( 總表!A1:G , "select * where G='已簽約'" , 1 )</td></tr>
+        </table>
+        <div class="content-h2">FILTER：Google 與 Excel 的差異</div>
+        <table class="data-table">
+          <tr><th>特性</th><th>Google 試算表</th><th>Excel</th></tr>
+          <tr><td>第三個參數</td><td>放「第二個條件」</td><td>放「查無資料時顯示的文字」</td></tr>
+          <tr><td>多條件「且」</td><td>條件之間用逗號：FILTER(A:C, A:A="北區", B:B="已完工")</td><td>條件之間用 *：FILTER(A:C, (A:A="北區")*(B:B="已完工"))</td></tr>
+          <tr><td>多條件「或」</td><td colspan="2">兩者相同，條件之間用 ＋：FILTER(A:C, (A:A="北區")+(A:A="中區"))</td></tr>
+          <tr><td>查無資料時</td><td>出現 #N/A，需外包 IFNA</td><td>直接顯示第三個參數的文字</td></tr>
+        </table>
+        <div class="tip-card note"><strong>QUERY 指令順序不能對調：</strong>select（選欄位）→ where（條件）→ group by（群組）→ pivot（樞紐）→ order by（排序）→ limit（筆數）→ label（改標題）→ format（格式）。<br>select * 代表全部欄位；欄位字母必須大寫；文字條件用單引號，例如 where G='已簽約'。</div>
+        <div class="content-h2">(1) 先把各棟資料建立成「表格」</div>
+        <div class="content-note">
+          <p>選取資料範圍 →【格式】→【轉換為表格】，並為表格命名，例如：<strong>租約_A棟、租約_B棟、租約_C棟</strong>。</p>
+          <ul style="margin-left:20px;">
+            <li>表格只會抓「有資料的範圍」，不會把下方空白列一起合併進來</li>
+            <li>命名建議：不要空格（用底線 _ 代替）、不要數字開頭、名稱簡短</li>
+            <li>三個表格的「欄位順序」必須完全一致，否則合併後欄位會錯位</li>
+          </ul>
+        </div>
+        <div class="content-h2">(2) 合併公式</div>
+        <div class="tip-card note"><strong>大括號 { } 的方向符號：</strong>分號 <strong>;</strong> ＝ 由上往下疊加（欄數要一致）；逗號 <strong>,</strong> ＝ 由左往右並排（列數要一致）。<br><strong>[#ALL]</strong> 表示「含標題列」，只需要放在第一個表格，後面的表格只取資料，總表才不會重複出現標題。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 方法1 — 大括號 { ; } 由上往下合併</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">={ 租約_A棟[#ALL] ; 租約_B棟 ; 租約_C棟 }</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 方法2 — VSTACK 函數（效果相同，可讀性較高）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=VSTACK( 租約_A棟[#ALL] , 租約_B棟 , 租約_C棟 )</div>
+        </div>
+        <div class="content-h2">(3) 合併後，依條件整理明細</div>
+        <div class="tip-card warning"><strong>⚠️ 公式寫在「已簽約」工作表，資料在「總表」：</strong>每一個範圍前面都要加上「總表!」。只有標題列加、FILTER 裡的範圍沒加，公式會變成篩選自己，出現循環參照錯誤。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 方法1 — 標題＋FILTER：只看「已簽約」</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">={ 總表!A1:G1 ; FILTER( 總表!A2:G , 總表!G2:G="已簽約" ) }</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 方法2 — QUERY：只看「已簽約」</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=QUERY( 總表!A1:G , "select * where G='已簽約'" , 1 )</div>
+        </div>
+        <table class="data-table">
+          <tr><th>需求</th><th>FILTER 寫法</th></tr>
+          <tr><td>同時符合（A棟 且 已簽約）</td><td>=FILTER(總表!A2:G, 總表!C2:C="A棟", 總表!G2:G="已簽約")　條件用逗號隔開</td></tr>
+          <tr><td>符合其一（A棟 或 B棟）</td><td>=FILTER(總表!A2:G, (總表!C2:C="A棟")+(總表!C2:C="B棟"))　條件用 ＋ 相加</td></tr>
+          <tr><td>查無資料時顯示文字</td><td>=IFNA(FILTER(總表!A2:G, 總表!C2:C="D棟"), "查無資料")</td></tr>
+        </table>
+        <div class="tip-card warning"><strong>⚠️ 常見錯誤：</strong>
+          <ul>
+            <li><strong>#REF!</strong>：公式結果要往下展開，但下方或右方已經有人手動輸入資料擋住了 → 刪除擋住的內容</li>
+            <li><strong>#VALUE!</strong>：用 { ; } 上下合併，但各表欄數不一致 → 檢查欄位是否相同</li>
+            <li>QUERY 中的欄位字母必須大寫（where G=，不能寫 where g=）</li>
+          </ul>
+        </div>
+      </div><!-- u12-c END -->
+
+      <!-- u12-d -->
+      <div class="sub-block" id="u12-d">
+        <div class="sec-sub-title">跨檔案：IMPORTRANGE 匯入</div>
+        <div class="tip-card note"><strong>📁 開啟檔案：</strong><br>來源檔（只複製網址，不需修改）：03_A棟_租約、04_B棟_租約、05_C棟_租約<br>彙整檔（在這裡輸入公式）：06_租約彙整 →「來源清單」貼上三個來源檔網址，「跨檔合併」A1 輸入公式</div>
+        <div class="tip-card info"><strong>工作情境：</strong>各廠區的管理員各自維護自己的租約檔案，總公司另有一個「租約彙整」檔案。過去每月請各廠區寄檔案再人工合併，常發生版本不一致。改用 IMPORTRANGE 後，彙整檔會直接讀取各廠區檔案的最新內容。</div>
+        <div class="content-note">
+          <p><strong>函數說明：</strong>=IMPORTRANGE( 試算表網址 , "工作表名稱!範圍" )</p>
+          <ul style="margin-left:20px;">
+            <li>試算表網址：開啟來源檔，複製瀏覽器上方的完整網址</li>
+            <li>範圍：要加上雙引號，例如 "租約明細!A1:G"</li>
+            <li>第一次使用時，儲存格會顯示 #REF!，滑鼠移上去點【允許存取】即可</li>
+          </ul>
+        </div>
+        <div class="content-h2">會用到的函數</div>
+        <table class="data-table">
+          <tr><th>函數</th><th>語法</th><th>說明</th><th>本節範例</th></tr>
+          <tr><td>IMPORTRANGE</td><td>=IMPORTRANGE( 試算表網址 , "工作表!範圍" )</td><td>從另一個 Google 試算表匯入資料；範圍要加雙引號；第一次需【允許存取】</td><td>=IMPORTRANGE( 來源清單!B2 , 來源清單!C2 )</td></tr>
+          <tr><td>VSTACK</td><td>=VSTACK( 範圍1 , 範圍2 , … )</td><td>把多個檔案匯入的資料由上往下合併</td><td>=VSTACK( IMPORTRANGE(…) , IMPORTRANGE(…) )</td></tr>
+          <tr><td>QUERY</td><td>=QUERY( 資料範圍 , "查詢指令" , 標題列數 )</td><td>來源是 VSTACK、IMPORTRANGE、{ } 時，欄位要寫 Col1、Col2…</td><td>"select * where Col1 is not null"</td></tr>
+          <tr><td>is not null</td><td>QUERY 的條件寫法</td><td>「不是空白」的資料才顯示，用來去除合併後的空白列</td><td>where Col1 is not null</td></tr>
+        </table>
+        <div class="content-h2">(1) 匯入一個檔案</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — 匯入 A 廠區檔案的租約明細</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=IMPORTRANGE("https://docs.google.com/spreadsheets/d/A廠區檔案ID/edit", "租約明細!A1:G")</div>
+        </div>
+        <div class="content-h2">(2) 匯入多個檔案並合併（建議做法：建立「來源清單」）</div>
+        <div class="tip-card note"><strong>為什麼要建立來源清單？</strong>網址很長，直接寫在公式裡難以閱讀，也不好維護。把網址和範圍放在儲存格中，公式只要參照儲存格；日後某個廠區換檔案，只要改清單即可。</div>
+        <table class="data-table">
+          <tr><th></th><th>A 廠區</th><th>B 試算表網址</th><th>C 匯入範圍</th></tr>
+          <tr><td>2</td><td>A棟</td><td>https://docs.google.com/spreadsheets/d/…</td><td>租約明細!A1:G</td></tr>
+          <tr><td>3</td><td>B棟</td><td>https://docs.google.com/spreadsheets/d/…</td><td>租約明細!A2:G</td></tr>
+          <tr><td>4</td><td>C棟</td><td>https://docs.google.com/spreadsheets/d/…</td><td>租約明細!A2:G</td></tr>
+        </table>
+        <div class="tip-card note">第一個檔案從 A1 開始（含標題），其餘從 A2 開始（不含標題），合併後標題只會出現一次。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — VSTACK 合併多個檔案</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=VSTACK(
+  IMPORTRANGE(來源清單!B2, 來源清單!C2),
+  IMPORTRANGE(來源清單!B3, 來源清單!C3),
+  IMPORTRANGE(來源清單!B4, 來源清單!C4)
+)</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — 合併後去除中間的空白列</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=QUERY( VSTACK(
+  IMPORTRANGE(來源清單!B2, 來源清單!C2),
+  IMPORTRANGE(來源清單!B3, 來源清單!C3),
+  IMPORTRANGE(來源清單!B4, 來源清單!C4)
+), "select * where Col1 is not null", 1 )</div>
+        </div>
+        <div class="tip-card note"><strong>為什麼這裡寫 Col1，不寫 A？</strong>QUERY 的資料來源如果是「實體範圍」（例如 A1:G），欄位用英文字母 A、B、C；如果來源是 VSTACK、{ }、IMPORTRANGE 組出來的「虛擬資料」，就必須改用 Col1、Col2、Col3（第幾欄）。<br>「範圍寫到 G 欄結尾」會把下方空白列一起匯入，所以需要用 Col1 is not null 排除；若來源檔已建立表格，也可以把範圍改成表格名稱。</div>
+        <div class="tip-card warning"><strong>⚠️ 使用 IMPORTRANGE 前要知道：</strong>
+          <ul>
+            <li>建立公式的人必須對來源檔「至少有檢視權限」</li>
+            <li>匯入的資料是「唯讀」的，要修改請回到來源檔改</li>
+            <li>來源檔更新後，彙整檔可能需要幾秒到幾分鐘才同步</li>
+            <li>同一個檔案中 IMPORTRANGE 寫太多個，檔案會變慢 → 建議只匯入一次，再用 FILTER 分流（見下一節）</li>
+          </ul>
+        </div>
+      </div><!-- u12-d END -->
+
+      <!-- u12-e -->
+      <div class="sub-block" id="u12-e">
+        <div class="sec-sub-title">跨檔案：依條件分流到各工作表</div>
+        <div class="tip-card note"><strong>📁 開啟檔案：</strong><br>來源檔（只複製網址，不需修改）：02_A檔_租約總明細<br>彙整檔（在這裡輸入公式）：06_租約彙整 →「匯入」工作表 A1 匯入資料，「A棟」「B棟」「C棟」工作表 A1 輸入 FILTER 公式</div>
+        <div class="tip-card info"><strong>工作情境：</strong>A 檔是公司的「租約總明細」，所有租約都登記在這裡。各廠區主管只想看自己廠區的資料，希望總明細一更新，各廠區的工作表就自動出現新資料，不必再人工逐筆複製。</div>
+        <div class="content-h2">會用到的函數</div>
+        <table class="data-table">
+          <tr><th>函數</th><th>語法</th><th>說明</th><th>本節範例</th></tr>
+          <tr><td>IMPORTRANGE</td><td>=IMPORTRANGE( 試算表網址 , "工作表!範圍" )</td><td>把 A 檔的總明細整份匯入「匯入」工作表</td><td>=IMPORTRANGE( "A檔網址" , "租約明細!A1:G" )</td></tr>
+          <tr><td>FILTER</td><td>=FILTER( 範圍 , 條件1 , [條件2] , … )</td><td>從「匯入」工作表依廠區篩選</td><td>=FILTER( 匯入!A2:G , 匯入!C2:C="A棟" )</td></tr>
+          <tr><td>&lt;&gt;</td><td>條件中的「不等於」</td><td>排除某一種狀態</td><td>匯入!G2:G&lt;&gt;"已退租"</td></tr>
+          <tr><td>QUERY</td><td>=QUERY( 資料範圍 , "查詢指令" , 標題列數 )</td><td>直接對 IMPORTRANGE 的結果下條件；欄位用 Col 編號</td><td>"select * where Col3='A棟'"（Col3＝第 3 欄 廠區）</td></tr>
+        </table>
+        <div class="content-h2">操作步驟</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>說明</th></tr>
+          <tr><td>S1 建立「匯入」工作表</td><td>在彙整檔新增工作表「匯入」，A1 輸入 IMPORTRANGE，把總明細整份帶進來</td></tr>
+          <tr><td>S2 建立各廠區工作表</td><td>新增工作表「A棟」、「B棟」、「C棟」</td></tr>
+          <tr><td>S3 各工作表寫 FILTER</td><td>從「匯入」工作表依廠區條件篩選，標題列一起帶入</td></tr>
+          <tr><td>S4 複製工作表</td><td>A棟完成後，複製工作表並把公式中的「A棟」改成「B棟」即可</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 S1 — 「匯入」工作表 A1</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=IMPORTRANGE("A檔（租約總明細）的網址", "租約明細!A1:G")</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 S3 — 「A棟」工作表 A1：標題＋A棟明細</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">={ 匯入!A1:G1 ; FILTER( 匯入!A2:G , 匯入!C2:C="A棟" ) }</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 變化 — A棟中「仍在租」的租約（排除已退租）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">={ 匯入!A1:G1 ; FILTER( 匯入!A2:G , 匯入!C2:C="A棟" , 匯入!G2:G&lt;&gt;"已退租" ) }</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 進階 — 不用「匯入」工作表，一行 QUERY 完成</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=QUERY( IMPORTRANGE("A檔的網址", "租約明細!A1:G") , "select * where Col3='A棟'" , 1 )</div>
+        </div>
+        <div class="tip-card note"><strong>分流到「不同檔案」也可以：</strong>如果每個廠區有自己的檔案，就在各廠區檔案中寫上面的 QUERY 公式，條件改成各自的廠區。總明細一更新，各廠區檔案都會同步。<br>⚠️ 注意：能編輯廠區檔案的人，也能修改公式改看其他廠區資料。若有資料保密需求，應由總公司控管總明細的共用權限。</div>
+        <div class="tip-card warning"><strong>⚠️ 公式連動 vs. 逐筆附加：</strong>上面的公式是「即時連動」，總明細刪除一筆，廠區工作表也會跟著消失，而且不能在結果中手動加註。若需求是「把資料逐筆複製附加過去，之後各自修改、不再連動」，就要改用 Apps Script，可以請 AI 撰寫。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 請 AI 寫 Apps Script「逐筆附加」</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">我是 Apps Script 初學者，請幫我寫一支 Google Apps Script，並附上安裝步驟。
+
+需求：
+- 來源：目前檔案的工作表「租約明細」，A～G 欄，第 1 列是標題
+- C 欄是廠區（A棟、B棟、C棟）
+- 依 C 欄的廠區，把資料「附加」到同名工作表的最後一列下方
+- 已經附加過的資料不要重複附加（請在 H 欄標記「已轉出」）
+- 若同名工作表不存在，自動建立並複製標題列
+
+請說明：
+1. 程式碼貼在哪裡、如何執行
+2. 第一次執行時出現的授權畫面該怎麼處理
+3. 如何設定每天自動執行一次</div>
+        </div>
+      </div><!-- u12-e END -->
+
+      </div><!-- u12 END -->
+
+
+    <!-- ======== U13: Google 表單 ======== -->
+    <div class="content-section" id="u13">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-1)">13</span>
+        Google 表單
+      </div>
+      <div class="sec-desc">📌 練習情境：公司每年都要做「員工教育訓練需求調查」，但不同部門需要的課程差很多。本單元用同一個情境走完整流程：依部門給不同題目 → 依名單寄出專屬連結 → 回應依部門彙整、追蹤未填寫同仁並寄提醒信 → 單選、複選與交叉統計 → 結合 AI 分析 300 份回應。</div>
+      <div class="content-h2">📁 練習檔案（課程範例下載資料夾）</div>
+      <table class="data-table">
+        <tr><th>檔名</th><th>對應單元</th><th>用途</th></tr>
+        <tr><td>07_教育訓練需求調查</td><td>依部門發送問卷、回應彙整與追蹤、回應統計與分析</td><td>模擬表單回應 300 份＋員工名單 320 人（含統計練習與解答工作表）</td></tr>
+      </table>
+      <div class="tip-card warning"><strong>⚠️ 開始前：</strong>練習檔上傳到雲端硬碟後，請開啟並點【檔案】→【儲存為 Google 試算表】，之後都使用轉換後的 Google 試算表版本。</div>
+      <div class="content-h2">本單元的問卷結構</div>
+      <table class="data-table">
+        <tr><th>區段</th><th>誰會看到</th><th>題目</th></tr>
+        <tr><td>1. 基本資料</td><td>全體同仁</td><td>員工編號、姓名、部門（依答案跳到部門題組）、職務層級、年資</td></tr>
+        <tr><td>2. 行政管理</td><td>行政管理部</td><td>最想提升的行政技能（複選）、每週花在重複性作業的時間</td></tr>
+        <tr><td>3. 業務行銷</td><td>業務行銷部</td><td>最想加強的業務技能（複選）、提案簡報頻率</td></tr>
+        <tr><td>4. 生產品管</td><td>生產品管部</td><td>最想加強的現場技能（複選）、現場資料記錄方式</td></tr>
+        <tr><td>5. 研發技術</td><td>研發技術部</td><td>最想加強的技術能力（複選）、使用 AI 輔助工作的頻率</td></tr>
+        <tr><td>6. 共同題</td><td>全體同仁</td><td>最想參加的課程主題（複選）、偏好上課方式（複選）、偏好上課時段、去年課程評分（方格）、整體滿意度、其他建議</td></tr>
+      </table>
+
+      <!-- u13-a -->
+      <div class="sub-block" id="u13-a">
+        <div class="sec-sub-title">Google 表單：建立與發佈</div>
+        <div class="content-h2">(1) 建立表單的三種方式</div>
+        <table class="data-table">
+          <tr><th>序號</th><th>做法</th><th>適合帳號</th><th>能否做「依答案跳區段」</th><th>一句話說明</th></tr>
+          <tr><td>A</td><td>表單內建 Gemini「幫我建立表單」</td><td>公司付費 Workspace</td><td>❌</td><td>最快，但只能做單一區段，區段要自己補</td></tr>
+          <tr><td>B</td><td>手動建立＋貼上選項技巧</td><td>所有帳號</td><td>✅（手動設定）</td><td>題目少時可用</td></tr>
+          <tr><td>C</td><td>AI 寫 Apps Script 自動建表單</td><td>所有帳號（含免費 Gmail）</td><td>✅</td><td>一次產生完整表單，含區段與跳轉</td></tr>
+        </table>
+        <div class="content-note">
+          <p>先在【雲端硬碟】建立存放表單的資料夾（例如「教育訓練調查」），在資料夾中按右鍵 →【Google 表單】。表單、回應試算表與名單都放在同一個資料夾，方便管理與共用。</p>
+          <p><strong>手動建立的省時技巧：</strong>把 AI 產生的選項（每行一個）整段複製，貼到題目的「選項 1」欄位，表單會自動拆成多個選項。</p>
+        </div>
+
+        <div class="content-h2">(2) 題目類型與試算表呈現方式</div>
+        <div class="tip-card note"><strong>設計題目時，先想「統計時要怎麼算」。</strong>不同題型匯入試算表後的樣子不同，會直接影響後續統計的難易度。</div>
+        <table class="data-table">
+          <tr><th>題型</th><th>本問卷範例</th><th>試算表呈現</th><th>統計方式</th></tr>
+          <tr><td>簡答</td><td>員工編號、姓名</td><td>一欄，文字</td><td>用來比對名單、追蹤未填</td></tr>
+          <tr><td>單選題</td><td>部門、職務層級、年資</td><td>一欄，一個答案</td><td>COUNTIF 直接計算</td></tr>
+          <tr><td>下拉式選單</td><td>選項很多時（例如 20 個分公司）</td><td>一欄，一個答案</td><td>同單選題</td></tr>
+          <tr><td>核取方塊（複選）</td><td>最想參加的課程主題：AI 工具應用、Excel 資料分析…</td><td>一欄，多個答案以「, 」隔開</td><td>需用萬用字元或拆欄計算（見「回應統計與分析」）</td></tr>
+          <tr><td>線性刻度</td><td>整體滿意度 1～5 分</td><td>一欄，數字</td><td>AVERAGE 計算平均分數</td></tr>
+          <tr><td>單選方格</td><td>去年課程評分：課程內容、講師表達、實作練習、時間安排</td><td>每一列題目各一欄</td><td>每欄各自計算平均</td></tr>
+          <tr><td>段落</td><td>其他建議</td><td>一欄，文字</td><td>開放式意見交給 AI 分類</td></tr>
+        </table>
+        <div class="tip-card warning"><strong>⚠️ 複選題的選項文字不要有逗號，也不要互相包含：</strong>複選答案在試算表中以「, 」隔開，選項本身有逗號就會被拆錯；「簡報」與「簡報設計」這種包含關係，用萬用字元統計時會重複計算。</div>
+
+        <div class="content-h2">(3) AI 設計題目＋自動建立表單（序號 C）</div>
+        <div class="tip-card info"><strong>兩個步驟：</strong>S1 先請 AI 設計題目，確認題目沒問題後，S2 在<strong>同一個對話</strong>請 AI 寫 Apps Script。執行程式後，表單、區段、跳題與回應試算表會一次建立完成，不用逐題複製貼上。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 S1：Prompt — 請 AI 設計問卷題目（序號B、C 共用）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">你是一位企業人資與教育訓練顧問，請幫我設計一份「年度員工教育訓練需求調查」，要放到 Google 表單使用。
+
+需求：
+- 第一區段：基本資料（員工編號、姓名、部門、職務層級、年資）
+- 部門分為：行政管理／業務行銷／生產品管／研發技術
+- 依部門分成四個區段，各 2 題專屬題目，其中 1 題為複選題
+- 最後區段：全體共同題，包含最想參加的課程主題（複選）、偏好上課方式（複選）、偏好上課時段、去年課程評分（單選方格）、整體滿意度（1～5 分）、其他建議
+
+輸出格式：
+- 用表格列出：區段／題目／題型（簡答、單選、核取方塊、線性刻度、單選方格、段落）／選項／是否必填
+- 題型請考慮後續在試算表統計的方便性
+- 複選題的選項文字不要有逗號，也不要有互相包含的選項</div>
+        </div>
+        <div class="tip-card warning"><strong>⚠️ S2 一定要在 S1 的同一個對話中進行！</strong>開新對話時，AI 看不到前面設計的題目，會自己編一份題目寫進程式，建出來的表單就和你設計的問卷不一樣。<br>如果 AI 回覆「沒有看到題目」，請把 S1 的題目表格整段貼上，不要讓它自行補題。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 S2：Prompt — 請 AI 寫 Apps Script 自動建立表單</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請把上面設計好的問卷，寫成一支 Google Apps Script，執行後自動建立 Google 表單。我是 Apps Script 初學者。
+
+需求：
+- 依上面的題目表格建立所有題目，題型、選項、必填設定都要一致
+- 如果你看不到上面的題目表格，請先告訴我，不要自行編寫題目
+- 用「區段（PageBreak）」分出：基本資料／行政管理／業務行銷／生產品管／研發技術／共同題
+- 每個區段的題目都要放在該區段內，依序建立
+- 「部門」題目設定「依答案前往相關區段」
+- 四個部門區段完成後，都前往「共同題」區段
+- 建立回應試算表，並連結到表單
+- 執行完成後，在記錄中顯示「表單編輯網址」與「填寫網址」
+
+請說明：
+1. 到 script.google.com 新增專案，程式碼貼在哪裡
+2. 第一次執行時的授權畫面怎麼處理
+3. 執行後去哪裡找到建立好的表單</div>
+        </div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>操作</th></tr>
+          <tr><td>1. 新增專案</td><td>前往 script.google.com →【新專案】→ 刪除預設的 function myFunction()，貼上 AI 提供的完整程式碼 → 按 Ctrl＋S 儲存</td></tr>
+          <tr><td>2. 執行</td><td>上方工具列選取要執行的函式名稱 → 按【執行】</td></tr>
+          <tr><td>3. 授權</td><td>【審查權限】→ 選擇帳號 → 出現「Google 尚未驗證這個應用程式」時，點左下角【進階】→【前往「專案名稱」（不安全）】→【允許】</td></tr>
+          <tr><td>4. 取得網址</td><td>下方「執行記錄」會顯示表單編輯網址、填寫網址與回應試算表網址；也可以到雲端硬碟找到表單與試算表</td></tr>
+          <tr><td>5. 無痕測試</td><td>用無痕視窗開啟填寫網址，四個部門各填一次，依下方檢查表確認</td></tr>
+        </table>
+        <div class="tip-card note"><strong>授權畫面為什麼說「不安全」？</strong>這是你自己帳號寫的程式，沒有送 Google 審查，所以會出現警告。自己寫的程式可以放心允許；如果是別人提供的程式，請先確認程式內容再授權。</div>
+        <div class="content-h2">建立後請檢查</div>
+        <table class="data-table">
+          <tr><th>檢查項目</th><th>正確結果</th></tr>
+          <tr><td>題目內容</td><td>和 S1 設計的題目表格一致，不是 AI 另外編的題目</td></tr>
+          <tr><td>區段</td><td>共 6 個區段，每個區段都有自己的題目，沒有空白頁</td></tr>
+          <tr><td>跳題</td><td>選「業務行銷」只會看到業務題組，其他部門也一樣</td></tr>
+          <tr><td>區段完成後</td><td>四個部門填完專屬題目後，都會進入「共同題」，不會直接送出</td></tr>
+          <tr><td>回應試算表</td><td>表單【回覆】分頁顯示已連結試算表，測試資料有寫入</td></tr>
+        </table>
+        <div class="tip-card warning"><strong>⚠️ AI 寫的程式也會出錯：</strong>常見的錯誤有「題目全部擠在最後一個區段」、「選研發技術後直接送出」。發現問題時不用看懂程式，把「看到的現象」告訴 AI，請它修正即可。修正後先到雲端硬碟刪除舊的表單與試算表，再重新執行。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 回報錯誤，請 AI 修正程式</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">我執行程式並用無痕視窗測試後，發現以下問題：
+- 【例如：四個部門區段是空白頁，所有題目都在共同題區段】
+- 【例如：選擇研發技術，填完後直接送出，沒有進入共同題】
+
+請找出原因並修正程式，輸出完整程式碼，並用一兩句話說明修改了哪裡。</div>
+        </div>
+        <div class="tip-card note"><strong>AI 回覆最後的「延伸建議」怎麼看？</strong>AI 常在回覆結尾提議下一步，例如「要不要自動寄 Email 通知」。這是 AI 的提議，不一定是你目前需要的。先問自己：這次的任務完成了嗎？檢查表都通過了嗎？完成後再回到自己的流程往下走，有需要時再另開主題處理。</div>
+
+        <div class="content-h2">(4) 發佈前的設定</div>
+        <table class="data-table">
+          <tr><th>設定</th><th>位置</th><th>建議</th></tr>
+          <tr><td>回應者範圍</td><td>【發布】→ 回應者</td><td>同仁都有公司 Google 帳號時，可設「僅限組織內」；有同仁沒有帳號（例如現場人員），請改用「知道連結的任何人」</td></tr>
+          <tr><td>收集電子郵件地址</td><td>【設定】→【回覆】</td><td>本問卷已用員工編號比對名單，可以不開；需要寄送回覆副本時再開啟</td></tr>
+          <tr><td>限制回覆次數為 1 次</td><td>【設定】→【回覆】</td><td>填答者必須登入 Google 帳號；有同仁沒有帳號時請勿開啟</td></tr>
+          <tr><td>允許編輯回覆</td><td>【設定】→【回覆】</td><td>建議開啟，同仁填錯可以自行修改</td></tr>
+          <tr><td>必填題目</td><td>每一題右下角【必填】</td><td>員工編號、部門等統計與比對關鍵欄位務必設為必填</td></tr>
+        </table>
+        <div class="tip-card note"><strong>具名還是匿名？</strong>本問卷要追蹤誰還沒填、寄提醒信，所以需要員工編號。如果問卷內容較敏感（例如對主管的評價），建議改成匿名，但就無法追蹤未填名單，只能用「部門回覆份數」估計回覆率。</div>
+
+        <div class="content-h2">(5) 發佈、短網址與 QR Code</div>
+        <div class="content-note">
+          <ul style="margin-left:20px;">
+            <li>按右上角【發布】，並確認回應者的設定</li>
+            <li>按【傳送】→ 連結圖示 → 勾選【縮短網址】，複製後可貼到 Email、LINE 或公司公告</li>
+            <li>QR Code：用 Chrome 開啟表單填寫頁 → 網址列右側【分享】→【建立 QR 圖碼】，可印在佈告欄或休息區</li>
+          </ul>
+        </div>
+        <div class="tip-card warning"><strong>⚠️ 發佈前一定要測試：</strong>用【無痕視窗】開啟表單網址，模擬「沒有登入的同仁」實際填寫，四個部門各填一次，確認跳題與必填設定正確，再到回應試算表確認資料欄位，最後刪除測試資料。</div>
+      </div><!-- u13-a END -->
+
+      <!-- u13-b -->
+      <div class="sub-block" id="u13-b">
+      <div class="sec-sub-title">Google 表單：統一AS表單</div>
+        <div class="tip-card warning">前面步驟如何利用AI協助建立表單，但課程為統一步驟，利用此AS建立表單</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📄 年度員工教育訓練需求調查 — Apps Script</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">// ===================================================
+// 年度員工教育訓練需求調查：自動建立 Google 表單
+// 使用方式：上方選取 createTrainingSurvey → 按「執行」
+// ===================================================
+
+// 要放進指定資料夾時，貼上資料夾 ID（資料夾網址 folders/ 後面那串）
+// 留空則放在「我的雲端硬碟」
+const FOLDER_ID = '';
+
+function createTrainingSurvey() {
+
+  // ---------- 建立表單 ----------
+  const form = FormApp.create('年度員工教育訓練需求調查');
+  form.setDescription('為了規劃明年度的教育訓練課程，請花 3 分鐘填寫，您的意見將作為課程安排的依據。');
+  form.setProgressBar(true);
+
+  // ---------- 區段1：基本資料 ----------
+  form.addTextItem().setTitle('員工編號').setRequired(true);
+  form.addTextItem().setTitle('姓名').setRequired(true);
+
+  // 部門：先建立題目，等區段都建好後再設定跳轉
+  const deptItem = form.addMultipleChoiceItem()
+    .setTitle('部門')
+    .setHelpText('選擇後會自動前往該部門的專屬題目')
+    .setRequired(true);
+
+  addChoice(form, '職務層級', ['一般同仁', '基層主管', '中高階主管']);
+  addChoice(form, '年資', ['未滿1年', '1～3年', '3～5年', '5年以上']);
+
+  // ---------- 區段2：行政管理 ----------
+  const pageAdmin = form.addPageBreakItem().setTitle('行政管理部 專屬題目');
+  addCheck(form, '最想提升的行政技能（可複選）',
+    ['公文與信件寫作', 'Excel 報表', '會議紀錄整理', '簡報製作', '流程自動化'], true);
+  addChoice(form, '每週花在重複性作業的時間',
+    ['2小時以下', '2～5小時', '5～10小時', '10小時以上']);
+
+  // ---------- 區段3：業務行銷 ----------
+  const pageSales = form.addPageBreakItem().setTitle('業務行銷部 專屬題目');
+  addCheck(form, '最想加強的業務技能（可複選）',
+    ['簡報提案', '客戶溝通', '社群行銷', '數據分析', 'AI 文案'], true);
+  addChoice(form, '提案簡報頻率',
+    ['每週多次', '每週1次', '每月1～3次', '很少']);
+
+  // ---------- 區段4：生產品管 ----------
+  const pageProd = form.addPageBreakItem().setTitle('生產品管部 專屬題目');
+  addCheck(form, '最想加強的現場技能（可複選）',
+    ['品質管理手法', '職業安全', '設備保養', '數據紀錄與分析', 'AI 輔助報表'], true);
+  addChoice(form, '現場資料記錄方式',
+    ['紙本', 'Excel', '系統', '混合使用']);
+
+  // ---------- 區段5：研發技術 ----------
+  const pageRD = form.addPageBreakItem().setTitle('研發技術部 專屬題目');
+  addCheck(form, '最想加強的技術能力（可複選）',
+    ['程式自動化', 'AI 工具應用', '專案管理', '技術文件撰寫', '專利與法規'], true);
+  addChoice(form, '使用 AI 輔助工作的頻率',
+    ['經常', '偶爾', '從未']);
+
+  // ---------- 區段6：共同題 ----------
+  const pageCommon = form.addPageBreakItem().setTitle('共同題目');
+  addCheck(form, '最想參加的課程主題（可複選）',
+    ['AI 工具應用', 'Excel 資料分析', '簡報設計', '溝通表達', '專案管理', '職場安全'], true);
+  addCheck(form, '偏好上課方式（可複選）',
+    ['實體課程', '線上直播', '線上錄影', '實作工作坊'], true);
+  addChoice(form, '偏好上課時段',
+    ['平日上午', '平日下午', '平日晚上', '週六']);
+
+  // 新進同仁可能沒上過去年課程，所以方格題不設必填
+  form.addGridItem()
+    .setTitle('去年課程評分（1 分非常不滿意，5 分非常滿意；未參加可不填）')
+    .setRows(['課程內容', '講師表達', '實作練習', '時間安排'])
+    .setColumns(['1', '2', '3', '4', '5']);
+
+  form.addScaleItem()
+    .setTitle('整體滿意度')
+    .setBounds(1, 5)
+    .setLabels('非常不滿意', '非常滿意')
+    .setRequired(true);
+
+  form.addParagraphTextItem().setTitle('其他建議');
+
+  // ---------- 設定跳轉 ----------
+  // 部門：依答案前往相關區段
+  deptItem.setChoices([
+    deptItem.createChoice('行政管理', pageAdmin),
+    deptItem.createChoice('業務行銷', pageSales),
+    deptItem.createChoice('生產品管', pageProd),
+    deptItem.createChoice('研發技術', pageRD)
+  ]);
+  // 注意：跳轉要設定在「下一個區段」上
+  pageSales.setGoToPage(pageCommon);   // 行政管理完成後 → 共同題
+  pageProd.setGoToPage(pageCommon);    // 業務行銷完成後 → 共同題
+  pageRD.setGoToPage(pageCommon);      // 生產品管完成後 → 共同題
+  // 研發技術的下一頁就是共同題，不需設定
+
+  // ---------- 建立回應試算表並連結 ----------
+  const ss = SpreadsheetApp.create('年度員工教育訓練需求調查（回應）');
+  form.setDestination(FormApp.DestinationType.SPREADSHEET, ss.getId());
+
+  // ---------- 移到指定資料夾（選用） ----------
+  if (FOLDER_ID) {
+    const folder = DriveApp.getFolderById(FOLDER_ID);
+    DriveApp.getFileById(form.getId()).moveTo(folder);
+    DriveApp.getFileById(ss.getId()).moveTo(folder);
+  }
+
+  // ---------- 顯示網址 ----------
+  Logger.log('表單編輯網址：' + form.getEditUrl());
+  Logger.log('填寫網址：' + form.getPublishedUrl());
+  Logger.log('回應試算表：' + ss.getUrl());
+}
+
+// 單選題（必填）
+function addChoice(form, title, options) {
+  form.addMultipleChoiceItem()
+    .setTitle(title)
+    .setChoiceValues(options)
+    .setRequired(true);
+}
+
+// 核取方塊（複選）
+function addCheck(form, title, options, required) {
+  form.addCheckboxItem()
+    .setTitle(title)
+    .setChoiceValues(options)
+    .setRequired(required);
+}</div>
+        </div>
+
+
+
+      </div><!-- u13-b END -->
+
+
+
+
+
+      <!-- u13-c -->
+      <div class="sub-block" id="u13-c">
+        <div class="sec-sub-title">Google 表單：依部門發送不同問卷</div>
+        <div class="tip-card warning"><strong>先釐清限制：</strong>Google 表單「沒有」依身分讓不同人自動看到不同題目的功能。<br>實務上用以下三種做法達成「不同部門、不同題目」，可以搭配使用。</div>
+        <table class="data-table">
+          <tr><th>序號</th><th>做法</th><th>說明</th><th>適合情境</th><th>彙整難易度</th></tr>
+          <tr><td>A</td><td>一份表單＋依答案跳區段</td><td>第一區段選部門，自動跳到該部門的題組</td><td>共同題多、專屬題少</td><td>容易：回應全在同一張工作表</td></tr>
+          <tr><td class="red">B</td><td class="red">名單＋預先填入連結＋寄送</td><td class="red">依名單為每位同仁產生專屬連結，員工編號、姓名、部門已自動填好，再依名單寄出</td><td class="red">要依名單發送、追蹤誰還沒填</td><td class="red">容易：搭配做法 A 使用</td></tr>
+          <tr><td>C</td><td>拆成多份表單</td><td>每個部門各一份表單，回應連結到「同一個」試算表</td><td>各部門題目差異很大</td><td>較難：要另外合併（見「回應彙整與追蹤」）</td></tr>
+        </table>
+        <div class="tip-card info"><strong>建議組合：做法 A＋B。</strong>一份表單分流題組，再用名單寄出專屬連結。回應集中在同一張工作表，彙整、統計、追蹤未填都最簡單。</div>
+
+        <div class="content-h2">做法 A：依答案前往區段</div>
+        <div class="content-img60">
+          <img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai245.jpg" alt="">
+        </div>
+        <div class="tip-card note">用「表單建立AS（課程統一）」的程式建立表單時，S1～S4 都已自動設定好，只要用無痕視窗測試即可。</div>
+
+        <div class="content-h2">做法 B：名單＋預先填入連結＋依名單寄送</div>
+        <div class="tip-card info"><strong>先釐清觀念：</strong>做法 B 寄給每位同仁<strong>同一份表單＋每人一條專屬連結</strong>。好處是同仁不用自己輸入員工編號與姓名，不會打錯，日後追蹤「誰還沒填」也一定比對得上。</div>
+        <div class="tip-card note"><strong>📁 練習檔案：</strong>「名單」工作表（A 員工編號／B 姓名／C 部門／D Email／E 專屬連結／F 寄送狀態／G 填寫狀態／H 提醒紀錄）。<br><span class="red">建議先另存一份，只留 10 列做測試。</span></div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>做什麼</th><th>產出</th></tr>
+          <tr><td>B1</td><td>取得預先填入連結，找出題目代號</td><td>員工編號、姓名、部門三題的 entry 代號</td></tr>
+          <tr><td>B2</td><td>名單 E 欄用公式產生專屬連結</td><td>每位同仁一條專屬連結</td></tr>
+          <tr><td>B3</td><td>名單 D 欄改成 Gmail ＋號別名（測試用）</td><td>測試信全部寄回自己的信箱</td></tr>
+          <tr><td>B4</td><td>貼上寄信程式，依部門測試寄送</td><td>名單 F 欄標記「已寄送」</td></tr>
+          <tr><td>B5</td><td>到 Gmail 核對，確認後一次全部寄出</td><td>正式寄出問卷</td></tr>
+        </table>
+
+        <div class="content-h2">B1：取得預先填入連結，找出題目代號</div>
+      <div class="content-img100">
+        <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai246.jpg" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai246.jpg" alt=""></a>
+      </div>
+        <div class="tip-card note"><strong>複製到的網址大概長這樣（實際數字不同）：</strong><br><code>…/viewform?usp=pp_url&amp;entry.108621116=E001&amp;entry.432296172=測試&amp;entry.238164231=行政管理</code></div>
+        <table class="data-table">
+          <tr><th>網址片段</th><th>意思</th></tr>
+          <tr><td>https://docs.google.com/forms/d/e/…/viewform</td><td>這份表單的網址</td></tr>
+          <tr><td>?usp=pp_url</td><td>表示「這是預先填入的連結」</td></tr>
+          <tr><td>&amp;entry.108621116=A</td><td>題目代號 108621116 是「員工編號」，答案是 A</td></tr>
+          <tr><td>&amp;entry.432296172=B</td><td>題目代號 432296172 是「姓名」，答案是「B」</td></tr>
+          <tr><td>&amp;entry.238164231=行政管理</td><td>題目代號 238164231 是「部門」，答案是「行政管理」</td></tr>
+        </table>
+        <div class="tip-card info"><strong>看懂規則：entry 後面的數字＝哪一題，等號後面＝答案。</strong>找「等號後面是你填的測試值」的地方，前面的 entry 數字就是那一題的代號，所以 B1 第 2 步才要填好辨認的測試值。</div>
+        <div class="tip-card warning"><strong>⚠️ 注意：</strong>
+          <ul>
+            <li><strong>三題都要填：</strong>沒有填的題目不會出現在網址裡，就找不到它的代號</li>
+            <li><strong>每份表單的代號都不同：</strong>建立副本或用 Apps Script 重新建立的表單，代號都會變，要重新取得</li>
+            <li><strong>中文可能變成 %E8%A1%8C… ：</strong>那是中文轉成網址格式後的樣子，代號一樣是 entry. 後面那串數字</li>
+          </ul>
+        </div>
+
+        <div class="content-h2">B2：名單 E 欄產生專屬連結</div>
+        <table class="data-table">
+          <tr><th>函數</th><th>語法</th><th>說明</th><th>本節範例</th></tr>
+          <tr><td>&amp;</td><td>="文字"&amp;儲存格&amp;"文字"</td><td>把固定的網址和儲存格內容接成一個完整連結</td><td>"…entry.108621116="&amp;A2</td></tr>
+          <tr><td>ENCODEURL</td><td>=ENCODEURL( 文字 )</td><td>把中文、空格轉成網址可用的格式，避免連結失效</td><td>ENCODEURL(B2)：姓名</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — 批次產生專屬連結（名單 E2，往下填滿）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">="https://docs.google.com/forms/d/e/表單ID/viewform?usp=pp_url&amp;entry.員工編號代號="&amp;ENCODEURL(A2)&amp;"&amp;entry.姓名代號="&amp;ENCODEURL(B2)&amp;"&amp;entry.部門代號="&amp;ENCODEURL(C2)</div>
+        </div>
+        <!-- <table class="data-table">
+          <tr><th>公式片段</th><th>作用</th></tr>
+          <tr><td>"https://…viewform?usp=pp_url&amp;entry.員工編號代號="</td><td>固定文字：照抄 B1 的網址，抄到第一個「=」為止</td></tr>
+          <tr><td>&amp;ENCODEURL(A2)&amp;</td><td>接上 A2 的員工編號</td></tr>
+          <tr><td>"&amp;entry.姓名代號="</td><td>固定文字：姓名題的代號</td></tr>
+          <tr><td>&amp;ENCODEURL(B2)&amp;</td><td>接上 B2 的姓名</td></tr>
+          <tr><td>"&amp;entry.部門代號="</td><td>固定文字：部門題的代號</td></tr>
+          <tr><td>&amp;ENCODEURL(C2)</td><td>接上 C2 的部門</td></tr>
+        </table> -->
+        <div class="tip-card note"><strong>最快的寫法：</strong>對照 K1 的範例連結，把「E001、測試、行政管理」三個地方挖空，換成 <code>"&amp;ENCODEURL(儲存格)&amp;"</code>，比從頭打字不容易出錯。<br><strong>部門文字要和選項一模一樣：</strong>名單寫「行政部」、表單選項是「行政管理」，就不會被勾選。</div>
+        <div class="tip-card warning"><strong>⚠️ 先自己點一條測試：</strong>對連結按右鍵 →【在無痕視窗中開啟連結】。基本資料已經填好，按【下一頁】會進入該部門的題組，就代表連結正確，再往下做。<br>預先填入的答案，填答者仍然可以修改，可以在題目說明加註「已自動帶入，請勿修改」。</div>
+
+        <!-- <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — 用員工編號到名單查 Email（A2 是員工編號）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=INDEX(名單!D:D, MATCH(A2, 名單!A:A, 0))</div>
+        </div>
+        <div class="tip-card note"><strong>什麼時候才在表單收 Email？</strong>沒有名單、用公開連結或 QR Code 發放（例如活動報名）時。請用【設定】→【回覆】→【收集電子郵件地址】，不要自己出一題「請輸入 Email」，內建設定會檢查格式，也能寄回覆副本給填答者。</div> -->
+
+        <div class="content-h2 red">B3：用 Gmail ＋號別名測試（不用真的寄給同仁）</div>
+        <div class="tip-card info"><strong>Gmail ＋號別名：</strong>在帳號名稱後加上「＋任意文字」，信件都會寄到同一個信箱，不用另外申請帳號。<br>例如寄到 <code>你的帳號+E001@gmail.com</code>、<code>你的帳號+E002@gmail.com</code>，都會收在 <code>你的帳號@gmail.com</code>。<br>一般人常用來分類信件（電子報用 +news、網購用 +shop）、找出哪個網站外流 Email，或像本單元一樣測試寄信系統。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — 名單 D2：測試用 Email（地址帶部門代碼＋員工編號）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=SUBSTITUTE("你的帳號@gmail.com", "@", "+"&amp;SWITCH(C2,"行政管理","adm","業務行銷","sales","生產品管","prod","研發技術","rd")&amp;"-"&amp;A2&amp;"@")</div>
+        </div>
+        <div class="tip-card note">結果會像 <code>你的帳號+sales-E003@gmail.com</code>，收信時一眼就知道寄給哪個部門的哪位同仁。部門代碼用英文，因為＋號後面放中文，有些郵件系統會判定格式錯誤。</div>
+        <div class="tip-card warning"><strong>⚠️ ＋號別名的限制：</strong>
+          <ul>
+            <li>它不是分身帳號，不能登入，也不能模擬「不同人填表單」</li>
+            <li>每個＋號地址都算一位收件者，測試時只放 10 列左右，不要對整份名單執行</li>
+            <li>正式寄送前，D 欄要換回同仁的真實 Email</li>
+          </ul>
+        <div class="content-img70">
+          <img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai248.jpg" alt="">
+        </div>
+        </div>
+
+        <div class="content-h2">B4：貼上寄信程式，依部門測試寄送</div>
+        <table class="data-table">
+          <tr><th>寄送方式</th><th>說明</th></tr>
+          <tr><td>Apps Script 依名單寄送（本單元做法）</td><td>所有帳號都能用；可依部門寄送，寄出後自動在名單標記「已寄送」</td></tr>
+          <tr><td>Gmail「合併郵件」</td><td>需特定 Workspace 方案：從名單試算表帶入姓名與專屬連結，一次寄出</td></tr>
+          <tr><td>依部門寄群組信</td><td>不需要專屬連結時，直接把短網址寄給各部門群組信箱即可</td></tr>
+        </table>
+        <div class="content-note">
+          <ol style="margin-left:20px;">
+            <li>在<strong>名單這個試算表</strong>點【擴充功能】→【Apps Script】</li>
+            <li>刪除預設內容，貼上下方程式 → Ctrl＋S 儲存</li>
+            <li>上方函式選單確認是 <code>sendSurvey</code> → 按【執行】</li>
+            <li>第一次執行會出現授權畫面：【審查權限】→ 選擇帳號 →【進階】→【前往「專案名稱」（不安全）】→【允許】</li>
+          </ol>
+        </div>
+        <div class="tip-card note"><strong>信件長什麼樣子？</strong>主旨會帶部門，例如「【業務行銷部】年度教育訓練需求調查」；內文依部門加一句說明，並只顯示一個「點此填寫問卷」按鈕。網址中的中文一定會被轉成 %E5… 格式，不能去掉，所以把長網址藏在按鈕後面，同仁就看不到這段亂碼。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📄 依名單寄送問卷 — Apps Script（可依部門寄送）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">// ===================================================
+// 年度教育訓練需求調查：依名單寄送問卷
+// 使用方式：修改設定區 → Ctrl＋S 儲存 → 選取 sendSurvey → 按「執行」
+// ===================================================
+
+// ===== 設定區 =====
+const SHEET_NAME  = '名單';
+const TARGET_DEPT = '';           // 留空 '' ＝寄給全部；只寄某部門就填部門名稱，例如 '業務行銷'
+const DEADLINE    = '10月23日';   // 填寫截止日
+
+// 各部門信件中的說明文字
+const DEPT_NOTE = {
+  '行政管理': '本次調查包含公文寫作、Excel 報表等行政專屬題目。',
+  '業務行銷': '本次調查包含簡報提案、客戶溝通等業務專屬題目。',
+  '生產品管': '本次調查包含品質管理、職業安全等現場專屬題目。',
+  '研發技術': '本次調查包含程式自動化、AI 工具應用等技術專屬題目。'
+};
+
+// ===== 主程式 =====
+function sendSurvey() {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(SHEET_NAME);
+  const data  = sheet.getDataRange().getValues();
+  const quota = MailApp.getRemainingDailyQuota();
+  let sent = 0;
+
+  for (let i = 1; i &lt; data.length; i++) {
+    const name   = data[i][1];   // B 姓名
+    const dept   = data[i][2];   // C 部門
+    const email  = data[i][3];   // D Email
+    const link   = data[i][4];   // E 專屬連結
+    const status = data[i][5];   // F 寄送狀態
+
+    if (!email || !link) continue;                       // 沒有 Email 或連結就跳過
+    if (status) continue;                                // 已寄送過就跳過
+    if (TARGET_DEPT &amp;&amp; dept !== TARGET_DEPT) continue;   // 不是指定部門就跳過
+    if (sent &gt;= quota) {                                 // 達到每日寄信上限就停止
+      Logger.log('已達今日寄信上限，明天再執行一次即可寄出剩下的名單');
+      break;
+    }
+
+    const subject = '【' + dept + '部】年度教育訓練需求調查';
+
+    // 純文字版（收件人的郵件軟體不支援 HTML 時才會顯示）
+    const body =
+      name + ' 您好：\n\n' +
+      '為了規劃明年度的教育訓練課程，請花 3 分鐘填寫問卷。\n' +
+      (DEPT_NOTE[dept] || '') + '\n\n' +
+      '填寫連結：' + link + '\n\n' +
+      '請於 ' + DEADLINE + ' 前完成，謝謝您！\n人資部 敬上';
+
+    // HTML 版：只顯示按鈕，不顯示長網址
+    const htmlBody =
+      '&lt;p&gt;' + name + ' 您好：&lt;/p&gt;' +
+      '&lt;p&gt;為了規劃明年度的教育訓練課程，請花 3 分鐘填寫問卷。&lt;br&gt;' +
+      (DEPT_NOTE[dept] || '') + '&lt;/p&gt;' +
+      '&lt;p&gt;&lt;a href="' + link + '" style="display:inline-block;padding:10px 24px;' +
+      'background:#1a73e8;color:#ffffff;text-decoration:none;border-radius:6px;"&gt;' +
+      '點此填寫問卷&lt;/a&gt;&lt;/p&gt;' +
+      '&lt;p&gt;基本資料已自動帶入，請於 ' + DEADLINE + ' 前完成，謝謝您！&lt;/p&gt;' +
+      '&lt;p&gt;人資部 敬上&lt;/p&gt;';
+
+    MailApp.sendEmail(email, subject, body, { htmlBody: htmlBody });
+
+    // 在 F 欄標記已寄送與時間
+    sheet.getRange(i + 1, 6).setValue('已寄送 ' +
+      Utilities.formatDate(new Date(), 'Asia/Taipei', 'yyyy/MM/dd HH:mm'));
+    sent++;
+  }
+
+  Logger.log('本次寄送部門：' + (TARGET_DEPT || '全部') + '，寄出 ' + sent + ' 封');
+}</div>
+        </div>
+        <div class="tip-card warning"><strong>⚠️ 每日寄信數量有上限：</strong>免費 Gmail 帳號每天約可寄給 100 位收件者，Workspace 帳號約 1,500 位（以 Google 公告為準）。程式寄到上限會自動停止並在記錄中顯示；隔天再執行，只會寄給還沒寄過的人。</div>
+        <div class="content-h2">依部門測試寄送的順序</div>
+        <table class="data-table">
+          <tr><th>順序</th><th>設定區改成</th><th>按【執行】後應該看到</th></tr>
+          <tr><td>①</td><td>TARGET_DEPT = '業務行銷'</td><td>只有業務行銷的 F 欄出現「已寄送」，其他部門沒有寄出</td></tr>
+          <tr><td>②</td><td>TARGET_DEPT = '生產品管'</td><td>生產品管的 F 欄出現「已寄送」，業務行銷沒有重複寄</td></tr>
+          <tr><td>③</td><td>TARGET_DEPT = ''（留空）</td><td>只寄給剩下還沒寄的部門，已寄過的人不會重複收到</td></tr>
+        </table>
+        <div class="tip-card note">每次修改設定區後，都要先按 Ctrl＋S 儲存，再按【執行】。第 ③ 步最重要，可以確認「已寄送不重複」的設定有效。</div>
+
+        <div class="content-h2">B5：到 Gmail 核對，確認後一次全部寄出</div>
+        <table class="data-table">
+          <tr><th>檢查位置</th><th>正確結果</th></tr>
+          <tr><td>Apps Script 執行記錄</td><td>顯示寄送部門與封數，沒有錯誤訊息</td></tr>
+          <tr><td>名單 F 欄</td><td>寄出的列都出現「已寄送＋時間」</td></tr>
+          <tr><td>Gmail 搜尋 <code>to:你的帳號+sales</code></td><td>封數和名單上業務行銷的人數相同，主旨是【業務行銷部】（其他部門改成 +adm、+prod、+rd）</td></tr>
+          <tr><td>點開信中的按鈕</td><td>基本資料已帶入，按【下一頁】進入該部門題組，填完進入共同題</td></tr>
+        </table>
+        <div class="tip-card note"><strong>兩個常見的「以為沒寄到」：</strong>
+          <ul>
+            <li><strong>信被疊成一串：</strong>主旨相同時，Gmail 會把它們合併成一個會話，旁邊顯示數字，點開就能看到全部</li>
+            <li><strong>收件匣找不到：</strong>自己寄給自己的信偶爾只出現在「寄件備份」或「所有郵件」，改用主旨搜尋，例如 <code>subject:業務行銷部</code></li>
+          </ul>
+          <strong>自動分類測試信：</strong>搜尋後按搜尋列右側【顯示搜尋選項】→【建立篩選器】→ 勾選【套用標籤】（例如「問卷測試」），測試信就不會和平常的信混在一起。
+        </div>
+        <div class="tip-card info"><strong>確認無誤後一次全部寄出：</strong>依部門分次寄送只是測試用。正式使用時，把 D 欄換成同仁的真實 Email、清空 F 欄，設定區改成 <code>TARGET_DEPT = ''</code>，執行一次即可寄給全部名單。每位同仁收到的仍然是自己部門的主旨、說明與專屬連結。</div>
+
+        <div class="content-h2">做法 C：多份表單，回應集中在同一個試算表</div>
+        <div class="content-note">
+          <p>在每份表單的【回覆】→【連結至試算表】→ 選【選取現有的試算表】，都選同一個檔案。每份表單會在該檔案中各自產生一個「表單回應」工作表。</p>
+          <p><strong>為了日後好合併，建立多份表單時請遵守：</strong></p>
+          <ul style="margin-left:20px;">
+            <li>每份表單都保留「部門」題（只放一個選項，或用預先填入連結帶入），合併後才知道每筆資料來自哪個部門</li>
+            <li>共同題放在最前面，題目順序與文字完全相同；部門專屬題一律放在最後</li>
+            <li>建好一份表單後用【建立副本】製作其他部門的表單，再修改專屬題，最不容易出錯</li>
+          </ul>
+        </div>
+      </div><!-- u13-c END -->
+
+      <!-- u13-d -->
+      <div class="sub-block" id="u13-d">
+        <div class="sec-sub-title">Google 表單：回應彙整與追蹤</div>
+        <div class="tip-card note"><strong>📁 開啟檔案：</strong>07_教育訓練需求調查<br>「表單回應 1」為模擬的 300 份回覆；公式輸入在「部門_行政」「名單」工作表的黃色儲存格，綠色分頁「解答_」可對照答案。</div>
+        <div class="tip-card warning"><strong>⚠️ 不要直接在「表單回應 1」工作表裡計算或加欄位：</strong>新的回應會一直寫入，容易覆蓋或錯位。請另外新增工作表，用公式參照回應資料。</div>
+        <div class="content-h2">「表單回應 1」的欄位</div>
+        <table class="data-table">
+          <tr><th>欄位</th><th>內容</th><th>說明</th></tr>
+          <tr><td>A～F</td><td>時間戳記、員工編號、姓名、部門、職務層級、年資</td><td>全體都有資料</td></tr>
+          <tr><td>G～H</td><td>行政管理：最想提升的行政技能（複選）、每週重複性作業時間</td><td rowspan="4">只有該部門有資料，<br>其他部門的同仁這幾欄是空白</td></tr>
+          <tr><td>I～J</td><td>業務行銷：最想加強的業務技能（複選）、提案簡報頻率</td></tr>
+          <tr><td>K～L</td><td>生產品管：最想加強的現場技能（複選）、現場資料記錄方式</td></tr>
+          <tr><td>M～N</td><td>研發技術：最想加強的技術能力（複選）、使用 AI 輔助工作的頻率</td></tr>
+          <tr><td>O～Q</td><td>最想參加的課程主題（複選）、偏好上課方式（複選）、偏好上課時段</td><td>全體都有資料</td></tr>
+          <tr><td>R～U</td><td>去年課程評分：課程內容、講師表達、實作練習、時間安排</td><td>新進同仁可能空白</td></tr>
+          <tr><td>V～W</td><td>整體滿意度（1～5）、其他建議</td><td>建議欄可能空白</td></tr>
+        </table>
+        <div class="tip-card info"><strong>為什麼會有很多空白？</strong>依答案跳區段時，每個部門只回答自己的題組，其他部門的欄位就會空著。直接把整張表交給各部門主管會很難閱讀，所以要先「依部門彙整」，只留下該部門需要的欄位。</div>
+
+        <div class="content-h2">(1) 依部門彙整：每個部門一張工作表</div>
+        <table class="data-table">
+          <tr><th>函數</th><th>語法</th><th>說明</th><th>本節範例</th></tr>
+          <tr><td>QUERY</td><td>=QUERY( 資料範圍 , "查詢指令" , 標題列數 )</td><td>用 select 挑選需要的欄位、用 where 篩選部門，一次完成</td><td>"select B,C,G,H where D='行政管理'"</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — 「部門_行政」工作表 A1：只看行政管理部的回覆與專屬題</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=QUERY('表單回應 1'!A:W, "select B,C,E,F,G,H,O,P,Q,V where D='行政管理'", 1)</div>
+        </div>
+        <table class="data-table">
+          <tr><th>工作表</th><th>where 條件</th><th>專屬題欄位</th></tr>
+          <tr><td>部門_行政</td><td>D='行政管理'</td><td>G,H</td></tr>
+          <tr><td>部門_業務</td><td>D='業務行銷'</td><td>I,J</td></tr>
+          <tr><td>部門_生產</td><td>D='生產品管'</td><td>K,L</td></tr>
+          <tr><td>部門_研發</td><td>D='研發技術'</td><td>M,N</td></tr>
+        </table>
+        <div class="tip-card note"><strong>複製工作表最快：</strong>「部門_行政」完成後，在分頁上按右鍵【複製】，改工作表名稱，再把公式中的部門名稱與 G,H 換成上表的欄位即可。新回覆進來時，各部門工作表會自動更新。</div>
+        <div class="tip-card warning"><strong>⚠️ 要分享給各部門主管時：</strong>同一個檔案中的工作表，有檢視權限的人都看得到。若不希望主管看到其他部門的資料，請另建「各部門專用」檔案，用 IMPORTRANGE 搭配上面的 QUERY 只匯入該部門資料，再分享該檔案。</div>
+
+        <div class="content-h2">(2) 做法 C 的彙整：多份表單合併成總表</div>
+        <div class="tip-card note">多份表單時，每份表單會產生自己的「表單回應」工作表。依做法 C 的規則（共同題在前、順序相同），共同題會在每張工作表的相同欄位，就能用 VSTACK 直接上下合併。以下假設共同題在 A～L 欄，請依實際欄位調整。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — 「總表」工作表 A1：合併四份表單的共同題</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=QUERY( VSTACK(
+  '表單回應 1'!A1:L,
+  '表單回應 2'!A2:L,
+  '表單回應 3'!A2:L,
+  '表單回應 4'!A2:L
+), "select * where Col1 is not null", 1 )</div>
+        </div>
+        <div class="tip-card note"><strong>公式說明：</strong>第一張從 A1 開始（含標題），其餘從 A2 開始（不含標題），合併後標題只出現一次。來源是 VSTACK 組出來的資料，所以 QUERY 的欄位要寫 Col1、Col2…；where Col1 is not null 用來刪除合併後夾在中間的空白列。部門專屬題各自留在原本的「表單回應」工作表分析即可。</div>
+
+        <div class="content-h2">(3) 追蹤未填寫名單</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — 名單 G2：用員工編號判斷是否已填</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=IF(COUNTIF('表單回應 1'!B:B, A2)&gt;0, "已填", "未填")</div>
+        </div>
+        <table class="data-table">
+          <tr><th>追蹤需求</th><th>公式</th></tr>
+          <tr><td>各部門應填人數（A2 輸入「行政管理」）</td><td>=COUNTIF(名單!C:C, A2)</td></tr>
+          <tr><td>各部門已填人數</td><td>=COUNTIFS(名單!C:C, A2, 名單!G:G, "已填")</td></tr>
+          <tr><td>各部門回覆率</td><td>=已填人數儲存格/應填人數儲存格（儲存格格式設為百分比）</td></tr>
+          <tr><td>未填寫名單（新工作表 A1）</td><td>=FILTER(名單!A2:D, 名單!G2:G="未填")</td></tr>
+        </table>
+        <div class="tip-card info"><strong>為什麼用員工編號比對？</strong>姓名可能有同名、錯字或多打空格，員工編號是唯一的。搭配做法 B 的預先填入連結，回覆中的員工編號一定和名單相同，比對不會出錯。</div>
+
+        <div class="content-h2">(4) 寄提醒信給未填寫的同仁</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 請 AI 寫 Apps Script 寄提醒信</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">延續上一支寄送問卷的程式，請再寫一個寄提醒信的函式，並說明如何執行。
+
+需求：
+- 工作表「名單」：A 員工編號／B 姓名／C 部門／D Email／E 專屬連結／F 寄送狀態／G 填寫狀態（公式判斷「已填／未填」）／H 提醒紀錄
+- 只寄給 G 欄為「未填」、且 F 欄已寄送過的同仁
+- 信件主旨：【提醒】年度教育訓練需求調查，○月○日截止
+- 內文語氣親切簡短，稱呼 B 欄姓名，附上 E 欄的專屬連結
+- 寄出後在 H 欄加上「提醒＋日期」，保留之前的提醒紀錄
+- 執行完成後，在記錄中依部門列出提醒人數
+- 先提供「只寄給我自己」的測試版本</div>
+        </div>
+        <div class="tip-card note"><strong>可以設定自動提醒：</strong>在 Apps Script 左側【觸發條件】→【新增觸發條件】，選擇提醒函式、時間驅動、每週一上午，系統就會每週自動提醒未填寫的同仁。調查結束後記得刪除觸發條件。</div>
+      </div><!-- u13-d END -->
+
+      <!-- u13-e -->
+      <div class="sub-block" id="u13-e">
+        <div class="sec-sub-title">Google 表單：回應統計與分析</div>
+        <div class="tip-card note"><strong>📁 開啟檔案：</strong>07_教育訓練需求調查<br>公式輸入在「統計_單選刻度」「統計_複選」「複選拆欄」「統計_交叉」工作表的黃色儲存格，綠色分頁「解答_」可對照答案。</div>
+        <div class="content-h2">會用到的函數</div>
+        <table class="data-table">
+          <tr><th>函數</th><th>語法</th><th>說明</th><th>本節範例</th></tr>
+          <tr><td>COUNTIF</td><td>=COUNTIF( 範圍 , 條件 )</td><td>計算符合「一個條件」的筆數</td><td>=COUNTIF('表單回應 1'!D:D, A2)</td></tr>
+          <tr><td>COUNTIFS</td><td>=COUNTIFS( 範圍1 , 條件1 , 範圍2 , 條件2 , … )</td><td>計算同時符合「多個條件」的筆數；比較條件要加雙引號</td><td>=COUNTIFS(…D:D, A2, …V:V, "&gt;=4")</td></tr>
+          <tr><td>AVERAGE</td><td>=AVERAGE( 範圍 )</td><td>計算平均（空白儲存格不列入）</td><td>=AVERAGE('表單回應 1'!V:V)</td></tr>
+          <tr><td>AVERAGEIF</td><td>=AVERAGEIF( 條件範圍 , 條件 , 平均範圍 )</td><td>只計算符合條件的資料的平均</td><td>各部門的滿意度平均</td></tr>
+          <tr><td>SEARCH</td><td>=SEARCH( 要找的文字 , 被搜尋的文字 )</td><td>找到回傳位置數字，找不到出現 #VALUE! 錯誤</td><td>SEARCH("簡報設計", "AI 工具應用, 簡報設計")</td></tr>
+          <tr><td>ISERROR</td><td>=ISERROR( 值 )</td><td>判斷是否為錯誤，是錯誤回傳 TRUE</td><td>ISERROR(SEARCH(…)) → 沒勾選時為 TRUE</td></tr>
+          <tr><td>IF</td><td>=IF( 條件 , 成立時 , 不成立時 )</td><td>依條件顯示不同結果</td><td>IF(ISERROR(…), "", "V")</td></tr>
+        </table>
+
+        <div class="content-h2">(1) 單選、刻度、方格題統計</div>
+        <table class="data-table">
+          <tr><th>統計需求</th><th>公式</th></tr>
+          <tr><td>各部門回覆份數（A2 輸入「行政管理」）</td><td>=COUNTIF('表單回應 1'!D:D, A2)</td></tr>
+          <tr><td>整體滿意度平均</td><td>=AVERAGE('表單回應 1'!V:V)</td></tr>
+          <tr><td>各部門的滿意度平均</td><td>=AVERAGEIF('表單回應 1'!D:D, A2, '表單回應 1'!V:V)</td></tr>
+          <tr><td>各部門給 4 分以上的份數</td><td>=COUNTIFS('表單回應 1'!D:D, A2, '表單回應 1'!V:V, "&gt;=4")</td></tr>
+          <tr><td>去年課程評分：課程內容平均</td><td>=AVERAGE('表單回應 1'!R:R)　（講師表達 S 欄、實作練習 T 欄、時間安排 U 欄）</td></tr>
+        </table>
+        <div class="tip-card info"><strong>公式往下、往右複製時：</strong>按【F4】切換絕對參照（$）。公式「往下」複製，考慮「列」要不要固定；公式「往右」複製，考慮「欄」要不要固定。<br><strong>方格題有空白怎麼辦？</strong>新進同仁沒上過去年課程，評分欄是空白。AVERAGE 會自動略過空白，不會被當成 0 分。</div>
+        <div class="tip-card note"><strong>兩個單選題交叉（例如：部門 × 偏好上課時段）：</strong>選取「表單回應 1」→【插入】→【資料透視表】，列放「部門」、欄放「偏好上課時段」、值放「員工編號」並選 COUNTA，不用寫公式就能完成。</div>
+
+        <div class="content-h2">(2) 複選題統計</div>
+        <div class="tip-card note">複選題的答案會擠在同一格，例如「AI 工具應用, Excel 資料分析, 簡報設計」，直接用 COUNTIF(O:O,"簡報設計") 會算不到。以下三種方法依需求選用。</div>
+        <table class="data-table">
+          <tr><th>方法</th><th>做法</th><th>適合</th></tr>
+          <tr><td>方法1 萬用字元</td><td>COUNTIF＋「*選項*」</td><td>最快，選項清單已知時</td></tr>
+          <tr><td>方法2 拆欄判斷</td><td>每個選項一欄，標記 V</td><td>想看每一份回覆勾了哪些項目，或要再做其他交叉</td></tr>
+          <tr><td>方法3 一次列出排行</td><td>SPLIT 拆開後用 QUERY 計數</td><td>不想手動打選項，要直接得到排行榜</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 方法1 — COUNTIF＋萬用字元 *（A2 輸入「簡報設計」）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=COUNTIF('表單回應 1'!O:O, "*"&amp;A2&amp;"*")</div>
+        </div>
+        <div class="tip-card note"><strong>* 代表「任意文字」：</strong>"*簡報設計*" 表示「內容中有出現簡報設計」就計算。這就是為什麼選項不能互相包含：若同時有「簡報」與「簡報設計」，勾「簡報設計」的人也會被算進「簡報」。</div>
+        <div class="content-note">
+          <p><strong>方法2 — 拆欄判斷：</strong>在「複選拆欄」工作表，A 欄放每份回覆的複選答案，第 1 列 B1 起輸入各選項名稱。</p>
+          <ul style="margin-left:20px;">
+            <li>S1：SEARCH(選項, 答案) → 找到會回傳位置數字，找不到會出現錯誤</li>
+            <li>S2：ISERROR(…) → 判斷是否為錯誤（TRUE＝沒勾選）</li>
+            <li>S3：IF(…) → 沒勾選顯示空白，有勾選顯示 V</li>
+            <li>S4：最後用 COUNTIF(欄位, "V") 計算每個選項被勾選的次數</li>
+          </ul>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 方法2 — 拆欄判斷（B1 是選項名稱、A2 是該份回覆的複選答案）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=IF(ISERROR(SEARCH(B$1, $A2)), "", "V")</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 方法3 — 一次列出所有選項的勾選次數，由多到少排序</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=QUERY(
+  FLATTEN(ARRAYFORMULA(TRIM(SPLIT(FILTER('表單回應 1'!O2:O, '表單回應 1'!O2:O&lt;&gt;""), ",")))),
+  "select Col1, count(Col1) where Col1 &lt;&gt; '' group by Col1 order by count(Col1) desc label Col1 '課程主題', count(Col1) '次數'",
+  0)</div>
+        </div>
+        <div class="tip-card note"><strong>方法3 由內而外：</strong>FILTER 取出有作答的列 → SPLIT 依逗號拆成多欄 → TRIM 去掉逗號後的空格 → FLATTEN 把所有答案排成一欄 → QUERY 依選項分組計數並排序。公式較長，看不懂時可以用下方 Prompt 請 AI 逐步解說。</div>
+        <div class="tip-card warning"><strong>⚠️ 部門專屬的複選題，分母要用「該部門份數」：</strong>例如 G 欄只有行政管理部會作答，計算百分比時要除以行政管理部的回覆份數，不能除以全部 300 份。</div>
+
+        <div class="content-h2">(3) 交叉分析：部門 × 最想參加的課程主題</div>
+        <div class="tip-card info"><strong>這張表最有價值：</strong>一眼看出各部門最需要的課程，可直接作為年度訓練規劃的依據。做法是「COUNTIFS＋萬用字元」：一個條件比對部門，另一個條件找複選答案中是否有該主題。</div>
+        <table class="data-table">
+          <tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>…</th></tr>
+          <tr><td>2</td><td>部門＼主題</td><td>AI 工具應用</td><td>Excel 資料分析</td><td>簡報設計</td><td>…</td></tr>
+          <tr><td>3</td><td>行政管理</td><td>（公式）</td><td></td><td></td><td></td></tr>
+          <tr><td>4</td><td>業務行銷</td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>5</td><td>生產品管</td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>6</td><td>研發技術</td><td></td><td></td><td></td><td></td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — 「統計_交叉」B3：勾選人數（往右、往下複製）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=COUNTIFS('表單回應 1'!$D:$D, $A3, '表單回應 1'!$O:$O, "*"&amp;B$2&amp;"*")</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">🧮 公式 — 「統計_交叉」第二張表：勾選比例（除以該部門回覆份數）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">=COUNTIFS('表單回應 1'!$D:$D, $A3, '表單回應 1'!$O:$O, "*"&amp;B$2&amp;"*") / COUNTIF('表單回應 1'!$D:$D, $A3)</div>
+        </div>
+        <div class="tip-card note"><strong>為什麼要看比例？</strong>各部門人數不同，人數多的部門勾選次數自然比較多。改看「該部門有多少比例的人想上這門課」才公平。<br><strong>加上色階：</strong>選取比例表 →【格式】→【條件式格式設定】→【色階】，比例越高顏色越深，就是一張熱度圖。</div>
+
+        <div class="content-h2">(4) 結合 AI 分析 300 份回應</div>
+        <table class="data-table">
+          <tr><th>方式</th><th>優點</th><th>限制</th><th>適合</th></tr>
+          <tr><td>自訂分析（公式）</td><td>每個數字都查得到來源，新回覆進來會自動更新</td><td>要先知道想算什麼</td><td>正式報表、每年重複使用</td></tr>
+          <tr><td>AI 協助分析</td><td>快速找出趨勢與建議，能整理開放式意見</td><td>數字可能算錯，需要核對</td><td>找方向、寫結論與報告</td></tr>
+        </table>
+        <div class="tip-card info"><strong>最佳組合：</strong>數字用公式算、解讀交給 AI。請 AI 分析時，要求它「列出計算數字」，再用 (1)～(3) 的公式抽查兩三個，確認 AI 沒有算錯。</div>
+        <div class="tip-card warning"><strong>⚠️ 上傳前先移除個人資料：</strong>員工編號、姓名屬於個人資料，上傳到 AI 前請刪除 B、C 欄，或另存一份去識別化的檔案。分析需求與趨勢，不需要知道是誰填的。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Step1：先請 AI 確認資料結構</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">我已上傳一份「年度員工教育訓練需求調查」的表單回應（約 300 份，已移除姓名與員工編號），請先不要分析結果。
+
+請先確認：
+1. 各欄位的內容與題型（單選、複選、刻度、方格、開放式）
+2. 複選題的答案是以「, 」隔開在同一格，請說明你會如何拆開計算
+3. 部門專屬題只有該部門會作答，其他部門為空白，這是正常的，不是缺漏
+4. 這份資料可以做哪些分析，每一種分析能回答什麼問題
+
+等我確認後，再進行實際分析。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Step2：執行分析並列出計算數字</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請依確認的方向進行分析，並以表格輸出：
+1. 各部門回覆份數與整體滿意度平均
+2. 「最想參加的課程主題」整體排名，以及各部門的前 3 名（同時列出人數與比例，比例以該部門份數為分母）
+3. 各部門專屬題的重點發現
+4. 偏好上課方式與時段，依部門比較
+5. 去年課程四個評分項目中，分數最低的項目
+
+每個結論都要附上計算出的數字，方便我用公式核對。不要把推測當成結論。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Step3：開放式建議分類</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">請針對「其他建議」欄位的開放式回覆：
+1. 自動歸納成 5～7 個分類，用表格列出：分類／件數／代表性意見（摘要，每則 20 字內）
+2. 依部門列出最常被提出的 2 項建議
+3. 只根據資料內容整理，不要自行補充沒有提到的意見</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Step4：轉成年度訓練規劃建議</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">根據以上分析結果，請以【企業人資主管】角色，撰寫一份「年度教育訓練規劃建議」：
+- 對象：總經理與各部門主管
+- 內容：調查概況（回覆率、份數）、全公司共同課程建議 2～3 門、各部門專屬課程建議各 1～2 門、建議上課方式與時段、需要改善的課程安排
+- 每項建議都要註明依據的數據
+- 字數 500 字以內，條列為主</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 看不懂公式時，請 AI 逐步解說</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+          <div class="prompt-code">我是試算表函數初學者，請用「一步一步拆解」的方式，說明下面這個 Google 試算表公式在做什麼：
+【貼上公式】
+
+假設 O 欄的內容是「AI 工具應用, Excel 資料分析, 簡報設計」，請：
+1. 由內而外說明每一個函數算出的結果
+2. 用簡單的例子說明最後的輸出長什麼樣子
+3. 最後說明哪些情況這個公式會出錯</div>
+        </div>
+      </div><!-- u13-e END -->
+    </div><!-- u13 END -->
+
+
+  </div><!-- /content-area -->
+
+
+  <!-- ===== 右欄：工具列 ===== -->
+  <div class="tool-panel">
+
+    <!-- <div class="tool-section">
+      <div class="tool-section-title">課程範例下載</div>
+      <a class="tool-btn p1-btn" href="https://drive.google.com/drive/folders/1q2cT8G4i-nm4CVZ40TVBJBWarxZC3MBb?usp=drive_link" target="_blank">
+        <span class="tool-name">課程範例下載</span>
+      </a>
+    </div> -->
+    <div class="tool-section">
+      <div class="tool-section-title">課程工具</div>
+      <a class="tool-btn" href="https://zoego99.github.io/vizgo/index.html" target="_blank">
+        <span class="tool-name">資訊圖 Prompt 生成器</span>
+      </a>
+      <a class="tool-btn p1-btn" href="https://zoego99.github.io/ex/WordPaste.html" target="_blank">
+        <span class="tool-name">AI 回覆模擬</span>
+      </a>
+      <a class="tool-btn" href="https://script.google.com/macros/s/AKfycbw7nbIBNrFClroUj4-JwSGoSRy8DoQtY-7VVatMTi0B5VUXrl6ol3_4IkdzanVbP7Wp/exec" target="_blank">
+        <span class="tool-name">雲端圖片直連工具</span>
+      </a>
+    </div>
+
+    <div class="tool-section">
+      <div class="tool-section-title">SVG 參考網站</div>
+      <a class="tool-btn p1-btn" href="https://plotdb.com/chart/2200/#/" target="_blank">
+        <span class="tool-name">台灣地圖</span>
+      </a>
+      <a class="tool-btn p1-btn" href="https://www.svgrepo.com/" target="_blank">
+        <span class="tool-name">【Icon】SVGrepo</span>
+      </a>
+      <a class="tool-btn p1-btn" href="https://www.magnific.com/zh/%E5%9C%96%E6%A8%99%E9%9B%86/iconfinder" target="_blank">
+        <span class="tool-name">【Icon】免費IconFinder</span>
+      </a>
+    </div>
+    <div class="tool-section">
+      <div class="tool-section-title">AI 工具</div>
+      <a class="tool-btn" href="https://gemini.google.com" target="_blank">
+        <span class="tool-name">Gemini</span>
+      </a>
+      <a class="tool-btn" href="https://chatgpt.com" target="_blank">
+        <span class="tool-name">ChatGPT</span>
+      </a>
+      <a class="tool-btn" href="https://notebook.google.com/" target="_blank">
+        <span class="tool-name">Notebook</span>
+      </a>
+      <a class="tool-btn" href="https://gamma.app" target="_blank">
+        <span class="tool-name">Gamma</span>
+      </a>
+      <a class="tool-btn" href="https://flow.google.com/" target="_blank">
+        <span class="tool-name">Google Flow</span>
+      </a>
+      <a class="tool-btn" href="https://www.canva.com" target="_blank">
+        <span class="tool-name">Canva</span>
+      </a>
+    </div>
+
+
+  </div><!-- /tool-panel -->
+
+</div><!-- /app-layout -->
+
+<script src="js/p2.js"></script>
+<script>
+  // 進頁面預設顯示第一個單元（避免因未觸發點擊事件導致中間內容區空白）
+  document.addEventListener('DOMContentLoaded', function () {
+    try {
+      if (typeof showSection === 'function') { showSection('u1'); }
+      if (typeof showSub === 'function') { showSub('u1', 'u1-a'); }
+    } catch (e) { /* 若頁面 JS 尚未載入完成則忽略 */ }
+  });
+</script>
+</body>
+</html>
