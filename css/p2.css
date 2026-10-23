@@ -220,10 +220,10 @@ html, body { overflow: hidden; }
 }
 .content-note p { margin-bottom: 8px; }
 .content-note p:last-child { margin-bottom: 0; }
-.content-note ul,.content-note ol { padding-left: 18px; margin-top: 4px; }
+.content-note ul,.content-note ol { padding-left: 50px; margin-top: 4px; }
 .content-note ul li ,.content-note ol li { margin-bottom: 4px; }
 .content-note strong { color: var(--text); font-weight: 700; }
-
+.content-note .right{ text-align: right;}
 /* ===================================================
    圖片區塊
    =================================================== */
@@ -492,3 +492,15 @@ html, body { overflow: hidden; }
 
 .no-wrap {  white-space: nowrap;}
 
+/* 課程回顧影片：雙欄按鈕 */
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+.video-grid .tool-btn {
+  margin-bottom: 0;
+  padding: 9px 6px;
+  justify-content: center;
+  text-align: center;
+}
