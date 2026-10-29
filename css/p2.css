@@ -407,6 +407,11 @@ html, body { overflow: hidden; }
   color: var(--indigo, #1E3A5F);
 }
 
+
+.prompt-code {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
 /* ===================================================
    資料表
    =================================================== */
@@ -503,4 +508,5 @@ html, body { overflow: hidden; }
   padding: 9px 6px;
   justify-content: center;
   text-align: center;
+  /* font-size: 10px; */
 }
