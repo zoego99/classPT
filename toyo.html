@@ -1,0 +1,2010 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> TOYO｜ AI 課程 Prompt</title>
+<link rel="icon" href="./logo2.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/shared.css">
+<link rel="stylesheet" href="css/p2.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <a class="nav-brand" href="index.html?unit=gjunBD202610">
+    <div class="nav-logo"><img src="./logo.svg" alt="" class="logo"></div>
+    <div class="nav-text">
+      <span class="nav-title"> TOYO｜ AI 課程 Prompt</span>
+      <span class="nav-sub">心怡｜zoego99@gmail.com</span>
+    </div>
+  </a>
+</nav>
+
+<!-- ===== 三欄版面 ===== -->
+<div class="app-layout">
+
+  <!-- ===== 左欄：導覽 ===== -->
+  <div class="sidebar">
+    <div class="sidebar-header">課程單元</div>
+    <div class="sidebar-scroll">
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u1" onclick="showSection('u1')">
+          <span class="sec-num" style="background:var(--sec-1)">1</span>
+          工作流程總覽
+        </button>
+        <button class="sec-sub-btn" id="btn-u1-a" onclick="showSub('u1','u1-a')">三層分工</button>
+        <button class="sec-sub-btn" id="btn-u1-b" onclick="showSub('u1','u1-b')">問定骨生對應流程</button>
+        <button class="sec-sub-btn" id="btn-u1-c" onclick="showSub('u1','u1-c')">兩種海報拆解</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u2" onclick="showSection('u2')">
+          <span class="sec-num" style="background:var(--sec-2)">2</span>
+          建立公司商品筆記本(NB)
+        </button>
+        <button class="sec-sub-btn" id="btn-u2-a" onclick="showSub('u2','u2-a')">建立筆記本與加入來源</button>
+        <button class="sec-sub-btn" id="btn-u2-b" onclick="showSub('u2','u2-b')">設定自訂指令</button>
+        <button class="sec-sub-btn" id="btn-u2-c" onclick="showSub('u2','u2-c')">檢查來源完整性</button>
+        <button class="sec-sub-btn" id="btn-u2-d" onclick="showSub('u2','u2-d')">產出商品資料摘要</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u3" onclick="showSection('u3')">
+          <span class="sec-num" style="background:var(--sec-3)">3</span>
+          NB文案定稿【問】【定】
+        </button>
+        <button class="sec-sub-btn" id="btn-u3-a" onclick="showSub('u3','u3-a')">開工準備</button>
+        <button class="sec-sub-btn" id="btn-u3-b" onclick="showSub('u3','u3-b')">範例A 生日禮福袋（活動組合）</button>
+        <button class="sec-sub-btn" id="btn-u3-c" onclick="showSub('u3','u3-c')">範例B 單品介紹（成分配方型）</button>
+        <button class="sec-sub-btn" id="btn-u3-d" onclick="showSub('u3','u3-d')">比較：工作室 vs 單元 4</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u4" onclick="showSection('u4')">
+          <span class="sec-num" style="background:var(--sec-4)">4</span>
+          圖文生成【骨】【生】
+        </button>
+        <button class="sec-sub-btn" id="btn-u4-a" onclick="showSub('u4','u4-a')">生圖三元素</button>
+        <button class="sec-sub-btn" id="btn-u4-b" onclick="showSub('u4','u4-b')">範例A 活動組合海報</button>
+        <button class="sec-sub-btn" id="btn-u4-c" onclick="showSub('u4','u4-c')">範例B 單品資訊圖</button>
+        <button class="sec-sub-btn" id="btn-u4-d" onclick="showSub('u4','u4-d')">局部修改與常見問題</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u5" onclick="showSection('u5')">
+          <span class="sec-num" style="background:var(--sec-5)">5</span>
+          把海報流程訂成 Skill
+        </button>
+        <button class="sec-sub-btn" id="btn-u5-a" onclick="showSub('u5','u5-a')">Skill 觀念與開工準備</button>
+        <button class="sec-sub-btn" id="btn-u5-b" onclick="showSub('u5','u5-b')">範例A 活動組合海報 Skill</button>
+        <button class="sec-sub-btn" id="btn-u5-c" onclick="showSub('u5','u5-c')">範例B 單品資訊圖 Skill</button>
+        <button class="sec-sub-btn" id="btn-u5-d" onclick="showSub('u5','u5-d')">Skill 沒作用？常見問題</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u6" onclick="showSection('u6')">
+          <span class="sec-num" style="background:var(--sec-6)">6</span>
+          AI 製作提示詞網站
+        </button>
+        <button class="sec-sub-btn" id="btn-u6-a" onclick="showSub('u6','u6-a')">範例網站：三欄配置</button>
+        <button class="sec-sub-btn" id="btn-u6-b" onclick="showSub('u6','u6-b')">【問】請 AI 先反問</button>
+        <button class="sec-sub-btn" id="btn-u6-c" onclick="showSub('u6','u6-c')">【定、骨、生】網站 Prompt</button>
+        <button class="sec-sub-btn" id="btn-u6-d" onclick="showSub('u6','u6-d')">局部修改與新品更新</button>
+        <button class="sec-sub-btn" id="btn-u6-e" onclick="showSub('u6','u6-e')">實際使用流程</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u7" onclick="showSection('u7')">
+          <span class="sec-num" style="background:var(--sec-1)">7</span>
+          工作流程總整理
+        </button>
+        <button class="sec-sub-btn" id="btn-u7-a" onclick="showSub('u7','u7-a')">日常作業 SOP</button>
+        <button class="sec-sub-btn" id="btn-u7-b" onclick="showSub('u7','u7-b')">資料維護時機</button>
+        <button class="sec-sub-btn" id="btn-u7-c" onclick="showSub('u7','u7-c')">帶得走的心得</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u8" onclick="showSection('u8')">
+          <span class="sec-num" style="background:var(--sec-2)">8</span>
+          AI＋Excel 業務銷售分析
+        </button>
+        <button class="sec-sub-btn" id="btn-u8-a" onclick="showSub('u8','u8-a')">練習檔與分析指標</button>
+        <button class="sec-sub-btn" id="btn-u8-b" onclick="showSub('u8','u8-b')">步驟1 先檢查資料</button>
+        <button class="sec-sub-btn" id="btn-u8-c" onclick="showSub('u8','u8-c')">步驟2 誰的業績最好？</button>
+        <button class="sec-sub-btn" id="btn-u8-d" onclick="showSub('u8','u8-d')">步驟3 拆解原因</button>
+        <button class="sec-sub-btn" id="btn-u8-e" onclick="showSub('u8','u8-e')">步驟4 Excel 驗算</button>
+        <button class="sec-sub-btn" id="btn-u8-f" onclick="showSub('u8','u8-f')">步驟5 面談重點與快報</button>
+        <button class="sec-sub-btn" id="btn-u8-g" onclick="showSub('u8','u8-g')">延伸：數據決定下次選品</button>
+        <button class="sec-sub-btn" id="btn-u8-h" onclick="showSub('u8','u8-h')">把分析流程訂成 Skill</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u9" onclick="showSection('u9')">
+          <span class="sec-num" style="background:var(--sec-3)">9</span>
+          商品影片製作
+        </button>
+        <button class="sec-sub-btn" id="btn-u9-a" onclick="showSub('u9','u9-a')">製作流程總覽</button>
+        <button class="sec-sub-btn" id="btn-u9-b" onclick="showSub('u9','u9-b')">S1 分鏡腳本</button>
+        <button class="sec-sub-btn" id="btn-u9-c" onclick="showSub('u9','u9-c')">S2 主角、商品、場景與分鏡圖</button>
+        <button class="sec-sub-btn" id="btn-u9-d" onclick="showSub('u9','u9-d')">S3 動態影片</button>
+        <button class="sec-sub-btn" id="btn-u9-e" onclick="showSub('u9','u9-e')">S4 旁白與配樂</button>
+        <button class="sec-sub-btn" id="btn-u9-f" onclick="showSub('u9','u9-f')">S5 CapCut 剪輯</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u10" onclick="showSection('u10')">
+          <span class="sec-num" style="background:var(--sec-4)">10</span>
+          手機版影片製作
+        </button>
+        <button class="sec-sub-btn" id="btn-u10-a" onclick="showSub('u10','u10-a')">手機版流程與準備</button>
+        <button class="sec-sub-btn" id="btn-u10-b" onclick="showSub('u10','u10-b')">M1 分鏡腳本</button>
+        <button class="sec-sub-btn" id="btn-u10-c" onclick="showSub('u10','u10-c')">M2 角色與分鏡圖</button>
+        <button class="sec-sub-btn" id="btn-u10-d" onclick="showSub('u10','u10-d')">M3 動態影片</button>
+        <button class="sec-sub-btn" id="btn-u10-e" onclick="showSub('u10','u10-e')">M4 CapCut 配音、配樂與剪輯</button>
+      </div>
+
+    </div>
+  </div><!-- /sidebar -->
+
+  <!-- ===== 中欄：主內容 ===== -->
+  <div class="content-area" id="contentArea">
+
+    <!-- ======== U1: 工作流程總覽 ======== -->
+    <div class="content-section" id="u1">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-1)">1</span>
+        工作流程總覽
+      </div>
+      <div class="sec-desc">📌 工作情境：行銷部每個月都要做節慶活動海報、商品介紹資訊圖。每次從頭寫提示詞，商品資料要重找、風格每次不一樣、用詞也常出錯。本次課程要把這件事變成一套<strong>可重複使用的工作流程</strong>。</div>
+      <div class="tip-card note"><strong>練習資料說明：</strong>課堂練習使用虛構品牌<strong>「沐光生技 MUKO」</strong>與虛構商品資料，避免練習成品被誤當正式文宣。回公司後，把總表換成真實商品資料，整套流程不用改。</div>
+
+      <!-- u1-a -->
+      <div class="sub-block" id="u1-a">
+        <div class="sec-sub-title">三層分工</div>
+        <div class="tip-card info"><strong>一句話記住：</strong>筆記本記住公司，Skill 記住做法，你只要說這次要什麼。</div>
+        <table class="data-table">
+          <tr><th>層</th><th>工具</th><th>放什麼</th><th>多久改一次</th></tr>
+          <tr><td>資料層</td><td>Gemini 筆記本</td><td>商品頁網址、說明書、包裝實拍圖、核准文案、禁用詞清單、過去成功的海報</td><td>新品上市才更新</td></tr>
+          <tr><td>做法層</td><td>Gemini Skill</td><td>版面骨架、品牌風格、固定流程（先出文案 → 確認 → 再出圖）</td><td>很少改</td></tr>
+          <tr><td>條件層</td><td>一句話（提示詞網站）</td><td>節日、選哪些商品、價格、主標</td><td>每次不同</td></tr>
+        </table>
+        <div class="content-h2">本次課程流程</div>
+        <table class="data-table">
+          <tr><th>單元</th><th>做什麼</th><th>產出</th></tr>
+          <tr><td>2 建立筆記本</td><td>把公司商品資料集中整理</td><td>商品筆記本、<strong>商品資料總表</strong></td></tr>
+          <tr><td>3 文案定稿</td><td>在筆記本問商品、定文案、做合規檢查</td><td>海報文案稿</td></tr>
+          <tr><td>4 圖文生成</td><td>文案稿＋實拍圖 → 生成海報</td><td>海報／資訊圖</td></tr>
+          <tr><td>5 訂成 Skill</td><td>把剛才的過程存成工作規範</td><td>2 個 Skill</td></tr>
+          <tr><td>6 提示詞網站</td><td>寫提示詞，請 AI 做選單式網站</td><td>手機可用的提示詞網站</td></tr>
+        </table>
+        <div class="tip-card note"><strong>關鍵：</strong>單元 2 整理的「商品資料總表」會一路用到單元 5 的 Skill 與單元 6 的網站。資料只整理一次，後面全部共用。</div>
+      </div><!-- u1-a END -->
+
+      <!-- u1-b -->
+      <div class="sub-block" id="u1-b">
+        <div class="sec-sub-title">【問定骨生】對應流程</div>
+        <div class="content-img60">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai243.jpg" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai243.jpg" alt=""></a>
+        </div>
+        <div class="tip-card info"><strong>AI 協作心法口訣：</strong>用 AI【問】出溝通盲點、【定】出正確標準、接著拉出邏輯【骨】架、最後才【生】出完美成品！</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>在本次工作中做什麼</th><th>在哪裡做</th></tr>
+          <tr><td>【問】</td><td>用 GPS 問商品資料：適合哪些組合？這項商品重點是什麼？</td><td>筆記本</td></tr>
+          <tr><td>【定】</td><td>產出文案稿，人工確認用詞、價格、商品名，並做合規檢查</td><td>筆記本</td></tr>
+          <tr><td>【骨】</td><td>套用固定的版面骨架（活動型／資訊型）</td><td>Skill</td></tr>
+          <tr><td>【生】</td><td>上傳實拍圖，生成海報</td><td>Gemini 一般對話</td></tr>
+        </table>
+        <div class="tip-card warning"><strong>文字先定案，再出圖。</strong>一次叫 AI 直接出圖，文字錯了只能整張重來；先定文案，出圖只需要專心處理視覺。</div>
+      </div><!-- u1-b END -->
+
+      <!-- u1-c -->
+      <div class="sub-block" id="u1-c">
+        <div class="sec-sub-title">兩種海報拆解</div>
+        <table class="data-table">
+          <tr><th>類型</th><th>目的</th><th>版面骨架</th></tr>
+          <tr><td>A 活動組合海報<br>（節日／活動、多商品）</td><td>促銷、帶動購買</td><td>活動標籤 → 主標 → 保養方向分類 → 價格區（原價／特價）→ 商品格（每格商品圖＋3 點賣點）→ 結尾標語</td></tr>
+          <tr><td>B1 成分配方型</td><td>說明「為什麼選這項商品」</td><td>商品名主標 → 守護方向 → 核心配方（產地／來源）→ 品質檢驗 → 結尾標語</td></tr>
+          <tr><td>B2 身體警訊型</td><td>用生活情境引起共鳴</td><td>主標 → 4 個「你有沒有…？」問題卡（情境＋提醒）→ 生活建議 → 商品連結</td></tr>
+          <tr><td>B3 健康知識型</td><td>建立專業形象</td><td>主題 → 分項說明（圖解）→ 小結</td></tr>
+        </table>
+        <div class="content-h2">從現有海報看到的問題</div>
+        <table class="data-table">
+          <tr><th>問題</th><th>範例</th><th>本次解法</th></tr>
+          <tr><td>用詞前後不一致</td><td>上方「本月主打星」，下方變成「生日主打星」</td><td>文案先定稿（單元 3）</td></tr>
+          <tr><td>商品名被改錯</td><td>官方名稱是「涳固力元氣鈣 IV」，兩張海報卻分別寫成「滾固力」與「液固力」</td><td>商品名只能取自商品資料總表</td></tr>
+          <tr><td>包裝文字變形</td><td>盒子上的小字變成亂碼</td><td>上傳包裝實拍圖，要求保留原樣</td></tr>
+          <tr><td>功效用語風險</td><td>「清潔血管」「平衡血糖」「預防骨鬆」</td><td>合規檢查（單元 3-a）</td></tr>
+        </table>
+      </div><!-- u1-c END -->
+    </div><!-- u1 END -->
+
+
+    <!-- ======== U2: 建立公司商品 筆記本 ======== -->
+    <div class="content-section" id="u2">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-2)">2</span>
+        建立公司商品筆記本
+      </div>
+      <div class="sec-desc">📌 把散落在官網、說明書、實拍照片的商品資料集中到一本筆記本。<strong class="blue">之後問商品、寫文案，AI 都只根據這些資料回答，不會自己亂編。</strong></div>
+
+      <!-- u2-a -->
+      <div class="sub-block" id="u2-a">
+        <div class="sec-sub-title">建立筆記本與加入來源</div>
+        <div class="content-note">
+          <ol>
+            <li>開啟 <strong>gemini.google.com</strong>，左側欄點 <strong>新增筆記本</strong></li>
+            <li>名稱：<strong>MUKO 商品資料庫</strong></li>
+            <li>建立 Google 試算表「<strong>MUKO 商品資料總表（練習用虛構資料）</strong>」，把下方練習資料貼到 A1</li>
+            <li>回筆記本，從雲端硬碟加入這份試算表當來源</li>
+          </ol>
+        </div>
+        <table class="data-table">
+          <tr><th>來源</th><th>放什麼</th><th>注意</th></tr>
+          <tr><td>商品資料總表</td><td>Google 試算表，一列一個商品</td><td>本次練習的主要來源</td></tr>
+          <tr><td>官網網址</td><td>公司系列商品頁，以及各商品的詳細頁</td><td>網址不一定讀得到內容（見下方提醒）</td></tr>
+          <tr><td>PDF／文件</td><td>商品說明書、DM、成分表、檢驗報告</td><td>以公司正式版本為準</td></tr>
+          <tr><td>商品圖片</td><td>不放進筆記本，放在雲端資料夾（P01.png、P02.png…）</td><td>單元 4 生圖時再上傳到 Gemini 對話</td></tr>
+          <tr><td>文字</td><td>公司核准文案、禁用詞清單（單元 3-a）</td><td>可用「貼上文字」加入，不要和商品放同一張工作表</td></tr>
+          <tr><td>過去海報</td><td>做得好的海報圖片</td><td>當作風格參考</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📄 練習資料：MUKO 商品資料總表（複製後貼到試算表 A1，自動分欄）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">編號	商品名稱	保養方向	規格	主要成分	賣點1	賣點2	賣點3	包裝外觀
+P01	納豆藻油複方膠囊	循環	60粒/盒（軟膠囊）	磷脂醯絲胺酸PS（日本）；蝦紅素（德國）；納豆激酶2000FU（日本）；微藻DHA+EPA（荷蘭）	四大成分一次補足	植物來源微藻DHA、EPA	通過農藥、西藥殘留、塑化劑、重金屬四項檢驗	深海藍橫式紙盒，正面一排四色圓點，附深紅色軟膠囊
+P02	沐鈣元氣粉包	骨骼	30包/盒（每包3g）	磷酸鈣；維生素D3；維生素K2；海藻鈣	鈣、D3、K2黃金組合	粉包設計，外出方便攜帶	清爽檸檬口味，可直接食用	檸檬黃直式紙盒，正面大字「Ca」，附黃色條狀粉包
+P03	肉桂苦瓜胜肽	代謝	60粒/盒（膠囊）	苦瓜胜肽；錫蘭肉桂萃取；鉻酵母；苦瓜萃取	苦瓜胜肽＋肉桂複合配方	調整體質	促進新陳代謝	森林綠直式紙盒，正面苦瓜與肉桂棒線條插畫
+P04	22株益生菌	腸道	30包/盒（每包2g）	22株複方益生菌；專利果寡糖	22株益生菌＋專利果寡糖	日本、丹麥菌株授權	幫助消化、使排便順暢	白色直式紙盒，正面金色大字「22」與深藍色線條
+P05	野菜酵素順暢錠	消化（選用）	30錠/盒	綜合野菜酵素；菊苣纖維；洛神花萃取；乳酸菌	野菜酵素＋膳食纖維配方	幫助消化	使排便順暢	粉紫色直式紙盒，正面蔬果圓形圖樣</div>
+        </div>
+        <div class="tip-card note blue"><strong>試算表填寫原則：</strong><ul><li>一格只放一種資訊，多個成分用「；」隔開，不要在格子內換行</li><li>公司資料與禁用詞另外加入，不要放進商品工作表。</li></ul></div>
+        <div class="tip-card warning red"><strong>網址讀不到內容怎麼辦？</strong>有些官網的商品資料是用程式載入，AI 只看到空白頁面。讀不到時改用：
+          <ul>
+            <li>在瀏覽器按 <strong>Ctrl＋P → 另存為 PDF</strong>，再上傳 PDF</li>
+            <li>或全選網頁文字，用「貼上文字」加入</li>
+          </ul>
+        </div>
+        <div class="tip-card note"><strong>來源數量：</strong>免費帳號每本筆記本最多 50 個來源。商品多時，可以把同系列的商品說明合併成一份 PDF。</div>
+        <div class="tip-card info"><strong>以後新品怎麼加？</strong>筆記本不能連結雲端硬碟「資料夾」，資料夾裡新增的檔案也不會自動載入。建議只用一份 Google 試算表「商品資料總表」當來源：
+          <ul>
+            <li>新品直接在試算表<strong>往下新增一列</strong>，不另外新增檔案</li>
+            <li>改完後回筆記本，點該來源 → <strong>與雲端硬碟同步</strong>（需手動按）</li>
+            <li>包裝實拍圖放在雲端資料夾即可，生圖時再上傳</li>
+          </ul>
+        </div>
+      </div><!-- u2-a END -->
+
+      <!-- u2-b -->
+      <div class="sub-block" id="u2-b">
+        <div class="sec-sub-title">設定自訂指令</div>
+        <div class="tip-card info"><strong>位置：</strong>筆記本右上角 <strong>更多 → 筆記本設定</strong>，貼上後儲存。之後在這本筆記本裡的每一次對話，都會套用這些規則。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 筆記本自訂指令</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">你是沐光生技（MUKO）行銷部的商品資料助理。
+1. 只根據筆記本中的來源回答，來源沒有的資訊標註【需查核】，不可自行補寫
+2. 商品名稱、成分、規格一律照來源原文，不可改字
+3. 使用繁體中文、台灣用語
+4. 撰寫文案時，避免醫療效能用語（治療、預防疾病、降血糖、降血壓等），遇到時改寫並標註
+5. 回答盡量用表格或條列，方便我複製使用</div>
+        </div>
+      </div><!-- u2-b END -->
+
+      <!-- u2-c -->
+      <div class="sub-block" id="u2-c">
+        <div class="sec-sub-title">檢查來源完整性</div>
+        <div class="tip-card info"><strong>為什麼要檢查？先對帳，再開工。</strong>確認 AI 讀到的內容和你放進去的一樣。本次用整理好的試算表，通常全部正確；實際工作用官網網址、PDF 時，常會漏讀或錯字，沒先檢查，錯誤會一路帶到海報上。</div>
+        <div class="tip-card warning"><strong>發現問題：回到來源修改，不要在對話中更正。</strong>在對話中更正只有這次記得。請修改試算表 → 回筆記本點該來源 →「與雲端硬碟同步」→ 再問一次。查不到正確資料時，先在試算表填【需查核】。<br><strong class="red">看結果，補齊缺少的資料就好，不用存。</strong></div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 檢查來源</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請列出目前來源中所有的商品，用表格呈現：
+商品名稱／規格（粒數、包數）／主要成分／資料來自哪個來源
+
+最後告訴我：
+- 哪些商品資料不完整
+- 哪些來源讀不到內容</div>
+        </div>
+        <div class="content-note"><p><strong>勾選來源：</strong>只勾「MUKO 商品資料總表」。<br><strong>觀察：</strong>商品數量對不對？有沒有商品只有名稱、沒有成分？商品名有沒有被改字？</p></div>
+      </div><!-- u2-c END -->
+
+      <!-- u2-d -->
+      <div class="sub-block" id="u2-d">
+        <div class="sec-sub-title">產出商品資料摘要</div>
+        <div class="tip-card info"><strong>什麼時候需要摘要？</strong>本次的總表已經整理乾淨，單元 5 的 Skill 直接附加總表下載的 CSV 即可。回公司後，資料來自官網網址、PDF、DM 等多種來源時，就用這個步驟請筆記本整理成一份摘要，再附加給 Skill。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 產出商品資料摘要</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請把所有商品整理成「商品資料摘要」，使用 Markdown 格式，放在一個程式碼區塊中，並存成MD檔，檔名為【商品資料摘要.md】。
+
+每項商品包含：
+- 編號（P01、P02…）
+- 商品名稱（照包裝原文）
+- 規格
+- 保養方向（例如：循環、骨骼關節、代謝消化）
+- 主要成分
+- 可用賣點 3 點（避免醫療效能用語）
+- 包裝外觀簡述（顏色、盒型）
+
+找不到的欄位填【需查核】。</div>
+        </div>
+        <div class="content-h2">存成檔案</div>
+        <table class="data-table">
+          <tr><th>方式</th><th>操作</th></tr>
+          <tr><td>Google 文件</td><td>複製內容貼到新的 Google 文件 → <strong>檔案 → 下載 → Markdown（.md）</strong></td></tr>
+          <tr><td>記事本</td><td>貼上 → 另存新檔，檔名 <strong>商品資料摘要.md</strong>，編碼選 UTF-8</td></tr>
+        </table>
+        <div class="tip-card note"><strong>人工確認：</strong>把【需查核】的欄位補齊，或請主管確認後再存檔。這份摘要等於公司的「標準答案」。</div>
+      </div><!-- u2-d END -->
+    </div><!-- u2 END -->
+
+
+    <!-- ======== U3: 筆記本文案定稿 ======== -->
+    <div class="content-section" id="u3">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-3)">3</span>
+        筆記本文案定稿【問】【定】
+      </div>
+      <div class="sec-desc">📌 在筆記本中完成所有「文字工作」：選商品、找賣點、寫文案、檢查用語。用兩個範例由上往下依序練習，每個範例結束時，手上會有一份確認過的文案稿。</div>
+
+      <!-- u3-a -->
+      <div class="sub-block" id="u3-a">
+        <div class="sec-sub-title">開工準備：筆記本三區與禁用詞</div>
+        <div class="content-h2">筆記本三個區域，在本次工作中的用途</div>
+        <table class="data-table">
+          <tr><th>區域</th><th>功能</th><th>本次用途</th></tr>
+          <tr><td>左側：來源</td><td>放資料、勾選這次要用哪些來源</td><td>商品資料總表、禁用詞清單</td></tr>
+          <tr><td>中間：對話</td><td>只根據勾選的來源回答，並標示出處</td><td>選品、寫文案稿、合規檢查（範例 A、B）</td></tr>
+          <tr><td>右側：工作室</td><td>把來源一鍵轉成成品：資訊圖表、簡報、心智圖、語音摘要、記事</td><td>新增資訊圖表（A3、B3），與單元 4 對比</td></tr>
+        </table>
+        <div class="tip-card info"><strong>筆記本和一般 Gemini 對話差在哪？</strong>筆記本只根據你勾選的來源回答，不會上網亂找、也不會自己編成分。所以「查資料、寫文案」在筆記本做最安全。</div>
+
+        <div class="content-h2">① 加入禁用詞清單</div>
+        <div class="tip-card info"><strong>為什麼要有禁用詞？</strong>保健食品廣告不能宣稱醫療效能，也不能誇大。AI 寫文案很容易用上「清潔血管」「降血糖」這類字眼，一定要有檢查關卡。</div>
+        <table class="data-table">
+          <tr><th>風險用語（現有海報中出現過）</th><th>問題</th><th>改寫方向</th></tr>
+          <tr><td>清潔血管、血管清道夫</td><td>暗示改變生理結構</td><td>營養補給、健康維持</td></tr>
+          <tr><td>平衡血糖、降火氣、降發炎</td><td>醫療效能</td><td>調整體質、促進新陳代謝</td></tr>
+          <tr><td>預防骨鬆、預防關節炎、骨刺</td><td>預防或治療疾病</td><td>營養補給、維持活力</td></tr>
+          <tr><td>眼壓高、青光眼</td><td>涉及疾病</td><td>刪除，或改談生活保健習慣</td></tr>
+          <tr><td>排三毒、減去大肚兼瘦身</td><td>誇大不實</td><td>幫助消化、使排便順暢</td></tr>
+        </table>
+        <div class="tip-card warning">⚠️ 本表為教學示範。若商品取得健康食品許可，可使用核准的保健功效說法。<strong>正式使用的用詞，以公司法務或主管機關規定為準。</strong></div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📄 禁用詞清單（左側來源 → 新增 →「貼上文字」加入）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">【廣告用語禁用詞清單】
+不可使用：治療、治癒、預防疾病、改善疾病、降血糖、降血壓、降血脂、清除血管、清潔血管、溶解血栓、消炎、排毒、抗癌、減肥瘦身、保證有效、根治、取代藥物
+不可出現：疾病名稱與商品功效的直接連結（例如：中風、青光眼、骨質疏鬆、關節炎）
+可用方向：營養補給、健康維持、調整體質、促進新陳代謝、幫助消化、使排便順暢、維持活力
+每張海報底部加註：本產品為食品，不能取代正常飲食與藥物治療。</div>
+        </div>
+
+        <div class="content-h2">② 開新對話、勾選來源</div>
+        <div class="content-note">
+          <ol>
+            <li>中間對話區開<strong>新對話</strong>（單元 2 的對話保留，不用刪）</li>
+            <li>左側來源勾選：<strong>MUKO 商品資料總表＋禁用詞清單</strong></li>
+          </ol>
+        </div>
+        <div class="tip-card info"><strong>GPS 三步驟：</strong>G 目標（要做什麼）、P 定位（給誰看、什麼情境）、S 形式（要什麼樣的產出）。以下範例的【問】都用這個寫法。</div>
+      </div><!-- u3-a END -->
+
+      <!-- u3-b -->
+      <div class="sub-block" id="u3-b">
+        <div class="sec-sub-title">範例A　生日禮福袋（活動組合）</div>
+        <div class="tip-card note"><strong>情境：</strong>下個月要推「會員生日禮」福袋，從現有商品挑 3～4 項組合，做一張活動海報。</div>
+
+        <div class="content-h2">A1【問】活動選品</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 A1 Prompt — 活動選品</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">G：我要做【生日禮】活動海報，推出福袋組合
+P：對象是【本月生日的會員，以 40～60 歲為主】
+S：請根據來源，建議 2 種組合（各 3～4 項商品），用表格比較：
+組合名稱／包含商品／組合理由／適合對象</div>
+        </div>
+
+        <div class="content-note"><p><strong>觀察：</strong>AI 的建議有沒有標示出處？有沒有出現總表裡沒有的商品或功效？</p></div>
+
+        <div class="content-h2">A2【定】海報文案稿</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 A2 Prompt — 活動海報文案稿（接續 A1）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">採用第 1 種組合，請寫海報文案稿，依以下區塊產出：
+1. 活動標籤（例如：本月壽星）
+2. 主標題
+3. 副標語
+4. 保養方向（每個方向：名稱＋對應商品＋3 個短句）
+5. 價格區：原價【8800】元，特價【5280】元
+6. 商品格（每項：編號＋商品名＋3 個賣點短句，每句 12 字內）
+7. 結尾標語
+
+規則：
+- 活動用詞全篇統一，不可前後不同
+- 商品名照來源原文
+- 用表格呈現，方便我逐項確認
+- 完成後依「廣告用語禁用詞清單」自我檢查，在文案稿下方列出：原本可能違規的用語／改寫後的說法</div>
+        </div>
+
+        <div class="content-h2">✅ 完成後請檢查</div>
+        <table class="data-table">
+          <tr><th>檢查項目</th><th>正確結果</th></tr>
+          <tr><td>商品名</td><td>和總表完全一致，沒有被改字</td></tr>
+          <tr><td>活動用詞</td><td>全篇統一（不會上面「本月壽星」、下面變「生日主打星」）</td></tr>
+          <tr><td>價格</td><td>原價 8800 元、特價 5280 元</td></tr>
+          <tr><td>用語</td><td>沒有禁用詞；底部有「本產品為食品…」註記</td></tr>
+        </table>
+        <div class="tip-card note"><strong>人工確認：</strong>要修改就直接說「第 3 格改成…」。確認無誤後，按回答下方的<strong>「儲存至記事」</strong>，文案稿會保存在右側工作室，A3 與單元 4 都會用到。</div>
+
+        <div class="content-h2">A3 工作室：新增【資訊圖表】</div>
+        <div class="tip-card info"><strong>用定稿文案，一鍵出圖：</strong>筆記本工作室的「資訊圖表」可以直接產生圖片。把 A2 定稿的文案貼進描述，看看筆記本能做到什麼程度。</div>
+        <div class="content-note">
+          <ol>
+            <li>右側工作室，點「資訊圖表」旁的<strong>編輯（鉛筆）</strong>圖示</li>
+            <li>語言選<strong>中文（繁體）</strong>、方向選<strong>直式</strong></li>
+            <li>描述欄貼上下方 Prompt，貼入A2 定稿文案與畫風風格，按產生</li>
+          </ol>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 A3 資訊圖表描述 — 活動海報</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請製作一張【生日禮福袋】活動海報型資訊圖：
+- 文字內容照下方文案，不可改字、不可增加其他商品
+- 價格區要醒目：原價刪除線、特價放大
+- 商品圖：使用來源中的包裝圖【P01.png、P02.png、P03.png、P04.png】，每項商品旁放對應包裝，保留包裝原本的顏色、圖樣與文字
+- 底部加註：本產品為食品，不能取代正常飲食與藥物治療
+- 畫風風格：【貼上畫風風格】
+
+文案：
+【定稿文案依勾選來源參考】</div>
+        </div>
+        <div class="content-h2">A4 工作室：新增【影片摘要】</div>
+        <div class="tip-card info">工作室的「影片摘要」會把勾選的來源做成有旁白的說明影片，畫面是簡報式的圖文搭配解說，比較像教育訓練影片，不是廣告短片</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 A4 影片摘要 — 活動海報</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請製作【生日禮福袋】活動介紹影片：
+- 對象：本月生日的會員，以 40～60 歲為主
+- 內容：活動說明 → 福袋包含的商品與各自重點 → 原價 8800 元、特價 5280 元
+- 只介紹定稿文案中的福袋商品，不要介紹其他商品
+- 語氣溫暖親切，像門市人員在介紹
+- 依「廣告用語禁用詞清單」，不使用醫療效能用語
+- 商品圖：介紹每項商品時，使用來源中對應的包裝圖【P01.png、P02.png、P03.png、P04.png】，保留包裝原樣
+- 畫風風格：【貼上畫風風格】
+- 結尾提醒：本產品為食品，不能取代正常飲食與藥物治療</div>
+        </div>
+      </div><!-- u3-b END -->
+
+      <!-- u3-c -->
+      <div class="sub-block" id="u3-c">
+        <div class="sec-sub-title">範例B　單品介紹（成分配方型）</div>
+        <div class="tip-card note"><strong>情境：</strong>門市常被問「納豆藻油複方膠囊裡面有什麼？」，要做一張商品介紹資訊圖，說明成分與品質。</div>
+        <div class="tip-card info">範例B 請在中間對話區<strong>再開一個新對話</strong>，避免和範例A 的福袋內容混在一起。</div>
+
+        <div class="content-h2">B1【問】單品重點</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 B1 Prompt — 單品重點</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">G：我要為【納豆藻油複方膠囊】做一張商品介紹資訊圖
+P：對象是【第一次接觸這項商品的顧客】
+S：請根據來源整理：
+1. 最值得說明的 3 個重點
+2. 適合用哪一種資訊圖：成分配方型／身體警訊型／健康知識型，並說明理由</div>
+        </div>
+
+
+        <div class="content-h2">B2【定】資訊圖文案稿</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 B2 Prompt — 資訊圖文案稿（接續 B1）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請用【成分配方型】寫【納豆藻油複方膠囊】的資訊圖文案稿：
+1. 主標題（商品名）
+2. 守護方向 3 項（每項 1 個關鍵字＋1 句說明）
+3. 核心配方（每項：成分名稱＋來源或產地＋2 個短句）
+4. 品質檢驗項目（來源有寫才列）
+5. 結尾標語
+
+規則：
+- 只用來源中的資訊，沒有的寫【需查核】
+- 每句 15 字內，適合放進圖片
+- 用表格呈現
+- 完成後依「廣告用語禁用詞清單」自我檢查，在文案稿下方列出：原本可能違規的用語／改寫後的說法</div>
+        </div>
+
+        <div class="content-h2">三種資訊圖可替換的寫法</div>
+        <table class="data-table">
+          <tr><th>類型</th><th>把【成分配方型】換成…，區塊改成</th></tr>
+          <tr><td>身體警訊型</td><td>4 個「你有沒有…？」問題卡（生活情境＋溫和提醒）＋生活建議＋商品帶出</td></tr>
+          <tr><td>健康知識型</td><td>知識主題＋3～4 個分項說明＋小結（不直接連結商品功效）</td></tr>
+        </table>
+        <div class="tip-card warning"><strong>身體警訊型最容易違規：</strong>可以談生活習慣（多喝水、規律作息），但不能寫成「有這個症狀 → 吃這個商品就會改善」。</div>
+
+        <div class="content-h2">✅ 完成後請檢查</div>
+        <table class="data-table">
+          <tr><th>檢查項目</th><th>正確結果</th></tr>
+          <tr><td>成分與產地</td><td>四項成分與產地都和總表一致，沒有多出來的成分</td></tr>
+          <tr><td>品質檢驗</td><td>農藥、西藥殘留、塑化劑、重金屬四項</td></tr>
+          <tr><td>用語</td><td>沒有「清潔血管」「降血脂」這類說法</td></tr>
+        </table>
+        <div class="tip-card note">確認無誤後，一樣按<strong>「儲存至記事」</strong>，B3 與單元 4-c 都會用到。</div>
+
+        <div class="content-h2">B3 工作室：新增【資訊圖表】</div>
+        <div class="content-note">
+          <ol>
+            <li>右側工作室，點「資訊圖表」旁的<strong>編輯（鉛筆）</strong>圖示</li>
+            <li>語言選<strong>中文（繁體）</strong>、方向選<strong>直式</strong></li>
+            <li>描述欄貼上下方 Prompt，貼入B2 定稿文案與畫風風格，按產生</li>
+          </ol>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 B3 資訊圖表描述 — 單品介紹</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請只以【納豆藻油複方膠囊】為主題，製作成分配方型商品資訊圖：
+- 文字內容照下方文案，不可改字、不可加入其他商品
+- 呈現四大核心成分與產地、四項品質檢驗
+- 不使用醫療效能用語
+- 商品圖：使用來源中的「P01.png」包裝圖，放在右上角，保留包裝原本的顏色、圖樣與文字，不要重新設計
+- 畫風風格：【貼上畫風風格】
+
+文案：
+【定稿文案依勾選來源參考】</div>
+        </div>
+        <div class="tip-card note"><strong>沒有編輯圖示？</strong>直接點「資訊圖表」產生，再觀察 AI 自己選了哪些內容。</div>
+
+        <div class="content-h2">B4 工作室：新增【影片摘要】</div>
+        <div class="content-note">工作室的「影片摘要」會把勾選的來源做成有旁白的說明影片，畫面是簡報式的圖文搭配解說，比較像教育訓練影片，不是廣告短片</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 B4 【影片摘要】描述 — 單品介紹</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請製作【納豆藻油複方膠囊】商品介紹影片：
+- 對象：第一次接觸這項商品的顧客
+- 內容：四大核心成分與產地 → 四項品質檢驗 → 每日補充的方式
+- 只介紹這一項商品
+- 用生活化的比喻說明成分，避免艱深術語
+- 依「廣告用語禁用詞清單」，不使用醫療效能用語
+- 商品圖：開場與結尾畫面使用來源中的「P01.png」，保留包裝原本的顏色、圖樣與文字
+- 畫風風格：【貼上畫風風格】
+- 結尾提醒：本產品為食品，不能取代正常飲食與藥物治療</div>
+        </div>
+
+      </div><!-- u3-c END -->
+
+      <!-- u3-d -->
+      <div class="sub-block" id="u3-d">
+        <div class="sec-sub-title">比較：工作室資訊圖表 vs 單元 4</div>
+        <div class="tip-card info"><strong>筆記本工作室很方便，為什麼還要學單元 4？</strong>把 A3、B3 的成品留著，做完單元 4 後放在一起比較。</div>
+        <table class="data-table">
+          <tr><th></th><th>工作室「資訊圖表」</th><th>單元 4（Gemini 對話）</th></tr>
+          <tr><td>操作</td><td>一鍵產生</td><td>要寫 Prompt</td></tr>
+          <tr><td>文字內容</td><td>參考文案，但 AI 可能自行摘要、改寫</td><td>照定稿文案，不可改字</td></tr>
+          <tr><td>版面</td><td>AI 決定</td><td>照指定的版面骨架</td></tr>
+          <tr><td>商品包裝圖</td><td>無法指定</td><td>上傳實拍圖，保留原樣</td></tr>
+          <tr><td>做成 Skill</td><td>❌</td><td>✅</td></tr>
+        </table>
+        <div class="tip-card warning"><strong>適合用在哪？</strong>工作室資訊圖表適合<strong>內部用</strong>的商品教育圖（例如新進同事訓練）。對外行銷海報要求用詞、版面、包裝都正確，請用單元 4 的方式。</div>
+      </div><!-- u3-d END -->
+    </div><!-- u3 END -->
+
+
+    <!-- ======== U4: 圖文生成 ======== -->
+    <div class="content-section" id="u4">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-4)">4</span>
+        圖文生成【骨】【生】
+      </div>
+      <div class="sec-desc">📌 把定稿的文案交給 AI 排版生圖。<strong>請在 Gemini 開一般新對話進行</strong>（不在筆記本中），並準備好商品包裝實拍圖。<br><strong class="red">4-b 和 4-c 請各開一個新對話</strong>，這兩個對話等一下會分別做成 2 個 Skill（單元 5）。</div>
+      <div class="content-img80">
+        <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai264.jpg" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai264.jpg" alt=""></a>
+      </div>
+      <!-- u4-a -->
+      <div class="sub-block" id="u4-a">
+        <div class="sec-sub-title">生圖三元素</div>
+        <div class="tip-card info">Nano Banana 不是單純生圖，是「圖像＋文字＋排版＝完整設計稿」。<br>關鍵三元素：<strong>文字內容</strong>（講什麼）、<strong>視覺風格</strong>（長什麼樣）、<strong>版面配置</strong>（怎麼排）。</div>
+        <table class="data-table">
+          <tr><th>元素</th><th>撰寫重點</th><th>本次做法</th></tr>
+          <tr><td>文字內容</td><td>明確指定主標、副標、重點資訊、CTA</td><td>直接貼上單元 3 的文案稿</td></tr>
+          <tr><td>視覺風格</td><td>指定色系、氛圍、品牌感</td><td>參考公司過去的海報</td></tr>
+          <tr><td>畫風風格</td><td>指定插畫或攝影的表現方式</td><td>從右側「資訊圖 Prompt 生成器」挑選後貼入</td></tr>
+          <tr><td>版面配置</td><td>指定區塊位置與圖文比例</td><td>使用 1-c 的版面骨架</td></tr>
+          <tr><td>商品圖（本次新增）</td><td>上傳實拍圖，要求保留包裝原樣</td><td>避免包裝文字變形</td></tr>
+        </table>
+        <div class="tip-card info"><strong>畫風怎麼選？</strong>開啟右側工具列「資訊圖 Prompt 生成器」，選好畫風後複製描述，貼到 Prompt 的【貼上畫風風格】位置。同一份文案換畫風，就能做出不同感覺的海報。</div>
+        <div class="tip-card note"><strong>CTA（Call To Action，行動呼籲）：</strong>看完海報之後，要顧客做什麼？例如「洽詢門市」「掃碼訂購」。</div>
+      </div><!-- u4-a END -->
+
+      <!-- u4-b -->
+      <div class="sub-block" id="u4-b">
+        <div class="sec-sub-title">範例A 活動組合海報</div>
+        <div class="content-note">
+          <ol>
+            <li>Gemini 開新對話，選 <strong>建立圖像</strong></li>
+            <li>上傳：組合中每項商品的包裝實拍圖＋一張過去的海報（風格參考）</li>
+            <li>貼上 Prompt，把單元 3 範例A 定稿的文案（工作室記事）貼在指定位置，並貼上畫風風格</li>
+          </ol>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 活動組合海報</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請生成一張【直式 3:4】活動海報。
+
+**版面配置**（由上到下）：
+1. 左上「MUKO 沐光生技」標誌，上方緞帶標籤放活動標籤
+2. 大字主標題＋副標語
+3. 左側：保養方向卡片並排；右側：價格區（原價刪除線、特價放大）
+4. 商品格依商品數排列（4 項為 2 × 2），每格放商品圖＋編號＋商品名＋賣點
+5. 底部結尾標語＋小字註記
+
+**視覺風格**：
+參考上傳的過去海報，【粉紅金色、緞帶、禮物、彩帶】的慶祝氛圍
+只參考風格，不要沿用參考圖中的品牌、商品與文字
+
+**畫風風格**：
+【貼上畫風風格】
+
+**商品圖**：
+使用上傳的包裝實拍圖，保留包裝原本的設計與文字，不要重畫
+
+**文字內容**（照文案稿，不可改字）：
+【如附檔】</div>
+        </div>
+        <div class="content-note"><p><strong>觀察：</strong>商品名、價格有沒有錯字？包裝是否和實拍一樣？哪裡不滿意，記下來，下一節修正。</p></div>
+      </div><!-- u4-b END -->
+
+      <!-- u4-c -->
+      <div class="sub-block" id="u4-c">
+        <div class="sec-sub-title">範例B 單品資訊圖</div>
+      <div class="tip-card warning"><strong class="red">請另開新對話！</strong>不要接在【範例A】 的對話中，否則 Skill 會混入活動海報的規則。</div>
+        <div class="content-note">
+          <ol>
+            <li>Gemini 開新對話，選 <strong>建立圖像</strong></li>
+            <li>上傳：商品包裝實拍圖（P01.png）</li>
+            <li>貼上 Prompt，把單元 3 範例B 定稿的文案（工作室記事）貼在指定位置，並貼上畫風風格</li>
+          </ol>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 成分配方型資訊圖</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請生成一張【直式 3:4】商品資訊圖。
+
+**版面配置**：
+1. 頂部：商品名主標題
+2. 左上：守護方向 3 個圓形圖示（附關鍵字）
+3. 右上：品質檢驗項目清單
+4. 中段：核心配方 4 欄並排，每欄上方成分名稱、中間插圖、下方 2 個短句、底部產地國旗
+5. 底部：結尾標語＋「本產品為食品，不能取代正常飲食與藥物治療」
+
+**視覺風格**：
+【清新自然、藻綠與海洋藍、專業可信賴】
+
+**畫風風格**：
+【貼上畫風風格】
+
+**商品圖**：
+使用上傳的包裝實拍圖，放在右上角，保留原樣
+
+**文字內容**（照文案稿，不可改字）：
+【貼上單元 3 範例B 定稿的資訊圖文案】</div>
+        </div>
+        <div class="tip-card warning"><strong>畫面也要合規：</strong>不要出現「阻塞血管被清乾淨」「疾病器官」這類暗示療效的畫面。</div>
+        <div class="tip-card note"><strong>和 B3 比一比：</strong>同一項商品，把這張和工作室產生的資訊圖表放在一起，看看文字、版面、包裝圖哪裡不同。</div>
+      </div><!-- u4-c END -->
+
+      <!-- u4-d -->
+      <div class="sub-block" id="u4-d">
+        <div class="sec-sub-title">局部修改與常見問題</div>
+        <div class="tip-card info"><strong>在原本的對話中修改：</strong>活動海報回 4-b 的對話改、資訊圖回 4-c 的對話改。修改過程會一起變成 Skill 的規則。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 局部修改</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請在這張海報的基礎上修改，其他地方不要動：
+- 【例如：第 2 格商品名改為「沐鈣元氣粉包」】
+- 【例如：特價數字再放大，改用紅色】</div>
+        </div>
+        <table class="data-table">
+          <tr><th>問題</th><th>處理方式</th></tr>
+          <tr><td>小字錯字、亂碼</td><td>先用局部修改；修不好時，用 Canva 蓋掉重打</td></tr>
+          <tr><td>包裝被重畫</td><td>重新上傳更清楚的正面實拍圖，再強調「保留原樣」</td></tr>
+          <tr><td>改一處、其他地方也跟著變</td><td>每次只改 1～2 個地方，並寫「其他地方不要動」</td></tr>
+          <tr><td>次數用完</td><td>免費帳號生圖次數有限，文案先定稿就能減少重生次數</td></tr>
+        </table>
+        <div class="tip-card note"><strong>把修正記下來：</strong>你在這裡對 AI 的每一次修正，等一下都會變成 Skill 的規則。</div>
+      </div><!-- u4-d END -->
+    </div><!-- u4 END -->
+
+
+    <!-- ======== U5: Skill ======== -->
+    <div class="content-section" id="u5">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-5)">5</span>
+        把海報流程訂成 Skill
+      </div>
+      <div class="sec-desc">📌 剛才做海報的過程（定好的版面、風格、每一次修正）存成 Skill。下次換節日、換商品，輸入 <strong>/</strong> 叫出 Skill，一句話就能得到同樣品質的海報。<br>每個範例都是三步：<strong>回顧建立 Skill → 確認與附加資料 → 新案測試</strong>。</div>
+
+      <!-- u5-a -->
+      <div class="sub-block" id="u5-a">
+        <div class="sec-sub-title">Skill 觀念與開工準備</div>
+        <div class="tip-card info"><strong>核心觀念：</strong>Skill 不是憑空寫出來的。先把工作真的做一次，過程中你對 AI 的每一次糾正，就是 Skill 最有價值的內容。</div>
+        <table class="data-table">
+          <tr><th>名稱</th><th>是什麼</th><th>比喻</th></tr>
+          <tr><td>Prompt</td><td>當次對話中給 AI 的指令，用完就結束</td><td>口頭交辦</td></tr>
+          <tr><td>Skill</td><td>存起來、可重複使用的工作規範</td><td>作業 SOP</td></tr>
+          <tr><td>/</td><td>在 Gemini 輸入框叫出 Skill 的方式</td><td>翻開 SOP 照著做</td></tr>
+        </table>
+        <div class="content-h2">為什麼做 2 個 Skill，不做 1 個？</div>
+        <div class="content-note"><p>活動海報重「促銷」，資訊圖重「說明」，版面與規則完全不同。硬合成一個，AI 容易混用。<strong>一個 Skill 只做一件事。</strong></p></div>
+        <div class="content-h2">Skill 做好後，新案還要回筆記本做【問】【定】嗎？</div>
+        <table class="data-table">
+          <tr><th>情況</th><th>要不要回筆記本</th></tr>
+          <tr><td>換節日、換商品組合、換價格</td><td>❌ 不用。Skill 會依附加的商品資料總表自己寫文案稿，並讓你確認</td></tr>
+          <tr><td>新品上市（總表裡沒有）</td><td>✅ 要。總表加新品 → 筆記本同步 → 下載新的 CSV → 更新 Skill 的附加檔案（見 7-b）</td></tr>
+          <tr><td>想深入比較選品、找新賣點</td><td>選用。筆記本會標示出處，適合做研究</td></tr>
+        </table>
+        <div class="tip-card note"><strong>學的時候分兩段，用的時候合成一段：</strong>單元 3（筆記本）＋單元 4（生圖）的做法，Skill 做好後會在同一個對話中一次完成。</div>
+        <div class="content-h2">開工前準備</div>
+        <table class="data-table">
+          <tr><th>準備</th><th>說明</th></tr>
+          <tr><td>Skills 功能</td><td>設定中找得到 <strong>Skills</strong>，且「Gemini 應用程式活動」為開啟</td></tr>
+          <tr><td>商品資料總表.csv</td><td>MUKO 商品資料總表 → <strong>檔案 → 下載 → 逗號分隔值檔案（.csv）</strong>，檔名改為「商品資料總表.csv」</td></tr>
+          <tr><td>禁用詞清單.txt</td><td>把 3-a 的禁用詞清單貼到記事本，存成 .txt</td></tr>
+        </table>
+        <div class="tip-card note"><strong>為什麼不直接附加試算表？</strong>Skill 不接受 Google 試算表與 Excel，也還不能讀取筆記本中的檔案。CSV 是純文字表格，AI 讀得懂，下載就能用。<br>若上傳時不接受 .csv，把副檔名改成 .txt 再上傳，內容一樣。</div>
+        <div class="tip-card warning">Skills 依帳號陸續開放，找不到時先完成 A1，體驗產生 Skill 的過程。</div>
+      </div><!-- u5-a END -->
+
+      <!-- u5-b -->
+      <div class="sub-block" id="u5-b">
+        <div class="sec-sub-title">範例A　活動組合海報 Skill</div>
+
+        <div class="content-h2">A1 回顧對話，建立 Skill</div>
+        <div class="tip-card warning"><strong>回到 4-b 做活動海報的那個對話中貼上！</strong>AI 才看得到你每一次的修正。【】中的內容可依公司實際情況修改。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 A1 Prompt — 建立活動組合海報 Skill</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">這張活動海報我很滿意，請回顧整段對話，依以下設定建立 Gemini Skill，name 用 promo-poster。
+建立後，也請把 Skill 內容放在一個程式碼區塊中，方便我另存備份。
+
+【什麼時候用】
+- 【節日、會員生日、週年慶】等活動，多項商品組合的促銷海報
+【什麼時候不用】
+- 單一商品介紹資訊圖、文章、貼文文案
+【每次會變動的】
+- 活動名稱、商品組合、原價與特價、主視覺色系、畫風風格
+【固定流程】
+1. 依附加的「商品資料總表」產出文案稿表格，讓我確認
+2. 依附加的「禁用詞清單」自我檢查，列出修改建議
+3. 我確認後才生成海報
+4. 提醒我上傳商品包裝實拍圖
+【最重要的原則】
+- 商品名只能用商品資料總表中的名稱，不可改字
+- 活動用詞全篇統一
+- 包裝保留原樣，不要重畫
+- 底部加註：本產品為食品，不能取代正常飲食與藥物治療
+
+保留這次確定的版面骨架與視覺風格，以及我在對話中修正過的地方；
+不要寫入這次的活動名稱、商品組合與價格。</div>
+        </div>
+
+        <div class="content-h2">A2 確認 Skill 並附加資料</div>
+        <div class="content-note">
+          <ol>
+            <li>Gemini 回答中出現建立 Skill 的確認時，檢查名稱是 <strong>promo-poster</strong>，按<strong>建立／儲存</strong></li>
+            <li>到 <strong>設定 → Skills → promo-poster → 編輯</strong></li>
+            <li><strong>附加檔案</strong>：上傳 <strong>商品資料總表.csv</strong> 與 <strong>禁用詞清單.txt</strong></li>
+            <li>儲存，並確認開關為<strong>開啟</strong></li>
+            <li>把回答中程式碼區塊的內容，複製到雲端文件備份</li>
+          </ol>
+        </div>
+        <div class="tip-card note"><strong>沒有出現建立確認？</strong>手動建立：<strong>設定 → Skills → 建立</strong>，名稱欄貼 promo-poster、說明欄貼 description 後面的文字、指示欄貼第二個 --- 下方的全部內容，再附加兩個檔案。</div>
+        <div class="tip-card warning"><strong>附加檔案注意：</strong>
+          <ul>
+            <li>可上傳 .csv／.txt／.md、PDF、圖片；<strong>不支援 Word、Excel、Google 試算表</strong>，要先轉檔</li>
+            <li>介面沒有上傳選項時，用記事本開啟 CSV，把內容貼在指示欄最後</li>
+            <li>有附加檔案的 Skill，手機上不能編輯，請用電腦建立</li>
+            <li>附加一次就好：日後新案用 / 叫出 Skill 時，不用再附檔</li>
+          </ul>
+        </div>
+
+        <div class="content-h2">A3 新案測試：換節日、換商品</div>
+        <div class="tip-card info"><strong>為什麼要換條件？</strong>用同樣的生日活動測試，只能證明 Skill「記住了這張海報」。換節日、換商品，才能證明 Skill 真的「學會了做法」。<strong>不用回筆記本</strong>，文案稿由 Skill 產出。</div>
+        <div class="content-note">
+          <ol>
+            <li><strong>開新對話</strong>，輸入 <strong>/</strong>，從清單中<strong>點選</strong> promo-poster</li>
+            <li>貼上下方 Prompt → 確認 Skill 產出的文案稿</li>
+            <li>依提醒上傳商品包裝圖，生成海報</li>
+          </ol>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 A3 測試 Prompt</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">活動：【春節開運福袋】
+商品：【P01、P02、P04】
+原價【7600】元，特價【4580】元
+色系：【紅金年節風】
+畫風風格：【貼上畫風風格】</div>
+        </div>
+
+        <table class="data-table">
+          <tr><th>檢查項目</th><th>正確結果</th></tr>
+          <tr><td>流程</td><td>先出文案稿表格讓你確認，沒有直接生圖</td></tr>
+          <tr><td>沒有殘留上一次</td><td>不出現「生日」「壽星」等字</td></tr>
+          <tr><td>商品名</td><td>和商品資料總表完全一致</td></tr>
+          <tr><td>合規</td><td>主動列出風險用語與改寫建議</td></tr>
+          <tr><td>版面</td><td>和第一次的骨架一致，色系換成紅金</td></tr>
+        </table>
+      </div><!-- u5-b END -->
+
+      <!-- u5-c -->
+      <div class="sub-block" id="u5-c">
+        <div class="sec-sub-title">範例B　單品資訊圖 Skill</div>
+
+        <div class="content-h2">B1 回顧對話，建立 Skill</div>
+        <div class="tip-card warning"><strong>回到 4-c 做資訊圖的那個對話中貼上！</strong>不要在範例A 的對話中進行。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 B1 Prompt — 建立單品資訊圖 Skill</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">這張資訊圖我很滿意，請回顧整段對話，依以下設定建立 Gemini Skill，name 用 product-infographic。
+建立後，也請把 Skill 內容放在一個程式碼區塊中，方便我另存備份。
+
+【什麼時候用】
+- 單一商品介紹資訊圖
+【什麼時候不用】
+- 多商品組合的活動促銷海報
+【類型】
+- 成分配方型、身體警訊型、健康知識型；我沒指定時先問我
+【每次會變動的】
+- 商品、資訊圖類型、色系、畫風風格
+【固定流程】
+1. 依附加的「商品資料總表」產出文案稿表格，讓我確認
+2. 依附加的「禁用詞清單」自我檢查，列出修改建議
+3. 我確認後才生成資訊圖
+4. 提醒我上傳商品包裝實拍圖
+【最重要的原則】
+- 只用商品資料總表中的資訊，沒有的不可自行補寫
+- 身體警訊型只談生活習慣，不可寫成「有這個症狀 → 吃商品就改善」
+- 包裝保留原樣，不要重畫
+- 底部加註：本產品為食品，不能取代正常飲食與藥物治療
+
+保留這次確定的版面骨架與視覺風格，以及我在對話中修正過的地方；
+不要寫入這次的商品名稱與內容。</div>
+        </div>
+
+        <div class="content-h2">B2 確認 Skill 並附加資料</div>
+        <div class="content-note">
+          <ol>
+            <li>確認名稱是 <strong>product-infographic</strong>，按<strong>建立／儲存</strong></li>
+            <li>到 <strong>設定 → Skills → product-infographic → 編輯</strong>，附加 <strong>商品資料總表.csv</strong> 與 <strong>禁用詞清單.txt</strong></li>
+            <li>儲存，確認開關為<strong>開啟</strong>，並備份程式碼區塊內容</li>
+          </ol>
+        </div>
+        <div class="tip-card note">沒有出現建立確認時，手動建立方式同 A2。</div>
+
+        <div class="content-h2">B3 新案測試：換商品、不指定類型</div>
+        <div class="tip-card info"><strong>測試重點：</strong>換一項商品，而且<strong>故意不指定資訊圖類型</strong>，看 Skill 會不會先問你。</div>
+        <div class="content-note">
+          <ol>
+            <li><strong>開新對話</strong>，輸入 <strong>/</strong>，點選 product-infographic</li>
+            <li>貼上下方 Prompt → 回答 Skill 的提問 → 確認文案稿</li>
+            <li>依提醒上傳商品包裝圖（P04.png），生成資訊圖</li>
+          </ol>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 B3 測試 Prompt</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">商品：【P04】
+色系：【白底金藍、乾淨專業】
+畫風風格：【貼上畫風風格】</div>
+        </div>
+
+        <table class="data-table">
+          <tr><th>檢查項目</th><th>正確結果</th></tr>
+          <tr><td>類型</td><td>先問你要哪一種資訊圖，沒有自己決定</td></tr>
+          <tr><td>沒有殘留上一次</td><td>不出現納豆、藻油等上一項商品的內容</td></tr>
+          <tr><td>內容</td><td>成分、規格和商品資料總表一致，沒有自行補寫</td></tr>
+          <tr><td>合規</td><td>沒有醫療效能用語，底部有食品註記</td></tr>
+        </table>
+      </div><!-- u5-c END -->
+
+      <!-- u5-d -->
+      <div class="sub-block" id="u5-d">
+        <div class="sec-sub-title">Skill 沒作用？常見問題</div>
+        <table class="data-table">
+          <tr><th>狀況</th><th>處理方式</th></tr>
+          <tr><td>直接生圖，沒有先出文案稿</td><td>確認輸入 / 後有從清單<strong>點選</strong>（只打純文字 /promo-poster 代表沒選到）</td></tr>
+          <tr><td>清單中找不到 Skill</td><td>設定 → Skills，確認開關已開啟</td></tr>
+          <tr><td>商品名或成分不對</td><td>確認 Skill 有附加最新的商品資料總表.csv</td></tr>
+          <tr><td>出現上一次的活動內容</td><td>Skill 寫入了舊資料：編輯 Skill，刪掉特定活動名稱、商品與價格</td></tr>
+          <tr><td>想調整規則</td><td>編輯 Skill 指示欄直接修改；或在對話中說明修改點，請 AI 更新 Skill</td></tr>
+        </table>
+      </div><!-- u5-d END -->
+    </div><!-- u5 END -->
+
+
+    <!-- ======== U6: 提示詞網站 ======== -->
+    <div class="content-section" id="u6">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-6)">6</span>
+        AI 製作提示詞網站
+      </div>
+      <div class="sec-desc">📌 網站由 AI 製作，我們要學的是<strong>怎麼寫提示詞，讓 AI 做出好用的網站</strong>。本單元做的是<strong>範例網站</strong>，實際要放哪些欄位，請各部門課後依工作需求討論，再用 6-d 的方式調整。</div>
+
+      <!-- u6-a -->
+      <div class="sub-block" id="u6-a">
+        <div class="sec-sub-title">範例網站：三欄配置</div>
+        <div class="tip-card info"><strong>網站只負責「組合文字」：</strong>在網站選好條件、按複製，再自己貼到 AI 對話中。網站不會啟動 Skill。</div>
+        <table class="data-table">
+          <tr><th>欄位</th><th>放什麼</th><th>概念</th></tr>
+          <tr><td>左：設定</td><td>尺寸、視覺風格</td><td>怎麼呈現</td></tr>
+          <tr><td>中：活動資訊</td><td>海報類型、活動名稱、商品、原價／特價、補充說明（像填表單）</td><td>這次要說什麼</td></tr>
+          <tr><td>右：提示詞</td><td>短版／完整版兩個頁籤、可編輯、複製按鈕</td><td>產出</td></tr>
+        </table>
+        <div class="tip-card note"><strong>手機：</strong>三欄改為上、中、下排列，最後按複製，貼到 AI 對話中。</div>
+        <div class="content-h2">右欄的兩種提示詞</div>
+        <table class="data-table">
+          <tr><th>頁籤</th><th>什麼時候用</th><th>內容</th></tr>
+          <tr><td>短版：搭配 Skill</td><td>Gemini 已輸入 / 點選 Skill</td><td>只有這次的條件，規則都在 Skill 裡</td></tr>
+          <tr><td>完整版：不用 Skill</td><td>沒有 Skill、使用 ChatGPT 等其他 AI</td><td>條件＋版面、合規等完整規則</td></tr>
+        </table>
+        <div class="tip-card warning"><strong>Gemini 會自動選 Skill 嗎？</strong>有可能。Gemini 會依 Skill 的說明判斷要不要套用，但不保證每次都會，<strong>自己輸入 / 點選最穩定</strong>。單元 5 建立的 Skill 存在 Gemini 中，ChatGPT 讀不到，所以在 ChatGPT 請貼完整版。</div>
+        <div class="content-h2">短版產出範例</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📄 按下「複製」得到的內容（短版）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">活動：春節開運福袋
+商品：P01 納豆藻油複方膠囊、P02 沐鈣元氣粉包、P04 22株益生菌
+原價 7600 元，特價 4580 元
+尺寸：3:4 直式｜視覺風格：日系清新</div>
+        </div>
+      </div><!-- u6-a END -->
+
+
+      <!-- u6-b -->
+      <div class="sub-block" id="u6-b">
+        <div class="sec-sub-title">【問】請 AI 先反問</div>
+        <div class="tip-card info"><strong>不知道網站要有哪些功能？</strong>先說目標，讓 AI 反問，補足你沒想到的地方。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 請 AI 反問</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">我想做一個電腦、手機都能用的網頁小工具，讓行銷同事用選單與表單組合海報條件，按「複製」後貼到 AI 對話中使用。
+海報有兩種：活動組合海報、單品資訊圖。
+請先問我幾個問題，確認需要哪些欄位與功能，等我回答後再製作。</div>
+        </div>
+        <div class="content-note"><p><strong>觀察：</strong>AI 問了哪些你沒想到的事？例如：商品要不要分類？價格要不要自動算折數？要不要保留上次的選擇？這些可以留到課後再加。</p></div>
+      </div><!-- u6-b END -->
+
+      <!-- u6-c -->
+      <div class="sub-block" id="u6-c">
+        <div class="sec-sub-title">【定、骨、生】網站 Prompt</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>在網站 Prompt 中寫什麼</th></tr>
+          <tr><td>【定】</td><td>欄位與選項（回答 AI 反問後確定）</td></tr>
+          <tr><td>【骨】</td><td>畫面安排：電腦三欄（設定／活動資訊／提示詞），手機改為上中下</td></tr>
+          <tr><td>【生】</td><td>輸出單一 HTML 檔，可直接上傳 GitHub</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 製作提示詞網站</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請使用 HTML + CSS + JavaScript 製作「MUKO 海報 Prompt 產生器」範例網站，單一 index.html 檔案，功能簡單即可。
+
+# 版面
+- 電腦：三欄（左：設定／中：活動資訊／右：提示詞）
+- 手機：改為上、中、下排列
+
+# 左欄：設定
+1. 尺寸：按鈕【3:4 直式、1:1 方形、9:16 手機直式、16:9 橫式】
+2. 視覺風格：下拉選單【極簡向量插畫、日系清新、3D 黏土質感、手繪感筆記、社論雜誌插畫、現代數據儀表板】
+
+# 中欄：活動資訊（表單）
+1. 海報類型：活動組合海報／單品資訊圖（切換後顯示對應欄位）
+2. 活動組合海報：活動名稱、商品（可複選）、原價、特價
+3. 單品資訊圖：商品（單選）、類型（成分配方型／身體警訊型／健康知識型）
+4. 補充說明（選填）
+
+# 右欄：提示詞
+1. 兩個頁籤，內容隨選擇即時更新、可直接編輯：
+   - 短版：搭配 Skill（只列出條件）
+   - 完整版：不用 Skill（條件＋規則：商品名照原文、包裝保留原樣、不使用醫療效能用語、底部加註「本產品為食品，不能取代正常飲食與藥物治療」）
+2. 頁籤下方提示：短版請先在 Gemini 輸入 / 點選 Skill 再貼上
+3. 「複製」按鈕，複製成功顯示提示
+
+# 商品清單
+使用附加的「商品資料總表.csv」，只取「編號、商品名稱、保養方向」三欄做成商品選項，其他欄位不要放進網站
+
+# 視覺
+主色 #3D5A99、底色 #F8F6F1、白色卡片、圓角，字型 Noto Sans TC
+
+# 輸出
+以程式碼區塊輸出完整程式碼，並提供預覽</div>
+        </div>
+      </div><!-- u6-c END -->
+
+      <!-- u6-d -->
+      <div class="sub-block" id="u6-d">
+        <div class="sec-sub-title">局部修改與新品更新</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 局部修改</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請在目前的網頁基礎上修改，不要重新設計整頁：
+
+需要修改：
+- 【例如：活動按鈕新增「週年慶」】
+- 【例如：商品清單改為以下最新內容：從商品資料總表複製三欄貼上】
+
+保持不變：
+- 其他欄位、配色與排版
+
+修改後請輸出完整程式碼，方便我直接覆蓋原檔。</div>
+        </div>
+        <div class="tip-card note"><strong>新品上市時：</strong>依 7-b 的步驟更新，網站用上方 Prompt 更新商品清單後，重新上傳 GitHub。</div>
+      </div><!-- u6-d END -->
+
+      <!-- u6-e -->
+      <div class="sub-block" id="u6-e">
+        <div class="sec-sub-title">實際使用流程</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>做什麼</th><th>在哪裡</th></tr>
+          <tr><td>1</td><td>開啟網站：左欄選設定、中欄填活動資訊</td><td>手機／電腦</td></tr>
+          <tr><td>2</td><td>右欄選頁籤：用 Skill 選短版、用 ChatGPT 選完整版，按「複製」</td><td>網站</td></tr>
+          <tr><td>3</td><td>開新對話（Gemini 先輸入 / 點選 Skill），貼上送出</td><td>Gemini／ChatGPT</td></tr>
+          <tr><td>4</td><td>確認文案稿與合規建議</td><td>AI 對話</td></tr>
+          <tr><td>5</td><td>上傳商品實拍圖，生成海報</td><td>AI 對話</td></tr>
+          <tr><td>6</td><td>局部修改，必要時用 Canva 修小字</td><td>Gemini／Canva</td></tr>
+        </table>
+        <div class="tip-card info"><strong>上傳 GitHub：</strong>沿用之前學過的方式，把 index.html 上傳到儲存庫，開啟 GitHub Pages 取得網址，加到手機主畫面方便使用。</div>
+      </div><!-- u6-e END -->
+    </div><!-- u6 END -->
+
+
+    <!-- ======== U7: 工作流程總整理 ======== -->
+    <div class="content-section" id="u7">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-1)">7</span>
+        工作流程總整理
+      </div>
+      <div class="sec-desc">📌 課程結束後，回到工作中要怎麼用？什麼時候要更新什麼？</div>
+
+      <!-- u7-a -->
+      <div class="sub-block" id="u7-a">
+        <div class="sec-sub-title">日常作業 SOP</div>
+        <table class="data-table">
+          <tr><th>工作</th><th>使用</th><th>做法</th></tr>
+          <tr><td>活動海報</td><td>網站 → Skill：promo-poster</td><td>選條件 → 確認文案 → 出圖</td></tr>
+          <tr><td>單品資訊圖</td><td>網站 → Skill：product-infographic</td><td>選商品與類型 → 確認文案 → 出圖</td></tr>
+          <tr><td>查商品資料、想賣點</td><td>筆記本</td><td>用 GPS 提問</td></tr>
+          <tr><td>新的海報類型</td><td>一般對話 → 新 Skill</td><td>先做一次 → 回顧對話 → 訂成 Skill</td></tr>
+        </table>
+      </div><!-- u7-a END -->
+
+      <!-- u7-b -->
+      <div class="sub-block" id="u7-b">
+        <div class="sec-sub-title">資料維護時機</div>
+        <table class="data-table">
+          <tr><th>發生什麼事</th><th>筆記本</th><th>Skill</th><th>網站</th></tr>
+          <tr><td>新品上市、商品下架</td><td>✅ 更新來源</td><td>✅ 換附加檔案</td><td>✅ 更新商品清單</td></tr>
+          <tr><td>新活動、新價格</td><td>—</td><td>—</td><td>—（直接在網站輸入）</td></tr>
+          <tr><td>品牌風格改版</td><td>—</td><td>✅ 修改風格規則</td><td>—</td></tr>
+          <tr><td>廣告用語規定更新</td><td>✅ 更新禁用詞</td><td>✅ 換附加檔案</td><td>—</td></tr>
+        </table>
+        <div class="content-h2">新品上市：更新步驟</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>做什麼</th></tr>
+          <tr><td>1 試算表</td><td>MUKO 商品資料總表新增或修改一列</td></tr>
+          <tr><td>2 筆記本</td><td>點該來源 →「與雲端硬碟同步」，問一句確認新品資料，例如「請列出 P06 的所有欄位內容」</td></tr>
+          <tr><td>3 下載</td><td>試算表 → 檔案 → 下載 → CSV，檔名改為「商品資料總表.csv」</td></tr>
+          <tr><td>4 Skill</td><td>設定 → Skills → 編輯，用新的 CSV 取代舊檔（<strong>兩支 Skill 都要換</strong>）</td></tr>
+          <tr><td>5 網站</td><td>用 6-d 的 Prompt 更新商品清單，重新上傳 GitHub</td></tr>
+        </table>
+        <div class="tip-card warning"><strong>Skill 不能單獨換檔？</strong>刪除舊 Skill 後重新建立：貼上 A2 備份的 Skill 內容，再附加新的 CSV，不用重新回顧對話。</div>
+        <div class="tip-card note"><strong>未來會更簡單：</strong>Google 預告 Skill 將可直接連結雲端硬碟檔案；開放後，Skill 可直接讀取試算表，步驟 3、4 就能省略。</div>
+      </div><!-- u7-b END -->
+
+      <!-- u7-c -->
+      <div class="sub-block" id="u7-c">
+        <div class="sec-sub-title">帶得走的心得</div>
+        <table class="data-table">
+          <tr><th>心得</th><th>說明</th></tr>
+          <tr><td>資料只整理一次</td><td>商品資料總表是標準答案，筆記本、Skill、網站共用</td></tr>
+          <tr><td>文字先定案，再出圖</td><td>錯字與用語問題在文字階段解決，省下生圖次數</td></tr>
+          <tr><td>先做再訂</td><td>Skill 來自真實工作的修正過程</td></tr>
+          <tr><td>一個 Skill 只做一件事</td><td>活動海報與資訊圖分開，AI 不會混用</td></tr>
+          <tr><td>合規是固定關卡</td><td>每張海報都經過禁用詞檢查與人工確認</td></tr>
+          <tr><td>換成真實資料</td><td>把練習總表換成公司真實商品資料，筆記本、Skill、網站的流程都不用改</td></tr>
+        </table>
+      </div><!-- u7-c END -->
+    </div><!-- u7 END -->
+
+
+    <!-- ======== U8: AI＋Excel 業務銷售分析 ======== -->
+    <div class="content-section" id="u8">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-2)">8</span>
+        AI＋Excel 業務銷售分析
+      </div>
+      <div class="sec-desc">📌 工作情境：月底主管問「這個月哪位業務賣得最好？誰需要幫忙？」<br><strong>分工原則：AI 負責整理和找異常，Excel 負責計算和驗證，主管負責判斷。</strong></div>
+
+      <!-- u8-a -->
+      <div class="sub-block" id="u8-a">
+        <div class="sec-sub-title">練習檔與分析指標</div>
+        <div class="tip-card note"><strong>📂 練習檔：</strong>MUKO_業務銷售_10月.xlsx（練習用虛構資料）<br>8 位業務（北區 3、中區 2、南區 3）、10/1～10/31 整月訂單。</div>
+        <table class="data-table">
+          <tr><th>工作表</th><th>內容</th></tr>
+          <tr><td>銷售明細</td><td>每筆訂單一列：訂單編號、日期、業務員、區域、通路、客戶類型、商品、數量、單價、金額</td></tr>
+          <tr><td>業務目標</td><td>業務員、區域、年資、10月目標、9月業績</td></tr>
+          <tr><td>商品價目</td><td>5 項商品的編號、名稱、單價</td></tr>
+        </table>
+        <div class="content-h2">先懂四個指標</div>
+        <table class="data-table">
+          <tr><th>指標</th><th>怎麼算</th><th>怎麼看</th></tr>
+          <tr><td>達成率</td><td>本月業績 ÷ 月目標</td><td>每人目標不同，<strong>業績最高不等於表現最好</strong></td></tr>
+          <tr><td>與上月比</td><td>本月業績 ÷ 9月業績 － 1</td><td>看成長或衰退的方向</td></tr>
+          <tr><td>平均單價</td><td>業績 ÷ 訂單數</td><td>單數多但單價低，和單數少但單價高，是兩種不同的業務</td></tr>
+          <tr><td>新客比例</td><td>新客訂單 ÷ 總訂單</td><td>擅長開發新客，還是擅長經營舊客</td></tr>
+        </table>
+        <div class="tip-card info"><strong>📖 管理小字典｜業績拆兩半：</strong>業績 ＝ 訂單數 × 平均單價。看排行時先問：「是單數少了？還是每單賣得少？」兩種問題，輔導方式完全不同。</div>
+        <div class="content-h2">開工準備</div>
+        <div class="content-note">
+          <ol>
+            <li>Gemini 開新對話，上傳練習檔</li>
+            <li>步驟 1～3 都在<strong>同一個對話</strong>中進行</li>
+          </ol>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 同一個對話問多個問題時，先貼這段</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">以下會問多個問題，出現【主題】表示新的獨立問題，不要沿用前一題的條件。</div>
+        </div>
+        <div class="tip-card warning"><strong>資安提醒：</strong>業務個人業績屬於人事資料。實際工作時，確認公司是否允許上傳到 AI；分享網頁、資訊圖時注意對象與範圍。</div>
+      </div><!-- u8-a END -->
+
+      <!-- u8-b -->
+      <div class="sub-block" id="u8-b">
+        <div class="sec-sub-title">步驟1　先檢查資料</div>
+        <div class="tip-card info"><strong>為什麼不直接排行？</strong>資料有錯，排行就錯。先請 AI 讀懂資料、找出異常，<strong>由人核對原始紀錄後</strong>再分析。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 步驟1 Prompt — 檢查資料</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">【主題】附件是 10 月業務銷售資料。先別分析，請檢查並回報：
+1. 有哪些工作表、欄位、資料期間
+2. 有沒有重複的訂單編號
+3. 業務員名稱是否一致（例如多了空白）
+4. 有沒有數量或金額明顯異常的訂單
+有問題先列出，不要自行修正。</div>
+        </div>
+        <div class="content-h2">✅ AI 應該找到的 3 個問題</div>
+        <table class="data-table">
+          <tr><th>問題</th><th>位置</th><th>不修正會怎樣</th></tr>
+          <tr><td>重複訂單</td><td>吳美玲 S2610-0203 出現兩次</td><td>業績多算 3,840 元</td></tr>
+          <tr><td>名稱多了空白</td><td>3 筆「李俊傑 」</td><td>被拆成兩個人，李俊傑少算 32,760 元</td></tr>
+          <tr><td>數量異常</td><td>蔡明哲 10/27 沐鈣元氣粉包數量 30（他其他訂單都是 1～3）</td><td>蔡明哲看起來達成 101.7%，其實只有 72.9%</td></tr>
+        </table>
+        <div class="tip-card note"><strong>AI 沒全部找到？</strong>正常。追問一句：「蔡明哲有沒有特別大的訂單？」AI 只能「指出」異常，正確數字要由人回頭核對原始訂單。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 核對後告訴 AI 正確資料</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">我核對過原始訂單：
+- S2610-0203 重複，只算一筆
+- 「李俊傑 」和「李俊傑」是同一人
+- 蔡明哲 10/27 那筆數量正確是 3，金額 3,840
+請依更正後的資料進行後續分析。</div>
+        </div>
+      </div><!-- u8-b END -->
+
+      <!-- u8-c -->
+      <div class="sub-block" id="u8-c">
+        <div class="sec-sub-title">步驟2　誰的業績最好？</div>
+        <div class="tip-card note"><strong>🎬 情境：</strong>主管在群組問：「這個月誰賣最好？」</div>
+        <div class="content-h2">① 簡單詢問</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 簡單詢問</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">【主題】哪位業務賣最好？</div>
+        </div>
+        <div class="content-note"><p><strong>🤖 AI 通常會給：</strong>依業績金額排序，回答「王雅婷最好」。<br><strong>⚠️ 問題在：</strong>「最好」沒有定義。每個人目標不同，王雅婷業績最高，但達成率最高的是新人林佳穎。</p></div>
+        <div class="content-h2">② 完整詢問</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 完整詢問</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">【主題】用更正後的資料，整理每位業務的 10 月表現，用表格列出：
+業務員／業績／目標／達成率／與9月比／訂單數／平均單價／新客比例
+依達成率由高到低排序。
+最後用 3 句話說明：業績排行和達成率排行有什麼不同。</div>
+        </div>
+        <div class="content-h2">✅ 正確結果（更正後）</div>
+        <table class="data-table">
+          <tr><th>業務員</th><th>業績</th><th>目標</th><th>達成率</th><th>與9月比</th><th>訂單數</th><th>平均單價</th><th>新客比例</th></tr>
+          <tr><td>林佳穎</td><td>186,360</td><td>150,000</td><td>124.2%</td><td>+54.0%</td><td>52</td><td>3,584</td><td>63%</td></tr>
+          <tr><td>王雅婷</td><td>461,680</td><td>420,000</td><td>109.9%</td><td>+16.0%</td><td>55</td><td>8,394</td><td>25%</td></tr>
+          <tr><td>張淑芬</td><td>282,280</td><td>280,000</td><td>100.8%</td><td>+2.6%</td><td>43</td><td>6,565</td><td>30%</td></tr>
+          <tr><td>李俊傑</td><td>303,980</td><td>320,000</td><td>95.0%</td><td>-7.9%</td><td>33</td><td>9,212</td><td>12%</td></tr>
+          <tr><td>吳美玲</td><td>239,300</td><td>260,000</td><td>92.0%</td><td>+3.6%</td><td>73</td><td>3,278</td><td>58%</td></tr>
+          <tr><td>黃志豪</td><td>262,920</td><td>300,000</td><td>87.6%</td><td>-8.1%</td><td>125</td><td>2,103</td><td>36%</td></tr>
+          <tr><td>陳建宏</td><td>312,800</td><td>380,000</td><td>82.3%</td><td>-22.2%</td><td>40</td><td>7,820</td><td>20%</td></tr>
+          <tr><td>蔡明哲</td><td>87,500</td><td>120,000</td><td>72.9%</td><td>+36.7%</td><td>26</td><td>3,365</td><td>50%</td></tr>
+        </table>
+        <div class="tip-card info">全區合計：業績 2,136,820 元／目標 2,230,000 元，達成率 95.8%。</div>
+        <div class="tip-card note"><strong>差在哪：</strong>完整詢問把「好」拆成多個指標，主管才看得出：王雅婷業績第一、林佳穎達成率第一、黃志豪訂單最多，各有不同意義。</div>
+      </div><!-- u8-c END -->
+
+      <!-- u8-d -->
+      <div class="sub-block" id="u8-d">
+        <div class="sec-sub-title">步驟3　拆解原因</div>
+        <div class="tip-card note"><strong>🎬 情境：</strong>主管接著問：「沒達標的人是什麼原因？達標的人有沒有隱憂？」</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 拆解原因</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">【主題】用更正後的資料，請分析每位業務：
+1. 業績拆解：訂單數 × 平均單價，問題出在哪一邊
+2. 週趨勢：每週業績有沒有持續下滑（第1週為 10/1～10/7）
+3. 業績集中度：最大一筆或單一商品占個人業績多少
+4. 商品組合：各商品占個人業績的比例
+
+用表格分成：數據事實／可能原因（推測）／需要和本人確認的。</div>
+        </div>
+        <div class="content-h2">✅ AI 應該找出的重點</div>
+        <table class="data-table">
+          <tr><th>業務員</th><th>數據事實</th><th>主管該確認的</th></tr>
+          <tr><td>陳建宏</td><td>每週持續下滑：119,900 → 101,160 → 44,660 → 37,180；比 9 月少 22%</td><td>客戶流失？個人狀況？</td></tr>
+          <tr><td>王雅婷</td><td>2 筆企業團購（10/8、10/22）共 215,760 元，占個人業績 47%</td><td>扣掉大單後未達標，下月是否還有大單</td></tr>
+          <tr><td>黃志豪</td><td>訂單 125 筆全區最多，平均單價 2,103 元最低；53 筆是單價最低的野菜酵素</td><td>能否搭配高單價商品</td></tr>
+          <tr><td>李俊傑</td><td>72% 業績來自納豆藻油複方膠囊</td><td>其他商品的推廣機會</td></tr>
+          <tr><td>蔡明哲</td><td>新人 3 個月，達成 72.9%，但比 9 月成長 36.7%</td><td>持續成長，需要陪訪支援</td></tr>
+        </table>
+        <div class="tip-card warning"><strong>主管判斷的部分：</strong>AI 可以找出數據上的現象，但「為什麼下滑」「要怎麼輔導」，要和業務本人談過才知道。推測不要寫成事實。</div>
+      </div><!-- u8-d END -->
+
+      <!-- u8-e -->
+      <div class="sub-block" id="u8-e">
+        <div class="sec-sub-title">步驟4　Excel 驗算</div>
+        <div class="tip-card info"><strong>為什麼要驗算？</strong>用 AI 檢查 AI，可能錯得一樣。AI 給的數字，用 Excel 公式再算一次，兩邊一致才交出去。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 請 AI 給公式</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">【主題】附檔有【銷售明細】和【業務目標】兩個工作表。
+我要在【業務目標】新增欄位：10月業績、達成率、與9月比、訂單數、平均單價、新客比例。
+先確認兩表用哪個欄位對應，再給公式；不要用 M365 專用函數，告訴我哪裡要加 $。</div>
+        </div>
+        <div class="content-h2">參考公式（「業務目標」第 2 列）</div>
+        <table class="data-table">
+          <tr><th>欄位</th><th>公式</th></tr>
+          <tr><td>F 10月業績</td><td>=SUMIFS(銷售明細!$K:$K,銷售明細!$C:$C,A2)</td></tr>
+          <tr><td>G 達成率</td><td>=F2/D2</td></tr>
+          <tr><td>H 與9月比</td><td>=F2/E2-1</td></tr>
+          <tr><td>I 訂單數</td><td>=COUNTIFS(銷售明細!$C:$C,A2)</td></tr>
+          <tr><td>J 平均單價</td><td>=F2/I2</td></tr>
+          <tr><td>K 新客比例</td><td>=COUNTIFS(銷售明細!$C:$C,A2,銷售明細!$F:$F,"新客")/I2</td></tr>
+        </table>
+        <div class="tip-card warning"><strong>公式算出來和 AI 不一樣？</strong>直接在原始檔套公式，會得到李俊傑 271,220、吳美玲 243,140、蔡明哲 122,060，因為步驟 1 的錯誤還在資料裡。<strong>公式不會幫你挑錯，資料要先清乾淨。</strong></div>
+        <div class="content-h2">在 Excel 修正資料</div>
+        <table class="data-table">
+          <tr><th>問題</th><th>Excel 操作</th></tr>
+          <tr><td>重複訂單</td><td>選取銷售明細 → <strong>資料 → 移除重複項</strong>，只勾「訂單編號」</td></tr>
+          <tr><td>名稱多了空白</td><td><strong>Ctrl＋H</strong> 取代：尋找「李俊傑 」（後面有空白）→ 取代為「李俊傑」</td></tr>
+          <tr><td>數量異常</td><td>篩選蔡明哲 10/27 → 數量改 3、金額改 3,840</td></tr>
+        </table>
+        <div class="content-note"><p><strong>修正後檢查：</strong>挑一位業務，和步驟 2 的表格對照，數字一致就完成驗算。</p></div>
+      </div><!-- u8-e END -->
+
+      <!-- u8-f -->
+      <div class="sub-block" id="u8-f">
+        <div class="sec-sub-title">步驟5　面談重點與快報</div>
+        <div class="tip-card info">分析做完，最後一步是<strong>交出去</strong>：給業務本人的面談重點，以及給上級的快報。</div>
+        <div class="content-h2">① 業務個別面談重點</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 面談重點</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">【主題】依前面的分析，幫我準備和每位業務一對一面談的重點，每人 3 句：
+1. 本月做得好的地方（具體數字）
+2. 需要注意的地方（用事實描述，不要下結論）
+3. 下個月可以一起努力的行動
+語氣正向、具體，不要比較同事之間的表現。</div>
+        </div>
+        <div class="content-note"><p><strong>範例（陳建宏）：</strong>① 平均單價 7,820 元，客戶下單量穩定。② 10 月後半月業績明顯比前半月少，想了解客戶端有沒有變化。③ 下個月一起盤點前 10 大客戶，安排回訪。</p></div>
+        <div class="content-h2">② LINE 業績快報</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 快報範本（存起來，每月換資料）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">【業務快報｜10月】
+全區：業績 ○ 元，達成率 ○%
+達標：○○（○%）、○○（○%）
+需關注：
+・○○ ○%，重點：○○
+・○○ ○%，重點：○○
+下月行動：○○
+待確認：○○</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 執行時這樣問</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">依分析結果，套用以下格式產出業務快報。格式不可變動，數字依資料填入，資料沒有的寫「待確認」；推測的原因不要寫成事實。（貼上範本）</div>
+        </div>
+        <div class="content-note"><p><strong>範例結果：</strong><br>【業務快報｜10月】<br>全區：業績 2,136,820 元，達成率 95.8%<br>達標：林佳穎（124.2%）、王雅婷（109.9%）、張淑芬（100.8%）<br>需關注：<br>・陳建宏 82.3%，重點：每週業績持續下滑，比 9 月少 22%<br>・蔡明哲 72.9%，重點：新人成長中，比 9 月成長 36.7%<br>下月行動：陳建宏客戶盤點回訪；蔡明哲安排陪訪<br>待確認：陳建宏業績下滑原因</p></div>
+        <div class="tip-card warning"><strong>送出前三件事：</strong>抽查 1～2 個數字、確認推測沒有寫成事實、確認傳送對象可以看個人業績。</div>
+      </div><!-- u8-f END -->
+
+      <!-- u8-g -->
+      <div class="sub-block" id="u8-g">
+        <div class="sec-sub-title">延伸：數據決定下次選品</div>
+        <div class="tip-card info"><strong>把整堂課串起來：</strong>銷售數據 → 決定下次活動推哪些商品 → 單元 3 寫文案 → 單元 5 Skill 出海報。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 商品銷售與選品建議</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">【主題】用更正後的資料，分析各商品：
+1. 各商品的業績、數量、訂單筆數與占比
+2. 哪些商品常被同一位業務一起賣出
+3. 下次活動想帶動「賣得最少的商品」，建議搭配哪 2～3 項熱銷商品組成福袋，並說明理由
+用表格呈現，理由標「推測」。</div>
+        </div>
+        <div class="content-h2">✅ 商品銷售結果</div>
+        <table class="data-table">
+          <tr><th>商品</th><th>業績</th><th>占比</th><th>數量</th><th>訂單筆數</th></tr>
+          <tr><td>P01 納豆藻油複方膠囊</td><td>851,400</td><td>39.8%</td><td>430</td><td>113</td></tr>
+          <tr><td>P04 22株益生菌</td><td>584,680</td><td>27.4%</td><td>311</td><td>95</td></tr>
+          <tr><td>P02 沐鈣元氣粉包</td><td>339,200</td><td>15.9%</td><td>265</td><td>101</td></tr>
+          <tr><td>P03 肉桂苦瓜胜肽</td><td>195,920</td><td>9.2%</td><td>124</td><td>47</td></tr>
+          <tr><td>P05 野菜酵素順暢錠</td><td>165,620</td><td>7.8%</td><td>169</td><td>91</td></tr>
+        </table>
+        <div class="tip-card note"><strong>怎麼解讀：</strong>野菜酵素業績最低，是因為單價最低（980 元），訂單數其實不少；<strong>肉桂苦瓜胜肽的數量與訂單筆數都最少</strong>，才是真正需要帶動的商品。這就是「看金額」和「看筆數」的差別。</div>
+        <div class="tip-card info"><strong>接下來：</strong>把 AI 建議的福袋組合帶到 Gemini，用 / 叫出 <strong>promo-poster</strong>，貼上活動條件，就能做出下一張活動海報。</div>
+      </div><!-- u8-g END -->
+      <!-- u8-h -->
+      <div class="sub-block" id="u8-h">
+        <div class="sec-sub-title">把分析流程訂成 Skill</div>
+        <div class="tip-card info"><strong>每個月都要做、步驟和格式都固定</strong>，正好適合做成 Skill。以後上傳 Excel、用 / 叫出 Skill，就能一次拿到所有分析。</div>
+        <div class="content-h2">Skill 分兩段，中間停一次</div>
+        <table class="data-table">
+          <tr><th>階段</th><th>Skill 做什麼</th><th>為什麼</th></tr>
+          <tr><td>第一段</td><td>檢查資料，列出異常，<strong>停下來等你確認</strong></td><td>錯誤要由人核對原始紀錄，AI 不能自己改</td></tr>
+          <tr><td>第二段</td><td>確認後一次產出：成績表、原因拆解、面談重點、LINE 快報、選品建議、驗算公式</td><td>步驟 2～5 一次完成</td></tr>
+        </table>
+        <div class="tip-card note">資料沒有異常時，Skill 會回報「未發現異常」，回一句「開始」就會進入第二段。</div>
+
+        <div class="content-h2">① 回顧對話，建立 Skill</div>
+        <div class="tip-card warning"><strong>在步驟 1～5 的同一個對話中貼上！</strong>【】可依公司實際情況修改。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 建立業務分析 Skill</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">這次的業務銷售分析我很滿意，請回顧整段對話，依以下設定建立 Gemini Skill，name 用 sales-report。
+建立後，也請把 Skill 內容放在一個程式碼區塊中，方便我另存備份。
+
+【什麼時候用】
+- 我上傳業務銷售 Excel，要做月度業務表現分析時
+【什麼時候不用】
+- 門市業績、財務報表、單純問公式
+【每次會變動的】
+- 月份、業務人員、目標、銷售資料
+【固定流程】
+第一段：檢查資料
+1. 回報工作表、欄位、資料期間
+2. 檢查重複訂單、名稱不一致或空白、日期不在本月、數量或單價異常
+3. 列出異常後停下來，等我確認正確資料，不可自行修正
+第二段：我確認後，一次產出
+1. 業務成績表：業績／目標／達成率／與上月比／訂單數／平均單價／新客比例，依達成率排序
+2. 原因拆解：訂單數×平均單價、週趨勢、業績集中度、商品組合，分成「數據事實／可能原因（推測）／需確認」
+3. 每位業務的面談重點（3 句，語氣正向，不比較同事）
+4. LINE 業務快報（照下方固定格式）
+5. 商品銷售與下次活動選品建議（看金額也看訂單筆數）
+6. Excel 驗算公式（不用 M365 專用函數）
+【快報格式】
+【業務快報｜○月】
+全區：業績 ○ 元，達成率 ○%
+達標：○○（○%）
+需關注：・○○ ○%，重點：○○
+下月行動：○○
+待確認：○○
+【最重要的原則】
+- 推測不可寫成事實
+- 資料沒有的寫「待確認」
+- 不要寫入這次的人名與數字</div>
+        </div>
+
+        <div class="content-h2">② 確認 Skill</div>
+        <div class="content-note">
+          <ol>
+            <li>Gemini 出現建立確認時，檢查名稱是 <strong>sales-report</strong>，按<strong>建立／儲存</strong></li>
+            <li>沒有出現時，依單元 5 的方式手動建立</li>
+            <li>把程式碼區塊的內容另存備份</li>
+          </ol>
+        </div>
+        <div class="tip-card note"><strong>這支 Skill 不用附加檔案：</strong>銷售資料每個月不同，每次使用時上傳當月 Excel 就好。</div>
+
+        <div class="content-h2">③ 新資料測試：11 月</div>
+        <div class="tip-card info"><strong>📂 測試檔：</strong>MUKO_業務銷售_11月.xlsx。換一個月份、不同的錯誤，才能證明 Skill 學會的是做法，不是記住 10 月的資料。</div>
+        <div class="content-note">
+          <ol>
+            <li><strong>開新對話</strong>，輸入 <strong>/</strong> 點選 sales-report</li>
+            <li>上傳 11 月 Excel，貼上下方 Prompt</li>
+            <li>核對 Skill 列出的異常，回覆正確資料後，看第二段是否一次產出</li>
+          </ol>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 測試 Prompt</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">附件是 11 月業務銷售資料，請進行月度分析。</div>
+        </div>
+
+        <div class="content-h2">✅ 第一段應該找到的 3 個問題</div>
+        <table class="data-table">
+          <tr><th>問題</th><th>位置</th><th>正確處理</th></tr>
+          <tr><td>單價異常</td><td>張淑芬 S2611-0256，納豆藻油單價 19,800（正確 1,980）</td><td>金額改為 7,920</td></tr>
+          <tr><td>業務員空白</td><td>S2611-0125（南區）</td><td>核對後為蔡明哲</td></tr>
+          <tr><td>日期不在本月</td><td>黃志豪 S2611-0421，日期 2026/12/01</td><td>不列入 11 月</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 核對後回覆 Skill</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">我核對過原始訂單：
+- S2611-0256 單價正確是 1,980，金額 7,920
+- S2611-0125 的業務員是蔡明哲
+- S2611-0421 是 12 月訂單，不列入
+請依更正後的資料，開始第二段分析。</div>
+        </div>
+        <div class="content-h2">✅ 第二段正確結果（更正後）</div>
+        <table class="data-table">
+          <tr><th>業務員</th><th>業績</th><th>目標</th><th>達成率</th><th>與10月比</th><th>訂單數</th></tr>
+          <tr><td>吳美玲</td><td>275,560</td><td>250,000</td><td>110.2%</td><td>+15.2%</td><td>56</td></tr>
+          <tr><td>陳建宏</td><td>315,620</td><td>300,000</td><td>105.2%</td><td>+0.9%</td><td>47</td></tr>
+          <tr><td>張淑芬</td><td>298,080</td><td>290,000</td><td>102.8%</td><td>+5.6%</td><td>47</td></tr>
+          <tr><td>林佳穎</td><td>176,060</td><td>180,000</td><td>97.8%</td><td>-5.5%</td><td>49</td></tr>
+          <tr><td>李俊傑</td><td>308,520</td><td>320,000</td><td>96.4%</td><td>+1.5%</td><td>37</td></tr>
+          <tr><td>黃志豪</td><td>262,020</td><td>290,000</td><td>90.4%</td><td>-0.3%</td><td>82</td></tr>
+          <tr><td>蔡明哲</td><td>102,340</td><td>120,000</td><td>85.3%</td><td>+17.0%</td><td>28</td></tr>
+          <tr><td>王雅婷</td><td>345,020</td><td>420,000</td><td>82.1%</td><td>-25.3%</td><td>74</td></tr>
+        </table>
+        <div class="tip-card note"><strong>11 月的故事：</strong>王雅婷少了企業團購大單，達成率掉到最後（呼應 10 月「依賴大單」的隱憂）；陳建宏回升達標；吳美玲本月有一筆企業團購。全區業績 2,083,220 元／目標 2,170,000 元，達成率 96.0%。</div>
+        <table class="data-table">
+          <tr><th>檢查項目</th><th>正確結果</th></tr>
+          <tr><td>流程</td><td>先列異常並停下來，沒有直接分析</td></tr>
+          <tr><td>沒有殘留 10 月</td><td>不出現 10 月的數字與結論</td></tr>
+          <tr><td>一次產出</td><td>成績表、原因拆解、面談重點、快報、選品建議、驗算公式都有</td></tr>
+          <tr><td>事實與推測分開</td><td>原因標「推測」，沒有寫成事實</td></tr>
+        </table>
+        <div class="tip-card warning"><strong>Excel 驗算還是要自己做：</strong>Skill 會給公式，但「用 AI 檢查 AI」的風險還在，抽查 1～2 個數字的習慣不能省。</div>
+      </div><!-- u8-h END -->
+    </div><!-- u8 END -->
+
+
+    <!-- ======== U9: 商品影片製作 ======== -->
+    <div class="content-section" id="u9">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-3)">9</span>
+        商品影片製作
+      </div>
+      <div class="sec-desc">📌 工作情境：把春節開運福袋做成社群廣告影片。延續單元 5 的活動條件，<strong>商品包裝圖沿用 P01、P02、P04</strong>。</div>
+      <div class="tip-card note"><strong>關鍵觀念：</strong>AI 生成的是「素材與片段」，不是一鍵完成的成品。每個鏡頭都要人工檢視、決定要不要重新生成，最後再用剪輯軟體組合。</div>
+
+      <!-- u9-a -->
+      <div class="sub-block" id="u9-a">
+        <div class="sec-sub-title">製作流程總覽</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>做什麼</th><th>工具</th></tr>
+          <tr><td>S1 分鏡腳本</td><td>AI 產出 3 個分鏡：畫面描述、生圖／生影 Prompt、旁白</td><td>Gemini</td></tr>
+          <tr><td>S2 主角、商品、場景與分鏡圖</td><td>先定主角、商品、場景三種參考圖，再逐張生成分鏡圖</td><td>Gemini（Nano Banana）</td></tr>
+          <tr><td>S3 動態影片</td><td>分鏡圖＋生影 Prompt，圖生影片</td><td>Google Flow</td></tr>
+          <tr><td>S4 旁白與配樂</td><td>旁白轉語音、產生背景音樂</td><td>Google AI Studio／MyEdit／Suno</td></tr>
+          <tr><td>S5 剪輯</td><td>排序、對齊、混音、字幕、輸出</td><td>CapCut</td></tr>
+        </table>
+        <div class="tip-card warning"><strong>S1、S2 全程在同一個對話中操作！</strong>後面的 Prompt 都沿用 S1 產出的腳本與共用設定，開新對話 AI 就看不到了。</div>
+        <div class="content-h2">開工準備</div>
+        <div class="content-note">
+          <ol>
+            <li>Gemini 開新對話</li>
+            <li>上傳福袋商品包裝圖：<strong>P01.png、P02.png、P04.png</strong></li>
+          </ol>
+        </div>
+      </div><!-- u9-a END -->
+
+      <!-- u9-b -->
+      <div class="sub-block" id="u9-b">
+        <div class="sec-sub-title">S1　分鏡腳本</div>
+        <div class="tip-card info"><strong>不用先想好故事：</strong>給 AI 明確的方向（活動、商品、對象、調性），情節交給 AI 發想。【】可以換成自己的活動。</div>
+        <div class="tip-card warning"><strong>為什麼用 3D 動畫風格，不用真人寫實？</strong>Google Flow 對太像真人的人物較容易審核不通過，改用半寫實 3D 動畫人物，生成更穩定，也避免被誤認為真實人物代言。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 S1 Prompt — 3 分鏡腳本</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">你是一位擅長保健食品廣告的導演。
+請幫我構思一支 3 個分鏡的【春節開運福袋】廣告腳本，每格的動作與旁白依 Google Flow 可生成的最長秒數規劃。
+
+【活動設定】
+- 品牌：MUKO 沐光生技
+- 福袋商品：【納豆藻油複方膠囊、沐鈣元氣粉包、22株益生菌】（已上傳包裝圖）
+- 價格：原價【7600】元，特價【4580】元
+- 對象：【40～60 歲，過年想照顧全家健康的會員】
+- 故事主軸：【過年團圓，送給家人一份健康的心意】，其餘情節由你發揮
+- 主角：【一位 50 歲左右的媽媽】，或留空由你決定
+
+【方向】
+- 調性：溫暖、喜氣、有團圓感
+- 比例：16:9
+- 旁白與口白不使用醫療效能用語（治療、預防疾病、降血糖等）
+- 每格只負責一件事；結尾我會自己加活動海報，分鏡中不用畫價格
+
+請先輸出「共用設定（草案）」，放在一個 Markdown 程式碼區塊內：
+- 整體視覺風格與色調（一句話）
+- 主角外觀描述草案
+- 商品外觀：依上傳的包裝圖描述，包裝保留原樣
+- 場景設定草案（如果多個分鏡在同一場景）
+
+接著用表格輸出 3 個分鏡，欄位：分鏡編號、畫面描述、AI生圖Prompt(中文)、AI生影Prompt(中文)、旁白(VO)、主角口白
+
+再把 3 個分鏡依序放在「同一個」Markdown 程式碼區塊內（不要用表格），每個分鏡之間用一行「---」分隔。
+
+注意：
+- AI生圖、生影Prompt 只描述這一格的動作與場景，不用重複共用設定
+- 全程使用中文
+- 3 個分鏡依序是：「過年煩惱送什麼禮 → 看到健康福袋的驚喜 → 全家團圓的溫暖時刻」
+- 商品包裝依上傳的包裝圖呈現，保留原本的顏色、圖樣與文字
+- 人物為半寫實卡通造型，五官圓潤自然、表情生動，比例接近正常人比例，不使用誇張大頭 Q 版造型，具備精緻 3D 建模與動畫電影渲染質感
+- 整體光線明亮清晰、色調溫暖柔和；即使是夜晚或室內場景，也要用柔和均勻的補光讓主體與背景都清楚可見
+- 構圖自然、有故事性，如同從一部高品質 3D 動畫電影中擷取的畫面，鏡頭運動與動作維持連續運鏡，符合慣性與物理規律</div>
+        </div>
+
+        <div class="content-h2">局部調整</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 局部調整腳本</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">剛剛的腳本方向很好，但我想調整一下：
+【例如：第 3 格加入一家人一起拆福袋的畫面】
+
+請只修改我提到的部分，其餘分鏡與設定維持不變。</div>
+        </div>
+
+        <div class="tip-card note"><strong>一次只改一個細節：</strong>看到第一版後，先挑「最想改的那一項」提出，比一次列出五六點修改更容易得到理想結果。</div>
+        <div class="tip-card warning"><strong>旁白也要合規：</strong>確認旁白、口白沒有醫療效能用語，例如「吃了就不會生病」「降血糖」。</div>
+      </div><!-- u9-b END -->
+
+      <!-- u9-c -->
+      <div class="sub-block" id="u9-c">
+        <div class="sec-sub-title">S2　主角、商品、場景與分鏡圖</div>
+        <div class="tip-card info"><strong>為什麼要先做參考圖？</strong>共用設定只是一段文字，AI 每畫一格都要重新「用文字想像」主角、商品、場景，3 格畫下來容易走樣。先把它們畫成參考圖，後面每一格都上傳當參考，AI 是「照著圖畫」，不是「照著文字腦補」。</div>
+        <table class="data-table">
+          <tr><th>參考圖</th><th>鎖定什麼</th><th>本次做法</th></tr>
+          <tr><td>① 主角</td><td>外貌、服裝、表情</td><td>生成角色設計圖</td></tr>
+          <tr><td>② 商品</td><td>包裝顏色、圖樣、文字</td><td><strong>直接用 P01、P02、P04 包裝圖</strong>，不用另外生成</td></tr>
+          <tr><td>③ 場景</td><td>家具、窗戶、燈光、色調</td><td>多個分鏡在同一場景時生成場景設定圖</td></tr>
+        </table>
+        <div class="content-h2">① 角色設計圖（腳本中有人物時）</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 角色設計圖</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請把剛才「共用設定」中主角的外觀描述，轉換成「角色設計圖」的生圖Prompt：
+
+一張角色設計資料圖（character design sheet），純白色背景，【依共用設定填入畫風描述】。
+畫面上方並排呈現同一主角的 4 個角度：正面、四十五度側面、正側面、背面，比例一致、外觀完全相同，各角度下方標註中文小標籤。
+畫面下方並排呈現 6 種表情特寫（例如：開心、溫柔、驚喜、欣慰、期待、放鬆），各特寫下方標註中文標籤。
+整體排版工整，線條乾淨、無背景雜訊，方便作為後續分鏡圖與動態影片的一致性參考圖。
+
+- 人物為半寫實卡通造型，五官圓潤自然、表情生動，比例接近正常人比例，不使用誇張大頭 Q 版造型，具備精緻 3D 建模與動畫電影渲染質感
+- 光線明亮清晰、色調溫暖柔和</div>
+        </div>
+
+        <div class="content-h2">② 商品參考圖</div>
+        <div class="tip-card note"><strong>不用另外生成：</strong>課程已經有 P01、P02、P04 包裝圖，直接上傳當商品參考即可。AI 生成的商品參考圖反而可能把包裝文字畫錯。</div>
+        <div class="content-h2">③ 場景設定圖（多個分鏡在同一場景時）</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 場景設定圖</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請依「共用設定」與 各分鏡內容，整理出故事中重複出現的場景，轉換成「場景設定圖」的生圖Prompt：
+
+一張場景參考圖（environment reference sheet），依共用設定的場景描述（地點、時間、光線與色調）。
+依分鏡實際會用到的位置，挑選 2～3 個最需要的取景角度（例如：整體全景＋分鏡中出現的重點區域），每個角度的陳設、色調、光線維持一致，各角度下方標註中文小標籤說明取景位置。
+如果故事有季節或節日，加入對應的佈置。
+整體排版工整，無多餘雜訊，方便作為後續分鏡圖與動態影片的背景一致性參考。
+
+- 具備精緻 3D 建模與動畫電影渲染質感
+- 光線明亮清晰、色調溫暖柔和</div>
+        </div>
+        <div class="tip-card note"><strong>每格場景都不同時：</strong>可以省略場景設定圖；或直接把分鏡 1 的圖當場景參考，生成分鏡 2、3 時一起上傳。</div>
+        <div class="content-h2">④ 逐張生成分鏡圖</div>
+        <div class="content-note">
+          <ol>
+            <li>分鏡 1：貼上 <strong>S1 的共用設定＋分鏡 1 的 AI生圖Prompt</strong>，附上角色設計圖、場景設定圖</li>
+            <li>分鏡 2、3：貼上該格的 AI生圖Prompt，再加上下方這段</li>
+            <li>有商品出現的分鏡，記得附上對應的包裝圖</li>
+          </ol>
+        </div>
+        <div class="tip-card info"><strong>每張參考圖各自負責一件事：</strong>角色設計圖管人物、場景設定圖管背景、包裝圖管商品。這一格需要什麼就附什麼，不用每格都全部上傳。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 分鏡 2 之後：加在生圖 Prompt 後面</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請依照上方已定案的「共用設定」（視覺風格、主角外觀、商品外觀、場景設定維持不變，不需要重新輸出這段文字），生成分鏡的畫面。商品包裝依上傳的圖保留原樣。</div>
+        </div>
+
+        <div class="content-note"><p>➜ 在同一個對話中連續生成 3 張，主角才不會走樣。不滿意的格子，用單元 4-d 的局部修改方式調整。</p></div>
+      </div><!-- u9-c END -->
+
+      <!-- u9-d -->
+      <div class="sub-block" id="u9-d">
+        <div class="sec-sub-title">S3　動態影片</div>
+        <div class="tip-card note"><strong>影片長度：</strong>在 Flow 選可生成的最長秒數，多的部分到 CapCut 再修剪；免費點數有限，先挑 1～2 格練習。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 逐鏡動態影片 Prompt（接續 S1、S2 的對話）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">基於剛才完成的 3 分鏡腳本與分鏡圖，請把每一格轉換成「動態影片生成」用的 Prompt，
+接下來會貼到 Google Flow 生成影片，全程使用中文。
+
+每一格依序輸出：
+【分鏡編號】
+【鏡頭運動】（具體到方向與速度，例如：緩慢推進、橫搖、環繞）
+【動態描述】（只描述在靜態畫面上「新增了什麼動態」，不要重新描述整個場景）
+【Google Flow Prompt】（整合鏡頭運動＋動態描述，寫成一段自然流暢的中文）
+
+商品出現的畫面，加上：商品包裝保持不變、文字不變形。</div>
+        </div>
+
+        <div class="content-note">
+          <ol>
+            <li>Google Flow 選「圖片轉影片」</li>
+            <li>上傳該格分鏡圖，貼上 Google Flow Prompt，秒數選最長</li>
+            <li>逐格生成、逐格檢視：包裝字有沒有變形？人物動作自然嗎？</li>
+          </ol>
+        </div>
+        <div class="tip-card info"><strong>多張參考圖要「各自負責不同任務」：</strong>例如這一格的分鏡圖＋角色設計圖＋商品包裝圖一起上傳，AI 才會同時鎖定構圖、人物與商品，而不是上傳好幾張相似的版本。</div>
+      </div><!-- u9-d END -->
+
+      <!-- u9-e -->
+      <div class="sub-block" id="u9-e">
+        <div class="sec-sub-title">S4　旁白與配樂</div>
+        <div class="content-h2">① 旁白配音工具</div>
+        <table class="data-table">
+          <tr><th>工具</th><th>特色</th><th>適合</th></tr>
+          <tr><td>Google AI Studio（Gemini TTS）</td><td>可用情緒標籤分段調語氣，免費</td><td>想要語氣有起伏</td></tr>
+          <tr><td>MyEdit</td><td>中文聲音多、有台灣腔，點數制</td><td>一次貼完整段生成</td></tr>
+          <tr><td>雅婷文字轉語音</td><td>免費、最簡單，台灣口音道地</td><td>先測試旁白效果</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — Google AI Studio 旁白（接續 S1 的對話）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">基於前面的 3 分鏡腳本，我要把旁白貼進 Google AI Studio 的 Gemini TTS。
+要求：
+1. 依分鏡順序整理旁白與主角口白，3 句連成完整故事線，語氣要有情緒轉折
+2. 每句前面用英文方括號標一個最貼切的情緒標籤，不要每句都一樣
+3. 額外輸出：
+   - 場景（Scene）：一句英文描述錄音情境
+   - 範例上下文（Context）：一段英文描述整體語氣風格
+   - 發言人1文字內容：把 3 句整合成一段，可直接貼入同一個語音塊
+4. 不使用醫療效能用語</div>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — MyEdit／雅婷 純文字稿</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請把剛才的旁白去除所有情緒標籤，合併成一段純文字稿，句子之間適度加入「……」引導停頓，並統計總字數。</div>
+        </div>
+
+        <div class="content-h2">② 背景音樂</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — Suno 背景音樂</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">依這支福袋廣告的 3 個分鏡與旁白情緒，幫我寫 Suno 用的音樂描述：
+- 純音樂，不要人聲（旁白才聽得清楚）
+- 風格：溫暖、喜氣的新年感，結尾漸弱，方便對齊結尾的活動海報
+請輸出一段 2～3 句、可直接貼進 Suno「Song Description」的描述，並提醒我打開 Instrumental。</div>
+        </div>
+
+        <div class="tip-card warning"><strong>商用授權：</strong>Suno 免費版產出的音樂不可商用，正式對外發布請升級付費方案，或改用有商用授權的音樂庫。</div>
+      </div><!-- u9-e END -->
+
+      <!-- u9-f -->
+      <div class="sub-block" id="u9-f">
+        <div class="sec-sub-title">S5　CapCut 剪輯</div>
+        <div class="tip-card info">前面已經有影片片段、旁白音檔、背景音樂，這一步只需要「排序、對齊、混音、輸出」。</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>操作重點</th></tr>
+          <tr><td>1 匯入素材</td><td>3 段影片、單元 4 的活動海報、旁白音檔、背景音樂拖進時間軸</td></tr>
+          <tr><td>2 排序對齊</td><td>依分鏡順序排列，對齊旁白句子的節奏點</td></tr>
+          <tr><td>3 混音</td><td>背景音樂音量壓低，旁白出現時用「自動閃避」降低音樂</td></tr>
+          <tr><td>4 調色統一</td><td>套用同一組濾鏡，讓不同批次的片段色調一致</td></tr>
+          <tr><td>5 字幕與結尾</td><td>活動海報放在最後當結尾圖卡，加上「本產品為食品，不能取代正常飲食與藥物治療」</td></tr>
+          <tr><td>6 輸出</td><td>16:9 橫式或 9:16 直式（社群短影音），解析度 1080p</td></tr>
+        </table>
+        <div class="tip-card warning"><strong>發布前檢查：</strong>商品包裝與價格正確、旁白沒有醫療效能用語、音樂有商用授權。</div>
+      </div><!-- u9-f END -->
+    </div><!-- u9 END -->
+
+    <!-- ======== U10: 手機版影片製作 ======== -->
+    <div class="content-section" id="u10">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-4)">10</span>
+        手機版影片製作
+      </div>
+      <div class="sec-desc">📌 工作情境：外出、在門市，沒有電腦，也要快速做一支社群短影音。<strong>建議先學單元 9 電腦版，懂了每一步的用意，再用手機版求快。</strong>流程和單元 9 一樣，只是更短、更精簡：3 個分鏡＋海報結尾、9:16 直式，配音與配樂都在 CapCut 裡完成。</div>
+
+      <!-- u10-a -->
+      <div class="sub-block" id="u10-a">
+        <div class="sec-sub-title">手機版流程與準備</div>
+        <table class="data-table">
+          <tr><th></th><th>電腦版（單元 9）</th><th>手機版（本單元）</th></tr>
+          <tr><td>分鏡</td><td>3 個分鏡＋海報結尾、16:9</td><td>3 個分鏡＋海報結尾、9:16 直式</td></tr>
+          <tr><td>腳本格式</td><td>表格＋程式碼區塊</td><td><strong>不用表格</strong>，每個分鏡一個程式碼區塊，方便點一下就複製</td></tr>
+          <tr><td>生圖</td><td>Gemini 網頁</td><td>Gemini App</td></tr>
+          <tr><td>生影片</td><td>Google Flow 網頁</td><td>手機瀏覽器開 Google Flow</td></tr>
+          <tr><td>配音、配樂</td><td>AI Studio、MyEdit、Suno</td><td>CapCut 內建「文字朗讀」與音樂庫</td></tr>
+          <tr><td>剪輯</td><td>CapCut 電腦版</td><td>CapCut App</td></tr>
+        </table>
+        <div class="content-h2">開工準備</div>
+        <table class="data-table">
+          <tr><th>準備</th><th>說明</th></tr>
+          <tr><td>App</td><td>安裝 <strong>Gemini</strong>、<strong>CapCut</strong>，並登入同一個 Google 帳號</td></tr>
+          <tr><td>商品圖</td><td>P01、P02、P04 包裝圖存到手機相簿</td></tr>
+          <tr><td>講義</td><td>用手機開啟本講義，Prompt 按「複製」後切換到 App 貼上</td></tr>
+        </table>
+        <div class="tip-card note"><strong>手機操作小技巧：</strong>
+          <ul>
+            <li>AI 產生的圖片：長按 → 儲存到相簿，之後上傳到 Flow、CapCut 都從相簿選</li>
+            <li>程式碼區塊右上角有「複製」，比手動選取文字快</li>
+            <li>M1、M2 在 Gemini App 的<strong>同一個對話</strong>中完成</li>
+          </ul>
+        </div>
+      </div><!-- u10-a END -->
+
+      <!-- u10-b -->
+      <div class="sub-block" id="u10-b">
+        <div class="sec-sub-title">M1　分鏡腳本</div>
+        <div class="content-note">
+          <ol>
+            <li>Gemini App 開新對話，點「＋」從相簿上傳 P01、P02、P04</li>
+            <li>貼上下方 Prompt</li>
+          </ol>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 M1 Prompt — 3 分鏡腳本（手機精簡版）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">福袋廣告，3格，9:16直式，每格用Flow最長秒數。
+商品：已上傳的3款。
+主角：50歲媽媽，3D動畫風。
+每格一件事：煩惱送禮→看到福袋驚喜→全家團圓。
+結尾我會自己加海報，不用畫價格。
+不用醫療用語，不要表格，每格一個程式碼區塊。</div>
+        </div>
+
+        <div class="tip-card info"><strong>手機版 Prompt 為什麼這麼短？</strong>手機打字、閱讀都不方便，只留必要條件：格數、商品、主角、節奏、合規。要求「不要表格、每格一個程式碼區塊」，點一下就能複製到下一步。</div>
+        <div class="tip-card note"><strong>3 格說得清楚嗎？</strong>可以，前提是<strong>每一格只負責一件事</strong>：煩惱 → 轉折 → 結果。商品與價格不用 AI 生成，<strong>直接用單元 4 做好的活動海報當結尾圖卡</strong>：包裝與價格 100% 正確，也省下 Flow 點數。</div>
+        <div class="tip-card note"><strong>手機版求快，電腦版求穩：</strong>Prompt 越短，AI 發揮空間越大，每次結果差異也越大。重要或要長期使用的影片，請用單元 9 的電腦版。</div>
+        <div class="tip-card warning">要修改時，一次只改一個地方，例如：「第 2 格改成全家一起拆福袋，其他不變」。</div>
+      </div><!-- u10-b END -->
+
+      <!-- u10-c -->
+      <div class="sub-block" id="u10-c">
+        <div class="sec-sub-title">M2　角色與分鏡圖</div>
+        <div class="content-h2">① 角色設計圖</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 M2 Prompt — 角色設計圖（接續 M1 的對話）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">畫主角的角色設計圖：白底，正面、側面、背面，3D動畫風。</div>
+        </div>
+
+        <div class="content-note"><p>➜ 長按圖片 → 儲存到相簿。</p></div>
+        <div class="tip-card note"><strong>手機版省略場景設定圖：</strong>求快時，直接把分鏡 1 的圖當場景參考，生成分鏡 2、3 時一起上傳；商品一樣用 P01、P02、P04 包裝圖。</div>
+        <div class="content-h2">② 分鏡圖</div>
+        <div class="content-note">
+          <ol>
+            <li>複製分鏡 1 的「生圖Prompt」貼上，加上下方這段送出</li>
+            <li>分鏡 2、3 依序做，有商品的分鏡記得附上包裝圖</li>
+            <li>每張都長按 → 儲存到相簿</li>
+          </ol>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 加在每個生圖 Prompt 後面</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">9:16直式，商品包裝保持原樣。</div>
+        </div>
+
+      </div><!-- u10-c END -->
+
+      <!-- u10-d -->
+      <div class="sub-block" id="u10-d">
+        <div class="sec-sub-title">M3　動態影片</div>
+        <div class="content-note">
+          <ol>
+            <li>手機瀏覽器開啟 <strong>Google Flow</strong>，登入同一個 Google 帳號</li>
+            <li>選「圖片轉影片」，從相簿上傳分鏡 1 的圖</li>
+            <li>貼上 M1 分鏡 1 的「生影Prompt」，比例選 9:16、秒數選最長</li>
+            <li>生成後下載到手機，分鏡 2、3 依序完成</li>
+          </ol>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 生影 Prompt 後面可加這段</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">動作自然，包裝文字不變形。</div>
+        </div>
+
+        <div class="tip-card note"><strong>Flow 在手機上不好操作？</strong>部分帳號可以在 Gemini App 直接製作影片：上傳分鏡圖＋貼上生影 Prompt。是否能用、可做幾支，依帳號方案而定。</div>
+        <div class="tip-card warning">免費點數有限，先做 1 格確認效果，再做其他格。</div>
+      </div><!-- u10-d END -->
+
+      <!-- u10-e -->
+      <div class="sub-block" id="u10-e">
+        <div class="sec-sub-title">M4　CapCut 配音、配樂與剪輯</div>
+        <div class="tip-card info"><strong>手機版全部在 CapCut 完成：</strong>不用另外開配音、音樂網站，旁白用 CapCut 的「文字朗讀」，音樂用 CapCut 音樂庫。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 先請 Gemini 整理旁白（接續 M1 的對話）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">3格旁白合成一段，每句一行，配合影片長度。</div>
+        </div>
+
+        <table class="data-table">
+          <tr><th>步驟</th><th>CapCut App 操作</th></tr>
+          <tr><td>1 新增專案</td><td>依序選 3 段影片＋單元 4 的活動海報，比例設 9:16</td></tr>
+          <tr><td>2 加字幕</td><td>點「文字」→「新增文字」，貼上第 1 句旁白，對齊第 1 段影片；其他句同樣做法</td></tr>
+          <tr><td>3 文字朗讀</td><td>選取字幕 →「文字朗讀」→ 挑一個溫暖的中文聲音，旁白就會自動產生</td></tr>
+          <tr><td>4 配樂</td><td>點「音訊」→「音樂」→ 搜尋「新年」「溫馨」，加入後把音量調低</td></tr>
+          <tr><td>5 結尾</td><td>活動海報放在最後當結尾圖卡，加上「本產品為食品，不能取代正常飲食與藥物治療」</td></tr>
+          <tr><td>6 輸出</td><td>右上角「匯出」，解析度 1080p，直接分享到社群</td></tr>
+        </table>
+        <div class="tip-card warning"><strong>發布前檢查：</strong>商品包裝與價格正確、旁白沒有醫療效能用語；CapCut 音樂庫的音樂用於商業廣告前，請確認授權範圍。</div>
+      </div><!-- u10-e END -->
+    </div><!-- u10 END -->
+
+  </div><!-- /content-area -->
+
+
+  <!-- ===== 右欄：工具列 ===== -->
+  <div class="tool-panel">
+    <div class="tool-section">
+      <div class="tool-section-title">授課單位</div>
+      <a class="tool-btn p1-btn" href="https://www.toyobio.com.tw/portal_c1_cnt.php?owner_num=c1_55715&button_num=c1&folder_id=12937" target="_blank">
+        <span class="tool-name">TOYO 系列商品</span>
+      </a>
+    </div>
+    <div class="tool-section">
+      <div class="tool-section-title">課程工具</div>
+      <a class="tool-btn" href="https://zoego99.github.io/vizgo/index2.html" target="_blank">
+        <span class="tool-name">資訊圖 Prompt 生成器</span>
+      </a>
+      <a class="tool-btn" href="https://script.google.com/macros/s/AKfycbw7nbIBNrFClroUj4-JwSGoSRy8DoQtY-7VVatMTi0B5VUXrl6ol3_4IkdzanVbP7Wp/exec" target="_blank">
+        <span class="tool-name">雲端圖片直連工具</span>
+      </a>
+    </div>
+    <div class="tool-section">
+      <div class="tool-section-title">AI 工具</div>
+      <a class="tool-btn" href="https://gemini.google.com" target="_blank">
+        <span class="tool-name">Gemini</span>
+      </a>
+      <a class="tool-btn" href="https://notebook.google.com/" target="_blank">
+        <span class="tool-name">筆記本</span>
+      </a>
+      <a class="tool-btn" href="https://chatgpt.com" target="_blank">
+        <span class="tool-name">ChatGPT</span>
+      </a>
+      <a class="tool-btn" href="https://www.canva.com" target="_blank">
+        <span class="tool-name">Canva</span>
+      </a>
+      <a class="tool-btn" href="https://flow.google.com/" target="_blank">
+        <span class="tool-name">Google Flow</span>
+      </a>
+      <a class="tool-btn" href="https://github.com" target="_blank">
+        <span class="tool-name">GitHub</span>
+      </a>
+    </div>
+    <div class="tool-section">
+      <div class="tool-section-title">影片工具</div>
+      <a class="tool-btn" href="https://aistudio.google.com" target="_blank"><span class="tool-name">Google AI Studio</span></a>
+      <a class="tool-btn" href="https://myedit.online" target="_blank"><span class="tool-name">MyEdit</span></a>
+      <a class="tool-btn" href="https://tts.yating.tw/" target="_blank"><span class="tool-name">雅婷文字轉語音</span></a>
+      <a class="tool-btn" href="https://suno.com" target="_blank"><span class="tool-name">Suno</span></a>
+      <a class="tool-btn" href="https://www.capcut.com" target="_blank"><span class="tool-name">CapCut 剪映</span></a>
+    </div>
+  </div><!-- /tool-panel -->
+
+</div><!-- /app-layout -->
+
+<script src="js/p2.js"></script>
+<script>
+  // 進頁面預設顯示第一個單元（避免因未觸發點擊事件導致中間內容區空白）
+  document.addEventListener('DOMContentLoaded', function () {
+    try {
+      if (typeof showSection === 'function') { showSection('u1'); }
+      if (typeof showSub === 'function') { showSub('u1', 'u1-a'); }
+    } catch (e) { /* 若頁面 JS 尚未載入完成則忽略 */ }
+  });
+</script>
+</body>
+</html>
