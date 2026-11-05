@@ -116,7 +116,7 @@ html, body { overflow: hidden; }
 .content-area {
   background: var(--cream);
   overflow-y: auto;
-  padding: 24px 28px;
+  padding: 24px 5%;
   scroll-behavior: smooth;
 }
 .content-area::-webkit-scrollbar { width: 5px; }

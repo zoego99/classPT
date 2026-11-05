@@ -141,6 +141,7 @@ const UNIT_MAP = {
   gjunBD202610:  { label: "北認｜ AI Prompt",     href: "course-ai202610.html"  ,   note:"26/10/17,gjunBD202610 北認" },
   fmsc:  { label: "鬍鬚張｜ AI Prompt",     href: "fmsc.html"  ,   note:"26/10/22, 區主管管理" },
   AI202611:  { label: "AI24 Prompt",     href: "ai202611.html"  ,   note:"26/10/22, 區主管管理" },
+  toyo:  { label: "東洋",     href: "toyo.html"  ,   note:"26/10/31, 東洋(北認)、營養食品/行銷不錯的範例" },
   /* 新單位在此新增一行 */
 };
 

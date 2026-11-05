@@ -21,10 +21,10 @@
 <span class="nav-sub">心怡｜zoego99@gmail.com</span>
 </div>
 </a>
-<div class="nav-links">
+<!-- <div class="nav-links">
 <a href="index.html?unit=AI202611">← 情境練習</a>
 <a class="active" href="ai202611.html">圖文影音行銷 Prompt</a>
-</div>
+</div> -->
 </nav>
 <!-- ===== 三欄版面 ===== -->
 <div class="app-layout">
@@ -176,6 +176,19 @@
 <button class="sec-sub-btn" id="btn-u10-b" onclick="showSub('u10','u10-b')">S2 利用網站，進行裁切圖片</button>
 <button class="sec-sub-btn" id="btn-u10-c" onclick="showSub('u10','u10-c')">S3 iPhone使用者</button>
 <button class="sec-sub-btn" id="btn-u10-d" onclick="showSub('u10','u10-d')">S4 Line 拍貼</button>
+</div>
+<div class="sec-group">
+<button class="sec-group-btn" id="btn-u11" onclick="showSection('u11')">
+<span class="sec-num" style="background:var(--sec-1)">11</span>
+          AI 影音廣告
+        </button>
+<button class="sec-sub-btn" id="btn-u11-a" onclick="showSub('u11','u11-a')">製作流程總覽</button>
+<button class="sec-sub-btn" id="btn-u11-b" onclick="showSub('u11','u11-b')">S1 分鏡腳本</button>
+<button class="sec-sub-btn" id="btn-u11-c" onclick="showSub('u11','u11-c')">S2 參考圖與分鏡圖</button>
+<button class="sec-sub-btn" id="btn-u11-d" onclick="showSub('u11','u11-d')">S3 動態影片</button>
+<button class="sec-sub-btn" id="btn-u11-e" onclick="showSub('u11','u11-e')">Flow 人物走樣與英文對白</button>
+<button class="sec-sub-btn" id="btn-u11-f" onclick="showSub('u11','u11-f')">S4 旁白與配樂</button>
+<button class="sec-sub-btn" id="btn-u11-g" onclick="showSub('u11','u11-g')">S5 CapCut 剪輯</button>
 </div>
 </div>
 </div><!-- /sidebar -->
@@ -1358,6 +1371,7 @@
 <tr><td>Excel（.xlsx）</td><td>行程比較表、預算試算、行李清單</td><td>指定欄位、工作表名稱、需要的公式</td></tr>
 <tr><td>Word（.docx）</td><td>行前手冊、注意事項、每日行程說明</td><td>指定章節結構、標題層級、表格位置</td></tr>
 <tr><td>PPT（.pptx）</td><td>行程說明簡報</td><td>指定張數、每頁內容、字級與視覺風格</td></tr>
+<tr><td>網站（.html）</td><td>互動式行程網站、手機離線查閱</td><td>內容以勾選的來源為準，Prompt 只寫網站設計條件</td></tr>
 </table>
 <div class="tip-card warning"><strong>⚠️ 下載後一定要打開檢查：</strong>Excel 公式是否正確、Word 標題樣式是否套用、PPT 文字是否超出邊界。功能依帳號與版本陸續開放，若沒有出現檔案，可改請 AI 以表格或 Markdown 輸出，再貼到 Office。</div>
 <div class="prompt-card">
@@ -1408,6 +1422,40 @@
 
 # 注意事項
 費用與營業資訊未確認的寫「待確認」。</div>
+</div>
+<div class="content-h2">產生網站：旅遊行程導覽網站（.html）</div>
+<div class="tip-card info"><strong>行程內容交給「來源」，Prompt 越短越好：</strong>每日行程、景點、餐宿都已在勾選的來源中，AI 會自己決定版面與互動。一句話就能做出完整網站，再補上想要的地圖與圖片即可。</div>
+<div class="prompt-card">
+<div class="prompt-card-header"><span class="prompt-card-title">📌 產生網站 — 旅遊行程導覽網站｜勾選：行程相關來源＋定3_每日行程（主講者圖片除外）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+<div class="prompt-code">製作網站將每天行程進行安排，並能提供 html 下載檔。
+網站另外加上：
+- 景點地圖：【手繪插畫風／類似 Google 地圖】，標出景點與每天的路線
+- 景點圖片：每個景點放一張當地風景或人文的參考圖片，並標示圖片來源</div>
+</div>
+<div class="content-h2">網站沒有圖片時</div>
+<div class="tip-card note"><strong>為什麼常常沒有圖片？</strong>Notebook 只根據來源回答，不會上網找圖片，所以網站常只有文字與圖示，或出現破圖。可以先追問一次；仍然沒有，就改用自己準備的圖片。</div>
+<div class="prompt-card">
+<div class="prompt-card-header"><span class="prompt-card-title">📌 追問 — 補上景點圖片｜勾選：同上</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+<div class="prompt-code">網站的其他部分維持不變，只補上景點圖片：
+每個景點加一張參考圖片，使用 Wikimedia Commons 的公開圖片網址，圖片下方標示來源；
+圖片載入失敗時，改顯示色塊加景點名稱，不要出現破圖。
+完成後提供新的 html 下載檔。</div>
+</div>
+<div class="prompt-card">
+<div class="prompt-card-header"><span class="prompt-card-title">📌 追問 — 換成自己準備的圖片｜勾選：同上</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+<div class="prompt-code">網站的其他部分維持不變，請把以下圖片放到對應的景點：
+【景點名稱｜圖片網址】
+【景點名稱｜圖片網址】
+完成後提供新的 html 下載檔。</div>
+</div>
+<div class="tip-card note"><strong>自己的圖片網址從哪裡來？</strong>把照片上傳到雲端硬碟，再用單元 9「S4 雲端圖庫取得網址」的直連工具，取得可以放進網站的圖片網址。</div>
+<div class="tip-card warning"><strong>⚠️ 網站驗收：</strong>
+<ul>
+<li>核對行程代碼、價格、航班、店家名稱是否真的出現在來源中；AI 常會為了讓網站看起來完整，自行補上這些資訊</li>
+<li>檢查圖片是否正確顯示、是否和景點相符</li>
+<li>用手機打開下載的 HTML，確認分頁切換、地圖點選等功能都能正常操作</li>
+<li>示意地圖不是實際比例，請勿當作導航使用</li>
+</ul>
 </div>
 </div><!-- u5-d END -->
 <!-- u5-e -->
@@ -2823,49 +2871,18 @@ description: 【行銷文案撰寫】依使用者指定的平台（IG、FB、Thr
 <div class="tip-card warning"><strong>⚠️ 為什麼之前的輪播圖找不到地方換？</strong>沒有給維護規則時，AI 會把圖片網址分散寫在 HTML 標籤、CSS 背景圖、JavaScript 裡，同一張圖甚至出現好幾次。下面的 Prompt 用「網站設定區」把所有可替換內容集中到檔案最上方，並加上中文註解與編號，從源頭解決這個問題。</div>
 <div class="prompt-card">
 <div class="prompt-card-header">
-<span class="prompt-card-title">📌 Prompt — 生成網站（GPS 三步驟＋輪播＋建議圖片＋維護規則）</span>
+<span class="prompt-card-title">📌 Prompt — 生成網站（品牌網站＋維護規則）</span>
 <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
 </div>
-<div class="prompt-code">【Goal 目標】
-請幫我製作一個【咖啡館】的品牌形象網站（單一 HTML 檔），目的是讓【附近上班族與喜愛咖啡的顧客】快速認識品牌、查看招牌商品，並【預約座位／找到店面】。
-
-【Position 定位】
-- 品牌：【巷光咖啡】，位於【店家地址】，提供【精品咖啡、手工甜點、自家烘焙咖啡豆】
-- 目標客群：【附近上班族、大學生、遠距工作者】
+<div class="prompt-code">請幫我製作【巷光咖啡】的品牌形象網站（單一 HTML 檔），讓【附近上班族與喜愛咖啡的顧客】認識品牌、查看招牌商品，並【預約座位／找到店面】。
 - 風格：【溫暖、文青、有質感】，主色【咖啡棕】搭配【燕麥白】，手機瀏覽要好看
-
-【Shape 形式】
-網站區塊依序為：
-1. 首頁輪播（Slider）
-2. 招牌商品（【飲品／甜點／咖啡豆】三張卡片）
-3. 店家特色（例如：【插座與 Wi-Fi、寵物友善、可包場】）
-4. 交通位置（嵌入 Google 地圖＋營業時間）
-5. 預約與聯絡（含 Google 表單連結按鈕）
-文案請你依【咖啡館】情境先撰寫一版。
-
-# 首頁輪播規格
-- 共 3 張，張數可增減：設定區多一筆就多一張、刪一筆就少一張，不需要修改其他程式
-- 每 5 秒自動切換，滑鼠移入時暫停
-- 左右箭頭＋下方圓點指示，手機可左右滑動切換
-- 圖片比例 16:9，以「填滿並裁切」方式顯示，不可變形
-- 每張圖上疊主標、副標、按鈕，加半透明深色遮罩讓文字清楚
-- 圖片載入失敗時，顯示灰色底與「圖片待補」字樣
-
-# 圖片規則
-- 目前沒有實際照片，所有圖片先用 placehold.co 佔位圖，佔位圖上直接顯示編號與尺寸
-  （例如：https://placehold.co/1920x1080?text=S1+1920x1080）
-- 輪播大圖 16:9（1920×1080），商品卡片 4:3（800×600）
-- 每個圖片位置都要附「建議圖片」說明：該拍什麼／挑什麼照片、構圖重點（例如主體偏左、留出放文字的空間）
+- 區塊：首頁輪播（3 張）、招牌商品（【飲品／甜點／咖啡豆】）、店家特色、交通位置、預約與聯絡；文案請你先寫一版
+- 圖片先用 placehold.co 佔位圖，圖上顯示編號與尺寸；回覆最後列出「建議圖片清單」：編號／位置／建議尺寸／建議拍什麼
 
 # 維護規則（最重要）
-- 所有會更換的文字與圖片，一律集中寫在檔案最上方的「網站設定區（SITE_CONFIG）」
-- 頁面內容由程式讀取設定區自動產生，HTML 內文不得再寫死任何圖片網址或文案
-- 設定區每一項都要加中文註解與編號：輪播 S1、S2…，商品卡片 C1、C2…，店家特色 F1、F2…，例如：
-  // 👉【S1】首頁輪播第1張
-
-# 輸出要求
-1. 輸出完整的單一 HTML 檔，並開啟預覽
-2. 回覆最後列出「建議圖片清單」：編號／位置／建議尺寸／建議圖片說明</div>
+- 所有會更換的文字與圖片，集中寫在檔案最上方的「網站設定區（SITE_CONFIG）」，頁面由程式讀取設定區產生
+- 每一項加中文註解與編號：輪播 S1、S2…，商品卡片 C1、C2…，店家特色 F1、F2…
+- 輪播張數由設定區決定，增加或刪除一筆就增減一張</div>
 </div>
 <div class="tip-card info"><strong>S2 預覽確認，常用的修改說法：</strong>「輪播文字改到左下角」、「手機版卡片改成一欄」、「按鈕顏色改成奶油杏色」、「店家特色加一項『寵物友善』」。一次只改一兩件事，AI 比較不會改壞其他地方。版面與區塊都確認後，再進入下一步。</div>
 </div><!-- u9-b END -->
@@ -3070,6 +3087,317 @@ C2-說明｜文字｜【每日限量手工肉桂捲】]
 </div>
 </div><!-- u10-d END -->
 </div><!-- u10 END -->
+<!-- ======== U11: AI 影音廣告 ======== -->
+<div class="content-section" id="u11">
+<div class="sec-title">
+<span class="sec-badge" style="background:var(--sec-1)">11</span>
+        AI 影音廣告
+      </div>
+<div class="sec-desc">📌 工作情境：替【巷光咖啡】的【冬季新品・肉桂燕麥拿鐵】做一支社群與門市都能用的廣告影片。<strong class="blue">用 AI 做出 6 個分鏡的腳本、畫面、動態、旁白與配樂，再用剪輯軟體組合成完整影片。</strong></div>
+<div class="lesson-outcome"><strong>🎯 本單元完成成果</strong><span>完成 6 個分鏡的廣告影片：分鏡腳本、參考圖、動態片段、旁白與配樂，並剪輯輸出。</span></div>
+<div class="tip-card note"><strong>關鍵觀念：</strong>AI 生成的是「素材與片段」，不是一鍵完成的成品。每個鏡頭都要人工檢視、決定要不要重新生成，最後再用剪輯軟體組合。</div>
+<!-- u11-a -->
+<div class="sub-block" id="u11-a">
+<div class="sec-sub-title">製作流程總覽</div>
+<table class="data-table">
+<tr><th>步驟</th><th>做什麼</th><th>工具</th></tr>
+<tr><td>S1 分鏡腳本</td><td>AI 產出 6 個分鏡：畫面描述、生圖／生影 Prompt、旁白</td><td>Gemini／ChatGPT</td></tr>
+<tr><td>S2 參考圖與分鏡圖</td><td>先定主角、商品、場景三種參考圖，再逐張生成 6 張分鏡圖</td><td>Gemini（Nano Banana）</td></tr>
+<tr><td>S3 動態影片</td><td>分鏡圖＋影片 Prompt，圖片轉影片</td><td>Google Flow</td></tr>
+<tr><td>S4 旁白與配樂</td><td>旁白轉語音、產生背景音樂</td><td>Google AI Studio／MyEdit／雅婷文字轉語音／Suno</td></tr>
+<tr><td>S5 剪輯</td><td>排序、對齊、混音、字幕、輸出</td><td>CapCut 剪映</td></tr>
+</table>
+<div class="tip-card warning"><strong>S1、S2 全程在同一個對話中操作！</strong>後面的 Prompt 都沿用 S1 產出的腳本與共用設定，開新對話 AI 就看不到了。</div>
+<div class="content-h2">開工準備</div>
+<div class="content-note">
+<ol style="margin-left:20px;">
+<li>Gemini 或 ChatGPT 開新對話</li>
+<li>準備 1～2 張商品圖：<strong>自行拍攝的商品照片</strong>，或單元 4 生成的海報主視覺</li>
+<li>準備品牌名稱、新品特色與標語（可沿用單元 6 的品牌定位）</li>
+</ol>
+</div>
+<div class="tip-card info"><strong>為什麼用 3D 動畫風格，不用真人寫實？</strong>影片工具對太像真人的人物較容易審核不通過，也比較容易「越動越走樣」。改用半寫實 3D 動畫人物，生成更穩定，也避免被誤認為真實人物代言。</div>
+</div><!-- u11-a END -->
+<!-- u11-b -->
+<div class="sub-block" id="u11-b">
+<div class="sec-sub-title">S1　分鏡腳本</div>
+<div class="tip-card info"><strong>不用先想好故事：</strong>給 AI 明確的方向（品牌、商品、對象、調性），情節交給 AI 發想。【】可以換成自己的品牌與商品，故事主軸也可以留空讓 AI 決定。</div>
+<div class="prompt-card">
+<div class="prompt-card-header"><span class="prompt-card-title">📌 S1 Prompt — 6 分鏡廣告腳本</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+<div class="prompt-code">你是一位擅長活潑熱鬧、節奏明快、帶點幽默感的廣告導演。
+請幫我構思一支 6 個分鏡的【咖啡館新品】廣告影片腳本。
+
+【情形1：我提供設定，請你補完故事情節】
+【設定】
+- 品牌：【巷光咖啡】
+- 主打商品：【冬季新品・肉桂燕麥拿鐵】（已上傳商品圖）
+- 對象：【附近上班族】
+- 故事主軸：【寒冷早晨的上班路上，一杯熱拿鐵讓整天暖起來】，其餘情節由你發揮（也可以全部交給你決定）
+- 主角：【一位 30 歲左右的上班族】，或留空由你決定（可以是人物、擬人化物件或寵物）
+
+【情形2：品牌名稱、產品內容、故事情節、主角皆由你自由發揮】
+（若採用情形1，請忽略此段）
+
+【方向】
+- 調性：活潑、熱鬧、有記憶點、帶點幽默感
+- 節奏：畫面熱鬧、節奏明快，每格都要有明顯的動態元素（例如：誇張的表情反應、背景路人走動、熱氣與落葉飄動、鏡頭推進或跟拍），人物肢體動作保持簡單，熱鬧感主要靠表情、背景與鏡頭
+- 比例：【16:9】（社群短影音可改 9:16）
+- 每格只負責一件事；最後一格留給商品特寫，結尾的店名與活動文字我會自己加上，分鏡中不用畫文字
+- 不出現任何其他品牌的商標與招牌文字
+
+請先輸出「共用設定（草案）」，放在一個 Markdown 程式碼區塊內：
+- 整體視覺風格與色調（一句話）
+- 主角外觀描述草案
+- 商品外觀：依上傳的商品圖描述，保留原樣
+- 場景設定草案（多個分鏡在同一場景時）
+
+接著用表格輸出 6 個分鏡，欄位：分鏡編號、畫面描述、鏡頭運動、AI生圖Prompt(中文)、AI生影Prompt(中文)、旁白(VO)、主角口白
+
+再把 6 個分鏡依序放在「同一個」Markdown 程式碼區塊內（不要用表格），每個分鏡之間用一行「---」分隔。
+
+注意：
+- AI生圖、生影 Prompt 只描述這一格的動作與場景，不用重複共用設定
+- 每格的 AI生影Prompt 都要依下列格式組成，不可省略：
+  開頭固定寫：「3D 動畫電影風格，完全沿用起始畫面的人物外觀與畫風，不要轉成真人實拍。」
+  中間寫：鏡頭運動＋這一格新增的動態
+  結尾依這一格有沒有主角口白：
+  - 沒有口白：「無對白，只有環境音。」
+  - 有口白：「角色用台灣口音的中文（國語）說：『口白內容』，不要說英文。」
+- 故事主要靠旁白推進；主角口白只放在真的需要的分鏡，每句 15 字內，沒有就寫「無」
+- 全程使用中文
+- 人物為半寫實卡通造型，五官圓潤自然、表情生動，比例接近正常人比例，不使用誇張大頭 Q 版造型，具備精緻 3D 建模與動畫電影渲染質感
+- 光線明亮清晰、色調溫暖柔和；構圖自然、有故事性，如同從一部高品質 3D 動畫電影中擷取的畫面</div>
+</div>
+<div class="content-h2">局部調整</div>
+<div class="prompt-card">
+<div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 局部調整腳本</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+<div class="prompt-code">剛剛的腳本方向很好，但我想調整一下：
+【例如：第 3 格加一個反轉笑點／主角換成一隻柴犬】
+
+請只修改我提到的部分，其餘分鏡與設定維持不變。</div>
+</div>
+<div class="tip-card note"><strong>一次只改一個細節：</strong>看到第一版後，先挑「最想改的那一項」提出，比一次列出五六點修改更容易得到理想結果。</div>
+<div class="tip-card warning"><strong>旁白也要檢查：</strong>不使用「最好喝」「第一」「唯一」等誇大用語；商品與活動內容以實際公告為準，不要自行新增優惠。</div>
+</div><!-- u11-b END -->
+<!-- u11-c -->
+<div class="sub-block" id="u11-c">
+<div class="sec-sub-title">S2　參考圖與分鏡圖</div>
+<div class="tip-card info"><strong>為什麼要先做參考圖？</strong>共用設定只是一段文字，AI 每畫一格都要重新「用文字想像」主角、商品、場景，6 格畫下來容易走樣。先畫成參考圖，後面每一格都上傳當參考，AI 是「照著圖畫」，不是「照著文字腦補」。</div>
+<table class="data-table">
+<tr><th>參考圖</th><th>鎖定什麼</th><th>本次做法</th></tr>
+<tr><td>① 主角</td><td>外貌、服裝、表情</td><td>生成角色設計圖</td></tr>
+<tr><td>② 商品</td><td>杯子外觀、顏色、拉花</td><td><strong>優先用自行拍攝的商品照片</strong>；沒有照片時生成商品參考圖</td></tr>
+<tr><td>③ 場景</td><td>店內吧台、街角、燈光、色調</td><td>多個分鏡在同一場景時生成場景設定圖</td></tr>
+</table>
+<div class="content-h2">① 角色設計圖</div>
+<div class="prompt-card">
+<div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 角色設計圖（人物／擬人化物件／寵物皆適用）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+<div class="prompt-code">請把剛才「共用設定」中主角的外觀描述，轉換成「角色設計圖」並直接生成：
+
+一張角色設計資料圖（character design sheet），純白色背景，依共用設定的畫風。
+畫面上方並排呈現同一主角的 4 個角度：正面、四十五度側面、正側面、背面，比例一致、外觀完全相同，各角度下方標註中文小標籤。
+畫面下方並排呈現 6 種表情或狀態特寫（依主角性格挑選，例如：睏倦、驚訝、期待、開心、滿足、得意），各特寫下方標註中文標籤。
+整體排版工整，線條乾淨、無背景雜訊，方便作為後續分鏡圖與動態影片的一致性參考圖。
+
+- 人物為半寫實卡通造型，五官圓潤自然、表情生動，比例接近正常人比例，不使用誇張大頭 Q 版造型，具備精緻 3D 建模與動畫電影渲染質感
+- 光線明亮清晰、色調溫暖柔和</div>
+</div>
+<div class="content-h2">② 商品參考圖（沒有商品照片時）</div>
+<div class="prompt-card">
+<div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 商品參考圖</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+<div class="prompt-code">請把「共用設定」中商品的外觀描述，轉換成「商品參考圖」並直接生成：
+
+一張商品規格參考圖（product reference sheet），純白色背景，依共用設定的商品外觀（杯型、顏色、拉花、杯套樣式與材質質感）。
+並排呈現同一件商品的 3 個角度：正面、四十五度側面、俯視，比例一致、外觀完全相同，各角度下方標註中文小標籤。
+光線均勻、無多餘陰影或背景雜訊，杯身不出現任何文字與品牌商標。</div>
+</div>
+<div class="content-h2">③ 場景設定圖（多個分鏡在同一場景時）</div>
+<div class="prompt-card">
+<div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 場景設定圖</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+<div class="prompt-code">請依「共用設定」與各分鏡內容，整理出故事中重複出現的場景，轉換成「場景設定圖」並直接生成：
+
+一張場景參考圖（environment reference sheet），依共用設定的場景描述（地點、時間、光線與色調）。
+依分鏡實際會用到的位置，挑選 2～3 個取景角度（例如：咖啡館吧台全景＋窗邊座位＋店門口街角），每個角度的陳設、色調、光線維持一致，各角度下方標註中文小標籤說明取景位置。
+不出現任何品牌商標與招牌文字，整體無多餘雜訊。
+
+- 具備精緻 3D 建模與動畫電影渲染質感
+- 光線明亮清晰、色調溫暖柔和</div>
+</div>
+<div class="tip-card note"><strong>每格場景都不同時：</strong>可以省略場景設定圖；或直接把分鏡 1 的圖當場景參考，生成後續分鏡時一起上傳。</div>
+<div class="content-h2">④ 逐張生成分鏡圖</div>
+<div class="content-note">
+<ol style="margin-left:20px;">
+<li>分鏡 1：貼上 <strong>S1 的共用設定＋分鏡 1 的 AI生圖Prompt</strong>，附上角色設計圖、場景設定圖</li>
+<li>分鏡 2～6：貼上該格的 AI生圖Prompt，再加上下方這段</li>
+<li>有商品出現的分鏡，記得附上商品圖</li>
+</ol>
+</div>
+<div class="tip-card info"><strong>每張參考圖各自負責一件事：</strong>角色設計圖管人物、場景設定圖管背景、商品圖管商品。這一格需要什麼就附什麼，不用每格都全部上傳。</div>
+<div class="prompt-card">
+<div class="prompt-card-header"><span class="prompt-card-title">📌 分鏡 2 之後：加在生圖 Prompt 後面</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+<div class="prompt-code">請依照上方已定案的「共用設定」（視覺風格、主角外觀、商品外觀、場景設定維持不變，不需要重新輸出這段文字），生成分鏡的畫面。商品依上傳的圖保留原樣，畫面中不要出現任何文字與品牌商標。</div>
+</div>
+<div class="content-note"><p>➜ 在同一個對話中連續生成 6 張，主角才不會走樣。不滿意的格子，只說明要改的一個地方，請 AI 局部修改。</p></div>
+</div><!-- u11-c END -->
+<!-- u11-d -->
+<div class="sub-block" id="u11-d">
+<div class="sec-sub-title">S3　動態影片</div>
+<div class="tip-card note"><strong>影片長度：</strong>選工具可生成的長度即可，多的部分到 CapCut 再修剪；免費額度有限，先挑 1～2 格練習。</div>
+<div class="prompt-card">
+<div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 逐鏡動態影片 Prompt（接續 S1、S2 的對話）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+<div class="prompt-code">基於剛才完成的 6 分鏡腳本與分鏡圖，請把每一格轉換成「動態影片生成」用的 Prompt，
+接下來會用分鏡圖當起始畫面，貼到 Google Flow 生成影片，全程使用中文。
+
+每一格依序輸出：
+【分鏡編號】
+【鏡頭運動】（具體到方向與速度，例如：緩慢推進、橫搖、環繞）
+【動態描述】（只描述在靜態畫面上「新增了什麼動態」，例如拿鐵冒出熱氣、主角捧起杯子，不要重新描述整個場景）
+【Google Flow Prompt】整合成一段自然流暢的中文，開頭的畫風句與結尾的對白句沿用 S1 的格式，不可省略
+
+人物肢體動作保持簡單，熱鬧感靠表情、背景與鏡頭運動；商品出現的畫面，加上「商品外觀保持不變、不出現文字與品牌商標」。</div>
+</div>
+<div class="content-note">
+<ol style="margin-left:20px;">
+<li>Flow 選【影片 → Frames（影格）】，把該格分鏡圖放在「起始畫面」</li>
+<li>貼上 Google Flow 中文 Prompt，生成</li>
+<li>逐格生成、逐格檢視：人物有沒有變成真人？商品有沒有變形？聲音是不是中文？</li>
+</ol>
+</div>
+<div class="tip-card info"><strong>Frames 和 Ingredients 的差別：</strong>Frames 是「讓這張圖動起來」，畫面從你的分鏡圖開始，畫風最穩；Ingredients 是「參考這些素材重新生成一段畫面」，AI 會重新畫人物，比較容易走樣。要保住畫風與人物時，優先用 Frames。</div>
+</div><!-- u11-d END -->
+<!-- u11-e -->
+<div class="sub-block" id="u11-e">
+<div class="sec-sub-title">Google Flow 常見問題：人物變真人、對白變英文</div>
+<div class="content-h2">問題 1：人物從參考圖的樣子，變成真人</div>
+<table class="data-table">
+<tr><th>原因</th><th>改善做法</th></tr>
+<tr><td>用 Ingredients 生成，AI 會「重新畫」人物，影片模型容易往寫實方向畫</td><td>改用 <strong>Frames</strong>，把分鏡圖放在起始畫面，讓 AI 從這張圖開始動</td></tr>
+<tr><td>Prompt 沒寫畫風，或出現「電影感、實拍、真實」等字眼</td><td>每段 Prompt 開頭都寫：「3D 動畫電影風格，完全沿用起始畫面的人物外觀與畫風，不要轉成真人實拍」</td></tr>
+<tr><td>動作太大、鏡頭轉太多</td><td>人物肢體動作保持簡單，動作越大越容易走樣；想要熱鬧，改用表情、背景動態（路人、熱氣、落葉）與鏡頭運動來營造</td></tr>
+<tr><td>參考圖背景雜亂</td><td>Ingredients 的人物參考用純白背景的角色設計圖，Prompt 中也提到這張參考圖</td></tr>
+</table>
+<div class="content-h2">問題 2：人物說話變成英文</div>
+<table class="data-table">
+<tr><th>原因</th><th>改善做法</th></tr>
+<tr><td>Flow 的語音仍屬實驗功能，官方沒有列出支援語言；沒寫清楚時常預設英文</td><td>明確寫出語言與口音，台詞放在引號裡：角色用台灣口音的中文（國語）說：「今天就喝這杯吧！」，不要說英文</td></tr>
+<tr><td>台詞太長、Prompt 中英混雜</td><td>台詞一句、15 字內，整段 Prompt 全用中文</td></tr>
+<tr><td>聲音每格都不一樣</td><td>Omni Flash 模型＋Ingredients 可建立自訂聲音（@Voice），聲音描述寫「台灣口音的國語、溫柔女聲」；結果仍可能不穩定</td></tr>
+</table>
+<div class="tip-card warning"><strong>最穩定的做法：影片不說話，聲音後製加。</strong>影片 Prompt 寫「無對白，只有環境音」，人物不開口；台詞改成旁白，用 S4 的 Google AI Studio、MyEdit 或雅婷文字轉語音生成台灣口音，再到 CapCut 合成。這樣也不用擔心嘴型對不上。</div>
+<div class="tip-card info"><strong>S1 腳本已自動加入：</strong>每個分鏡的 AI生影Prompt 都已包含下方兩句。直接在 Flow 手動寫 Prompt，或 AI 漏掉時，再自行補上。</div>
+<div class="prompt-card">
+<div class="prompt-card-header"><span class="prompt-card-title">📌 Flow 影片 Prompt 固定加的兩句（依需要擇一）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+<div class="prompt-code">3D 動畫電影風格，完全沿用起始畫面的人物外觀與畫風，不要轉成真人實拍。
+【無對白，只有環境音。／角色用台灣口音的中文（國語）說：「＿＿＿」，不要說英文。】</div>
+</div>
+<div class="tip-card note">Flow 的功能、模型名稱與點數規則更新很快，實際選項以當時介面為準。</div>
+</div><!-- u11-e END -->
+<!-- u11-f -->
+<div class="sub-block" id="u11-f">
+<div class="sec-sub-title">S4　旁白與配樂</div>
+<div class="content-h2">① 旁白配音工具</div>
+<table class="data-table">
+<tr><th>工具</th><th>特色</th><th>適合</th></tr>
+<tr><td>Google AI Studio（Gemini TTS）</td><td>分語音塊設定講者與語氣，可插入嘆氣、笑聲等聲音標籤，免費</td><td>旁白＋主角兩種聲音、語氣要有起伏</td></tr>
+<tr><td>MyEdit</td><td>多種中文聲音，含台灣腔調；點數制</td><td>要道地台灣腔、一次生成全段</td></tr>
+<tr><td>雅婷文字轉語音</td><td>免費、最簡單，台灣口音道地</td><td>先測試旁白效果</td></tr>
+<tr><td>CapCut 文字轉語音</td><td>剪輯時直接產生</td><td>手機快速完成</td></tr>
+</table>
+<div class="content-h2">② Google AI Studio 操作畫面</div>
+<table class="data-table">
+<tr><th>介面元件</th><th>作用</th><th>填什麼</th></tr>
+<tr><td>Speaker</td><td>誰來講（選哪個聲音）</td><td>Speaker 1 旁白／Speaker 2 主角；聲音在右側「Speaker settings」挑選</td></tr>
+<tr><td>Style</td><td>這一塊用什麼情緒、語速講</td><td>點開後在最上方輸入框貼英文描述；下方 Whisper、Friendly、Narration 等是預設語氣，也可直接點選</td></tr>
+<tr><td>文字框</td><td>真正要唸出來的台詞</td><td>只放中文台詞，不放語氣說明</td></tr>
+<tr><td>+ Expression</td><td>插入嘆氣、笑聲、吸氣等聲音</td><td>點選 breath、cheer 等標籤，或在文字框輸入「&lt;」叫出清單</td></tr>
+<tr><td>+ Add speech block</td><td>新增下一段</td><td>一段台詞一個語音塊，依序往下加</td></tr>
+</table>
+<div class="tip-card info"><strong>旁白和主角口白要分兩次生成嗎？不用。</strong>在同一次生成裡，用多個「語音塊」把句子切開，每一塊各自選講者和語氣，按一次執行就會串成一整段音檔。</div>
+<div class="tip-card note"><strong>讓聲音更像台灣人：</strong>Style 一律寫明「台灣口音的國語」並排除兒化音與捲舌腔；台詞使用台灣用語（影片、計程車、品質，而不是視頻、出租車、質量）。挑聲音時先各試聽一句，選語調較柔和、不捲舌的。</div>
+<div class="prompt-card">
+<div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — Google AI Studio 語音塊整理（接續 S1 的對話）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+<div class="prompt-code">基於前面的 6 分鏡腳本，我要用 Google AI Studio 的 Gemini TTS 生成旁白與主角口白，聲音要像台灣人說話。
+介面中每個「語音塊」可分別設定：Speaker（講者）、Style（自訂英文語氣描述）、文字框（只放要唸的台詞，可插入聲音標籤）。
+
+# 講者設定
+- Speaker 1：旁白【溫暖、沉穩的說故事聲音】
+- Speaker 2：主角【30 歲左右的上班族，語氣自然】
+（腳本沒有主角口白時，全部使用 Speaker 1）
+
+# 整理規則
+1. 依分鏡順序，把旁白與主角口白拆成語音塊，連成完整故事線；同一講者連續、語氣相同的句子可合併成一塊
+2. Style：用 1～2 句英文描述，開頭固定寫：
+   「Speak in natural Taiwanese Mandarin with a Taiwan accent: soft, relaxed intonation, no Beijing-style erhua, no heavy retroflex sounds.」
+   後面再寫這一塊的情緒與語速；各塊情緒要有明顯轉折，不要每塊都一樣
+3. 文字框：只放要唸出來的繁體中文台詞，使用台灣用語與台灣口語語氣詞（例如：欸、啦、喔），不放語氣說明或方括號標籤
+4. 需要時才在台詞中插入聲音標籤，例如 &lt;sigh&gt;、&lt;breath&gt;、&lt;chuckle&gt;、&lt;gasp&gt;、&lt;laugh&gt;，整支影片 2～3 個就好
+5. 每個分鏡的台詞要能在【8】秒內自然唸完，太長請精簡台詞，不要靠加快語速
+6. 不使用「最好喝」「第一」「唯一」等誇大用語
+7. 台詞中若有容易唸錯的多音字或品牌名稱，在最後另外列出提醒
+
+# 輸出格式
+先用一句話說明共幾個語音塊，再依序輸出每一塊：
+### 語音塊 N｜分鏡 X｜Speaker 1 旁白（或 Speaker 2 主角）
+- Style（貼到 Style 欄）：放在一個程式碼區塊
+- 文字（貼到文字框）：放在另一個程式碼區塊</div>
+</div>
+<div class="content-note">
+<ol style="margin-left:20px;">
+<li>開啟右欄「Google AI Studio（旁白）」，在右側 Speaker settings 替 Speaker 1、Speaker 2 選好聲音</li>
+<li>第一個語音塊：選 Speaker → 點 Style，在最上方輸入框貼 Style → 文字框貼台詞</li>
+<li>點「+ Add speech block」新增下一塊，依序貼完所有語音塊</li>
+<li>Temperature 先維持預設 1，全部貼完後按執行，試聽滿意再下載音檔，到 CapCut 對齊畫面</li>
+</ol>
+</div>
+<div class="content-h2">③ 試聽後常見問題</div>
+<table class="data-table">
+<tr><th>狀況</th><th>改善做法</th></tr>
+<tr><td>口音偏大陸腔、有兒化音</td><td>確認 Style 開頭的台灣口音句有貼上；仍不明顯就換一個聲音再試</td></tr>
+<tr><td>多音字或品牌名稱唸錯</td><td>改成同音字（只用在語音，字幕仍用正確字），或換個說法</td></tr>
+<tr><td>語氣太平、每塊都一樣</td><td>只改那一塊的 Style，把情緒寫得更具體（例如：sleepy and grumpy → delighted and surprised）</td></tr>
+<tr><td>聲音標籤沒作用或被唸出來</td><td>文字框輸入「&lt;」確認清單中有這個標籤；不在清單中就刪掉</td></tr>
+<tr><td>旁白和主角聲音太像</td><td>兩個 Speaker 選音高差距大的聲音（例如一個低沉、一個明亮）</td></tr>
+<tr><td>某格唸太久，對不上畫面</td><td>精簡台詞，不要靠加快語速；也可只重新生成那一塊</td></tr>
+</table>
+<div class="prompt-card">
+<div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — MyEdit 純文字稿</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+<div class="prompt-code">我要改用 MyEdit 生成旁白，MyEdit 不支援情緒標籤，也不能分段設定不同情緒，
+且點數有限，必須一次生成完畢。
+
+請把 6 個分鏡的旁白與主角口白，去除所有情緒標籤，合併成一段可以直接貼入 MyEdit 的純文字稿，
+使用台灣用語與自然的台灣口語，在句子之間適度加入刪節號「……」引導自然停頓，並統計總字數。</div>
+</div>
+<div class="tip-card note"><strong>聲音風格選擇：</strong>只能選一種聲音貫穿全段時，挑「活潑」「說故事」風格的配音員；下載後到 CapCut 調整各段的間隔，做出節奏對比。</div>
+<div class="content-h2">④ 背景音樂</div>
+<div class="prompt-card">
+<div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — Suno 背景音樂</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+<div class="prompt-code">依這支廣告的 6 個分鏡與旁白情緒，幫我寫 Suno 用的音樂描述：
+- 【純音樂，不要人聲（旁白才聽得清楚）／要人聲演唱，寫出中文歌詞】
+- 風格：【輕快活潑、節奏明快、有冬天早晨的咖啡香氛圍】，情緒跟著分鏡起伏，結尾漸弱或留白，方便對齊店名畫面
+請輸出：
+1. 一段 2～3 句、可直接貼進 Suno「Song Description」的描述
+2. 若要人聲：另外輸出 Style 欄位關鍵字，以及用 [Intro][Verse][Chorus][Outro] 標出段落的中文歌詞
+並提醒我：純音樂要打開 Instrumental，要人聲則保持關閉。</div>
+</div>
+<div class="tip-card warning"><strong>商用授權：</strong>Suno 免費版產出的音樂不可商用，正式對外發布請升級付費方案，或改用有商用授權的音樂庫。</div>
+</div><!-- u11-f END -->
+<!-- u11-g -->
+<div class="sub-block" id="u11-g">
+<div class="sec-sub-title">S5　CapCut 剪輯</div>
+<div class="tip-card info">前面已經有影片片段、旁白音檔、背景音樂，這一步只需要「排序、對齊、混音、輸出」。</div>
+<table class="data-table">
+<tr><th>步驟</th><th>操作重點</th></tr>
+<tr><td>1 匯入素材</td><td>6 段影片、結尾圖卡（單元 4 的海報或資訊圖）、旁白音檔、背景音樂拖進時間軸</td></tr>
+<tr><td>2 排序對齊</td><td>依分鏡順序排列，對齊旁白句子的節奏點；過長的片段直接修剪</td></tr>
+<tr><td>3 混音</td><td>背景音樂音量壓低，旁白出現時用「自動閃避」降低音樂；Flow 產生的英文語音可直接關閉該片段原聲</td></tr>
+<tr><td>4 調色統一</td><td>套用同一組濾鏡，讓不同批次的片段色調一致</td></tr>
+<tr><td>5 字幕與結尾</td><td>加上字幕；結尾停在店名與商品畫面，標示活動內容以門市公告為準</td></tr>
+<tr><td>6 輸出</td><td>16:9 橫式（門市螢幕、簡報）或 9:16 直式（IG、Threads、LINE），解析度 1080p</td></tr>
+</table>
+<div class="tip-card warning"><strong>發布前檢查：</strong>商品外觀與名稱正確、畫面沒有奇怪的文字或他牌商標、旁白沒有誇大用語、聲音是中文、音樂有商用授權、人物沒有使用真實員工或顧客照片。</div>
+</div><!-- u11-g END -->
+</div><!-- u11 END -->
+
 </div><!-- /content-area -->
 <!-- ===== 右欄：工具列 ===== -->
 <div class="tool-panel">
@@ -3125,6 +3453,24 @@ C2-說明｜文字｜【每日限量手工肉桂捲】]
 </a>
 <a class="tool-btn" href="https://www.canva.com" target="_blank">
 <span class="tool-name">Canva</span>
+</a>
+</div>
+<div class="tool-section">
+<div class="tool-section-title">影音製作（單元 11）</div>
+<a class="tool-btn" href="https://aistudio.google.com/generate-speech?model=gemini-3.8-flash-tts" target="_blank">
+<span class="tool-name">Google AI Studio（旁白）</span>
+</a>
+<a class="tool-btn" href="https://myedit.online" target="_blank">
+<span class="tool-name">MyEdit（旁白）</span>
+</a>
+<a class="tool-btn" href="https://tts.yating.tw/" target="_blank">
+<span class="tool-name">雅婷文字轉語音</span>
+</a>
+<a class="tool-btn" href="https://suno.com" target="_blank">
+<span class="tool-name">Suno（配樂）</span>
+</a>
+<a class="tool-btn" href="https://www.capcut.com" target="_blank">
+<span class="tool-name">CapCut 剪映</span>
 </a>
 </div>
 </div><!-- /tool-panel -->

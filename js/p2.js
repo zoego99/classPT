@@ -217,10 +217,150 @@ function initEditablePrompts() {
   });
 }
 
+/* ===== 右欄「課程工具」收合 + 左欄固定寬度 =====
+   - 右欄改為從右側滑出的抽屜，預設收合；按右側「課程工具」鈕才顯示，再按一次或按 Esc 收合
+   - 右欄不再佔版面，中欄自動使用全部寬度；左欄固定寬度，不隨畫面或內容伸縮
+   - 樣式由這支 JS 自動加入，所有引用 p2.js 的課程頁都適用，不需修改 HTML 或 CSS
+   - 左欄寬度預設 260px；個別頁面要不同寬度，可在 CSS 設定 :root { --p2-sidebar-w: 280px; } */
+const P2_SIDEBAR_W_DEFAULT = '260px';
+const P2_PANEL_W = 'min(280px, 85vw)';
+
+function p2SidebarWidth() {
+  const v = getComputedStyle(document.documentElement).getPropertyValue('--p2-sidebar-w').trim();
+  return v || P2_SIDEBAR_W_DEFAULT;
+}
+
+function injectToolPanelStyle(panelBg) {
+  if (document.getElementById('p2-toolpanel-style')) return;
+  const st = document.createElement('style');
+  st.id = 'p2-toolpanel-style';
+  st.textContent = `
+    .tool-panel.p2-drawer {
+      position: fixed !important;
+      top: var(--p2-nav-h, 0px);
+      right: 0;
+      bottom: 0;
+      width: ${P2_PANEL_W} !important;
+      max-width: none !important;
+      margin: 0 !important;
+      overflow-y: auto;
+      background: ${panelBg};
+      box-shadow: -6px 0 18px rgba(0, 0, 0, 0.12);
+      z-index: 900;
+      transform: translateX(100%);
+      visibility: hidden;
+      transition: transform 0.25s ease, visibility 0s linear 0.25s;
+    }
+    body.p2-tools-open .tool-panel.p2-drawer {
+      transform: translateX(0);
+      visibility: visible;
+      transition: transform 0.25s ease, visibility 0s;
+    }
+    .p2-tool-toggle {
+      position: fixed;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      z-index: 901;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      padding: 12px 6px;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-right: none;
+      border-radius: 8px 0 0 8px;
+      background: #ffffff;
+      color: #333333;
+      font: inherit;
+      font-size: 13px;
+      line-height: 1.2;
+      cursor: pointer;
+      box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.1);
+      transition: right 0.25s ease, background 0.15s;
+    }
+    .p2-tool-toggle:hover { background: #f3f3f3; }
+    .p2-tool-toggle:focus-visible { outline: 2px solid #333333; outline-offset: 2px; }
+    .p2-tool-toggle .p2-tt-text { writing-mode: vertical-rl; letter-spacing: 0.15em; }
+    body.p2-tools-open .p2-tool-toggle { right: ${P2_PANEL_W}; }
+    @media print {
+      .p2-tool-toggle, .tool-panel.p2-drawer { display: none !important; }
+    }
+  `;
+  document.head.appendChild(st);
+}
+
+/* 依目前版面（grid 或 flex），讓中欄補滿、左欄固定寬度；視窗大小改變時重新計算 */
+function applyFixedLayout() {
+  const layout = document.querySelector('.app-layout');
+  const sidebar = document.querySelector('.sidebar');
+  if (!layout || !sidebar) return;
+
+  layout.style.gridTemplateColumns = '';
+  sidebar.style.flex = '';
+  sidebar.style.width = '';
+
+  const cs = getComputedStyle(layout);
+  const w = p2SidebarWidth();
+  if (cs.display.includes('grid')) {
+    const cols = cs.gridTemplateColumns.split(/\s+/).filter(Boolean);
+    if (cols.length >= 2) layout.style.gridTemplateColumns = `${w} minmax(0, 1fr)`;   // 單欄（手機版）時不更動
+  } else if (cs.display.includes('flex') && !cs.flexDirection.startsWith('column')) {
+    sidebar.style.flex = `0 0 ${w}`;
+    sidebar.style.width = w;
+  }
+
+  const nav = document.querySelector('nav');
+  document.documentElement.style.setProperty('--p2-nav-h', (nav ? nav.offsetHeight : 0) + 'px');
+}
+
+function setToolPanel(open) {
+  const btn = document.querySelector('.p2-tool-toggle');
+  document.body.classList.toggle('p2-tools-open', open);
+  if (btn) {
+    btn.setAttribute('aria-expanded', String(open));
+    btn.querySelector('.p2-tt-icon').textContent = open ? '▶' : '◀';
+    btn.title = open ? '收合課程工具' : '顯示課程工具';
+  }
+}
+
+function initToolPanel() {
+  const panel = document.querySelector('.tool-panel');
+  if (!panel || panel.classList.contains('p2-drawer')) return;
+
+  // 沿用右欄原本的背景色，透明時改用頁面背景
+  let bg = getComputedStyle(panel).backgroundColor;
+  if (!bg || bg === 'transparent' || bg === 'rgba(0, 0, 0, 0)') {
+    bg = getComputedStyle(document.body).backgroundColor;
+    if (!bg || bg === 'transparent' || bg === 'rgba(0, 0, 0, 0)') bg = '#ffffff';
+  }
+  injectToolPanelStyle(bg);
+
+  if (!panel.id) panel.id = 'toolPanel';
+  panel.classList.add('p2-drawer');
+
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'p2-tool-toggle';
+  btn.setAttribute('aria-controls', panel.id);
+  btn.innerHTML = '<span class="p2-tt-icon" aria-hidden="true">◀</span><span class="p2-tt-text">課程工具</span>';
+  btn.addEventListener('click', () => setToolPanel(!document.body.classList.contains('p2-tools-open')));
+  document.body.appendChild(btn);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && document.body.classList.contains('p2-tools-open')) setToolPanel(false);
+  });
+
+  setToolPanel(false);   // 預設收合
+  applyFixedLayout();
+  window.addEventListener('resize', applyFixedLayout);
+}
+
 /* ===== 啟動：先啟用編輯與摺疊，再顯示第一個章節 ===== */
 document.addEventListener('DOMContentLoaded', () => {
   initEditablePrompts();
   initCollapsibleSidebar();
+  initToolPanel();
   initScrollSpy();
   if (!currentSec) {
     const first = document.querySelector('.content-section[id]');
