@@ -185,10 +185,11 @@
 <button class="sec-sub-btn" id="btn-u11-a" onclick="showSub('u11','u11-a')">製作流程總覽</button>
 <button class="sec-sub-btn" id="btn-u11-b" onclick="showSub('u11','u11-b')">S1 分鏡腳本</button>
 <button class="sec-sub-btn" id="btn-u11-c" onclick="showSub('u11','u11-c')">S2 參考圖與分鏡圖</button>
-<button class="sec-sub-btn" id="btn-u11-d" onclick="showSub('u11','u11-d')">S3 動態影片</button>
+<button class="sec-sub-btn" id="btn-u11-c2" onclick="showSub('u11','u11-c2')">S3 精簡為 3 分鏡</button>
+<button class="sec-sub-btn" id="btn-u11-d" onclick="showSub('u11','u11-d')">S4 動態影片</button>
 <button class="sec-sub-btn" id="btn-u11-e" onclick="showSub('u11','u11-e')">Flow 人物走樣與英文對白</button>
-<button class="sec-sub-btn" id="btn-u11-f" onclick="showSub('u11','u11-f')">S4 旁白與配樂</button>
-<button class="sec-sub-btn" id="btn-u11-g" onclick="showSub('u11','u11-g')">S5 CapCut 剪輯</button>
+<button class="sec-sub-btn" id="btn-u11-f" onclick="showSub('u11','u11-f')">S5 旁白與配樂</button>
+<button class="sec-sub-btn" id="btn-u11-g" onclick="showSub('u11','u11-g')">S6 CapCut 剪輯</button>
 </div>
 </div>
 </div><!-- /sidebar -->
@@ -3093,8 +3094,8 @@ C2-說明｜文字｜【每日限量手工肉桂捲】]
 <span class="sec-badge" style="background:var(--sec-1)">11</span>
         AI 影音廣告
       </div>
-<div class="sec-desc">📌 工作情境：替【巷光咖啡】的【冬季新品・肉桂燕麥拿鐵】做一支社群與門市都能用的廣告影片。<strong class="blue">用 AI 做出 6 個分鏡的腳本、畫面、動態、旁白與配樂，再用剪輯軟體組合成完整影片。</strong></div>
-<div class="lesson-outcome"><strong>🎯 本單元完成成果</strong><span>完成 6 個分鏡的廣告影片：分鏡腳本、參考圖、動態片段、旁白與配樂，並剪輯輸出。</span></div>
+<div class="sec-desc">📌 工作情境：替【巷光咖啡】的【冬季新品・肉桂燕麥拿鐵】做一支社群與門市都能用的廣告影片。<strong class="blue">用 AI 先做出 6 個分鏡的腳本與畫面，再精簡成 3 個分鏡生成動態、旁白與配樂，最後用剪輯軟體組合成完整影片。</strong></div>
+<div class="lesson-outcome"><strong>🎯 本單元完成成果</strong><span>完成 3 個分鏡的廣告影片：分鏡腳本、參考圖、動態片段、旁白與配樂，並剪輯輸出。</span></div>
 <div class="tip-card note"><strong>關鍵觀念：</strong>AI 生成的是「素材與片段」，不是一鍵完成的成品。每個鏡頭都要人工檢視、決定要不要重新生成，最後再用剪輯軟體組合。</div>
 <!-- u11-a -->
 <div class="sub-block" id="u11-a">
@@ -3103,11 +3104,12 @@ C2-說明｜文字｜【每日限量手工肉桂捲】]
 <tr><th>步驟</th><th>做什麼</th><th>工具</th></tr>
 <tr><td>S1 分鏡腳本</td><td>AI 產出 6 個分鏡：畫面描述、生圖／生影 Prompt、旁白</td><td>Gemini／ChatGPT</td></tr>
 <tr><td>S2 參考圖與分鏡圖</td><td>先定主角、商品、場景三種參考圖，再逐張生成 6 張分鏡圖</td><td>Gemini（Nano Banana）</td></tr>
-<tr><td>S3 動態影片</td><td>分鏡圖＋影片 Prompt，圖片轉影片</td><td>Google Flow</td></tr>
-<tr><td>S4 旁白與配樂</td><td>旁白轉語音、產生背景音樂</td><td>Google AI Studio／MyEdit／雅婷文字轉語音／Suno</td></tr>
-<tr><td>S5 剪輯</td><td>排序、對齊、混音、字幕、輸出</td><td>CapCut 剪映</td></tr>
+<tr><td>S3 精簡為 3 分鏡</td><td>依原故事把 6 分鏡精簡為 3 分鏡，並直接生成 3 張新分鏡圖</td><td>Gemini／ChatGPT</td></tr>
+<tr><td>S4 動態影片</td><td>3 張分鏡圖＋影片 Prompt，圖片轉影片</td><td>Google Flow</td></tr>
+<tr><td>S5 旁白與配樂</td><td>旁白轉語音、產生背景音樂</td><td>Google AI Studio／MyEdit／雅婷文字轉語音／Suno</td></tr>
+<tr><td>S6 剪輯</td><td>排序、對齊、混音、字幕、輸出</td><td>CapCut 剪映</td></tr>
 </table>
-<div class="tip-card warning"><strong>S1、S2 全程在同一個對話中操作！</strong>後面的 Prompt 都沿用 S1 產出的腳本與共用設定，開新對話 AI 就看不到了。</div>
+<div class="tip-card warning"><strong>S1～S4 全程在同一個對話中操作！</strong>後面的 Prompt 都沿用 S1 產出的腳本與共用設定，開新對話 AI 就看不到了。</div>
 <div class="content-h2">開工準備</div>
 <div class="content-note">
 <ol style="margin-left:20px;">
@@ -3124,7 +3126,8 @@ C2-說明｜文字｜【每日限量手工肉桂捲】]
 <div class="tip-card info"><strong>不用先想好故事：</strong>給 AI 明確的方向（品牌、商品、對象、調性），情節交給 AI 發想。【】可以換成自己的品牌與商品，故事主軸也可以留空讓 AI 決定。</div>
 <div class="prompt-card">
 <div class="prompt-card-header"><span class="prompt-card-title">📌 S1 Prompt — 6 分鏡廣告腳本</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-<div class="prompt-code">你是一位擅長活潑熱鬧、節奏明快、帶點幽默感的廣告導演。
+<div class="prompt-code">**協助影片腳本生成，不要主動生成任何圖片**
+你是一位擅長活潑熱鬧、節奏明快、帶點幽默感的廣告導演。
 請幫我構思一支 6 個分鏡的【咖啡館新品】廣告影片腳本。
 
 【情形1：我提供設定，請你補完故事情節】
@@ -3143,6 +3146,7 @@ C2-說明｜文字｜【每日限量手工肉桂捲】]
 - 節奏：畫面熱鬧、節奏明快，每格都要有明顯的動態元素（例如：誇張的表情反應、背景路人走動、熱氣與落葉飄動、鏡頭推進或跟拍），人物肢體動作保持簡單，熱鬧感主要靠表情、背景與鏡頭
 - 比例：【16:9】（社群短影音可改 9:16）
 - 每格只負責一件事；最後一格留給商品特寫，結尾的店名與活動文字我會自己加上，分鏡中不用畫文字
+- 時間：每格旁白要能在 10 秒內自然唸完，主角口白要能在 8 秒內講完
 - 不出現任何其他品牌的商標與招牌文字
 
 請先輸出「共用設定（草案）」，放在一個 Markdown 程式碼區塊內：
@@ -3151,20 +3155,20 @@ C2-說明｜文字｜【每日限量手工肉桂捲】]
 - 商品外觀：依上傳的商品圖描述，保留原樣
 - 場景設定草案（多個分鏡在同一場景時）
 
-接著用表格輸出 6 個分鏡，欄位：分鏡編號、畫面描述、鏡頭運動、AI生圖Prompt(中文)、AI生影Prompt(中文)、旁白(VO)、主角口白
+接著用表格輸出各分鏡，欄位：分鏡編號、畫面描述、AI生圖Prompt(中文)、鏡頭運動、AI生影Prompt(中文)、旁白(VO)、主角口白
 
-再把 6 個分鏡依序放在「同一個」Markdown 程式碼區塊內（不要用表格），每個分鏡之間用一行「---」分隔。
+再把 各分鏡依序放在「同一個」Markdown 程式碼區塊內（不要用表格），每個分鏡之間用一行「---」分隔。
 
 注意：
+- 全程使用中文
 - AI生圖、生影 Prompt 只描述這一格的動作與場景，不用重複共用設定
 - 每格的 AI生影Prompt 都要依下列格式組成，不可省略：
-  開頭固定寫：「3D 動畫電影風格，完全沿用起始畫面的人物外觀與畫風，不要轉成真人實拍。」
-  中間寫：鏡頭運動＋這一格新增的動態
-  結尾依這一格有沒有主角口白：
-  - 沒有口白：「無對白，只有環境音。」
-  - 有口白：「角色用台灣口音的中文（國語）說：『口白內容』，不要說英文。」
+  - 開頭固定寫：「3D 動畫電影風格，完全沿用起始畫面的人物外觀與畫風，不要轉成真人實拍。」
+  - 中間寫：鏡頭運動＋這一格新增的動態
+  - 結尾依這一格有沒有主角口白，二選一：
+    - 沒有口白：「無對白，只有環境音。」
+    - 有口白：「角色用台灣口音的中文（國語）說：『口白內容』，畫面中所有人物都只說中文（國語），不要說英文。」
 - 故事主要靠旁白推進；主角口白只放在真的需要的分鏡，每句 15 字內，沒有就寫「無」
-- 全程使用中文
 - 人物為半寫實卡通造型，五官圓潤自然、表情生動，比例接近正常人比例，不使用誇張大頭 Q 版造型，具備精緻 3D 建模與動畫電影渲染質感
 - 光線明亮清晰、色調溫暖柔和；構圖自然、有故事性，如同從一部高品質 3D 動畫電影中擷取的畫面</div>
 </div>
@@ -3217,7 +3221,7 @@ C2-說明｜文字｜【每日限量手工肉桂捲】]
 <div class="prompt-code">請依「共用設定」與各分鏡內容，整理出故事中重複出現的場景，轉換成「場景設定圖」並直接生成：
 
 一張場景參考圖（environment reference sheet），依共用設定的場景描述（地點、時間、光線與色調）。
-依分鏡實際會用到的位置，挑選 2～3 個取景角度（例如：咖啡館吧台全景＋窗邊座位＋店門口街角），每個角度的陳設、色調、光線維持一致，各角度下方標註中文小標籤說明取景位置。
+依分鏡實際會用到的位置，挑選 2～3 個取景角度（例如：咖啡館吧台全景＋窗邊座位＋店門口街角），每個角度的陳設、色調、光線維持一致，各角度下方標註中文小標籤，只寫取景位置（例如：吧台全景、窗邊座位），不要寫 Cam 或分鏡編號。
 不出現任何品牌商標與招牌文字，整體無多餘雜訊。
 
 - 具備精緻 3D 建模與動畫電影渲染質感
@@ -3239,20 +3243,70 @@ C2-說明｜文字｜【每日限量手工肉桂捲】]
 </div>
 <div class="content-note"><p>➜ 在同一個對話中連續生成 6 張，主角才不會走樣。不滿意的格子，只說明要改的一個地方，請 AI 局部修改。</p></div>
 </div><!-- u11-c END -->
+<!-- u11-c2 -->
+<div class="sub-block" id="u11-c2">
+<div class="sec-sub-title">S3　精簡為 3 分鏡</div>
+<div class="tip-card info"><strong>為什麼要精簡？</strong>Google Flow 每生成一段影片都會扣點數，免費額度有限。保留 S1、S2 的故事與參考圖，把 6 個分鏡精簡成 3 個，只生成 3 段影片，額度更省、也更容易逐段修到滿意。</div>
+<div class="prompt-card">
+<div class="prompt-card-header"><span class="prompt-card-title">📌 S3 Prompt — 6 分鏡精簡為 3 分鏡（接續 S1、S2 的對話）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+<div class="prompt-code">**協助影片腳本生成，不要主動生成任何圖片**
+基於剛才完成的 6 分鏡腳本與分鏡圖，因影片生成額度有限，
+請依照原本的故事主軸與情節，把 6 個分鏡精簡成 3 個分鏡。
+
+【精簡原則】
+- 依原故事的順序濃縮成「開場情境 → 轉折亮點 → 收尾」三段，合併情節相近的分鏡
+- 不新增原故事沒有的角色、場景與情節；調性維持活潑、熱鬧、有記憶點、帶點幽默感
+- 共用設定（視覺風格、主角外觀、商品外觀、場景設定）維持不變，不需要重新輸出
+- 優先參考原本 6 張分鏡圖中最有代表性的畫面構圖，人物、商品、場景外觀與原圖保持一致
+- 每格都要有明顯的動態元素，人物肢體動作保持簡單，熱鬧感主要靠表情、背景與鏡頭
+- 最後一格留給商品特寫，結尾的店名與活動文字我會自己加上，分鏡中不用畫文字
+- 不出現任何其他品牌的商標與招牌文字
+- 旁白重新串接，3 格接起來要是一個完整的故事；每格旁白要能在 10 秒內自然唸完，主角口白要能在 8 秒內講完
+- 不需要說明精簡過程，直接輸出結果
+
+用表格輸出 3 個分鏡，欄位：分鏡編號、畫面描述、AI生圖Prompt(中文)、鏡頭運動、AI生影Prompt(中文)、旁白(VO)、主角口白
+
+再把 3 個分鏡依序放在「同一個」Markdown 程式碼區塊內（不要用表格），每個分鏡之間用一行「---」分隔。
+
+輸出完腳本後，請依這 3 格的 AI生圖Prompt，參考前面的角色設計圖、場景設定圖與商品圖，依序直接生成 3 張分鏡圖，畫面中不要出現任何文字、Cam 或分鏡編號標籤與品牌商標。
+
+注意：
+- 全程使用中文
+- AI生圖、生影 Prompt 只描述這一格的動作與場景，不用重複共用設定
+- 每格的 AI生影Prompt 都要依下列格式組成，不可省略：
+  - 開頭固定寫：「3D 動畫電影風格，完全沿用起始畫面的人物外觀與畫風，不要轉成真人實拍。」
+  - 中間寫：鏡頭運動＋這一格新增的動態
+  - 結尾依這一格有沒有主角口白，二選一：
+    - 沒有口白：「無對白，只有環境音。」
+    - 有口白：「角色用台灣口音的中文（國語）說：『口白內容』，畫面中所有人物都只說中文（國語），不要說英文。」
+- 故事主要靠旁白推進；主角口白只放在真的需要的分鏡，每句 15 字內，沒有就寫「無」
+- 人物為半寫實卡通造型，五官圓潤自然、表情生動，比例接近正常人比例，不使用誇張大頭 Q 版造型，具備精緻 3D 建模與動畫電影渲染質感
+- 光線明亮清晰、色調溫暖柔和；構圖自然、有故事性，如同從一部高品質 3D 動畫電影中擷取的畫面</div>
+</div>
+<div class="content-note">
+<ol style="margin-left:20px;">
+<li>AI 輸出 3 分鏡腳本後，會接著生成 3 張新的分鏡圖</li>
+<li>依序下載 3 張分鏡圖，檔名改成「分鏡1、分鏡2、分鏡3」，S4 放進 Flow 時才不會弄錯順序</li>
+<li>AI 沒有接著生圖，或少生成幾張時，輸入：「請依剛才 3 格的 AI生圖Prompt，生成分鏡 X 的圖」</li>
+</ol>
+</div>
+<div class="tip-card note"><strong>不滿意的格子：</strong>只說明要改的一個地方，請 AI 局部修改，例如「分鏡 2 的主角表情改成更驚訝，其餘不變」。</div>
+<div class="tip-card warning"><strong>旁白也要重新檢查：</strong>合併後的旁白容易變長，每格旁白要在 10 秒內、主角口白要在 8 秒內唸完；同樣不使用「最好喝」「第一」「唯一」等誇大用語。</div>
+</div><!-- u11-c2 END -->
 <!-- u11-d -->
 <div class="sub-block" id="u11-d">
-<div class="sec-sub-title">S3　動態影片</div>
-<div class="tip-card note"><strong>影片長度：</strong>選工具可生成的長度即可，多的部分到 CapCut 再修剪；免費額度有限，先挑 1～2 格練習。</div>
+<div class="sec-sub-title">S4　動態影片</div>
+<div class="tip-card note"><strong>影片長度：</strong>選工具可生成的長度即可，多的部分到 CapCut 再修剪；免費額度有限，先生成 1 格確認效果，再生成其他 2 格。</div>
 <div class="prompt-card">
-<div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 逐鏡動態影片 Prompt（接續 S1、S2 的對話）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-<div class="prompt-code">基於剛才完成的 6 分鏡腳本與分鏡圖，請把每一格轉換成「動態影片生成」用的 Prompt，
+<div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 逐鏡動態影片 Prompt（接續 S1～S3 的對話）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+<div class="prompt-code">基於剛才 S3 精簡完成的 3 分鏡腳本與分鏡圖，請把每一格轉換成「動態影片生成」用的 Prompt，
 接下來會用分鏡圖當起始畫面，貼到 Google Flow 生成影片，全程使用中文。
 
 每一格依序輸出：
 【分鏡編號】
 【鏡頭運動】（具體到方向與速度，例如：緩慢推進、橫搖、環繞）
 【動態描述】（只描述在靜態畫面上「新增了什麼動態」，例如拿鐵冒出熱氣、主角捧起杯子，不要重新描述整個場景）
-【Google Flow Prompt】整合成一段自然流暢的中文，開頭的畫風句與結尾的對白句沿用 S1 的格式，不可省略
+【Google Flow Prompt】整合成一段自然流暢的中文，開頭的畫風句與結尾的對白句沿用 S1、S3 的格式，不可省略
 
 人物肢體動作保持簡單，熱鬧感靠表情、背景與鏡頭運動；商品出現的畫面，加上「商品外觀保持不變、不出現文字與品牌商標」。</div>
 </div>
@@ -3283,8 +3337,8 @@ C2-說明｜文字｜【每日限量手工肉桂捲】]
 <tr><td>台詞太長、Prompt 中英混雜</td><td>台詞一句、15 字內，整段 Prompt 全用中文</td></tr>
 <tr><td>聲音每格都不一樣</td><td>Omni Flash 模型＋Ingredients 可建立自訂聲音（@Voice），聲音描述寫「台灣口音的國語、溫柔女聲」；結果仍可能不穩定</td></tr>
 </table>
-<div class="tip-card warning"><strong>最穩定的做法：影片不說話，聲音後製加。</strong>影片 Prompt 寫「無對白，只有環境音」，人物不開口；台詞改成旁白，用 S4 的 Google AI Studio、MyEdit 或雅婷文字轉語音生成台灣口音，再到 CapCut 合成。這樣也不用擔心嘴型對不上。</div>
-<div class="tip-card info"><strong>S1 腳本已自動加入：</strong>每個分鏡的 AI生影Prompt 都已包含下方兩句。直接在 Flow 手動寫 Prompt，或 AI 漏掉時，再自行補上。</div>
+<div class="tip-card warning"><strong>最穩定的做法：影片不說話，聲音後製加。</strong>影片 Prompt 寫「無對白，只有環境音」，人物不開口；台詞改成旁白，用 S5 的 Google AI Studio、MyEdit 或雅婷文字轉語音生成台灣口音，再到 CapCut 合成。這樣也不用擔心嘴型對不上。</div>
+<div class="tip-card info"><strong>S1、S3 腳本已自動加入：</strong>每個分鏡的 AI生影Prompt 都已包含下方兩句。直接在 Flow 手動寫 Prompt，或 AI 漏掉時，再自行補上。</div>
 <div class="prompt-card">
 <div class="prompt-card-header"><span class="prompt-card-title">📌 Flow 影片 Prompt 固定加的兩句（依需要擇一）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
 <div class="prompt-code">3D 動畫電影風格，完全沿用起始畫面的人物外觀與畫風，不要轉成真人實拍。
@@ -3294,7 +3348,7 @@ C2-說明｜文字｜【每日限量手工肉桂捲】]
 </div><!-- u11-e END -->
 <!-- u11-f -->
 <div class="sub-block" id="u11-f">
-<div class="sec-sub-title">S4　旁白與配樂</div>
+<div class="sec-sub-title">S5　旁白與配樂</div>
 <div class="content-h2">① 旁白配音工具</div>
 <table class="data-table">
 <tr><th>工具</th><th>特色</th><th>適合</th></tr>
@@ -3315,8 +3369,8 @@ C2-說明｜文字｜【每日限量手工肉桂捲】]
 <div class="tip-card info"><strong>旁白和主角口白要分兩次生成嗎？不用。</strong>在同一次生成裡，用多個「語音塊」把句子切開，每一塊各自選講者和語氣，按一次執行就會串成一整段音檔。</div>
 <div class="tip-card note"><strong>讓聲音更像台灣人：</strong>Style 一律寫明「台灣口音的國語」並排除兒化音與捲舌腔；台詞使用台灣用語（影片、計程車、品質，而不是視頻、出租車、質量）。挑聲音時先各試聽一句，選語調較柔和、不捲舌的。</div>
 <div class="prompt-card">
-<div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — Google AI Studio 語音塊整理（接續 S1 的對話）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-<div class="prompt-code">基於前面的 6 分鏡腳本，我要用 Google AI Studio 的 Gemini TTS 生成旁白與主角口白，聲音要像台灣人說話。
+<div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — Google AI Studio 語音塊整理（接續 S1～S4 的對話）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+<div class="prompt-code">基於 S3 精簡完成的 3 分鏡腳本，我要用 Google AI Studio 的 Gemini TTS 生成旁白與主角口白，聲音要像台灣人說話。
 介面中每個「語音塊」可分別設定：Speaker（講者）、Style（自訂英文語氣描述）、文字框（只放要唸的台詞，可插入聲音標籤）。
 
 # 講者設定
@@ -3331,7 +3385,7 @@ C2-說明｜文字｜【每日限量手工肉桂捲】]
    後面再寫這一塊的情緒與語速；各塊情緒要有明顯轉折，不要每塊都一樣
 3. 文字框：只放要唸出來的繁體中文台詞，使用台灣用語與台灣口語語氣詞（例如：欸、啦、喔），不放語氣說明或方括號標籤
 4. 需要時才在台詞中插入聲音標籤，例如 &lt;sigh&gt;、&lt;breath&gt;、&lt;chuckle&gt;、&lt;gasp&gt;、&lt;laugh&gt;，整支影片 2～3 個就好
-5. 每個分鏡的台詞要能在【8】秒內自然唸完，太長請精簡台詞，不要靠加快語速
+5. 每個分鏡的旁白要能在【10】秒內、主角口白要能在 8 秒內自然唸完，太長請精簡台詞，不要靠加快語速
 6. 不使用「最好喝」「第一」「唯一」等誇大用語
 7. 台詞中若有容易唸錯的多音字或品牌名稱，在最後另外列出提醒
 
@@ -3364,14 +3418,14 @@ C2-說明｜文字｜【每日限量手工肉桂捲】]
 <div class="prompt-code">我要改用 MyEdit 生成旁白，MyEdit 不支援情緒標籤，也不能分段設定不同情緒，
 且點數有限，必須一次生成完畢。
 
-請把 6 個分鏡的旁白與主角口白，去除所有情緒標籤，合併成一段可以直接貼入 MyEdit 的純文字稿，
+請把 S3 精簡後 3 個分鏡的旁白與主角口白，去除所有情緒標籤，合併成一段可以直接貼入 MyEdit 的純文字稿，
 使用台灣用語與自然的台灣口語，在句子之間適度加入刪節號「……」引導自然停頓，並統計總字數。</div>
 </div>
 <div class="tip-card note"><strong>聲音風格選擇：</strong>只能選一種聲音貫穿全段時，挑「活潑」「說故事」風格的配音員；下載後到 CapCut 調整各段的間隔，做出節奏對比。</div>
 <div class="content-h2">④ 背景音樂</div>
 <div class="prompt-card">
 <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — Suno 背景音樂</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-<div class="prompt-code">依這支廣告的 6 個分鏡與旁白情緒，幫我寫 Suno 用的音樂描述：
+<div class="prompt-code">依這支廣告 S3 精簡後的 3 個分鏡與旁白情緒，幫我寫 Suno 用的音樂描述：
 - 【純音樂，不要人聲（旁白才聽得清楚）／要人聲演唱，寫出中文歌詞】
 - 風格：【輕快活潑、節奏明快、有冬天早晨的咖啡香氛圍】，情緒跟著分鏡起伏，結尾漸弱或留白，方便對齊店名畫面
 請輸出：
@@ -3383,11 +3437,11 @@ C2-說明｜文字｜【每日限量手工肉桂捲】]
 </div><!-- u11-f END -->
 <!-- u11-g -->
 <div class="sub-block" id="u11-g">
-<div class="sec-sub-title">S5　CapCut 剪輯</div>
+<div class="sec-sub-title">S6　CapCut 剪輯</div>
 <div class="tip-card info">前面已經有影片片段、旁白音檔、背景音樂，這一步只需要「排序、對齊、混音、輸出」。</div>
 <table class="data-table">
 <tr><th>步驟</th><th>操作重點</th></tr>
-<tr><td>1 匯入素材</td><td>6 段影片、結尾圖卡（單元 4 的海報或資訊圖）、旁白音檔、背景音樂拖進時間軸</td></tr>
+<tr><td>1 匯入素材</td><td>3 段影片、結尾圖卡（單元 4 的海報或資訊圖）、旁白音檔、背景音樂拖進時間軸</td></tr>
 <tr><td>2 排序對齊</td><td>依分鏡順序排列，對齊旁白句子的節奏點；過長的片段直接修剪</td></tr>
 <tr><td>3 混音</td><td>背景音樂音量壓低，旁白出現時用「自動閃避」降低音樂；Flow 產生的英文語音可直接關閉該片段原聲</td></tr>
 <tr><td>4 調色統一</td><td>套用同一組濾鏡，讓不同批次的片段色調一致</td></tr>
