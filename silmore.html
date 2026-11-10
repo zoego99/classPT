@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>喬越實業股份有限公司｜數位轉型Excel數據自動化管理實務</title>
+<link rel="icon" href="./logo2.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/shared.css">
+<link rel="stylesheet" href="css/p2.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <a class="nav-brand" href="index.html?unit=silmore">
+    <div class="nav-logo"><img src="./logo.svg" alt="" class="logo"></div>
+    <div class="nav-text">
+      <span class="nav-title">喬越實業股份有限公司｜數位轉型Excel數據自動化管理實務</span>
+      <span class="nav-sub">心怡｜zoego99@gmail.com</span>
+    </div>
+  </a>
+</nav>
+
+<!-- ===== 三欄版面 ===== -->
+<div class="app-layout">
+
+  <!-- ===== 左欄：導覽 ===== -->
+  <div class="sidebar">
+    <div class="sidebar-header">課程單元</div>
+    <div class="sidebar-scroll">
+
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u3" onclick="showSection('u3')">
+          <span class="sec-num" style="background:var(--sec-3)">1</span>
+          AI＋試算表
+        </button>
+        <button class="sec-sub-btn" id="btn-u3-a" onclick="showSub('u3','u3-a')">照片／紙本轉 Excel</button>
+        <button class="sec-sub-btn" id="btn-u3-b" onclick="showSub('u3','u3-b')">AI 輔助公式建立</button>
+        <button class="sec-sub-btn" id="btn-u3-c" onclick="showSub('u3','u3-c')">數據趨勢解讀與建議</button>
+      </div>
+
+    </div>
+  </div><!-- /sidebar -->
+
+  <!-- ===== 中欄：主內容 ===== -->
+  <div class="content-area" id="contentArea">
+
+    <!-- ======== U3: AI＋試算表 ======== -->
+    <div class="content-section" id="u3">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-3)">1</span>
+        AI＋試算表
+      </div>
+        <div class="tip-card info"><strong>關鍵觀念：</strong>在同一個 AI 對話中，前後內容會互相參考。<br>如果連續詢問多個 Excel 公式，但這些公式其實屬於不同工作表、不同欄位或不同案例，AI 可能會把前一題的條件帶到下一題，造成公式判斷錯誤。<br>
+因此可以事先加上一段規則，告訴 AI：
+          <ul>
+            <li>避免不同公式互相干擾</li>
+            <li>減少 AI 誤用前一題條件</li>
+            <li>不用每次都另外開新對話</li>
+            <li>適合在同一個對話中連續詢問多個 Excel 問題</li>
+          </ul>
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Excel開始詢問公式時，建議開始的Prompt</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">以下會詢問多個 Excel 問題，彼此可能沒有關聯。 若出現【主題】，表示開始新的獨立問題，請只依該主題內容回答，不要沿用前一題的公式、欄位或條件。</div>
+        </div>
+
+      <!-- u3-a -->
+      <div class="sub-block" id="u3-a">
+        <div class="sec-sub-title">照片／紙本資料轉 Excel</div>
+        <div class="tip-card info">操作習慣：整理完成後，利用【Ctrl + C】複製 AI 回覆的表格，再到 Excel 按【Ctrl + V】貼上</div>
+        <div class="content-img60">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/excel-7.jpg" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/excel-7.jpg" alt=""></a>
+        </div>
+        <!-- <table class="data-table">
+          <tr><th>情境</th><th>原始格式</th><th>整理後欄位</th></tr>
+          <tr><td>機具現場維修回報</td><td>技師手寫維修單拍照</td><td>日期／客戶名稱／機台型號／故障情況／處理方式</td></tr>
+          <tr><td>客戶紙本訂單</td><td>傳真或紙本訂購單拍照</td><td>日期／客戶名稱／品項／數量／交貨日期</td></tr>
+          <tr><td>經銷商詢價彙整</td><td>通訊軟體文字截圖</td><td>經銷商名稱／詢價品項／數量／優先程度</td></tr>
+        </table> -->
+        <div class="tip-card note"><strong>❌ 常見問法（不佳）：</strong>「請把這張圖片轉成 Excel」<br>這樣問，AI 不知道你要什麼欄位、不知道格式、不知道用途<br><strong>✅ 好 Prompt ＝ 角色 ＋ 任務 ＋ 輸出格式</strong></div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 好 Prompt — 照片轉 Excel（機具維修回報單）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">你是一位行政助理，請協助我整理圖片中的工程／維修回報單內容。
+請根據圖片資訊，整理成「可直接貼到 Excel 的表格格式」。
+- 欄位請包含：
+日期、工地地點、設備名稱、設備編號、故障情況、損壞程度、處理方式、預估費用、負責人、處理狀態、備註
+- 預估費用：例如顯示為 6000
+- 請用「表格」方式輸出，不要加入多餘說明文字。
+- 若圖片中某欄位無資料，請填寫「無」。</div>
+        </div>
+      </div>
+
+      <!-- u3-b -->
+      <div class="sub-block" id="u3-b">
+        <div class="sec-sub-title">AI 輔助公式建立</div>
+        <div class="tip-card info">▶️ 工作情境：Excel 公式會用的就那幾個，遇到跨表查詢、條件判斷、時間計算，常常卡關，要嘛上網查半天，要嘛就放棄，改用人工處理。</div>
+        <table class="data-table">
+          <tr><th>情境</th><th>說明</th></tr>
+          <tr><td>我知道要算什麼，但不知道怎麼寫</td><td>描述需求，AI 直接給公式</td></tr>
+          <tr><td>公式有錯，但不知道錯在哪</td><td>把錯誤公式丟給 AI，請它找問題</td></tr>
+          <tr><td>想確認公式邏輯是否正確</td><td>上傳 Excel 檔，請 AI 驗證（注意客戶與報價資料安全）</td></tr>
+        </table>
+        <div class="tip-card note"><strong>關鍵觀念：</strong>說清楚「哪一張表是來源、哪一張是目的、用哪個欄位比對」，AI 給的公式才會準確。
+          <ul>
+            <li>詢問 AI 時描述表格的內容，包含表格的資料範圍，與我們目標要填寫的位置。</li>
+            <li>提供三筆記錄給 AI 參考，進行提問參考。</li>
+            <li>需要生成 Excel 檔，在詢問時直接寫指令。</li>
+            <li>利用畫面截圖進行 AI 詢問。</li>
+          </ul>
+        </div>
+
+        <div class="content-h2">(1) 善用截圖</div>
+        <div class="content-img60">
+          <img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/excel-2.jpg" alt="">
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 AI 詢問 — 判斷資料是否填寫完整</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">如附圖，整筆資料中A~D欄若為空白時，在E欄顯示【有資料未填寫】，公式寫法，並簡單說明公式</div>
+        </div>
+
+        <div class="content-h2">(2) 善用表格設定進行AI詢問</div>
+        <div class="content-img70">
+          <img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai224.jpg" alt="">
+        </div>
+
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 AI 詢問 — 利用[欄位名稱]快速理解公式寫法</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">如附圖，資料已建立為 Excel Table。
+請先分析各欄位用途，再協助撰寫 H 欄「工時(小時)」公式，需考量休息時間扣除、跨日班別、彈性工時等情境，並說明計算邏輯。
+</div>
+        </div>
+
+        <div class="content-h2">(3) 提供 Excel 檔案</div>
+
+        <div class="tip-card info">📌 AI 協助寫公式不是問題，真正關鍵問題是<strong>AI可能還沒看懂資料怎麼連，就開始回答公式</strong>。多工作表或多檔案時，直接提供 Excel 檔，先讓 AI 確認資料關係，再回答會更準確，這樣比截圖更容易公式解答。</div>
+        <div class="tip-card warning">⚠️ <strong>上傳檔案前先檢查敏感資料。</strong>客戶名稱、電話、報價、配方等資訊，必要時先刪除或改用代號。</div>
+        <div class="content-img60">
+          <img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/excel-1.jpg" alt="">
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 AI 詢問 — 兩工作表帶入公式（不佳問法）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">附檔，Excel檔案，包含兩個工作表，將工作表【基本資料】，
+透過【客戶編號】欄位代入至工作表【訂單明細】的產業別/地區欄位，公式寫法?
+</div>
+        </div>
+        <div class="tip-card note">📌 最佳問法：當附件包含多個工作表或多個檔案時，Prompt 不應直接要求公式或答案，而應先要求 AI 分析資料結構、欄位關係與關聯鍵，再提供解決方案。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 AI 詢問 — 兩工作表帶入公式（建議問法）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">附檔為 Excel，包含【基本資料】與【訂單明細】兩個工作表。
+
+需求：
+請透過【客戶編號】，將【基本資料】中的【產業別、所在地區】帶入【訂單明細】。
+
+請先檢查工作表結構與【客戶編號】是否適合作為關聯欄位。
+若沒有問題，直接提供公式與說明；若有異常，再先提醒我。</div>
+        </div>
+      </div>
+
+      <!-- u3-c -->
+<div class="sub-block" id="u3-c">
+
+  <div class="sec-sub-title">3. 數據趨勢解讀與建議</div>
+
+  <div class="tip-card info">
+    報表與圖表完成後，AI 可以協助我們進一步回答：
+    <strong>「發生了什麼？可能為什麼？接下來要注意什麼？」</strong>
+    <br><br>
+    常見應用包括：
+    <ul>
+      <li>找出明顯異常或趨勢變化</li>
+      <li>分析可能原因與影響</li>
+      <li>比較績效並找出優先改善項目</li>
+      <li>提出後續行動與改善方向</li>
+    </ul>
+  </div>
+
+  <div class="tip-card warning">
+    <strong>關鍵觀念：</strong>
+    <ul>
+      <li>❌ 不要只問 AI「這樣合理嗎？」</li>
+      <li>✅ 改問「可能原因是什麼？判斷依據是什麼？有哪些風險？」</li>
+      <li>AI 提出的原因屬於分析假設，仍需搭配實際資料確認。</li>
+    </ul>
+  </div>
+
+
+  <!-- 情境 1 -->
+  <div class="content-h2">情境 1｜發現明顯異常下降</div>
+
+  <div class="tip-card info">
+    當圖表出現明顯高峰、急升或急降時，
+    可以請 AI 協助找出可能原因、影響與改善方向。
+  </div>
+  <div class="content-img40">
+    <img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/excel-3.jpg" alt="">
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-header">
+      <span class="prompt-card-title">📌 簡易版 — 找出異常原因</span>
+      <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+    </div>
+    <div class="prompt-code">這是【1–6 月】的銷售趨勢圖。
+我發現【4 月達到高峰後，5–6 月明顯下降】。
+請分析可能原因，並提出改善建議。</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-header">
+      <span class="prompt-card-title">📌 進階版 — 原因、風險與改善</span>
+      <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+    </div>
+    <div class="prompt-code">這是【1–6 月】的銷售資料。
+我觀察到【4 月達到高峰後，5–6 月明顯下滑】。
+
+請協助分析：
+1. 可能原因
+2. 判斷時還需要確認哪些資料
+3. 可能造成的風險
+4. 【3 個】可行的改善方向
+
+請不要把可能原因直接當成已確認事實。</div>
+  </div>
+
+
+  <!-- 情境 2 -->
+  <div class="content-h2">情境 2｜判讀趨勢變化與後續風險</div>
+
+  <div class="tip-card info">
+    有些數據不是突然大幅下降，而是從成長轉為緩慢下滑。
+    這時可請 AI 協助判斷<strong>趨勢是否值得注意，以及後續可能的風險</strong>。
+  </div>
+  <div class="content-img40">
+    <img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/excel-4.jpg" alt="">
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-header">
+      <span class="prompt-card-title">📌 簡易版 — 趨勢判讀</span>
+      <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+    </div>
+    <div class="prompt-code">這是【1–6 月】的銷售趨勢資料。
+目前呈現【1–4 月持續成長，5–6 月開始下降】。
+
+請協助說明這個趨勢代表什麼，
+以及接下來最需要注意的地方。</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-header">
+      <span class="prompt-card-title">📌 進階版 — 趨勢推估與風險</span>
+      <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+    </div>
+    <div class="prompt-code">這是【1–6 月】的銷售資料，目前呈現【前期成長、後期逐漸下滑】的趨勢。
+
+如果要用目前趨勢推估後續表現，請協助我判斷：
+1. 這項推估成立的前提
+2. 最可能被忽略的【3 個】風險
+3. 哪些外部因素可能讓預估失準
+4. 還需要補哪些資料，才能提高判斷可信度</div>
+  </div>
+
+
+  <!-- 情境 3 -->
+  <div class="content-h2">情境 3｜找出需要優先改善的 KPI</div>
+
+  <div class="tip-card info">
+    當資料包含多個部門、目標值、實際值與達成率時，
+    不要只看最低百分比，也可以請 AI 綜合判斷
+    <strong>哪個部門或指標最需要優先處理</strong>。
+  </div>
+    <div class="content-img30">
+    <img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/excel-5.jpg" alt="">
+  </div>
+
+
+  <div class="prompt-card">
+    <div class="prompt-card-header">
+      <span class="prompt-card-title">📌 簡易版 — 找出需要關注的部門</span>
+      <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+    </div>
+    <div class="prompt-code">這是一份【各部門】的 KPI 表，包含【目標值、實際值、達成率】。
+
+請找出目前最需要優先關注的部門，
+並用簡單文字說明判斷理由。</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-card-header">
+      <span class="prompt-card-title">📌 進階版 — KPI 判斷與改善方向</span>
+      <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+    </div>
+    <div class="prompt-code">這是一份【各部門】的 KPI 比較表，包含【目標值、實際值、達成率】。
+
+請協助我：
+1. 找出最需要優先改善的【部門／指標】
+2. 說明判斷依據，不要只看達成率
+3. 說明可能造成的影響
+4. 提出【2～3 個】可行的改善方向
+
+若現有資料不足以判斷原因，請直接指出還需要哪些資料。</div>
+  </div>
+
+</div>
+
+    </div><!-- /u3 -->
+
+  </div><!-- /content-area -->
+
+
+  <!-- ===== 右欄：工具列 ===== -->
+  <div class="tool-panel">
+    <div class="tool-section">
+      <div class="tool-section-title">課程範例下載</div>
+      <a class="tool-btn p1-btn" href="https://drive.google.com/drive/folders/1CV2igMg_CglHG0OWcmB9fKO_2lAYGv26?usp=sharing" target="_blank">
+        <span class="tool-name">課程範例下載</span>
+      </a>
+    </div>
+
+    <div class="tool-section">
+      <div class="tool-section-title">AI 工具</div>
+      <a class="tool-btn" href="https://gemini.google.com" target="_blank">
+        <span class="tool-name">Gemini</span>
+      </a>
+      <a class="tool-btn" href="https://chatgpt.com" target="_blank">
+        <span class="tool-name">ChatGPT</span>
+      </a>
+    </div>
+
+
+  </div><!-- /tool-panel -->
+
+</div><!-- /app-layout -->
+
+<script src="js/p2.js"></script>
+<script>
+  // 進頁面預設顯示第一個單元（避免因未觸發點擊事件導致中間內容區空白）
+  document.addEventListener('DOMContentLoaded', function () {
+    try {
+      if (typeof showSection === 'function') { showSection('u1'); }
+      if (typeof showSub === 'function') { showSub('u1', 'u1-a'); }
+    } catch (e) { /* 若頁面 JS 尚未載入完成則忽略 */ }
+  });
+</script>
+</body>
+</html>
