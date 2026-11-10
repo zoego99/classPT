@@ -3104,7 +3104,7 @@ C2-說明｜文字｜【每日限量手工肉桂捲】]
 <tr><th>步驟</th><th>做什麼</th><th>工具</th></tr>
 <tr><td>S1 分鏡腳本</td><td>AI 產出 6 個分鏡：畫面描述、生圖／生影 Prompt、旁白</td><td>Gemini／ChatGPT</td></tr>
 <tr><td>S2 參考圖與分鏡圖</td><td>先定主角、商品、場景三種參考圖，再逐張生成 6 張分鏡圖</td><td>Gemini（Nano Banana）</td></tr>
-<tr><td>S3 精簡為 3 分鏡</td><td>依原故事把 6 分鏡精簡為 3 分鏡，並直接生成 3 張新分鏡圖</td><td>Gemini／ChatGPT</td></tr>
+<tr><td>S3 精簡為 3 分鏡</td><td>依原故事把 6 分鏡精簡為 3 分鏡腳本，確認後再逐格生成 3 張分鏡圖</td><td>Gemini／ChatGPT</td></tr>
 <tr><td>S4 動態影片</td><td>3 張分鏡圖＋影片 Prompt，圖片轉影片</td><td>Google Flow</td></tr>
 <tr><td>S5 旁白與配樂</td><td>旁白轉語音、產生背景音樂</td><td>Google AI Studio／MyEdit／雅婷文字轉語音／Suno</td></tr>
 <tr><td>S6 剪輯</td><td>排序、對齊、混音、字幕、輸出</td><td>CapCut 剪映</td></tr>
@@ -3189,13 +3189,14 @@ C2-說明｜文字｜【每日限量手工肉桂捲】]
 <div class="tip-card info"><strong>為什麼要先做參考圖？</strong>共用設定只是一段文字，AI 每畫一格都要重新「用文字想像」主角、商品、場景，6 格畫下來容易走樣。先畫成參考圖，後面每一格都上傳當參考，AI 是「照著圖畫」，不是「照著文字腦補」。</div>
 <table class="data-table">
 <tr><th>參考圖</th><th>鎖定什麼</th><th>本次做法</th></tr>
-<tr><td>① 主角</td><td>外貌、服裝、表情</td><td>生成角色設計圖</td></tr>
+<tr><td>① 主角</td><td>外貌、服裝、表情</td><td>生成主角設計圖（4 角度＋6 表情）</td></tr>
+<tr><td>① 次要角色</td><td>外貌、服裝、識別特徵</td><td>多位次要角色合併成 1 張設計圖（正面＋1 表情）</td></tr>
 <tr><td>② 商品</td><td>杯子外觀、顏色、拉花</td><td><strong>優先用自行拍攝的商品照片</strong>；沒有照片時生成商品參考圖</td></tr>
 <tr><td>③ 場景</td><td>店內吧台、街角、燈光、色調</td><td>多個分鏡在同一場景時生成場景設定圖</td></tr>
 </table>
-<div class="content-h2">① 角色設計圖</div>
+<div class="content-h2">① 角色設計圖：主角</div>
 <div class="prompt-card">
-<div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 角色設計圖（人物／擬人化物件／寵物皆適用）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+<div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 主角設計圖（人物／擬人化物件／寵物皆適用）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
 <div class="prompt-code">請把剛才「共用設定」中主角的外觀描述，轉換成「角色設計圖」並直接生成：
 
 一張角色設計資料圖（character design sheet），純白色背景，依共用設定的畫風。
@@ -3206,6 +3207,26 @@ C2-說明｜文字｜【每日限量手工肉桂捲】]
 - 人物為半寫實卡通造型，五官圓潤自然、表情生動，比例接近正常人比例，不使用誇張大頭 Q 版造型，具備精緻 3D 建模與動畫電影渲染質感
 - 光線明亮清晰、色調溫暖柔和</div>
 </div>
+<div class="content-h2">① 角色設計圖：次要角色（多位合併 1 張）</div>
+<div class="tip-card info"><strong>次要角色不用畫那麼多角度：</strong>次要角色戲份少，多半出現在背景或畫面側邊，一個正面全身像加一個招牌表情就足以辨識。多位合併成 1 張，省生圖額度，生成分鏡時也只要多附 1 張圖。</div>
+<div class="prompt-card">
+<div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 次要角色合併設計圖</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+<div class="prompt-code">請依剛才的分鏡腳本，整理出故事中的次要角色（主角以外、在 2 格以上出現，或在某一格有明顯動作與表情的角色，例如店員、同事），
+先用條列方式列出每位次要角色的身分與外觀描述（每位一句），
+再把所有次要角色合併成「1 張」次要角色設計圖並直接生成：
+
+一張次要角色設計資料圖（character lineup sheet），純白色背景，依共用設定的畫風。
+所有次要角色由左到右並排，每位只畫 1 個正面全身像，旁邊附 1 個符合角色個性的招牌表情特寫；角色之間保持間距、不互相重疊。
+身高與比例彼此一致，並和主角設計圖的比例相符。
+每位角色的服裝、髮型、配色要有明顯區別，也不要和主角撞色，方便在分鏡中一眼分辨。
+每位角色下方標註中文小標籤，只寫身分（例如：店員、同事），不要寫分鏡編號。
+整體排版工整，線條乾淨、無背景雜訊。
+
+- 次要角色最多 4 位，超過時只畫戲份最多的 4 位；只在背景一閃而過的路人不用畫
+- 人物為半寫實卡通造型，五官圓潤自然、表情生動，比例接近正常人比例，不使用誇張大頭 Q 版造型，具備精緻 3D 建模與動畫電影渲染質感
+- 光線明亮清晰、色調溫暖柔和</div>
+</div>
+<div class="tip-card note"><strong>故事沒有次要角色時：</strong>這一步可以跳過；只有 1 位次要角色時，同樣用這段 Prompt 生成即可。</div>
 <div class="content-h2">② 商品參考圖（沒有商品照片時）</div>
 <div class="prompt-card">
 <div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 商品參考圖</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
@@ -3231,15 +3252,15 @@ C2-說明｜文字｜【每日限量手工肉桂捲】]
 <div class="content-h2">④ 逐張生成分鏡圖</div>
 <div class="content-note">
 <ol style="margin-left:20px;">
-<li>分鏡 1：貼上 <strong>S1 的共用設定＋分鏡 1 的 AI生圖Prompt</strong>，附上角色設計圖、場景設定圖</li>
+<li>分鏡 1：貼上 <strong>S1 的共用設定＋分鏡 1 的 AI生圖Prompt</strong>，附上主角設計圖、場景設定圖；這一格有次要角色時，再附次要角色設計圖</li>
 <li>分鏡 2～6：貼上該格的 AI生圖Prompt，再加上下方這段</li>
-<li>有商品出現的分鏡，記得附上商品圖</li>
+<li>有商品出現的分鏡，記得附上商品圖；有次要角色出現的分鏡，記得附上次要角色設計圖</li>
 </ol>
 </div>
-<div class="tip-card info"><strong>每張參考圖各自負責一件事：</strong>角色設計圖管人物、場景設定圖管背景、商品圖管商品。這一格需要什麼就附什麼，不用每格都全部上傳。</div>
+<div class="tip-card info"><strong>每張參考圖各自負責一件事：</strong>主角設計圖管主角、次要角色設計圖管配角、場景設定圖管背景、商品圖管商品。這一格需要什麼就附什麼，不用每格都全部上傳。</div>
 <div class="prompt-card">
 <div class="prompt-card-header"><span class="prompt-card-title">📌 分鏡 2 之後：加在生圖 Prompt 後面</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
-<div class="prompt-code">請依照上方已定案的「共用設定」（視覺風格、主角外觀、商品外觀、場景設定維持不變，不需要重新輸出這段文字），生成分鏡的畫面。商品依上傳的圖保留原樣，畫面中不要出現任何文字與品牌商標。</div>
+<div class="prompt-code">請依照上方已定案的「共用設定」（視覺風格、主角外觀、商品外觀、場景設定維持不變，不需要重新輸出這段文字），生成分鏡的畫面。次要角色依次要角色設計圖的外觀保持一致。商品依上傳的圖保留原樣，畫面中不要出現任何文字與品牌商標。</div>
 </div>
 <div class="content-note"><p>➜ 在同一個對話中連續生成 6 張，主角才不會走樣。不滿意的格子，只說明要改的一個地方，請 AI 局部修改。</p></div>
 </div><!-- u11-c END -->
@@ -3268,8 +3289,6 @@ C2-說明｜文字｜【每日限量手工肉桂捲】]
 
 再把 3 個分鏡依序放在「同一個」Markdown 程式碼區塊內（不要用表格），每個分鏡之間用一行「---」分隔。
 
-輸出完腳本後，請依這 3 格的 AI生圖Prompt，參考前面的角色設計圖、場景設定圖與商品圖，依序直接生成 3 張分鏡圖，畫面中不要出現任何文字、Cam 或分鏡編號標籤與品牌商標。
-
 注意：
 - 全程使用中文
 - AI生圖、生影 Prompt 只描述這一格的動作與場景，不用重複共用設定
@@ -3283,15 +3302,27 @@ C2-說明｜文字｜【每日限量手工肉桂捲】]
 - 人物為半寫實卡通造型，五官圓潤自然、表情生動，比例接近正常人比例，不使用誇張大頭 Q 版造型，具備精緻 3D 建模與動畫電影渲染質感
 - 光線明亮清晰、色調溫暖柔和；構圖自然、有故事性，如同從一部高品質 3D 動畫電影中擷取的畫面</div>
 </div>
+<div class="tip-card note"><strong>這一步只出腳本、不生圖：</strong>先確認 3 分鏡的故事與旁白沒問題，再進入下方逐格生成分鏡圖，避免腳本還在改、圖已經畫了好幾張。</div>
+<div class="tip-card warning"><strong>旁白也要重新檢查：</strong>合併後的旁白容易變長，每格旁白要在 10 秒內、主角口白要在 8 秒內唸完；同樣不使用「最好喝」「第一」「唯一」等誇大用語。</div>
+<div class="content-h2">依 3 分鏡腳本逐格生成分鏡圖</div>
 <div class="content-note">
 <ol style="margin-left:20px;">
-<li>AI 輸出 3 分鏡腳本後，會接著生成 3 張新的分鏡圖</li>
-<li>依序下載 3 張分鏡圖，檔名改成「分鏡1、分鏡2、分鏡3」，S4 放進 Flow 時才不會弄錯順序</li>
-<li>AI 沒有接著生圖，或少生成幾張時，輸入：「請依剛才 3 格的 AI生圖Prompt，生成分鏡 X 的圖」</li>
+<li>腳本確認後，在同一個對話中一次生成一格，依序生成分鏡 1、2、3</li>
+<li>每一格附上 S2 生成的參考圖：主角設計圖、場景設定圖；這一格有次要角色就附次要角色設計圖，有商品就附商品圖</li>
+<li>貼上下方 Prompt，把【1】換成要生成的分鏡編號</li>
+<li>下載後檔名改成「分鏡1、分鏡2、分鏡3」，S4 放進 Flow 時才不會弄錯順序</li>
 </ol>
 </div>
+<div class="prompt-card">
+<div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 逐格生成 3 分鏡的分鏡圖</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+<div class="prompt-code">請依剛才 S3 精簡後「分鏡【1】」的 AI生圖Prompt，生成這一格的分鏡圖。
+
+- 共用設定（視覺風格、主角外觀、商品外觀、場景設定）維持不變，不需要重新輸出這段文字
+- 主角依主角設計圖、次要角色依次要角色設計圖、場景依場景設定圖保持一致；商品依上傳的圖保留原樣
+- 畫面中不要出現任何文字、Cam 或分鏡編號標籤與品牌商標
+- 一次只生成這一格</div>
+</div>
 <div class="tip-card note"><strong>不滿意的格子：</strong>只說明要改的一個地方，請 AI 局部修改，例如「分鏡 2 的主角表情改成更驚訝，其餘不變」。</div>
-<div class="tip-card warning"><strong>旁白也要重新檢查：</strong>合併後的旁白容易變長，每格旁白要在 10 秒內、主角口白要在 8 秒內唸完；同樣不使用「最好喝」「第一」「唯一」等誇大用語。</div>
 </div><!-- u11-c2 END -->
 <!-- u11-d -->
 <div class="sub-block" id="u11-d">
