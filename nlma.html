@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>內政部國土管理署｜AI 協作實務應用</title>
+<link rel="icon" href="./logo2.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/shared.css">
+<link rel="stylesheet" href="css/p2.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <a class="nav-brand" href="index.html">
+    <div class="nav-logo"><img src="./logo.svg" alt="" class="logo"></div>
+    <div class="nav-text">
+      <span class="nav-title">內政部國土管理署｜AI 協作實務應用：公務行政效率與安全實作</span>
+      <span class="nav-sub">心怡｜zoego99@gmail.com</span>
+    </div>
+  </a>
+</nav>
+
+<!-- ===== 三欄版面 ===== -->
+<div class="app-layout">
+
+  <!-- ===== 左欄：導覽 ===== -->
+  <div class="sidebar">
+    <div class="sidebar-header">課程單元</div>
+    <div class="sidebar-scroll">
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u1" onclick="showSection('u1')">
+          <span class="sec-num" style="background:var(--sec-1)">1</span>
+          AI 工具定位與公務資安防線
+        </button>
+        <button class="sec-sub-btn" id="btn-u1-a" onclick="showSub('u1','u1-a')">AI 工具選擇與適用情境</button>
+        <button class="sec-sub-btn" id="btn-u1-b" onclick="showSub('u1','u1-b')">紅黃綠燈原則</button>
+        <button class="sec-sub-btn" id="btn-u1-c" onclick="showSub('u1','u1-c')">帳號設定與暫時對話</button>
+        <button class="sec-sub-btn" id="btn-u1-d" onclick="showSub('u1','u1-d')">詢問原則：GPS 三步驟</button>
+        <button class="sec-sub-btn" id="btn-u1-e" onclick="showSub('u1','u1-e')">輸入技巧與 MD 結構化</button>
+        <button class="sec-sub-btn" id="btn-u1-f" onclick="showSub('u1','u1-f')">結構化指令與【問定骨生】</button>
+        <button class="sec-sub-btn" id="btn-u1-g" onclick="showSub('u1','u1-g')">行政文件 AI 操作實例</button>
+        <button class="sec-sub-btn" id="btn-u1-h" onclick="showSub('u1','u1-h')">資料去識別化與脫敏</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u2" onclick="showSection('u2')">
+          <span class="sec-num" style="background:var(--sec-3)">2</span>
+          AI 工作流、內容查核與負責任使用
+        </button>
+        <button class="sec-sub-btn" id="btn-u2-a" onclick="showSub('u2','u2-a')">公務 Prompt 結構化技巧</button>
+        <button class="sec-sub-btn" id="btn-u2-b" onclick="showSub('u2','u2-b')">AI 常見錯誤與風險提醒</button>
+        <button class="sec-sub-btn" id="btn-u2-c" onclick="showSub('u2','u2-c')">出處規則與日期推算</button>
+        <button class="sec-sub-btn" id="btn-u2-d" onclick="showSub('u2','u2-d')">防呆查核與原始資料比對</button>
+        <button class="sec-sub-btn" id="btn-u2-e" onclick="showSub('u2','u2-e')">Google 搜尋查證技巧</button>
+        <button class="sec-sub-btn" id="btn-u2-f" onclick="showSub('u2','u2-f')">【案例】工地照片安全疑慮辨識</button>
+        <button class="sec-sub-btn" id="btn-u2-g" onclick="showSub('u2','u2-g')">延伸：照片＋範本→督導簡報</button>
+        <button class="sec-sub-btn" id="btn-u2-h" onclick="showSub('u2','u2-h')">AI 負責任使用原則</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u3" onclick="showSection('u3')">
+          <span class="sec-num" style="background:var(--sec-4)">3</span>
+          會議紀錄與待辦追蹤
+        </button>
+        <button class="sec-sub-btn" id="btn-u3-a" onclick="showSub('u3','u3-a')">錄音轉逐字稿與會議紀錄</button>
+        <button class="sec-sub-btn" id="btn-u3-b" onclick="showSub('u3','u3-b')">Email 與文字語氣轉換</button>
+        <button class="sec-sub-btn" id="btn-u3-c" onclick="showSub('u3','u3-c')">待辦事項自動拆解</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u4" onclick="showSection('u4')">
+          <span class="sec-num" style="background:var(--sec-5)">4</span>
+          Gemini Notebook 資料提煉
+        </button>
+        <button class="sec-sub-btn" id="btn-u4-a" onclick="showSub('u4','u4-a')">建立專屬知識來源</button>
+        <button class="sec-sub-btn" id="btn-u4-b" onclick="showSub('u4','u4-b')">智慧摘要、問答與回查來源</button>
+        <button class="sec-sub-btn" id="btn-u4-c" onclick="showSub('u4','u4-c')">【案例】補助案件查詢與彙整</button>
+        <button class="sec-sub-btn" id="btn-u4-d" onclick="showSub('u4','u4-d')">參考答案（核對用）</button>
+        <button class="sec-sub-btn" id="btn-u4-e" onclick="showSub('u4','u4-e')">報告大綱生成</button>
+        <button class="sec-sub-btn" id="btn-u4-f" onclick="showSub('u4','u4-f')">Audio Overview 語音總覽</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u5" onclick="showSection('u5')">
+          <span class="sec-num" style="background:var(--sec-6)">5</span>
+          Gemini 技能（Skills）工作流
+        </button>
+        <button class="sec-sub-btn" id="btn-u5-a" onclick="showSub('u5','u5-a')">流程化三步驟與工具差異</button>
+        <button class="sec-sub-btn" id="btn-u5-b" onclick="showSub('u5','u5-b')">Step 1 依範本產出新文件</button>
+        <button class="sec-sub-btn" id="btn-u5-c" onclick="showSub('u5','u5-c')">Step 2 整理成【技能】</button>
+        <button class="sec-sub-btn" id="btn-u5-d" onclick="showSub('u5','u5-d')">Step 3 新案例套用</button>
+      </div>
+
+    </div>
+  </div><!-- /sidebar -->
+
+  <!-- ===== 中欄：主內容 ===== -->
+  <div class="content-area" id="contentArea">
+
+    <!-- ======== U1: AI 工具行政定位與公務資安防線 ======== -->
+    <div class="content-section" id="u1">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-1)">1</span>
+        AI 工具行政定位與公務資安防線
+      </div>
+      <div class="sec-desc">📌 工作情境：同仁常知道「AI 可以幫忙」，但不一定清楚該用哪一個工具，也容易忽略把公務資料輸入外部 AI 時可能產生的資訊安全風險。<br><strong class="blue">先選對工具、守住資安，再談怎麼問。</strong></div>
+      <div class="lesson-outcome"><strong>🎯 本單元完成成果</strong><span>能依工作選擇 AI 工具、用紅黃綠燈判斷資料能否輸入，並以 GPS／結構化指令完成來文摘要與簽辦意見草稿。</span></div>
+
+      <!-- u1-a -->
+      <div class="sub-block" id="u1-a">
+        <div class="sec-sub-title">AI 工具選擇與適用情境</div>
+        <div class="content-img80">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai252.jpg" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai252.jpg" alt="常見 AI 工具介紹"></a>
+        </div>
+        <table class="data-table">
+          <tr><th>工具</th><th>強項</th><th>適合的行政工作情境</th></tr>
+          <tr><td>ChatGPT</td><td>通用對話、文件整理、擬稿、圖片辨識與分析</td><td>來文摘要、簽稿與 Email 擬稿、工地照片初步檢視</td></tr>
+          <tr><td>Gemini</td><td>Google 生態整合、語音互動、錄音檔與圖片理解</td><td>手機語音口述、錄音檔轉逐字稿、Google 文件／試算表協作</td></tr>
+          <tr><td>Gemini Notebook</td><td>只根據上傳資料回答，回答附來源引用可回查</td><td>作業要點、SOP、歷年報告、補助案件資料查詢與彙整</td></tr>
+        </table>
+        <div class="tip-card info"><strong>💡 小技巧｜選工具的原則：</strong>
+          <ul>
+            <li>要「寫」：擬稿、摘要、改語氣 → ChatGPT／Gemini。</li>
+            <li>要「看」：照片、截圖、掃描文件 → ChatGPT／Gemini 上傳圖片。</li>
+            <li>要「查自己的資料」：從多份文件找答案並回查出處 → Gemini Notebook。</li>
+          </ul>
+        </div>
+      </div><!-- u1-a END -->
+
+      <!-- u1-b -->
+      <div class="sub-block" id="u1-b">
+        <div class="sec-sub-title">公務資料使用 AI 的紅黃綠燈原則</div>
+        <div class="tip-card note">輸入前先想一秒：<strong>這份資料如果外流，會不會造成機關、民眾或廠商的困擾？</strong></div>
+        <table class="data-table">
+          <tr><th>燈號</th><th>資料類型（舉例）</th><th>處理方式</th></tr>
+          <tr><td><strong>🔴 紅燈：不輸入</strong></td><td>機密文書、個人資料（身分證字號、電話、住址）、未公開的審查意見、採購底價與評選資料、資安設定</td><td>由承辦人親自處理，不使用外部 AI</td></tr>
+          <tr><td><strong>🟡 黃燈：處理後再輸入</strong></td><td>內部簽稿、會議紀錄、含姓名／地號／金額的資料、工地現場照片</td><td>先去識別化、只取需要的段落，並確認機關規範</td></tr>
+          <tr><td><strong>🟢 綠燈：可使用</strong></td><td>已公開的法規、新聞稿、公開計畫與作業要點、空白表單、一般性問題</td><td>直接使用，但產出仍需查核</td></tr>
+        </table>
+        <div class="content-h2">公部門使用生成式 AI 的基本原則（行政院參考指引重點）</div>
+        <div class="content-note">
+          <ul style="margin-left:20px;">
+            <li>機密文書由業務承辦人親自撰寫，<strong>不使用生成式 AI</strong>。</li>
+            <li>不向生成式 AI 提供應保密、個人資料及未經機關同意公開的資訊。</li>
+            <li>AI 產出不可完全信任，<strong>不得未經確認就直接作為行政行為或決策的唯一依據</strong>。</li>
+            <li>以 AI 協助執行業務時，應適當揭露。</li>
+          </ul>
+        </div>
+        <div class="tip-card warning">※ 實際使用範圍與方式，以所屬機關訂定之資訊安全與 AI 使用規範為準。</div>
+      </div><!-- u1-b END -->
+
+      <!-- u1-c -->
+      <div class="sub-block" id="u1-c">
+        <div class="sec-sub-title">帳號設定與暫時對話：兼顧個人化與資料保護</div>
+        <table class="data-table">
+          <tr><th>工具</th><th>設定／功能</th><th>影響</th></tr>
+          <tr><td>ChatGPT</td><td>【設定】＞【資料控管】＞關閉「為所有人改善模型」</td><td>對話不用於訓練模型；記憶與對話紀錄仍保留，不影響個人化</td></tr>
+          <tr><td>ChatGPT</td><td>【暫時聊天】</td><td>不留對話紀錄、不使用也不建立記憶、不用於訓練</td></tr>
+          <tr><td>Gemini</td><td>【暫時對話】</td><td>不出現在對話紀錄、不用於個人化與訓練（系統最多暫存 72 小時）</td></tr>
+          <tr><td>Gemini</td><td>【活動】＞關閉「保留活動記錄」</td><td>未來對話不用於訓練，但也不再保留對話紀錄，Gemini 無法參考過去對話學習使用習慣</td></tr>
+        </table>
+        <div class="tip-card info"><strong>💡 建議做法：</strong>平常保留活動記錄，讓 AI 了解你的工作習慣；處理黃燈資料時，改用【暫時對話】。</div>
+        <div class="tip-card warning">任何設定都不等於可以輸入機密資料，<strong>🔴 紅燈資料一律不輸入。</strong><br><strong>關閉訓練 ≠ 可以上傳機密：</strong>關閉設定只代表「不拿來訓練模型」，資料仍然會傳到服務商的伺服器處理。另外，按「讚／倒讚」送出意見回饋時，該段對話可能會被人工審閱，處理公務資料時不要送出回饋。</div>
+        <div class="tip-card note">設定畫面會隨版本更新調整，找不到時可在設定頁搜尋「資料」「隱私」「活動」。機關公務帳號的設定由管理者控制，以機關規範為準。</div>
+      </div><!-- u1-c END -->
+
+      <!-- u1-d -->
+      <div class="sub-block" id="u1-d">
+        <div class="sec-sub-title">Prompt 結構化技巧：GPS 三步驟</div>
+        <div class="tip-card note"><strong>工作情境：</strong>問 AI 卻得不到想要的答案，問題往往出在沒說清楚「要做什麼、手上有什麼、最後要交出什麼」。</div>
+        <table class="data-table">
+          <tr><th>GPS</th><th>要說清楚什麼</th><th>公務範例</th></tr>
+          <tr><td><strong>G－Goal<br>目標</strong></td><td>我是誰？要達成什麼？</td><td>我是【業務承辦人】，要讓主管快速掌握來文需辦理的事項</td></tr>
+          <tr><td><strong>P－Position<br>背景資料</strong></td><td>現在的情境、手上的資料、限制</td><td>附件為【上級機關來文】，需在期限內填報；資料不足先提問，不要猜測</td></tr>
+          <tr><td><strong>S－Shape<br>成果格式</strong></td><td>最後要交付的格式</td><td>用【表格】列出辦理事項、期限、配合單位，最後擬【簽辦意見】</td></tr>
+        </table>
+        <div class="content-img90">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai267.jpg" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai267.jpg" alt="詢問原則：GPS 三步驟"></a>
+        </div>
+        <div class="content-h2">一般問法 → GPS 問法</div>
+        <div class="content-note"><p><strong>一般問法：</strong>幫我看這份公文。</p></div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — GPS 問法</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">我是【業務承辦人】，附件是【上級機關來文】。
+請找出需要我辦理的事項、期限與配合單位，用表格整理，最後提供 3 行可以給主管看的摘要。
+資料看不清楚或沒寫的地方，標示「待確認」，不要自行猜測。</div>
+        </div>
+        <div class="tip-card info"><strong>※ 小技巧：</strong>詢問多個問題時，不要一次全問完，建議【分批】進行：
+          <ul>
+            <li>先抓方向，再談細節</li>
+            <li>一個主題確認後，再進入下一個主題</li>
+          </ul>
+        </div>
+      </div><!-- u1-d END -->
+
+      <!-- u1-e -->
+      <div class="sub-block" id="u1-e">
+        <div class="sec-sub-title">輸入技巧與 Markdown 結構化</div>
+        <div class="content-h2">詢問 AI 時輸入說明</div>
+        <div class="content-img50">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai268.jpg" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai268.jpg" alt="詢問 AI 時輸入說明"></a>
+        </div>
+        <div class="content-h2">快速鍵</div>
+        <table class="data-table">
+          <tr><th>強制換行：Shift + Enter</th><th>純文字貼入：Ctrl + Shift + V</th><th>項目條例：降階：Tab<br>升階：Shift + Tab</th></tr>
+        </table>
+        <div class="content-h2">Markdown（MD）結構化</div>
+        <table class="data-table">
+          <tr><th>目的</th><th>基本語法</th></tr>
+          <tr><td><ul style="margin-left:20px;"><li>運用 MD 與 AI 工具對話，層級分明可清楚表達格式需求</li><li>讓 AI 生成內容更具結構化、省時且易讀</li></ul></td><td>【#】標題層級（#、##、###）<br>【- 或 *】項目符號<br>【**粗體**】強調重點<br>【---】分割線</td></tr>
+        </table>
+        <div class="tip-card info">本講義的 Prompt 範本中，「# 角色」「# 任務」「# 規則」就是 MD 標題；「- 」開頭的是項目符號。</div>
+      </div><!-- u1-e END -->
+
+      <!-- u1-f -->
+      <div class="sub-block" id="u1-f">
+        <div class="sec-sub-title">結構化指令與【問定骨生】</div>
+        <div class="content-h2">結構化指令：角色＋任務＋限制＋格式</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 日常短版（手機、電腦都適用）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">我想做【工作主題】，但不知道怎麼問完整。
+請先問我需要補充的資訊，再幫我整理成最好用的提示詞。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 固定／重複工作：整理成完整模板</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code"># 角色：你是【公務機關的文書助理】。
+# 任務：請【摘要／整理／比較／擬稿】。
+# 限制：只根據我提供的資料；沒寫的標示「待確認」，不要自行補充數字或法規。
+# 格式：請用【表格／條列／簽陳格式】呈現。</div>
+        </div>
+        <div class="content-h2">【AI 協作心法】問定骨生</div>
+        <div class="tip-card info"><strong>口訣：</strong>用 AI【問】出溝通盲點、【定】出正確標準、接著拉出邏輯【骨】架、最後才【生】出成品。</div>
+        <div class="content-img90">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai269.jpg" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai269.jpg" alt="AI 協作四步驟：問定骨生"></a>
+        </div>
+        <table class="data-table">
+          <tr><th>工作情況</th><th>建議流程</th><th>怎麼做</th></tr>
+          <tr><td>需求很清楚、任務簡單</td><td>直接問</td><td>直接說「要做什麼＋要什麼成果」即可。</td></tr>
+          <tr><td>有想法，但不知道怎麼問完整</td><td>問→定</td><td>先把想到的需求說出來，讓 AI 反問補齊，再確認後執行。</td></tr>
+          <tr><td>正式簽陳、報告或簡報</td><td>問→定→骨→生</td><td>先釐清需求、鎖定標準、確認骨架，再生成完整成果。</td></tr>
+        </table>
+        <div class="tip-card note"><strong>※ 短提示不等於隨便問，而是先把「整理需求」交給 AI。</strong><br>日常工作可用短句＋來回確認；只有固定、重複或正式工作，再把確認過的內容存成完整 Prompt。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt —【問】讓 AI 拆解需求（已附模擬回答，請改成自己的狀況）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">我要擬一份【補助案件執行進度】簽陳，先不要寫。
+請依「背景／目標／限制／輸出格式」整理我的需求，不清楚的地方列為「待確認」。
+
+我的補充：
+• 背景：我是【補助業務承辦】，負責【4 個縣市】的補助案件
+• 目標：讓【主管】了解目前進度與需要協調的案件
+• 限制：只用我提供的資料；不要自行補數字
+• 輸出格式：【簽陳：主旨／說明／擬辦】，先給大綱，確認後再寫
+
+最後用 Markdown 輸出一段我可以直接使用的完整提示詞。</div>
+        </div>
+        <div class="content-h2">常用追問句</div>
+        <table class="data-table">
+          <tr><th>想要</th><th>可以這樣說</th></tr>
+          <tr><td>更短</td><td>請濃縮成 3 行，給主管在手機上看</td></tr>
+          <tr><td>更具體</td><td>請把每一點改成：做什麼、誰負責、什麼時候完成</td></tr>
+          <tr><td>換對象</td><td>同樣內容，改成給縣市政府承辦人的說明</td></tr>
+          <tr><td>找依據</td><td>每一點請標示在原文的哪一段</td></tr>
+          <tr><td>找漏掉的</td><td>還有哪些資訊不清楚、需要我再確認的？</td></tr>
+        </table>
+      </div><!-- u1-f END -->
+
+      <!-- u1-g -->
+      <div class="sub-block" id="u1-g">
+        <div class="sec-sub-title">行政文件 AI 操作實例</div>
+        <div class="tip-card note"><strong>工作情境：</strong>來文進來後，要先看懂主旨、找出期限、整理要辦的事，再簽辦或擬稿。讓 AI 依「來文 → 摘要 → 找出日期／期限 → 整理重點 → 產生草稿」協助完成第一版。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 模擬來文（課堂示範用，已去識別化）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">主旨：請於114年11月28日前填報「114年度轄管公共設施維護管理情形調查表」，請查照。
+說明：
+一、依本部114年11月3日○○字第1140000000號函辦理。
+二、調查範圍為貴機關轄管之公園、人行道及排水設施，請就設施名稱、位置（地段地號）、最近一次巡檢日期及待改善事項填列。
+三、填報資料請以電子郵件送至承辦人信箱，並副知本部○○司。
+四、調查表如有疑義，請於11月14日前洽詢承辦人○○○，電話（02）0000-0000。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 來文 → 摘要 → 期限 → 重點 → 草稿</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code"># 角色：你是公務機關的文書助理。
+# 任務：閱讀附件來文（Word 檔），依序完成：
+1. 用 3 行摘要來文重點
+2. 找出所有日期與期限，標示是「截止日／洽詢期限／其他」
+3. 整理我需要辦理的事項（做什麼、交給誰、何時前）
+4. 擬一段簽辦意見草稿（擬辦：...）
+# 限制：只根據來文內容；來文沒寫的標示「待確認」；不要自行補充法規。
+# 格式：1～3 用表格，4 用正式公文語氣。</div>
+        </div>
+        <div class="tip-card note"><strong>📍 這一步要看什麼：</strong>
+          <ul>
+            <li>兩個日期（11/14 洽詢、11/28 填報）有沒有被混在一起或抄錯？</li>
+            <li>「副知本部○○司」這種容易漏掉的配合事項，AI 有沒有列出來？</li>
+            <li>簽辦意見有沒有出現來文沒提到的內容（例如自行加上法規依據）？</li>
+          </ul>
+        </div>
+      </div><!-- u1-g END -->
+
+      <!-- u1-h -->
+      <div class="sub-block" id="u1-h">
+        <div class="sec-sub-title">資料去識別化與脫敏</div>
+        <div class="tip-card note"><strong>🟡 黃燈資料要先「去識別化」再輸入：</strong>把能辨識特定人、地、案件的資訊代換或刪除，<strong>只留下 AI 完成任務需要的內容</strong>。</div>
+        <table class="data-table">
+          <tr><th>敏感欄位</th><th>處理方式</th><th>範例</th></tr>
+          <tr><td>姓名</td><td>改為代稱</td><td>王○○ → 甲君／承辦人A</td></tr>
+          <tr><td>地號</td><td>改為代號或只留段名</td><td>○○段 123-4 地號 → 甲地號</td></tr>
+          <tr><td>金額</td><td>不需計算時改為級距</td><td>3,250,000 元 → 約 300 萬元</td></tr>
+          <tr><td>電話／Email／地址</td><td>直接刪除</td><td>刪除</td></tr>
+          <tr><td>身分證字號、帳號</td><td>一律刪除</td><td>刪除</td></tr>
+          <tr><td>廠商、工程名稱</td><td>改為類型描述</td><td>○○營造 → 承攬廠商</td></tr>
+        </table>
+        <div class="content-h2">Word 批次取代：先處理，再貼給 AI</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>操作</th></tr>
+          <tr><td>1</td><td>按 Ctrl＋H 開啟【尋找及取代】＞【更多】＞勾選【使用萬用字元】</td></tr>
+          <tr><td>2</td><td>手機號碼：尋找 <code>09[0-9]{8}</code>，取代為 09XXXXXXXX</td></tr>
+          <tr><td>3</td><td>身分證字號：尋找 <code>[A-Z][12][0-9]{8}</code>，取代為【已刪除】</td></tr>
+          <tr><td>4</td><td>姓名、地號、廠商名稱：逐一【尋找】→【全部取代】為代稱</td></tr>
+        </table>
+        <div class="tip-card warning red"><strong>⚠️ 重要觀念：不要把原文貼給 AI 請它「幫忙去識別化」——貼上的那一刻，資料就已經輸入了。</strong><br>不確定能不能輸入，就先不輸入；需要時改請 AI 提供方法或檢查清單。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 請 AI 給方法，不給資料</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請幫我設計一份【公文附件】去識別化檢查清單：
+列出常見敏感欄位、建議處理方式、檢查方法，用表格呈現。
+我不會提供任何實際資料。</div>
+        </div>
+      </div><!-- u1-h END -->
+    </div><!-- u1 END -->
+
+
+    <!-- ======== U2: 公務行政 AI 工作流、內容查核與負責任使用 ======== -->
+    <div class="content-section" id="u2">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-3)">2</span>
+        公務行政 AI 工作流、內容查核與負責任使用
+      </div>
+      <div class="sec-desc">📌 工作情境：AI 可協助摘要、擬稿與資料整理，但日期、數據、單位或法規引用都可能「翻車」。<strong class="blue">除了會寫 Prompt，更要會查核、會追問。</strong></div>
+      <div class="lesson-outcome"><strong>🎯 本單元完成成果</strong><span>能要求 AI 標示依據、用查核清單與全國法規資料庫核對產出，並完成工地照片安全疑慮辨識的三輪追問。</span></div>
+
+      <!-- u2-a -->
+      <div class="sub-block" id="u2-a">
+        <div class="sec-sub-title">公務 Prompt 結構化技巧</div>
+        <div class="content-note">
+          <ul style="margin-left:20px;">
+            <li><strong>結構化框架：</strong>背景角色＋任務目標＋限制條件＋輸出格式。</li>
+            <li><strong>公文要素：</strong>主旨、說明、辦法、辦理期限、會辦單位，以及正式公務語氣。</li>
+            <li><strong>標示依據：</strong>要求 AI 標出原文段落、頁碼及無法確認之處，方便後續查核。</li>
+          </ul>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 擬復函稿，並標示每一點的依據</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code"># 角色：你是公務機關的文書助理。
+# 任務：依下方來文，擬復函稿（主旨／說明）。
+# 規則：
+- 每一點說明後面用（依據：來文說明第○點）標示出處
+- 來文沒有提到的內容，標示【待確認】，不要自行補充
+- 日期、金額、地號照原文抄錄，不要換算
+# 格式：正式公文用語，主旨不超過 60 字。
+
+【貼上來文】</div>
+        </div>
+      </div><!-- u2-a END -->
+
+      <!-- u2-b -->
+      <div class="sub-block" id="u2-b">
+        <div class="sec-sub-title">AI 常見錯誤與風險提醒</div>
+        <table class="data-table">
+          <tr><th>錯誤類型</th><th>可能發生的狀況</th><th>怎麼檢查</th></tr>
+          <tr><td>日期與期程</td><td>工作日與日曆天混用<br>「文到 15 日內」起算日推錯<br>民國／西元換算錯誤</td><td>回原文確認起算點，自己用月曆再算一次</td></tr>
+          <tr><td>數據與單位</td><td>元／千元／萬元混用、小數點位移、合計與明細不符</td><td>抽查 1～2 筆、自行加總，請 AI 列出計算過程</td></tr>
+          <tr><td>法規引用</td><td>條次錯置、引用舊版或已廢止條文，甚至出現不存在的法規</td><td>到全國法規資料庫查詢現行條文與修正日期</td></tr>
+          <tr><td>人名／單位／地號</td><td>同音字、機關簡稱錯誤、地號數字誤植</td><td>原文與 AI 產出並列，逐項比對</td></tr>
+          <tr><td>過度推論</td><td>原文沒寫，AI 卻「合理補充」</td><td>要求標示依據，沒有依據的刪除</td></tr>
+        </table>
+      </div><!-- u2-b END -->
+
+      <!-- u2-c -->
+      <div class="sub-block" id="u2-c">
+        <div class="sec-sub-title">預防勝於補救：出處規則與日期推算</div>
+        <div class="tip-card warning"><strong>在提示詞中先要求標示出處；但只要求 AI 提供「參考文獻／法規」，反而可能讓它編出不存在的出處。</strong></div>
+        <div class="content-note"><p>與其事後追問，不如在提示詞一開始就要求 AI 標示依據。但要分兩種情況：</p></div>
+        <table class="data-table">
+          <tr><th>情況</th><th>做法</th></tr>
+          <tr><td>有提供資料時<br>（來文、附件、Gemini Notebook 來源）</td><td>要求 AI 標示「原文依據」，只能引用我們提供的資料。每一點都能回頭對照原文，是最可靠的做法。</td></tr>
+          <tr><td>沒有提供資料，要 AI 自行回答時<br>（例如詢問法規）</td><td>只要求「請附參考法規」，AI 為了達成要求，可能編出看似合理、實際不存在的法規名稱或條次。</td></tr>
+        </table>
+        <div class="tip-card info"><strong>因此要同時允許 AI 說「不確定」，並在使用前到全國法規資料庫查證。</strong><br>※ 要求出處，是讓 AI 的答案「可以查證」，不代表列出的出處就一定正確。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 出處規則（可加在任何提示詞最後）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code"># 出處規則：
+- 每一點標示依據（原文段落／附件頁碼）
+- 原文沒有提到的內容，標示「無原文依據」，不要自行補充
+- 提到法規時，列出法規名稱與條次；不確定的請直接說明不確定，不要自行編寫</div>
+        </div>
+        <div class="content-h2">日期推算示範：先算，再追問</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 第一次提問</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">來文日期為【114年11月10日】，來文要求「文到 15 日內函復」，請問最晚哪一天要函復？</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 追問</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">你是用日曆天還是工作日計算？起算日是哪一天？遇到假日怎麼處理？
+如果有不確定的地方，請直接說明不確定，並告訴我應該向誰確認。</div>
+        </div>
+        <div class="tip-card note">※ 同一個問題，AI 第一次的答案和追問後的答案可能不同——這正是需要人工確認的原因。</div>
+      </div><!-- u2-c END -->
+
+      <!-- u2-d -->
+      <div class="sub-block" id="u2-d">
+        <div class="sec-sub-title">防呆查核與原始資料比對</div>
+        <div class="content-h2">雙重視窗交叉比對</div>
+        <div class="content-note"><p>把原文與 AI 產出左右並列（Windows：拖曳視窗到螢幕左右兩側，或按 Win＋← ／ Win＋→），人工逐項核對：<strong>人名、日期、地號、法條、金額</strong>。</p></div>
+        <div class="content-h2">反向追問驗證</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 要求 AI 交代依據</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請逐點列出你剛才摘要的每一句，在原文中的依據段落，並直接引用原句。
+找不到依據的，請標示「無原文依據」。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 法規引用自我檢查</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">你引用的法規，請列出法規名稱、條次與條文內容。
+如果不確定是否為現行條文，請直接說明不確定，不要自行補充。</div>
+        </div>
+        <div class="content-h2">法規回溯原則</div>
+        <div class="content-note">
+          <ul style="margin-left:20px;">
+            <li>AI 提到的法規名稱與條次，一律回到<strong>全國法規資料庫（law.moj.gov.tw）</strong>查詢。</li>
+            <li>確認三件事：<strong>法規是否存在、條次內容是否相符、是否為現行有效版本</strong>（看修正日期與沿革）。</li>
+            <li>機關內部作業要點、函釋，以機關公告或原始文件為準。</li>
+          </ul>
+        </div>
+        <div class="content-h2">AI 產出查核清單</div>
+        <table class="data-table">
+          <tr><th>檢查項目</th><th>確認方式</th></tr>
+          <tr><td>日期期限</td><td>起算日、日曆天或工作日、民國年是否正確</td></tr>
+          <tr><td>數字金額</td><td>單位一致、合計等於明細、抽查一筆自己算</td></tr>
+          <tr><td>人名單位地號</td><td>與原文逐字比對</td></tr>
+          <tr><td>法規引用</td><td>全國法規資料庫查證現行條文</td></tr>
+          <tr><td>有無多寫</td><td>原文沒有的內容是否被補上</td></tr>
+        </table>
+        <div class="content-h2">定稿前：藍隊檢查與紅隊檢查</div>
+        <div class="tip-card info"><strong>藍隊檢查：</strong>站在內部審核者／主管角度，檢查文件是否完整、前後一致、可執行。<br><strong>紅隊檢查：</strong>模擬不同利害關係人的挑剔視角，在送出前先補洞。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 藍隊檢查（簽陳／復函定稿前）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請針對目前這份【簽陳／復函】進行「藍隊檢查」，從內部審核與實際執行的角度檢查：
+- 主旨、說明、擬辦是否對應，前後有無矛盾
+- 日期、金額、單位是否和原文一致
+- 辦理事項的負責單位、期限是否清楚
+- 有無遺漏的會辦或副知單位
+
+請先列出問題與修正建議，不要直接重寫全文；資訊不足處標示「待確認」。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 紅隊檢查（換位思考）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請從【主管／縣市政府承辦人／民眾】的角度，反向檢查這份文件：
+- 可能被質疑或看不懂的地方
+- 缺少的依據、資料或說明
+- 容易造成誤解或執行困難之處
+
+請先整理檢查結果，不要直接重寫全文。</div>
+        </div>
+      </div><!-- u2-d END -->
+
+      <!-- u2-e -->
+      <div class="sub-block" id="u2-e">
+        <div class="sec-sub-title">Google 搜尋查證技巧：site: 與 filetype:</div>
+        <table class="data-table">
+          <tr><th>語法</th><th>效果</th></tr>
+          <tr><td>site:law.moj.gov.tw</td><td>結果只會出現全國法規資料庫的頁面，不會混入新聞、部落格或其他網站的轉載內容</td></tr>
+          <tr><td>filetype:pdf</td><td>結果只會出現 PDF 檔案，適合找手冊、作業要點、說明會簡報等正式文件</td></tr>
+          <tr><td>filetype:pdf site:gov.tw</td><td>兩者可一起使用，只找政府網站的 PDF</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 搜尋範例（直接貼到 Google）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">site:law.moj.gov.tw 營造安全衛生設施標準 護欄
+site:law.moj.gov.tw 營造安全衛生設施標準 開口 墜落
+site:law.moj.gov.tw 職業安全衛生設施規則 移動梯
+site:law.moj.gov.tw 職業安全衛生設施規則 臨時用電 漏電斷路器
+site:law.moj.gov.tw 行政程序法 期間 計算
+filetype:pdf 營造工地 安全衛生 自主檢查表
+filetype:pdf site:gov.tw 公共工程 施工安全 查核
+filetype:pdf site:gov.tw 生成式AI 參考指引</div>
+        </div>
+        <div class="content-h2">其他常用搜尋指令</div>
+        <div class="tip-card info">指令的冒號用半形「:」，冒號後面不要空格。</div>
+        <table class="data-table">
+          <tr><th>指令</th><th>用途</th><th>範例</th></tr>
+          <tr><td>" "（雙引號）</td><td>完整比對，詞組不會被拆開</td><td>"開口防護"</td></tr>
+          <tr><td>-（減號）</td><td>排除不想要的字</td><td>營造安全衛生設施標準 -新聞</td></tr>
+          <tr><td>OR</td><td>符合任一關鍵字即可（OR 需大寫）</td><td>護欄 OR 安全網 site:law.moj.gov.tw</td></tr>
+          <tr><td>intitle:</td><td>關鍵字必須出現在網頁標題</td><td>intitle:作業要點 補助</td></tr>
+        </table>
+        <div class="content-h2">使用重點</div>
+        <div class="content-note">
+          <ul style="margin-left:20px;">
+            <li>核對 AI 引用的條次：以「法規名稱＋關鍵字」搜尋，點進條文確認內容是否相符。</li>
+            <li>加上引號搜尋完整詞組，結果更精準，例如：<code>site:law.moj.gov.tw "安全網"</code></li>
+            <li>進入條文頁後，先看「修正日期」，確認為現行有效版本。</li>
+            <li>已知法規名稱時，直接使用全國法規資料庫的站內搜尋；site: 適合「只知道關鍵字、不確定是哪部法規」的情況。</li>
+          </ul>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 請 AI 只引用官方條文（使用 ChatGPT／Gemini 搜尋功能時）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請只引用 law.moj.gov.tw 的條文，列出法規名稱、條次與條文內容，並附上連結。
+不確定的部分請直接說明不確定，不要自行補充。</div>
+        </div>
+        <div class="tip-card warning"><strong>※ AI 附上的連結與條文，仍須點進原網頁再確認一次。</strong></div>
+      </div><!-- u2-e END -->
+
+      <!-- u2-f -->
+      <div class="sub-block" id="u2-f">
+        <div class="sec-sub-title">【案例示範】工地照片安全疑慮辨識</div>
+        <div class="tip-card note"><strong>工作情境：</strong>工程督導或巡查時拍下大量現場照片，人工逐張檢視容易疲勞漏看。可以請 AI 當「第二雙眼睛」，先找出可能的安全疑慮，再透過追問把問題拆解成「現場要確認什麼、要回頭查哪些文件」。</div>
+        <div class="content-h2">照片使用前的資安確認</div>
+        <div class="content-note">
+          <ul style="margin-left:20px;">
+            <li>照片中的<strong>人臉、車牌、工程告示牌（工程名稱、廠商、電話）</strong>屬黃燈，上傳前先裁切或遮蔽。</li>
+            <li>涉及機敏設施或未公開工程資訊的照片，屬紅燈，不上傳。</li>
+            <li>課堂示範建議使用 <strong>AI 生成的模擬工地照片</strong>，避免使用真實案件照片。</li>
+          </ul>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 生成模擬工地照片（Gemini）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請生成一張寫實風格的工地現場照片（教學示範用）：【二層樓鋼筋混凝土建築施工中】。
+畫面中請刻意包含以下狀況：
+1. 二樓樓板邊緣沒有設置護欄
+2. 一名工人未戴安全帽
+3. 移動梯斜靠牆面，底部沒有固定
+4. 材料堆放在樓板開口旁
+5. 地面延長線浸在積水中
+不要出現任何文字、招牌與可辨識的人臉，16:9。</div>
+        </div>
+        <div class="tip-card info">※ 事先「埋」好 5 個狀況，等於有一份標準答案，可以檢查 AI 有沒有漏判或誤判。</div>
+        <div class="content-img90">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/nlma01.jpg" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/nlma01.jpg" alt="AI 生成的模擬工地照片"></a>
+        </div>
+        <div class="content-h2">同一張照片，不同問法</div>
+        <table class="data-table">
+          <tr><th>問法</th><th>Prompt</th><th>AI 回覆的差異</th></tr>
+          <tr><td>簡單詢問</td><td>這張照片有什麼安全問題？</td><td>列出常見問題，內容較籠統，容易漏判或把正常狀況當問題</td></tr>
+          <tr><td>多層次詢問</td><td>請依「墜落、物體飛落、感電、倒塌崩塌、其他」分類找出安全疑慮，並說明在畫面哪個位置</td><td>分類完整，可對照位置確認</td></tr>
+          <tr><td>較佳問法</td><td>見下方完整 Prompt</td><td>區分「看得到」與「推測」，並附風險高低，方便人工判斷</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 第一輪：影像辨識</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code"># 角色：你是協助工程督導的安全檢查助理。
+# 背景：附圖為【建築新建工程】施工中現場照片。
+# 任務：
+1. 依「墜落、物體飛落、感電、倒塌崩塌、其他」分類，列出可能的安全疑慮
+2. 每一點說明在畫面中的位置（例如：左上方二樓樓板邊緣）
+3. 區分「畫面中可明確看到」與「需現場確認的推測」
+# 格式：表格（類別／位置／觀察內容／明確或推測／風險高低）
+# 限制：看不清楚的地方直接說看不清楚，不要猜測。</div>
+        </div>
+        <div class="content-h2">持續追問：拆解問題、找出查核方向</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 第二輪：問題拆解</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">針對你列出的【二樓樓板邊緣未設護欄】，請拆解：
+1. 現場應確認哪些事實（例如：高度、是否有其他防護、是否作業中暫時拆除）
+2. 應回頭查核的文件方向：工程契約、施工圖說／施工計畫、職業安全衛生相關法規
+3. 每一個查核方向，寫出「要找什麼內容」，不要直接下結論</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 第三輪：法規查核方向</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請列出與上述疑慮可能相關的職業安全衛生法規名稱，以及可能相關的條次。
+每一筆請註明「需至全國法規資料庫確認現行條文」；不確定條次的，只列法規名稱並說明不確定。</div>
+        </div>
+        <table class="data-table">
+          <tr><th>查核來源</th><th>要找什麼</th><th>由誰確認</th></tr>
+          <tr><td>工程契約</td><td>安全衛生相關條款、廠商責任、安全衛生費用與違約處理</td><td>承辦人／監造</td></tr>
+          <tr><td>施工圖說、施工計畫</td><td>護欄、安全網、開口防護、臨時用電等假設工程與安全設施規劃</td><td>監造單位</td></tr>
+          <tr><td>職業安全衛生法規</td><td>相關法規條文與現行版本（如營造安全衛生設施標準）</td><td>承辦人／職安人員</td></tr>
+          <tr><td>現場</td><td>實際高度、是否作業中、防護是否已改善</td><td>現場人員</td></tr>
+        </table>
+        <div class="tip-card note"><strong>📍 這一步要看什麼：</strong>
+          <ul>
+            <li>對照事先埋好的 5 個狀況：AI 找到幾個？有沒有漏掉？有沒有把正常的東西說成問題？</li>
+            <li>AI 有沒有把「推測」講得像「確定」？例如照片看不出來的「未辦教育訓練」。</li>
+            <li>AI 列出的法規條次，回全國法規資料庫逐條核對，條次與內容常有落差。</li>
+          </ul>
+        </div>
+        <div class="tip-card warning"><strong>💡 AI 是第二雙眼睛，不是檢查員：</strong>照片只是一個角度、一個時間點。是否違規、是否列為缺失，仍須依現場查核、契約與法規，由專業人員判斷。</div>
+      </div><!-- u2-f END -->
+
+      <!-- u2-g -->
+      <div class="sub-block" id="u2-g">
+        <div class="sec-sub-title">延伸：現場照片＋簡報範本 → 督導成果簡報</div>
+        <div class="tip-card info"><strong>AI 的圖像辨識與檔案處理能力大幅進步：</strong>
+          <ul>
+            <li>提供<strong>照片＋機關既有的簡報範本檔</strong>，AI 看懂照片內容後，會<strong>直接在範本上</strong>填入內容，產出可下載的檔案，而不是重新做一份「長得像」的簡報。</li>
+            <li>實際能做到的程度，仍依 AI 工具及版本（免費版或訂閱方案）不同而有差異，正式使用前建議先以自己的帳號試做一次。</li>
+          </ul>
+        </div>
+        <table class="data-table">
+          <tr><th></th><th>過去</th><th>現在</th></tr>
+          <tr><td>給範本</td><td>AI 參考版面風格，重新製作類似檔案</td><td>AI 以上傳範本檔為基礎，沿用版面／配色／字型</td></tr>
+          <tr><td>給照片</td><td>只能描述照片，需自行排版</td><td>辨識照片內容，自動配上說明並放進對應頁面</td></tr>
+          <tr><td>產出</td><td>複製文字回貼，再手動整理</td><td>直接下載 .pptx／.docx，打開即可修改</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 依範本產出督導成果簡報（ChatGPT 等支援檔案處理的 AI）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">附件為【簡報範本.pptx】與【6】張工地巡查照片。
+請以範本檔為基礎（保留版面、配色、字型），製作【工程督導成果】簡報約【6】頁：
+封面／督導概況／發現事項（每頁 1～2 張照片＋說明）／改善建議／待追蹤事項
+規則：
+- 照片的說明只寫畫面看得到的內容
+- 照片對應哪個位置、改善前／改善後、哪個施工階段，不確定時列為「待確認」，不要自行判斷
+- 最後列出「待確認清單」，並提供 .pptx 下載</div>
+        </div>
+        <div class="tip-card note"><strong>📍 這一步要看什麼：</strong>
+          <ul>
+            <li>下載的檔案是否真的沿用範本（母片、字型、頁尾），而不是只有顏色相似？</li>
+            <li>AI 幫照片配的說明對不對？AI 會依畫面「推測」照片對應的位置或階段，需逐張確認。</li>
+            <li>「待確認清單」逐項補上正確資訊後，才能作為正式簡報。</li>
+          </ul>
+        </div>
+        <div class="tip-card warning">※ 機關簡報範本屬一般檔案；照片仍依黃燈原則先遮蔽人臉、車牌與告示牌。各 AI 工具的檔案處理能力與額度依帳號方案而異。</div>
+      </div><!-- u2-g END -->
+
+      <!-- u2-h -->
+      <div class="sub-block" id="u2-h">
+        <div class="sec-sub-title">AI 負責任使用原則</div>
+        <table class="data-table">
+          <tr><th>AI 負責</th><th>人負責</th></tr>
+          <tr><td>整理、摘要、擬稿</td><td>專業判斷與查證</td></tr>
+          <tr><td>提出可能疑慮與查核方向</td><td>決定採用與否</td></tr>
+          <tr><td>列出計算過程與依據</td><td>簽核、對外發文與後續責任</td></tr>
+        </table>
+        <div class="content-note">
+          <ul style="margin-left:20px;">
+            <li><strong>Human-in-the-loop（人在迴圈內）：</strong>AI 協助整理與草擬，人員負責專業判斷與最終確認。</li>
+            <li>AI 的摘要、草稿與整理結果，<strong>不可直接視為正確答案</strong>。</li>
+            <li><strong>責任邊界：</strong>正式使用前，由承辦同仁依原始資料、法規及業務專業完成查證與確認。</li>
+          </ul>
+        </div>
+      </div><!-- u2-h END -->
+    </div><!-- u2 END -->
+
+
+    <!-- ======== U3: AI 輔助會議紀錄與待辦追蹤 ======== -->
+    <div class="content-section" id="u3">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-4)">3</span>
+        AI 輔助會議紀錄與待辦追蹤
+      </div>
+      <div class="sec-desc">📌 工作情境：會議紀錄從錄音聽打、內容整理到待辦分派都要人工處理。<strong class="blue">用 AI 把會議內容快速轉成可追蹤的行政資訊，把時間留給確認與追蹤。</strong></div>
+      <div class="lesson-outcome"><strong>🎯 本單元完成成果</strong><span>將模擬逐字稿整理成會議紀錄、改寫成對外 Email，並萃取出可追蹤的待辦事項表。</span></div>
+
+      <!-- u3-a -->
+      <div class="sub-block" id="u3-a">
+        <div class="sec-sub-title">手機錄音轉逐字稿與會議紀錄整理</div>
+        <table class="data-table">
+          <tr><th>方式</th><th>怎麼做</th><th>注意</th></tr>
+          <tr><td>手機錄音 App</td><td>錄音後使用 App 內建的「轉文字／轉錄」功能</td><td>功能與支援語言依手機機型而異</td></tr>
+          <tr><td>Gemini 上傳錄音檔</td><td>在 Gemini 上傳錄音檔，請它轉成逐字稿</td><td>檔案長度與次數依帳號方案限制</td></tr>
+          <tr><td>會後口述</td><td>用手機語音輸入，自己口述會議重點</td><td>最快、資料量最少</td></tr>
+        </table>
+        <div class="tip-card warning">※ 內部會議錄音屬黃燈；涉及機密或個資的會議不錄音上傳。錄音前應告知與會人員。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 模擬逐字稿（課堂示範用）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">主席：今天主要確認第三季補助案件的執行進度。小陳，彰化那邊的案子目前怎麼樣？
+陳：鹿港那件已經發包了，員林那件縣府說設計要修，經費可能會降，他們說下禮拜五前會來函。
+主席：好，那我們這邊先準備經費調整的簽。林小姐，月底的督導行程排好了嗎？
+林：還沒，要先跟三個縣市確認時間，我這禮拜三前問完。
+主席：上次工地照片那個護欄的問題，請監造單位補照片，月底督導時一起看。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 逐字稿 → 會議紀錄</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code"># 角色：你是公務機關的會議紀錄助理。
+# 任務：把下方逐字稿整理成會議紀錄。
+# 格式：會議名稱、時間、主席、出席人員、報告事項、討論事項與決議、待辦事項。
+# 規則：
+- 只用逐字稿內容，口語改為書面語
+- 沒有提到的時間、人員，填「待確認」
+- 刪除寒暄與重複內容，不加入個人評論
+
+【貼上逐字稿】</div>
+        </div>
+        <div class="tip-card note"><strong>📍 這一步要看什麼：</strong>
+          <ul>
+            <li>人名、地名、案件名稱有沒有同音字錯誤？（語音轉文字最常出錯的地方）</li>
+            <li>「下禮拜五」「這禮拜三」這類口語時間，AI 有沒有自己換算成日期？換算對不對？</li>
+          </ul>
+        </div>
+      </div><!-- u3-a END -->
+
+      <!-- u3-b -->
+      <div class="sub-block" id="u3-b">
+        <div class="sec-sub-title">Email 與文字語氣轉換</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 零散筆記 → 正式 Email</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請把下面的零散筆記，改寫成給【縣市政府承辦人】的正式 Email：
+- 開頭說明目的，條列需要對方配合的事項與期限
+- 語氣客氣、正式，不超過 150 字
+- 期限照筆記原文，不要自行換算日期
+
+筆記：【員林案設計修正，經費可能調降；請縣府下週五前來函並附修正計畫書；有問題聯絡我】</div>
+        </div>
+        <table class="data-table">
+          <tr><th>想要</th><th>可以這樣說</th></tr>
+          <tr><td>換對象</td><td>同樣內容，改成給主管的 3 行報告</td></tr>
+          <tr><td>換管道</td><td>改成 LINE 訊息，2～3 句就好</td></tr>
+          <tr><td>更正式</td><td>改成公文用語，主旨＋說明</td></tr>
+          <tr><td>更精簡</td><td>刪掉客套話，只留需要對方做的事</td></tr>
+        </table>
+      </div><!-- u3-b END -->
+
+      <!-- u3-c -->
+      <div class="sub-block" id="u3-c">
+        <div class="sec-sub-title">待辦事項自動拆解</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 會議紀錄 → 待辦追蹤表</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請從會議紀錄中萃取待辦事項，整理成表格：事項／負責人或單位／期限／追蹤方式／狀態。
+規則：
+- 沒有明確負責人或期限的，填「待確認」，不要自行決定
+- 一件事太大時，拆成可執行的小步驟
+最後列出 3 件最需要優先追蹤的事項。</div>
+        </div>
+        <div class="tip-card note"><strong>📍 這一步要看什麼：</strong>
+          <ul>
+            <li>「請監造單位補照片」：負責的是監造單位，但誰去通知？AI 有沒有標「待確認」？</li>
+            <li>待辦表可貼到 Excel 或 Google 試算表，作為管考追蹤表持續更新。</li>
+          </ul>
+        </div>
+      </div><!-- u3-c END -->
+    </div><!-- u3 END -->
+
+
+    <!-- ======== U4: Gemini Notebook 資料提煉與重點萃取 ======== -->
+    <div class="content-section" id="u4">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-5)">4</span>
+        Gemini Notebook 資料提煉與重點萃取
+      </div>
+      <div class="sec-desc">📌 工作情境：累積大量作業要點、規範、歷年報告與 PDF 文件，人工逐份翻閱相當耗時。<strong class="blue">Gemini Notebook 只根據你上傳的資料回答，並附上來源引用，適合「從既有文件找答案」。</strong></div>
+      <div class="lesson-outcome"><strong>🎯 本單元完成成果</strong><span>以三份模擬文件建立筆記本，查詢並彙整彰化縣補助案件（含追加、撤案、經費調整），回查來源核對，並產出月報大綱與語音摘要。</span></div>
+
+      <!-- u4-a -->
+      <div class="sub-block" id="u4-a">
+        <div class="sec-sub-title">建立專屬知識來源</div>
+        <div class="content-h2">Gemini Notebook 三個區塊</div>
+        <table class="data-table">
+          <tr><th>區塊</th><th>做什麼</th></tr>
+          <tr><td>來源</td><td>上傳資料，Notebook 只根據勾選的來源回答</td></tr>
+          <tr><td>對話</td><td>設定回答方式、提問討論、直接產生 Excel／Word／PPT 檔案</td></tr>
+          <tr><td>工作室</td><td>一鍵產出語音摘要、報告、簡報、資訊圖表等成品</td></tr>
+        </table>
+        <table class="data-table">
+          <tr><th>步驟</th><th>操作</th></tr>
+          <tr><td>1</td><td>開啟 Gemini Notebook（notebook.google.com）＞【新增筆記本】</td></tr>
+          <tr><td>2</td><td>【新增來源】：PDF、Word、Google 文件／簡報、網址、YouTube、貼上文字</td></tr>
+          <tr><td>3</td><td>為筆記本命名，例如「補助計畫作業資料」</td></tr>
+          <tr><td>4</td><td>左側來源清單可勾選／取消，控制這次提問要用哪些資料</td></tr>
+        </table>
+        <div class="tip-card warning">※ 上傳到 Gemini Notebook 等同存放於雲端服務，請依紅黃綠燈原則判斷；已公開資料最適合。</div>
+        <div class="content-h2">先設定回答方式（對話設定）</div>
+        <div class="tip-card info"><strong>為什麼要先設定？</strong>對話設定會套用到這本筆記的每一次回答，等於先替 AI 定好「角色、語氣與原則」，之後提問就不用每次重複交代。<br><strong>位置：</strong>對話區右上角的設定圖示 ＞【自訂】。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 自訂設定 — 補助業務查詢助理（貼在設定面板）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">你是補助業務的資料查詢助理。
+回答原則：
+1. 只根據已勾選的來源回答，來源沒有提到的內容請標示「來源未提及」
+2. 金額請註明單位（元／千元），不同單位不可直接相加
+3. 多份文件說法不同時，以日期最新的文件為準，並說明差異
+4. 優先使用表格或條列整理，先講結論再說明
+5. 使用繁體中文與正式公務用語</div>
+        </div>
+        <div class="tip-card note">選項名稱可能依版本調整，以實際介面為準。設定只影響「對話」區，不影響工作室成品。</div>
+      </div><!-- u4-a END -->
+
+      <!-- u4-b -->
+      <div class="sub-block" id="u4-b">
+        <div class="sec-sub-title">智慧摘要、問答與回查原始來源</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 對資料提問</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">這份報告的主要異常原因是什麼？請條列，並標註出處。
+這份作業要點中，承辦人最容易疏漏的步驟有哪些？請列出步驟與可能後果。
+比較【新版】與【舊版】作業要點，有哪些規定不同？用表格列出條次、舊規定、新規定。</div>
+        </div>
+        <div class="content-h2">回查原始來源</div>
+        <div class="content-note">
+          <ul style="margin-left:20px;">
+            <li>回答中的<strong>引用編號</strong>，點一下就會顯示原文段落，可直接核對。</li>
+            <li>核對重點：<strong>數字與原文是否一致</strong>、是否只引用了一部分、多份文件說法不同時是否以<strong>最新文件</strong>為準。</li>
+            <li>回答沒有引用編號的句子，多半是 AI 的歸納或推論，要特別小心。</li>
+          </ul>
+        </div>
+      </div><!-- u4-b END -->
+
+      <!-- u4-c -->
+      <div class="sub-block" id="u4-c">
+        <div class="sec-sub-title">【案例示範】補助案件資料查詢與彙整</div>
+        <div class="tip-card note"><strong>工作情境：</strong>主管臨時問：「某縣市某年度核定補助案件共有幾案？補助金額合計多少？各案明細為何？」資料分散在清冊、會議紀錄與核定函中，用 Gemini Notebook 快速查找、萃取與彙整，再回查來源與人工核對。</div>
+        <div class="content-h2">練習檔（模擬資料，非真實案件；提供 PDF 與 Word 兩種格式）</div>
+        <table class="data-table">
+          <tr><th>檔案</th><th>內容</th><th>金額單位</th></tr>
+          <tr><td>A 核定案件清冊</td><td>112～114 年度（第 1 次）核定案件，共 29 案</td><td>千元</td></tr>
+          <tr><td>B 第 2 次審查會議紀錄</td><td>114 年度追加核定、撤案、經費調整決議</td><td>千元</td></tr>
+          <tr><td>C 核定函</td><td>114 年度某縣追加、撤案及經費調整，附明細表</td><td>元</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Step 1 — 直接問</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">【彰化縣】【114】年度核定補助案件共有幾案？補助金額合計多少？各案明細為何？</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Step 2 — 要求表格、統一單位、列出來源</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請用表格列出【彰化縣】【114】年度核定補助案件：案號／鄉鎮／案件名稱／核定補助金額（統一為千元）／依據文件。
+最後列出案件數與金額合計，並寫出計算過程。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Step 3 — 反向追問：有沒有後續異動？</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請檢查所有來源，是否有追加核定、撤案或經費變更的紀錄？
+如有，請說明對上表的影響，並以日期最新的文件為準重新整理。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Step 4 — 延伸：跨年度彙整</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請整理【彰化縣】112～114 年度，每年核定案件數與補助金額合計（千元），用表格呈現，並標註依據文件。</div>
+        </div>
+        <div class="tip-card note"><strong>📍 這一步要看什麼：</strong>
+          <ul>
+            <li>清冊之後還有「追加 1 案、撤案 1 案、經費調整 1 案」，AI 第一次回答有沒有全部算進去？</li>
+            <li>案件數可能剛好相同，但「組成」不同——不能只看總數，要看明細。</li>
+            <li>清冊用千元、核定函用元，AI 換算單位有沒有出錯？</li>
+            <li>點引用編號回到原文，逐案核對案號與金額。</li>
+          </ul>
+        </div>
+      </div><!-- u4-c END -->
+
+      <!-- u4-d -->
+      <div class="sub-block" id="u4-d">
+        <div class="sec-sub-title">參考答案（核對用）</div>
+        <div class="content-h2">Step 1～3｜彰化縣 114 年度：4 案，補助金額合計 16,500 千元（1,650 萬元）</div>
+        <table class="data-table">
+          <tr><th>案號</th><th>鄉鎮</th><th>案件名稱</th><th>核定補助（千元）</th><th>依據與異動</th></tr>
+          <tr><td>114-CH-01</td><td>鹿港鎮</td><td>老街周邊人行環境改善</td><td>4,500</td><td>清冊（維持原核定）</td></tr>
+          <tr><td>114-CH-02</td><td>員林市</td><td>公園綠地整建</td><td>5,200</td><td>會議紀錄、核定函：由 5,800 調降</td></tr>
+          <tr><td>114-CH-03</td><td>田中鎮</td><td>通學步道改善</td><td>3,600</td><td>清冊（維持原核定）</td></tr>
+          <tr><td>114-CH-05</td><td>溪湖鎮</td><td>排水側溝及人行空間改善</td><td>3,200</td><td>會議紀錄、核定函：追加核定</td></tr>
+          <tr><td>114-CH-04</td><td>二林鎮</td><td>社區閒置空間再利用</td><td>0</td><td>會議紀錄、核定函：撤案（原 2,900）</td></tr>
+        </table>
+        <div class="content-h2 red">常見錯誤答案</div>
+        <table class="data-table">
+          <tr><th>常見錯誤答案</th><th>錯在哪裡</th></tr>
+          <tr><td>4 案，16,800 千元</td><td>只看清冊：沒扣撤案、沒算追加、沒用調降後金額</td></tr>
+          <tr><td>5 案，20,000 千元</td><td>有算追加，但沒扣撤案、也沒用調降後金額</td></tr>
+          <tr><td>金額出現 16,500,000 千元等數字</td><td>核定函單位是「元」，與清冊「千元」混算</td></tr>
+        </table>
+        <div class="content-h2">Step 4｜彰化縣 112～114 年度彙整</div>
+        <table class="data-table">
+          <tr><th>年度</th><th>案件數</th><th>補助金額合計（千元）</th><th>說明</th></tr>
+          <tr><td>112</td><td>3</td><td>9,700</td><td>鹿港 3,000、員林 4,200、田中 2,500，無異動</td></tr>
+          <tr><td>113</td><td>2</td><td>7,400</td><td>二林 2,800、溪湖 4,600，無異動</td></tr>
+          <tr><td>114</td><td>4</td><td>16,500</td><td>已含追加、撤案與經費調整</td></tr>
+        </table>
+        <div class="tip-card info"><strong>💡 人工核對的最後一步：</strong>把 AI 整理的表格貼到 Excel，用 SUM 自己加總一次；與原始文件逐案核對後，才能提供給主管或寫進簽陳。</div>
+      </div><!-- u4-d END -->
+
+      <!-- u4-e -->
+      <div class="sub-block" id="u4-e">
+        <div class="sec-sub-title">報告大綱生成</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 先產出報告骨架，不急著寫全文</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請根據來源資料，整理【114 年度補助案件執行情形】月報大綱：
+背景、執行概況（案件數、經費）、異動情形（追加／撤案／經費調整）、待追蹤事項。
+目前只輸出標題與每段要回答的問題，不要寫完整內文；產出後停止，等我確認。</div>
+        </div>
+        <div class="tip-card note">※ 大綱確認後，可複製到【問定骨生】的【生】階段，請 ChatGPT／Gemini 依大綱完成正式文字。</div>
+        <div class="tip-card warning"><strong>⚠️ 對話會被清除，工作室只讀「來源」：</strong>確認過的大綱或彙整表，要「儲存至記事 → 改名 → 轉為來源」，後續的工作室成品（報告、語音摘要）才能勾選使用。</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>操作</th></tr>
+          <tr><td>1. 儲存至記事</td><td>在滿意的回答下方點「儲存至記事」</td></tr>
+          <tr><td>2. 改名</td><td>開啟記事，把標題改成易辨識的名稱，例如「定1_彰化縣114年度彙整表」</td></tr>
+          <tr><td>3. 轉為來源</td><td>在記事選單點「轉換為來源」，之後在來源面板就能勾選</td></tr>
+        </table>
+        <div class="tip-card info"><strong>也可直接產生檔案：</strong>Notebook 可在對話中產生可下載的 Word／Excel／PPT。下載後一定要打開檢查（金額、單位、表格是否正確）；功能依帳號與版本陸續開放，若沒有出現檔案，可改請 AI 以表格輸出再貼到 Office。</div>
+      </div><!-- u4-e END -->
+
+      <!-- u4-f -->
+      <div class="sub-block" id="u4-f">
+        <div class="sec-sub-title">Audio Overview（語音總覽）</div>
+        <div class="content-note">
+          <ul style="margin-left:20px;">
+            <li><strong>產生方式：</strong>右側【工作室】＞【語音摘要】，可先點【自訂】輸入重點與對象。</li>
+            <li><strong>適用情境：</strong>新進同仁快速了解業務、通勤時吸收新規範或計畫重點。</li>
+          </ul>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 自訂語音摘要重點（工作室・自訂）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請以【新進承辦人】的角度，用約【5】分鐘說明本計畫的補助作業重點，
+以及 114 年度追加、撤案與經費調整的情形。</div>
+        </div>
+        <div class="tip-card warning">※ 語音摘要是輔助理解的工具，內容仍以原始文件為準。</div>
+      </div><!-- u4-f END -->
+    </div><!-- u4 END -->
+
+
+    <!-- ======== U5: Gemini 技能（Skills）工作流 ======== -->
+    <div class="content-section" id="u5">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-6)">5</span>
+        Gemini 技能（Skills）工作流
+      </div>
+      <div class="sec-desc">📌 工作情境：補助核定、會議紀錄、月報……每次的流程都一樣，只是案件不同。<strong class="blue">先用現有流程跑一次、確認結果，再把確認過的做法定為【技能】；下次遇到新案，只要貼上資料就能產出同格式的新文件。</strong></div>
+      <div class="lesson-outcome"><strong>🎯 本單元完成成果</strong><span>以舊核定函為範本產出新案核定函，將流程整理成「補助案件核定函」技能，並用新案資料測試。</span></div>
+
+      <!-- u5-a -->
+      <div class="sub-block" id="u5-a">
+        <div class="sec-sub-title">流程化三步驟與工具差異</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>做什麼</th><th>產出</th></tr>
+          <tr><td>1 跑通</td><td>用現有流程處理一次：<br>查詢彙整 → 人工核對 → 依範本產出文件</td><td>一份確認過的文件</td></tr>
+          <tr><td>2 定為技能</td><td>把跑通的步驟與修正過的地方，整理成技能指示＋範本檔</td><td>可重複使用的【技能】</td></tr>
+          <tr><td>3 新案套用</td><td>貼上新案資料，由技能依同一套規則產出</td><td>新案文件＋待確認清單</td></tr>
+        </table>
+        <table class="data-table">
+          <tr><th>名稱</th><th>是什麼</th><th>比喻</th></tr>
+          <tr><td>Prompt</td><td>當次對話中給 AI 的指令，用完就結束</td><td>口頭交辦</td></tr>
+          <tr><td>技能（Skill）</td><td>存起來、可重複使用的工作規範</td><td>作業 SOP</td></tr>
+          <tr><td>/</td><td>在 Gemini 輸入框叫出技能的方式</td><td>翻開 SOP 照著做</td></tr>
+        </table>
+        <div class="tip-card info"><strong>核心觀念：</strong>技能不是憑空寫出來的。先把工作真的做一次，過程中你對 AI 的每一次糾正，就是技能最有價值的內容。<strong>一個技能只做一件事</strong>——核定函、會議紀錄、月報格式與規則不同，分開建立，AI 才不會混用。</div>
+        <div class="content-h2">開始前：不同 AI 工具的執行程度</div>
+        <table class="data-table">
+          <tr><th>工具</th><th>建立可重複使用的流程</th><th>依範本產出檔案</th></tr>
+          <tr><td>Gemini<br>（個人帳號）</td><td>【技能】：設定＞技能，可附參考檔案；免費帳號可用，需年滿 18 歲並開啟「保留活動記錄」，功能逐步開放中</td><td>可產出 Word、Excel、PDF、Google 文件／簡報；不直接產出 PowerPoint（需經 Google 簡報再下載）；排版不一定完全沿用範本</td></tr>
+          <tr><td>ChatGPT</td><td>【專案】可放常用指示與檔案（免費版每專案 5 個檔案）；自訂 GPT 的建立依帳號方案而定</td><td>可讀取上傳檔並回傳下載檔；免費版每日僅能上傳 3 個檔案，處理能力也較受限</td></tr>
+        </table>
+        <div class="tip-card note"><strong>附加檔案限制：</strong>技能可附加 .csv／.txt／.md、PDF、圖片；<strong>Word、Excel 需先另存為 PDF 或 .md</strong> 再附加。每次的案件資料不用附加，使用時在對話中貼上即可。<br><strong>和資安原則的關係：</strong>技能需要開啟「保留活動記錄」，請只把<strong>格式、流程、規則</strong>寫進技能，不要把實際案件、人名、金額寫進技能指示或附加檔案。</div>
+        <div class="tip-card warning">※ AI 功能更新快速，以上為 2026 年 11 月的狀態；實際能做到的程度依工具、版本與訂閱方案而異，正式使用前請先以自己的帳號試做一次。</div>
+      </div><!-- u5-a END -->
+
+      <!-- u5-b -->
+      <div class="sub-block" id="u5-b">
+        <div class="sec-sub-title">Step 1｜現有流程跑一次：以舊文件為範本，產出新文件</div>
+        <div class="content-note"><p>承接前面的補助案件案例：資料核對完成後，把<strong>過去的 Word 公文當作範本</strong>一起上傳，AI 會依範本的格式與用語，產出新案的可下載文件。</p></div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 依範本產出新案核定函</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">附件為【114年度彰化縣核定函.docx】，是過去的公文，請作為範本。
+請依範本格式（保留文頭、主旨、說明、附件明細表的結構與用語），為下列新案產出核定函：
+• 受文者：【南投縣政府】
+• 依據：【114年8月20日114年度第2次審查會議決議】
+• 案件：【竹山鎮「竹藝街區第二期環境改善」案，案號114-NT-03，追加核定補助2,900千元】
+規則：
+- 範本中不屬於本案的內容（撤案、經費調整）要刪除，不要沿用
+- 金額：主旨與說明寫「新臺幣○○萬元整」，明細表用「元」
+- 發文字號、發文日期保留【待填】，不要自行編寫
+請提供 Word 檔下載，並列出待確認清單。</div>
+        </div>
+        <div class="tip-card note"><strong>📍 這一步要看什麼：</strong>
+          <ul>
+            <li>彰化縣的撤案、經費調整內容，有沒有殘留在新公文裡？</li>
+            <li>2,900 千元 → 新臺幣 290 萬元整 → 明細表 2,900,000 元，換算是否一致？</li>
+            <li>發文字號、日期是否保留【待填】，而不是 AI 自己編一個？</li>
+          </ul>
+        </div>
+        <table class="data-table">
+          <tr><th>過去的文件</th><th>下次可以這樣用</th></tr>
+          <tr><td>核定案件清冊</td><td>新年度清冊：貼上新核定案件，依同欄位與單位產出</td></tr>
+          <tr><td>審查會議紀錄</td><td>下一次會議紀錄：搭配逐字稿，依同格式整理決議</td></tr>
+          <tr><td>核定函</td><td>新案核定函：貼上案件資料，依同格式產出公文草稿</td></tr>
+        </table>
+      </div><!-- u5-b END -->
+
+      <!-- u5-c -->
+      <div class="sub-block" id="u5-c">
+        <div class="sec-sub-title">Step 2｜確認後，請 AI 把流程整理成【技能】</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 把剛才的流程整理成技能指示</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請把我們剛才完成的流程，整理成一份可重複使用的【技能】指示，
+包含：角色、任務、規則、輸出格式、需要的參考文件。
+我在過程中修正過的地方，都要寫成規則。</div>
+        </div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>做什麼</th></tr>
+          <tr><td>1 設定</td><td>貼上技能指示，並上傳參考文件（核定函範本）作為知識來源</td></tr>
+          <tr><td>2 測試</td><td>貼上一筆已知答案的案件試跑，檢查格式、金額與單位</td></tr>
+          <tr><td>3 修正</td><td>哪裡不對，就在指示中補一條規則</td></tr>
+          <tr><td>4 優化</td><td>連續幾次產出都穩定一致，再分享給同仁使用</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌【技能】指示範本 — 補助案件核定函</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code"># 角色：你是補助業務的公文擬稿助理。
+# 任務：我提供案件資料後，依參考文件的核定函格式，產出新的核定函。
+# 規則：
+- 只使用我提供的案件資料；範本中與本案無關的內容一律刪除
+- 金額：主旨與說明用「新臺幣○○萬元整」，明細表用「元」
+- 發文字號、發文日期等未提供的欄位，保留【待填】
+- 最後列出「待確認清單」
+# 輸出：Word 檔（主旨／說明／正本副本／附件明細表）
+# 參考文件：【核定函範本.docx】</div>
+        </div>
+        <div class="tip-card warning">附加到技能時，請先把【核定函範本.docx】另存為 PDF（或 .md）再上傳；範本中的實際案號、金額請先改成【○○】。</div>
+        <div class="tip-card note">※ ChatGPT 的自訂 GPT／專案也能做到類似效果，可使用的功能依帳號方案而定。</div>
+      </div><!-- u5-c END -->
+
+      <!-- u5-d -->
+      <div class="sub-block" id="u5-d">
+        <div class="sec-sub-title">Step 3｜新案例套用</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 新案資料 — 直接貼給技能</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">受文者：【雲林縣政府】
+依據：【115年4月20日115年度第1次審查會議決議】
+案件：
+1. 虎尾鎮「車站周邊人行環境改善」，核定補助 3,600 千元
+2. 斗六市「社區公園無障礙設施改善」，核定補助 2,400 千元</div>
+        </div>
+        <div class="tip-card note"><strong>📍 這一步要看什麼：</strong>
+          <ul>
+            <li>兩案合計 6,000 千元 → 新臺幣 600 萬元整；明細表各案 3,600,000 元、2,400,000 元。</li>
+            <li>這次是 2 案，明細表筆數與案號是否正確？案號未提供時，是否標【待填】？</li>
+            <li>產出有問題 → 回到 Step 2 補規則，而不是每次手動修改。</li>
+          </ul>
+        </div>
+        <div class="tip-card info"><strong>為什麼要換資料測試？</strong>用同一筆資料測試，只能證明技能「記住了這份公文」；換成新案，才能證明技能真的「學會了做法」。</div>
+        <div class="content-h2">技能沒作用？常見問題</div>
+        <table class="data-table">
+          <tr><th>狀況</th><th>處理方式</th></tr>
+          <tr><td>沒有照固定流程，直接產出結果</td><td>確認輸入 / 後有從清單<strong>點選</strong>技能（只打純文字代表沒選到）</td></tr>
+          <tr><td>清單中找不到技能</td><td>設定 ＞ 技能，確認開關已開啟；並確認「保留活動記錄」為開啟</td></tr>
+          <tr><td>格式和範本不同</td><td>確認技能有附加最新的範本檔</td></tr>
+          <tr><td>出現上一案的受文者或金額</td><td>技能寫入了舊資料：編輯技能，刪掉特定案件、機關與數字</td></tr>
+          <tr><td>想調整規則</td><td>編輯技能指示直接修改；或在對話中說明修改點，請 AI 更新技能</td></tr>
+        </table>
+        <div class="tip-card info"><strong>💡 流程化的順序：</strong>先手動跑通 → 人工確認 → 定為技能 → 新案套用 → 發現問題回頭補規則。<br>技能讓產出更快、更一致，但每一份正式文件仍須承辦人核對後才能使用。</div>
+      </div><!-- u5-d END -->
+    </div><!-- u5 END -->
+
+  </div><!-- /content-area -->
+
+  <!-- ===== 右欄：工具列 ===== -->
+  <div class="tool-panel">
+    <div class="tool-section">
+      <div class="tool-section-title">課程範例下載</div>
+      <!-- TODO：換成國土署練習檔資料夾連結（目前為全聯資料夾） -->
+      <a class="tool-btn p1-btn" href="https://drive.google.com/drive/folders/1zwnJyPodw-joSpDoPpHZGf3rjw7zrXI-" target="_blank">
+        <span class="tool-name">課程範例下載</span>
+      </a>
+    </div>
+
+    <div class="tool-section">
+      <div class="tool-section-title">AI 工具</div>
+        <a class="tool-btn" href="https://chatgpt.com" target="_blank">
+        <span class="tool-name">ChatGPT</span>
+        </a>
+        <a class="tool-btn" href="https://gemini.google.com" target="_blank">
+        <span class="tool-name">Gemini</span>
+        </a>
+        <a class="tool-btn" href="https://notebook.google.com/" target="_blank">
+        <span class="tool-name">Gemini Notebook</span>
+        </a>
+    </div>
+
+    <div class="tool-section">
+      <div class="tool-section-title">查證工具</div>
+      <a class="tool-btn p1-btn" href="https://law.moj.gov.tw/" target="_blank">
+        <span class="tool-name">全國法規資料庫</span>
+      </a>
+      <a class="tool-btn p1-btn" href="https://www.google.com/" target="_blank">
+        <span class="tool-name">Google 搜尋</span>
+      </a>
+    </div>
+
+  </div><!-- /tool-panel -->
+
+</div><!-- /app-layout -->
+
+<script src="js/p2.js"></script>
+<script>
+  // 進頁面預設顯示第一個單元（避免因未觸發點擊事件導致中間內容區空白）
+  document.addEventListener('DOMContentLoaded', function () {
+    try {
+      if (typeof showSection === 'function') { showSection('u1'); }
+      // 左側選單全部收合（內容仍顯示第 1 單元）
+      document.querySelectorAll('.sidebar .sec-group.open').forEach(function (g) { g.classList.remove('open'); });
+    } catch (e) { /* 若頁面 JS 尚未載入完成則忽略 */ }
+  });
+</script>
+</body>
+</html>
