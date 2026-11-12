@@ -39,11 +39,12 @@
         <button class="sec-sub-btn" id="btn-u1-a" onclick="showSub('u1','u1-a')">AI 工具選擇與適用情境</button>
         <button class="sec-sub-btn" id="btn-u1-b" onclick="showSub('u1','u1-b')">紅黃綠燈原則</button>
         <button class="sec-sub-btn" id="btn-u1-c" onclick="showSub('u1','u1-c')">帳號設定與暫時對話</button>
-        <button class="sec-sub-btn" id="btn-u1-d" onclick="showSub('u1','u1-d')">詢問原則：GPS 三步驟</button>
-        <button class="sec-sub-btn" id="btn-u1-e" onclick="showSub('u1','u1-e')">輸入技巧與 MD 結構化</button>
-        <button class="sec-sub-btn" id="btn-u1-f" onclick="showSub('u1','u1-f')">結構化指令與【問定骨生】</button>
-        <button class="sec-sub-btn" id="btn-u1-g" onclick="showSub('u1','u1-g')">行政文件 AI 操作實例</button>
-        <button class="sec-sub-btn" id="btn-u1-h" onclick="showSub('u1','u1-h')">資料去識別化與脫敏</button>
+        <button class="sec-sub-btn" id="btn-u1-d" onclick="showSub('u1','u1-d')">自訂記憶：公文習慣與金額代號</button>
+        <button class="sec-sub-btn" id="btn-u1-e" onclick="showSub('u1','u1-e')">詢問原則：GPS 三步驟</button>
+        <button class="sec-sub-btn" id="btn-u1-f" onclick="showSub('u1','u1-f')">輸入技巧與 MD 結構化</button>
+        <button class="sec-sub-btn" id="btn-u1-g" onclick="showSub('u1','u1-g')">結構化指令與【問定骨生】</button>
+        <button class="sec-sub-btn" id="btn-u1-h" onclick="showSub('u1','u1-h')">行政文件 AI 操作實例</button>
+        <button class="sec-sub-btn" id="btn-u1-i" onclick="showSub('u1','u1-i')">資料去識別化與脫敏</button>
       </div>
 
       <div class="sec-group">
@@ -170,6 +171,73 @@
 
       <!-- u1-d -->
       <div class="sub-block" id="u1-d">
+        <div class="sec-sub-title">自訂記憶：讓 AI 記住你的公文習慣</div>
+        <div class="tip-card note"><strong>工作情境：</strong>每次請 AI 擬稿都要重講「用民國年、沒寫的標待確認、金額用萬元寫法」。把這些<strong>固定習慣</strong>寫進個人化設定，AI 每次對話都會自動套用。</div>
+        <div class="content-h2">可以寫進去的習慣</div>
+        <table class="data-table">
+          <tr><th>類別</th><th>範例</th></tr>
+          <tr><td>身分與工作類型</td><td>公務機關業務承辦人，常處理來文摘要、簽陳擬稿、會議紀錄、資料彙整</td></tr>
+          <tr><td>語言與用語</td><td>繁體中文、台灣公文用語；日期用民國年</td></tr>
+          <tr><td>輸出格式</td><td>先講結論再條列；適合時用表格；給主管的摘要不超過 3 行</td></tr>
+          <tr><td>查核原則</td><td>資料沒寫的標示「待確認」；提到法規列名稱與條次，不確定就說不確定</td></tr>
+          <tr><td>工作節奏</td><td>正式文件先給大綱，確認後再寫全文</td></tr>
+          <tr><td>英文代號</td><td>輸入簡短代號，叫出固定規則，例如 <strong>#NT</strong> ＝ 金額改成公文寫法</td></tr>
+        </table>
+        <div class="tip-card warning"><strong>不要寫進去的：</strong>姓名、單位全名、電話、Email；案件名稱、案號、地號、金額、廠商；內部規定或未公開資訊。<br>個人化設定會長期存在帳號中，<strong>黃燈以上的資料一律不寫</strong>。</div>
+        <div class="content-h2">放在哪裡</div>
+        <table class="data-table">
+          <tr><th>工具</th><th>位置</th><th>說明</th></tr>
+          <tr><td>ChatGPT</td><td>【設定】＞【個人化】＞【自訂指令】</td><td>每次對話都會套用，適合放下方範本；「記憶」是 AI 自動記下的內容，建議定期檢查、刪除不該留的資料</td></tr>
+          <tr><td>Gemini</td><td>【設定】＞【已儲存的資訊】（個人情境）</td><td>需開啟「保留活動記錄」；選單名稱依版本可能不同</td></tr>
+        </table>
+        <div class="content-h2">公文金額代號 #NT：寫法對照</div>
+        <table class="data-table">
+          <tr><th>原始數字</th><th>公文寫法</th><th>規則</th></tr>
+          <tr><td>9,999</td><td>9,999元</td><td>未滿萬：阿拉伯數字＋千分位</td></tr>
+          <tr><td>20,000</td><td>2萬元</td><td>整萬：省略後面的 0，不寫「2萬0,000元」</td></tr>
+          <tr><td>12,345</td><td>1萬2,345元</td><td>有萬有餘數：餘數保留千分位</td></tr>
+          <tr><td>1,234,567</td><td>123萬4,567元</td><td>百萬以上：萬前直接接數字</td></tr>
+          <tr><td>10,000,000</td><td>1,000萬元</td><td>萬前的數字仍加千分位</td></tr>
+          <tr><td>1,230,000,000</td><td>12億3,000萬元</td><td>億以上：億、萬並用</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 自訂記憶範本 — 公務承辦人（含 #NT 金額代號）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">我是公務機關的業務承辦人，常處理來文摘要、簽陳擬稿、會議紀錄與資料彙整。
+回答時請：
+- 使用繁體中文與台灣公文用語，日期用民國年
+- 先講結論，再條列說明；適合時用表格整理
+- 只根據我提供的資料回答，沒寫的標示「待確認」，不要自行補充
+- 提到法規時列出名稱與條次，不確定請直接說明
+- 正式文件先給大綱，等我確認後再寫全文
+
+#NT 公文金額寫法（我輸入 #NT，或請你擬公文、簽陳、函稿時自動套用）：
+- 未滿 1 萬：阿拉伯數字加千分位，如 9,999元
+- 萬以上用「萬」「億」：整萬寫 2萬元；有餘數寫 1萬2,345元；萬、億前的數字加千分位，如 1,000萬元、12億3,000萬元
+- 主旨、說明中的金額前加「新臺幣」；表格、明細表維持阿拉伯數字加千分位，單位寫在欄名
+- 原始單位是千元或萬元時，先列出換算過程再轉寫法；只改寫法，不可更動金額</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 測試 — 設定後用代號試一次</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">#NT 請把以下金額改成公文寫法：
+9999、20000、12345、1234567、10000000、1230000000、2900千元</div>
+        </div>
+        <div class="tip-card note"><strong>📍 這一步要看什麼：</strong>
+          <ul>
+            <li>結果是否和上方對照表一致？2,900 千元有沒有先換算成 290萬元？</li>
+            <li>開一個新對話再試一次：記憶有沒有真的生效，而不是只記得這一次對話？</li>
+          </ul>
+        </div>
+        <div class="tip-card info"><strong>💡 個人記憶只對自己的帳號有效：</strong>Gemini Notebook、分享給同仁的技能（Skill）不會讀取你的個人化設定。要共用的規則，請直接寫進 Notebook 的對話設定或技能指示裡（見單元 4、5）。<br>※ 金額寫法以所屬機關文書處理規範為準；AI 換算的數字仍要自己核對。</div>
+      </div><!-- u1-d END -->
+
+      <!-- u1-e -->
+      <div class="sub-block" id="u1-e">
         <div class="sec-sub-title">Prompt 結構化技巧：GPS 三步驟</div>
         <div class="tip-card note"><strong>工作情境：</strong>問 AI 卻得不到想要的答案，問題往往出在沒說清楚「要做什麼、手上有什麼、最後要交出什麼」。</div>
         <table class="data-table">
@@ -178,7 +246,7 @@
           <tr><td><strong>P－Position<br>背景資料</strong></td><td>現在的情境、手上的資料、限制</td><td>附件為【上級機關來文】，需在期限內填報；資料不足先提問，不要猜測</td></tr>
           <tr><td><strong>S－Shape<br>成果格式</strong></td><td>最後要交付的格式</td><td>用【表格】列出辦理事項、期限、配合單位，最後擬【簽辦意見】</td></tr>
         </table>
-        <div class="content-img90">
+        <div class="content-img70">
           <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai267.jpg" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai267.jpg" alt="詢問原則：GPS 三步驟"></a>
         </div>
         <div class="content-h2">一般問法 → GPS 問法</div>
@@ -192,20 +260,47 @@
 請找出需要我辦理的事項、期限與配合單位，用表格整理，最後提供 3 行可以給主管看的摘要。
 資料看不清楚或沒寫的地方，標示「待確認」，不要自行猜測。</div>
         </div>
+      </div><!-- u1-e END -->
+
+      <!-- u1-f -->
+      <div class="sub-block" id="u1-f">
+        <div class="sec-sub-title">輸入技巧與 Markdown 結構化</div>
+        <div class="content-h2">詢問 AI 時輸入說明</div>
         <div class="tip-card info"><strong>※ 小技巧：</strong>詢問多個問題時，不要一次全問完，建議【分批】進行：
           <ul>
             <li>先抓方向，再談細節</li>
             <li>一個主題確認後，再進入下一個主題</li>
           </ul>
         </div>
-      </div><!-- u1-d END -->
-
-      <!-- u1-e -->
-      <div class="sub-block" id="u1-e">
-        <div class="sec-sub-title">輸入技巧與 Markdown 結構化</div>
-        <div class="content-h2">詢問 AI 時輸入說明</div>
         <div class="content-img50">
           <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai268.jpg" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai268.jpg" alt="詢問 AI 時輸入說明"></a>
+        </div>
+                <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 分批詢問①：先抓方向</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">我是【業務承辦人】，收到一份【上級機關來文】，要在期限內辦理。
+我有幾個問題，想分批跟你討論，先不要一次全部回答。
+
+這一輪只請你先抓方向：
+1. 這份來文主要要我做什麼？（3 行內）
+2. 處理這份來文，大概要分成哪幾個主題？請列出主題名稱就好，不要展開細節。
+
+列完後停止，等我確認要先談哪一個主題。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 分批詢問②：一次只談一個主題</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">我們先談第【1】個主題：【辦理期限與時程】。
+請只針對這個主題說明細節：
+- 有哪些日期與期限？分別是什麼性質？
+- 依原文，我需要在什麼時間點完成哪些事？
+原文沒寫的標示「待確認」，其他主題先不要談。
+
+這個主題確認後，我會再說「下一個主題」。</div>
         </div>
         <div class="content-h2">快速鍵</div>
         <table class="data-table">
@@ -216,11 +311,24 @@
           <tr><th>目的</th><th>基本語法</th></tr>
           <tr><td><ul style="margin-left:20px;"><li>運用 MD 與 AI 工具對話，層級分明可清楚表達格式需求</li><li>讓 AI 生成內容更具結構化、省時且易讀</li></ul></td><td>【#】標題層級（#、##、###）<br>【- 或 *】項目符號<br>【**粗體**】強調重點<br>【---】分割線</td></tr>
         </table>
-        <div class="tip-card info">本講義的 Prompt 範本中，「# 角色」「# 任務」「# 規則」就是 MD 標題；「- 」開頭的是項目符號。</div>
-      </div><!-- u1-e END -->
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — MD 結構化（簡單版）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code"># 任務
+幫我摘要附件來文
 
-      <!-- u1-f -->
-      <div class="sub-block" id="u1-f">
+## 要求
+- 3 行內
+- 列出**期限**
+- 沒寫的標示「待確認」</div>
+        </div>        
+        <div class="tip-card info">本講義的 Prompt 範本中，「# 角色」「# 任務」「# 規則」就是 MD 標題；「- 」開頭的是項目符號。</div>
+      </div><!-- u1-f END -->
+
+      <!-- u1-g -->
+      <div class="sub-block" id="u1-g">
         <div class="sec-sub-title">結構化指令與【問定骨生】</div>
         <div class="content-h2">結構化指令：角色＋任務＋限制＋格式</div>
         <div class="prompt-card">
@@ -243,7 +351,7 @@
         </div>
         <div class="content-h2">【AI 協作心法】問定骨生</div>
         <div class="tip-card info"><strong>口訣：</strong>用 AI【問】出溝通盲點、【定】出正確標準、接著拉出邏輯【骨】架、最後才【生】出成品。</div>
-        <div class="content-img90">
+        <div class="content-img70">
           <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai269.jpg" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/ai269.jpg" alt="AI 協作四步驟：問定骨生"></a>
         </div>
         <table class="data-table">
@@ -278,10 +386,10 @@
           <tr><td>找依據</td><td>每一點請標示在原文的哪一段</td></tr>
           <tr><td>找漏掉的</td><td>還有哪些資訊不清楚、需要我再確認的？</td></tr>
         </table>
-      </div><!-- u1-f END -->
+      </div><!-- u1-g END -->
 
-      <!-- u1-g -->
-      <div class="sub-block" id="u1-g">
+      <!-- u1-h -->
+      <div class="sub-block" id="u1-h">
         <div class="sec-sub-title">行政文件 AI 操作實例</div>
         <div class="tip-card note"><strong>工作情境：</strong>來文進來後，要先看懂主旨、找出期限、整理要辦的事，再簽辦或擬稿。讓 AI 依「來文 → 摘要 → 找出日期／期限 → 整理重點 → 產生草稿」協助完成第一版。</div>
         <div class="prompt-card">
@@ -301,14 +409,21 @@
             <span class="prompt-card-title">📌 Prompt — 來文 → 摘要 → 期限 → 重點 → 草稿</span>
             <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
           </div>
-          <div class="prompt-code"># 角色：你是公務機關的文書助理。
-# 任務：閱讀附件來文（Word 檔），依序完成：
+          <div class="prompt-code">附件 1：【1_1_模擬來文_公共設施維護管理調查.docx】是收到的來文。
+附件 2：【1_3_簽稿範本_公園遊具安全檢查.docx】是本單位的簽稿格式範本。
+
+# 角色：你是公務機關的文書助理。
+# 任務：閱讀附件 1 來文，依序完成：
 1. 用 3 行摘要來文重點
 2. 找出所有日期與期限，標示是「截止日／洽詢期限／其他」
 3. 整理我需要辦理的事項（做什麼、交給誰、何時前）
-4. 擬一段簽辦意見草稿（擬辦：...）
+4. 依附件 2 的格式擬一份簽稿，提供 Word 檔下載
+# 第 4 點規則：
+- 沿用附件 2 的結構：簽頭、主旨、說明、擬辦、敬陳、核章欄，以及一、（一）的層級
+- 只沿用格式與用語，附件 2 的遊具檢查內容、金額一律不得出現
+- 簽頭日期、承辦課別保留【待填】；會辦單位依本案需要調整，不確定列為「待確認」
 # 限制：只根據來文內容；來文沒寫的標示「待確認」；不要自行補充法規。
-# 格式：1～3 用表格，4 用正式公文語氣。</div>
+# 格式：1～3 用表格；4 用正式公文語氣，最後列出待確認清單。</div>
         </div>
         <div class="tip-card note"><strong>📍 這一步要看什麼：</strong>
           <ul>
@@ -317,10 +432,10 @@
             <li>簽辦意見有沒有出現來文沒提到的內容（例如自行加上法規依據）？</li>
           </ul>
         </div>
-      </div><!-- u1-g END -->
+      </div><!-- u1-h END -->
 
-      <!-- u1-h -->
-      <div class="sub-block" id="u1-h">
+      <!-- u1-i -->
+      <div class="sub-block" id="u1-i">
         <div class="sec-sub-title">資料去識別化與脫敏</div>
         <div class="tip-card note"><strong>🟡 黃燈資料要先「去識別化」再輸入：</strong>把能辨識特定人、地、案件的資訊代換或刪除，<strong>只留下 AI 完成任務需要的內容</strong>。</div>
         <table class="data-table">
@@ -337,9 +452,19 @@
           <tr><th>步驟</th><th>操作</th></tr>
           <tr><td>1</td><td>按 Ctrl＋H 開啟【尋找及取代】＞【更多】＞勾選【使用萬用字元】</td></tr>
           <tr><td>2</td><td>手機號碼：尋找 <code>09[0-9]{8}</code>，取代為 09XXXXXXXX</td></tr>
-          <tr><td>3</td><td>身分證字號：尋找 <code>[A-Z][12][0-9]{8}</code>，取代為【已刪除】</td></tr>
+          <tr><td>3</td><td>身分證字號：尋找 <code>[A-Z][12][0-9]{8}</code>，取代為【已刪除】<br><span style="font-size:0.9em;color:var(--text-muted);">［A-Z］＝1 個大寫英文字母；［12］＝1 或 2；［0-9］{8}＝連續 8 個數字</span><br>- 方括號代表「這一個字元可以是括號內任一個」<br>- {}代表「前面那一段要連續出現次數」</td></tr>
           <tr><td>4</td><td>姓名、地號、廠商名稱：逐一【尋找】→【全部取代】為代稱</td></tr>
         </table>
+        <div class="tip-card info"><strong>📂 練習檔：</strong>1_2_去識別化練習_陳情案件處理簽.docx（3 位陳情人，人名、證號、電話、地號、廠商皆為虛構）<br>
+          取代完成後，Word 會顯示「已完成 N 個取代」：手機 4 個、身分證字號 3 個，可用這個數字核對有沒有漏掉。</div>
+        <div class="content-h2">項目層級調整：一、→（一）→ 1.</div>
+        <table class="data-table">
+          <tr><th>層級</th><th>寫法</th><th>調整方式</th></tr>
+          <tr><td>第 1 層</td><td>一、二、三、</td><td>游標放在項目文字開頭，按 Shift＋Tab 升一層</td></tr>
+          <tr><td>第 2 層</td><td>（一）（二）（三）</td><td>按 Tab 降一層；再按 Shift＋Tab 升回</td></tr>
+          <tr><td>第 3 層</td><td>1. 2. 3.</td><td>按 Tab 降一層；編號會自動重排</td></tr>
+        </table>
+        <div class="tip-card note">練習檔的編號是 Word「多層次清單」，不是手打的文字，所以取代內容時不會影響編號，升降層級後也會自動重新編號。</div>        
         <div class="tip-card warning red"><strong>⚠️ 重要觀念：不要把原文貼給 AI 請它「幫忙去識別化」——貼上的那一刻，資料就已經輸入了。</strong><br>不確定能不能輸入，就先不輸入；需要時改請 AI 提供方法或檢查清單。</div>
         <div class="prompt-card">
           <div class="prompt-card-header">
@@ -350,7 +475,7 @@
 列出常見敏感欄位、建議處理方式、檢查方法，用表格呈現。
 我不會提供任何實際資料。</div>
         </div>
-      </div><!-- u1-h END -->
+      </div><!-- u1-i END -->
     </div><!-- u1 END -->
 
 
@@ -383,11 +508,47 @@
 # 規則：
 - 每一點說明後面用（依據：來文說明第○點）標示出處
 - 來文沒有提到的內容，標示【待確認】，不要自行補充
-- 日期、金額、地號照原文抄錄，不要換算
+- 日期、地號照原文抄錄；金額數值不可更動，寫法依 #NT（例：新臺幣1萬2,345元）
 # 格式：正式公文用語，主旨不超過 60 字。
 
 【貼上來文】</div>
         </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt — 擬復函稿，並標示每一點的依據(練習)</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">附件為【2_2_函稿範本_業務研習會.docx】，是本單位的函稿格式範本。
+
+# 角色：你是公務機關的文書助理。
+# 任務：把我下面口述的案子，依附件範本格式寫成一份復函，提供 Word 檔下載。
+# 規則：
+- 沿用範本的結構與用語：主旨、說明（一、（一）層級）、正本、副本、署名
+- 範本的研習會內容、日期、金額一律不得出現
+- 只根據我口述的內容；我沒講到的，標示【待確認】，不要自行補充
+- 口語改成正式公文用語；金額依 #NT 寫法
+- 發文日期、發文字號保留【待填】
+# 格式：主旨不超過 60 字；最後列出待確認清單。
+
+【我的口述】
+南投縣政府前幾天來函，說他們○○鄉社區步道改善工程要請第一期款。
+這案子我們今年7月15號核定補助三百二十五萬，他們10月20號決標，決標是二百九十八萬。
+依規定第一期撥核定經費的四成，所以他們請一百三十萬。
+請款收據、決標紀錄、契約影本都有附，大致沒問題，
+但收據上的日期漏填了，要請他們收到我們的函10天內補正，補正後我們就撥款。
+還有，因為決標比核定少，要提醒他們後面幾期款要依決標金額重新算。
+副本給我們會計室。</div>
+        </div>
+        <div class="tip-card note"><strong>📍 這一步要看什麼：</strong>
+          <ul>
+            <li>口語有沒有轉成公文用語？「前幾天來函」AI 會不會自己編來文日期或文號？應標【待確認】。</li>
+            <li>金額寫法：三百二十五萬 → 新臺幣325萬元；二百九十八萬 → 298萬元；一百三十萬 → 130萬元。</li>
+            <li>「補正後再撥款」有沒有寫成條件，而不是直接寫成「同意撥付」？</li>
+            <li>範本的研習會、新臺幣500元等內容，有沒有殘留在新函裡？</li>
+            <li>口述故意沒講「來函日期、文號、工程全名」：AI 是標【待確認】，還是自己編一個？</li>
+          </ul>
+        </div>
+
       </div><!-- u2-a END -->
 
       <!-- u2-b -->
@@ -491,7 +652,7 @@
           </div>
           <div class="prompt-code">請針對目前這份【簽陳／復函】進行「藍隊檢查」，從內部審核與實際執行的角度檢查：
 - 主旨、說明、擬辦是否對應，前後有無矛盾
-- 日期、金額、單位是否和原文一致
+- 日期、金額、單位是否和原文一致；金額寫法是否符合公文格式（#NT）
 - 辦理事項的負責單位、期限是否清楚
 - 有無遺漏的會辦或副知單位
 
@@ -590,7 +751,7 @@ filetype:pdf site:gov.tw 生成式AI 參考指引</div>
 不要出現任何文字、招牌與可辨識的人臉，16:9。</div>
         </div>
         <div class="tip-card info">※ 事先「埋」好 5 個狀況，等於有一份標準答案，可以檢查 AI 有沒有漏判或誤判。</div>
-        <div class="content-img90">
+        <div class="content-img70">
           <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/nlma01.jpg" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/nlma01.jpg" alt="AI 生成的模擬工地照片"></a>
         </div>
         <div class="content-h2">同一張照片，不同問法</div>
@@ -793,15 +954,35 @@ filetype:pdf site:gov.tw 生成式AI 參考指引</div>
             <span class="prompt-card-title">📌 Prompt — 會議紀錄 → 待辦追蹤表</span>
             <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
           </div>
-          <div class="prompt-code">請從會議紀錄中萃取待辦事項，整理成表格：事項／負責人或單位／期限／追蹤方式／狀態。
+          <div class="prompt-code">請從下方會議紀錄中萃取待辦事項，整理成表格：事項／負責人或單位／期限／追蹤方式／狀態。
 規則：
 - 沒有明確負責人或期限的，填「待確認」，不要自行決定
 - 一件事太大時，拆成可執行的小步驟
-最後列出 3 件最需要優先追蹤的事項。</div>
+最後列出 3 件最需要優先追蹤的事項。
+
+【會議紀錄】
+會議名稱：第三季補助案件執行進度檢討會議
+時間：待確認
+主席：待確認
+出席人員：陳○○、林○○
+
+一、報告事項
+（一）彰化縣鹿港鎮案件已完成發包。
+（二）彰化縣員林市案件，縣府表示設計需修正，補助經費可能調降，預計下週五前來函說明。
+
+二、討論事項與決議
+（一）員林市案件經費調整：本分署先行準備經費調整簽陳。
+（二）月底督導行程：需先與三個縣市確認時間，由林○○於本週三前完成聯繫。
+（三）前次工地照片護欄缺失：請監造單位補送照片，於月底督導時一併檢視。
+
+三、散會</div>
         </div>
         <div class="tip-card note"><strong>📍 這一步要看什麼：</strong>
           <ul>
-            <li>「請監造單位補照片」：負責的是監造單位，但誰去通知？AI 有沒有標「待確認」？</li>
+            <li>經費調整簽陳：紀錄沒寫負責人與期限，應填「待確認」；是否有和「等員林來函」串成先後步驟？</li>
+            <li>督導行程：負責人林○○、期限「本週三前」；AI 有沒有自行把「本週三」換算成日期？</li>
+            <li>護欄照片：負責補照片的是監造單位，但誰去通知對方紀錄沒寫，應標「待確認」。</li>
+            <li>3 件優先追蹤事項：理由是依期限與影響，還是 AI 自行臆測？</li>
             <li>待辦表可貼到 Excel 或 Google 試算表，作為管考追蹤表持續更新。</li>
           </ul>
         </div>
@@ -840,7 +1021,7 @@ filetype:pdf site:gov.tw 生成式AI 參考指引</div>
         <div class="tip-card info"><strong>為什麼要先設定？</strong>對話設定會套用到這本筆記的每一次回答，等於先替 AI 定好「角色、語氣與原則」，之後提問就不用每次重複交代。<br><strong>位置：</strong>對話區右上角的設定圖示 ＞【自訂】。</div>
         <div class="prompt-card">
           <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 自訂設定 — 補助業務查詢助理（貼在設定面板）</span>
+            <span class="prompt-card-title">📌 自訂設定 — 補助業務查詢助理｜不需勾選（貼在設定面板）</span>
             <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
           </div>
           <div class="prompt-code">你是補助業務的資料查詢助理。
@@ -849,9 +1030,10 @@ filetype:pdf site:gov.tw 生成式AI 參考指引</div>
 2. 金額請註明單位（元／千元），不同單位不可直接相加
 3. 多份文件說法不同時，以日期最新的文件為準，並說明差異
 4. 優先使用表格或條列整理，先講結論再說明
-5. 使用繁體中文與正式公務用語</div>
+5. 使用繁體中文與正式公務用語
+6. 金額需寫入公文時，萬以上用「萬」「億」表示（如 1,650萬元、1萬2,345元），並保留原單位數字對照</div>
         </div>
-        <div class="tip-card note">選項名稱可能依版本調整，以實際介面為準。設定只影響「對話」區，不影響工作室成品。</div>
+        <div class="tip-card note">選項名稱可能依版本調整，以實際介面為準。設定只影響「對話」區，不影響工作室成品。Notebook 不會讀取 ChatGPT／Gemini 的個人化記憶，#NT 這類規則要寫在這裡才有效。</div>
       </div><!-- u4-a END -->
 
       <!-- u4-b -->
@@ -859,7 +1041,7 @@ filetype:pdf site:gov.tw 生成式AI 參考指引</div>
         <div class="sec-sub-title">智慧摘要、問答與回查原始來源</div>
         <div class="prompt-card">
           <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 Prompt — 對資料提問</span>
+            <span class="prompt-card-title">📌 對資料提問｜勾選：要查詢的文件（新舊版比較時勾選新版＋舊版）</span>
             <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
           </div>
           <div class="prompt-code">這份報告的主要異常原因是什麼？請條列，並標註出處。
@@ -887,16 +1069,17 @@ filetype:pdf site:gov.tw 生成式AI 參考指引</div>
           <tr><td>B 第 2 次審查會議紀錄</td><td>114 年度追加核定、撤案、經費調整決議</td><td>千元</td></tr>
           <tr><td>C 核定函</td><td>114 年度某縣追加、撤案及經費調整，附明細表</td><td>元</td></tr>
         </table>
+        <div class="tip-card warning"><strong>💾 標題有 💾 的 Prompt：</strong>結果核對無誤後，「儲存至記事 → 改名 → 轉為來源」，後面的 Prompt 與工作室才能勾選使用（操作步驟見 4-e）。代號「定」取自【問定骨生】的「定」，看到「定」開頭就是核對過的定案資料。</div>
         <div class="prompt-card">
           <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 Step 1 — 直接問</span>
+            <span class="prompt-card-title">📌 Step 1 直接問｜勾選：全部來源（A 清冊＋B 會議紀錄＋C 核定函）</span>
             <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
           </div>
           <div class="prompt-code">【彰化縣】【114】年度核定補助案件共有幾案？補助金額合計多少？各案明細為何？</div>
         </div>
         <div class="prompt-card">
           <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 Step 2 — 要求表格、統一單位、列出來源</span>
+            <span class="prompt-card-title">📌 Step 2 要求表格、統一單位、列出來源｜勾選：全部來源</span>
             <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
           </div>
           <div class="prompt-code">請用表格列出【彰化縣】【114】年度核定補助案件：案號／鄉鎮／案件名稱／核定補助金額（統一為千元）／依據文件。
@@ -904,7 +1087,7 @@ filetype:pdf site:gov.tw 生成式AI 參考指引</div>
         </div>
         <div class="prompt-card">
           <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 Step 3 — 反向追問：有沒有後續異動？</span>
+            <span class="prompt-card-title">📌 Step 3 反向追問：有沒有後續異動？｜勾選：全部來源｜💾 存記事→改名「定1_彰化縣114年度彙整表」→轉為來源</span>
             <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
           </div>
           <div class="prompt-code">請檢查所有來源，是否有追加核定、撤案或經費變更的紀錄？
@@ -912,7 +1095,7 @@ filetype:pdf site:gov.tw 生成式AI 參考指引</div>
         </div>
         <div class="prompt-card">
           <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 Step 4 — 延伸：跨年度彙整</span>
+            <span class="prompt-card-title">📌 Step 4 延伸：跨年度彙整｜勾選：全部來源＋定1_彰化縣114年度彙整表｜💾 存記事→改名「定2_彰化縣112-114年度彙整」→轉為來源</span>
             <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
           </div>
           <div class="prompt-code">請整理【彰化縣】112～114 年度，每年核定案件數與補助金額合計（千元），用表格呈現，並標註依據文件。</div>
@@ -961,7 +1144,7 @@ filetype:pdf site:gov.tw 生成式AI 參考指引</div>
         <div class="sec-sub-title">報告大綱生成</div>
         <div class="prompt-card">
           <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 Prompt — 先產出報告骨架，不急著寫全文</span>
+            <span class="prompt-card-title">📌 先產出報告骨架，不急著寫全文｜勾選：全部來源＋定1、定2｜💾 存記事→改名「定3_114年度月報大綱」→轉為來源</span>
             <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
           </div>
           <div class="prompt-code">請根據來源資料，整理【114 年度補助案件執行情形】月報大綱：
@@ -973,7 +1156,7 @@ filetype:pdf site:gov.tw 生成式AI 參考指引</div>
         <table class="data-table">
           <tr><th>步驟</th><th>操作</th></tr>
           <tr><td>1. 儲存至記事</td><td>在滿意的回答下方點「儲存至記事」</td></tr>
-          <tr><td>2. 改名</td><td>開啟記事，把標題改成易辨識的名稱，例如「定1_彰化縣114年度彙整表」</td></tr>
+          <tr><td>2. 改名</td><td>開啟記事，把標題改成易辨識的名稱，例如「定1_彰化縣114年度彙整表」（名稱照 Prompt 標題中的代號）</td></tr>
           <tr><td>3. 轉為來源</td><td>在記事選單點「轉換為來源」，之後在來源面板就能勾選</td></tr>
         </table>
         <div class="tip-card info"><strong>也可直接產生檔案：</strong>Notebook 可在對話中產生可下載的 Word／Excel／PPT。下載後一定要打開檢查（金額、單位、表格是否正確）；功能依帳號與版本陸續開放，若沒有出現檔案，可改請 AI 以表格輸出再貼到 Office。</div>
@@ -990,7 +1173,7 @@ filetype:pdf site:gov.tw 生成式AI 參考指引</div>
         </div>
         <div class="prompt-card">
           <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 Prompt — 自訂語音摘要重點（工作室・自訂）</span>
+            <span class="prompt-card-title">📌 語音摘要（工作室・自訂）｜勾選：全部來源＋定1_彰化縣114年度彙整表、定3_114年度月報大綱</span>
             <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
           </div>
           <div class="prompt-code">請以【新進承辦人】的角度，用約【5】分鐘說明本計畫的補助作業重點，
@@ -1052,7 +1235,7 @@ filetype:pdf site:gov.tw 生成式AI 參考指引</div>
 • 案件：【竹山鎮「竹藝街區第二期環境改善」案，案號114-NT-03，追加核定補助2,900千元】
 規則：
 - 範本中不屬於本案的內容（撤案、經費調整）要刪除，不要沿用
-- 金額：主旨與說明寫「新臺幣○○萬元整」，明細表用「元」
+- 金額：主旨與說明依 #NT 寫法（例：新臺幣290萬元整），明細表用「元」加千分位
 - 發文字號、發文日期保留【待填】，不要自行編寫
 請提供 Word 檔下載，並列出待確認清單。</div>
         </div>
@@ -1099,13 +1282,14 @@ filetype:pdf site:gov.tw 生成式AI 參考指引</div>
 # 任務：我提供案件資料後，依參考文件的核定函格式，產出新的核定函。
 # 規則：
 - 只使用我提供的案件資料；範本中與本案無關的內容一律刪除
-- 金額：主旨與說明用「新臺幣○○萬元整」，明細表用「元」
+- 金額：主旨與說明加「新臺幣」，萬以上用「萬」「億」（如 290萬元整、1萬2,345元），千元先換算再轉寫法；明細表用「元」加千分位
 - 發文字號、發文日期等未提供的欄位，保留【待填】
 - 最後列出「待確認清單」
 # 輸出：Word 檔（主旨／說明／正本副本／附件明細表）
 # 參考文件：【核定函範本.docx】</div>
         </div>
         <div class="tip-card warning">附加到技能時，請先把【核定函範本.docx】另存為 PDF（或 .md）再上傳；範本中的實際案號、金額請先改成【○○】。</div>
+        <div class="tip-card info"><strong>技能要寫完整規則，不要只寫 #NT：</strong>技能分享給同仁後，對方沒有你的個人化記憶，只寫代號 AI 會看不懂。</div>
         <div class="tip-card note">※ ChatGPT 的自訂 GPT／專案也能做到類似效果，可使用的功能依帳號方案而定。</div>
       </div><!-- u5-c END -->
 
@@ -1151,7 +1335,7 @@ filetype:pdf site:gov.tw 生成式AI 參考指引</div>
     <div class="tool-section">
       <div class="tool-section-title">課程範例下載</div>
       <!-- TODO：換成國土署練習檔資料夾連結（目前為全聯資料夾） -->
-      <a class="tool-btn p1-btn" href="https://drive.google.com/drive/folders/1zwnJyPodw-joSpDoPpHZGf3rjw7zrXI-" target="_blank">
+      <a class="tool-btn p1-btn" href="https://drive.google.com/file/d/1a3iLoOtTYpg1Bc9H1jPqz5tZuWvj1OsM/view?usp=drive_link" target="_blank">
         <span class="tool-name">課程範例下載</span>
       </a>
     </div>
@@ -1176,6 +1360,9 @@ filetype:pdf site:gov.tw 生成式AI 參考指引</div>
       </a>
       <a class="tool-btn p1-btn" href="https://www.google.com/" target="_blank">
         <span class="tool-name">Google 搜尋</span>
+      </a>
+      <a class="tool-btn p1-btn" href="https://zoego99.github.io/ex/moneytw.html" target="_blank">
+        <span class="tool-name">公文金額寫法工具</span>
       </a>
     </div>
 
