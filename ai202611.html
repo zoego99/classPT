@@ -162,10 +162,10 @@
         </button>
 <button class="sec-sub-btn" id="btn-u9-a" onclick="showSub('u9','u9-a')">製作流程總覽</button>
 <button class="sec-sub-btn" id="btn-u9-b" onclick="showSub('u9','u9-b')">S1 生成網站＋輪播</button>
-<button class="sec-sub-btn" id="btn-u9-c" onclick="showSub('u9','u9-c')">S3 匯出試算表清單</button>
-<button class="sec-sub-btn" id="btn-u9-d" onclick="showSub('u9','u9-d')">S4 雲端圖庫取得網址</button>
-<button class="sec-sub-btn" id="btn-u9-e" onclick="showSub('u9','u9-e')">S5 文字與圖片替換</button>
-<button class="sec-sub-btn" id="btn-u9-f" onclick="showSub('u9','u9-f')">進階：試算表當後台</button>
+<button class="sec-sub-btn" id="btn-u9-c" onclick="showSub('u9','u9-c')">S3 內容清單（選用）</button>
+<button class="sec-sub-btn" id="btn-u9-d" onclick="showSub('u9','u9-d')">S4 準備正式圖片</button>
+<button class="sec-sub-btn" id="btn-u9-e" onclick="showSub('u9','u9-e')">S5 修改 JS 圖文</button>
+<button class="sec-sub-btn" id="btn-u9-f" onclick="showSub('u9','u9-f')">進階：試算表協作</button>
 </div>
 <div class="sec-group">
 <button class="sec-group-btn" id="btn-u10" onclick="showSection('u10')">
@@ -1459,7 +1459,7 @@
 【景點名稱｜圖片網址】
 完成後提供新的 html 下載檔。</div>
 </div>
-<div class="tip-card note"><strong>自己的圖片網址從哪裡來？</strong>把照片上傳到雲端硬碟，再用單元 9「S4 雲端圖庫取得網址」的直連工具，取得可以放進網站的圖片網址。</div>
+<div class="tip-card note"><strong>自己的圖片網址從哪裡來？</strong>把照片上傳到雲端硬碟，再用單元 9「S4 準備正式圖片」的直連工具，取得可以放進網站的圖片網址。</div>
 <div class="tip-card warning"><strong>⚠️ 網站驗收：</strong>
 <ul>
 <li>核對行程代碼、價格、航班、店家名稱是否真的出現在來源中；AI 常會為了讓網站看起來完整，自行補上這些資訊</li>
@@ -2846,202 +2846,124 @@ description: 【行銷文案撰寫】依使用者指定的平台（IG、FB、Thr
 </div>
 </div><!-- us-e END -->
 </div><!-- us END -->
-<!-- ======== U9: 品牌網站製作 ======== -->
+
+<!-- ======== U9: 品牌網站製作（獨立 JS 設定檔版） ======== -->
 <div class="content-section" id="u9">
-<div class="sec-title">
-<span class="sec-badge" style="background:var(--sec-4)">9</span>
-        品牌網站製作
-      </div>
-<div class="sec-desc">📌 工作情境：想替店家或品牌做一個形象網站，但自己不懂 HTML。過去請 AI 做好的網站，要換一張首頁輪播圖卻找不到位置，只好整份重做。本單元的流程是：先讓 AI 做出網站並建議每個位置該放什麼圖 → 確認版面 → AI 匯出內容清單貼到 Google 試算表 → 在試算表填入新文字與圖片 → 交給 AI 依編號替換。</div><div class="lesson-outcome"><strong>🎯 本單元完成成果</strong><span>產出可修改文字與圖片的品牌網站，檢查手機版及按鈕連結。</span></div><div class="tip-card warning"><strong>網站驗收：</strong>用手機和電腦分別檢查選單、輪播、連結、圖片載入及表單；本機能開啟不代表網路上已發布成功。</div>
-<div class="tip-card info"><strong>核心觀念：先定「維護規則」，再叫 AI 做網站。</strong><br/>AI 做網站很快，難的是「之後怎麼改」。只要在第一次的 Prompt 就要求 AI：所有會更換的文字與圖片，集中寫在檔案最上方的「網站設定區」並加上編號，日後換圖換字就只要對照編號，不必看懂程式。</div>
-<!-- u9-a -->
+<div class="sec-title"><span class="sec-badge" style="background:var(--sec-4)">9</span> 品牌網站製作</div>
+<div class="sec-desc">📌 工作情境：想替店家製作網站，但學員不懂 HTML。這次先讓 AI 使用<strong>真正的主題參考照片</strong>完成畫面，再把會更換的文字、圖片及連結全部放在<strong>獨立的 site-content.js</strong>。日後換圖、改字，不需要找 HTML 原始碼。</div>
+<div class="lesson-outcome"><strong>🎯 本單元完成成果</strong><span>完成可在電腦與手機瀏覽的品牌網站，並學會只修改 site-content.js 的文案、圖片與連結。</span></div>
+<div class="tip-card info"><strong>最重要的觀念：</strong>網站分成兩個檔案：<strong>index.html</strong>（版面與功能，不必碰）＋ <strong>site-content.js</strong>（圖片、文案、連結，平常只改這個）。兩個檔案要放同一個資料夾；若使用本機圖片，再放進 images 資料夾。</div>
+<div class="tip-card warning"><strong>真實參考圖不等於最終商用圖片。</strong>示範階段可使用 Unsplash 等來源的實際照片（須確認授權與來源），正式上線請優先使用店家自行拍攝或已獲授權的圖片。不得用 placehold.co、純色方塊或空白佔位圖取代參考照片。圖片網址若失效，要提醒使用者更換。</div>
 <div class="sub-block" id="u9-a">
 <div class="sec-sub-title">製作流程總覽</div>
-<table class="data-table">
-<tr><th>步驟</th><th>做什麼</th><th>用什麼工具</th></tr>
-<tr><td>S1 生成網站</td><td>用 GPS 三步驟 Prompt 請 AI 產出網站（含首頁輪播），圖片先用佔位圖，並附上每個位置的「建議圖片」說明</td><td>Gemini（Canvas）／ChatGPT／Claude</td></tr>
-<tr><td>S2 預覽確認</td><td>檢查手機與電腦版的版面、區塊、文案方向，確認後定稿</td><td>同上</td></tr>
-<tr><td>S3 匯出內容清單</td><td>請 AI 依網站設定區匯出「內容對照表」，貼到 Google 試算表</td><td>AI＋Google 試算表</td></tr>
-<tr><td>S4 準備圖片</td><td>依「建議圖片」拍攝或挑選照片，上傳雲端圖庫取得直連網址，連同新文案填入試算表</td><td>Google 雲端硬碟＋圖片直連工具</td></tr>
-<tr><td>S5 替換</td><td>把試算表中有填「新內容」的列交給 AI，依編號替換</td><td>AI</td></tr>
-<tr><td>進階</td><td>設定成網站自動讀取試算表，之後改試算表就會更新網站</td><td>Google 試算表</td></tr>
+<table class="data-table"><tr><th>步驟</th><th>做什麼</th><th>成果</th></tr>
+<tr><td>S1 生成網站</td><td>請 AI 製作品牌網站，直接放入符合主題的真實參考照片，並把所有可修改內容獨立整理在 site-content.js</td><td>index.html＋site-content.js</td></tr>
+<tr><td>S2 預覽確認</td><td>開啟 index.html，檢查輪播、商品圖片、手機版、按鈕；不滿意再請 AI 修版面</td><td>確認網站外觀</td></tr>
+<tr><td>S3 取得內容清單（選用）</td><td>請 AI 從 site-content.js 列出編號與現有內容，方便貼進試算表分工或批次整理</td><td>文字／圖片對照表</td></tr>
+<tr><td>S4 準備正式圖片</td><td>自行拍攝、使用已授權素材，或放進 images 資料夾；也可以用可直接顯示的公開圖片網址</td><td>照片檔或圖片直連網址</td></tr>
+<tr><td>S5 更換圖文</td><td>用 Windows 記事本開啟 site-content.js，只改引號內的文字與圖片網址，儲存後重新整理網站</td><td>更新網站，不改 HTML</td></tr>
+<tr><td>進階（選用）</td><td>需要多人編輯或頻繁批次更新時，再由 AI 協助將試算表內容寫回 site-content.js</td><td>試算表協作流程</td></tr>
 </table>
-<div class="content-h2">建議網站區塊（以咖啡館為例）</div>
-<table class="data-table">
-<tr><th>區塊</th><th>內容</th><th>可替換項目</th></tr>
-<tr><td>首頁輪播（Slider）</td><td>3～5 張大圖，各附主標、副標、按鈕</td><td>圖片、主標、副標、按鈕文字</td></tr>
-<tr><td>招牌商品</td><td>【飲品／甜點／咖啡豆】三張卡片</td><td>圖片、名稱、價格、特色</td></tr>
-<tr><td>店家特色</td><td>【插座與 Wi-Fi、寵物友善、可包場、自家烘豆】等</td><td>項目文字</td></tr>
-<tr><td>交通位置</td><td>Google 地圖嵌入、營業時間</td><td>地址、營業時間</td></tr>
-<tr><td>預約與聯絡</td><td>電話、IG、預約表單（Google 表單）</td><td>聯絡資訊、表單連結</td></tr>
-</table>
+<div class="content-h2">檔案結構（最少兩個檔案）</div>
+<div class="content-note"><pre style="white-space:pre-wrap">品牌網站/
+├─ index.html          ← 網站版面與程式（一般不用改）
+├─ site-content.js     ← 所有圖片、標題、商品與連結（只改這裡）
+└─ images/             ← 選用：放自己拍的照片
+   ├─ slide-01.jpg
+   └─ product-01.jpg</pre></div>
+<div class="tip-card note">📦 本課程另附「品牌網站示範範例」，可直接體驗修改 JS 後網站如何變化。使用外部線上圖片時需連網；改用 images/ 本機圖片可避免外部網址失效。</div>
 </div><!-- u9-a END -->
-<!-- u9-b -->
 <div class="sub-block" id="u9-b">
 <div class="sec-sub-title">S1～S2：生成網站＋首頁輪播 Prompt</div>
-<div class="tip-card warning"><strong>⚠️ 為什麼之前的輪播圖找不到地方換？</strong>沒有給維護規則時，AI 會把圖片網址分散寫在 HTML 標籤、CSS 背景圖、JavaScript 裡，同一張圖甚至出現好幾次。下面的 Prompt 用「網站設定區」把所有可替換內容集中到檔案最上方，並加上中文註解與編號，從源頭解決這個問題。</div>
-<div class="prompt-card">
-<div class="prompt-card-header">
-<span class="prompt-card-title">📌 Prompt — 生成網站（品牌網站＋維護規則）</span>
-<button class="copy-btn" onclick="copyPrompt(this)">複製</button>
-</div>
-<div class="prompt-code">請幫我製作【巷光咖啡】的品牌形象網站（單一 HTML 檔），讓【附近上班族與喜愛咖啡的顧客】認識品牌、查看招牌商品，並【預約座位／找到店面】。
-- 風格：【溫暖、文青、有質感】，主色【咖啡棕】搭配【燕麥白】，手機瀏覽要好看
-- 區塊：首頁輪播（3 張）、招牌商品（【飲品／甜點／咖啡豆】）、店家特色、交通位置、預約與聯絡；文案請你先寫一版
-- 圖片先用 placehold.co 佔位圖，圖上顯示編號與尺寸；回覆最後列出「建議圖片清單」：編號／位置／建議尺寸／建議拍什麼
+<div class="prompt-card"><div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 生成真實參考照片網站＋獨立 JS 內容檔</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+<div class="prompt-code">請幫我製作【巷光咖啡】品牌形象網站，讓【附近上班族與喜愛咖啡的顧客】認識品牌、查看招牌商品，並【預約座位／找到店面】。
 
-# 維護規則（最重要）
-- 所有會更換的文字與圖片，集中寫在檔案最上方的「網站設定區（SITE_CONFIG）」，頁面由程式讀取設定區產生
-- 每一項加中文註解與編號：輪播 S1、S2…，商品卡片 C1、C2…，店家特色 F1、F2…
-- 輪播張數由設定區決定，增加或刪除一筆就增減一張</div>
-</div>
-<div class="tip-card info"><strong>S2 預覽確認，常用的修改說法：</strong>「輪播文字改到左下角」、「手機版卡片改成一欄」、「按鈕顏色改成奶油杏色」、「店家特色加一項『寵物友善』」。一次只改一兩件事，AI 比較不會改壞其他地方。版面與區塊都確認後，再進入下一步。</div>
+# 網站設計
+- 風格：【溫暖、文青、有質感】，主色【咖啡棕】搭配【燕麥白】，同時適合電腦與手機瀏覽。
+- 區塊：首頁輪播（3 張）、招牌商品（3 張卡片）、店家特色、交通位置、預約與聯絡。
+- 文案先用「示範文字」，未提供的店址、電話、價格及營業時間請明確標示【示範／待確認】，不要編造成真實資訊。
+- 每張圖片都要使用「符合咖啡館情境、看得到實際場景或商品」的真實參考照片，例如咖啡吧台、手沖、拿鐵與甜點；優先採用可合法使用的圖片來源（例如 Unsplash），並提供來源或授權確認提醒。
+- 不要使用 placehold.co、via.placeholder.com、純色區塊或只有尺寸文字的佔位圖。若無法取得可用圖片，明確列出待補的圖片，不要假裝已完成。
+
+# 交付檔案與維護規則（一定要做到）
+1. 必須交付兩個獨立檔案：index.html（網站版面與互動）和 site-content.js（所有可替換內容）。不要把 site-content.js 的資料寫回 HTML 裡。
+2. HTML 使用 &lt;script src="site-content.js"&gt;&lt;/script&gt; 載入內容檔；程式讀取 window.SITE_CONFIG 產生內容。讓學員雙擊 index.html 就能預覽，不要依賴需安裝的框架或本機伺服器。
+3. 所有可替換資料都集中於 site-content.js：品牌名稱、簡介、輪播圖片／主標／副標／按鈕、商品圖片／名稱／說明／價格、特色、地址、營業時間與聯絡連結。
+4. 在 JS 用中文註解與編號：輪播 S1、S2、S3；商品 C1、C2、C3；特色 F1、F2…，每個欄位旁有清楚的中文說明。只需改引號內文字或圖片路徑，不必碰 HTML、CSS。
+5. 輪播張數與商品張數以陣列資料決定，增減資料即增減畫面；網頁的圖片都由 JS 填入，不要在 HTML/CSS 另寫死圖片網址。
+6. 圖片同時支援網路直連網址（https://...）與本機路徑（images/slide-01.jpg）。無法載入時顯示清楚的「圖片待更新」提示。
+7. 保留輪播切換、手機版排版及聯絡按鈕，使用安全的 DOM 更新方式；提供簡短的 Windows 11 操作教學。
+
+# 完成前檢查
+請確認兩個檔案放同一個資料夾即可開啟；至少有 3 張真實場景參考照片；把「網站內容改哪個檔案」說明清楚。最後列出圖片來源與需要確認的資料。</div></div>
+<div class="tip-card info"><strong>S2 預覽後修改：</strong>例如「輪播標題移到左下角」、「手機版商品一欄」、「按鈕換成奶油杏色」。<strong>版面改 HTML/CSS；內容只改 site-content.js。</strong>每次先確認畫面，再修改下一項。</div>
 </div><!-- u9-b END -->
-<!-- u9-c -->
 <div class="sub-block" id="u9-c">
-<div class="sec-sub-title">S3：匯出試算表內容清單</div>
-<div class="tip-card info"><strong>為什麼用試算表？</strong>多人可以同時編修、看得到修改紀錄，「編號」欄就是網站與試算表之間的對照鑰匙。店長改文案、同事換照片，都在同一張表完成，不用碰網站檔案。</div>
-<div class="prompt-card">
-<div class="prompt-card-header">
-<span class="prompt-card-title">📌 Prompt — 網站確認後，匯出內容對照表</span>
-<button class="copy-btn" onclick="copyPrompt(this)">複製</button>
-</div>
-<div class="prompt-code">網站版面已確認。
-請依照「網站設定區（SITE_CONFIG）」中的所有項目，匯出一份「內容對照表」，方便我貼到 Google 試算表填寫。
-
-欄位：編號／區塊／類型（文字或圖片）／目前內容／新內容／建議尺寸或字數／建議圖片說明
-- 每個設定區項目一列，編號與設定區完全一致（例如 S1-圖、S1-主標、C1-說明）
-- 圖片列的「目前內容」填佔位圖網址，「建議圖片說明」沿用剛才的建議
-- 文字列的「建議尺寸或字數」請依版面給建議字數上限
-- 「新內容」欄全部留空，由我填寫
-- 用表格輸出，不要加其他說明</div>
-</div>
-<div class="content-h2">貼到試算表後的樣子（工作表名稱：網站內容）</div>
-<table class="data-table">
-<tr><th>編號</th><th>區塊</th><th>類型</th><th>目前內容</th><th>新內容</th><th>建議尺寸／字數</th><th>建議圖片說明</th></tr>
-<tr><td>S1-圖</td><td>首頁輪播第1張</td><td>圖片</td><td>（佔位圖網址）</td><td>（貼上圖片直連網址）</td><td>1920×1080，500KB 以內</td><td>吧台手沖畫面，暖色光線，主體偏右</td></tr>
-<tr><td>S1-主標</td><td>首頁輪播第1張</td><td>文字</td><td>巷弄裡的一杯好咖啡</td><td></td><td>15 字內</td><td></td></tr>
-<tr><td>S1-副標</td><td>首頁輪播第1張</td><td>文字</td><td>自家烘焙咖啡豆，每一杯現磨現沖</td><td></td><td>25 字內</td><td></td></tr>
-<tr><td>C1-圖</td><td>商品卡片：飲品</td><td>圖片</td><td>（佔位圖網址）</td><td></td><td>800×600</td><td>拉花拿鐵俯拍，木質桌面</td></tr>
-<tr><td>C1-說明</td><td>商品卡片：飲品</td><td>文字</td><td>招牌海鹽焦糖拿鐵，鹹甜平衡</td><td></td><td>30 字內</td><td></td></tr>
-</table>
-<div class="tip-card note"><strong>填寫規則：</strong>
-<ul>
-<li>要改的才填「新內容」，不改的留空，網站就維持原樣</li>
-<li>輪播大圖：橫式 16:9，建議 1920×1080，檔案 500KB 以內（太大會讓網站開很慢，可先用線上壓縮工具處理）</li>
-<li>卡片圖：4:3，建議 800×600</li>
-<li>輪播圖上會疊文字，選畫面「不要太雜」、主體偏一側的照片效果最好</li>
-<li>檔名用英數字，例如 slide-01.jpg、card-latte.jpg，不要用中文或空格</li>
-</ul>
-</div>
+<div class="sec-sub-title">S3：匯出內容清單（選用：試算表）</div>
+<div class="tip-card note">一般初學者<strong>可以跳過 S3</strong>，直接使用 S5 修改 site-content.js。若多位同事要共同填文案或整理圖片，再用試算表協作。</div>
+<div class="prompt-card"><div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 從獨立 JS 產生內容對照表</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+<div class="prompt-code">我已經有 index.html 與 site-content.js，請以 site-content.js 為唯一內容來源，產生一份可貼到 Google 試算表的「網站內容對照表」。
+欄位：編號／區塊／類型（文字、圖片或連結）／目前內容／新內容／建議尺寸或字數／圖片用途。
+- 每一筆可替換項目都列一列，例如 S1-圖片、S1-主標、C1-名稱、C1-圖片。
+- 「目前內容」填寫 site-content.js 的實際內容，不要改寫成佔位網址。
+- 「新內容」留空；圖片標明橫式輪播 16:9、商品卡片 4:3 等建議比例。
+- 不要修改網站，只輸出表格，方便我與同事整理。</div></div>
+<table class="data-table"><tr><th>編號</th><th>類型</th><th>目前內容（示例）</th><th>新內容</th></tr><tr><td>S1-圖片</td><td>圖片</td><td>實際咖啡館照片網址</td><td>images/slide-01.jpg</td></tr><tr><td>S1-主標</td><td>文字</td><td>巷弄裡的一杯好咖啡</td><td>午後的溫柔咖啡時光</td></tr><tr><td>C1-名稱</td><td>文字</td><td>經典拿鐵</td><td>燕麥拿鐵</td></tr></table>
+<div class="tip-card warning">試算表只是<strong>整理與交接清單</strong>，填完表格不會自動改變網站；要請 AI 更新 site-content.js，或自行按照 S5 修改。</div>
 </div><!-- u9-c END -->
-<!-- u9-d -->
 <div class="sub-block" id="u9-d">
-<div class="sec-sub-title">S4：雲端圖庫取得圖片網址</div>
-<div class="tip-card warning"><strong>⚠️ 為什麼不能直接貼雲端硬碟分享連結？</strong>雲端硬碟的「共用連結」打開的是 Google 的預覽頁面，不是圖片本身，放進網站常常顯示不出來。必須先轉成「直連網址」，網站才讀得到圖片。</div>
-<table class="data-table">
-<tr><th>工具</th><th>連結</th></tr>
-<tr><td>Google Drive 圖片直連轉換工具</td><td><a href="https://script.google.com/macros/s/AKfycbw7nbIBNrFClroUj4-JwSGoSRy8DoQtY-7VVatMTi0B5VUXrl6ol3_4IkdzanVbP7Wp/exec" target="_blank">開啟工具 ↗</a></td></tr>
-</table>
-<div class="content-h2">操作步驟</div>
-<table class="data-table">
-<tr><th>步驟</th><th>說明</th></tr>
-<tr><td>1. 準備圖片</td><td>依試算表的「建議圖片說明」拍攝或挑選照片，調整尺寸、壓縮，並統一檔名</td></tr>
-<tr><td>2. 上傳雲端硬碟</td><td>建立「網站圖庫」資料夾，把圖片放進去</td></tr>
-<tr><td>3. 設定共用</td><td>資料夾或圖片設為「知道連結的任何人：檢視者」（沒有這一步，網站訪客看不到圖）</td></tr>
-<tr><td>4. 取得直連網址</td><td>依工具畫面操作，取得圖片的直連網址</td></tr>
-<tr><td>5. 填入試算表</td><td>把網址貼到對應編號的「新內容」欄</td></tr>
-<tr><td>6. 測試</td><td>把網址貼到瀏覽器的無痕視窗，能直接看到圖片就代表成功</td></tr>
-</table>
-<div class="tip-card note"><strong>使用前請注意：</strong>
-<ul>
-<li>公司 Workspace 帳號若被管理員禁止「對外共用」，圖片會顯示不出來，請先找資訊人員確認</li>
-<li>這類工具是由他人以 Apps Script 建立，請確認圖片「存放在誰的雲端硬碟」。正式使用時，建議用自己的帳號另建一份</li>
-<li>直連網址屬於非官方用法，Google 調整後可能失效。正式官網長期營運時，建議圖片仍放在網站主機上</li>
-</ul>
-</div>
+<div class="sec-sub-title">S4：準備真正的圖片（建議使用自己的照片）</div>
+<table class="data-table"><tr><th>圖片來源</th><th>怎麼做</th><th>注意</th></tr><tr><td>自己的照片（推薦）</td><td>把照片放到 images 資料夾，JS 寫 images/slide-01.jpg</td><td>網站上傳時 images 資料夾要一起上傳</td></tr><tr><td>有授權的線上照片</td><td>把可公開顯示的圖片直連網址填入 JS</td><td>確認授權與連結，避免使用平台預覽頁網址</td></tr><tr><td>Google 雲端硬碟</td><td>須確定圖片對外可見且實際能當圖片來源使用</td><td>分享頁連結通常不是直連；第三方轉址可能不穩定，正式網站不建議依賴</td></tr></table>
+<div class="content-h2">圖片放在哪裡？</div>
+<div class="content-note"><pre style="white-space:pre-wrap">// site-content.js 裡的某一行（只改引號裡）
+image: "images/slide-01.jpg",       // 自己照片，離線可顯示
+// 或
+image: "https://圖片網站提供的可用圖片直連網址",</pre></div>
+<div class="tip-card info">圖片尺寸建議：輪播 16:9（例如 1600×900）、商品 4:3（例如 800×600）；以實際排版為準。盡量壓縮成適合網頁的大小，並使用英數檔名，例如 slide-01.jpg。</div>
+<div class="tip-card warning">檢查方式：用瀏覽器開啟圖片網址，看是否直接顯示圖片；將網站上傳到網路後，再用手機測試。<strong>本機圖片路徑和網路網址兩種方式都能使用，但網路部署時必須同步上傳圖片。</strong></div>
 </div><!-- u9-d END -->
-<!-- u9-e -->
 <div class="sub-block" id="u9-e">
-<div class="sec-sub-title">S5：文字與圖片替換（不懂 HTML 也能改）</div>
-<table class="data-table">
-<tr><th>方法</th><th>做法</th><th>適合</th></tr>
-<tr><td>A. 交給 AI 替換</td><td>附上 HTML＋試算表中有填「新內容」的列，請 AI 依編號修改</td><td>一次改很多項、完全不想看程式</td></tr>
-<tr><td>B. 自己改設定區</td><td>用記事本開啟 HTML，按 Ctrl＋F 搜尋編號（例如 S1），只改引號內的文字或網址後存檔</td><td>只換一兩張圖或幾個字</td></tr>
-</table>
-<div class="tip-card info"><strong>小技巧：</strong>在試算表用「篩選」把「新內容」不是空白的列篩出來，只複製編號、類型、新內容三欄，貼給 AI 即可。</div>
-<div class="prompt-card">
-<div class="prompt-card-header">
-<span class="prompt-card-title">📌 Prompt — 依試算表清單替換文字與圖片</span>
-<button class="copy-btn" onclick="copyPrompt(this)">複製</button>
-</div>
-<div class="prompt-code">附上目前網站的完整 HTML 檔，以及以下替換清單（從 Google 試算表複製）。
-
-請只修改「網站設定區（SITE_CONFIG）」中對應編號的內容，其他程式碼與版面一律不要更動。
+<div class="sec-sub-title">S5：學員只改 site-content.js 的文字與圖片</div>
+<table class="data-table"><tr><th>步驟</th><th>Windows 11 操作</th></tr><tr><td>1</td><td>找到網站資料夾，確認 index.html 與 site-content.js 在同一層。</td></tr><tr><td>2</td><td>對 site-content.js 按滑鼠右鍵 →「開啟檔案」或「開啟方式」→「記事本」。</td></tr><tr><td>3</td><td>按 Ctrl＋F 找「S1」或「C1」；只修改英文引號 <strong>" "</strong> 中的文字或圖片路徑，保留逗號、括號與欄位名稱。</td></tr><tr><td>4</td><td>按 Ctrl＋S 儲存，回到 index.html 的瀏覽器畫面，按 Ctrl＋F5 重新載入確認。</td></tr><tr><td>5</td><td>要正式發布時，把兩個檔案（以及 images 資料夾）一起上傳到網站空間。</td></tr></table>
+<div class="content-h2">學員修改範例</div>
+<div class="content-note"><pre style="white-space:pre-wrap">// S1：第 1 張首頁輪播
+{
+  id: "S1",                    // 編號，請勿更動
+  image: "images/slide-01.jpg", // 改這裡：圖片
+  title: "巷弄裡的一杯好咖啡",    // 改這裡：主標
+  subtitle: "把每一天泡得溫暖", // 改這裡：副標
+  buttonText: "看看商品",       // 改這裡：按鈕文字
+  buttonLink: "#products"      // 改這裡：按鈕連結
+},</pre></div>
+<div class="tip-card warning"><strong>常見錯誤：</strong>只上傳 HTML 卻漏掉 JS、誤刪引號或逗號、把圖片分享頁當成直連網址、圖片檔名大小寫不一致。建議修改前先複製一份 site-content.js 備份。</div>
+<div class="prompt-card"><div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 直接請 AI 更新 JS（不用重做網站）</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+<div class="prompt-code">附上目前網站的 site-content.js，以及我想修改的項目。請只修改 site-content.js 中 window.SITE_CONFIG 的對應欄位；不要修改 HTML、CSS、JS 的資料結構或其他項目。
 
 替換清單：
-[貼上試算表：編號／類型／新內容，例如：
-S1-圖｜圖片｜https://新圖片直連網址
-S1-主標｜文字｜【巷弄裡的一杯好咖啡】
-C2-說明｜文字｜【每日限量手工肉桂捲】]
+S1-圖片｜images/slide-01.jpg
+S1-主標｜【午後的溫柔咖啡時光】
+C1-名稱｜【燕麥拿鐵】
 
-完成後請：
-1. 輸出修改後的完整 HTML
-2. 列出「編號／修改前／修改後」對照表，讓我逐項核對
-3. 清單中若有找不到的編號，請列出來問我，不要自行猜測位置</div>
-</div>
-<div class="tip-card warning"><strong>⚠️ 舊網站也能救：</strong>之前做好、但圖片散落各處的網站，先用下面的 Prompt 請 AI「整理設定區」並匯出內容對照表，之後就能用 S3～S5 的方式維護。</div>
-<div class="prompt-card">
-<div class="prompt-card-header">
-<span class="prompt-card-title">📌 Prompt — 舊網站整理成「網站設定區」</span>
-<button class="copy-btn" onclick="copyPrompt(this)">複製</button>
-</div>
-<div class="prompt-code">附上一份已完成的網站 HTML，裡面的輪播圖與其他圖片，我找不到替換的位置。
-
-請幫我重新整理程式碼，但「畫面外觀與功能要完全不變」：
-1. 把所有圖片網址（包含輪播圖、CSS 背景圖）與主要文案，集中到檔案最上方的「網站設定區（SITE_CONFIG）」
-2. 每一項加上中文註解與編號（輪播 S1、S2…，卡片 C1、C2…，其他依區塊命名）
-3. 輪播改為讀取設定區產生，設定區增減一筆即可增減一張
-
-完成後請輸出完整 HTML，並附上「內容對照表」：編號／區塊／類型／目前內容／新內容（留空）／建議尺寸或字數。</div>
-</div>
+請給我修改完成的完整 site-content.js 下載，並列出修改前／修改後對照。找不到編號請標示，不要自行猜測。完成後請檢查 JavaScript 語法，以及 index.html 是否仍能正常載入資料。</div></div>
+<div class="prompt-card"><div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 舊網站改成兩檔式</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+<div class="prompt-code">我有一份已完成的網站 HTML，現在文字和圖片散落在 HTML、CSS 與 JavaScript 裡，學員不會修改。
+請在盡量保持原本外觀、動線和互動功能的前提下，整理成兩個獨立檔案：index.html 與 site-content.js。
+所有圖片、主要文字、商品名稱與聯絡連結集中於 site-content.js 的 window.SITE_CONFIG，並附中文註解（S1…／C1…／F1…）；index.html 必須透過 script src 載入 JS 並使用設定產生內容。
+請保留原網站圖片（如果是佔位圖，就換成符合情境且授權需確認的真實參考照片），不使用 placehold.co。最後給我兩個完整檔案及修改清單，並確認雙擊 index.html 能顯示內容。</div></div>
 </div><!-- u9-e END -->
-<!-- u9-f -->
 <div class="sub-block" id="u9-f">
-<div class="sec-sub-title">進階：試算表當網站後台</div>
-<div class="tip-card info"><strong>概念：</strong>網站每次開啟時，自動讀取 Google 試算表的內容。之後換圖、改字，只要改試算表的「新內容」欄，網站就會跟著更新，不需要再找 AI，也不用重新上傳網站檔案。</div>
-<div class="content-h2">試算表設定步驟</div>
-<table class="data-table">
-<tr><th>步驟</th><th>說明</th></tr>
-<tr><td>1. 準備工作表</td><td>沿用 S3 的「網站內容」工作表，欄名不要再更動</td></tr>
-<tr><td>2. 發布到網路</td><td>檔案 → 共用 → 發布到網路 → 選「網站內容」工作表、格式選「逗號分隔值 (.csv)」→ 發布</td></tr>
-<tr><td>3. 複製網址</td><td>複製產生的 CSV 網址，貼進下方 Prompt</td></tr>
-</table>
-<div class="tip-card warning"><strong>⚠️ 注意：</strong>
-<ul>
-<li>「發布到網路」後，任何人都看得到這張工作表，裡面只放網站要公開的內容，不要放成本、供應商報價、員工資料</li>
-<li>修改試算表後，網站可能要等幾分鐘才會更新</li>
-<li>建議另外設定編輯權限，只開放給負責網站的人，避免誤改</li>
-</ul>
-</div>
-<div class="prompt-card">
-<div class="prompt-card-header">
-<span class="prompt-card-title">📌 Prompt — 網站改為讀取 Google 試算表</span>
-<button class="copy-btn" onclick="copyPrompt(this)">複製</button>
-</div>
-<div class="prompt-code">附上目前網站的完整 HTML（已有網站設定區 SITE_CONFIG）。
-請改為「網站開啟時，從 Google 試算表讀取內容」：
-
-- 資料來源（試算表發布到網路的 CSV 網址）：[貼上網址]
-- 試算表欄位：編號、區塊、類型、目前內容、新內容、建議尺寸或字數、建議圖片說明
-- 依「編號」對應設定區的項目：「新內容」有填就使用新內容，空白就沿用設定區原本的內容
-- 讀取失敗時，整頁改用設定區原本的內容，網站不可以空白
-- 畫面外觀與其他功能維持不變
-
-完成後請輸出完整 HTML，並用 3～5 句話說明：日後要如何只改試算表就更新網站。</div>
-</div>
+<div class="sec-sub-title">進階：試算表與 JS 檔案的協作</div>
+<div class="tip-card info">大多數課堂作品<strong>不需要架設後台</strong>。初學者直接修改 site-content.js 最簡單。若團隊多人一起整理網站資訊，可先用 Google 試算表共同填寫，再請 AI 依表格更新 JS 檔；不必讓公開網站直接連到試算表。</div>
+<div class="prompt-card"><div class="prompt-card-header"><span class="prompt-card-title">📌 Prompt — 將試算表的修改清單寫回 site-content.js</span><button class="copy-btn" onclick="copyPrompt(this)">複製</button></div>
+<div class="prompt-code">我提供原本的 site-content.js，以及從 Google 試算表匯出的修改清單（編號／類型／新內容）。
+請以 site-content.js 目前資料為準，只套用「新內容」不為空白的項目；空白項目保持原樣。
+- 找不到編號時不要猜，請列出未處理項目。
+- 不要改動 index.html、版面樣式或 JS 的資料結構。
+- 完成後輸出完整可覆蓋使用的 site-content.js、修改前後對照表，並檢查 JavaScript 語法。</div></div>
+<div class="tip-card warning">若要進一步做「改試算表就即時更新網站」，會涉及公開資料存取、快取、跨來源限制（CORS）與部署，屬於另一個進階主題。不要把公開試算表當成可保密的後台，也不要在前端存放密碼或 API 金鑰。</div>
 </div><!-- u9-f END -->
 </div><!-- u9 END -->
+
 <!-- ======== U10: Line 貼圖 ======== -->
 <div class="content-section" id="u10">
 <div class="sec-title">
