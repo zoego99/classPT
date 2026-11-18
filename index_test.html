@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>巷光咖啡 Alley Light Coffee｜城市轉角的日常微光</title>
+  <!-- 引入 Google Fonts 思源宋體與思源黑體，營造文青質感 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==================== 1. 品牌色彩與基礎設定 ==================== */
+    :root {
+      --coffee-dark: #3E2723;      /* 深焙咖啡棕（主標題、頁尾） */
+      --coffee-main: #6F4E37;      /* 經典咖啡棕（按鈕、重點強調） */
+      --coffee-light: #A67B5B;     /* 拿鐵淺棕（邊框、次要裝飾） */
+      --oat-bg: #F7F3EB;           /* 燕麥白（頁面主背景） */
+      --oat-card: #FFFDF9;         /* 奶泡白（卡片背景） */
+      --oat-section: #EFE9DD;      /* 深燕麥色（交錯區塊背景） */
+      --text-main: #2C221E;        /* 內文深棕灰 */
+      --text-muted: #6E6259;       /* 輔助說明灰棕 */
+      --border-soft: #E2D9C8;      /* 柔和分隔線 */
+      --shadow-soft: 0 8px 24px rgba(62, 39, 35, 0.08);
+      --radius-md: 12px;
+      --radius-lg: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--oat-bg);
+      color: var(--text-main);
+      line-height: 1.7;
+      letter-spacing: 0.03em;
+    }
+
+    h1, h2, h3, .serif {
+      font-family: 'Noto Serif TC', serif;
+      color: var(--coffee-dark);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      padding: 72px 0;
+    }
+
+    .section-alt {
+      background-color: var(--oat-section);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 0.82rem;
+      color: var(--coffee-main);
+      background: rgba(111, 78, 55, 0.1);
+      padding: 4px 14px;
+      border-radius: 99px;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .section-title {
+      font-size: 1.95rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* ==================== 2. 圖片容器與破圖安全機制 ==================== */
+    .img-box {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: linear-gradient(135deg, #5C4033 0%, #8D6E63 50%, #A67B5B 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    /* 圖片載入失敗時顯示的咖啡色漸層與編號文字 */
+    .img-fallback-label {
+      color: #FFFDF9;
+      font-family: 'Noto Serif TC', serif;
+      font-size: 1.15rem;
+      letter-spacing: 0.12em;
+      padding: 12px 20px;
+      border: 1px solid rgba(255, 253, 249, 0.45);
+      border-radius: 8px;
+      background: rgba(62, 39, 35, 0.25);
+      text-align: center;
+    }
+
+    /* ==================== 3. 導覽列 ==================== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(247, 243, 235, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Noto Serif TC', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--coffee-dark);
+    }
+
+    .brand-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--coffee-main);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--coffee-main);
+    }
+
+    .nav-cta {
+      background-color: var(--coffee-main);
+      color: #FFFDF9 !important;
+      padding: 8px 18px;
+      border-radius: 99px;
+      font-size: 0.9rem;
+      transition: background 0.25s;
+    }
+
+    .nav-cta:hover {
+      background-color: var(--coffee-dark);
+    }
+
+    /* 手機版選單按鈕 */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border-soft);
+      border-radius: 8px;
+      padding: 6px 10px;
+      font-size: 1.2rem;
+      color: var(--coffee-dark);
+      cursor: pointer;
+    }
+
+    /* ==================== 4. 首頁輪播 (Hero Carousel) ==================== */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 76vh;
+      min-height: 460px;
+      max-height: 680px;
+      overflow: hidden;
+    }
+
+    .slides-wrapper {
+      display: flex;
+      height: 100%;
+      transition: transform 0.65s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .slide {
+      position: relative;
+      min-width: 100%;
+      height: 100%;
+    }
+
+    .slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(38, 23, 16, 0.72) 0%,
+        rgba(38, 23, 16, 0.32) 55%,
+        rgba(38, 23, 16, 0.18) 100%
+      );
+      pointer-events: none;
+    }
+
+    .slide-content {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 24px;
+      color: #FFFDF9;
+    }
+
+    .slide-title {
+      color: #FFFDF9;
+      font-size: clamp(1.85rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 14px;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+      max-width: 780px;
+    }
+
+    .slide-subtitle {
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: #F7F3EB;
+      max-width: 600px;
+      margin-bottom: 28px;
+      font-weight: 300;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background-color: var(--coffee-main);
+      color: #FFFDF9;
+      padding: 13px 30px;
+      border-radius: 99px;
+      font-weight: 500;
+      font-size: 0.98rem;
+      border: 1px solid rgba(255, 253, 249, 0.25);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+      transition: all 0.25s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--coffee-dark);
+      transform: translateY(-2px);
+    }
+
+    /* 輪播左右切換與圓點 */
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 3;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 253, 249, 0.4);
+      background: rgba(44, 34, 30, 0.35);
+      color: #FFFDF9;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+
+    .carousel-arrow:hover {
+      background: rgba(62, 39, 35, 0.75);
+    }
+
+    .carousel-prev { left: 18px; }
+    .carousel-next { right: 18px; }
+
+    .carousel-dots {
+      position: absolute;
+      bottom: 22px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex;
+      gap: 10px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 99px;
+      background: rgba(255, 253, 249, 0.45);
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .dot.active {
+      width: 28px;
+      background: #FFFDF9;
+    }
+
+    /* ==================== 5. 招牌商品卡片 ==================== */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 28px;
+    }
+
+    .product-card {
+      background: var(--oat-card);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .product-card:hover .img-box img {
+      transform: scale(1.04);
+    }
+
+    .product-img-wrap {
+      height: 230px;
+      position: relative;
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      z-index: 2;
+      background: rgba(62, 39, 35, 0.85);
+      color: #FFFDF9;
+      font-size: 0.78rem;
+      padding: 4px 12px;
+      border-radius: 99px;
+    }
+
+    .product-body {
+      padding: 22px 24px 26px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .product-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .product-name {
+      font-size: 1.22rem;
+      font-weight: 700;
+    }
+
+    .product-price {
+      font-weight: 700;
+      color: var(--coffee-main);
+      font-size: 1.05rem;
+      white-space: nowrap;
+    }
+
+    .product-desc {
+      color: var(--text-muted);
+      font-size: 0.94rem;
+      line-height: 1.65;
+    }
+
+    /* ==================== 6. 店家特色 ==================== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .feature-card {
+      background: var(--oat-card);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .feature-img-wrap {
+      height: 165px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 18px;
+    }
+
+    .feature-title {
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .feature-desc {
+      font-size: 0.93rem;
+      color: var(--text-muted);
+    }
+
+    /* ==================== 7. 交通位置與預約聯絡 ==================== */
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: stretch;
+    }
+
+    .info-card {
+      background: var(--oat-card);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-lg);
+      padding: 34px 30px;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .info-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .info-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .info-list li {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .info-label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--coffee-main);
+      text-transform: uppercase;
+    }
+
+    .info-value {
+      font-size: 1rem;
+      color: var(--text-main);
+    }
+
+    .map-placeholder {
+      background: var(--oat-section);
+      border: 1px dashed var(--coffee-light);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    .booking-box {
+      background: linear-gradient(145deg, #4E342E, #6F4E37);
+      color: #FFFDF9;
+      border: none;
+    }
+
+    .booking-box h3 {
+      color: #FFFDF9;
+      border-bottom-color: rgba(255, 253, 249, 0.2);
+    }
+
+    .booking-text {
+      color: #F7F3EB;
+      font-size: 0.96rem;
+      margin-bottom: 24px;
+      line-height: 1.75;
+    }
+
+    .booking-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn-oat {
+      display: inline-block;
+      background-color: var(--oat-bg);
+      color: var(--coffee-dark);
+      padding: 13px 26px;
+      border-radius: 99px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: all 0.25s;
+    }
+
+    .btn-oat:hover {
+      background-color: #FFFFFF;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-light {
+      display: inline-block;
+      border: 1px solid rgba(255, 253, 249, 0.65);
+      color: #FFFDF9;
+      padding: 12px 24px;
+      border-radius: 99px;
+      font-size: 0.95rem;
+      transition: background 0.25s;
+    }
+
+    .btn-outline-light:hover {
+      background: rgba(255, 253, 249, 0.15);
+    }
+
+    /* ==================== 8. 頁尾 ==================== */
+    footer {
+      background-color: var(--coffee-dark);
+      color: #E6DDD0;
+      padding: 44px 20px 32px;
+      text-align: center;
+    }
+
+    .footer-brand {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 1.3rem;
+      color: #FFFDF9;
+      margin-bottom: 8px;
+    }
+
+    .footer-sub {
+      font-size: 0.9rem;
+      color: #C7B9A8;
+      margin-bottom: 18px;
+    }
+
+    .footer-notice {
+      font-size: 0.8rem;
+      color: #A89886;
+      border-top: 1px solid rgba(255, 253, 249, 0.12);
+      padding-top: 16px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* ==================== 9. 手機版響應式微調 ==================== */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background: var(--oat-card);
+        flex-direction: column;
+        padding: 20px;
+        gap: 16px;
+        border-bottom: 1px solid var(--border-soft);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .hero {
+        height: 68vh;
+        min-height: 420px;
+      }
+
+      .carousel-arrow {
+        width: 36px;
+        height: 36px;
+      }
+
+      .section {
+        padding: 54px 0;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== 導覽列 ==================== -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#top" class="brand">
+        <span class="brand-dot"></span>
+        <span id="nav-brand-name">巷光咖啡</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="開啟選單">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#products">招牌商品</a>
+        <a href="#features">店家特色</a>
+        <a href="#location">交通位置</a>
+        <a href="#booking" class="nav-cta">預約座位</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== 首頁輪播區 ==================== -->
+  <section class="hero" id="top">
+    <div class="slides-wrapper" id="slidesWrapper"></div>
+    <button class="carousel-arrow carousel-prev" id="prevSlide" aria-label="上一張">‹</button>
+    <button class="carousel-arrow carousel-next" id="nextSlide" aria-label="下一張">›</button>
+    <div class="carousel-dots" id="carouselDots"></div>
+  </section>
+
+  <!-- ==================== 招牌商品區 ==================== -->
+  <section class="section" id="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">SIGNATURE MENU</span>
+        <h2 class="section-title">日常裡的一杯好咖啡</h2>
+        <p class="section-desc">從晨間提神的職人拿鐵、午後手作甜點，到帶回家延續香氣的自家烘焙豆。</p>
+      </div>
+      <div class="products-grid" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ==================== 店家特色區 ==================== -->
+  <section class="section section-alt" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">WHY ALLEY LIGHT</span>
+        <h2 class="section-title">為城市工作者留一盞微光</h2>
+        <p class="section-desc">不趕時間的靜謐角落，讓專注工作與片刻放空都剛剛好。</p>
+      </div>
+      <div class="features-grid" id="featuresGrid"></div>
+    </div>
+  </section>
+
+  <!-- ==================== 交通位置與預約聯絡 ==================== -->
+  <section class="section" id="location">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">VISIT & RESERVE</span>
+        <h2 class="section-title">找到巷光・預約你的座位</h2>
+        <p class="section-desc">歡迎午休小憩、筆電辦公或假日慢飲，建議尖峰時段提前線上留位。</p>
+      </div>
+
+      <div class="info-grid">
+        <!-- 左側：交通與營業資訊 -->
+        <div class="info-card">
+          <div>
+            <h3>店面資訊與交通</h3>
+            <ul class="info-list">
+              <li>
+                <span class="info-label">店面地址</span>
+                <span class="info-value" id="info-address"></span>
+              </li>
+              <li>
+                <span class="info-label">營業時間</span>
+                <span class="info-value" id="info-hours"></span>
+              </li>
+              <li>
+                <span class="info-label">聯絡電話</span>
+                <span class="info-value" id="info-phone"></span>
+              </li>
+              <li>
+                <span class="info-label">交通方式</span>
+                <span class="info-value" id="info-transit"></span>
+              </li>
+            </ul>
+          </div>
+          <div class="map-placeholder" id="info-map-note"></div>
+        </div>
+
+        <!-- 右側：預約與聯絡 -->
+        <div class="info-card booking-box" id="booking">
+          <div>
+            <h3>線上預約與外帶預訂</h3>
+            <p class="booking-text" id="info-booking-desc"></p>
+          </div>
+          <div class="booking-actions">
+            <a href="#booking" target="_blank" rel="noopener" class="btn-oat" id="info-booking-btn">立即線上預約</a>
+            <a href="#location" class="btn-outline-light" id="info-phone-btn">電話洽詢</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 頁尾 ==================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-brand" id="footer-brand">巷光咖啡 Alley Light Coffee</div>
+      <p class="footer-sub" id="footer-slogan">在忙碌街巷的轉角，為你留一杯有溫度的光。</p>
+      <p class="footer-notice">圖片為示意參考，正式使用請替換為自有照片</p>
+    </div>
+  </footer>
+
+  <script>
+    // =========================================================================
+    // 【重要設定】Google 試算表資料來源
+    // =========================================================================
+    const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSHQnRlF1i0Cw5wT8yr1b4WAYCKdI3bAw6tGy8-gfDQTJ_Gr7InkiGOjexNqW6S6sDS_xd4VATPTGkP/pub?gid=0&single=true&output=csv";  // 貼上試算表「發布到網路」的 CSV 網址
+
+    // =========================================================================
+    // 網站內建預設示範內容（當上方網址留空、讀取失敗或單一儲存格空白時自動補上）
+    // =========================================================================
+    const DEFAULT_ROWS = [
+      // --- 首頁輪播 (S1 ~ S3) ---
+      {
+        id: "S1", field: "image",
+        value: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1600&q=80"
+      },
+      { id: "S1", field: "title", value: "巷弄轉角的一盞微光，陪你開啟專注日常" },
+      { id: "S1", field: "subtitle", value: "獻給附近上班族與愛咖啡的你，從清晨第一杯手沖開始" },
+      { id: "S1", field: "button", value: "立即預約座位" },
+      { id: "S1", field: "link", value: "#booking" },
+
+      {
+        id: "S2", field: "image",
+        value: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1600&q=80"
+      },
+      { id: "S2", field: "title", value: "職人自家烘焙，萃取溫潤乾淨的層次風味" },
+      { id: "S2", field: "subtitle", value: "精選中淺焙與中深焙單品豆，每天新鮮現磨出杯" },
+      { id: "S2", field: "button", value: "探索招牌飲品" },
+      { id: "S2", field: "link", value: "#products" },
+
+      {
+        id: "S3", field: "image",
+        value: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1600&q=80"
+      },
+      { id: "S3", field: "title", value: "木質窗邊與充足插座，午休與靈感工作的最佳去處" },
+      { id: "S3", field: "subtitle", value: "不限時靜謐氛圍，讓咖啡香伴隨你的每一個好點子" },
+      { id: "S3", field: "button", value: "查看店面位置" },
+      { id: "S3", field: "link", value: "#location" },
+
+      // --- 招牌商品 (C1 ~ C3：飲品 / 甜點 / 咖啡豆) ---
+      { id: "C1", field: "category", value: "招牌飲品" },
+      {
+        id: "C1", field: "image",
+        value: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=900&q=80"
+      },
+      { id: "C1", field: "name", value: "巷光黑糖燕麥拿鐵" },
+      { id: "C1", field: "price", value: "NT$ 145" },
+      { id: "C1", field: "desc", value: "選用堅果調性中深焙濃縮，融合香濃燕麥奶與手工炙燒黑糖，溫潤不甜膩，上班族午後首選。" },
+
+      { id: "C2", field: "category", value: "每日甜點" },
+      {
+        id: "C2", field: "image",
+        value: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=900&q=80"
+      },
+      { id: "C2", field: "name", value: "慢烤焦糖巴斯克乳酪" },
+      { id: "C2", field: "price", value: "NT$ 160" },
+      { id: "C2", field: "desc", value: "高溫烘烤出微焦焦糖外皮，內餡綿密滑順帶有淡淡香草籽香氣，搭配黑咖啡最為契合。" },
+
+      { id: "C3", field: "category", value: "自家烘焙豆" },
+      {
+        id: "C3", field: "image",
+        value: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&w=900&q=80"
+      },
+      { id: "C3", field: "name", value: "晨光配方濾掛與咖啡豆（半磅）" },
+      { id: "C3", field: "price", value: "NT$ 420" },
+      { id: "C3", field: "desc", value: "柑橘與烤杏仁尾韻，酸質柔和明亮。提供現場免費代客研磨服務，在家或辦公室都能輕鬆沖煮。" },
+
+      // --- 店家特色 (F1 ~ F3) ---
+      {
+        id: "F1", field: "image",
+        value: "https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=900&q=80"
+      },
+      { id: "F1", field: "title", value: "小批量新鮮自家烘焙" },
+      { id: "F1", field: "desc", value: "每週固定三次少量烘焙，嚴格控管養豆曲線，確保每一杯都喝得到乾淨甜感與飽滿香氣。" },
+
+      {
+        id: "F2", field: "image",
+        value: "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=900&q=80"
+      },
+      { id: "F2", field: "title", value: "友善辦公的插座與高速 Wi-Fi" },
+      { id: "F2", field: "desc", value: "沿牆與長桌座位皆配有獨立插座與穩定網路，無論短暫回信或專注提案都能安心久坐。" },
+
+      {
+        id: "F3", field: "image",
+        value: "https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&w=900&q=80"
+      },
+      { id: "F3", field: "title", value: "上班族快速自取與環保杯折抵" },
+      { id: "F3", field: "desc", value: "尖峰時段支援提前線上下單免排隊，自備環保杯享現折優惠，讓好咖啡無縫融入通勤節奏。" },
+
+      // --- 店家資訊 (INFO) ---
+      { id: "INFO", field: "brand_name", value: "巷光咖啡" },
+      { id: "INFO", field: "slogan", value: "在忙碌街巷的轉角，為你留一杯有溫度的光。" },
+      { id: "INFO", field: "address", value: "【待填入】" },
+      { id: "INFO", field: "hours", value: "週一至週五 08:00 – 19:00｜週六、日 09:30 – 18:30" },
+      { id: "INFO", field: "phone", value: "【待填入】" },
+      { id: "INFO", field: "transit", value: "【待填入：例如捷運站出口步行約 3 分鐘，巷口設有機車停車格】" },
+      { id: "INFO", field: "map_note", value: "Google 地圖導航連結：【待填入】" },
+      {
+        id: "INFO", field: "booking_desc",
+        value: "平日午間 12:00–14:00 與週末午後座位較易客滿，歡迎提前透過線上表單預約窗邊或插座座位，亦接受團體咖啡外帶預訂。"
+      },
+      { id: "INFO", field: "booking_btn", value: "填寫線上預約表單（【待填入】）" },
+      { id: "INFO", field: "booking_url", value: "【待填入】" }
+    ];
+
+    // =========================================================================
+    // 工具函式：安全圖片元素（載入失敗自動顯示咖啡色漸層＋編號文字）
+    // =========================================================================
+    function createSafeImage(url, altText, fallbackCode) {
+      const box = document.createElement("div");
+      box.className = "img-box";
+
+      const showFallback = () => {
+        box.innerHTML = `<div class="img-fallback-label">${escapeHtml(fallbackCode)}</div>`;
+      };
+
+      if (!url || !url.trim()) {
+        showFallback();
+        return box;
+      }
+
+      const img = document.createElement("img");
+      img.src = url.trim();
+      img.alt = altText || fallbackCode;
+      img.loading = "lazy";
+      img.onerror = showFallback;
+      box.appendChild(img);
+      return box;
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    // =========================================================================
+    // CSV 解析器（支援欄位內逗號、雙引號、換行與繁體中文）
+    // =========================================================================
+    function parseCSV(csvText) {
+      // 移除 UTF-8 BOM
+      const text = csvText.replace(/^\uFEFF/, "");
+      const rows = [];
+      let currentRow = [];
+      let currentField = "";
+      let inQuotes = false;
+
+      for (let i = 0; i < text.length; i++) {
+        const char = text[i];
+        const nextChar = text[i + 1];
+
+        if (inQuotes) {
+          if (char === '"' && nextChar === '"') {
+            currentField += '"';
+            i++; // 跳過跳脫引號
+          } else if (char === '"') {
+            inQuotes = false;
+          } else {
+            currentField += char;
+          }
+        } else {
+          if (char === '"') {
+            inQuotes = true;
+          } else if (char === ",") {
+            currentRow.push(currentField);
+            currentField = "";
+          } else if (char === "\r" && nextChar === "\n") {
+            currentRow.push(currentField);
+            rows.push(currentRow);
+            currentRow = [];
+            currentField = "";
+            i++;
+          } else if (char === "\n" || char === "\r") {
+            currentRow.push(currentField);
+            rows.push(currentRow);
+            currentRow = [];
+            currentField = "";
+          } else {
+            currentField += char;
+          }
+        }
+      }
+
+      if (currentField.length > 0 || currentRow.length > 0) {
+        currentRow.push(currentField);
+        rows.push(currentRow);
+      }
+
+      return rows;
+    }
+
+    // =========================================================================
+    // 整合試算表資料與預設資料
+    // =========================================================================
+    function buildStructuredData(sheetRows) {
+      // 先建立預設查表字典：key = "編號__欄位"
+      const defaultMap = {};
+      DEFAULT_ROWS.forEach(item => {
+        defaultMap[`${item.id}__${item.field}`] = item.value;
+      });
+
+      // 若試算表有資料，整理成 { id: { field: value } }
+      // 規則：若試算表有定義該 prefix（例如 S 系列），則以試算表出現的編號清單為準（支援增減張數）
+      const sheetEntities = {};
+      const sheetOrder = [];
+
+      if (Array.isArray(sheetRows) && sheetRows.length > 1) {
+        // 略過第 1 列標題列（編號 / 欄位 / 內容 / 說明）
+        for (let r = 1; r < sheetRows.length; r++) {
+          const cols = sheetRows[r];
+          if (!cols || cols.length < 2) continue;
+          const id = (cols[0] || "").trim().toUpperCase();
+          const field = (cols[1] || "").trim().toLowerCase();
+          const val = (cols[2] !== undefined ? cols[2] : "").trim();
+
+          if (!id || !field) continue;
+          if (!sheetEntities[id]) {
+            sheetEntities[id] = {};
+            sheetOrder.push(id);
+          }
+          if (val !== "") {
+            sheetEntities[id][field] = val;
+          }
+        }
+      }
+
+      // 輔助函式：取得某群組（如 S、C、F）的編號清單
+      function getGroupIds(prefix) {
+        const fromSheet = sheetOrder.filter(id => new RegExp(`^${prefix}\\d+$`).test(id));
+        if (fromSheet.length > 0) {
+          return fromSheet;
+        }
+        // 試算表未設定此群組時，使用內建預設編號
+        const fromDefault = [];
+        DEFAULT_ROWS.forEach(item => {
+          if (new RegExp(`^${prefix}\\d+$`).test(item.id) && !fromDefault.includes(item.id)) {
+            fromDefault.push(item.id);
+          }
+        });
+        return fromDefault;
+      }
+
+      // 讀取單一欄位值（試算表非空優先，否則退回預設值）
+      function getVal(id, field, fallback = "") {
+        if (sheetEntities[id] && sheetEntities[id][field] !== undefined && sheetEntities[id][field] !== "") {
+          return sheetEntities[id][field];
+        }
+        if (defaultMap[`${id}__${field}`] !== undefined) {
+          return defaultMap[`${id}__${field}`];
+        }
+        return fallback;
+      }
+
+      // 組裝各區塊資料
+      const slides = getGroupIds("S").map(id => ({
+        id,
+        image: getVal(id, "image"),
+        title: getVal(id, "title", "巷光咖啡｜日常微光"),
+        subtitle: getVal(id, "subtitle", ""),
+        button: getVal(id, "button", "了解更多"),
+        link: getVal(id, "link", "#booking")
+      }));
+
+      const products = getGroupIds("C").map(id => ({
+        id,
+        category: getVal(id, "category", "精選推薦"),
+        image: getVal(id, "image"),
+        name: getVal(id, "name", `精選品項 ${id}`),
+        price: getVal(id, "price", "NT$ —"),
+        desc: getVal(id, "desc", "")
+      }));
+
+      const features = getGroupIds("F").map(id => ({
+        id,
+        image: getVal(id, "image"),
+        title: getVal(id, "title", `品牌特色 ${id}`),
+        desc: getVal(id, "desc", "")
+      }));
+
+      const info = {
+        brand_name: getVal("INFO", "brand_name", "巷光咖啡"),
+        slogan: getVal("INFO", "slogan", ""),
+        address: getVal("INFO", "address", "【待填入】"),
+        hours: getVal("INFO", "hours", "【待填入】"),
+        phone: getVal("INFO", "phone", "【待填入】"),
+        transit: getVal("INFO", "transit", "【待填入】"),
+        map_note: getVal("INFO", "map_note", "【待填入】"),
+        booking_desc: getVal("INFO", "booking_desc", ""),
+        booking_btn: getVal("INFO", "booking_btn", "立即線上預約"),
+        booking_url: getVal("INFO", "booking_url", "【待填入】")
+      };
+
+      return { slides, products, features, info };
+    }
+
+    // =========================================================================
+    // 畫面渲染與輪播控制
+    // =========================================================================
+    let currentSlideIndex = 0;
+    let totalSlides = 0;
+    let slideTimer = null;
+
+    function renderWebsite(data) {
+      // 1. 導覽列與頁尾品牌名稱
+      document.getElementById("nav-brand-name").textContent = data.info.brand_name;
+      document.getElementById("footer-brand").textContent = `${data.info.brand_name} Alley Light Coffee`;
+      document.getElementById("footer-slogan").textContent = data.info.slogan;
+
+      // 2. 渲染首頁輪播
+      const slidesWrapper = document.getElementById("slidesWrapper");
+      const dotsContainer = document.getElementById("carouselDots");
+      slidesWrapper.innerHTML = "";
+      dotsContainer.innerHTML = "";
+      totalSlides = data.slides.length;
+
+      data.slides.forEach((s, index) => {
+        const slideEl = document.createElement("div");
+        slideEl.className = "slide";
+
+        const imgBox = createSafeImage(s.image, s.title, `${s.id} 輪播主圖`);
+        slideEl.appendChild(imgBox);
+
+        const content = document.createElement("div");
+        content.className = "slide-content";
+        content.innerHTML = `
+          <h1 class="slide-title">${escapeHtml(s.title)}</h1>
+          <p class="slide-subtitle">${escapeHtml(s.subtitle)}</p>
+          ${s.button ? `<a href="${escapeHtml(s.link)}" class="btn-primary">${escapeHtml(s.button)}</a>` : ""}
+        `;
+        slideEl.appendChild(content);
+        slidesWrapper.appendChild(slideEl);
+
+        const dot = document.createElement("button");
+        dot.className = index === 0 ? "dot active" : "dot";
+        dot.setAttribute("aria-label", `切換至第 ${index + 1} 張`);
+        dot.addEventListener("click", () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+      });
+
+      setupCarousel();
+
+      // 3. 渲染招牌商品
+      const productsGrid = document.getElementById("productsGrid");
+      productsGrid.innerHTML = "";
+      data.products.forEach(p => {
+        const card = document.createElement("article");
+        card.className = "product-card";
+
+        const imgWrap = document.createElement("div");
+        imgWrap.className = "product-img-wrap";
+        imgWrap.innerHTML = `<span class="product-badge">${escapeHtml(p.category)}</span>`;
+        imgWrap.appendChild(createSafeImage(p.image, p.name, `${p.id} 商品圖`));
+
+        const body = document.createElement("div");
+        body.className = "product-body";
+        body.innerHTML = `
+          <div class="product-top">
+            <h3 class="product-name">${escapeHtml(p.name)}</h3>
+            <span class="product-price">${escapeHtml(p.price)}</span>
+          </div>
+          <p class="product-desc">${escapeHtml(p.desc)}</p>
+        `;
+
+        card.appendChild(imgWrap);
+        card.appendChild(body);
+        productsGrid.appendChild(card);
+      });
+
+      // 4. 渲染店家特色
+      const featuresGrid = document.getElementById("featuresGrid");
+      featuresGrid.innerHTML = "";
+      data.features.forEach(f => {
+        const card = document.createElement("div");
+        card.className = "feature-card";
+
+        const imgWrap = document.createElement("div");
+        imgWrap.className = "feature-img-wrap";
+        imgWrap.appendChild(createSafeImage(f.image, f.title, `${f.id} 特色圖`));
+
+        const textWrap = document.createElement("div");
+        textWrap.innerHTML = `
+          <h3 class="feature-title">${escapeHtml(f.title)}</h3>
+          <p class="feature-desc">${escapeHtml(f.desc)}</p>
+        `;
+
+        card.appendChild(imgWrap);
+        card.appendChild(textWrap);
+        featuresGrid.appendChild(card);
+      });
+
+      // 5. 渲染店家資訊與預約聯絡
+      document.getElementById("info-address").textContent = data.info.address;
+      document.getElementById("info-hours").textContent = data.info.hours;
+      document.getElementById("info-phone").textContent = data.info.phone;
+      document.getElementById("info-transit").textContent = data.info.transit;
+      document.getElementById("info-map-note").textContent = data.info.map_note;
+      document.getElementById("info-booking-desc").textContent = data.info.booking_desc;
+
+      const bookingBtn = document.getElementById("info-booking-btn");
+      bookingBtn.textContent = data.info.booking_btn;
+      if (data.info.booking_url && data.info.booking_url.startsWith("http")) {
+        bookingBtn.href = data.info.booking_url;
+      } else {
+        bookingBtn.href = "#booking";
+        bookingBtn.removeAttribute("target");
+      }
+
+      const phoneBtn = document.getElementById("info-phone-btn");
+      phoneBtn.textContent = `電話洽詢：${data.info.phone}`;
+      if (data.info.phone && !data.info.phone.includes("待填入")) {
+        phoneBtn.href = `tel:${data.info.phone.replace(/[^0-9+]/g, "")}`;
+      }
+    }
+
+    function goToSlide(index) {
+      if (totalSlides <= 0) return;
+      currentSlideIndex = (index + totalSlides) % totalSlides;
+      const wrapper = document.getElementById("slidesWrapper");
+      wrapper.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+
+      const dots = document.querySelectorAll(".dot");
+      dots.forEach((d, i) => d.classList.toggle("active", i === currentSlideIndex));
+    }
+
+    function setupCarousel() {
+      if (slideTimer) clearInterval(slideTimer);
+      currentSlideIndex = 0;
+      goToSlide(0);
+
+      if (totalSlides > 1) {
+        slideTimer = setInterval(() => goToSlide(currentSlideIndex + 1), 5500);
+      }
+    }
+
+    // =========================================================================
+    // 啟動流程：嘗試讀取 Google 試算表 CSV，失敗則無縫切換內建示範內容
+    // =========================================================================
+    async function initSite() {
+      // 手機選單開關
+      const menuToggle = document.getElementById("menuToggle");
+      const navLinks = document.getElementById("navLinks");
+      menuToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
+      navLinks.querySelectorAll("a").forEach(a =>
+        a.addEventListener("click", () => navLinks.classList.remove("open"))
+      );
+
+      // 輪播左右按鈕
+      document.getElementById("prevSlide").addEventListener("click", () => {
+        goToSlide(currentSlideIndex - 1);
+        setupCarousel();
+      });
+      document.getElementById("nextSlide").addEventListener("click", () => {
+        goToSlide(currentSlideIndex + 1);
+        setupCarousel();
+      });
+
+      const csvUrl = (SHEET_CSV_URL || "").trim();
+      if (!csvUrl) {
+        renderWebsite(buildStructuredData(null));
+        return;
+      }
+
+      try {
+        // 加上時間戳參數避免瀏覽器與 CDN 快取舊資料
+        const separator = csvUrl.includes("?") ? "&" : "?";
+        const noCacheUrl = `${csvUrl}${separator}t=${Date.now()}`;
+
+        const response = await fetch(noCacheUrl, { cache: "no-store" });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+        const csvText = await response.text();
+        const parsedRows = parseCSV(csvText);
+        renderWebsite(buildStructuredData(parsedRows));
+      } catch (err) {
+        console.warn("Google 試算表讀取失敗，已自動切換為內建示範內容：", err);
+        renderWebsite(buildStructuredData(null));
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", initSite);
+  </script>
+</body>
+</html>
