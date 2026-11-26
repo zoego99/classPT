@@ -465,17 +465,10 @@
         <div class="content-h2">Step 4 製作活潑簡報（下載 PPT 檔）</div>
         <div class="prompt-card">
           <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 Step 4 活潑生動的簡報，提供 PPT 檔下載</span>
+            <span class="prompt-card-title">📌 Step 4 活潑生動的簡報，提供 PPT 檔下載(提供前步驟的 1x4 的圖片)</span>
             <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
           </div>
-          <div class="prompt-code">簡報大綱已確認，請依大綱製作簡報，提供 PowerPoint 檔（.pptx）下載。
-
-# 風格：活潑、生動
-- 像在說故事，不要像公文；標題可以用問句或口語，例如「每天 1 小時，都花去哪了？」
-- 版面要有變化：封面大圖＋大標題；數字頁用數字卡片；步驟頁用流程圖或時間軸；比較頁左右對照；重點頁用便當盒排版
-- 其他插圖的畫風要和附圖角色一致（日式 Q 版、線條乾淨），不要混用其他畫風
-- 配色：主色【藍 #2E86DE】、輔色【橘 #FF9F43】、底色【白 #FFFFFF】
-
+          <div class="prompt-code">請依大綱製作簡報，簡報風格希望活潑、生動的型式為主，並提供PPT檔案下載
 # 圖示（不用 emoji）
 - 重點、卡片、流程步驟搭配 icon，不使用 emoji
 - 全份統一一種 icon 風格：【線條圖示】，顏色用主色藍或輔色橘
@@ -488,9 +481,7 @@
 
 # 內容
 - 只用報告的內容，不新增數字；沒有的標示「待確認」
-- 每頁加 2～3 句講者備註，提醒我上台要說什麼
-
-無法直接提供 .pptx 時，請改建立 Google 簡報並提供連結。</div>
+每頁加 2～3 句講者備註，提醒我上台要說什麼</div>
         </div>
         <div class="content-h2">Step 5 ：同主題重新設計，升級為資訊圖</div>
         <div class="content-note"><p>保留原頁面的主題與邏輯，讓 AI 重新設計成資訊更豐富的資訊圖。</p></div>
@@ -499,7 +490,12 @@
             <span class="prompt-card-title">📌 Prompt — 同主題重新設計</span>
             <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
           </div>
-          <div class="prompt-code">請保留原本的主題與步驟順序，重新設計為資訊圖，尺寸16:9。</div>
+          <div class="prompt-code">請參考附件圖片，保留原本的主題、核心內容、步驟順序及邏輯關係，重新設計一張全新的資訊圖。
+原圖僅作為內容參考，不作為版面範本。請依內容特性，自行選擇截然不同且適合的視覺架構，全面重構整體構圖、資訊位置、區塊形狀、閱讀動線及圖文關係，並將文字概念轉化為具體圖解或情境。
+不得沿用原圖的版面配置，也不得僅更換配色、畫風或增加插圖，整體視覺架構須與原圖有明顯差異。
+
+- 視覺風格：【日系動漫風格】
+- 圖片比例：【16:9】</div>
         </div>
 
       </div><!-- u1-f END -->
@@ -594,7 +590,16 @@
         <div class="content-note"><p>截圖方式：Windows【Win＋Shift＋S】剪取工具，選取範圍後直接到 Gemini 按【Ctrl＋V】貼上。<br>截圖時請把<strong>欄名（A、B、C…）與標題列</strong>一起截進去。</p></div>
         <div class="prompt-card">
           <div class="prompt-card-header">
-            <span class="prompt-card-title">📌 Prompt — 截圖詢問（銷售明細 A～N 欄）</span>
+            <span class="prompt-card-title">📌 Prompt1 — 截圖詢問，故意不告知公式寫法（銷售明細 A～N 欄）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">#new 如附圖，L 欄「金額」是系統匯出的實收金額，已經扣掉折扣，但可能有打錯的資料。
+我想在 O 欄新增「金額檢查」：金額有問題顯示【金額待查】，沒問題顯示空白。
+請先說明你判斷金額是否正確的規則，並用前 3 列資料驗算，確認後再提供公式與簡單說明。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt2 — 截圖詢問，告知公式寫法（銷售明細 A～N 欄）</span>
             <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
           </div>
           <div class="prompt-code">#new 如附圖，我要在 O 欄新增「金額檢查」：
@@ -602,8 +607,17 @@
 請提供公式並簡單說明。</div>
         </div>
         <div class="tip-card info"><strong>參考答案：</strong>O2　=IF(L2=ROUND(I2*J2*(1-K2),0),"","金額待查")　→ 往下複製後，用篩選找出「金額待查」，這就是 2-4 要請 AI 一起找的異常。</div>
+        <div class="content-h2">(2) 善用表格（Excel Table）設定</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt2 —  Excel 表格（Excel Table）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請用表格結構化Excel Table參照寫公式</div><hr>
+          <div class="prompt-code">請用表格欄位名稱寫公式，不要用儲存格位置。</div>
+        </div>
 
-        <div class="content-h2">(2) 上傳 Excel 檔：先確認關係，再給公式</div>
+        <div class="content-h2">(3) 上傳 Excel 檔：先確認關係，再給公式</div>
         <div class="tip-card warning"><strong>❌ 不佳：</strong>附檔，把產品明細帶到銷售明細，公式寫法？<br>AI 可能還沒看懂資料怎麼連，就開始回答公式。</div>
         <div class="prompt-card">
           <div class="prompt-card-header">
