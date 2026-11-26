@@ -70,9 +70,32 @@
           Google 表單×試算表
         </button>
         <button class="sec-sub-btn" id="btn-u4-a" onclick="showSub('u4','u4-a')">1.報名表單題目與設定</button>
-        <button class="sec-sub-btn" id="btn-u4-b" onclick="showSub('u4','u4-b')">2.公式範圍寫法</button>
-        <button class="sec-sub-btn" id="btn-u4-c" onclick="showSub('u4','u4-c')">3.統計函數與 FILTER 差異</button>
-        <button class="sec-sub-btn" id="btn-u4-d" onclick="showSub('u4','u4-d')">4.AI 協助表單與試算表</button>
+        <button class="sec-sub-btn" id="btn-u4-f" onclick="showSub('u4','u4-f')">2.Google 表單設計重點</button>
+        <button class="sec-sub-btn" id="btn-u4-b" onclick="showSub('u4','u4-b')">3.公式範圍寫法</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u5" onclick="showSection('u5')">
+          <span class="sec-num" style="background:var(--sec-6)">★</span>
+          旅遊參加
+        </button>
+        <button class="sec-sub-btn" id="btn-u5-a" onclick="showSub('u5','u5-a')">1.AI 產生程式碼建立表單</button>
+        <button class="sec-sub-btn" id="btn-u5-b" onclick="showSub('u5','u5-b')">2.統計公式與 FILTER 差異</button>
+        <button class="sec-sub-btn" id="btn-u5-c" onclick="showSub('u5','u5-c')">3.AI 協助設計與寫公式</button>
+        <button class="sec-sub-btn" id="btn-u5-d" onclick="showSub('u5','u5-d')">4.AI 數據分析與 Excel 總表</button>
+        <button class="sec-sub-btn" id="btn-u5-e" onclick="showSub('u5','u5-e')">5.結果摘要給主管</button>
+      </div>
+
+      <div class="sec-group">
+        <button class="sec-group-btn" id="btn-u6" onclick="showSection('u6')">
+          <span class="sec-num" style="background:var(--sec-1)">★</span>
+          T恤訂購
+        </button>
+        <button class="sec-sub-btn" id="btn-u6-a" onclick="showSub('u6','u6-a')">1.AI 產生程式碼建立表單</button>
+        <button class="sec-sub-btn" id="btn-u6-b" onclick="showSub('u6','u6-b')">2.統計公式與 FILTER 差異</button>
+        <button class="sec-sub-btn" id="btn-u6-c" onclick="showSub('u6','u6-c')">3.AI 協助設計與寫公式</button>
+        <button class="sec-sub-btn" id="btn-u6-d" onclick="showSub('u6','u6-d')">4.AI 數據分析與 Excel 總表</button>
+        <button class="sec-sub-btn" id="btn-u6-e" onclick="showSub('u6','u6-e')">5.結果摘要給主管</button>
       </div>
 
     </div>
@@ -553,9 +576,141 @@ IT．物流部
         <div class="tip-card warning">⚠️ 建好後先按【預覽】，「參加」「不參加」兩條路線都走一次；測試回覆確認無誤後再刪除。</div>
       </div><!-- u4-a END -->
 
+      <!-- u4-f -->
+      <div class="sub-block" id="u4-f">
+        <div class="sec-sub-title">2.Google 表單設計重點</div>
+        <div class="tip-card note"><strong>工作情境：</strong>表單發出去很快就收齊，真正花時間的是「收回來之後」：部門寫法五花八門、人數寫成文字無法加總、不參加的人也填了一堆題目。這些麻煩，大多在設計表單時就決定了。</div>
+
+        <div class="content-h2">(1) 從過去的表單找問題</div>
+        <table class="data-table">
+          <tr><th>問題</th><th>實際情形</th><th>改善做法</th></tr>
+          <tr><td>部門名稱不一致</td><td>「IT.物流部」「IT．物流部」「IT. 物流部」</td><td>改用<strong>下拉式選單</strong>，各表單共用同一份部門清單</td></tr>
+          <tr><td>選項文字太長</td><td>「(1) 第一團 10/14(三) - 10/18(日)」</td><td>選項只放<strong>短標籤</strong>，說明放「題目說明」</td></tr>
+          <tr><td>數量用文字填寫</td><td>「帶三位家屬」「L*1」</td><td>改用數字並加<strong>回應驗證</strong></td></tr>
+          <tr><td>不重複只能靠自覺</td><td>T恤顏色分兩題，題目寫「不重覆」</td><td>改用<strong>單選方格</strong>，限制每欄一個回覆</td></tr>
+          <tr><td>不參加也要往下填</td><td>「參加者請續答」</td><td><strong>區段＋條件跳題</strong>，不參加直接送出</td></tr>
+          <tr><td>備註欄被拿來發問</td><td>「一個人住一間要補多少錢？」</td><td>常見問題先寫在<strong>表單說明</strong></td></tr>
+        </table>
+
+        <div class="content-h2">(2) 建立表單：先放進資料夾</div>
+        <div class="tip-card info">開啟【雲端硬碟】＞ 進入課程或活動的資料夾 ＞ 空白處按右鍵【新增】＞【Google 表單】。表單和之後的回覆試算表放在同一個資料夾，比較好管理。</div>
+        <div class="content-img70">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform01.png" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform01.png" alt="雲端硬碟新增 Google 表單"></a>
+        </div>
+
+        <div class="content-h2">(3) 題型怎麼選：能用選的，就不要讓人打字</div>
+        <div class="content-img60">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform02.png" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform02.png" alt="題目類型"></a>
+        </div>
+        <table class="data-table">
+          <tr><th>題型</th><th>適用情境</th><th>登路普範例</th><th>回覆試算表的樣子</th></tr>
+          <tr><td>簡答／段落</td><td>姓名、備註</td><td>姓名、其他需求</td><td>一欄，填寫的文字</td></tr>
+          <tr><td>單選題</td><td>選一個，選項少（7 個以內）</td><td>是否參加</td><td>一欄，選項文字</td></tr>
+          <tr><td>下拉式選單</td><td>選一個，選項多</td><td>部門（11 個）</td><td>一欄，選項文字</td></tr>
+          <tr><td>核取方塊</td><td>可以複選</td><td>想參加的活動</td><td>一欄，多個選項用「, 」串在同一格</td></tr>
+          <tr><td>線性刻度</td><td>滿意度、評分</td><td>活動滿意度 1～5</td><td>一欄，數字</td></tr>
+          <tr><td>單選方格</td><td>多個項目用同一組選項</td><td>T恤第一件／第二件的顏色、尺寸</td><td>每一列一欄，例如「T恤顏色 [第一件]」</td></tr>
+          <tr><td>核取方塊格</td><td>多個項目、每項可複選</td><td>各梯次可支援的工作</td><td>每一列一欄，多選用「, 」串接</td></tr>
+          <tr><td>日期</td><td>日期資料</td><td>預計出發日期</td><td>一欄，日期</td></tr>
+        </table>
+        <div class="content-note"><p><strong>單選題／核取方塊／下拉式選單：表單設定與試算表結果</strong></p></div>
+        <div class="content-img70">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform03.png" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform03.png" alt=""></a>
+        </div>
+        <div class="content-img70">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform04.png" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform04.png" alt=""></a>
+        </div>
+        <div class="content-note"><p><strong>線性刻度</strong></p></div>
+        <div class="content-img70">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform05.png" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform05.png" alt=""></a>
+        </div>
+        <div class="content-note"><p><strong>單選方格：每一列變成一欄</strong></p></div>
+        <div class="content-img70">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform06.png" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform06.png" alt=""></a>
+        </div>
+        <div class="content-img70">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform07.png" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform07.png" alt=""></a>
+        </div>
+        <div class="content-note"><p><strong>核取方塊格：每一列一欄，複選用「, 」串接</strong></p></div>
+        <div class="content-img70">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform08.png" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform08.png" alt=""></a>
+        </div>
+        <div class="content-img70">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform09.png" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform09.png" alt=""></a>
+        </div>
+        <div class="content-img60">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform10.png" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform10.png" alt=""></a>
+        </div>
+        <div class="content-img60">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform11.png" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform11.png" alt=""></a>
+        </div>
+        <div class="tip-card warning">⚠️ 核取方塊（複選）的答案擠在同一格，統計要用 COUNTIF 加萬用字元，例如 =COUNTIF(D:D,"*跑步*")；能用單選就用單選。</div>
+
+        <div class="content-h2">(4) 三個關鍵設定</div>
+        <table class="data-table">
+          <tr><th>技巧</th><th>指令</th><th>效果</th></tr>
+          <tr><td>單選方格不重複</td><td>題目右下【⋮】＞【限制每欄只能有一個回覆】；開啟【每列都必須回覆】</td><td>T恤兩件不會選到同一色、兩件都要選</td></tr>
+          <tr><td>回應驗證</td><td>簡答題右下【⋮】＞【回應驗證】＞【數字】＞【介於】0 和 4</td><td>輸入「三位」會跳錯誤提示，收回來就能加總</td></tr>
+          <tr><td>區段＋條件跳題</td><td>題目下方【新增區段】；回到「是否參加」右下【⋮】＞【根據答案前往相關區段】</td><td>參加 → 區段 2；不參加 → 提交表單</td></tr>
+        </table>
+        <div class="tip-card note">條件跳題只能用在<strong>單選題</strong>與<strong>下拉式選單</strong>；設定完一定要用【預覽】兩條路線都走一次。</div>
+
+        <div class="content-h2">(5) 表單設定：個人 Gmail 要注意</div>
+        <table class="data-table">
+          <tr><th>設定</th><th>位置</th><th>建議</th></tr>
+          <tr><td>收集電子郵件地址</td><td>【設定】＞【回覆】</td><td>選【由回覆者輸入】；選「已驗證」會要求填寫人登入</td></tr>
+          <tr><td>限制只能回覆 1 次</td><td>【設定】＞【回覆】</td><td>會要求登入，建議不開，改用試算表找重複</td></tr>
+          <tr><td>允許編輯回覆</td><td>【設定】＞【回覆】</td><td>建議開啟，填錯可自行修改</td></tr>
+          <tr><td>停止接受回覆</td><td>【回覆】分頁 ＞ 關閉【接受回覆】</td><td>可自訂訊息：「報名已截止，請洽管理部」</td></tr>
+          <tr><td>新增協作者</td><td>右上【⋮】＞【新增協作者】</td><td>至少再加一位同事，避免承辦人休假時沒人能管理</td></tr>
+        </table>
+        <div class="content-note"><p><strong>設定畫面與送出後的確認訊息</strong></p></div>
+        <div class="content-img70">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform13.png" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform13.png" alt=""></a>
+        </div>
+        <div class="content-img40">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform14.png" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform14.png" alt=""></a>
+        </div>
+
+        <div class="content-h2">(6) 發佈、測試與回覆</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>做法</th></tr>
+          <tr><td>發佈</td><td>右上【發佈】＞ 複製填寫連結，可勾選【縮短網址】</td></tr>
+          <tr><td>QR Code</td><td>把短網址貼到 QR Code 產生器網站，或用 Chrome 開啟填寫連結 ＞ 網址列【分享】＞【建立 QR 碼】，可張貼在布告欄</td></tr>
+          <tr><td>預先填入連結</td><td>右上【⋮】＞【取得預先填入的連結】＞ 先選好「部門」＞ 取得連結；每個部門一個連結，部門寫法自然一致</td></tr>
+          <tr><td>測試</td><td>用 Chrome【無痕視窗】（Ctrl＋Shift＋N）開啟填寫連結，以一般同仁的角度實際填一次</td></tr>
+          <tr><td>刪除測試資料</td><td>【回覆】分頁 ＞【⋮】＞【刪除所有回覆】</td></tr>
+          <tr><td>連結試算表</td><td>【回覆】分頁 ＞【連結至試算表】＞ 建立新試算表</td></tr>
+          <tr><td>下載 Excel</td><td>回覆試算表【檔案】＞【下載】＞【Microsoft Excel (.xlsx)】</td></tr>
+        </table>
+        <div class="tip-card info"><strong>發佈前檢查：</strong>☐ 兩條跳題路線都走過　☐ 必填題已設定　☐ 選項短、寫法一致　☐ 已加協作者　☐ 說明有截止日、窗口、常見問題　☐ 測試資料已刪除</div>
+        <div class="content-note"><p><strong>發佈與權限</strong></p></div>
+        <div class="content-img60">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform12.png" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform12.png" alt=""></a>
+        </div>
+        <div class="content-note"><p><strong>縮短網址與 QR Code</strong></p></div>
+        <div class="content-img70">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform15.png" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform15.png" alt=""></a>
+        </div>
+        <div class="content-note"><p><strong>無痕視窗測試與測試結果</strong></p></div>
+        <div class="content-img40">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform16.png" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform16.png" alt=""></a>
+        </div>
+        <div class="content-img70">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform17.png" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform17.png" alt=""></a>
+        </div>
+        <div class="content-note"><p><strong>連結試算表與下載 Excel</strong></p></div>
+        <div class="content-img70">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform18.png" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform18.png" alt=""></a>
+        </div>
+        <div class="content-img60">
+          <a href="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform19.png" target="_blank"><img src="https://filedn.com/lzai0pPTnpfyPiXAjMDqr4V/hackmd_AI/gform19.png" alt=""></a>
+        </div>
+      </div><!-- u4-f END -->
+
       <!-- u4-b -->
       <div class="sub-block" id="u4-b">
-        <div class="sec-sub-title">2.公式建立範圍寫法</div>
+        <div class="sec-sub-title">3.公式建立範圍寫法</div>
         <table class="data-table">
           <tr><th>寫法</th><th>Google 試算表</th><th>Excel</th><th>說明</th></tr>
           <tr><td>開放式範圍<br><strong>B2:B</strong></td><td>✅</td><td>❌</td><td>從第 2 列算到最後一列，新回覆自動算進來；但會包含下方空白列（UNIQUE 會多一格空白）</td></tr>
@@ -567,9 +722,100 @@ IT．物流部
         <div class="tip-card warning">⚠️ 引用其他工作表時，名稱有空格要加單引號：<strong>'表單回覆 1'!B2:B</strong>；FILTER 裡的每個範圍，起訖列數要一樣。</div>
       </div><!-- u4-b END -->
 
-      <!-- u4-c -->
-      <div class="sub-block" id="u4-c">
-        <div class="sec-sub-title">3.統計函數與 FILTER 差異</div>
+    </div><!-- u4 END -->
+
+    <!-- ======== U5: ★ 旅遊參加 ======== -->
+    <div class="content-section" id="u5">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-6)">★</span>
+        範例：旅遊參加
+      </div>
+      <div class="sec-desc">📌 從建立表單、統計、AI 分析到給主管的摘要，一次走完「員工旅遊報名」流程。<br>📂 練習檔：登路普_Google試算表練習檔.xlsx（工作表「表單回覆 1」「統計」）</div>
+
+      <!-- u5-a -->
+      <div class="sub-block" id="u5-a">
+        <div class="sec-sub-title">1.AI 產生程式碼建立表單</div>
+        <div class="tip-card note"><strong>工作情境：</strong>福委會要辦員工旅遊，需要知道各梯次人數、同行人數與補助金額。先把需求整理好，請 AI 寫程式碼，一次建好表單與回覆試算表。</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>做什麼</th></tr>
+          <tr><td>1 整理需求</td><td>依下方範本，把【】換成這次的內容</td></tr>
+          <tr><td>2 AI 寫程式</td><td>貼給 Gemini 或 ChatGPT，取得完整 .gs 程式碼</td></tr>
+          <tr><td>3 貼上執行</td><td>開啟 <strong>script.google.com</strong> ＞【新專案】＞ 刪除預設內容、貼上程式碼 ＞ 儲存 ＞【執行】</td></tr>
+          <tr><td>4 授權</td><td>第一次執行：選帳號 ＞【進階】＞【前往（不安全）】＞【允許】</td></tr>
+          <tr><td>5 檢查</td><td>【執行作業記錄】中開啟表單網址 ＞【預覽】實際填一次</td></tr>
+        </table>
+        <div class="tip-card warning">⚠️ 程式只要執行一次，每執行一次就多建一份表單。出現「不安全」是因為這是自己的程式、沒送 Google 審核，不是有問題。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 範本 — 員工旅遊報名表單</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請幫我寫 Google Apps Script（.gs）程式碼，執行後自動建立 Google 表單，並連結一份回覆試算表。
+
+# 表單基本資料
+- 標題：【2026年員工旅遊報名表】
+- 說明：【活動日期、地點、填寫截止日、聯絡窗口】
+
+# 題目（題號用「頁碼-題序」）
+第 1 頁：基本資料
+- 1-1 部門｜下拉選單｜必填｜選項：管理部、經營企劃部、輪胎一部、輪胎二部、輪胎營業本部、運動用品部、技服.OE部、IT.物流部、北部營業所、中部營業所、南部營業所
+- 1-2 姓名｜簡答｜必填
+- 1-3 是否參加【活動名稱】｜單選｜必填｜選項：參加 → 前往第 2 頁；不參加 → 提交表單
+
+第 2 頁：【參加者填寫】
+- 2-1 【梯次】｜單選｜必填｜選項：【第一團 10/14–10/18、第二團 11/11–11/15、第三團 11/18–11/22】
+- 2-2 【同行人數】｜簡答｜必填｜說明：【沒有請填 0】｜回應驗證：數字介於【0】到【4】
+- 2-3 【飲食需求】｜單選｜必填｜選項：【葷食、素食】
+- 2-4 其他需求｜段落
+
+# 設定
+- 允許編輯回覆；關閉「提交其他回應的連結」
+- 確認訊息：【已收到您的報名！需要修改請點「編輯你的回覆」】
+- 使用個人 Gmail 帳號，不要開「限制只能回覆 1 次」
+
+# 程式要求
+- 只寫一個函式「建立表單」，我執行一次即可
+- 執行後在執行作業記錄列出：表單編輯網址、填寫網址、試算表網址
+- 程式碼加上簡短中文註解，並附上執行步驟</div>
+        </div>        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 確認訊息（【設定】＞【簡報】＞【確認訊息】）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">✅ 已收到您的回覆，謝謝！
+
+■ 選擇「參加」的同仁
+　1. 梯次與房間安排確定後，管理部會另行通知。
+　2. 單人房差額、幼兒費用，會在通知中一併說明。
+
+■ 需要修改內容？
+　請點下方的「編輯你的回覆」，修改後再送出即可，不需要重新填寫一份。
+　建議把這個畫面截圖或把連結存起來，之後才找得到修改入口。
+
+■ 填寫截止：○月○日（○）17:00
+■ 聯絡窗口：管理部 ○○○（分機 ○○○）
+</div>
+        </div>        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 追問 — 執行出錯或要修改</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">【執行出錯】執行時出現以下錯誤：【貼上錯誤訊息】
+請說明原因，修正後提供完整程式碼。
+
+【要修改】請在目前程式中【新增／修改：例如 2-3 改成核取方塊，選項加上「蛋奶素」】，
+其他題目與設定不變，修改後提供完整程式碼。</div>
+        </div>        <div class="tip-card note"><strong>📍 建好後要檢查：</strong>
+          <ul>
+            <li>部門清單、梯次選項有沒有少、有沒有打錯字？必填是否正確？</li>
+            <li>【預覽】選「不參加」是否直接送出？人數輸入「三位」是否跳出錯誤提示？</li>
+          </ul>
+        </div>
+      </div><!-- u5-a END -->
+
+      <!-- u5-b -->
+      <div class="sub-block" id="u5-b">
+        <div class="sec-sub-title">2.統計公式與 FILTER 差異</div>
         <div class="tip-card info"><strong>資料來源：</strong>「表單回覆 1」（B 部門、C 姓名、D 是否參加、E 梯次、F 直系親屬、G 幼兒、H 親友、I 住宿）<br><strong>公式位置：</strong>全部寫在「統計」工作表，回覆工作表不改、不插入、不加總。</div>
         <table class="data-table">
           <tr><th>函數</th><th>用途</th><th>Excel 2019</th></tr>
@@ -643,18 +889,16 @@ Excel：
 =FILTER('表單回覆 1'!B2:C201, '表單回覆 1'!B2:B201="業務部", "查無資料")</div>
         </div>
         <div class="tip-card info">💡 Excel 2019 沒有 FILTER、UNIQUE：資料還在收集時用 Google 試算表即時統計；下載成 Excel 後，改用<strong>樞紐分析</strong>做到一樣的事。</div>
-      </div><!-- u4-c END -->
+      </div><!-- u5-b END -->
 
-      <!-- u4-d -->
-      <div class="sub-block" id="u4-d">
-        <div class="sec-sub-title">4.AI 協助表單與試算表</div>
+      <!-- u5-c -->
+      <div class="sub-block" id="u5-c">
+        <div class="sec-sub-title">3.AI 協助設計與寫公式</div>
         <table class="data-table">
           <tr><th>階段</th><th>AI 可以幫忙</th></tr>
           <tr><td>設計表單</td><td>依活動說明產生題目、題型、選項與跳題建議</td></tr>
           <tr><td>檢查表單</td><td>找出會造成統計困難的題目</td></tr>
           <tr><td>寫公式</td><td>白話描述需求，AI 給公式並解釋</td></tr>
-          <tr><td>整理文字回覆</td><td>把「其他需求」欄分類、找出要回覆的</td></tr>
-          <tr><td>寫結果摘要</td><td>統計表 → 給主管的 LINE 訊息</td></tr>
         </table>
         <div class="tip-card warning">⚠️ 貼資料給 AI 前，先刪除姓名、Email、電話，或改用代號。問公式時說清楚用的是 <strong>Google 試算表</strong>還是 <strong>Excel（版本）</strong>，兩邊寫法不同。</div>
         <div class="prompt-card">
@@ -672,8 +916,7 @@ Excel：
 - 表格列出：題號（頁碼-題序，如 1-1）、題目、題型、選項、是否必填
 - 選項文字要短，說明放「題目說明」；人數題用數字並設回應驗證
 - 標出需要「根據答案前往相關區段」的題目與前往的區段</div>
-        </div>
-        <div class="prompt-card">
+        </div>        <div class="prompt-card">
           <div class="prompt-card-header">
             <span class="prompt-card-title">📌 Prompt 2 — 健檢既有表單</span>
             <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
@@ -681,8 +924,7 @@ Excel：
           <div class="prompt-code">以下是我們過去的表單題目與選項：【貼上題目】
 請以「回收後要用試算表統計」的角度檢查，用表格輸出：
 原題目｜問題｜建議題型或設定｜改寫後的題目</div>
-        </div>
-        <div class="prompt-card">
+        </div>        <div class="prompt-card">
           <div class="prompt-card-header">
             <span class="prompt-card-title">📌 Prompt 3 — 撰寫統計公式</span>
             <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
@@ -690,8 +932,56 @@ Excel：
           <div class="prompt-code">Google 試算表的工作表「表單回覆 1」：B 欄部門、D 欄是否參加（參加／不參加）、E 欄梯次（例如「第一團 10/14–10/18」）。
 我想在工作表「統計」A12 起列出部門，B11:D11 是第一團、第二團、第三團，計算各部門人數。
 請提供可往右、往下複製的公式，解釋每個參數，並另外提供 Excel 2019 的寫法。</div>
+        </div>        <div class="tip-card info">💡 拿到公式先用已知答案驗證：第一團合計應為 <strong>68</strong> 人、輪胎一部第一團 <strong>11</strong> 人，對了再往下複製。</div>
+      </div><!-- u5-c END -->
+
+      <!-- u5-d -->
+      <div class="sub-block" id="u5-d">
+        <div class="sec-sub-title">4.表單完成：AI 數據分析與 Excel 總表</div>
+        <div class="tip-card note"><strong>工作情境：</strong>報名截止後，主管要一份完整的統計結果。把回覆資料交給 AI，請它分析並產出一份可下載的 Excel 總表，數字用公式計算，方便核對。</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>做什麼</th></tr>
+          <tr><td>1 下載回覆</td><td>回覆試算表【檔案】＞【下載】＞【Microsoft Excel (.xlsx)】</td></tr>
+          <tr><td>2 去識別化</td><td>刪除「姓名」欄，或改成代號（例如 A001）</td></tr>
+          <tr><td>3 交給 AI</td><td>上傳檔案，依序貼上 Step 1、Step 2</td></tr>
+          <tr><td>4 核對</td><td>用「統計」工作表或樞紐分析抽查 2～3 個數字</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Step 1：先確認資料｜附件：員工旅遊回覆.xlsx</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">附件是員工旅遊報名表的回覆資料，請先不要分析。請確認：
+1. 欄位、筆數；參加與不參加各幾人
+2. 有沒有重複填寫（同部門同姓名）、必填欄位空白
+3. 人數欄是否都是數字，有沒有異常值
+有問題先列出來，等我確認後再分析。</div>
         </div>
-        <div class="tip-card info">💡 拿到公式先用已知答案驗證：第一團合計應為 <strong>68</strong> 人、輪胎一部第一團 <strong>11</strong> 人，對了再往下複製。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Step 2：分析並產出 Excel 總表</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請依確認後的資料，產出 Excel 檔（.xlsx）讓我下載：
+# 工作表
+1. 摘要：參加人數、不參加人數、出團總人數（員工＋直系親屬＋親朋好友）、補助金額，加上 3 點重點
+2. 梯次人數：第一團／第二團／第三團／不參加，含合計
+3. 部門 × 梯次：各部門在各梯次的人數，含合計列、合計欄
+4. 同行人數與補助：各梯次的員工、直系親屬、3 歲以下幼兒、親朋好友人數；補助金額＝直系親屬人數 × 【15,000】
+5. 住宿安排：各梯次的住宿方式人數；列出「與同事同房」的配對，標出對不上的
+6. 其他需求：原文與分類（飲食、住宿、幼兒、其他）
+# 規則
+- 統計數字用 COUNTIFS、SUMIFS 等公式參照原始資料工作表，不要直接填數字
+- 標題列加粗加底色、凍結第一列，金額加千分位
+- 梯次人數附一張長條圖</div>
+        </div>
+        <div class="tip-card info">💡 驗收：第一團 <strong>68</strong>、第二團 <strong>61</strong>、第三團 <strong>49</strong>、不參加 <strong>22</strong>；補助金額 <strong>2,145,000</strong> 元；打開 Excel 確認數字是公式，不是直接填入。</div>
+      </div><!-- u5-d END -->
+
+      <!-- u5-e -->
+      <div class="sub-block" id="u5-e">
+        <div class="sec-sub-title">5.結果摘要給主管</div>
+        <div class="tip-card note"><strong>工作情境：</strong>統計完成後，先整理同仁的「其他需求」，再用一則簡短訊息讓主管掌握結果與待決定事項。</div>
         <div class="prompt-card">
           <div class="prompt-card-header">
             <span class="prompt-card-title">📌 Prompt 4 — 整理「其他需求」欄</span>
@@ -701,8 +991,7 @@ Excel：
 請分類為：飲食、住宿、幼兒、其他。
 用表格輸出：原文｜分類｜需要承辦人處理嗎（是／否）｜建議處理方式
 最後統計各類別筆數。</div>
-        </div>
-        <div class="prompt-card">
+        </div>        <div class="prompt-card">
           <div class="prompt-card-header">
             <span class="prompt-card-title">📌 Prompt 5 — 結果摘要給主管（LINE）</span>
             <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
@@ -713,9 +1002,301 @@ Excel：
 - 各梯次人數，指出人數偏少的梯次
 - 需要主管決定的事項
 語氣簡潔正式，數字照統計表，不要自行計算或補充。</div>
+        </div>        <div class="tip-card warning">⚠️ 摘要裡的數字要和 Excel 總表一致；AI 只負責整理文字，不要讓它自己重新計算。</div>
+      </div><!-- u5-e END -->
+
+    </div><!-- u5 END -->
+
+    <!-- ======== U6: ★ T恤訂購 ======== -->
+    <div class="content-section" id="u6">
+      <div class="sec-title">
+        <span class="sec-badge" style="background:var(--sec-1)">★</span>
+        範例：T恤訂購
+      </div>
+      <div class="sec-desc">📌 從建立表單、統計下單數量、AI 分析到給主管的摘要，一次走完「活動用 T恤登記」流程。<br>📂 練習檔：登路普_T恤表單_模擬回覆.xlsx（工作表「改善後_表單回覆 1」，練習時改名為「表單回覆 1」）</div>
+
+      <!-- u6-a -->
+      <div class="sub-block" id="u6-a">
+        <div class="sec-sub-title">1.AI 產生程式碼建立表單</div>
+        <div class="tip-card note"><strong>工作情境：</strong>每位同仁發 2 件活動 T恤，顏色不可重複、尺寸可不同。用「單選方格」設計，回收後就能直接統計各顏色、各尺寸要訂幾件。</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>做什麼</th></tr>
+          <tr><td>1 整理需求</td><td>依下方範本，把【】換成這次的內容</td></tr>
+          <tr><td>2 AI 寫程式</td><td>貼給 Gemini 或 ChatGPT，取得完整 .gs 程式碼</td></tr>
+          <tr><td>3 貼上執行</td><td>開啟 <strong>script.google.com</strong> ＞【新專案】＞ 刪除預設內容、貼上程式碼 ＞ 儲存 ＞【執行】</td></tr>
+          <tr><td>4 授權</td><td>第一次執行：選帳號 ＞【進階】＞【前往（不安全）】＞【允許】</td></tr>
+          <tr><td>5 檢查</td><td>【執行作業記錄】中開啟表單網址 ＞【預覽】實際填一次</td></tr>
+        </table>
+        <div class="tip-card warning">⚠️ 程式只要執行一次，每執行一次就多建一份表單。出現「不安全」是因為這是自己的程式、沒送 Google 審核，不是有問題。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 範本 — 活動用 T恤登記表單</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請幫我寫 Google Apps Script（.gs）程式碼，執行後自動建立 Google 表單，並連結一份回覆試算表。
+
+# 表單基本資料
+- 標題：【2026年活動用T恤登記】
+- 說明：【每人發放 2 件，顏色不可重複，尺寸可不同；填寫截止日；聯絡窗口；每批次尺寸會有些微差距，選擇時請預留空間】
+
+# 題目
+- 1-1 部門｜下拉選單｜必填｜選項：管理部、經營企劃部、輪胎一部、輪胎二部、輪胎營業本部、運動用品部、技服.OE部、IT.物流部、北部營業所、中部營業所、南部營業所
+- 1-2 姓名｜簡答｜必填
+- 2-1 T恤顏色｜單選方格｜必填｜列：第一件、第二件｜欄：【201-1 白、201-2 天藍、201-3 黑、201-4 金黃、201-5 丈青、201-7 紅、201-8 粉紅、201-9 寶藍、201-10 亮桔】｜限制每欄只能有一個回覆（兩件不可同色）
+- 2-2 T恤尺寸｜單選方格｜必填｜列：第一件、第二件｜欄：【S、M、L、XL、2XL、3XL】
+- 2-3 其他需求｜段落
+
+# 設定
+- 允許編輯回覆；關閉「提交其他回應的連結」
+- 確認訊息：【已收到您的登記！需要修改請點「編輯你的回覆」】
+- 使用個人 Gmail 帳號，不要開「限制只能回覆 1 次」
+
+# 程式要求
+- 只寫一個函式「建立表單」，我執行一次即可
+- 執行後在執行作業記錄列出：表單編輯網址、填寫網址、試算表網址
+- 程式碼加上簡短中文註解，並附上執行步驟</div>
+        </div>        <div class="tip-card info">💡 單選方格：顏色、尺寸各一題，列都是「第一件、第二件」。回覆試算表會自動拆成「2-1 T恤顏色 [第一件]」「[第二件]」等欄位，每件的顏色和尺寸兩兩對應。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 確認訊息（【設定】＞【簡報】＞【確認訊息】）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">✅ 已收到您的登記，謝謝！
+
+■ 登記內容
+　每人 2 件，您選的顏色與尺寸已記錄。
+　T恤到貨後，管理部會另行通知領取時間與地點。
+
+■ 需要修改內容？
+　請點下方的「編輯你的回覆」，修改後再送出即可，不需要重新填寫一份。
+　建議把這個畫面截圖或把連結存起來，之後才找得到修改入口。
+　填寫截止後將統一下單，截止後無法再修改顏色與尺寸。
+
+■ 填寫截止：○月○日（○）17:00
+■ 聯絡窗口：管理部 ○○○（分機 ○○○）</div>
+        </div>        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 追問 — 執行出錯或要修改</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">【執行出錯】執行時出現以下錯誤：【貼上錯誤訊息】
+請說明原因，修正後提供完整程式碼。
+
+【要修改】請在目前程式中【新增／修改：例如 2-3 改成核取方塊，選項加上「蛋奶素」】，
+其他題目與設定不變，修改後提供完整程式碼。</div>
+        </div>        <div class="tip-card note"><strong>📍 建好後要檢查：</strong>
+          <ul>
+            <li>顏色、尺寸選項有沒有少？部門清單是否正確？</li>
+            <li>【預覽】兩件選同一個顏色時，是否出現錯誤提示？只選一件能不能送出？</li>
+          </ul>
         </div>
-      </div><!-- u4-d END -->
-    </div><!-- u4 END -->
+      </div><!-- u6-a END -->
+
+      <!-- u6-b -->
+      <div class="sub-block" id="u6-b">
+        <div class="sec-sub-title">2.統計公式與 FILTER 差異</div>
+        <div class="tip-card info"><strong>資料來源：</strong>「表單回覆 1」（B 部門、C 姓名、D 顏色[第一件]、E 顏色[第二件]、F 尺寸[第一件]、G 尺寸[第二件]、H 其他需求）<br><strong>公式位置：</strong>全部寫在「統計」工作表，回覆工作表不改、不插入、不加總。</div>
+        <table class="data-table">
+          <tr><th>函數</th><th>用途</th><th>Excel 2019</th></tr>
+          <tr><td>COUNTA</td><td>登記人數（非空白的格數）</td><td>✅</td></tr>
+          <tr><td>COUNTIF</td><td>單一條件件數；範圍可以選兩欄（第一件＋第二件）</td><td>✅</td></tr>
+          <tr><td>COUNTIFS</td><td>同時符合顏色與尺寸的件數（下單表）</td><td>✅</td></tr>
+          <tr><td>SUM</td><td>合計</td><td>✅</td></tr>
+          <tr><td>FILTER</td><td>依條件篩出名單</td><td>❌ 365／2021 起</td></tr>
+          <tr><td>IFNA</td><td>結果為 #N/A 時改顯示文字</td><td>✅</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 「統計」工作表公式（Google 試算表）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">【登記人數】
+=COUNTA('表單回覆 1'!C2:C)　　→ 20
+
+【下單表：顏色 × 尺寸】A3:A11 輸入 9 個顏色、B2:G2 輸入 S／M／L／XL／2XL／3XL
+B3　=COUNTIFS('表單回覆 1'!$D:$D, $A3, '表單回覆 1'!$F:$F, B$2)
+　　+COUNTIFS('表單回覆 1'!$E:$E, $A3, '表單回覆 1'!$G:$G, B$2)
+　　→ 往右、往下複製到 G11
+H3　=SUM(B3:G3)　　→ 各顏色合計，往下複製
+B12　=SUM(B3:B11)　　→ 各尺寸合計，往右複製（總件數 40）
+
+【各顏色件數】顏色在 A 欄
+=COUNTIF('表單回覆 1'!D:E, A3)　　→ 201-3 黑 11 件
+
+【各尺寸件數】
+=COUNTIF('表單回覆 1'!F:G, "L")　　→ 10 件
+
+【各部門件數】部門在 A 欄（每人 2 件）
+=COUNTIF('表單回覆 1'!B:B, A3)*2</div>
+        </div>
+        <div class="tip-card note"><strong>小提醒：</strong>下單表要把「第一件顏色＋第一件尺寸」和「第二件顏色＋第二件尺寸」<strong>分開計數再相加</strong>，不能用 D:E、F:G 兩欄一起比對，否則會把第一件的顏色配到第二件的尺寸。<strong>$</strong> 固定：$A3 顏色固定在 A 欄、B$2 尺寸固定在第 2 列。</div>
+        <div class="content-h2">FILTER：Google 與 Excel 的差異</div>
+        <table class="data-table">
+          <tr><th>特性</th><th>Google 試算表</th><th>Excel（365／2021 起）</th></tr>
+          <tr><td>語法</td><td>=FILTER(範圍, 條件1, [條件2, …])</td><td>=FILTER(陣列, 條件, [若無資料])</td></tr>
+          <tr><td>第三個參數</td><td>放「第二個條件」</td><td>放「查無資料時顯示的文字」</td></tr>
+          <tr><td>多條件「且」</td><td>用逗號分隔</td><td>用 * 連接</td></tr>
+          <tr><td>多條件「或」</td><td>兩者相同：用 + 連接</td><td>兩者相同：用 + 連接</td></tr>
+          <tr><td>查無資料</td><td>顯示 #N/A，外面包 IFNA</td><td>顯示 #CALC!，或填第三個參數</td></tr>
+          <tr><td>範圍</td><td>可用 B2:B</td><td>要寫結尾 B2:B21</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 範例：有選「黑色」的名單（第一件或第二件）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">Google：
+=FILTER('表單回覆 1'!B2:C, ('表單回覆 1'!D2:D="201-3 黑")+('表單回覆 1'!E2:E="201-3 黑"))
+
+Excel：
+=FILTER('表單回覆 1'!B2:C21, ('表單回覆 1'!D2:D21="201-3 黑")+('表單回覆 1'!E2:E21="201-3 黑"), "查無資料")
+
+→ 11 人</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 範例：第一件「黑色」且「L 號」的名單</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">Google：
+=IFNA(FILTER('表單回覆 1'!B2:C, '表單回覆 1'!D2:D="201-3 黑", '表單回覆 1'!F2:F="L"), "查無資料")
+
+Excel：
+=FILTER('表單回覆 1'!B2:C21, ('表單回覆 1'!D2:D21="201-3 黑")*('表單回覆 1'!F2:F21="L"), "查無資料")
+
+→ 2 人</div>
+        </div>
+        <div class="tip-card info">💡 Excel 2019 沒有 FILTER：資料還在收集時用 Google 試算表即時統計；下載成 Excel 後，改用<strong>樞紐分析</strong>（列：顏色、欄：尺寸、值：姓名計數）。</div>
+      </div><!-- u6-b END -->
+
+      <!-- u6-c -->
+      <div class="sub-block" id="u6-c">
+        <div class="sec-sub-title">3.AI 協助設計與寫公式</div>
+        <table class="data-table">
+          <tr><th>階段</th><th>AI 可以幫忙</th></tr>
+          <tr><td>設計表單</td><td>依發放規則產生題目、題型與選項</td></tr>
+          <tr><td>檢查表單</td><td>找出會造成統計困難的題目</td></tr>
+          <tr><td>寫公式</td><td>白話描述需求，AI 給下單表公式並解釋</td></tr>
+        </table>
+        <div class="tip-card warning">⚠️ 貼資料給 AI 前，先刪除姓名，或改用代號。問公式時說清楚用的是 <strong>Google 試算表</strong>還是 <strong>Excel（版本）</strong>。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt 1 — 設計表單題目</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">你是公司福委會的活動承辦人。
+目標：設計「活動用 T恤登記」Google 表單，回收後要用 Google 試算表統計各顏色、各尺寸的下單件數。
+背景：
+- 每人發放【2】件，兩件顏色不可相同，尺寸可以不同
+- 顏色：【201-1 白、201-2 天藍、201-3 黑、201-4 金黃、201-5 丈青、201-7 紅、201-8 粉紅、201-9 寶藍、201-10 亮桔】
+- 尺寸：【S、M、L、XL、2XL、3XL】
+- 部門：管理部、經營企劃部、輪胎一部、輪胎二部、輪胎營業本部、運動用品部、技服.OE部、IT.物流部、北部營業所、中部營業所、南部營業所
+格式：
+- 表格列出：題號、題目、題型、選項、是否必填、特殊設定
+- 說明怎麼讓表單直接擋下「兩件同色」，而不是靠題目提醒</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt 2 — 健檢既有表單（原 T恤表單）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">以下是我們過去的 T恤表單題目：
+- 您的部門（下拉選單）
+- 您的姓名（簡答）
+- 1-1. 請選T恤顏色 (與1-2. 不重覆)（單選）
+- 1-2. 請選T恤顏色 (與1-1. 不重覆)（單選）
+- 2-1. 共會發放二件T恤, 請選擇您的尺寸, 想要二件不同尺寸時, 請另在備註填寫第二件的不同尺寸需求.（單選）
+- 2-2. 第二件尺寸不同者, 請寫在如下:（簡答）
+請以「回收後要統計各顏色、各尺寸下單件數」的角度檢查，用表格輸出：
+原題目｜問題｜建議題型或設定｜改寫後的題目</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt 3 — 撰寫下單表公式</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">Google 試算表的工作表「表單回覆 1」：B 欄部門、D 欄第一件顏色、E 欄第二件顏色、F 欄第一件尺寸、G 欄第二件尺寸。
+我想在工作表「統計」做下單表：A3:A11 是 9 個顏色、B2:G2 是 S～3XL，算出每個顏色 × 尺寸要訂幾件（第一件、第二件都要算）。
+請提供可往右、往下複製的公式，解釋每個參數，並另外提供 Excel 2019 的寫法。</div>
+        </div>
+        <div class="tip-card info">💡 拿到公式先用已知答案驗證：總件數應為 <strong>40</strong> 件、黑色 <strong>11</strong> 件、L 號 <strong>10</strong> 件，對了再往下複製。</div>
+      </div><!-- u6-c END -->
+
+      <!-- u6-d -->
+      <div class="sub-block" id="u6-d">
+        <div class="sec-sub-title">4.表單完成：AI 數據分析與 Excel 總表</div>
+        <div class="tip-card note"><strong>工作情境：</strong>登記截止後要下單給廠商，也要依部門發放。把回覆資料交給 AI，請它分尺寸、分顏色、分部門做成一份 Excel 總表，數字用公式計算，方便核對。</div>
+        <table class="data-table">
+          <tr><th>步驟</th><th>做什麼</th></tr>
+          <tr><td>1 下載回覆</td><td>回覆試算表【檔案】＞【下載】＞【Microsoft Excel (.xlsx)】</td></tr>
+          <tr><td>2 去識別化</td><td>「姓名」欄改成代號（例如 A001），發放時再對照原始名單</td></tr>
+          <tr><td>3 交給 AI</td><td>上傳檔案，依序貼上 Step 1、Step 2</td></tr>
+          <tr><td>4 核對</td><td>用「統計」工作表或樞紐分析抽查 2～3 個數字</td></tr>
+        </table>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Step 1：先確認資料｜附件：T恤登記回覆.xlsx</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">附件是活動用 T恤登記表的回覆資料，請先不要分析。請確認：
+1. 欄位、登記人數、總件數（每人 2 件）
+2. 有沒有重複登記（同部門同姓名）、空白欄位
+3. 有沒有兩件同色、顏色或尺寸不在選項內的資料
+有問題先列出來，等我確認後再分析。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Step 2：分尺寸／分顏色／分部門，產出 Excel 總表</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請依確認後的資料，產出 Excel 檔（.xlsx）讓我下載：
+# 工作表
+1. 摘要：登記人數、總件數、最多的顏色與尺寸，加上 3 點重點
+2. 下單表：顏色 × 尺寸件數（第一件＋第二件合併），含合計列、合計欄，可直接給廠商
+3. 分顏色：各顏色件數與占比，附長條圖
+4. 分尺寸：各尺寸件數與占比
+5. 分部門：各部門人數、件數，以及部門 × 尺寸件數
+6. 發放清單：依部門排序，列出代號、第一件（顏色＋尺寸）、第二件（顏色＋尺寸）
+# 規則
+- 下單表用「第一件顏色＋第一件尺寸」「第二件顏色＋第二件尺寸」分別以 COUNTIFS 計算再相加，公式參照原始資料工作表，不要直接填數字
+- 合計、占比用公式
+- 標題列加粗加底色、凍結第一列</div>
+        </div>
+        <div class="tip-card info">💡 驗收：總件數 <strong>40</strong>、黑色 <strong>11</strong> 件、L 號 <strong>10</strong> 件、IT．物流部 <strong>3</strong> 人 <strong>6</strong> 件；打開 Excel 確認下單表是公式，不是直接填入。</div>
+        <div class="tip-card warning">⚠️ 最容易出錯的地方：AI 把 D:E、F:G 兩欄一起比對，第一件的顏色配到第二件的尺寸，總數一樣但明細錯。抽查一個顏色的尺寸分布最準。</div>
+      </div><!-- u6-d END -->
+
+      <!-- u6-e -->
+      <div class="sub-block" id="u6-e">
+        <div class="sec-sub-title">5.結果摘要給主管</div>
+        <div class="tip-card note"><strong>工作情境：</strong>總表完成後，用簡短訊息讓主管掌握結果，同時準備給廠商的下單內容。</div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt 4 — 結果摘要給主管（LINE）</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">以下是活動用 T恤登記的統計結果：【貼上摘要與下單表】
+請寫一則給總經理的 LINE 訊息，150 字以內：
+- 先講結論：登記人數、總件數
+- 最多的 2 個顏色、最多的 2 個尺寸
+- 需要主管決定的事項（例如：是否多訂備品、未登記同仁如何處理）
+語氣簡潔正式，數字照統計表，不要自行計算或補充。</div>
+        </div>
+        <div class="prompt-card">
+          <div class="prompt-card-header">
+            <span class="prompt-card-title">📌 Prompt 5 — 給廠商的下單內容</span>
+            <button class="copy-btn" onclick="copyPrompt(this)">複製</button>
+          </div>
+          <div class="prompt-code">請依下單表，寫一封給 T恤廠商的下單 Email：
+- 主旨：【公司名稱】活動用 T恤下單（共【40】件）
+- 用表格列出：顏色代號／S／M／L／XL／2XL／3XL／合計
+- 加上：希望交貨日【○月○日】、送貨地址【待填】、聯絡人【待填】
+數字照下單表，不要自行修改。</div>
+        </div>
+        <div class="tip-card warning">⚠️ 摘要與下單內容的數字要和 Excel 總表一致；AI 只負責整理文字，不要讓它自己重新計算。</div>
+      </div><!-- u6-e END -->
+
+    </div><!-- u6 END -->
 
   </div><!-- /content-area -->
 
@@ -726,6 +1307,9 @@ Excel：
       <div class="tool-section-title">課程範例下載</div>
       <a class="tool-btn p1-btn" href="https://drive.google.com/drive/folders/1K4DnGH2qEm7Dk-BFy0zT7Ey3F0ma5Qpw" target="_blank">
         <span class="tool-name">課程範例下載</span>
+      </a>
+      <a class="tool-btn p1-btn" href="https://drive.google.com/drive/folders/1wxXWBR9uqyETxwqFovWhapByAGtBDqJm?usp=sharing" target="_blank">
+        <span class="tool-name">Google表單範例連結</span>
       </a>
     </div>
 
@@ -754,6 +1338,9 @@ Excel：
       </a>
       <a class="tool-btn p1-btn" href="https://docs.google.com/spreadsheets/" target="_blank">
         <span class="tool-name">Google 試算表</span>
+      </a>
+      <a class="tool-btn p1-btn" href="https://script.google.com/" target="_blank">
+        <span class="tool-name">Google Script(GS)</span>
       </a>
     </div>
 
